@@ -6,8 +6,7 @@
     {{ $path = index (findRE `^\/[^\/]*\/` .Page.RelPermalink 1) 0}}
   {{- end }}
   {{- $offlineSearchIndex := resources.Get "json/offline-search-index.json" | resources.ExecuteAsTemplate "offline-search-index.json" . }}
-  {{- /* Use `md5` as finger print hash function to shorten file name to avoid `file name too long` error. */}}
-  {{ $offlineSearchIndexFingerprint := $offlineSearchIndex | resources.Fingerprint "md5" }}
+  {{ $offlineSearchIndexFingerprint := $offlineSearchIndex }}
   <input
     type="search"
     class="form-control td-search-input"

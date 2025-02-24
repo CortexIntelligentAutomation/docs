@@ -7,7 +7,7 @@ weight: 1
 
 ## Summary
 
-2024.11 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.9][] release in the following areas:
+2025.1 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.11][] release in the following areas:
 
 * [Capability][]
 * [Observability][]
@@ -17,91 +17,57 @@ weight: 1
 * [Usability][]
 * [Third-Party Support][]
 * [Installation][]
-* [Upgrade][]
-* [Documentation][]
 
 ## Improved Capability
 
-This release introduces multiple new features to the {{% ctx %}} platform:
+This release introduces the following new features to the {{% ctx %}} platform:
 
-* The [Monitoring Service has been introduced][] that provides aggregated historical data about the platform.
-* The [Operations Overview page][] has been added to {{% ctx %}} Gateway to provide a high-level view of the system's operations, which includes:
-  * Current Status
-  * Filters
-  * Flow graphs
-* The [configuration for maximum query string length][] has been added to the {{% ctx %}} Gateway `web.config`.
-* The [Cortex Interaction Portal can now be installed multiple times on the same machine][].
+* The user can now [create a new process from BPMN XML][] within [{{% ctx %}} Gateway][Gateway]
+* An [Average Duration graph has been added][] to the Operations Overview page on [{{% ctx %}} Gateway][Gateway]
 
 ## Improved Observability
 
-Observability has been improved by [reducing the maximum size of Service Fabric Trace Logs][].
+All services have had the [default size of logs][] used for Observability reduced to optimise disk usage.
 
 ## Improved Performance
 
-The Performance of the {{% ctx %}} has been improved by:
-
-* optimising [handling high volumes of executions more efficiently][]
-* handling [session updates more reliably on slower systems][]
+Work has been undertaken to [improve the performance][] of the [{{% ctx %}} Execution][{{% ctx %}} Execution Service] and [{{% ctx %}} Monitoring][{{% ctx %}} Monitoring Service] services.
 
 ## Improved Scalability
 
-Scalability has been enhanced by [increasing the header size limit for Service Fabric API Gateway][].
+The [Service Fabric BackUpRestore service has been enabled][] to allow future Scalability improvements such as disaster recovery features.
 
 ## Improved Security
 
-Security has been tightened on {{% ctx %}} Gateway by:
+Security has been tightened on the [{{% ctx %}} Interaction Portal][Interaction Portal] by:
 
-* updating the [Content-security-policy directives][]
-* introducing the [Permissions-Policy header][]
-* removing the [X-XSS-PROTECTION header][]
+* [Introducing security headers][]
+* [Removing sensitive information from HTTP responses][]
 
 ## Improved Usability
 
-Usability has been improved by [fixing the LiveView datetime picker styling issues][].
+Usability has been enhanced by:
+
+* [Improving the user experience on the Operations Overview page][]
+* [Adding the {{% ctx %}} Version to the Gateway logo tooltip][]
+* [Redesigning the Semaphore API][Redesigning the Semaphore API] allowing easier management of Semaphores
 
 ## Improved Third-Party Support
 
-Third-party Support has been improved by:
-
-* adding a [Health Check API to Service Fabric API Gateway][]
-* updating the following 3rd party libraries on {{% ctx %}} Gateway:
-  * Fuse
-  * jQuery
-  * jQuery UI
-  * Moment.js
-  * Stacktrace.js
+[Third-party libraries has been updated][] on the {{% ctx %}} platform.
 
 ## Improved Installation
 
-Installation has been modified to:
+The Installation has been improved by [adding an unblock script][] to the installation process.
 
-* [check for certificate friendly name][]
-* [use PSDrive to improve compatibility][]
-* [allow log file rotation for RabbitMQ logs][]
-* [open ports for RabbitMQ Stream][]  
+For a full list of what has been introduced in this release, please see the [2025.1 Release Notes][]
 
-## Improved Upgrade
-
-Upgrade has been improved by:
-
-* [restoring files to pre-upgrade if the load balancer upgrade fails][]
-* [aligning the timeout of the Register-ServiceFabricApplicationType command with other commands][]
-* [changing the extension of the studio package created by the upgrade script][]
-* [allow log file rotation for RabbitMQ logs][Upgrade - allow log file rotation for RabbitMQ logs]
-* [opening ports for RabbitMQ Stream][Upgrade - opening ports for RabbitMQ Stream]
-
-## Improved Documentation
-
-The documentation includes updates related to:
-
-* [adding the encryption key to the built-in Load Balancer server][]
-* [adding the Observability Compatibility table to release notes][]
-* [updating the ports used by the platform][]
-
-For a full list of what has been introduced in this release, please see the [2024.11 Release Notes][]
-
-[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2024.11" >}}
-[2024.9]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.11" >}}
+[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2025.1" >}}
+[2024.11]: {{< url path="Cortex.Blogs.Releases.2024.11.MainDoc" version="2025.1" >}}
+[Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" version="2025.1" >}}
+[{{% ctx %}} Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" version="2025.1" >}}
+[{{% ctx %}} Monitoring Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MonitoringService.MainDoc" version="2025.1" >}}
+[Interaction Portal]: {{< url path="Cortex.Guides.CortexInteractionPortal.MainDoc" version="2025.1" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Observability]: {{< ref "#improved-observability" >}}
@@ -111,33 +77,18 @@ For a full list of what has been introduced in this release, please see the [202
 [Usability]: {{< ref "#improved-usability" >}}
 [Third-Party Support]: {{< ref "#improved-third-party-support" >}}
 [Installation]: {{< ref "#improved-installation" >}}
-[Upgrade]: {{< ref "#improved-upgrade" >}}
-[Documentation]: {{< ref "#improved-documentation" >}}
 
-[Monitoring Service has been introduced]: {{< url path="Cortex.Blogs.Releases.2024.11.MonitoringServiceHasBeenIntroduced" version="2024.11" >}}
-[Operations Overview page]: {{< url path="Cortex.Blogs.Releases.2024.11.OperationsOverviewPage" version="2024.11" >}}
-[configuration for maximum query string length]: {{< url path="Cortex.Blogs.Releases.2024.11.ConfigurationForMaximumQueryStringLength" version="2024.11" >}}
-[Cortex Interaction Portal can now be installed multiple times on the same machine]: {{< url path="Cortex.Blogs.Releases.2024.11.CortexInteractionPortalCanNowBeInstalledMultipleTimesOnTheSameMachine" version="2024.11" >}}
-[session updates more reliably on slower systems]: {{< url path="Cortex.Blogs.Releases.2024.11.SessionUpdatesMoreReliablyOnSlowerSystems" version="2024.11" >}}
-[reducing the maximum size of Service Fabric Trace Logs]: {{< url path="Cortex.Blogs.Releases.2024.11.ReducingTheMaximumSizeOfServiceFabricTraceLogs" version="2024.11" >}}
-[handling high volumes of executions more efficiently]: {{< url path="Cortex.Blogs.Releases.2024.11.HandlingHighVolumesOfExecutionsMoreEfficiently" version="2024.11" >}}
-[increasing the header size limit for Service Fabric API Gateway]: {{< url path="Cortex.Blogs.Releases.2024.11.IncreasingTheHeaderSizeLimitForServiceFabricAPIGateway" version="2024.11" >}}
-[Content-security-policy directives]: {{< url path="Cortex.Blogs.Releases.2024.11.ContentSecurityPolicyDirectives" version="2024.11" >}}
-[Permissions-Policy header]: {{< url path="Cortex.Blogs.Releases.2024.11.PermissionsPolicyHeader" version="2024.11" >}}
-[X-XSS-PROTECTION header]: {{< url path="Cortex.Blogs.Releases.2024.11.XXSSPROTECTIONHeader" version="2024.11" >}}
-[fixing the LiveView datetime picker styling issues]: {{< url path="Cortex.Blogs.Releases.2024.11.FixingTheLiveViewDatetimePickerStylingIssues" version="2024.11" >}}
-[Health Check API to Service Fabric API Gateway]: {{< url path="Cortex.Blogs.Releases.2024.11.HealthCheckAPIToServiceFabricAPIGateway" version="2024.11" >}}
-[check for certificate friendly name]: {{< url path="Cortex.Blogs.Releases.2024.11.CheckForCertificateFriendlyName" version="2024.11" >}}
-[use PSDrive to improve compatibility]: {{< url path="Cortex.Blogs.Releases.2024.11.UsePSDriveToImproveCompatibility" version="2024.11" >}}
-[allow log file rotation for RabbitMQ logs]: {{< url path="Cortex.Blogs.Releases.2024.11.AllowLogFileRotationForRabbitMQLogs" version="2024.11" >}}
-[open ports for RabbitMQ Stream]: {{< url path="Cortex.Blogs.Releases.2024.11.OpenPortsForRabbitMQStream" version="2024.11" >}}
-[restoring files to pre-upgrade if the load balancer upgrade fails]: {{< url path="Cortex.Blogs.Releases.2024.11.RestoringFilesToPreUpgradeIfTheLoadBalancerUpgradeFails" version="2024.11" >}}
-[aligning the timeout of the Register-ServiceFabricApplicationType command with other commands]: {{< url path="Cortex.Blogs.Releases.2024.11.AligningTheTimeoutOfTheRegisterServiceFabricApplicationTypeCommandWithOtherCommands" version="2024.11" >}}
-[changing the extension of the studio package created by the upgrade script]: {{< url path="Cortex.Blogs.Releases.2024.11.ChangingTheExtensionOfTheStudioPackageCreatedByTheUpgradeScript" version="2024.11" >}}
-[Upgrade - allow log file rotation for RabbitMQ logs]: {{< url path="Cortex.Blogs.Releases.2024.11.UpgradeAllowLogFileRotationForRabbitMQLogs" version="2024.11" >}}
-[Upgrade - opening ports for RabbitMQ Stream]: {{< url path="Cortex.Blogs.Releases.2024.11.UpgradeOpeningPortsForRabbitMQStream" version="2024.11" >}}
-[adding the encryption key to the built-in Load Balancer server]: {{< url path="Cortex.Blogs.Releases.2024.11.AddingTheEncryptionKeyToTheBuiltInLoadBalancerServer" version="2024.11" >}}
-[adding the Observability Compatibility table to release notes]: {{< url path="Cortex.Blogs.Releases.2024.11.AddingTheObservabilityCompatibilityTableToReleaseNotes" version="2024.11" >}}
-[updating the ports used by the platform]: {{< url path="Cortex.Blogs.Releases.2024.11.UpdatingThePortsUsedByThePlatform" version="2024.11" >}}
+[2025.1 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025.1.MainDoc" version="2025.1" >}}
 
-[2024.11 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.11.MainDoc" version="2024.11" >}}
+[create a new process from BPMN XML]: {{< url path="Cortex.Blogs.Releases.2025.1.CreateANewProcessFromBpmnXml" version="2025.1" >}}
+[Average Duration graph has been added]: {{< url path="Cortex.Blogs.Releases.2025.1.AverageDurationGraphHasBeenAdded" version="2025.1" >}}
+[default size of logs]: {{< url path="Cortex.Blogs.Releases.2025.1.DefaultSizeOfLogs" version="2025.1" >}}
+[improve the performance]: {{< url path="Cortex.Blogs.Releases.2025.1.ImproveThePerformance" version="2025.1" >}}
+[Service Fabric BackUpRestore service has been enabled]: {{< url path="Cortex.Blogs.Releases.2025.1.ServiceFabricBackUpRestoreServiceHasBeenEnabled" version="2025.1" >}}
+[Introducing security headers]: {{< url path="Cortex.Blogs.Releases.2025.1.IntroducingSecurityHeaders" version="2025.1" >}}
+[Removing sensitive information from HTTP responses]: {{< url path="Cortex.Blogs.Releases.2025.1.RemovingSensitiveInformationFromHttpResponses" version="2025.1" >}}
+[Improving the user experience on the Operations Overview page]: {{< url path="Cortex.Blogs.Releases.2025.1.ImprovingTheUserExperienceOnTheOperationsOverviewPage" version="2025.1" >}}
+[Adding the {{% ctx %}} Version to the Gateway logo tooltip]: {{< url path="Cortex.Blogs.Releases.2025.1.AddingTheCortexVersionToTheGatewayLogoTooltip" version="2025.1" >}}
+[Redesigning the Semaphore API]: {{< url path="Cortex.Blogs.Releases.2025.1.RedesigningTheSemaphoreApi" version="2025.1" >}}
+[Third-party libraries has been updated]: {{< url path="Cortex.Blogs.Releases.2025.1.ThirdPartyLibrariesHasBeenUpdated" version="2025.1" >}}
+[adding an unblock script]: {{< url path="Cortex.Blogs.Releases.2025.1.AddingAnUnblockScript" version="2025.1" >}}

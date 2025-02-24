@@ -6,6 +6,22 @@
             MainDoc = "/blog/news"
         [Cortex.Blogs.Releases]
             MainDoc = "/blog/releases"
+            [Cortex.Blogs.Releases.2025.X]
+                MainDoc = "/blog/releases/2025.x"
+                [Cortex.Blogs.Releases.2025.1]
+                    MainDoc = "/blog/2025/02/10/2025.1/"
+                    CreateANewProcessFromBpmnXml = "/blog/2025/02/10/2025.1/#support-for-creating-new-process-from-templates"
+                    AverageDurationGraphHasBeenAdded = "/blog/2025/02/10/2025.1/#added-average-duration-graph-to-operations-overview"
+                    DefaultSizeOfLogs = "/blog/2025/02/10/2025.1/#reduced-service-default-log-sizes"
+                    ImproveThePerformance = "/blog/2025/02/10/2025.1/#improvements-to-service-fabric-services-performance"
+                    ServiceFabricBackUpRestoreServiceHasBeenEnabled = "/blog/2025/02/10/2025.1/#enabled-service-fabric-backuprestore-service"
+                    IntroducingSecurityHeaders = "/blog/2025/02/10/2025.1/#introduced-security-headers-for-cortex-interaction-portal"
+                    RemovingSensitiveInformationFromHttpResponses = "/blog/2025/02/10/2025.1/#removed-sensitive-information-from-cortex-interaction-portal-http-responses"
+                    ImprovingTheUserExperienceOnTheOperationsOverviewPage = "/blog/2025/02/10/2025.1/#improved-user-experience-on-operations-overview"
+                    AddingTheCortexVersionToTheGatewayLogoTooltip = "/blog/2025/02/10/2025.1/#added-cortex-version-to-gateway-logo-tooltip"
+                    RedesigningTheSemaphoreApi = "/blog/2025/02/10/2025.1/#redesigned-semaphore-api"
+                    ThirdPartyLibrariesHasBeenUpdated = "/blog/2025/02/10/2025.1/#updated-third-party-libraries"
+                    AddingAnUnblockScript = "/blog/2025/02/10/2025.1/#added-unblock-script-to-the-installation"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]

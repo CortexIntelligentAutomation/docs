@@ -9,7 +9,7 @@ Before encrypting parameters, it is required to generate a private key that will
     cd "C:\Install\Cortex Innovation {{< version >}} - Encryption Key Generator"
     ```
 
-1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS names or fully qualified domain names of the Application Server and Web Application Server:
+1. Run the `Cortex.Encryption.KeyGeneration.exe` application using the following command, modifying the argument value to contain the NETBIOS name or fully qualified domain name of the server:
 
     ```powershell
     .\Cortex.Encryption.KeyGeneration.exe "app-server1"
@@ -18,10 +18,7 @@ Before encrypting parameters, it is required to generate a private key that will
 1. A message similar to the following will indicate that the application has completed successfully:
 
     ```text
-    app-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
-    Encryption key set on app-server
-    webapp-server: Overwritten Encryption key: EE19EB67F6C2D9E9A5AF6F0CE7822A44
-    Encryption key set on webapp-server
+    Encryption key set on app-server1
     Encryption Key: 284BADF55BDDC93A47D7DE8FC2C4DC9B
     ```
 
