@@ -55,12 +55,12 @@ All the flows contained in the package will be saved in the Master Repository of
 
 ### Related Tutorials
 
-* [How to Create a New {{% ctx %}} Package Definition][]
-* [How to Import a {{% ctx %}} Package File][]
+* [Create a New {{% ctx %}} Package Definition][]
+* [Import a {{% ctx %}} Package File][]
 
 [Create a Package]: {{< ref "#create-a-package" >}}
-[How to Create a New {{% ctx %}} Package Definition]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreatePackage" >}}
-[How to Import a {{% ctx %}} Package File]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ImportPackage" >}}
+[Create a New {{% ctx %}} Package Definition]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreatePackage" >}}
+[Import a {{% ctx %}} Package File]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ImportPackage" >}}
 [Import a Package]: {{< ref "#import-a-package" >}}
 [Package Version Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor.MainDoc" >}}
 [What is a Package?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage.MainDoc" >}}

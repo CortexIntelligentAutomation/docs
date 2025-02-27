@@ -23,6 +23,10 @@ Selecting a package version in the [Package Definitions Grid][] will display it'
 * [Set As Default Package][] enabling flows to be executed from all versions of this package without specifying the package name in the execution REST Request.
 * [Set As Default Version][] enabling flows to be executed from the package version without specifying the package version in the execution REST Request.
 
+{{% alert title="Note" %}}
+Some buttons are not visible until the package has been initially published.
+{{% /alert %}}
+
 The Package Version Editor contains the following tabs:
 
 * [Definition][] - displays the flows contained in this package version.
@@ -148,16 +152,16 @@ Any running flow execution may be aborted by selecting the flow and clicking the
 
 ### Related Tutorials
 
-* [How to Create a New Version of a {{% ctx %}} Package][]
-* [How to Set Flow Execution Authorisation on a {{% ctx %}} Package][]
-* [How to Create a Schedule on a {{% ctx %}} Package][]
-* [How to Create a Trigger on a {{% ctx %}} Package][]
-* [How to Publish a {{% ctx %}} Package][]
-* [How to Set the Default Package][]
-* [How to Set the Default Package Version for a {{% ctx %}} Package][]
-* [How to View and Abort Running Executions using {{% ctx %}} Package Management][]
-* [How to Unpublish a {{% ctx %}} Package][]
-* [How to Export a {{% ctx %}} Package Version][]
+* [Create a New Version of a {{% ctx %}} Package][]
+* [Publish a {{% ctx %}} Package][]
+* [Set the Default Package][]
+* [Set the Default Package Version for a {{% ctx %}} Package][]
+* [Unpublish a {{% ctx %}} Package][]
+* [Export a {{% ctx %}} Package Version][]
+* [Set Flow Execution Authorisation on a {{% ctx %}} Package][]
+* [Create a Schedule on a {{% ctx %}} Package][]
+* [Create a Trigger on a {{% ctx %}} Package][]
+* [View and Abort Running Executions using {{% ctx %}} Package Management][]
 
 [Authorisation]: {{< ref "#authorisation" >}}
 [Create New Version]: {{< ref "#create-a-new-package-version" >}}
@@ -171,15 +175,15 @@ Any running flow execution may be aborted by selecting the flow and clicking the
 [Triggers]: {{< ref "#triggers" >}}
 [Unpublish]: {{< ref "#unpublish-a-package-version" >}}
 
-[How to Create a New Version of a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
-[How to Create a Schedule on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
-[How to Create a Trigger on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
-[How to Export a {{% ctx %}} Package Version]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
-[How to Publish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
-[How to Set Flow Execution Authorisation on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
-[How to Set the Default Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
-[How to Set the Default Package Version for a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
-[How to Unpublish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
-[How to View and Abort Running Executions using {{% ctx %}} Package Management]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
+[Create a New Version of a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
+[Create a Schedule on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
+[Create a Trigger on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
+[Export a {{% ctx %}} Package Version]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
+[Publish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
+[Set Flow Execution Authorisation on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
+[Set the Default Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
+[Set the Default Package Version for a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
+[Unpublish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
+[View and Abort Running Executions using {{% ctx %}} Package Management]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
 [Package Definitions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid.MainDoc" >}}
 [What is a Package?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage.MainDoc" >}}
