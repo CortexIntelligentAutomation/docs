@@ -476,7 +476,6 @@
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
 
-
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -729,6 +728,35 @@
                     Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                     UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                     TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.UserGuides]
+            MainDoc = "/docs/guides/user-guides/"
+            [Cortex.Guides.UserGuides.UserInterfaces]
+                MainDoc = "/docs/guides/user-guides/user-interfaces/"
+                [Cortex.Guides.UserGuides.UserInterfaces.Gateway]
+                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/overview/"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/"
+                                CreatePackage = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/#create-a-package"
+                                Import = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/#import-a-package"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/"
+                                Authorisation = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#authorisation"
+                                CreateNewVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#create-a-new-package-version"
+                                Definition = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#definition"
+                                Export = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#export-a-package-version"
+                                Publish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#publish-a-package-version"
+                                RunningExecutions = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#running-executions"
+                                Schedules = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#schedules"
+                                SetDefaultPackage = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-default-package"
+                                SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-default-package-version"
+                                Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
+                                Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -1546,6 +1574,10 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
                         MainDoc = "/docs/reference/concepts/fundamentals/messages/what-is-a-message/"
+                [Cortex.Reference.Concepts.Fundamentals.Packages]
+                    MainDoc = "/docs/reference/concepts/fundamentals/packages"
+                    [Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage]
+                        MainDoc = "/docs/reference/concepts/fundamentals/packages/what-is-a-package/"
                 [Cortex.Reference.Concepts.Fundamentals.Variables]
                     MainDoc = "/docs/reference/concepts/fundamentals/variables/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
@@ -2545,6 +2577,23 @@
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
     [Cortex.Tutorials]
         MainDoc = "/docs/tutorials/"
+        [Cortex.Tutorials.Administration]
+            MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.PackageManagement]
+                MainDoc = "/docs/tutorials/administration/package-management"
+                    Authorisation = "/docs/tutorials/administration/package-management/#how-to-set-flow-execution-authorisation-on-a-cortex-package"
+                    CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#how-to-create-a-new-version-of-a-cortex-package"
+                    CreatePackage = "/docs/tutorials/administration/package-management/#how-to-create-a-new-cortex-package-definition"
+                    ExportPackage = "/docs/tutorials/administration/package-management/#how-to-export-a-cortex-package-version"
+                    ImportPackage = "/docs/tutorials/administration/package-management/#how-to-import-a-cortex-package-File"
+                    PublishPackage = "/docs/tutorials/administration/package-management/#how-to-publish-a-cortex-package"
+                    RunningExecutions = "/docs/tutorials/administration/package-management/#how-to-view-and-abort-running-executions"
+                    Schedules = "/docs/tutorials/administration/package-management/#how-to-create-a-Schedule-on-a-cortex-package"
+                    SetDefaultPackage = "/docs/tutorials/administration/package-management/#how-to-set-the-default-package"
+                    SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#how-to-set-the-default-package-version-for-a-cortex-package"
+                    Triggers = "/docs/tutorials/administration/package-management/#how-to-create-a-trigger-on-a-cortex-package"
+                    UnpublishPackage = "/docs/tutorials/administration/package-management/#how-to-unpublish-a-cortex-package"
+
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
