@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "Summary and Anatomy of Package Management"
+description: "Summary and anatomy of Package Management"
 weight: 1
 ---
 
@@ -41,11 +41,11 @@ The [Package Version Editor][] contains the following tabs:
 
 ### Related Concepts
 
-[What is a Package?][]
+* [What is a Package?][]
 
 ### Related Tutorials
 
-[Package Management][]
+* [Package Management][]
 
 [Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor.Authorisation" >}}
 [Create New Version]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor.CreateNewVersion" >}}

@@ -1,7 +1,7 @@
 ---
 title: "Package Version Editor"
 linkTitle: "Package Version Editor"
-description: "Package Version Editor - To be refined"
+description: "Summary and anatomy of the Package Version Editor"
 weight: 30
 ---
 
