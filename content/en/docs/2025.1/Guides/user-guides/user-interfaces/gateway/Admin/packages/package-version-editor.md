@@ -49,7 +49,7 @@ The created {{% ctx %}} Package Version may optionally define Schedules to cause
 
 The new {{% ctx %}} Package Version does not retain any of the flow execution authorisation, schedules, nor any triggers set on the source {{% ctx %}} Package Version.
 
-See the [Create a New Package Version tutorial][] for a step-by-step guide.
+See the [Create a New Package Version][Create a New Package Version tutorial] tutorial for a step-by-step guide.
 
 #### Publish a Package Version
 
@@ -57,7 +57,7 @@ When a {{% ctx %}} Package Version is published it is distributed to the executi
 
 Published {{% ctx %}} Package Versions may be explicitly set as the Default Version for that {{% ctx %}} Package, meaning that a REST Request to execute a flow from that published {{% ctx %}} Package Version does not have to specify the Package Version.
 
-See the [Publish a Package Version tutorial][] for a step-by-step guide.
+See the [Publish a Package Version][Publish a Package Version tutorial] tutorial for a step-by-step guide.
 
 #### Set As Default Package
 
@@ -65,7 +65,7 @@ The Default Package specifies which {{% ctx %}} Package will be used to execute 
 
 The Default Package can be set on any {{% ctx %}} Package that has a published {{% ctx %}} Package Version. If all the {{% ctx %}} Package Versions associated with the Default Package are unpublished, the Default Package remains unchanged.
 
-See the [Set the Default Package tutorial][] for a step-by-step guide.
+See the [Set the Default Package][Set the Default Package tutorial] tutorial for a step-by-step guide.
 
 #### Set As Default Version
 
@@ -81,13 +81,13 @@ If an unpublished {{% ctx %}} Package Version that was previously set as the Def
 
 If all the {{% ctx %}} Package Versions of a {{% ctx %}} Package are unpublished and then a Package is republished, it will become implicitly set as the Default Version, even if it was explicitly set as the Default Version before unpublishing.
 
-See the [Set the Default Package Version tutorial][] for a step-by-step guide.
+See the [Set the Default Package Version][Set the Default Package Version tutorial] tutorial for a step-by-step guide.
 
 #### Unpublish a Package Version
 
 When a {{% ctx %}} Package Version is unpublished, it is removed from all the execution nodes and flow execution cannot be started for any flows in that package; however, any currently running executions from that Package Version will continue to completion. When all instances of an executing flow in an unpublished package have completed, the cache of the compiled flow discarded.
 
-See the [Unpublish a Package Version tutorial][] for a step-by-step guide.
+See the [Unpublish a Package Version][Unpublish a Package Version tutorial] tutorial for a step-by-step guide.
 
 #### Export a Package Version
 
@@ -95,7 +95,7 @@ Any {{% ctx %}} Package Version can be exported to a file, which can be used for
 
 The exported file contains the {{% ctx %}} Package Version definition, and the flow definitions contained in the package. Any authorisation, schedules or triggers set on the {{% ctx %}} Package Version are not included in the exported file.
 
-See the [Export a Package Version tutorial][] for a step-by-step guide.
+See the [Export a Package Version][Export a Package Version tutorial] tutorial for a step-by-step guide.
 
 ### Authorisation
 
@@ -103,7 +103,7 @@ The Authorisation tab on a package version defines which LDAP groups can execute
 
 The list of Active Directory objects displayed to define flow execution authorisation is filtered by the Base DNs configured in LDAP Connection for {{% ctx %}} Gateway.
 
-See the [Set Authorisation on a Package Version tutorial][] for a step-by-step guide.
+See the [Set Authorisation on a Package Version][Set Authorisation on a Package Version tutorial] tutorial for a step-by-step guide.
 
 ### Schedules
 
@@ -115,7 +115,7 @@ Any data to be passed to the flow’s input variables is entered using Expressio
 
 Creating a new package version will not inherit the schedule configuration from the source package version. Similarly, exporting a package version will not include the package’s Schedule in the {{% ctx %}} Package file.
 
-See the [Create a Schedule on a Package Version tutorial][] for a step-by-step guide.
+See the [Create a Schedule on a Package Version][Create a Schedule on a Package Version tutorial] tutorial for a step-by-step guide.
 
 ### Triggers
 
@@ -145,7 +145,7 @@ Any data to be passed to the flow’s input variables is entered using Expressio
 
 Creating a new package version will not inherit the trigger configuration from the source package version. Similarly, exporting a package version will not include the package’s trigger configuration in the {{% ctx %}} Package file.
 
-See the [Create a Trigger on a Package Version tutorial][] for a step-by-step guide.
+See the [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial] tutorial for a step-by-step guide.
 
 ### Running Executions
 
@@ -153,7 +153,7 @@ The Running Executions tab displays a list of currently running flow executions 
 
 Any running flow execution may be aborted by selecting the flow and clicking the `Stop the execution` icon. The flow execution will be immediately stopped.
 
-See the [View and Abort Running Flow Executions tutorial][] for a step-by-step guide.
+See the [View and Abort Running Flow Executions][View and Abort Running Flow Executions tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 

@@ -18,6 +18,7 @@ The Package Definitions Grid displays a list of existing [{{% ctx %}} Package][W
 The Package Definitions Grid shows the most recently created version of each package; older versions can be viewed by expanding the package definition. Selecting a package version will display it's details in the [Package Version Editor][].
 
 The Package Definitions Grid also contains buttons to:
+
 * [Create a Package][]
 * [Import a Package][]
 
@@ -33,17 +34,17 @@ If a selected flow has dependent flows, the dependent flow will be automatically
 
 The package may optionally [define LDAP groups][Authorisation] that can execute flows, [schedules][] to run flows at specific times, and [triggers][] to run flows on receipt of specific SNMP Traps.
 
-See the [Create a Package tutorial][] for a step-by-step guide.
+See the [Create a Package][Create a Package tutorial] tutorial for a step-by-step guide.
 
 ### Import a Package
 
-A {{% ctx %}} Package file, with the extension of `.ctxpkg`, may be imported into any {{% ctx %}} Gateway by clicking the `Import` button and selecting the `.ctxpkg` file to import. 
+A {{% ctx %}} Package file, with the extension of `.ctxpkg`, may be imported into any {{% ctx %}} Gateway by clicking the `Import` button and selecting the `.ctxpkg` file to import.
 
 If the imported package already exists in {{% ctx %}} Gateway, a new version of that package will be created; if the imported package does not exist, a new package will be created.
 
 All the flows contained in the package will be saved in the Master Repository of the destination {{% ctx %}} Gateway as the master versions of those flows; if the imported flows already existed, the imported flows would become the new master versions.
 
-See the [Import a Package tutorial][] for a step-by-step guide.
+See the [Import a Package][Import a Package tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
