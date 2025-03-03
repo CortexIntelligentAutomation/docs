@@ -32,4 +32,4 @@
 
 1. Save and close `Cortex.Innovation.Install.Gateway.ps1`.
 
-[Security Best Practices]: {{< url path="Cortex.Guides.UpgradeCortex.Advanced.SSLBestPractices" >}}
+[Security Best Practices]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.Advanced.SSLBestPractices" >}}
