@@ -49,17 +49,23 @@ The created {{% ctx %}} Package Version may optionally define Schedules to cause
 
 The new {{% ctx %}} Package Version does not retain any of the flow execution authorisation, schedules, nor any triggers set on the source {{% ctx %}} Package Version.
 
+See the [Create a New Package Version tutorial][] for a step-by-step guide.
+
 #### Publish a Package Version
 
 When a {{% ctx %}} Package Version is published it is distributed to the execution nodes. The first execution of a flow on a node will cause the flow to be compiled, cached and executed on that node.
 
 Published {{% ctx %}} Package Versions may be explicitly set as the Default Version for that {{% ctx %}} Package, meaning that a REST Request to execute a flow from that published {{% ctx %}} Package Version does not have to specify the Package Version.
 
+See the [Publish a Package Version tutorial][] for a step-by-step guide.
+
 #### Set As Default Package
 
 The Default Package specifies which {{% ctx %}} Package will be used to execute flows if the execution REST Request omits the Package Name specifying the {{% ctx %}} Package to use. There is only one Default Package for each {{% ctx %}} system.
 
 The Default Package can be set on any {{% ctx %}} Package that has a published {{% ctx %}} Package Version. If all the {{% ctx %}} Package Versions associated with the Default Package are unpublished, the Default Package remains unchanged.
+
+See the [Set the Default Package tutorial][] for a step-by-step guide.
 
 #### Set As Default Version
 
@@ -75,9 +81,13 @@ If an unpublished {{% ctx %}} Package Version that was previously set as the Def
 
 If all the {{% ctx %}} Package Versions of a {{% ctx %}} Package are unpublished and then a Package is republished, it will become implicitly set as the Default Version, even if it was explicitly set as the Default Version before unpublishing.
 
+See the [Set the Default Package Version tutorial][] for a step-by-step guide.
+
 #### Unpublish a Package Version
 
 When a {{% ctx %}} Package Version is unpublished, it is removed from all the execution nodes and flow execution cannot be started for any flows in that package; however, any currently running executions from that Package Version will continue to completion. When all instances of an executing flow in an unpublished package have completed, the cache of the compiled flow discarded.
+
+See the [Unpublish a Package Version tutorial][] for a step-by-step guide.
 
 #### Export a Package Version
 
@@ -85,11 +95,15 @@ Any {{% ctx %}} Package Version can be exported to a file, which can be used for
 
 The exported file contains the {{% ctx %}} Package Version definition, and the flow definitions contained in the package. Any authorisation, schedules or triggers set on the {{% ctx %}} Package Version are not included in the exported file.
 
+See the [Export a Package Version tutorial][] for a step-by-step guide.
+
 ### Authorisation
 
 The Authorisation tab on a package version defines which LDAP groups can execute flows contained in that package version, using Token-based OAuth2 authorisation.
 
 The list of Active Directory objects displayed to define flow execution authorisation is filtered by the Base DNs configured in LDAP Connection for {{% ctx %}} Gateway.
+
+See the [Set Authorisation on a Package Version tutorial][] for a step-by-step guide.
 
 ### Schedules
 
@@ -100,6 +114,8 @@ Each schedule definition consists of a Name, which is used to easily identify th
 Any data to be passed to the flow’s input variables is entered using Expression editors.
 
 Creating a new package version will not inherit the schedule configuration from the source package version. Similarly, exporting a package version will not include the package’s Schedule in the {{% ctx %}} Package file.
+
+See the [Create a Schedule on a Package Version tutorial][] for a step-by-step guide.
 
 ### Triggers
 
@@ -129,11 +145,15 @@ Any data to be passed to the flow’s input variables is entered using Expressio
 
 Creating a new package version will not inherit the trigger configuration from the source package version. Similarly, exporting a package version will not include the package’s trigger configuration in the {{% ctx %}} Package file.
 
+See the [Create a Trigger on a Package Version tutorial][] for a step-by-step guide.
+
 ### Running Executions
 
 The Running Executions tab displays a list of currently running flow executions for the selected package version. Each row in the list is a distinct flow execution, and identifies: the Flow Name, its Execution ID, the time the execution Started At, and the duration of that execution; the duration is updated at 10 second intervals.
 
 Any running flow execution may be aborted by selecting the flow and clicking the `Stop the execution` icon. The flow execution will be immediately stopped.
+
+See the [View and Abort Running Flow Executions tutorial][] for a step-by-step guide.
 
 ## Remarks
 
@@ -148,20 +168,20 @@ Any running flow execution may be aborted by selecting the flow and clicking the
 
 ### Related Concepts
 
-[What is a Package?][]
+* [What is a Package?][]
 
 ### Related Tutorials
 
-* [Create a New Version of a {{% ctx %}} Package][]
-* [Publish a {{% ctx %}} Package][]
-* [Set the Default Package][]
-* [Set the Default Package Version for a {{% ctx %}} Package][]
-* [Unpublish a {{% ctx %}} Package][]
-* [Export a {{% ctx %}} Package Version][]
-* [Set Flow Execution Authorisation on a {{% ctx %}} Package][]
-* [Create a Schedule on a {{% ctx %}} Package][]
-* [Create a Trigger on a {{% ctx %}} Package][]
-* [View and Abort Running Executions using {{% ctx %}} Package Management][]
+* [Create a New Package Version][Create a New Package Version tutorial]
+* [Publish a Package Version][Publish a Package Version tutorial]
+* [Set the Default Package][Set the Default Package tutorial]
+* [Set the Default Package Version][Set the Default Package Version tutorial]
+* [Unpublish a Package Version][Unpublish a Package Version tutorial]
+* [Export a Package Version][Export a Package Version tutorial]
+* [Set Authorisation on a Package Version][Set Authorisation on a Package Version tutorial]
+* [Create a Schedule on a Package Version][Create a Schedule on a Package Version tutorial]
+* [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial]
+* [View and Abort Running Flow Executions][View and Abort Running Flow Executions tutorial]
 
 [Authorisation]: {{< ref "#authorisation" >}}
 [Create New Version]: {{< ref "#create-a-new-package-version" >}}
@@ -170,20 +190,20 @@ Any running flow execution may be aborted by selecting the flow and clicking the
 [Publish]: {{< ref "#publish-a-package-version" >}}
 [Running Executions]: {{< ref "#running-executions" >}}
 [Schedules]: {{< ref "#schedules" >}}
-[Set As Default Package]: {{< ref "#set-default-package" >}}
-[Set As Default Version]: {{< ref "#set-default-package-version" >}}
+[Set As Default Package]: {{< ref "#set-as-default-package" >}}
+[Set As Default Version]: {{< ref "#set-as-default-version" >}}
 [Triggers]: {{< ref "#triggers" >}}
 [Unpublish]: {{< ref "#unpublish-a-package-version" >}}
 
-[Create a New Version of a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
-[Create a Schedule on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
-[Create a Trigger on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
-[Export a {{% ctx %}} Package Version]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
-[Publish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
-[Set Flow Execution Authorisation on a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
-[Set the Default Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
-[Set the Default Package Version for a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
-[Unpublish a {{% ctx %}} Package]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
-[View and Abort Running Executions using {{% ctx %}} Package Management]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
+[Create a New Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
+[Create a Schedule on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
+[Create a Trigger on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
+[Export a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
+[Publish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
+[Set Authorisation on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
+[Set the Default Package tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
+[Set the Default Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
+[Unpublish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
+[View and Abort Running Flow Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
 [Package Definitions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid.MainDoc" >}}
 [What is a Package?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage.MainDoc" >}}
