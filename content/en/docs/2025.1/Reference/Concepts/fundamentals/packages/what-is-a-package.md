@@ -15,8 +15,8 @@ A {{% ctx %}} Package contains a set of independent or related flows that togeth
 Users with the Admin role can use the [{{% ctx %}} Package Management][] feature to manage packages, including [creating][CreatePackage] and [publishing][Publish] them.
 
 ## Anatomy of a Package
-
 TODO
+{{< figure src="/images/Package Management.png" title="Package Management" >}}
 
 ## Package Operations
 
