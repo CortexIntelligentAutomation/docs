@@ -5,6 +5,8 @@ description: "This section includes tutorials about managing packages on the {{%
 weight: 1
 ---
 
+# {{% param title %}}
+
 ## Create a Package
 
 {{< scribe title="How_to_Create_a_New_CORTEX_Package_Definition" id="T_4G1ik0QPmBX9Za6m4WsA" >}}

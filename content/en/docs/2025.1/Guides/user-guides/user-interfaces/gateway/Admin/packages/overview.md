@@ -37,6 +37,12 @@ The [Package Version Editor][] contains the following tabs:
 * [Triggers][] - allows configuration of SNMP triggers to automatically execute flows contained in this package version on receipt of SNMP traps.
 * [Running Executions][] - displays a list of running executions of flows in this package version and enables the user to abort them.
 
+## Remarks
+
+### Known Limitations
+
+None
+
 ## See Also
 
 ### Related Concepts
