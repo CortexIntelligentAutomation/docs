@@ -17,7 +17,7 @@ The Operations Overview shows a synopsis of the current system status, and a gra
 
 ### Current Status
 
-The Current Status displays the current License Consumption, the execution node Cluster Health, and the number of currently Running Executions. An icon on each of these displays navigates to display more detail:
+The Current Status displays the current License Consumption, the execution node Cluster Health, and the number of currently [Running Executions][]. A *Go To* icon on each of these tiles navigates to display more detail:
 
   * The License Consumption Go To icon navigates to the License Consumption feature, normally found under the Admin charm, to provide visibility of the License Consumption by flow.
   * The Cluster Health Go To icon opens a new browser tab and navigates to the Service Fabric Explorer, which inspection and management of the execution node cluster.
