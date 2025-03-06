@@ -9,7 +9,7 @@ weight: 50
 
 ## Summary
 
-Studio Export is a feature that enables one or more flowsto be exported into a Studio Package file, which may be used for achieving purposes, or importing flows into another CORTEX Studio. A Studio Package file may contain a mixture of distinct CORTEX and CORTEX 7 flows.
+Studio Export is a feature that enables one or more flows to be exported into a Studio Package file, which may be used for archiving purposes, or [importing][Studio Import] flows into another {{% ctx %}} Studio. A Studio Package file may contain a mixture of distinct {{% ctx %}} and {{% ctx %}} 7 flows.
 
 |                              |                                                                 |
 |------------------------------|-----------------------------------------------------------------|
@@ -21,9 +21,9 @@ Studio Export is a feature that enables one or more flowsto be exported into a S
 
 Any flow in the system may be exported; it is not necessary for the administrator to have View or Edit authorisation for the flows to be exported.
 
-Individual flows are selected by clicking by clicking the Export? column adjacent to the flow to be exported. If a Group is selected, then all the flows contained in that Group, and any sub-Groups, will be implicitly set; any implicitly set may be individually deselected by clicking the checkbox adjacent to the flow.
+Individual flows are selected by clicking the checkbox in the `Export?` column adjacent to the flow to be exported. If a group is selected, then all the flows contained in that group, and any sub-groups, will be implicitly set; any implicitly set may be individually deselected by clicking the checkbox adjacent to the flow.
 
-Clicking Export will create the Studio Package from the Master Versions of the selected flows in the Master Repository, including their Group hierarchy, and then download the package to the host’s browser as file named export.studiopkg or export (<n>).studiopkg, where <n> represents an integer to avoid naming conflict with other Studio Package files contained in the same folder.
+Clicking `Export` will create the Studio Package from the Master Versions in the Master Repository of the selected flows, including their group hierarchy, and then download the package to the host’s browser as a file named `export.studiopkg` or `export <n>.studiopkg`, where `<n>` represents an integer to avoid naming conflict with other Studio Package files contained in the same folder.
 
 ## Remarks
 
@@ -42,3 +42,4 @@ TODO
 * [Export Individual Flows][Export Individual Flows tutorial]
 
 [Export Individual Flows tutorial]: {{< url path="Cortex.Tutorials.Administration.StudioExport.ExportIndividualFlows" >}}
+[Studio Import]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport.MainDoc" >}}

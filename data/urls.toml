@@ -871,6 +871,8 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
