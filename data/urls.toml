@@ -871,8 +871,12 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioExport]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-export/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.VersionControl]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/version-control/"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -2709,12 +2713,15 @@
                 SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
                 Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
                 UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
-            [Cortex.Tutorials.Administration.StudioImport]
-                MainDoc = "/docs/tutorials/administration/studio-import"
-                ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
             [Cortex.Tutorials.Administration.StudioExport]
                 MainDoc = "/docs/tutorials/administration/studio-export"
                 ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
+            [Cortex.Tutorials.Administration.StudioImport]
+                MainDoc = "/docs/tutorials/administration/studio-import"
+                ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
+            [Cortex.Tutorials.Administration.VersionControl]
+                MainDoc = "/docs/tutorials/administration/version-control"
+                UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
