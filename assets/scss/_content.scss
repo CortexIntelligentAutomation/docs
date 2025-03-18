@@ -184,6 +184,19 @@
         }
     }
 
+    >.scribe-video {
+        max-width: 640px;
+        width: 100%;
+        animation: fadeIn 2s;
+
+        iframe {
+            height: 640px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 5px;
+        }
+    }
+
     br {
         content: " ";
         display: block;

@@ -476,7 +476,6 @@
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
 
-
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -684,26 +683,6 @@
                     TryItOut = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/try-it-out"
                     UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-application-server"
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-web-application-server"
-            [Cortex.Guides.UpgradeCortex.2024.11to2025.1]
-                MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/"
-                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.Advanced]
-                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
-                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.MultipleServerWithHA]
-                    MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/"
-                    PreUpgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/pre-upgrade"
-                    TryItOut = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/try-it-out"
-                    Upgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade"
-                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
-                    UpgradeDebugger = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
-                    UpgradeGateway = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
-                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server"
-                [Cortex.Guides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA]
-                    MainDoc = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/"
-                    PreUpgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/pre-upgrade"
-                    TryItOut = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/try-it-out"
-                    Upgrade = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade"
-                    UpgradeApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-application-server"
-                    UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-web-application-server"
         [Cortex.Guides.UpgradeObservability]
             MainDoc = "/docs/guides/upgrade-observability/"
             [Cortex.Guides.UpgradeObservability.OnPremise]
@@ -729,6 +708,169 @@
                     Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                     UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                     TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.UpgradeGuides]
+            MainDoc = "/docs/guides/upgrade-guides/"
+            [Cortex.Guides.UpgradeGuides.UpgradeCortex]
+                MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/"      
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.Advanced]
+                    SSLBestPractices = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/ssl-best-practices"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.Advanced]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/advanced"
+                        SSLBestPractices = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/advanced/ssl-best-practices"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/try-it-out"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/multiple-server-with-ha/upgrade-web-application-server"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/try-it-out"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.1-to-2024.3/single-server-without-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.3to2024.5]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.3to2024.5.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/try-it-out"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/multiple-server-with-ha/upgrade-web-application-server"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.3to2024.5.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/try-it-out"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.Advanced]
+                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/try-it-out"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/upgrade-web-application-server"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/try-it-out"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.Advanced]
+                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server"
+                        WebApplicationServerPreqrequisites = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/upgrade-web-application-server/prerequisites"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/try-it-out"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.Advanced]
+                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
+                        Prerequisites = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/try-it-out"
+                        RetrieveAppServerEncryptionKey = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites/#retrieve-existing-encryption-key"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server"
+                        WebApplicationServerPreqrequisites = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/upgrade-web-application-server/prerequisites"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/try-it-out"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.Advanced]
+                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/try-it-out"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/try-it-out"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-application-server"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-web-application-server"
+            [Cortex.Guides.UpgradeGuides.UpgradeObservability]
+                MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise]
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana]
+                        BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites/#backup-old-files"
+                        MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites/#make-artefacts-available"
+                        Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/try-it-out"
+                        UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/upgrade-grafana"
+                        UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/upgrade-loki"
+                        UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/upgrade-promtail"
+                        VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites/#verify-old-version"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud]
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana]
+                        BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/prerequisites/#backup-old-files"
+                        MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/prerequisites/#make-artefacts-available"
+                        Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/prerequisites"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/try-it-out"
+                        UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/upgrade-promtail"
+                        VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/prerequisites/#verify-old-version"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.Dashboards]
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.Dashboards.Grafana]
+                        Download = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
+                        UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.UserGuides]
+            MainDoc = "/docs/guides/user-guides/"
+            [Cortex.Guides.UserGuides.UserInterfaces]
+                MainDoc = "/docs/guides/user-guides/user-interfaces/"
+                [Cortex.Guides.UserGuides.UserInterfaces.Gateway]
+                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/overview/"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/"
+                                CreatePackage = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/#create-a-package"
+                                Import = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-definitions-grid/#import-a-package"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/"
+                                Authorisation = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#authorisation"
+                                CreateNewVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#create-a-new-package-version"
+                                Definition = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#definition"
+                                Export = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#export-a-package-version"
+                                Publish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#publish-a-package-version"
+                                RunningExecutions = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#running-executions"
+                                Schedules = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#schedules"
+                                SetDefaultPackage = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-package"
+                                SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
+                                Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
+                                Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -1546,6 +1688,10 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/messages/"
                     [Cortex.Reference.Concepts.Fundamentals.Messages.WhatIsAMessage]
                         MainDoc = "/docs/reference/concepts/fundamentals/messages/what-is-a-message/"
+                [Cortex.Reference.Concepts.Fundamentals.Packages]
+                    MainDoc = "/docs/reference/concepts/fundamentals/packages"
+                    [Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage]
+                        MainDoc = "/docs/reference/concepts/fundamentals/packages/what-is-a-package/"
                 [Cortex.Reference.Concepts.Fundamentals.Variables]
                     MainDoc = "/docs/reference/concepts/fundamentals/variables/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
@@ -2545,6 +2691,23 @@
                 32Bit = "/docs/reference/glossary/0-9/#32-bit"
     [Cortex.Tutorials]
         MainDoc = "/docs/tutorials/"
+        [Cortex.Tutorials.Administration]
+            MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.PackageManagement]
+                MainDoc = "/docs/tutorials/administration/package-management"
+                    Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
+                    CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
+                    CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
+                    ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
+                    ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
+                    PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
+                    RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
+                    Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
+                    SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
+                    SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
+                    Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
+                    UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"

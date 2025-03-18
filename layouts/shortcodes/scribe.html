@@ -1,0 +1,29 @@
+{{- $versionPath := "" }}
+{{- /* Get the current version, and whether the website is currently nested (has /docs prepended). */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (or $currentVer (index (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1) 0)) }}
+		{{- $isNested = true }}
+	{{- end }}
+{{- end }}
+{{- if $currentVer }}
+    {{ range where .Site.Params.versions "url" $currentVer }}
+        {{ $versionPath = .version }}
+    {{ end }}
+{{- else }}
+    {{- /*  use latest doc as not in a versioned page  */}}
+    {{ range where .Site.Params.versions "latest" true }}
+        {{- $versionPath = .version }}
+    {{ end }}
+{{- end }}
+{{- if $isNested }}
+    {{- $versionPath = printf "%s%s" "docs/" $versionPath }}
+{{- end }}
+{{- $id := .Get "id" | default (.Get 0) -}}
+  {{- $title := .Get "title" | default "Scribe Tutorial" }}
+  <div class="scribe-video">
+    <iframe src="https://scribehow.com/embed/{{ $title }}__{{ $id }}?as=video" style="background: url(/{{ $versionPath }}/images/loading.gif) no-repeat center;" frameborder="0" allowfullscreen></iframe>
+  </div>
