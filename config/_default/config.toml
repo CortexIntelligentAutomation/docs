@@ -215,7 +215,6 @@ enable = true
 	version = "2025.1"
 	url = "/docs/2025.1/"
 	dotNetVersion = "net-8.0"
-	inSupport = true
 
 [[params.versions]]
 	version = "2024.11"
