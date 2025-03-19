@@ -28,6 +28,7 @@ IgnoreURLs:
 - "https://.*.gov.uk/.*"
 - "https://www.elastic.co/.*"
 - "https://www.connectionstrings.com/.*"
+- "https://dotnet.microsoft.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
