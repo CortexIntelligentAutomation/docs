@@ -2,7 +2,7 @@
 title: "Package Management"
 linkTitle: "Package Management"
 description: "This section includes tutorials about managing packages on the {{% ctx %}} platform."
-weight: 100
+weight: 1
 ---
 
 # {{% param title %}}
