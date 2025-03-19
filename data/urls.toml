@@ -871,8 +871,11 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+<<<<<<< HEAD
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+=======
+>>>>>>> 3c53b10c27e802f98baaa247cc86102c90e5e132
 
 [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -2720,6 +2723,18 @@
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/Operations/overview"
                 UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
+                    Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
+                    CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
+                    CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
+                    ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
+                    ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
+                    PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
+                    RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
+                    Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
+                    SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
+                    SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
+                    Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
+                    UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
 
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]

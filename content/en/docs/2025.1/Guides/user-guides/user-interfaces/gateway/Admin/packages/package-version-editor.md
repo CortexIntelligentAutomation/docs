@@ -117,18 +117,18 @@ See the [Create a Schedule on a Package Version][Create a Schedule on a Package 
 
 ### Triggers
 
-A trigger allows flow executions to occur on receipt of an SNMP Trap event, passing values to the flow’s [input variables][Input Variables], and if required, the SNMP Trap PDU can be stored in a selected input variable as an object. Multiple triggers can be configured; a trigger can execute a single flow, and a flow can be executed by multiple triggers.
+A trigger allows flow executions to occur on receipt of an SNMP Trap, passing values to the flow’s [input variables][Input Variables], and if required, the SNMP Trap PDU can be stored in a selected input variable as an object. Multiple triggers can be configured; a trigger can execute a single flow, and a flow can be executed by multiple triggers.
 
-Each trigger definition consists of a `Name`, which is used to easily identify the trigger, and an optional `Description` to provide additional information. The definition also specifies the `Flow` to be executed as well as a set of conditions that receipt of an SNMP Trap will execute the flow.
+Each trigger definition consists of a `Name`, which is used to easily identify the trigger, and an optional `Description` to provide additional information. The definition also specifies the `Flow` to be executed as well as a set of conditions that, on receipt of a matching SNMP Trap, will execute the flow.
 
 The conditions that must be set are:
 
-* The `Device Address` of device sending the SNMP Trap.
+* The `Device Address` of the device sending the SNMP Trap.
 
-    This can be a single IPv4 address, a list of comma-separated IPv4 addresses, a range of IPv4 addresses, CIDR subnets, or the * symbol to represent any source address.
+    This can be a single IPv4 address, a list of comma-separated IPv4 addresses, a range of IPv4 addresses, CIDR subnets, or the * symbol to represent any address.
 * The `Device Port` of the device sending the SNMP Trap.
 
-    This can be a single port, a list of comma-separated ports, a range of ports, or the * symbol to represent any source port.
+    This can be a single port, a list of comma-separated ports, a range of ports, or the * symbol to represent any port.
 * The `Trap OID`.
 
     This can be a single OID, a list of comma-separated OIDs, a range of OIDs, or the * symbol to represent any OID.
@@ -136,7 +136,7 @@ The conditions that must be set are:
 * The `SNMP Version`; either: *SNMPv1*, *SNMPv2c*, or *SNMPv3*.
   * If *SNMPv1* is selected, a `Community` and `Agent Address` must be configured.
     * `Community` can be any value, a list of comma-separated values, or the * symbol to represent any community.
-    * `Agent Address` matches with the source address contained in the SNMP PDU, and can be a single IPv4 address, a list of comma-separated IPv4 addresses, a range of IPv4 addresses, CIDR subnets, or the * symbol to represent any source address.
+    * `Agent Address` matches with the device address contained in the SNMP PDU, and can be a single IPv4 address, a list of comma-separated IPv4 addresses, a range of IPv4 addresses, CIDR subnets, or the * symbol to represent any address.
   * If *SNMPv2c* is selected, a `Community` must be configured.
     * `Community` can be any value, a list of comma-separated values, or the * symbol to represent any community.
   * If *SNMPv3* is selected, it is necessary to setup one or more authentication users from the `Configure SNMPv3 Users` hyperlink, above the list of existing SNMP Triggers.
@@ -159,10 +159,10 @@ See the [View and Abort Running Flow Executions][View and Abort Running Flow Exe
 
 ### Known Limitations
 
-* Flow versions other than those inherited from the source package version, or the Master Versions stored in the Master Repository, cannot be included in a new package version.
+* Only flow versions inherited from the source package version, or the Master Versions stored in the Master Repository, can be included in a new package version.
 * New package versions do not retain any of the configured schedules or triggers set on the source version.
-* To set the default package, it is necessary to select a published package version; it is not possible to set the default package by selecting a version that is not published even if other versions of the same package are published.
 * Exported package versions do not retain any of the configured schedules, triggers or authorisation set on the package version being exported.
+* To set the default package, it is necessary to select a published package version; it is not possible to set the default package by selecting a version that is not published even if other versions of the same package are published.
 * Currently, a schedule cannot be edited; new schedules can be created, and existing schedules deleted.
 
 ## See Also
