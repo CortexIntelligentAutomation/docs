@@ -15,10 +15,10 @@ A {{% ctx %}} Package contains a set of independent or related flows that togeth
 Users with the Admin role can use the [{{% ctx %}} Package Management][] feature to manage packages, including [creating][CreatePackage] and [publishing][Publish] them.
 
 ## Anatomy of a Package
-TODO
-{{< figure src="/images/Package Management.png" title="Package Management" >}}
 
-## Package Operations
+{{< figure src="/images/Package Management.png" >}}
+
+## Actions
 
 ### Creating a Package
 
@@ -36,7 +36,7 @@ Executions of flows contained within published packages can be triggered via a R
 
 A published package may be set as the [Default Package][], which will be used if the Package Name is not explicitly identified in a REST Request to execute a flow. Additionally, within each package, a published Package Version may be set as the [Default Package Version][]; this will be used if the Package Version is not explicitly identified in a REST Request to execute a flow.
 
-### Other Package Operations
+### Other Actions
 
 {{% ctx %}} Package Management also allows for:
 
