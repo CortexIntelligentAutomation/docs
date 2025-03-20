@@ -28,6 +28,8 @@ IgnoreURLs:
 - "https://.*.gov.uk/.*"
 - "https://www.elastic.co/.*"
 - "https://www.connectionstrings.com/.*"
+- "https://dotnet.microsoft.com/.*"
+- "https://scribehow.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
@@ -37,6 +39,7 @@ IgnoreDirs:
 - "docs/2023.7/?.*/"
 - "docs/2023.9/?.*/"
 - "docs/2023.11/?.*/"
+- "docs/2024.1/?.*/"
 - "docs/2024.3/?.*/"
 - "docs/2024.5/?.*/"
 - "docs/2024.7/?.*/"
