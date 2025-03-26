@@ -19,14 +19,6 @@ Studio Import is a feature that enables individual flows, contained in a Studio 
 
 {{< figure src="/images/Studio Import.png" title="Studio Import" >}}
 
-Individual flows contained in the Studio Package may be individually selected for importing into {{% ctx %}} Studio; it is not a requirement that all the flows contained in the Studio Package are imported simultaneously.
-
-When the selected flows from the Studio Package are imported, they will become the Master Version of the flows in the destination Master Repository, replacing any existing Master Versions.
-
-After importing the flows, it is necessary to check the authorisation assigned to imported flows is appropriate for their use.
-
-See the [Import Individual Flows][Import Individual Flows tutorial] tutorial for a step-by-step guide.
-
 ## Actions
 
 ### Favoured Hierarchy
@@ -38,6 +30,16 @@ Alternatively, it is possible to have the display favour the `package hierarchy`
 ### Edit Import Locations
 
 The `Edit import hierarchy`, enables any individual imported flows to be assigned to any Group in the hierarchy of the destination {{% ctx %}} Studio. The display will show the entire existing hierarchy of the destination {{% ctx %}} Studio, extended by any necessary Groups from the Studio Package hierarchy where the imported flows do not already exist on the destination {{% ctx %}} Studio; it is not necessary for the administrator to have View or Edit authorisation for any flows to view the entire system Group hierarchy.
+
+### Import
+
+Individual flows contained in the Studio Package may be individually selected for importing into {{% ctx %}} Studio; it is not a requirement that all the flows contained in the Studio Package are imported simultaneously.
+
+When the selected flows from the Studio Package are imported, they will become the Master Version of the flows in the destination Master Repository, replacing any existing Master Versions.
+
+After importing the flows, it is necessary to check the authorisation assigned to imported flows is appropriate for their use.
+
+See the [Import Individual Flows][Import Individual Flows tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
