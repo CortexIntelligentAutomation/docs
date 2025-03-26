@@ -7,7 +7,7 @@ weight: 20
 
 # {{% param title %}}
 
-The requirements for each server role (as described in [Architecture][]) are laid out in this guide. These must be considered before undertaking installation.
+The requirements for each server role (as described in [Architecture][]) are laid out in detail in this guide. For a summarised checklist please click [here][Requirements Checklist]. These must be considered before undertaking installation.
 
 ## Hardware Requirements
 
