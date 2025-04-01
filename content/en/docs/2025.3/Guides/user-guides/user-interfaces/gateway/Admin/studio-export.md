@@ -9,7 +9,7 @@ weight: 50
 
 ## Summary
 
-Studio Export is a feature that enables one or more flows to be exported into a Studio Package file, which may be used for archiving purposes, or [importing][Studio Import] flows into another {{% ctx %}} Studio. A Studio Package file may contain a mixture of distinct {{% ctx %}} and {{% ctx %}} 7 flows.
+The Studio Export page allows exporting one or more flows into a Studio Package file, which may be used for archiving purposes, or [importing][Studio Import] flows into another {{% ctx %}}.
 
 |                              |                                                                 |
 |------------------------------|-----------------------------------------------------------------|
@@ -19,23 +19,29 @@ Studio Export is a feature that enables one or more flows to be exported into a 
 
 {{< figure src="/images/Studio Export.png" title="Studio Export" >}}
 
-Any flow in the system may be exported; it is not necessary for the administrator to have View or Edit authorisation for the flows to be exported.
+## Actions
+
+### Export Flows
 
 Individual flows are selected by clicking the checkbox in the `Export?` column adjacent to the flow to be exported. If a group is selected, then all the flows contained in that group, and any sub-groups, will be implicitly set; any implicitly set may be individually deselected by clicking the checkbox adjacent to the flow.
 
-Clicking `Export` will create the Studio Package from the Master Versions in the Master Repository of the selected flows, including their group hierarchy, and then download the package to the host’s browser as a file named `export.studiopkg` or `export <n>.studiopkg`, where `<n>` represents an integer to avoid naming conflict with other Studio Package files contained in the same folder.
+Clicking `Export` checks if selected flows have dependencies. If there are dependencies, an additional page will be shown to allow confirmation that these should be included in the export. By default these are selected but can be deselected. A Studio Package will then be created from the Master Versions in the Master Repository of the selected flows, including their group hierarchy. The package will then be downloaded to the host’s browser as a file named `export.studiopkg` or `export <n>.studiopkg`, where `<n>` represents an integer to avoid naming conflict with other Studio Package files contained in the same folder.
+
+It is not necessary to have View or Edit authorisation for the flows to be exported.
+
+See the [Export Individual Flows][Export Individual Flows tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
 ### Known Limitations
 
-* Any flows that are dependencies of selected flows will not be automatically selected for export.
+* The name of the Studio Package file cannot currently be customised.
 
 ## See Also
 
 ### Related Concepts
 
-TODO
+None
 
 ### Related Tutorials
 

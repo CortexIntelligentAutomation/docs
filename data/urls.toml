@@ -230,6 +230,7 @@
                     ProductPortal =  "/blog/2022/10/27/2022.9/#product-portal"
     [Cortex.Faqs]
         MainDoc = "/docs/faqs/"
+        CheckClusterHealth = "/docs/faqs/check-cluster-health/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -2671,6 +2672,7 @@
                 Request = "/docs/reference/glossary/p-t/#request"
                 SDK = "/docs/reference/glossary/p-t/#sdk"
                 ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"
+                ServiceFabricExplorer = "/docs/reference/glossary/p-t/#service-fabric-explorer"
                 Single = "/docs/reference/glossary/p-t/#single"
                 SASL = "/docs/reference/glossary/p-t/#sasl"
                 SMTP = "/docs/reference/glossary/p-t/#smtp"

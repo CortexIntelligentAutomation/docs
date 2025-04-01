@@ -2,7 +2,7 @@
 title: "Studio Export"
 linkTitle: "Studio Export"
 description: "This section includes tutorials about exporting individual flows."
-weight: 50
+weight: 100
 ---
 
 # {{% param title %}}
