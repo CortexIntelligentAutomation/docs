@@ -2,7 +2,7 @@
 title: "Version Control"
 linkTitle: "Version Control"
 description: "This section includes tutorials about using Version Control."
-weight: 75
+weight: 150
 ---
 
 # {{% param title %}}

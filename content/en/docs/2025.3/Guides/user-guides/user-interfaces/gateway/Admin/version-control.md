@@ -2,7 +2,7 @@
 title: "Version Control"
 linkTitle: "Version Control"
 description: "This section includes user guides related to Version Control in {{% ctx %}} Gateway."
-weight: 75
+weight: 90
 ---
 
 # {{% param title %}}
