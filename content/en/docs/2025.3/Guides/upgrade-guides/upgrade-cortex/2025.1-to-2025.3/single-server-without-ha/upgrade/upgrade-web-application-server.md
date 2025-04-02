@@ -21,10 +21,6 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.1 to 2025.3. P
 
 {{< section "/preserve-installation-files.md" >}}
 
-## Upgrade {{% ctx %}} Interaction Portal
-
-{{< section "/upgrade/2025.3/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
-
 ## Next Steps?
 
 1. [Try It Out][]
