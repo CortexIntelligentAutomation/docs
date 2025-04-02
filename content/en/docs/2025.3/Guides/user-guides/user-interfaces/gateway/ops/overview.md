@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "Summary and Anatomy of the Operations Overview."
+description: "The current platform status and flow execution statistics."
 weight: 10
 ---
 
