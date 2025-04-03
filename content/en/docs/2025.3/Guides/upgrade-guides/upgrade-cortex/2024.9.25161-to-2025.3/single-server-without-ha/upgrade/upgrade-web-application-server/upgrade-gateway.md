@@ -1,7 +1,7 @@
 ---
-title: "Upgrade Web Application Server"
-linkTitle: "Upgrade Web Application Server"
-description: "Information about upgrading the Web Application Server from 2024.9.25161 to 2025.3."
+title: "Upgrade Gateway"
+linkTitle: "Upgrade Gateway"
+description: "Information about upgrading {{% ctx %}} Gateway"
 weight: 30
 ---
 
@@ -21,13 +21,9 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.9.25161 to 202
 
 {{< section "/preserve-installation-files.md" >}}
 
-## Upgrade {{% ctx %}} Interaction Portal
-
-{{< section "/upgrade/2025.3/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
-
 ## Next Steps?
 
-1. [Try It Out][]
+1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.TryItOut" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeCIP" >}}
 [Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}

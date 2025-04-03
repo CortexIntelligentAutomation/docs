@@ -2,7 +2,7 @@
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
 description: "Information about upgrading {{% ctx %}} Gateway from 2024.9.25161 to 2025.3."
-weight: 30
+weight: 40
 ---
 
 # {{% param title %}}
@@ -15,19 +15,15 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.9.25161 to 202
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-web-application-server/run-gateway-script.md" >}}
+{{< section "/upgrade/2024.11/upgrade-web-application-server/run-gateway-script.md" >}}
 
 ## Preserve installation files
 
 {{< section "/preserve-installation-files.md" >}}
 
-## Upgrade {{% ctx %}} Interaction Portal
-
-{{< section "/upgrade/2025.3/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
-
 ## Next Steps?
 
-1. [Try It Out][]
+1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.TryItOut" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.UpgradeCIP" >}}
