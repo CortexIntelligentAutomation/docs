@@ -29,6 +29,7 @@ IgnoreURLs:
 - "https://www.elastic.co/.*"
 - "https://www.connectionstrings.com/.*"
 - "https://dotnet.microsoft.com/.*"
+- "https://scribehow.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
