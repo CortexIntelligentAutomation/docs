@@ -1,7 +1,7 @@
 ---
-title: "Upgrade Web Application Server"
-linkTitle: "Upgrade Web Application Server"
-description: "Information about upgrading the Web Application Server from 2025.1 to 2025.3."
+title: "Upgrade Gateway"
+linkTitle: "Upgrade Gateway"
+description: "Information about upgrading {{% ctx %}} Gateway"
 weight: 30
 ---
 
