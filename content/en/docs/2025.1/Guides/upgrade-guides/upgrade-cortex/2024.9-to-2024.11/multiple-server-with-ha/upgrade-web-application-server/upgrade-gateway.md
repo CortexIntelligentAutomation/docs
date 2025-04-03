@@ -2,7 +2,7 @@
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
 description: "Information about upgrading {{% ctx %}} Gateway from 2024.9 to 2024.11."
-weight: 30
+weight: 40
 ---
 
 # {{% param title %}}
@@ -21,13 +21,9 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.9 to 2024.11. 
 
 {{< section "/preserve-installation-files.md" >}}
 
-## Upgrade {{% ctx %}} Interaction Portal
-
-{{< section "/upgrade/2024.11/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
-
 ## Next Steps?
 
-1. [Try It Out][]
+1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.TryItOut" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.UpgradeCIP" >}}

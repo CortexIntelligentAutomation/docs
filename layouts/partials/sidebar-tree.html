@@ -70,9 +70,11 @@
             <a class="td-sidebar-link td-sidebar-link__page {{ if and (not $delayActive) $childActive }}active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           {{ else }}
             {{ $ulNr := add $ulNr 1 }}
-            <ul class="td-sidebar-nav__section pr-md-3  ul-{{ $ulNr }}">
-              {{ template "tree-nav-section" (dict "page" $p "section" . "ulNr" $ulNr) }}
-            </ul>
+            {{ if not .Params.outOfSupport }}
+              <ul class="td-sidebar-nav__section pr-md-3  ul-{{ $ulNr }}">
+                {{ template "tree-nav-section" (dict "page" $p "section" . "ulNr" $ulNr) }}
+              </ul>
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
