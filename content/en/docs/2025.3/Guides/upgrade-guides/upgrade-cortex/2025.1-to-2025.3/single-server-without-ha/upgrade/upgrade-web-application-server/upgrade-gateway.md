@@ -23,7 +23,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.1 to 2025.3. P
 
 ## Next Steps?
 
-1. [Try It Out][]
+1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.SingleServerWithoutHA.TryItOut" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.SingleServerWithoutHA.UpgradeCIP" >}}
 [Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
