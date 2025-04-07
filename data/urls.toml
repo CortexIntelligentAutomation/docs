@@ -3157,6 +3157,8 @@
         MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+    [RabbitMQ.QuorumQueues]
+        MainDoc = "https://www.rabbitmq.com/docs/quorum-queues"
 [RFC]
     UriInvalidCharacters = "https://www.rfc-editor.org/rfc/rfc3986#section-2"
     ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
