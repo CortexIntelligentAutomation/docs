@@ -709,6 +709,10 @@
                     Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                     UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                     TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.DisasterRecoveryGuides]
+            MainDoc = "/docs/guides/disaster-recovery/"
+            [Cortex.Guides.DisasterRecoveryGuides.CortexInnovation]
+                BackupApplicationServer = "/docs/guides/disaster-recovery/cortex-innovation/backup-cortex-application"
         [Cortex.Guides.UpgradeGuides]
             MainDoc = "/docs/guides/upgrade-guides/"
             [Cortex.Guides.UpgradeGuides.UpgradeCortex]
