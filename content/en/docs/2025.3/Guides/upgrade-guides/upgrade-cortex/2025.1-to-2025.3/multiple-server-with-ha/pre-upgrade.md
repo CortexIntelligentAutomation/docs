@@ -13,9 +13,11 @@ This guide describes how to perform the steps required before starting the upgra
 
 {{< section "/upgrade/2025.3/pre-upgrade/multi-server/make-artefacts-available.md">}}
 
-## Backup Config Store Data
+## Backup Configuration Portal Data
 
-If using the {{% ctx %}} Config Store, the data will need to be backed up.
+   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the RabbitMQ upgrade.{{< /alert >}}
+
+If using the {{% ctx %}} Configuration Portal, the data will need to be backed up.
 
 For further assistance, please raise a case in the [{{% ctx %}} Service Portal][].
 

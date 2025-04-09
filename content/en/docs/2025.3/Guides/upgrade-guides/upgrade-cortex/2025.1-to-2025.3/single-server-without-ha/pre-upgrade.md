@@ -13,8 +13,15 @@ This guide describes how to perform the steps required before starting the upgra
 
 {{< section "/upgrade/2025.3/pre-upgrade/single-server/make-artefacts-available.md">}}
 
+## Backup Configuration Portal Data
+
+If using the {{% ctx %}} Configuration Portal, the data will need to be backed up.
+
+For further assistance, please raise a case in the [{{% ctx %}} Service Portal][].
+
 ## Next Steps?
 
 1. [Upgrade][]
 
+[{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.SingleServerWithoutHA.Upgrade" >}}

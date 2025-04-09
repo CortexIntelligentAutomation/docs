@@ -50,9 +50,11 @@ Repeat the above instructions for the  `Flow Debugger`. In step 2 `server.domain
     * Click `Publish`. A success message should appear. If it doesn't it means that there is a problem with the configuration in the `web.config` file for {{% ctx %}} Gateway, or the Application Services aren't healthy.
     * Sometimes the list of published packages in the `Package Definitions` grid disappears. To fix, set the `Is Published` filter in the `Package Definitions` grid to blank option and then set the filter to `Is Published` option again to show all published packages.
 
-## Restore Config Store Data
+## Restore Configuration Portal Data
 
-If using the {{% ctx %}} Config Store, the data will need to be restored.
+   {{< alert type="note" title="Note" >}} This only needs to happen for upgrading to this release version as breaking changes were introduced as part of the RabbitMQ upgrade.{{< /alert >}}
+
+If using the {{% ctx %}} Configuration Portal, the data will need to be restored.
 
 For further assistance, please raise a case in the [{{% ctx %}} Service Portal][].
 
