@@ -9,6 +9,10 @@ weight: 30
 
 This guide describes how to upgrade the Application Servers and Load Balancer Server from 2025.1 to 2025.3. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
+{{% alert title="Warning" color="warning" %}}
+Due to breaking changes required for upgrading RabbitMQ from version 3 to version 4 the Application Servers need to be reinstalled rather than upgraded. As a result packages will need to be republished and Configuration Portal data will need to be backed up and restored. Other data stored in Reliable Collections (e.g., data storage collections and semaphores) will be lost.
+{{% /alert %}}
+
 ## Configure Upgrade Script
 
 1. In the `Cortex Innovation 2025.3 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
