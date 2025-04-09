@@ -7,7 +7,7 @@ weight: 40
 
 # {{% param title %}}
 
-This guide describes how to setup a scheduled backup of the Web Application Server.
+This guide describes how to configure a scheduled backup of the Web Application Server. This will back up the flow repositories, openApi definitions and web config file.
 
 ## Make Installation Artefacts Available
 {{< section "/disaster-recovery/cortex-gateway/make-installation-artefacts-available.md" >}}
@@ -65,10 +65,18 @@ This guide describes how to setup a scheduled backup of the Web Application Serv
 1. Wait for the script to finish running. This should take between 2 to 10 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
+## Preserve installation files
+
+Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to remove or configure further scheduled backups in the future.
+
 ## Remove Backup
 
+{{% alert title="Note" %}}Follow these instructions to remove a scheduled backup.{{% /alert %}}
+
 #### Configure the Backup Script
-1. If the scheduled backup needs to be removed, then configure the script according to the details given below:
+
+1. In the `Cortex Innovation 2025.3 - Web App Server Install Scripts\Recovery` folder, locate the `Cortex.Innovation.Gateway.Backup.ps1` script and open it with a text editor.
+1. Configure the script according to the details given below:
     
     ```powershell
     .\Cortex.Gateway.Backup.ps1 `
@@ -85,6 +93,7 @@ This guide describes how to setup a scheduled backup of the Web Application Serv
 1. Save and close `Cortex.Innovation.Gateway.Backup.ps1`.
 
 #### Run the Backup Script
+
 1. Save and close `Cortex.Innovation.Gateway.Backup.ps1`.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2025.3 - Web App Server Install Scripts\Recovery` folder using the following command, modifying the path as necessary:
@@ -103,7 +112,3 @@ This guide describes how to setup a scheduled backup of the Web Application Serv
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
 1. Wait for the script to finish running. This should take 1 minute.
 1. Check that there have been no errors in the script; these would appear in red in the console.
-
-## Preserve installation files
-
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as setting backup schedules.

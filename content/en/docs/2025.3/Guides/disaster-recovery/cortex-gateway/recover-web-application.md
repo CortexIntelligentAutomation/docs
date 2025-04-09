@@ -1,13 +1,13 @@
 ---
-title: "Restore Web Application Server"
-linkTitle: "Restore Web Application Server"
-description: "Information about restoring the application server."
+title: "Recover Web Application Server"
+linkTitle: "Recover Web Application Server"
+description: "Information about recovering the web application server."
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to restore the Web Application Server from a backup.
+This guide describes how to recover the Web Application Server from a backup. This will recovery the flow repositories and the openApi definitions.
 
 ## Make Installation Artefacts Available
 {{< section "/disaster-recovery/cortex-gateway/make-installation-artefacts-available.md" >}}
@@ -38,7 +38,7 @@ This guide describes how to restore the Web Application Server from a backup.
 ### Run the Recover Script
 
 {{% alert title="Note" %}}
-A backup policy should be configured on the application server before running a restore, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.CortexInnovation.BackupApplicationServer" title="Backup Application Server" >}} for further information.
+A backup policy should be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.CortexInnovation.BackupApplicationServer" title="Backup Application Server" >}} for further information.
 {{% /alert %}}
 
 1. Open a Windows PowerShell (x64) window as administrator.
@@ -54,11 +54,11 @@ A backup policy should be configured on the application server before running a 
     .\Cortex.Innovation.Gateway.Recover.ps1
     ```
 
-1. Run the PowerShell command to backup the application services.
+1. Run the PowerShell command to recover the web application.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
 1. Wait for the script to finish running. This should take 2 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 
 ## Preserve installation files
 
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to perform further actions in future, such as restoring from backups.
+Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to recover the web application in the future.

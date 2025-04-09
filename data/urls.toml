@@ -713,6 +713,10 @@
             MainDoc = "/docs/guides/disaster-recovery/"
             [Cortex.Guides.DisasterRecoveryGuides.CortexInnovation]
                 BackupApplicationServer = "/docs/guides/disaster-recovery/cortex-innovation/backup-cortex-application"
+                RestoreApplicationServer = "/docs/guides/disaster-recovery/cortex-innovation/recover-cortex-application"
+            [Cortex.Guides.DisasterRecoveryGuides.CortexGateway]
+                BackupApplicationServer = "/docs/guides/disaster-recovery/cortex-gateway/backup-web-application"
+                RestoreApplicationServer = "/docs/guides/disaster-recovery/cortex-gateway/recover-web-application"
         [Cortex.Guides.UpgradeGuides]
             MainDoc = "/docs/guides/upgrade-guides/"
             [Cortex.Guides.UpgradeGuides.UpgradeCortex]
