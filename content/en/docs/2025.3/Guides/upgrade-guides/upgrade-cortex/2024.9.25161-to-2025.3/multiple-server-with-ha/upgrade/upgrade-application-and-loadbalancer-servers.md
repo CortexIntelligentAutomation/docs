@@ -7,11 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Servers and Load Balancer Server from 2025.1 to 2025.3. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
-
-{{% alert title="Warning" color="warning" %}}
-Due to breaking changes required for upgrading RabbitMQ from version 3 to version 4 the Application Servers need to be reinstalled rather than upgraded. As a result packages will need to be republished and Configuration Portal data will need to be backed up and restored. Other data stored in Reliable Collections (e.g., data storage collections and semaphores) will be lost.
-{{% /alert %}}
+This guide describes how to upgrade the Application Servers and Load Balancer Server from 2024.9.25161 to 2025.3. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
@@ -71,5 +67,5 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
