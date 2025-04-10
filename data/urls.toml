@@ -22,6 +22,19 @@
                     RedesigningTheSemaphoreApi = "/blog/2025/02/10/2025.1/#redesigned-semaphore-api"
                     ThirdPartyLibrariesHasBeenUpdated = "/blog/2025/02/10/2025.1/#updated-third-party-libraries"
                     AddingAnUnblockScript = "/blog/2025/02/10/2025.1/#added-unblock-script-to-the-installation"
+                [Cortex.Blogs.Releases.2025.3]
+                    MainDoc = "/blog/2025/04/07/2025.3/"
+                    CreatingANewProcessFromNaturalLanguage = "/blog/2025/04/07/2025.3/#support-for-creating-a-new-process-from-natural-language"
+                    EnablingAutomatedBackupsForDisasterRecovery = "/blog/2025/04/07/2025.3/#enabled-automated-backups-for-disaster-recovery"
+                    RemovingOldExecutionsOnExecutionServiceStartup = "/blog/2025/04/07/2025.3/#remove-old-executions-on-execution-service-startup"
+                    MigratingRabbitMqQueuesToQuorumQueues = "/blog/2025/04/07/2025.3/#migrated-rabbitmq-queues-to-quorum-queues"
+                    GeneralSecurityEnhancements = "/blog/2025/04/07/2025.3/#general-security-enhancements"
+                    ConfigurableGlobalRunAsUserForFlows = "/blog/2025/04/07/2025.3/#configurable-global-runas-user-for-flows"
+                    ImprovingThePageLoadSpeed = "/blog/2025/04/07/2025.3/#improved-page-load-speed-of-the-product-portal"
+                    HidingUnsupportedVersionsOfTheDocumentation = "/blog/2025/04/07/2025.3/#unsupported-versions-of-the-documentation-are-now-hidden"
+                    RabbitMqAndErlangHaveBeenUpgraded = "/blog/2025/04/07/2025.3/#upgrade-of-rabbitmq-and-erlang"
+                    PackageManagement = "/blog/2025/04/07/2025.3/#added-package-management-documentation"
+                    RemovalOf7.2AndInnovationFromDocumentation = "/blog/2025/04/07/2025.3/#removed-72-and-innovation-from-documentation"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
@@ -3157,6 +3170,8 @@
         MainDoc = "https://www.postman.com/downloads/"
 [RabbitMQ]
     MainDoc = "https://www.rabbitmq.com/"
+    [RabbitMQ.QuorumQueues]
+        MainDoc = "https://www.rabbitmq.com/docs/quorum-queues"
 [RFC]
     UriInvalidCharacters = "https://www.rfc-editor.org/rfc/rfc3986#section-2"
     ProblemDetails = "https://www.rfc-editor.org/rfc/rfc7807"
