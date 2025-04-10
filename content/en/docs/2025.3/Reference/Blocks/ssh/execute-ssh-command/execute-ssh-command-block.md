@@ -182,6 +182,7 @@ new Dictionary<string, EncryptableText> {
     { "Timeout", "60" },
     { "EndOfLineCharacters", "\r" },
     { "CancelCommand", "CtrlC" },
+    { "ControlCharactersToClean", @"\e([^\[\]]|\[.*?[a-zA-Z]|\].*?\a)(g?)|[\x00-\x09\x0B\x0C\x0E-\x1F\x7F]" },
 }
 ```
 

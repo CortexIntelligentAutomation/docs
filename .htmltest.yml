@@ -30,6 +30,7 @@ IgnoreURLs:
 - "https://www.connectionstrings.com/.*"
 - "https://dotnet.microsoft.com/.*"
 - "https://scribehow.com/.*"
+- "https://www.rabbitmq.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
