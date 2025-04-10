@@ -7,88 +7,75 @@ weight: 1
 
 ## Summary
 
-2025.1 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2024.11][] release in the following areas:
+2025.3 is the third [Release][] of the next generation of {{% ctx %}} and improves on the [2025.1][] release in the following areas:
 
 * [Capability][]
-* [Observability][]
-* [Performance][]
 * [Scalability][]
 * [Security][]
 * [Usability][]
 * [Third-Party Support][]
-* [Installation][]
+* [Documentation][]
 
 ## Improved Capability
 
-This release introduces the following new features to the {{% ctx %}} platform:
+This release introduces the following new feature to the {{% ctx %}} platform:
 
-* The user can now [create a new process from BPMN XML][] within [{{% ctx %}} Gateway][Gateway]
-* An [Average Duration graph has been added][] to the Operations Overview page on [{{% ctx %}} Gateway][Gateway]
-
-## Improved Observability
-
-All services have had the [default size of logs][] used for Observability reduced to optimise disk usage.
-
-## Improved Performance
-
-Work has been undertaken to [improve the performance][] of the [{{% ctx %}} Execution][{{% ctx %}} Execution Service] and [{{% ctx %}} Monitoring][{{% ctx %}} Monitoring Service] services.
+* Support for [creating a new process from Natural Language][].
 
 ## Improved Scalability
 
-The [Service Fabric BackUpRestore service has been enabled][] to allow future Scalability improvements such as disaster recovery features.
+Scalability has been enhanced by:
+
+* [enabling automated backups for disaster recovery][].
+* [removing old executions on Execution Service startup][].
+* [migrating RabbitMQ queues to Quorum Queues][].
 
 ## Improved Security
 
-Security has been tightened on the [{{% ctx %}} Interaction Portal][Interaction Portal] by:
-
-* [Introducing security headers][]
-* [Removing sensitive information from HTTP responses][]
+We tightened the security of the platform with [general security enhancements][] and by adding support for a [configurable Global RunAs User for flows][].
 
 ## Improved Usability
 
-Usability has been enhanced by:
-
-* [Improving the user experience on the Operations Overview page][]
-* [Adding the {{% ctx %}} Version to the Gateway logo tooltip][]
-* [Redesigning the Semaphore API][Redesigning the Semaphore API] allowing easier management of Semaphores
+Improvement to the usability of the Product Portal has been made by [improving the page load speed][] by [hiding unsupported versions of the documentation][].
 
 ## Improved Third-Party Support
 
-[Third-party libraries has been updated][] on the {{% ctx %}} platform.
+The third-party components [RabbitMQ and Erlang have been upgraded][].
 
-## Improved Installation
+## Improved Documentation
 
-The Installation has been improved by [adding an unblock script][] to the installation process.
+The documentation includes updates related to:
 
-For a full list of what has been introduced in this release, please see the [2025.1 Release Notes][]
+* [Package Management][]
+* [removal of "7.2" and "Innovation" from documentation][]
 
-[Fast Track]: {{< url path="Cortex.Reference.Glossary.F-J.FastTrack" version="2025.1" >}}
-[2024.11]: {{< url path="Cortex.Blogs.Releases.2024.11.MainDoc" version="2025.1" >}}
-[Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" version="2025.1" >}}
-[{{% ctx %}} Execution Service]: {{< url path="Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" version="2025.1" >}}
-[{{% ctx %}} Monitoring Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.MonitoringService.MainDoc" version="2025.1" >}}
-[Interaction Portal]: {{< url path="Cortex.Guides.CortexInteractionPortal.MainDoc" version="2025.1" >}}
+For a full list of what has been introduced in this release, please see the [2025.3 Release Notes][]
+
+[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2025.3" >}}
+[2025.1]: {{< url path="Cortex.Blogs.Releases.2025.1.MainDoc" version="2025.3" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
-[Observability]: {{< ref "#improved-observability" >}}
-[Performance]: {{< ref "#improved-performance" >}}
 [Scalability]: {{< ref "#improved-scalability" >}}
 [Security]: {{< ref "#improved-security" >}}
 [Usability]: {{< ref "#improved-usability" >}}
 [Third-Party Support]: {{< ref "#improved-third-party-support" >}}
-[Installation]: {{< ref "#improved-installation" >}}
+[Documentation]: {{< ref "#improved-documentation" >}}
 
-[2025.1 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025.1.MainDoc" version="2025.1" >}}
+[2025.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025.3.MainDoc" version="2025.3" >}}
 
-[create a new process from BPMN XML]: {{< url path="Cortex.Blogs.Releases.2025.1.CreateANewProcessFromBpmnXml" version="2025.1" >}}
-[Average Duration graph has been added]: {{< url path="Cortex.Blogs.Releases.2025.1.AverageDurationGraphHasBeenAdded" version="2025.1" >}}
-[default size of logs]: {{< url path="Cortex.Blogs.Releases.2025.1.DefaultSizeOfLogs" version="2025.1" >}}
-[improve the performance]: {{< url path="Cortex.Blogs.Releases.2025.1.ImproveThePerformance" version="2025.1" >}}
-[Service Fabric BackUpRestore service has been enabled]: {{< url path="Cortex.Blogs.Releases.2025.1.ServiceFabricBackUpRestoreServiceHasBeenEnabled" version="2025.1" >}}
-[Introducing security headers]: {{< url path="Cortex.Blogs.Releases.2025.1.IntroducingSecurityHeaders" version="2025.1" >}}
-[Removing sensitive information from HTTP responses]: {{< url path="Cortex.Blogs.Releases.2025.1.RemovingSensitiveInformationFromHttpResponses" version="2025.1" >}}
-[Improving the user experience on the Operations Overview page]: {{< url path="Cortex.Blogs.Releases.2025.1.ImprovingTheUserExperienceOnTheOperationsOverviewPage" version="2025.1" >}}
-[Adding the {{% ctx %}} Version to the Gateway logo tooltip]: {{< url path="Cortex.Blogs.Releases.2025.1.AddingTheCortexVersionToTheGatewayLogoTooltip" version="2025.1" >}}
-[Redesigning the Semaphore API]: {{< url path="Cortex.Blogs.Releases.2025.1.RedesigningTheSemaphoreApi" version="2025.1" >}}
-[Third-party libraries has been updated]: {{< url path="Cortex.Blogs.Releases.2025.1.ThirdPartyLibrariesHasBeenUpdated" version="2025.1" >}}
-[adding an unblock script]: {{< url path="Cortex.Blogs.Releases.2025.1.AddingAnUnblockScript" version="2025.1" >}}
+[creating a new process from Natural Language]: {{< url path="Cortex.Blogs.Releases.2025.3.CreatingANewProcessFromNaturalLanguage" version="2025.3" >}}
+
+[enabling automated backups for disaster recovery]: {{< url path="Cortex.Blogs.Releases.2025.3.EnablingAutomatedBackupsForDisasterRecovery" version="2025.3" >}}
+[removing old executions on Execution Service startup]: {{< url path="Cortex.Blogs.Releases.2025.3.RemovingOldExecutionsOnExecutionServiceStartup" version="2025.3" >}}
+[migrating RabbitMQ queues to Quorum Queues]: {{< url path="Cortex.Blogs.Releases.2025.3.MigratingRabbitMqQueuesToQuorumQueues" version="2025.3" >}}
+
+[general security enhancements]: {{< url path="Cortex.Blogs.Releases.2025.3.GeneralSecurityEnhancements" version="2025.3" >}}
+[configurable Global RunAs User for flows]: {{< url path="Cortex.Blogs.Releases.2025.3.ConfigurableGlobalRunAsUserForFlows" version="2025.3" >}}
+
+[improving the page load speed]: {{< url path="Cortex.Blogs.Releases.2025.3.ImprovingThePageLoadSpeed" version="2025.3" >}}
+[hiding unsupported versions of the documentation]: {{< url path="Cortex.Blogs.Releases.2025.3.HidingUnsupportedVersionsOfTheDocumentation" version="2025.3" >}}
+
+[RabbitMQ and Erlang have been upgraded]: {{< url path="Cortex.Blogs.Releases.2025.3.RabbitMqAndErlangHaveBeenUpgraded" version="2025.3" >}}
+
+[Package Management]: {{< url path="Cortex.Blogs.Releases.2025.3.PackageManagement" version="2025.3" >}}
+[removal of "7.2" and "Innovation" from documentation]: {{< url path="Cortex.Blogs.Releases.2025.3.RemovalOf7.2AndInnovationFromDocumentation" version="2025.3" >}}
