@@ -1,6 +1,6 @@
 ---
-title: "Web Application Disaster Recovery"
-linkTitle: "Web Application Disaster Recovery"
-description: "The backup and recovery process of the web application."
+title: "Web Application Server"
+linkTitle: "Web Application Server"
+description: "The backup and recovery process of the web application server."
 weight: 300
 ---

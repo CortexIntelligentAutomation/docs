@@ -1,6 +1,6 @@
 ---
-title: "Application Disaster Recovery"
-linkTitle: "Application Disaster Recovery"
-description: "The backup and recovery process of the application."
+title: "Application Server"
+linkTitle: "Application Server"
+description: "The backup and recovery process of the application server."
 weight: 300
 ---
