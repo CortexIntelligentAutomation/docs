@@ -19,4 +19,4 @@ This guide describes how to configure a scheduled backup of the Web Application 
 
 ## Preserve installation files
 
-{{< section "/disaster-recovery/web-application-server/preserver-scripts.md">}}
+{{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}
