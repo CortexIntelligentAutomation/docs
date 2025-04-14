@@ -908,6 +908,8 @@
             MainDoc = "/docs/guides/user-guides/"
             [Cortex.Guides.UserGuides.UserInterfaces]
                 MainDoc = "/docs/guides/user-guides/user-interfaces/"
+                [Cortex.Guides.UserGuides.UserInterfaces.CortexInteractionPortal]
+                    MainDoc = "/docs/guides/user-guides/user-interfaces/cortex-interaction-portal/"
                 [Cortex.Guides.UserGuides.UserInterfaces.Gateway]
                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]

@@ -271,7 +271,7 @@ Note: This example does not follow the base [Uri][] or [API][] as specified [abo
 
 <br>
 
-This example will send a [POST][] request to the [Uri][] of a [Flow][] within a [published package][Publish Package] using [HTTP 1.1][HTTP11] and run the [Flow][], using Basic authentication which requires [Http Credentials][Http Credentials Property] to be a [UserCredentials][]. This example is similar in functionality to the [Run Flow][] block.
+This example will send a [POST][] request to the [Uri][] of a [Flow][] within a published [package][Package] using [HTTP 1.1][HTTP11] and run the [Flow][], using Basic authentication which requires [Http Credentials][Http Credentials Property] to be a [UserCredentials][]. This example is similar in functionality to the [Run Flow][] block.
 
 <br>
 
@@ -513,6 +513,6 @@ None
 [Flow]:{{< url path="Cortex.Reference.Glossary.F-J.Flow">}}
 
 [Cortex API Gateway]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.ApiGatewayService.MainDoc" >}}
-[Publish Package]: {{< url path="Cortex.Guides.Gateway.Settings.Packages.MainDoc" >}}
+[Package]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage.MainDoc" >}}
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc">}}
 [Run Flow Async]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlowAsync.MainDoc">}}
