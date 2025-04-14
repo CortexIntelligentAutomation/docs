@@ -1,4 +1,4 @@
-1. In the `Cortex Innovation 2025.3 - App Server Install Scripts\Recovery` folder, locate the `Cortex.Innovation.Backup.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts\Recovery` folder, locate the `Cortex.Innovation.Backup.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
     
     ```powershell

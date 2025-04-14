@@ -1,0 +1,25 @@
+---
+title: "Recover Application Server"
+linkTitle: "Recover Application Server"
+description: "Information about recovering the application server."
+weight: 40
+---
+
+# {{% param title %}}
+
+This guide describes how to recover the Application Server from a backup. This will recovery the application's reliable collections.
+
+## Make Installation Artefacts Available
+{{< section "/disaster-recovery/cortex-innovation/make-installation-artefacts-available.md" >}}
+
+### Configure the Recover Script
+
+{{< section "/disaster-recovery/encryption-key/recover/configure-recover-script.md">}}
+
+### Run the Recover Script
+
+{{< section "/disaster-recovery/encryption-key/recover/run-recover-script.md">}}
+
+## Preserve installation files
+
+Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to recover the application in the future.

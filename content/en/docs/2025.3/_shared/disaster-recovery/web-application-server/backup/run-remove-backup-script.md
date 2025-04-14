@@ -1,9 +1,9 @@
 1. Save and close `Cortex.Innovation.Gateway.Backup.ps1`.
 1. Open a Windows PowerShell (x64) window as administrator.
-1. Navigate PowerShell to inside the `Cortex Innovation 2025.3 - Web App Server Install Scripts\Recovery` folder using the following command, modifying the path as necessary:
+1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - Web App Server Install Scripts\Recovery` folder using the following command, modifying the path as necessary:
 
     ```powershell
-    cd "C:\Install\Cortex Innovation 2025.3 - Web App Server Install Scripts\Recovery"
+    cd "C:\Install\Cortex Innovation {{< version >}} - Web App Server Install Scripts\Recovery"
     ```
 
 1. Type the following command into PowerShell:
