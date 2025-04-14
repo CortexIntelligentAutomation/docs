@@ -1,6 +1,6 @@
 ---
-title: "CORTEX Interaction Portal"
-linkTitle: "CORTEX Interaction Portal"
+title: "Interaction Portal"
+linkTitle: "Interaction Portal"
 description: "A web application that provides Human-in-the-Loop capabilities to the {{% ctx %}} platform."
 weight: 400
 ---
