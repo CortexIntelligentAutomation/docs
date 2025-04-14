@@ -1,7 +1,7 @@
 ---
-title: "Recover Application Server"
-linkTitle: "Recover Application Server"
-description: "Information about recovering the application server."
+title: "Recover Encryption Key From Backup"
+linkTitle: "Recover Encryption Key From Backup"
+description: "Information about recovering the encryption key."
 weight: 40
 ---
 

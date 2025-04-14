@@ -1,8 +1,8 @@
 ---
-title: "Backup Encryption Key"
-linkTitle: "Backup Encryption Key"
+title: "Add Backup of Encryption Key"
+linkTitle: "Add Backup of Encryption Key"
 description: "Information about backing up the encryption key."
-weight: 40
+weight: 30
 ---
 
 # {{% param title %}}
