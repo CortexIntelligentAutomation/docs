@@ -722,6 +722,26 @@
                     Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                     UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                     TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.DisasterRecoveryGuides]
+            MainDoc = "/docs/guides/disaster-recovery/"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA]
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/add-backup-to-application"
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/remove-backup-from-application"
+                RecoveryApplicationServerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/recover-application-from-backup"
+                AddBackupToFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/add-backup-to-flow-debugger"
+                RemoveBackupFromFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/remove-backup-from-flow-debugger"
+                RecoveryFlowDebuggerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/recover-flow-debugger-from-backup"
+                AddBackupToGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/add-backup-to-gateway"
+                RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/remove-backup-from-gateway"
+                RecoveryGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/recover-gateway-from-backup"
+
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA]
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/add-backup-to-application"
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/remove-backup-from-application"
+                RecoveryApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/recover-application-from-backup"
+                AddBackupToWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/add-backup-to-web-application"
+                RemoveBackupFromWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/remove-backup-from-web-application"
+                RecoveryWebApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/recover-web-application-from-backup"
         [Cortex.Guides.UpgradeGuides]
             MainDoc = "/docs/guides/upgrade-guides/"
             [Cortex.Guides.UpgradeGuides.UpgradeCortex]
