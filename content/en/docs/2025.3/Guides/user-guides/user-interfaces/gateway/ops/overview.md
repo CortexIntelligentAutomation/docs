@@ -26,7 +26,7 @@ This tile displays the current License Consumption. The {{< image src="/images/G
 This tile displays the current Cluster Health. The {{< image src="/images/GoTo.png" >}} icon opens a new browser tab and navigates to the [Service Fabric Explorer][], which allows [inspection and management][Check Cluster Health] of the cluster.
 
 {{% alert title="Note" %}}
-To view the Service Fabric Explorer, the Service Fabric certificate must be {{< ahref path="Cortex.Faqs.ImportClientCertificate.MainDoc" title="installed as a client certificate" >}} on the machine from which you are browsing.
+To view Service Fabric Explorer, the Service Fabric client certificate must be {{< ahref path="Cortex.Faqs.ImportClientCertificate.MainDoc" title="imported" >}} on the machine from which you are browsing.
 {{% /alert %}}
 
 #### Running Executions
