@@ -1,7 +1,7 @@
 ---
 title: "Remove Scheduled Backup From Web Application Server"
 linkTitle: "Remove Scheduled Backup From Web Application Server"
-description: "TODO."
+description: "Information about remove a scheduled backup from Gateway."
 weight: 40
 ---
 

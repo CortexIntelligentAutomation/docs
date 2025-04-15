@@ -1,13 +1,13 @@
 ---
 title: "Recover Application Server From Scheduled Backup"
 linkTitle: "Recover Application Server From Scheduled Backup"
-description: "Information about recovering the application server."
+description: "Information about recovering the application server from a backup."
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to recover the Application Server from a backup. This will recovery the application's reliable collections.
+This guide describes how to recover the Application Server from a backup. This will recovery the application's reliable collections. Any recovery need for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
 
 ### Configure the Recover Script
 
@@ -24,3 +24,9 @@ A backup policy must be configured on the application server before running a re
 ## Preserve installation files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Remove Backup From Application Server][]
+
+[Remove Backup From Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.RemoveBackupFromApplicationServer" >}}

@@ -1,13 +1,13 @@
 ---
-title: "Remove Scheduled Backup From Application Server"
-linkTitle: "Remove Scheduled Backup From Application Server"
-description: "Information about deleting a scheduled backup of the application server."
+title: "Remove Scheduled Backup From Flow Debugger"
+linkTitle: "Remove Scheduled Backup From Flow Debugger"
+description: "Information about remove a scheduled backup from the Flow Debugger."
 weight: 50
 ---
 
 # {{% param title %}}
 
-This guide describes how to delete a scheduled backup of the Application Server. This will not delete the backed up files.
+This guide describes how to remove a scheduled backup from the Flow Debugger. This will not delete any files created from the backup.
 
 ## Configure the Backup Script
 

@@ -1,13 +1,13 @@
 ---
 title: "Pre-Disaster Recovery"
 linkTitle: "Pre-Disaster Recovery"
-description: "Information about the steps required to be completed prior to starting the installation."
-weight: 30
+description: "Information about the steps required to be completed prior to starting the disaster recovery process."
+weight: 20
 ---
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the installation of {{% ctx %}}. Please ensure that the [Requirements][] have been read and met before starting this installation.
+This guide describes how to perform the steps required before starting the disaster recovery of {{% ctx %}}.
 
 ## Make Installation Artefacts Available
 

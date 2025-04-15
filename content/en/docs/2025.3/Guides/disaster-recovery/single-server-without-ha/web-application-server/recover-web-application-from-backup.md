@@ -1,13 +1,13 @@
 ---
 title: "Recover Web Application Server From Scheduled Backup"
 linkTitle: "Recover Web Application Server From Scheduled Backup"
-description: "Information about recovering the web application server."
+description: "Information about recovering the web application server from a backup"
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to recover the Web Application Server from a backup. This will recovery the flow repositories and the openApi definitions.
+This guide describes how to recover the Web Application Server from a backup. This will recovery the flow repositories and the openApi definitions. Any recovery need for the web config must be done manually.
 
 ### Configure the Recover Script
 

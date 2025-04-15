@@ -1,7 +1,7 @@
 ---
 title: "Add Scheduled Backup To Web Application Server"
 linkTitle: "Add Scheduled Backup To Web Application Server"
-description: "Information about backing up the web application server."
+description: "Information about adding a scheduled backup to the web application server."
 weight: 40
 ---
 

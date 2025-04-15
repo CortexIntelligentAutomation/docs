@@ -1,13 +1,13 @@
 ---
-title: "Pre-Installation"
-linkTitle: "Pre-Installation"
-description: "Information about the steps required to be completed prior to starting the installation."
-weight: 30
+title: "Pre-Disaster Recovery"
+linkTitle: "Pre-Disaster Recovery"
+description: "Information about the steps required to be completed prior to starting the disaster recovery process."
+weight: 20
 ---
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the installation of {{% ctx %}}. Please ensure that the [Requirements][] have been read and met before starting this installation.
+This guide describes how to perform the steps required before starting the disaster recovery of {{% ctx %}}.
 
 ## Make Installation Artefacts Available on all Servers
 
@@ -15,9 +15,6 @@ This guide describes how to perform the steps required before starting the insta
 
 ## Next Steps?
 
-1. [Installation][]
+[Adding Backup of Encryption Key][]
 
-[CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Installation" >}}
-[Installing Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
-[Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.Requirements" >}}
+[Adding Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupOfEncryptionKey" >}}

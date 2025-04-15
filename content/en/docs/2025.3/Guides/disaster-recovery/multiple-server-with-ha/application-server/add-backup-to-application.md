@@ -1,13 +1,13 @@
 ---
 title: "Add Scheduled Backup To Application Server"
 linkTitle: "Add Scheduled Backup To Application Server"
-description: "Information about backing up the application server."
+description: "Information about adding a scheduled backup to the application server."
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to configure a scheduled backup of the Application Server. This will backup the application's reliable collections, the cluster's configuration and the service's appsettings.
+This guide describes how to configure a scheduled backup of the Application Server. This will backup the application's reliable collections, the cluster's configuration, the service's appsettings, manifests and settings.
 
 ## Configure the Backup Script
 
@@ -20,3 +20,9 @@ This guide describes how to configure a scheduled backup of the Application Serv
 ## Preserve installation files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Recover Application Server From Backup][]
+
+[Recover Application Server From Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.RecoverApplicationServerFromBackup" >}}
