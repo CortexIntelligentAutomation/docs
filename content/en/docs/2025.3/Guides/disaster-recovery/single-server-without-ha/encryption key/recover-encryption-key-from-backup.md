@@ -9,9 +9,6 @@ weight: 40
 
 This guide describes how to recover the Application Server from a backup. This will recovery the application's reliable collections.
 
-## Make Installation Artefacts Available
-{{< section "/disaster-recovery/cortex-innovation/make-installation-artefacts-available.md" >}}
-
 ### Configure the Recover Script
 
 {{< section "/disaster-recovery/encryption-key/recover/configure-recover-script.md">}}
