@@ -736,7 +736,6 @@
                 AddBackupToGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/add-backup-to-gateway"
                 RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/remove-backup-from-gateway"
                 RecoverGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/recover-gateway-from-backup"
-
             [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA]
                 AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/single-server-without-ha/encryption-key/add-backup-of-encryption-key"
                 RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/encryption-key/recover-encryption-key-from-backup"
