@@ -1,0 +1,3 @@
+Importing the client certificate can be achieved by double-clicking on the .PFX file and following the wizard.
+
+If the .PFX file is not available on the machine, it will need to be copied to the machine it is to be imported on, exporting it from the certificate store if necessary; the certificate can be retrieved by using the `Manage Computer Certificates` tool in Windows to export the certificate used (`CortexServerCertificate` if using self signed certificates) from the `Personal` store as a pfx file and then importing it to the `Current User` store by double-clicking on it and following the wizard. The certificate must also be imported to `Trusted Root Certification Authorities` in the `Local Computer` store.

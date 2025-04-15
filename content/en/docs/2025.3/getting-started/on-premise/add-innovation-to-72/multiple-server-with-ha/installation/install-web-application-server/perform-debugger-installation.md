@@ -45,7 +45,10 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ## Check Application Services
 
-{{< section "/install-application-server/single-server/check-application-services.md">}}
+1. Log on to the Web Application Server.
+1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. Open a web browser.
+1. {{< section "/install-application-server/single-server/check-application-services.md">}}
 
 # Preserve installation files
 
@@ -56,5 +59,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 1. [Upgrade Gateway][]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AntivirusExclusionsNew" >}}
+[Configure Installation Script]:  {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureDebuggerInstallationScript" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MainDoc" >}}
 [Upgrade Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.GatewayInstallationNew" >}}
 [web application server prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.WebApplicationServerPrerequisitesNew" >}}

@@ -244,6 +244,8 @@
     [Cortex.Faqs]
         MainDoc = "/docs/faqs/"
         CheckClusterHealth = "/docs/faqs/check-cluster-health/"
+        [Cortex.Faqs.ImportClientCertificate]
+            MainDoc = "/docs/faqs/import-client-certificate/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -277,6 +279,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
@@ -381,6 +384,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"

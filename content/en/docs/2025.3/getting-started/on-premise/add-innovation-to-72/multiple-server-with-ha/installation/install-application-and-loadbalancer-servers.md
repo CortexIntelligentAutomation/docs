@@ -300,7 +300,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Check Application Services
 
-{{< section "/install-application-server/multi-server/check-application-services.md">}}
+1. Log on to the Application Server.
+1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. Open a web browser.
+1. {{< section "/install-application-server/multi-server/check-application-services.md">}}
 
 ## Preserve installation files
 
@@ -318,6 +321,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.EncryptionRequirementsNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MainDoc" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
 [Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PreInstallation" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}

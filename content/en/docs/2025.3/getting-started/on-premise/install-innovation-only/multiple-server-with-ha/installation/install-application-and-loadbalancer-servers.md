@@ -300,7 +300,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ## Check Application Services
 
-{{< section "/install-application-server/multi-server/check-application-services.md">}}
+1. Log on to one of the Application Servers.
+1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. Open a web browser.
+1. {{< section "/install-application-server/multi-server/check-application-services.md">}}
 
 ## Preserve installation files
 
@@ -313,10 +316,12 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [alternative load balancer]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AltLoadBalancerNew" >}}
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusionsNew" >}}
 [Certificate Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.CertificateRequirementsNew" >}}
+[Configure Installation Script]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [CORTEX Encrypted]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirementsNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MainDoc" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServerNew" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
