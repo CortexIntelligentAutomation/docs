@@ -20,3 +20,9 @@ This guide describes how to configure a scheduled backup of the Application Serv
 ## Preserve installation files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Add Scheduled Backup to Web Application Server][]
+
+[Add Scheduled Backup to Web Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToWebApplicationServer" >}}

@@ -725,26 +725,34 @@
         [Cortex.Guides.DisasterRecoveryGuides]
             MainDoc = "/docs/guides/disaster-recovery/"
             [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA]
-                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/multiple-server-with-ha/encryption-key/add-backup-of-encryption-key"
-                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/encryption-key/recover-encryption-key-from-backup"
-                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/add-backup-to-application"
-                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/remove-backup-from-application"
-                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/application-server/recover-application-from-backup"
-                AddBackupToFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/add-backup-to-flow-debugger"
-                RemoveBackupFromFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/remove-backup-from-flow-debugger"
-                RecoverFlowDebuggerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/flow-debugger/recover-flow-debugger-from-backup"
-                AddBackupToGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/add-backup-to-gateway"
-                RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/remove-backup-from-gateway"
-                RecoverGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/web-application-server/gateway/recover-gateway-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup]
+                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/add-backup-of-encryption-key"
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/add-backup-to-application"
+                AddBackupsToWebApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server"
+                AddBackupToFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server/add-backup-to-flow-debugger"
+                AddBackupToGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server/add-backup-to-gateway"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery]
+                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/recover-encryption-key-from-backup"
+                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/recover-application-from-backup"
+                RecoverWebApplicationServerFromBackups = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server"
+                RecoverFlowDebuggerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server/recover-flow-debugger-from-backup"
+                RecoverGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server/recover-gateway-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove]
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/remove-backup-from-application"
+                RemoveBackupFromFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-flow-debugger"
+                RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-gateway"
             [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA]
-                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/single-server-without-ha/encryption-key/add-backup-of-encryption-key"
-                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/encryption-key/recover-encryption-key-from-backup"
-                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/add-backup-to-application"
-                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/remove-backup-from-application"
-                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/application-server/recover-application-from-backup"
-                AddBackupToWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/add-backup-to-web-application"
-                RemoveBackupFromWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/remove-backup-from-web-application"
-                RecoverWebApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/web-application-server/recover-web-application-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup]
+                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-of-encryption-key"
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-to-application"
+                AddBackupToWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-to-web-application"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery]
+                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-encryption-key-from-backup"
+                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-application-from-backup"
+                RecoverWebApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-web-application-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Remove]
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/remove/remove-backup-from-application"
+                RemoveBackupFromWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/remove/remove-backup-from-web-application"
         [Cortex.Guides.UpgradeGuides]
             MainDoc = "/docs/guides/upgrade-guides/"
             [Cortex.Guides.UpgradeGuides.UpgradeCortex]

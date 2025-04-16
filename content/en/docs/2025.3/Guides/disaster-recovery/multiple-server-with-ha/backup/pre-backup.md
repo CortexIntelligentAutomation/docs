@@ -1,6 +1,6 @@
 ---
-title: "Pre-Disaster Recovery"
-linkTitle: "Pre-Disaster Recovery"
+title: "Pre-Backup"
+linkTitle: "Pre-Backup"
 description: "Information about the steps required to be completed prior to starting the disaster recovery process."
 weight: 20
 ---
@@ -15,6 +15,6 @@ This guide describes how to perform the steps required before starting the disas
 
 ## Next Steps?
 
-[Adding Backup of Encryption Key][]
+[Add Backup of Encryption Key][]
 
-[Adding Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupOfEncryptionKey" >}}
+[Add Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupOfEncryptionKey" >}}

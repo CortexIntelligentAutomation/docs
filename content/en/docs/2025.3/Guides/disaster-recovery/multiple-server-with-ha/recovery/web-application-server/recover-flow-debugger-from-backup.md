@@ -1,8 +1,8 @@
 ---
-title: "Recover Application Server From Scheduled Backup"
-linkTitle: "Recover Application Server From Scheduled Backup"
+title: "Recover Flow Debugger From Scheduled Backup"
+linkTitle: "Recover Flow Debugger From Scheduled Backup"
 description: "Information about recovering the Flow Debugger from a backup."
-weight: 40
+weight: 30
 ---
 
 # {{% param title %}}
@@ -16,11 +16,17 @@ This guide describes how to recover the Flow Debugger from a backup. This will r
 ### Run the Recover Script
 
 {{% alert title="Note" %}}
-A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupToFlowDebugger" title="Backup Flow Debugger" >}} for further information.
+A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToFlowDebugger" title="Add Scheduled Backup to Flow Debugger" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Recover Gateway from Scheduled Backup][]
+
+[Recover Gateway from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery.RecoverGatewayFromBackup" >}}

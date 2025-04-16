@@ -23,6 +23,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 ## Next Steps?
 
-[Recover Encryption Key from backup][]
+[Add Scheduled Backup to Application Server][]
 
-[Adding Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.RecoveryEncryptionKeyFromBackup" >}}
+[Add Scheduled Backup to Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" >}}

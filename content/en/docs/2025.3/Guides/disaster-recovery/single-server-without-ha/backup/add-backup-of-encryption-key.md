@@ -20,3 +20,9 @@ This guide describes how to configure a scheduled backup of the Encryption Key.
 ## Preserve installation files
 
 Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to delete or configure further scheduled backups in the future.
+
+## Next Steps?
+
+[Add Scheduled Backup to Application Server][]
+
+[Add Scheduled Backup to Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToApplicationServer" >}}

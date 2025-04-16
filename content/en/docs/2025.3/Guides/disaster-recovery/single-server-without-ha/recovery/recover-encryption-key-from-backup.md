@@ -23,6 +23,6 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 ## Next Steps?
 
-[Adding Backup to Application Server][]
+[Recover Application Server from Scheduled Backup][]
 
-[Adding Backup to Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupToApplicationServer" >}}
+[Recover Application Server from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery.RecoverApplicationServerFromBackup" >}}

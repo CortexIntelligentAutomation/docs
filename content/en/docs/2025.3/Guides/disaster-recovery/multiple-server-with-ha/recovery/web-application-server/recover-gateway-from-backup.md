@@ -1,6 +1,6 @@
 ---
-title: "Recover Web Application Server From Scheduled Backup"
-linkTitle: "Recover Web Application Server From Scheduled Backup"
+title: "Recover Gateway From Scheduled Backup"
+linkTitle: "Recover Gateway From Scheduled Backup"
 description: "Information about recovering Gateway from a backup."
 weight: 40
 ---
@@ -16,7 +16,7 @@ This guide describes how to recover the Gateway from a backup. This will recover
 ### Run the Recover Script
 
 {{% alert title="Note" %}}
-A backup policy should be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupToGateway" title="Backup Gateway" >}} for further information.
+A backup policy should be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToGateway" title="Add Scheduled Backup to Gateway" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/web-application-server/recover/run-recover-script.md">}}

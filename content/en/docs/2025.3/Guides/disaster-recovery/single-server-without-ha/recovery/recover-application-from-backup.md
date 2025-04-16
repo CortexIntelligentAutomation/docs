@@ -16,7 +16,7 @@ This guide describes how to recover the Application Server from a backup. This w
 ### Run the Recover Script
 
 {{% alert title="Note" %}}
-A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.AddBackupToApplicationServer" title="Add Backup To Application Server" >}} for further information.
+A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" title="Add Backup To Application Server" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}
@@ -27,6 +27,6 @@ A backup policy must be configured on the application server before running a re
 
 ## Next Steps?
 
-[Remove Backup From Application Server][]
+[Recover Web Application Server from Scheduled Backup][]
 
-[Remove Backup From Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.RemoveBackupFromApplicationServer" >}}
+[Recover Web Application Server from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery.RecoverWebApplicationServerFromBackup" >}}
