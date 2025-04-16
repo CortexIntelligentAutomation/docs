@@ -19,5 +19,5 @@ Instructions on how to do this can be found [here][Import Client Certificate].
 1. {{< section "/install-application-server/multi-server/check-application-services.md">}}
 
 [Configure Installation Script]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MainDoc" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MultiServer" >}}
 [Service Fabric Explorer]: {{< url path="Cortex.Reference.Glossary.P-T.ServiceFabricExplorer" >}}

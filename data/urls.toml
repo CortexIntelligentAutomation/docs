@@ -246,6 +246,8 @@
         CheckClusterHealth = "/docs/faqs/check-cluster-health/"
         [Cortex.Faqs.ImportClientCertificate]
             MainDoc = "/docs/faqs/import-client-certificate/"
+            MultiServer = "/docs/faqs/import-client-certificate/multi-server-with-ha"
+            SingleServer = "/docs/faqs/import-client-certificate/single-server-without-ha"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]

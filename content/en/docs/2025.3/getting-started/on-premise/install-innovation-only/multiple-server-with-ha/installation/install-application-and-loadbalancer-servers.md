@@ -119,7 +119,7 @@ To check all necessary ports are free, follow these steps:
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
-        {{< tab header="CA Certs, Built-in Load Balancer">}}
+        {{< tab header="CA Certificates, Built-in Load Balancer">}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
@@ -142,7 +142,7 @@ To check all necessary ports are free, follow these steps:
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
-        {{< tab header="Self-Signed Certs, Built-in Load Balancer" >}}
+        {{< tab header="Self-Signed Certificates, Built-in Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
@@ -162,7 +162,7 @@ To check all necessary ports are free, follow these steps:
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
-        {{< tab header="CA Certs, Alternative Load Balancer" >}}
+        {{< tab header="CA Certificates, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
@@ -185,7 +185,7 @@ To check all necessary ports are free, follow these steps:
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-ha-install-log.txt"
         {{< /tab >}}
-        {{< tab header="Self-Signed Certs, Alternative Load Balancer" >}}
+        {{< tab header="Self-Signed Certificates, Alternative Load Balancer" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
@@ -321,7 +321,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.EncryptionRequirementsNew" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MainDoc" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MultiServer" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew2" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.InstallWebApplicationServerNew" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
