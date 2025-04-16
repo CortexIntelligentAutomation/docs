@@ -1,7 +1,7 @@
 ---
 title: "Remove Scheduled Backup From Flow Debugger"
 linkTitle: "Remove Scheduled Backup From Flow Debugger"
-description: "Information about remove a scheduled backup from the Flow Debugger."
+description: "Instructions to remove scheduled backups from the Flow Debugger."
 weight: 50
 ---
 

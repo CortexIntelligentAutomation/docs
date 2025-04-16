@@ -1,7 +1,7 @@
 ---
 title: "Recover Flow Debugger From Scheduled Backup"
 linkTitle: "Recover Flow Debugger From Scheduled Backup"
-description: "Information about recovering the Flow Debugger from a backup."
+description: "Instructions to recover the Flow Debugger from scheduled backups."
 weight: 30
 ---
 

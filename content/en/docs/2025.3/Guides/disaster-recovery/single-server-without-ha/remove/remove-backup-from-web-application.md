@@ -1,13 +1,13 @@
 ---
 title: "Remove Scheduled Backup From Web Application Server"
 linkTitle: "Remove Scheduled Backup From Web Application Server"
-description: "Information about remove a scheduled backup from the web application server."
+description: "Instructions to remove scheduled backups from the Web Application Server."
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to delete a scheduled backup of the Web Application Server. This will not delete the backed up files.
+This guide describes how to remove a scheduled backup from the Web Application Server. This will not delete any files created from the backup.
 
 ## Configure the Backup Script
 

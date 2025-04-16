@@ -1,6 +1,6 @@
 ---
 title: "Multiple Server - With HA"
 linkTitle: "Multiple Server - With HA"
-description: "Disaster recovery instructions for multiple on-premise servers with high availability (HA)."
+description: "Instructions to recover the Web Application Server from scheduled backups."
 weight: 10
 ---

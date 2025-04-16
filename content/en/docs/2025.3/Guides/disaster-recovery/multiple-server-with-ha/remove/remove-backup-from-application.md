@@ -1,7 +1,7 @@
 ---
 title: "Remove Scheduled Backup From Application Server"
 linkTitle: "Remove Scheduled Backup From Application Server"
-description: "Information about remove a scheduled backup from the application server."
+description: "Instructions to remove scheduled backups from the Application Server."
 weight: 50
 ---
 

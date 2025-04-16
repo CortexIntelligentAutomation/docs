@@ -1,13 +1,13 @@
 ---
 title: "Recover Gateway From Scheduled Backup"
 linkTitle: "Recover Gateway From Scheduled Backup"
-description: "Information about recovering Gateway from a backup."
+description: "Instructions to recover Gateway from scheduled backups."
 weight: 40
 ---
 
 # {{% param title %}}
 
-This guide describes how to recover the Gateway from a backup. This will recovery the flow repositories and the openApi definitions. Any recovery need for the web config must be done manually.
+This guide describes how to recover Gateway from a backup. This will recovery the flow repositories and the openApi definitions. Any recovery need for the web config must be done manually.
 
 ### Configure the Recover Script
 

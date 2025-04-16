@@ -1,6 +1,6 @@
 ---
 title: "Recovery"
 linkTitle: "Recovery"
-description: "The recovery process."
+description: "Instructions to recover CORTEX on a single on-premise server without high availability (HA)."
 weight: 200
 ---

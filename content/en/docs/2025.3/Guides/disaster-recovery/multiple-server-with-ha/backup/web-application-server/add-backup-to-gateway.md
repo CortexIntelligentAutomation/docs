@@ -1,7 +1,7 @@
 ---
 title: "Add Scheduled Backup To Gateway"
 linkTitle: "Add Scheduled Backup To Gateway"
-description: "Information about adding a scheduled backup to Gateway."
+description: "Instructions to add scheduled backups to Gateway."
 weight: 40
 ---
 

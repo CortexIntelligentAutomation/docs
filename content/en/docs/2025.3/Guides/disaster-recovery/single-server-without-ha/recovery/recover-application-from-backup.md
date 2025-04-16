@@ -1,7 +1,7 @@
 ---
 title: "Recover Application Server From Scheduled Backup"
 linkTitle: "Recover Application Server From Scheduled Backup"
-description: "Information about recovering the application server from a backup."
+description: "Instructions to recover the Application Server from scheduled backups."
 weight: 40
 ---
 

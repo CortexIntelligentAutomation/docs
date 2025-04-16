@@ -17,4 +17,4 @@ This guide describes how to perform the steps required before starting the recov
 
 [Recover Encryption Key from Backup][]
 
-[Recover Encryption Key from Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery.RecoveryEncryptionKeyFromBackup" >}}
+[Recover Encryption Key from Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery.RecoveryEncryptionKeyFromBackup" >}}

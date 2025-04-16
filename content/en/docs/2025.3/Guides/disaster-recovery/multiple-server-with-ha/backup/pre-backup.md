@@ -1,13 +1,13 @@
 ---
 title: "Pre-Backup"
 linkTitle: "Pre-Backup"
-description: "Information about the steps required to be completed prior to starting the disaster recovery process."
+description: "Information about the steps required to be completed prior to starting the backup process."
 weight: 20
 ---
 
 # {{% param title %}}
 
-This guide describes how to perform the steps required before starting the disaster recovery of {{% ctx %}}.
+This guide describes how to perform the steps required before starting the backup of {{% ctx %}}.
 
 ## Make Installation Artefacts Available on all Servers
 
