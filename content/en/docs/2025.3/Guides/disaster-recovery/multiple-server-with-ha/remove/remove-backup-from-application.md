@@ -19,7 +19,7 @@ This guide describes how to remove a scheduled backup from the Application Serve
 
 ## Preserve Installation Files
 
-{{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+{{< section "/disaster-recovery/preserve-scripts.md">}}
 
 ## Next Steps?
 

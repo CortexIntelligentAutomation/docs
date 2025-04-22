@@ -19,4 +19,4 @@ This guide describes how to delete a scheduled backup of Gateway. This will not 
 
 ## Preserve Installation Files
 
-{{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}
+{{< section "/disaster-recovery/preserve-scripts.md">}}

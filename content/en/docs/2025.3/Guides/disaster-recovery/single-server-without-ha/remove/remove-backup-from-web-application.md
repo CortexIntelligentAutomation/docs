@@ -19,4 +19,4 @@ This guide describes how to remove a scheduled backup from the Web Application S
 
 ## Preserve Installation Files
 
-{{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}
+{{< section "/disaster-recovery/preserve-scripts.md">}}

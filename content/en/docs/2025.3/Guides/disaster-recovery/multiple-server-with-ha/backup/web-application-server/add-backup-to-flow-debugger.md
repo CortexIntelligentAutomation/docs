@@ -19,7 +19,7 @@ This guide describes how to configure a scheduled backup of the Flow Debugger of
 
 ## Preserve Installation Files
 
-{{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+{{< section "/disaster-recovery/preserve-scripts.md">}}
 
 ## Next Steps?
 
