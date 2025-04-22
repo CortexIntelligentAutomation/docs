@@ -15,8 +15,14 @@ This guide describes how to remove a scheduled backup from the Flow Debugger. Th
 
 ## Run the Backup Script
 
-{{< section "/disaster-recovery/application-server/backup/run-backup-script.md">}}
+{{< section "/disaster-recovery/application-server/backup/run-remove-backup-script.md">}}
 
 ## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Remove Scheduled Backup From Gateway][]
+
+[Remove Scheduled Backup From Gateway]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove.RemoveBackupFromGateway" >}}

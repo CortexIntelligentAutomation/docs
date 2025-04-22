@@ -20,3 +20,9 @@ This guide describes how to remove a scheduled backup from the Application Serve
 ## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
+
+## Next Steps?
+
+[Remove Scheduled Backup From Web Application Server][]
+
+[Remove Scheduled Backup From Web Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Remove.RemoveBackupFromWebApplicationServer" >}}

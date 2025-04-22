@@ -739,6 +739,7 @@
                 RecoverGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server/recover-gateway-from-backup"
             [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove]
                 RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/remove-backup-from-application"
+                RemoveBackupsFromWebApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server"
                 RemoveBackupFromFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-flow-debugger"
                 RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-gateway"
             [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA]
