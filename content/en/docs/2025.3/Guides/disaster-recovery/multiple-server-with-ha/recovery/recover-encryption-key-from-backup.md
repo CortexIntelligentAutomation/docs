@@ -36,7 +36,7 @@ The Encryption Key must be recovered before any installation of {{% ctx %}}.
 
 {{< section "/disaster-recovery/encryption-key/recover/run-recover-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/encryption-key/preserve-installation-files.md">}}
 

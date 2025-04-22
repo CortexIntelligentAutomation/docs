@@ -13,5 +13,5 @@
 
 1. Run the PowerShell command to recover the application services.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
-1. Wait for the script to finish running. This should take 1 minutes.
+1. Wait for the script to finish running. This should take approximately 1 minute.
 1. Check that there have been no errors in the script; these would appear in red in the console.

@@ -17,7 +17,7 @@ This guide describes how to configure a scheduled backup of the Flow Debugger of
 
 {{< section "/disaster-recovery/application-server/backup/run-backup-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
 

@@ -17,6 +17,6 @@ This guide describes how to configure a scheduled backup of Gateway on the Web A
 
 {{< section "/disaster-recovery/web-application-server/backup/run-backup-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}

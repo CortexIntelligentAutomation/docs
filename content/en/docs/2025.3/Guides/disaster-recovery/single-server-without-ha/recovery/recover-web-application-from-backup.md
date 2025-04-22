@@ -21,6 +21,6 @@ A backup policy should be configured on the web application server before runnin
 
 {{< section "/disaster-recovery/web-application-server/recover/run-recover-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}

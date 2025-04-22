@@ -21,7 +21,7 @@ A backup policy must be configured on the application server before running a re
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}
 

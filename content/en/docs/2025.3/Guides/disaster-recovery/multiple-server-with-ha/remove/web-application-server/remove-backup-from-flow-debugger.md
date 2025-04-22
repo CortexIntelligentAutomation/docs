@@ -17,6 +17,6 @@ This guide describes how to remove a scheduled backup from the Flow Debugger. Th
 
 {{< section "/disaster-recovery/application-server/backup/run-backup-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/application-server/preserve-scripts.md">}}

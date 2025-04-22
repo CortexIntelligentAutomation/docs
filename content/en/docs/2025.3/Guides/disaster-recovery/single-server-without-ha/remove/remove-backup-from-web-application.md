@@ -17,6 +17,6 @@ This guide describes how to remove a scheduled backup from the Web Application S
 
 {{< section "/disaster-recovery/web-application-server/backup/run-remove-backup-script.md">}}
 
-## Preserve installation files
+## Preserve Installation Files
 
 {{< section "/disaster-recovery/web-application-server/preserve-scripts.md">}}
