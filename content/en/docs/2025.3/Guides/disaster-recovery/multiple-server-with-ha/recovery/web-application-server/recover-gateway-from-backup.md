@@ -7,7 +7,7 @@ weight: 40
 
 # {{% param title %}}
 
-This guide describes how to recover Gateway from a backup. This will recovery the flow repositories and the openApi definitions. Any recovery need for the web config must be done manually.
+This guide describes how to recover Gateway from a backup. This will recover the flow repositories and the OpenAPI definitions. Any recovery needed for the web config must be done manually.
 
 ### Configure the Recover Script
 

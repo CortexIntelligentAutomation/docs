@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to recover the Flow Debugger from a backup. This will recovery the application's reliable collections. Any recovery need for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
+This guide describes how to recover the Flow Debugger from a backup. This will recover the application's reliable collections. Any recovery needed for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
 
 ### Configure the Recover Script
 

@@ -1,1 +1,1 @@
-Ensure that the installation files are backed up or kept on the server, especially the scripts and config files that have been modified. This will make it easier to backup and recover the Encryption Key in the future.
+Ensure that the installation files are backed up or kept on the server, especially the scripts and configuration files that have been modified. This will make it easier to backup and recover the Encryption Key in the future.

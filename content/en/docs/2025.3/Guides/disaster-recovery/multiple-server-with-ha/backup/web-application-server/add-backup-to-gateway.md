@@ -7,7 +7,7 @@ weight: 40
 
 # {{% param title %}}
 
-This guide describes how to configure a scheduled backup of Gateway on the Web Application Server. This will backup the flow repositories, openApi definitions and web config file.
+This guide describes how to configure a scheduled backup of Gateway on the Web Application Server. This will back up the flow repositories, OpenAPI definitions, and the web config file.
 
 ## Configure the Backup Script
 

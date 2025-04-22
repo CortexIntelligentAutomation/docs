@@ -8,9 +8,9 @@
         -Remove
     ```
 
-    | Name                                           | Description |
-    |------------------------------------------------|-------------|
-    |`BackupPolicyName`                              | Configure this value with the unique name of the backup policy that has been set for the application policy and scheduled windows task. |
-    |`Remove`                                        | Parameter used to indicate that the backup policy should be removed.|
+    | Name                | Description |
+    |---------------------|-------------|
+    | `BackupPolicyName`  | Configure this value with the unique name of the backup policy that was set for the application policy and the scheduled Windows task. |
+    | `Remove`            | Parameter used to indicate that the backup policy should be removed. |
 
 1. Save and close `Cortex.Innovation.Backup.ps1`.

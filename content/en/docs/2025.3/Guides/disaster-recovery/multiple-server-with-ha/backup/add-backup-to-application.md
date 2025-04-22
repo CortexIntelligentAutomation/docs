@@ -7,7 +7,7 @@ weight: 40
 
 # {{% param title %}}
 
-This guide describes how to configure a scheduled backup of the Application Server. This will backup the application's reliable collections, the cluster's configuration, the service's appsettings, manifests and settings.
+This guide describes how to configure a scheduled backup of the Application Servers. This will backup the application's reliable collections, the cluster's configuration, the service's appsettings, manifests and settings.
 
 ## Configure the Backup Script
 

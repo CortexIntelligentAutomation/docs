@@ -8,9 +8,9 @@
         -Remove
     ```
 
-    | Name                                           | Description |
-    |------------------------------------------------|-------------|
-    |`BackupTaskName`                                | Configure this value with the unique name of the backup task that has set for the scheduled Windows task. |
-    |`Remove`                                        | Parameter used to indicate that the backup task should be removed.|
+    | Name             | Description |
+    |------------------|-------------|
+    | `BackupTaskName` | Configure this value with the unique name of the backup task that was set for the scheduled Windows task. |
+    | `Remove`         | Parameter used to indicate that the backup task should be removed. |
 
 1. Save and close `Cortex.Innovation.Gateway.Backup.ps1`.

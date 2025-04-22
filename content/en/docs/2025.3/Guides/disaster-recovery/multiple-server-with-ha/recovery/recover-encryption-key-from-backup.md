@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to recover the Encryption Key from a backup. This will recover the Encryption key to the application servers, web application server and load balancer server if a built-in loadbalancer is used.
+This guide describes how to recover the Encryption Key from a backup. This will recover the Encryption Key to the application servers, the web application server, and the load balancer server if a built-in load balancer is used.
 
 {{% alert title="Warning" color="warning" %}}
 The Encryption Key must be recovered before any installation of {{% ctx %}}.

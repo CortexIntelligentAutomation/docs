@@ -7,7 +7,7 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to configure a scheduled backup of the Flow Debugger of the web application server. This will backup the application's reliable collections, the cluster's configuration and the service's appsettings.
+This guide describes how to configure a scheduled backup of the Flow Debugger on the Web Application Server. This will backup the application's reliable collections, the cluster's configuration and the service's appsettings.
 
 ## Configure the Backup Script
 

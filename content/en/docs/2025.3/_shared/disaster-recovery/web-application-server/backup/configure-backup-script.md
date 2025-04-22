@@ -15,16 +15,16 @@
         -Credential $Credential
     ```
 
-    | Name                                           | Description |
-    |------------------------------------------------|-------------|
-    |`BackupTaskName`                              | Configure this value with the unique name of the backup task that will be set for the scheduled Windows task. |
-    |`BackupSchedule`                                | Configure the value with either `Daily` or `Weekly` depending on when the schedule will run.|
-    |`BackupDay`                                    | This is only needed if the `BackupSchedule` is set to `Weekly`. Configure this value with the day of the week when the backup should run.|
-    |`BackupTime`                                   | Configure the value with the time that the backup will run. The format of the value should be in ISO8601 format, date specified along with time will be ignored. |
-    |`BackupPath`                                    | Replace `\\UncPath\BackupLocation` with the path of the location the backups will be stored in. if the path is a network path then the `Credentials` will be used to access that location.|
-    |`BackupRetention`                             | Configure this value with the maximum number of backups that should be retained.|
-    |`SiteName`                        | Configure this value with the name of the site that should be backed up.|
-    |`GatewayApplicationName`                        | Configure this value with the name of the application under the specified site that should be backed up.|
-    |`Credential` | The credentials of the user which will be used to access the `BackupPath`. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.|
+    | Name                       | Description |
+    |----------------------------|-------------|
+    | `BackupTaskName`           | Configure this value with the unique name of the backup task that will be set for the scheduled Windows task. |
+    | `BackupSchedule`           | Configure this value with either `Daily` or `Weekly`, depending on when the schedule will run. |
+    | `BackupDay`                | This is only needed if the `BackupSchedule` is set to `Weekly`. Configure this value with the day of the week when the backup should run. |
+    | `BackupTime`               | Configure this value with the time that the backup will run. The format of the value should be in ISO8601 format. The date specified along with the time will be ignored. |
+    | `BackupPath`               | Replace `\\UncPath\BackupLocation` with the path of the location where the backups will be stored. If the path is a network path, the `Credential` will be used to access that location. |
+    | `BackupRetention`          | Configure this value with the maximum number of backups that should be retained. |
+    | `SiteName`                 | Configure this value with the name of the site that should be backed up. |
+    | `GatewayApplicationName`   | Configure this value with the name of the application under the specified site that should be backed up. |
+    | `Credential`               | The credentials of the user that will be used to access the `BackupPath`. It must be a domain user who is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed; a prompt will appear to enter this information when the script is run. |
 
 1. Save and close `Cortex.Innovation.Gateway.Backup.ps1`.
