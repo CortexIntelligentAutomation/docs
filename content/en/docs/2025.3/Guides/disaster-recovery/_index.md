@@ -1,6 +1,6 @@
 ---
 title: "Disaster Recovery Guides"
 linkTitle: "Disaster Recovery Guides"
-description: "The backup and recovery process of the {{% ctx %}} platform."
+description: "This section includes all disaster recovery guides for the {{% ctx %}} platform."
 weight: 30
 ---

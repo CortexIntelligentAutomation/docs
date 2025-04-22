@@ -20,7 +20,7 @@
     |`BackupTaskName`                              | Configure this value with the unique name of the backup task that will be set for the scheduled Windows task. |
     |`BackupSchedule`                                | Configure the value with either `Daily` or `Weekly` depending on when the schedule will run.|
     |`BackupDay`                                    | This is only needed if the `BackupSchedule` is set to `Weekly`. Configure this value with the day of the week when the backup should run.|
-    |`BackupTime`                                   | Configure the value with the time that the back up will run. The format of the value should be in ISO8601 format, date specified along with time will be ignored. |
+    |`BackupTime`                                   | Configure the value with the time that the backup will run. The format of the value should be in ISO8601 format, date specified along with time will be ignored. |
     |`BackupPath`                                    | Replace `\\UncPath\BackupLocation` with the path of the location the backups will be stored in. if the path is a network path then the `Credentials` will be used to access that location.|
     |`BackupRetention`                             | Configure this value with the maximum number of backups that should be retained.|
     |`SiteName`                        | Configure this value with the name of the site that should be backed up.|

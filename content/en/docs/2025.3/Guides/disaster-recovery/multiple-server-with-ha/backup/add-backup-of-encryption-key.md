@@ -1,7 +1,7 @@
 ---
 title: "Add Backup of Encryption Key"
 linkTitle: "Add Backup of Encryption Key"
-description: "Instructions to back up the Encryption Key."
+description: "Instructions to backup the Encryption Key."
 weight: 30
 ---
 
