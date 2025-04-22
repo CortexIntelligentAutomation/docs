@@ -17,4 +17,4 @@ This guide describes how to perform the steps required before starting the backu
 
 [Add Backup of Encryption Key][]
 
-[Add Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupOfEncryptionKey" >}}
+[Add Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupOfEncryptionKey" >}}

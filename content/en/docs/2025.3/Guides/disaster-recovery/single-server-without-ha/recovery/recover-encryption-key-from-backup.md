@@ -2,7 +2,7 @@
 title: "Recover Encryption Key From Backup"
 linkTitle: "Recover Encryption Key From Backup"
 description: "Instructions to recover the Encryption Key from backups."
-weight: 40
+weight: 30
 ---
 
 # {{% param title %}}

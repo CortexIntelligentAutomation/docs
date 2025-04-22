@@ -15,7 +15,7 @@ This guide describes how to configure a scheduled backup of the Web Application 
 
 ## Run the Backup Script
 
-{{< section "/disaster-recovery/web-application-server/backup/configure-backup-script.md">}}
+{{< section "/disaster-recovery/web-application-server/backup/run-backup-script.md">}}
 
 ## Preserve Installation Files
 

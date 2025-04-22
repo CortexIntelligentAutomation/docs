@@ -2,7 +2,7 @@
 title: "Recover Web Application Server From Scheduled Backup"
 linkTitle: "Recover Web Application Server From Scheduled Backup"
 description: "Instructions to recover the Web Application Server from scheduled backups."
-weight: 40
+weight: 50
 ---
 
 # {{% param title %}}

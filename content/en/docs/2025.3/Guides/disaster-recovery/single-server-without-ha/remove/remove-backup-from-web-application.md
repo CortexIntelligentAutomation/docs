@@ -2,7 +2,7 @@
 title: "Remove Scheduled Backup From Web Application Server"
 linkTitle: "Remove Scheduled Backup From Web Application Server"
 description: "Instructions to remove scheduled backups from the Web Application Server."
-weight: 40
+weight: 50
 ---
 
 # {{% param title %}}
