@@ -60,7 +60,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusionsNew" >}}
 [Configure Installation Script]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureDebuggerInstallationScript" >}}
-[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.SingleServer" >}}
+[Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MultiServer" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallationNew" >}}
 [web application server prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebApplicationServerPrerequisitesNew" >}}
