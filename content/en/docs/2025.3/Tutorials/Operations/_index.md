@@ -1,7 +1,7 @@
 ---
 title: "Operations"
 linkTitle: "Operations"
-description: "This section includes tutorials about Operations on the {{% ctx %}} platform. - TODO"
+description: "This section includes tutorials about operating the {{% ctx %}} platform."
 weight: 40
 ---
 
