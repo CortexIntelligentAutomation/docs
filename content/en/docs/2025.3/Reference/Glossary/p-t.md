@@ -105,6 +105,12 @@ Service Fabric is an open source project developed by Microsoft used to deliver 
 
 For more information see [What is Service Fabric?][]
 
+### Service Fabric Explorer
+
+Service Fabric Explorer is an open source tool developed by Microsoft used to inspect and manage service fabric clusters.
+
+For more information see [Visualise your cluster with Service Fabric Explorer][].
+
 ### Single
 
 A [data type][] that represents a fractional, or very large or small number from `-3.402823e+38` through `3.402823e+38`.
@@ -204,6 +210,8 @@ Typeahead is a language prediction tool that is used to provide suggestions base
 [Output Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 
 [Property Expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
+
+[Visualise your cluster with Service Fabric Explorer]: {{< url path="MSDocs.ServiceFabric.Explorer" >}}
 
 [What is PowerShell?]: {{< url path="MSDocs.PowerShell.WhatIsPowerShell" >}}
 

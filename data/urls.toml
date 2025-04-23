@@ -243,6 +243,11 @@
                     ProductPortal =  "/blog/2022/10/27/2022.9/#product-portal"
     [Cortex.Faqs]
         MainDoc = "/docs/faqs/"
+        CheckClusterHealth = "/docs/faqs/check-cluster-health/"
+        [Cortex.Faqs.ImportClientCertificate]
+            MainDoc = "/docs/faqs/import-client-certificate/"
+            MultiServer = "/docs/faqs/import-client-certificate/multi-server-with-ha"
+            SingleServer = "/docs/faqs/import-client-certificate/single-server-without-ha"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -276,6 +281,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
@@ -380,6 +386,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
@@ -2728,6 +2735,7 @@
                 Request = "/docs/reference/glossary/p-t/#request"
                 SDK = "/docs/reference/glossary/p-t/#sdk"
                 ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"
+                ServiceFabricExplorer = "/docs/reference/glossary/p-t/#service-fabric-explorer"
                 Single = "/docs/reference/glossary/p-t/#single"
                 SASL = "/docs/reference/glossary/p-t/#sasl"
                 SMTP = "/docs/reference/glossary/p-t/#smtp"
@@ -2770,6 +2778,11 @@
                     SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
                     Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
                     UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+        [Cortex.Tutorials.Operations]
+            MainDoc = "/docs/tutorials/Operations"
+            [Cortex.Tutorials.Operations.Overview]
+                MainDoc = "/docs/tutorials/Operations/overview"
+                UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
 
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
