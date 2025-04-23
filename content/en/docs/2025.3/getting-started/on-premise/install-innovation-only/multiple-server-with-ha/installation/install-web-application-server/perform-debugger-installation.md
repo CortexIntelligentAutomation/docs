@@ -50,7 +50,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 1. Open a web browser.
 1. {{< section "/install-application-server/single-server/check-application-services.md">}}
 
-# Preserve installation files
+## Preserve installation files
 
 {{< section "/preserve-installation-files.md">}}
 
