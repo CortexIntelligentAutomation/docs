@@ -3,7 +3,7 @@
     
     ```powershell
     .\Cortex.Gateway.Backup.ps1 `
-        -ConfigFileName "Cortex.Application.Backup.Config.json" `
+        -ConfigFileName "Cortex.Gateway.Backup.Config.json" `
         -BackupTaskName "Customer1.BackupPolicy1" `
         -Remove
     ```

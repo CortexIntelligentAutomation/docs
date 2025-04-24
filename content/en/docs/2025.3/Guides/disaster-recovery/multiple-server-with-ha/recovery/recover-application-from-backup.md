@@ -1,6 +1,6 @@
 ---
-title: "Recover Application Server From Scheduled Backup"
-linkTitle: "Recover Application Server From Scheduled Backup"
+title: "Recover Application Server from Scheduled Backup"
+linkTitle: "Recover Application Server from Scheduled Backup"
 description: "Instructions to recover the Application Server from scheduled backups."
 weight: 40
 ---
@@ -9,14 +9,14 @@ weight: 40
 
 This guide describes how to recover the Application Servers from a backup. This will recover the application's reliable collections. Any recovery needed for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
 
-### Configure the Recover Script
+### Configure the Recovery Script
 
 {{< section "/disaster-recovery/application-server/recover/configure-recover-script.md">}}
 
-### Run the Recover Script
+### Run the Recovery Script
 
-{{% alert title="Note" %}}
-A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" title="Add Scheduled Backup To Application Server" >}} for further information.
+{{% alert title="Warning" color="warning" %}}
+A backup policy must be configured on the Application Server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" title="Add Scheduled Backup to Application Server" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}

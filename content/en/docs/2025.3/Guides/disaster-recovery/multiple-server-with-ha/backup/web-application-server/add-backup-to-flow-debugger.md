@@ -1,6 +1,6 @@
 ---
-title: "Add Scheduled Backup To Flow Debugger"
-linkTitle: "Add Scheduled Backup To Flow Debugger"
+title: "Add Scheduled Backup to Flow Debugger"
+linkTitle: "Add Scheduled Backup to Flow Debugger"
 description: "Instructions to add scheduled backups to the Flow Debugger."
 weight: 30
 ---

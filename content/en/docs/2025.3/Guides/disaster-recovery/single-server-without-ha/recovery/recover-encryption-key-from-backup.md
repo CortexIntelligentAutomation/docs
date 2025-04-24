@@ -13,7 +13,7 @@ This guide describes how to recover the Encryption Key from a backup. This will 
 The Encryption Key must be recovered before any installation of {{% ctx %}}.
 {{% /alert %}}
 
-### Configure the Recover Script
+### Configure the Recovery Script
 1. In the `Cortex Innovation {{< version >}} - App Server Install Scripts\Recovery` folder, locate the `Cortex.Innovation.EncryptionKey.Recover.ps1` script and open it with a text editor.
 1. Configure the script according to the details given below:
 
@@ -32,7 +32,7 @@ The Encryption Key must be recovered before any installation of {{% ctx %}}.
 
 1. Save and close `Cortex.Innovation.EncryptionKey.Recover.ps1`.
 
-### Run the Recover Script
+### Run the Recovery Script
 
 {{< section "/disaster-recovery/encryption-key/recover/run-recover-script.md">}}
 

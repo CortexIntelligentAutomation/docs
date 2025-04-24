@@ -1,6 +1,6 @@
 ---
-title: "Remove Scheduled Backup From Flow Debugger"
-linkTitle: "Remove Scheduled Backup From Flow Debugger"
+title: "Remove Scheduled Backup from Flow Debugger"
+linkTitle: "Remove Scheduled Backup from Flow Debugger"
 description: "Instructions to remove scheduled backups from the Flow Debugger."
 weight: 50
 ---
@@ -23,6 +23,6 @@ This guide describes how to remove a scheduled backup from the Flow Debugger. Th
 
 ## Next Steps?
 
-1. [Remove Scheduled Backup From Gateway][]
+1. [Remove Scheduled Backup from Gateway][]
 
-[Remove Scheduled Backup From Gateway]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove.RemoveBackupFromGateway" >}}
+[Remove Scheduled Backup from Gateway]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove.RemoveBackupFromGateway" >}}

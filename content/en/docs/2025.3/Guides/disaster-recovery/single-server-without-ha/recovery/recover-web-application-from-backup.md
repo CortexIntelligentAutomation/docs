@@ -9,11 +9,11 @@ weight: 50
 
 This guide describes how to recover the Web Application Server from a backup. This will recover the flow repositories and the OpenAPI definitions. Any recovery needed for the web config must be done manually.
 
-### Configure the Recover Script
+### Configure the Recovery Script
 
 {{< section "/disaster-recovery/web-application-server/recover/configure-recover-script.md">}}
 
-### Run the Recover Script
+### Run the Recovery Script
 
 {{% alert title="Note" %}}
 A backup policy should be configured on the web application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToWebApplicationServer" title="Add Backup To Web Application Server" >}} for further information.

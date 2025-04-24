@@ -1,5 +1,4 @@
 
-1. Save and close `Cortex.Innovation.Backup.ps1`.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation {{< version >}} - App Server Install Scripts\Recovery` folder using the following command, modifying the path as necessary:
 
@@ -13,7 +12,7 @@
     .\Cortex.Innovation.Backup.ps1
     ```
 
-1. Run the PowerShell command to backup the application services.
+1. Run the PowerShell command to remove the scheduled backup for the application services.
 1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
-1. Wait for the script to finish running. This should take approximately 1 minute.
+1. Wait for the script to finish running. This should take seconds.
 1. Check that there have been no errors in the script; these would appear in red in the console.

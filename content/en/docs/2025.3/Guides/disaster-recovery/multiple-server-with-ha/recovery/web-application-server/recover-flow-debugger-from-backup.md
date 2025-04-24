@@ -1,6 +1,6 @@
 ---
-title: "Recover Flow Debugger From Scheduled Backup"
-linkTitle: "Recover Flow Debugger From Scheduled Backup"
+title: "Recover Flow Debugger from Scheduled Backup"
+linkTitle: "Recover Flow Debugger from Scheduled Backup"
 description: "Instructions to recover the Flow Debugger from scheduled backups."
 weight: 30
 ---
@@ -9,14 +9,14 @@ weight: 30
 
 This guide describes how to recover the Flow Debugger from a backup. This will recover the application's reliable collections. Any recovery needed for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
 
-### Configure the Recover Script
+### Configure the Recovery Script
 
 {{< section "/disaster-recovery/application-server/recover/configure-recover-script.md">}}
 
-### Run the Recover Script
+### Run the Recovery Script
 
-{{% alert title="Note" %}}
-A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToFlowDebugger" title="Add Scheduled Backup to Flow Debugger" >}} for further information.
+{{% alert title="Warning" color="warning" %}}
+A backup policy must be configured on the Application Server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToFlowDebugger" title="Add Scheduled Backup to Flow Debugger" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}

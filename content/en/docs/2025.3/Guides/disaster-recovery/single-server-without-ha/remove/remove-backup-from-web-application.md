@@ -1,6 +1,6 @@
 ---
-title: "Remove Scheduled Backup From Web Application Server"
-linkTitle: "Remove Scheduled Backup From Web Application Server"
+title: "Remove Scheduled Backup from Web Application Server"
+linkTitle: "Remove Scheduled Backup from Web Application Server"
 description: "Instructions to remove scheduled backups from the Web Application Server."
 weight: 50
 ---

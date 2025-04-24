@@ -9,11 +9,11 @@ weight: 40
 
 This guide describes how to recover the Application Server from a backup. This will recover the application's reliable collections. Any recovery needed for the cluster's configuration, the service's appsettings, manifests or settings must be done manually.
 
-### Configure the Recover Script
+### Configure the Recovery Script
 
 {{< section "/disaster-recovery/application-server/recover/configure-recover-script.md">}}
 
-### Run the Recover Script
+### Run the Recovery Script
 
 {{% alert title="Note" %}}
 A backup policy must be configured on the application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" title="Add Backup To Application Server" >}} for further information.
