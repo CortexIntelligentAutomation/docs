@@ -2,5 +2,5 @@
 title: "Packages"
 linkTitle: "Packages"
 description: "Create and manage packages in {{% ctx %}} Gateway."
-weight: 10
+weight: 100
 ---
