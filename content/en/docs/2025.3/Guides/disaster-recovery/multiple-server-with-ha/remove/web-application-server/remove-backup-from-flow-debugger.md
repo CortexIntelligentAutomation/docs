@@ -23,6 +23,6 @@ This guide describes how to remove a scheduled backup from the Flow Debugger. Th
 
 ## Next Steps?
 
-[Remove Scheduled Backup From Gateway][]
+1. [Remove Scheduled Backup From Gateway][]
 
 [Remove Scheduled Backup From Gateway]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove.RemoveBackupFromGateway" >}}

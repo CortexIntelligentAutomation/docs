@@ -27,6 +27,6 @@ A backup policy must be configured on the application server before running a re
 
 ## Next Steps?
 
-[Recover Gateway from Scheduled Backup][]
+1. [Recover Gateway from Scheduled Backup][]
 
 [Recover Gateway from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery.RecoverGatewayFromBackup" >}}

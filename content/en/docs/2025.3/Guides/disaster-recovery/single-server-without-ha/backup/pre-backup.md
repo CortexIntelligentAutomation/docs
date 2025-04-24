@@ -11,10 +11,10 @@ This guide describes how to perform the steps required before starting the backu
 
 ## Make Installation Artefacts Available on all Servers
 
-{{< section "/disaster-recovery/make-installation-artefacts-available.md">}}
+{{< section "/disaster-recovery/single-make-installation-artefacts-available.md">}}
 
 ## Next Steps?
 
-[Add Backup of Encryption Key][]
+1. [Add Backup of Encryption Key][]
 
 [Add Backup of Encryption Key]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupOfEncryptionKey" >}}

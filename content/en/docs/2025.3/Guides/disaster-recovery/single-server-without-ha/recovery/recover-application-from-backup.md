@@ -27,6 +27,6 @@ A backup policy must be configured on the application server before running a re
 
 ## Next Steps?
 
-[Recover Web Application Server from Scheduled Backup][]
+1. [Recover Web Application Server from Scheduled Backup][]
 
 [Recover Web Application Server from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery.RecoverWebApplicationServerFromBackup" >}}

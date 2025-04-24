@@ -23,6 +23,6 @@ weight: 30
 
 ## Next Steps?
 
-[Add Scheduled Backup to Application Server][]
+1. [Add Scheduled Backup to Application Server][]
 
 [Add Scheduled Backup to Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToApplicationServer" >}}

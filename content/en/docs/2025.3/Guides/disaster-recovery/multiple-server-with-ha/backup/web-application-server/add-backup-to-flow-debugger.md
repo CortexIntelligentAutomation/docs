@@ -23,6 +23,6 @@ This guide describes how to configure a scheduled backup of the Flow Debugger on
 
 ## Next Steps?
 
-[Add Scheduled Backup to Gateway][]
+1. [Add Scheduled Backup to Gateway][]
 
 [Add Scheduled Backup to Gateway]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupToGateway" >}}

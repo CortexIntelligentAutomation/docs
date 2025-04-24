@@ -11,10 +11,10 @@ This guide describes how to perform the steps required before starting the recov
 
 ## Make Installation Artefacts Available on all Servers
 
-{{< section "/disaster-recovery/make-installation-artefacts-available.md">}}
+{{< section "/disaster-recovery/multi-make-installation-artefacts-available.md">}}
 
 ## Next Steps?
 
-[Recover Encryption Key from Backup][]
+1. [Recover Encryption Key from Backup][]
 
 [Recover Encryption Key from Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery.RecoveryEncryptionKeyFromBackup" >}}

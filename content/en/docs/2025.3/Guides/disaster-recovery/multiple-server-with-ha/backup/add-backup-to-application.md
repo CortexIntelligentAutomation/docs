@@ -23,6 +23,6 @@ This guide describes how to configure a scheduled backup of the Application Serv
 
 ## Next Steps?
 
-[Add Scheduled Backups to Web Application Server][]
+1. [Add Scheduled Backups to Web Application Server][]
 
 [Add Scheduled Backups to Web Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup.AddBackupsToWebApplicationServer" >}}

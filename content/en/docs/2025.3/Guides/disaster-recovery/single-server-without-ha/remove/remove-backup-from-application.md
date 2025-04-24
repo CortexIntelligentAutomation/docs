@@ -23,6 +23,6 @@ This guide describes how to remove a scheduled backup from the Application Serve
 
 ## Next Steps?
 
-[Remove Scheduled Backup From Web Application Server][]
+1. [Remove Scheduled Backup From Web Application Server][]
 
 [Remove Scheduled Backup From Web Application Server]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Remove.RemoveBackupFromWebApplicationServer" >}}

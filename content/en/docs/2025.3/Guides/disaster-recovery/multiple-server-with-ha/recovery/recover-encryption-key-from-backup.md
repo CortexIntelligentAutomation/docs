@@ -42,6 +42,6 @@ The Encryption Key must be recovered before any installation of {{% ctx %}}.
 
 ## Next Steps?
 
-[Recover Application Server from Scheduled Backup][]
+1. [Recover Application Server from Scheduled Backup][]
 
 [Recover Application Server from Scheduled Backup]: {{< url path="Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery.RecoverApplicationServerFromBackup" >}}
