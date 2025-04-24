@@ -1,6 +1,6 @@
 ---
-title: "Recover Web Application Server From Scheduled Backup"
-linkTitle: "Recover Web Application Server From Scheduled Backup"
+title: "Recover Web Application Server from Scheduled Backup"
+linkTitle: "Recover Web Application Server from Scheduled Backup"
 description: "Instructions to recover the Web Application Server from scheduled backups."
 weight: 50
 ---

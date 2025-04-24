@@ -1,6 +1,6 @@
 ---
-title: "Recover Encryption Key From Backup"
-linkTitle: "Recover Encryption Key From Backup"
+title: "Recover Encryption Key from Backup"
+linkTitle: "Recover Encryption Key from Backup"
 description: "Instructions to recover the Encryption Key from backups."
 weight: 30
 ---
@@ -26,8 +26,8 @@ The Encryption Key must be recovered before any installation of {{% ctx %}}.
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
-    |`TargetMachines`                                | Configure the value with the names of the application servers, the web application server and load balancer server if using the built-in load balancer.|
-    |`BackupPath`                                    | Replace `\\UncPath\BackupLocation` with the path of the location the backups are stored in. if the path is a network path then the `Credentials` will be used to access that location.|
+    |`TargetMachines`                                | Configure the value with the name of the web application server.|
+    |`BackupPath`                                    | Replace `\\UncPath\BackupLocation` with the path of the location the backups are stored in. If the path is a network path then the `Credentials` will be used to access that location.|
     |`Credential`                                    | The credentials of the user which will be used to access the `BackupPath`. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.|
 
 1. Save and close `Cortex.Innovation.EncryptionKey.Recover.ps1`.

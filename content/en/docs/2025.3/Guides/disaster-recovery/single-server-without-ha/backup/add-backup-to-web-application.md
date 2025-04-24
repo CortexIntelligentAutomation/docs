@@ -1,6 +1,6 @@
 ---
-title: "Add Scheduled Backup To Web Application Server"
-linkTitle: "Add Scheduled Backup To Web Application Server"
+title: "Add Scheduled Backup to Web Application Server"
+linkTitle: "Add Scheduled Backup to Web Application Server"
 description: "Instructions to add scheduled backups to the Web Application Server."
 weight: 40
 ---
