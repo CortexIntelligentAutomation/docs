@@ -2766,19 +2766,32 @@
             MainDoc = "/docs/tutorials/administration"
             [Cortex.Tutorials.Administration.PackageManagement]
                 MainDoc = "/docs/tutorials/administration/package-management"
-                    Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
-                    CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
-                    CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
-                    ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
-                    ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
-                    PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
-                    RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
-                    Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
-                    SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
-                    SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
-                    Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
-                    UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
-
+                Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
+                CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
+                CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
+                ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
+                ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
+                PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
+                RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
+                Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
+                SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
+                SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
+                Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
+                UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+            [Cortex.Tutorials.Administration.StudioImport]
+                MainDoc = "/docs/tutorials/administration/studio-import"
+                ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
+            [Cortex.Tutorials.Administration.StudioExport]
+                MainDoc = "/docs/tutorials/administration/studio-export"
+                ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
+            [Cortex.Tutorials.Administration.VersionControl]
+                MainDoc = "/docs/tutorials/administration/version-control"
+                UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
+        [Cortex.Tutorials.Operations]
+            MainDoc = "/docs/tutorials/Operations"
+            [Cortex.Tutorials.Operations.Overview]
+                MainDoc = "/docs/tutorials/Operations/overview"
+                UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
