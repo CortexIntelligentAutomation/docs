@@ -1,7 +1,7 @@
 ---
 title: "Studio Export"
 linkTitle: "Studio Export"
-description: "Export flows into a Studio Package in {{% ctx %}} Gateway."
+description: "Export flows from {{% ctx %}} Gateway."
 weight: 50
 ---
 
