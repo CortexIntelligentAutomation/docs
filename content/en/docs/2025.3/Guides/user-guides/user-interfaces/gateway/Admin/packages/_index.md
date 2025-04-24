@@ -1,6 +1,6 @@
 ---
 title: "Packages"
 linkTitle: "Packages"
-description: "This section includes user guides related to Package Management in {{% ctx %}} Gateway."
+description: "Create and manage packages in {{% ctx %}} Gateway."
 weight: 100
 ---

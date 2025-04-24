@@ -1,6 +1,6 @@
 ---
 title: "Gateway"
 linkTitle: "Gateway"
-description: "This section includes user guides related to {{% ctx %}} Gateway."
+description: "The centralised web-based portal for developing, operating and administering automation solutions that run on the {{% ctx %}} platform."
 weight: 10
 ---

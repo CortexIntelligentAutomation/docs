@@ -1,7 +1,7 @@
 ---
 title: "Studio Import"
 linkTitle: "Studio Import"
-description: "This section includes user guides related to Studio Import in {{% ctx %}} Gateway."
+description: "Import flows into {{% ctx %}} Gateway."
 weight: 25
 ---
 
@@ -9,7 +9,7 @@ weight: 25
 
 ## Summary
 
-The Studio Import page allows importing individual flows, contained in a Studio Package.
+The Studio Import page allows importing one or more flows, contained in a Studio Package.
 
 |                              |                                                                 |
 |------------------------------|-----------------------------------------------------------------|
