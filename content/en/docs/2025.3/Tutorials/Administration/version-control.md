@@ -1,7 +1,7 @@
 ---
 title: "Version Control"
 linkTitle: "Version Control"
-description: "Shows how to use Version Control feature."
+description: "This section includes tutorials about how to use Version Control."
 weight: 150
 ---
 
