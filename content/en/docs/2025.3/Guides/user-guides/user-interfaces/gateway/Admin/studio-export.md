@@ -2,7 +2,7 @@
 title: "Studio Export"
 linkTitle: "Studio Export"
 description: "Export flows from {{% ctx %}} Gateway."
-weight: 50
+weight: 60
 ---
 
 # {{% param title %}}

@@ -2,7 +2,7 @@
 title: "Studio Import"
 linkTitle: "Studio Import"
 description: "This section includes tutorials about importing individual flows."
-weight: 50
+weight: 40
 ---
 
 # {{% param title %}}
