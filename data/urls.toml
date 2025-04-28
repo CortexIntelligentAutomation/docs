@@ -2764,6 +2764,9 @@
         MainDoc = "/docs/tutorials/"
         [Cortex.Tutorials.Administration]
             MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.LicenseConsumption]
+                MainDoc = "/docs/tutorials/administration/license-consumption"
+                CheckLicenseConsumption = "/docs/tutorials/administration/license-consumption/#check-license-consumption"
             [Cortex.Tutorials.Administration.PackageManagement]
                 MainDoc = "/docs/tutorials/administration/package-management"
                 Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
@@ -2778,15 +2781,15 @@
                 SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
                 Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
                 UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+            [Cortex.Tutorials.Administration.StudioAuthorisation]
+                MainDoc = "/docs/tutorials/administration/studio-authorisation"
+                ManageFlowAccess = "/docs/tutorials/administration/studio-authorisation/#manage-flow-access"
             [Cortex.Tutorials.Administration.StudioImport]
                 MainDoc = "/docs/tutorials/administration/studio-import"
                 ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
             [Cortex.Tutorials.Administration.StudioExport]
                 MainDoc = "/docs/tutorials/administration/studio-export"
                 ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
-            [Cortex.Tutorials.Administration.StudioAuthorisation]
-                MainDoc = "/docs/tutorials/administration/studio-authorisation"
-                ManageFlowAccess = "/docs/tutorials/administration/studio-authorisation/#manage-flow-access"
             [Cortex.Tutorials.Administration.StudioHierarchy]
                 MainDoc = "/docs/tutorials/administration/studio-hierarchy"
                 ManageFlowHierarchy = "/docs/tutorials/administration/studio-hierarchy/#manage-flow-hierarchy"
