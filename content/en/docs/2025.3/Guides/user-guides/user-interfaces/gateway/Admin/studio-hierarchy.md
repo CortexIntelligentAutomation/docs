@@ -9,25 +9,27 @@ weight: 70
 
 ## Summary
 
-The Studio Authorisation page is used to manage the authorisation for access to flows within {{% ctx %}} Gateway. Each flow can be set to have [View][] or [Edit][] permissions assigned to LDAP Groups, or no access permissions at all.
-
-|                              |                                                                 |
-|------------------------------|-----------------------------------------------------------------|
-| **Roles Required:**          | Admin                                                           |
+The Studio Hierarchy page is used to move one or more flows from one group to another.
 
 ## Anatomy
 
-{{< figure src="/images/Studio Authorisation.png" title="Studio Authorisation" >}}
+{{< figure src="/images/Studio Hierarchy.png" title="Studio Hierarchy" >}}
+
+Only flows that the user has Edit permissions for are displayed.
 
 ## Actions
 
-### View
+### Move Flows
 
+After selecting the flows that are to be moved to a unique location in Group hierarchy, Right-Click on the target Group to where the selected flows will be moved to, and select the `Move selected items to this Group` from the context menu. The display will be updated to show the resultant hierarchy, with the flows to be moved but not yet committed identified with an asterisk (*) in the Results column of the display.
+
+If a Group is selected, then only the flows contained in that selected group are moved to another group; not the group itself.
 
 See the [Manage Flow Hierarchy][Manage Flow Hierarchy tutorial] tutorial for a step-by-step guide.
 
-### Edit
+### Commit Changes
 
+Once all the necessary flows have been moved in the hierarchy, all the changes can be committed using the Commit button.
 
 See the [Manage Flow Hierarchy][Manage Flow Hierarchy tutorial] tutorial for a step-by-step guide.
 
