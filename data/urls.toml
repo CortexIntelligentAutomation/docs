@@ -2786,6 +2786,9 @@
             [Cortex.Tutorials.Administration.StudioExport]
                 MainDoc = "/docs/tutorials/administration/studio-export"
                 ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
+            [Cortex.Tutorials.Administration.VersionControl]
+                MainDoc = "/docs/tutorials/administration/version-control"
+                UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
