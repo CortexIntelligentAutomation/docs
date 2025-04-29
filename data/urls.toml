@@ -668,8 +668,6 @@
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
             [Cortex.Guides.UpgradeCortex.2024.7to2024.9]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/"
-                [Cortex.Guides.UpgradeCortex.2024.7to2024.9.Advanced]
-                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
                 [Cortex.Guides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
                     TryItOut = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
@@ -685,8 +683,6 @@
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
             [Cortex.Guides.UpgradeCortex.2024.9to2024.11]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/"
-                [Cortex.Guides.UpgradeCortex.2024.9to2024.11.Advanced]
-                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
                 [Cortex.Guides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
                     Prerequisites = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
@@ -767,8 +763,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/try-it-out"
@@ -783,8 +777,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
@@ -800,8 +792,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
                         Prerequisites = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
@@ -820,8 +810,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/pre-upgrade"
@@ -840,8 +828,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/multiple-server-with-ha/pre-upgrade"
@@ -863,8 +849,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/single-server-without-ha/upgrade/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/multiple-server-with-ha/pre-upgrade"
@@ -2793,6 +2777,9 @@
             [Cortex.Tutorials.Administration.StudioHierarchy]
                 MainDoc = "/docs/tutorials/administration/studio-hierarchy"
                 ManageFlowHierarchy = "/docs/tutorials/administration/studio-hierarchy/#manage-flow-hierarchy"
+            [Cortex.Tutorials.Administration.VersionControl]
+                MainDoc = "/docs/tutorials/administration/version-control"
+                UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
