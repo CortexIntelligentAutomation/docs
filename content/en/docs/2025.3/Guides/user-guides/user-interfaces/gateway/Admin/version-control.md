@@ -15,7 +15,7 @@ The Version Control page displays the flow hierarchy for the current user, indic
 
 {{< figure src="/images/Version Control.png" title="Version Control" >}}
 
-Only flows with Edit permissions for the current user are displayed in the Version Control grid.
+Only flows with [`Edit`][Edit] permissions for the current user are displayed in the Version Control grid.
 
 ## Actions
 
@@ -35,7 +35,7 @@ See the [Use Version Control][Use Version Control tutorial] tutorial for a step-
 
 ### Known Limitations
 
-* Parent groups must also have edit permissions, in addition to the flows, otherwise the group and flows contained within it will not be displayed.
+* Parent groups must also have [`Edit`][Edit] permissions, in addition to the flows, otherwise the group and flows contained within it will not be displayed.
 
 ## See Also
 
@@ -47,4 +47,5 @@ None
 
 * [Use Version Control][Use Version Control tutorial]
 
+[Edit]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.Edit" >}}
 [Use Version Control tutorial]: {{< url path="Cortex.Tutorials.Administration.VersionControl.UseVersionControl" >}}

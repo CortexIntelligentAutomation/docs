@@ -9,7 +9,7 @@ weight: 50
 
 ## Summary
 
-The Studio Authorisation page is used to configure access to flows within {{% ctx %}} Gateway. Each flow can be set to have [View][] or [Edit][] permissions assigned to LDAP Groups that exist in the Active Directory server configured in LDAP Connection for CORTEX Gateway, or no access permissions at all.
+The Studio Authorisation page is used to configure access to flows within {{% ctx %}} Gateway. Each flow can be set to have [`View`][View] or [`Edit`][Edit] permissions assigned to LDAP Groups that exist in the Active Directory server configured in LDAP Connection for {{% ctx %}} Gateway, or no access permissions at all.
 
 |                              |                                                                 |
 |------------------------------|-----------------------------------------------------------------|
@@ -25,7 +25,7 @@ Permissions are set either explicitly or implicitly. Explicitly set permissions 
 
 Permissions are explicitly set by setting the checkbox in either the [View][] or [Edit][] columns of the appropriate LDAP Group for the flow or group to which the permissions are to be assigned.  Permissions are explicitly removed by clearing the checkbox.
 
-If an item is explicitly set with [Edit][] permissions, then that item will also be implicitly set with [View][] permissions. Explicitly setting an item with [View][] permissions does not implicitly set it with Edit permissions.
+If an item is explicitly set with [`Edit`][Edit] permissions, then that item will also be implicitly set with [`View`][View] permissions. Explicitly setting an item with [`View`][View] permissions does not implicitly set it with Edit permissions.
 
 ## Actions
 

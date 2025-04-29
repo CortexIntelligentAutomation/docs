@@ -15,7 +15,7 @@ The Studio Hierarchy page is used to move one or more flows from one group to an
 
 {{< figure src="/images/Studio Hierarchy.png" title="Studio Hierarchy" >}}
 
-Only flows with `Edit` permissions for the current user are displayed in the Studio Hierarchy grid.
+Only flows with [`Edit`][Edit] permissions for the current user are displayed in the Studio Hierarchy grid.
 
 ## Actions
 
@@ -33,7 +33,7 @@ See the [Manage Flow Hierarchy][Manage Flow Hierarchy tutorial] tutorial for a s
 
 ### Known Limitations
 
-* Parent groups must also have edit permissions, in addition to the flows, otherwise the group and flows contained within it will not be displayed.
+* Parent groups must also have [`Edit`][Edit] permissions, in addition to the flows, otherwise the group and flows contained within it will not be displayed.
 
 ## See Also
 
@@ -45,4 +45,5 @@ None
 
 * [Manage Flow Hierarchy][Manage Flow Hierarchy tutorial]
 
+[Edit]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.Edit" >}}
 [Manage Flow Hierarchy tutorial]: {{< url path="Cortex.Tutorials.Administration.StudioHierarchy.ManageFlowHierarchy" >}}

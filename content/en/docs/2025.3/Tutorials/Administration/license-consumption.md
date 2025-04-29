@@ -2,7 +2,7 @@
 title: "License Consumption"
 linkTitle: "License Consumption"
 description: "This section includes tutorials about checking the license consumption for {{% ctx %}}."
-weight: 70
+weight: 80
 ---
 
 # {{% param title %}}
