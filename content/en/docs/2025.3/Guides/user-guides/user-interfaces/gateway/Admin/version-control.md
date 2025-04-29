@@ -1,7 +1,7 @@
 ---
 title: "Version Control"
 linkTitle: "Version Control"
-description: "Displays the flow hierarchy for the current user indicating whether the flows are the same as or differ from the Master Repository."
+description: "View and manage differences between flows in the current user's repository and the Master Repository."
 weight: 90
 ---
 
@@ -35,8 +35,7 @@ See the [Use Version Control][Use Version Control tutorial] tutorial for a step-
 
 ### Known Limitations
 
-* There is no prompt to resolve conflicts when getting the Master Version of a flow that has uncommitted user changes.
-* It is necessary for the parent groups to have edit permissions in addition to the flows, to enable the display of the flows in Version Control.
+* Parent groups must also have edit permissions, in addition to the flows, otherwise the group and flows contained within it will not be displayed.
 
 ## See Also
 

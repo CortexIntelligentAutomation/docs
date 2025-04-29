@@ -1,7 +1,7 @@
 ---
 title: "Version Control"
 linkTitle: "Version Control"
-description: "This section includes tutorials about how to use Version Control."
+description: "This section includes tutorials about performing bulk version control operations including Get Master and Commit Changes."
 weight: 150
 ---
 

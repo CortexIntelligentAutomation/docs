@@ -1,7 +1,7 @@
 ---
 title: "Package Management"
 linkTitle: "Package Management"
-description: "This section includes tutorials about managing packages on the {{% ctx %}} platform."
+description: "This section includes tutorials about creating and managing packages."
 weight: 200
 ---
 
