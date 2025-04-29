@@ -9,7 +9,7 @@ weight: 20
 
 This guide describes how to perform the steps required before starting the backup of {{% ctx %}}.
 
-## Make Installation Artefacts Available on all Servers
+## Make Installation Artefacts Available
 
 {{< section "/disaster-recovery/single-make-installation-artefacts-available.md">}}
 

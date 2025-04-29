@@ -16,7 +16,7 @@ This guide describes how to recover the Web Application Server from a backup. Th
 ### Run the Recovery Script
 
 {{% alert title="Note" %}}
-A backup policy should be configured on the web application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToWebApplicationServer" title="Add Backup To Web Application Server" >}} for further information.
+A backup policy should be configured on the web application server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToWebApplicationServer" title="Add Backup to Web Application Server" >}} for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/web-application-server/recover/run-recover-script.md">}}

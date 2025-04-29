@@ -10,7 +10,7 @@ weight: 30
 This guide describes how to recover the Encryption Key from a backup. This will recover the Encryption key to the web application server.
 
 {{% alert title="Warning" color="warning" %}}
-The Encryption Key must be recovered before any installation of {{% ctx %}}.
+If recovering to new hardware, the Encryption Key must be recovered before {{% ctx %}} is installed.
 {{% /alert %}}
 
 ### Configure the Recovery Script
@@ -26,7 +26,7 @@ The Encryption Key must be recovered before any installation of {{% ctx %}}.
 
     | Name                                           | Description |
     |------------------------------------------------|-------------|
-    |`TargetMachines`                                | Configure the value with the name of the web application server.|
+    |`TargetMachines`                                | Configure the value to contain the NETBIOS name or fully qualified domain name of the web application server.|
     |`BackupPath`                                    | Replace `\\UncPath\BackupLocation` with the path of the location the backups are stored in. If the path is a network path then the `Credentials` will be used to access that location.|
     |`Credential`                                    | The credentials of the user which will be used to access the `BackupPath`. It must be a domain user that is a member of the local Administrators group on the server. <br /><br /> This does not need to be changed, a prompt will appear to enter this information when the script is run.|
 

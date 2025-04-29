@@ -16,7 +16,7 @@ This guide describes how to recover the Application Server from a backup. This w
 ### Run the Recovery Script
 
 {{% alert title="Warning" color="warning" %}}
-A backup policy must be configured on the Application Server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToApplicationServer" title="Add Backup To Application Server" >}}  for further information.
+A backup policy must be configured on the Application Server before running a recovery, see {{< ahref path="Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup.AddBackupToApplicationServer" title="Add Backup to Application Server" >}}  for further information.
 {{% /alert %}}
 
 {{< section "/disaster-recovery/application-server/recover/run-recover-script.md">}}
