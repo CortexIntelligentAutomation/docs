@@ -252,7 +252,7 @@ See [What is JSON][What is Json (W3)] for more information.
 
 [collection]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
 [Collections > Indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
-[CORTEX Studio > Authorisation]: {{< url path="Cortex.Guides.Gateway.Settings.StudioAuthorisation.MainDoc" >}}
+[CORTEX Studio > Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.MainDoc" >}}
 
 [Int16]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
