@@ -19,19 +19,20 @@ The License Consumption page is used to view the license consumption for the cur
 
 ### View License Consumption
 
-Every function block connected to a Start Flow block adds one to the License Consumption, except for the following blocks, which do not impact the License Consumption:
+Every functional block connected to a Start Flow block adds one to the license consumption, except for the following blocks, which do not impact the license consumption:
 
-* Start Flow
-* End Flow
-* Start Workspace
-* End Workspace
-* Wireless Receiver
-* Wireless Sender
-* Workspace (including the Handle Flow Exception workspace)
+* [Start Flow][]
+* [End Flow][]
+* [Start Workspace][]
+* [End Workspace][]
+* [Wireless Receiver][]
+* [Wireless Sender][]
+* [Workspace][]
+* [Handle Flow Exception Workspace][]
 
-The License Consumption details are shown in a tabular format, where each flow’s license consumption is aggregated and shown as a total against its parent Group. Groups may be expanded to show the License Consumption of each individual flow.
+The License Consumption details are shown in a tabular format, where each flow’s license consumption is aggregated and shown as a total against its parent group. Groups may be expanded to show the license consumption of each individual flow.
 
-The Breakdown switch expands the table to additionally show the number of Function blocks used in each flow, plus the flow Usage. The Usage identifies the number of times each flow has been calculated towards the total License Consumption; for {{% ctx %}} flows this will typically be a count of 1.
+The `Breakdown` switch expands the table to additionally show the flow usage and the number of functional blocks used in each flow. In {{% ctx %}} all flows will have a count of 1 in the `Usage` column.
 
 See the [Check License Consumption][Check License Consumption tutorial] tutorial for a step-by-step guide.
 
@@ -52,3 +53,11 @@ None
 * [Check License Consumption][Check License Consumption tutorial]
 
 [Check License Consumption tutorial]: {{< url path="Cortex.Tutorials.Administration.LicenseConsumption.CheckLicenseConsumption" >}}
+[End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
+[End Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.EndWorkspace.EndWorkspace.MainDoc" >}}
+[Handle Flow Exception Workspace]: {{< url path="Cortex.Reference.Blocks.Exceptions.HandleFlow.HandleFlowException.MainDoc" >}}
+[Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
+[Start Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.StartWorkspace.StartWorkspace.MainDoc" >}}
+[Wireless Receiver]: {{< url path="Cortex.Reference.Blocks.Wireless.WirelessReceiver.WirelessReceiver.MainDoc" >}}
+[Wireless Sender]: {{< url path="Cortex.Reference.Blocks.Wireless.WirelessSender.WirelessSender.MainDoc" >}}
+[Workspace]: {{< url path="Cortex.Reference.Blocks.Workspaces.Workspace.Workspace.MainDoc" >}}

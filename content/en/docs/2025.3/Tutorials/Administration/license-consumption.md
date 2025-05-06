@@ -1,7 +1,7 @@
 ---
 title: "License Consumption"
 linkTitle: "License Consumption"
-description: "This section includes tutorials about checking the license consumption for {{% ctx %}}."
+description: "This section includes tutorials about checking the license consumption."
 weight: 80
 ---
 
