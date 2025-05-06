@@ -495,7 +495,6 @@
                                 MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
-
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -957,10 +956,12 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
+                            Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
-
-[Cortex.Reference]
+    [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
@@ -2782,6 +2783,9 @@
         MainDoc = "/docs/tutorials/"
         [Cortex.Tutorials.Administration]
             MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.LicenseConsumption]
+                MainDoc = "/docs/tutorials/administration/license-consumption"
+                CheckLicenseConsumption = "/docs/tutorials/administration/license-consumption/#check-license-consumption"
             [Cortex.Tutorials.Administration.PackageManagement]
                 MainDoc = "/docs/tutorials/administration/package-management"
                 Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
@@ -2796,12 +2800,18 @@
                 SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
                 Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
                 UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+            [Cortex.Tutorials.Administration.StudioAuthorisation]
+                MainDoc = "/docs/tutorials/administration/studio-authorisation"
+                ManageFlowAccess = "/docs/tutorials/administration/studio-authorisation/#manage-flow-access"
             [Cortex.Tutorials.Administration.StudioImport]
                 MainDoc = "/docs/tutorials/administration/studio-import"
                 ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
             [Cortex.Tutorials.Administration.StudioExport]
                 MainDoc = "/docs/tutorials/administration/studio-export"
                 ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
+            [Cortex.Tutorials.Administration.StudioHierarchy]
+                MainDoc = "/docs/tutorials/administration/studio-hierarchy"
+                ManageFlowHierarchy = "/docs/tutorials/administration/studio-hierarchy/#manage-flow-hierarchy"
             [Cortex.Tutorials.Administration.VersionControl]
                 MainDoc = "/docs/tutorials/administration/version-control"
                 UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
