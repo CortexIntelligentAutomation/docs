@@ -961,6 +961,28 @@
                             Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
+                                ExecutionsGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
+                                MessagesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
+                                VariablesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
+                                ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/exceptions-viewer"
+                                ExecutionViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
+                                PropertyEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/property-editor"
+                                SettingsEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/settings-editor"
+
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -2815,6 +2837,10 @@
             [Cortex.Tutorials.Administration.VersionControl]
                 MainDoc = "/docs/tutorials/administration/version-control"
                 UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
+        [Cortex.Tutorials.Development]
+            MainDoc = "/docs/tutorials/development"
+            [Cortex.Tutorials.Development.FlowEditor]
+                MainDoc = "/docs/tutorials/development/flow-editor"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
