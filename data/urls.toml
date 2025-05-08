@@ -974,6 +974,9 @@
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                MainToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#main-toolbar"
+                                Workspaces = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspaces"
+                                WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
@@ -2841,6 +2844,8 @@
             MainDoc = "/docs/tutorials/development"
             [Cortex.Tutorials.Development.FlowEditor]
                 MainDoc = "/docs/tutorials/development/flow-editor"
+                [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
+                    MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
