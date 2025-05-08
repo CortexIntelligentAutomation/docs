@@ -959,6 +959,7 @@
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
                             Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
+                            View = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#view"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
@@ -2844,6 +2845,8 @@
             MainDoc = "/docs/tutorials/development"
             [Cortex.Tutorials.Development.FlowEditor]
                 MainDoc = "/docs/tutorials/development/flow-editor"
+                [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
                 [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
                     MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
         [Cortex.Tutorials.Operations]
