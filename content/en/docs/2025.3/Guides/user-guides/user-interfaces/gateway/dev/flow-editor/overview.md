@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "TODO"
+description: "Summary and anatomy of the Flow Editor."
 weight: 1
 ---
 
@@ -21,7 +21,7 @@ Each of the [Left][], [Right][] and [Bottom][] panels may be manually opened or 
 
 ### Navigation Bar
 
-The [Navigation Bar][] is always visible above the [Main Panel][] and provides information about the currently selected workspace, navigation between simultaneously opened flows, and access to online help.
+The [Navigation Bar][] is always visible at the top of the page and provides information about the currently selected workspace, navigation between simultaneously opened flows, and access to online help.
 
 ### Left Panel
 
@@ -87,4 +87,3 @@ None
 [Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
 [Settings Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.SettingsEditor" >}}
 [Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid" >}}
-
