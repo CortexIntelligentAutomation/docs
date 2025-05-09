@@ -21,14 +21,14 @@ At the top of the Main Panel is the Main Toolbar, which displays a number of ico
 
 ### Main Toolbar
 
-The Main Toolbar displays the current Mode is displayed to the right of the Main Toolbar, and can have the following values:
+To the left of the Main Toolbar, several icons that perform different actions on the currently selected flow. The icons displayed and their actions depend on the current operating Mode.
+
+To the right of the Main Toolbar the current Mode is displayed, and can have the following values:
 
 * View – the user only has [`View`][View] permissions on the flow and cannot edit it.
 * Edit – the user has [`Edit`][Edit] permissions and can add or delete function blocks from the flow’s workspaces and change the block’s configuration.
 * Debug - the flow is executing in Flow Editor.
 * Debug Edit – edits may be undertaken to the paused executing flow without losing any runtime values assigned to the variables.
-
-To the left of the Main Toolbar, several icons that perform different actions on the currently selected flow. The icons displayed and their actions depend on the current operating Mode.
 
 ### Workspaces
 
