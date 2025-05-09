@@ -2847,6 +2847,8 @@
                 MainDoc = "/docs/tutorials/development/flow-editor"
                 [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
+                [Cortex.Tutorials.Development.FlowEditor.MainPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/main-panel"
                 [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
                     MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
         [Cortex.Tutorials.Operations]
