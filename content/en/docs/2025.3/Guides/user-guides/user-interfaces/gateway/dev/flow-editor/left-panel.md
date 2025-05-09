@@ -15,9 +15,9 @@ The Left Panel shows the Palettes, which is automatically opened when working in
 
 {{< figure src="/images/Flow Editor - Left Panel.png" title="Left Panel" >}}
 
-The Left Panel shows the Palettes containing blocks that can be used to construct a flow. It can be manually opened or closed at any time using the open/close handles.
+The Left Panel shows the Palettes containing blocks that can be used to construct a flow.
 
-The Palettes group functional blocks with similar themes, and many of the blocks in a palette look similar but perform slightly different functions; the actual function that a block performs is shown in text, next to the block icon. Many of the blocks in a palette look similar but perform slightly different functions; the actual function that a block performs is shown in text, next to the block icon.
+The Palettes group functional blocks with similar themes, and many of the blocks in a palette look similar but perform slightly different functions; the actual function that a block performs is shown in text, next to the block icon.
 
 ## Actions
 
@@ -27,11 +27,11 @@ The Left Panel can be manually opened or closed at any time using the open/close
 
 ### Collapse/Expand Palette Groups
 
-To expand or collapse all Palette Groups, click the relevant + or - icon at the top of the Left Panel. Each Palette Group may be expanded or collapsed independently by clicking on the arrow to the right of the group name.
+To expand or collapse all Palette Groups, click the relevant {{< image src="/images/Flow Editor - Expand All.png" >}} or {{< image src="/images/Flow Editor - Collapse All.png" >}} icon at the top of the Left Panel. Each Palette Group may be expanded or collapsed independently by clicking on the {{< image src="/images/Flow Editor - Expand Palette.png" >}} or {{< image src="/images/Flow Editor - Collapse Palette.png" >}} icon to the right of the group name.
 
 ### View Functional Blocks
 
-To view the function blocks contained in the Palette, click on the down arrow (v) to the right of the palette group to expand the group and show the function blocks it contains, or alternatively, click the plus icon (+) on the Palette’s title bar to expand all the palette groups.
+To view the functional blocks contained in the Palette, click on the {{< image src="/images/Flow Editor - Expand Palette.png" >}} icon to the right of the palette group to expand the group and show the functional blocks it contains, or alternatively, click the {{< image src="/images/Flow Editor - Expand All.png" >}} icon at the top of the Left Panel to expand all the palette groups.
 
 ### Search for a Block
 
@@ -39,7 +39,7 @@ To search for a block by name, start typing into the search box below the Palett
 
 ### Place a Block on a Workspace
 
-To place a copy of a block from the Palette onto a  Workspace, simple left-click on the block in the Palette and drag it onto the Workspace.
+To place a copy of a block from the Palette onto a Workspace, left-click on the block in the Palette and drag it onto the Workspace.
 
 ## Remarks
 

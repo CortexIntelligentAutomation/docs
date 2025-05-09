@@ -9,7 +9,7 @@ weight: 30
 
 ## Summary
 
-TODO
+The Main Panel is used when developing, testing, and debugging flows. It shows the currently selected flow’s opened workspaces and any associated functional blocks.
 
 ## Anatomy
 
