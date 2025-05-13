@@ -10,3 +10,7 @@ Single server installations without HA are not recommended for the following sce
 
 * Production installations that are required to scale and support HA
 {{% /pageinfo %}}
+
+We recommend downloading this {{< filelink src="/pdf/Installation Checklists - Single Server Without HA.pdf" name="Installation Checklist" >}} and saving your progress as the installation proceeds. Should any issues arise during the installation that require contacting [{{% ctx %}} Service Portal][] this checklist should be attached.
+
+[{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
