@@ -2851,6 +2851,10 @@
                     MainDoc = "/docs/tutorials/development/flow-editor/main-panel"
                 [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
                     MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
+                    SequentialNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#sequential-navigation-between-open-flows"
+                    QuickNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#quick-navigation-between-open-flows"
+                    AccessHelp = "/docs/tutorials/development/flow-editor/navigation-bar/#accessing-help"
+                    CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
