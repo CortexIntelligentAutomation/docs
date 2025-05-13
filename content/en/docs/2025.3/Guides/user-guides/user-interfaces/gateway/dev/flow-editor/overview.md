@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-The Flow Editor page allows you to develop, test and debug flows.
+The Flow Editor page allows you to view, edit and debug flows.
 
 ## Anatomy
 
@@ -36,32 +36,37 @@ The [Main Panel][] is always visible and consists of:
 
 ### Right Panel
 
-The [Right Panel][] offers different tabs depending on the mode selected:
+The [Right Panel][] consists of 2 or 3 tabs depending on the mode selected:
 
 * In `View`, `Edit` or `Debug Edit` mode, the following tabs are available:
 
-  * Properties (default) - displays the [Property Editor][] showing the properties of the currently selected object.
-  * Settings - displays the [Settings Editor][] to set the input variables for the flow.
+  * Properties (default) - displays the [Property Editor][] showing the properties of the currently selected block.
+  * Settings - displays the [Settings Editor][] to set the values of the [input variables][] used when debugging the flow.
 
 * In `Debug` mode, the following tabs are available:
 
-  * Variables (default) - displays the [Execution Viewer][] showing the values of the variables during run-time.
-  * Exceptions - displays the [Exceptions Viewer][] showing details of any run-time exceptions.
-  * Settings - displays the [Settings Editor][] to set the input variables for the flow.
+  * Variables (default) - displays the [Execution Viewer][] showing the values of the variables when debugging the flow.
+  * Exceptions - displays the [Exceptions Viewer][] showing details of any exceptions when debugging the flow.
+  * Settings - displays the [Settings Editor][] to set the values of the [input variables][] used when debugging the flow.
 
 ### Bottom Panel
 
-The [Bottom Panel][] offers different tabs:
+The [Bottom Panel][] consists of 3 tabs:
 
-* Executions (default) - displays the [Executions Grid][] showing all current executions.
-* Messages - displays the [Messages Grid][] showing all messages raised by the translator during flow execution.
-* Variables - displays the [Variables Grid][] enabling the management of {{% ctx %}} variables.
+* Executions (default) - displays the [Executions Grid][] listing current executions being debugged by the user.
+* Messages - displays the [Messages Grid][] listing issues preventing the flow from being debugged.
+* Variables - displays the [Variables Grid][] enabling the management of variables.
 
 ## See Also
 
 ### Related Concepts
 
-None
+* [Blocks][]
+* [Exceptions][]
+* [Executions][]
+* [Flows][]
+* [Variables][]
+* [Workspaces][TODO]
 
 ### Related Tutorials
 

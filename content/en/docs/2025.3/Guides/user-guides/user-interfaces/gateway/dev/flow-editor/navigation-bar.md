@@ -9,14 +9,15 @@ weight: 10
 
 ## Summary
 
-TODO
+The Navigation Bar is at the top of the page and provides information about the currently selected workspace, navigation between simultaneously opened flows, and access to online help.
 
 ## Anatomy
 
 {{< figure src="/images/Flow Editor - Navigation Bar.png" title="Navigation Bar" >}}
 
-The Navigation bar consists of 5 elements:
+The Navigation bar consists of 6 elements:
 
+* [Recently Used Workspaces][]
 * [Breadcrumb Trail][]
 * [User Principle Name][]
 * [Help][]
@@ -29,7 +30,6 @@ The breadcrumb trail shows the hierarchy of all the open workspaces of the flow 
 
 {{% alert title="Note" %}}The breadcrumb trail only shows the names of the workspaces, as set on the workspace menu bar, not the workspace description as set in the workspace Description property.{{% /alert %}}
 
-
 ### User Principle Name
 
 The User Principle Name identifies the current user logged in to Gateway.
@@ -41,6 +41,10 @@ The User Principle Name identifies the current user logged in to Gateway.
 Clicking on the {{< image src="/images/Flow Editor - Help.png" >}} icon, will open the Product Portal, online documentation for {{% ctx %}}, in a new browser tab automatically selecting the section relevant to {{% ctx %}} version being used.
 
 ### Navigation
+
+#### Recently Used Workspaces
+
+TODO
 
 #### Quick Navigation
 
