@@ -1,7 +1,7 @@
 ---
 title: "Navigation Bar"
 linkTitle: "Navigation Bar"
-description: "This section includes tutorials about using the Navigation Bar."
+description: "This section includes tutorials about using the Navigation Bar on the Flow Editor."
 weight: 10
 ---
 
