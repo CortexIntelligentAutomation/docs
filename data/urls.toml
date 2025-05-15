@@ -2855,6 +2855,8 @@
                     QuickNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#quick-navigation-between-open-flows"
                     AccessHelp = "/docs/tutorials/development/flow-editor/navigation-bar/#accessing-help"
                     CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
+                [Cortex.Tutorials.Development.FlowEditor.RightPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]

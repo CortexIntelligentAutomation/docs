@@ -15,7 +15,7 @@ The Flow Editor page allows you to view, edit and debug [flows][What is a Flow?]
 
 {{< figure src="/images/Flow Editor.png" title="Flow Editor" >}}
 
-The page shows the [Navigation Bar][NavBar] at the top and the [Main Panel][Main] towards the centre of the page; to the left, right and bottom of the [Main Panel][Main], additional panels are automatically displayed, dependent on the activity currently being undertaken or the panel tab selected.
+The Flow Editor page shows the [Navigation Bar][NavBar] at the top and the [Main Panel][Main] towards the centre of the page; to the left, right and bottom of the [Main Panel][Main], additional panels are automatically displayed, dependent on the activity currently being undertaken or the panel tab selected.
 
 Each of the [Left][], [Right][] and [Bottom][] panels may be manually opened or closed, expanded or shrunk, independently as required.
 
@@ -82,7 +82,6 @@ The [Bottom Panel][] consists of 3 tabs:
 [Bottom]: {{< ref "#bottom-panel" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
-[Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 [Bottom Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Exceptions Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExceptionsViewer" >}}
