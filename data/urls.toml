@@ -2857,6 +2857,7 @@
                     CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
                 [Cortex.Tutorials.Development.FlowEditor.RightPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
+                    PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
         [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]

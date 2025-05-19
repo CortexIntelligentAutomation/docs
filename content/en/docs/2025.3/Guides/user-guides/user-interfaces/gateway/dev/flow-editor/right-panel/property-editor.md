@@ -53,7 +53,7 @@ The free format literal text property is used for the description of the block.
 
 ### Show Advanced Properties
 
-Many objects have Advanced Properties, which do not need to be configured for normal use and are normally hidden to avoid clutter. The {{< image src="/images/Flow Editor - Show Advanced Properties.png" >}} icon toggles whether these are visible or not.
+Many objects have Advanced Properties, which do not need to be configured for normal use and are normally hidden to avoid clutter. The {{< image src="/images/Flow Editor - Show Advanced Properties.png" >}} icon displays them and then changes to {{< image src="/images/Flow Editor - Hide Advanced Properties.png" >}} to hide them.
 
 ### Add Variables
 
@@ -69,31 +69,64 @@ The {{< image src="/images/Flow Editor - Help.png" >}} icon opens a new browser 
 
 To display the Property Type and expected Data Type, hover the cursor over the Property name.
 
+See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
+
 ### Change Property Editor
 
-Click on the icon to the left of the Property name to cycle through the available Property Editors for that property: Variable Editor -> Expression Editor -> Literal Editor.
+Click on the icon to the left of the Property name to cycle through the available Property Editors for that property. They will cycle in the following order:
 
-Note: Not all Properties allow use of all three Property Editors.
+* The Variable Editor {{< image src="/images/Flow Editor - Variable Editor.png" >}}
+* The Expression Editor {{< image src="/images/Flow Editor - Expression Editor.png" >}}
+* The Literal Editor {{< image src="/images/Flow Editor - Literal Editor.png" >}}
+
+{{% alert title="Note" %}}Not all Properties allow use of all three Property Editors.{{% /alert %}}
+
+See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
 
 ### Show/Hide Advanced Properties
 
-Click the eye icon on the Property Editor’s title bar to toggle between showing or hiding the selected object’s Advanced Properties.
+Click the {{< image src="/images/Flow Editor - Show Advanced Properties.png" >}} icon on the Property Editor’s title bar to show the selected block's advanced properties.
+
+When advanced properties are visible, click the {{< image src="/images/Flow Editor - Hide Advanced Properties.png" >}} icon to hide them.
+
+See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
 
 ### Add Variables
 
-Click the Plus (+) icon on the Property Editor’s title bar to automatically create all uncreated variables that have been referenced in the any of the object’s properties that are using the Variable Editor.
-This action will also open the Variables Grid in the Bottom Panel.
+Click the {{< image src="/images/Flow Editor - Add Variables.png" >}} icon on the Property Editor’s title bar to automatically create all uncreated variables that have been referenced in the any of the object’s properties that are using the Variable Editor.
+
+This action will also open the Variables Grid in the [Bottom Panel][].
+
+See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
 
 ### Help
 
-Click the question mark (?) icon on the Property Editor’s title bar to the Product Portal in a new browser tab. The new tab will display information that is relevant to this object.
+Click the {{< image src="/images/Flow Editor - Help.png" >}} icon on the Property Editor’s title bar to open the Product Portal in a new browser tab. The new tab will display information that is relevant to this block.
 
+See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
+
+## See Also
+
+### Related Concepts
+
+* [Blocks][]
+* [Variables][]
+* [Workspaces][]
+
+### Related Tutorials
+
+* [Property Editor][Property Editor tutorial]
 
 [literaltext]: {{< ref "#free-format-literal-text" >}}
 [input]: {{< ref "#input" >}}
 [inputoutput]: {{< ref "#inputoutput" >}}
 [output]: {{< ref "#output" >}}
 
+[Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
+[Bottom Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MainDoc" >}}
+[Property Editor tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.PropertyEditor" >}}
+[Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [What is a Block?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [What is a Block Property?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [What is a Workspace?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
+[Workspaces]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
