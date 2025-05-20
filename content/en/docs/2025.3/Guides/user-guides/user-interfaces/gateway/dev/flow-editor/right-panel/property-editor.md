@@ -9,7 +9,7 @@ weight: 20
 
 ## Summary
 
-The Property Editor allows for the configuration of the properties associated with the block selected in the Main Panel.
+The Property Editor allows for the configuration of the [properties][What is a Block Property?] associated with the [block][What is a Block?] selected in the [Main Panel][].
 
 ## Anatomy
 
@@ -17,14 +17,14 @@ The Property Editor allows for the configuration of the properties associated wi
 
 The Property Editor is automatically opened when a [block][What is a Block?] on the [Workspace][What is a Workspace?] is selected; however, it may be manually opened, or closed, any time by clicking the Open/Close handle or resized by dragging the handle left or right.
 
-Every object has one or more properties, which can be one of the following types:
+Every block has one or more properties, which can be one of the following types:
 
 * [Free format literal text][literaltext]
 * [input][]
 * [output][]
 * [inputoutput][]
 
-Each property, apart from the free format literal text, uses one or more property editors. If a property can be configured by using more than one editor type, clicking on the editor symbol will cycle though the alternative editor types; if only one editor type is available the editor symbol will be greyed out.
+Each property type, apart from the free format literal text, uses one or more property editors. If a property can be configured by using more than one editor type, clicking on the editor symbol will cycle though the alternative editor types; if only one editor type is available the editor symbol will be greyed out.
 
 ### Property Types
 
@@ -79,7 +79,7 @@ Click on the icon to the left of the Property name to cycle through the availabl
 * The Expression Editor {{< image src="/images/Flow Editor - Expression Editor.png" >}}
 * The Literal Editor {{< image src="/images/Flow Editor - Literal Editor.png" >}}
 
-{{% alert title="Note" %}}Not all Properties allow use of all three Property Editors.{{% /alert %}}
+{{% alert title="Note" %}}Not all properties allow use of all three Property Editors.{{% /alert %}}
 
 See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
 
@@ -124,6 +124,7 @@ See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step 
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Bottom Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MainDoc" >}}
+[Main Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.MainDoc" >}}
 [Property Editor tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.PropertyEditor" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [What is a Block?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
