@@ -36,9 +36,9 @@ It is important to note that the Execution Viewer can only display a JSON repres
 
 ### View Variables in Variables Viewer
 
-To view the variables that have been assigned a value, including a NULL value, that are currently in scope, simply select the execution of interest and click on the Variables tab on the [Right Panel][].
+To view the variables that have been assigned a value, including a NULL value, that are currently in [scope][Variable Scopes], simply select the execution of interest and click on the Variables tab on the [Right Panel][].
 
-Variables that have not been assigned a value or are out of scope will not be displayed.
+Variables that have not been assigned a value or are out of [scope][Variable Scopes] will not be displayed.
 
 See the [Execution Viewer][Execution Viewer tutorial] tutorial for a step-by-step guide.
 
@@ -74,6 +74,7 @@ See the [Execution Viewer][Execution Viewer tutorial] tutorial for a step-by-ste
 [Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [Execution Viewer tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.ExecutionViewer" >}}
+[Variable Scopes]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [What is a Flow?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
 [What is a Variable?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
