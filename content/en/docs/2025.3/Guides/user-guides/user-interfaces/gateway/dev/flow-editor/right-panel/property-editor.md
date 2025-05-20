@@ -9,7 +9,7 @@ weight: 20
 
 ## Summary
 
-The Property Editor allows for the configuration of the [properties][What is a Block Property?] associated with the [block][What is a Block?] selected in the [Main Panel][].
+The Property Editor displays the [properties][What is a Block Property?] of the currently selected [block][What is a Block?].
 
 ## Anatomy
 
@@ -105,6 +105,12 @@ Click the {{< image src="/images/Flow Editor - Help.png" >}} icon on the Propert
 
 See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
 
+## Remarks
+
+### Known Limitations
+
+* The Expression Editor does not support the creation of undeclared variables using the Add Variables feature.
+
 ## See Also
 
 ### Related Concepts
@@ -124,7 +130,6 @@ See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step 
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Bottom Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MainDoc" >}}
-[Main Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.MainDoc" >}}
 [Property Editor tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.PropertyEditor" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [What is a Block?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
