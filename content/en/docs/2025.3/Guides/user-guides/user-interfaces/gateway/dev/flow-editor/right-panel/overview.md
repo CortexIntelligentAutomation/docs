@@ -1,15 +1,15 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "TODO"
+description: "Summary and Anatomy of the Right Panel."
 weight: 10
 ---
 
 # {{% param title %}}
 
 ## Summary
-TODO
-The Right Panel consists tabs to allow ...
+
+The Right Panel consists of multiple tabs to allow the setting of values of [input variables][Flow Input Variable], viewing [block properties][What is a Block Property?] and the values of [variables][What is a Variable?] used when debugging.
 
 ## Anatomy
 

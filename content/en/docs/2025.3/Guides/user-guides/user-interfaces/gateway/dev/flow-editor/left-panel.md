@@ -1,7 +1,7 @@
 ---
 title: "Left Panel"
 linkTitle: "Left Panel"
-description: "TODO"
+description: "Develop flows using the Palettes."
 weight: 20
 ---
 

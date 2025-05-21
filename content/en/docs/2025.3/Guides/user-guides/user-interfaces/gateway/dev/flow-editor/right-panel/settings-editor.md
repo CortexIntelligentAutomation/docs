@@ -1,7 +1,7 @@
 ---
 title: "Settings Editor"
 linkTitle: "Settings Editor"
-description: "TODO"
+description: "View the values of input variables."
 weight: 40
 ---
 

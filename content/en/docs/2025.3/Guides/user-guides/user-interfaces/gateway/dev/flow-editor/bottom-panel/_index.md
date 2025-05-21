@@ -1,6 +1,6 @@
 ---
 title: "Bottom Panel"
 linkTitle: "Bottom Panel"
-description: "TODO"
+description: "Manage Variables and view debug execution information."
 weight: 50
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Main Panel"
 linkTitle: "Main Panel"
-description: "TODO"
+description: "Develop, test and debug flows in the Flow Editor."
 weight: 30
 ---
 
@@ -9,7 +9,7 @@ weight: 30
 
 ## Summary
 
-The Main Panel is used when developing, testing, and debugging flows. 
+The Main Panel is used when developing, testing, and debugging flows.
 
 ## Anatomy
 

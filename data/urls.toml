@@ -2857,6 +2857,7 @@
                     CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
                 [Cortex.Tutorials.Development.FlowEditor.RightPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
+                    ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
                     ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
         [Cortex.Tutorials.Operations]

@@ -1,7 +1,7 @@
 ---
 title: "Property Editor"
 linkTitle: "Property Editor"
-description: "TODO"
+description: "View the properties of a block selected in the Main Panel."
 weight: 20
 ---
 

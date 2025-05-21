@@ -1,7 +1,7 @@
 ---
 title: "Execution Viewer"
 linkTitle: "Execution Viewer"
-description: "TODO"
+description: "View the values of variables when debugging a flow."
 weight: 30
 ---
 
