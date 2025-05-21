@@ -32,9 +32,7 @@ To the right of the Main Toolbar the current editor mode is displayed, and can h
 
 A [workspace][What is a Workspace?] is an object that contains a canvas, onto which blocks, drawn from the Palettes may be placed and connected to define the logic of a flow. Every flow has a top-level workspace, from where the flow execution will start; additional workspace blocks may be added from the Palettes to direct the flow execution to execute the logic contained in that workspace.
 
-The canvas of the flow’s top-level workspace is always present in the Main Panel, along with any of the flow’s additional workspaces that have been opened. The canvas will automatically increase in size as blocks are added or moved as necessary.
-
-If the workspace becomes too large to be viewed in its entirety in the Main Panel, scroll bars will be automatically added.
+The canvas of the flow’s top-level workspace is always present in the Main Panel, along with any of the flow’s additional workspaces that have been opened. The canvas will automatically increase in size as blocks are added or moved as necessary. If the workspace becomes too large to be viewed in its entirety in the Main Panel, scroll bars will be automatically added.
 
 To the bottom left of each workspace are a set of 4 overlaid zoom controls:
 
