@@ -15,7 +15,7 @@ The Exceptions Viewer shows details of any [exceptions][What is an Exception?] w
 
 {{< figure src="/images/Flow Editor - Exceptions Viewer.png" title="Exceptions Viewer" >}}
 
-In addition to the detailed description of the exception, the exception message may include an `Inner Exception`, which details the exception associated with a previous exception that led to this exception to be raised. Some exceptions may contain multiple, nested layers of `Inner Exception` messages.
+In addition to a detailed description of the exception, the exception message may include an `Inner Exception`, which details the exception associated with a previous exception that led to this exception to be raised. Some exceptions may contain multiple, nested layers of `Inner Exception` messages.
 
 The exact format of the Exception Object depends on the exception raised. All Exception Objects have:
 

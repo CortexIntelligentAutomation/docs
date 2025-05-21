@@ -980,6 +980,7 @@
                                 WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar"
+                                BreadcrumbTrail = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar/#breadcrumb-trail"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
                                 ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/exceptions-viewer"
@@ -2847,8 +2848,19 @@
                 MainDoc = "/docs/tutorials/development/flow-editor"
                 [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
+                    PlaceBlocks = "/docs/tutorials/development/flow-editor/left-panel/#placing-a-block-from-the-palette-onto-a-workspace"
+                    SearchBlocks = "/docs/tutorials/development/flow-editor/left-panel/#searching-the-palette-for-a-block"
+                    ViewBlocks = "/docs/tutorials/development/flow-editor/left-panel/#view-blocks-in-the-palette"
                 [Cortex.Tutorials.Development.FlowEditor.MainPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/main-panel"
+                    CompareMaster = "/docs/tutorials/development/flow-editor/main-panel/#compare-flow-with-master-version"
+                    DeleteFlow = "/docs/tutorials/development/flow-editor/main-panel/#delete-flow"
+                    EditFlow = "/docs/tutorials/development/flow-editor/main-panel/#edit-flow-and-continue-debugging"
+                    GetMaster = "/docs/tutorials/development/flow-editor/main-panel/#get-master-version-of-flow"
+                    RemoveBreakpoints = "/docs/tutorials/development/flow-editor/main-panel/#remove-all-breakpoints"
+                    SaveCommit = "/docs/tutorials/development/flow-editor/main-panel/#save-and-commit-flow"
+                    StartExecution = "/docs/tutorials/development/flow-editor/main-panel/#start-an-execution"
+                    UndoRedo = "/docs/tutorials/development/flow-editor/main-panel/#undo-and-redo-changes"
                 [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
                     MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
                     SequentialNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#sequential-navigation-between-open-flows"

@@ -81,11 +81,11 @@ See the [Accessing Help][Accessing Help tutorial] tutorial for a step-by-step gu
 
 ### Quick Navigation between Open Flows
 
-Clicking on the {{< image src="/images/Flow Editor - Quick Navigation.png" >}} icon will replace the [Right Panel][] with a ‘filmstrip’ depicting a pictorial representation all the open flows in a vertical, scrollable list.
+Clicking on the {{< image src="/images/Flow Editor - Quick Navigation.png" >}} icon will replace the [Right Panel][] with a ‘filmstrip’ depicting a pictorial representation of all open flows in a vertical, scrollable list.
 
 To navigate to an alternative open flow, click on the flow image in the filmstrip; the open flow will then be visible in the [Main Panel][].
 
-Clicking on the Quick Navigation icon when the filmstrip is visible will close the Quick Navigation feature. The Quick Navigation feature will also be closed if a block on the flow being viewed is selected, causing the block's [properties][What is a Block Property?] to be displayed in the [Right Panel][].
+Clicking on the Quick Navigation icon when the filmstrip is visible will close the Quick Navigation feature. The Quick Navigation feature will also be closed if a [block][What is a Block?] on the flow being viewed is selected, causing the block's [properties][What is a Block Property?] to be displayed in the [Right Panel][].
 
 See the [Quick Navigation Between Open Flows][Quick Navigation Between Open Flows tutorial] tutorial for a step-by-step guide.
 
@@ -113,15 +113,16 @@ None
 
 ### Related Concepts
 
+* [Blocks][]
 * [Flows][]
 * [Workspaces][Workspaces]
 
 ### Related Tutorials
 
 * [Accessing Help][Accessing Help tutorial]
-* [Close Flow][Close Flow tutorial]
 * [Quick Navigation Between Open Flows][Quick Navigation Between Open Flows tutorial]
 * [Sequential Navigation Between Open Flows][Sequential Navigation Between Open Flows tutorial]
+* [Close Flow][Close Flow tutorial]
 
 [Recently Used Workspaces]: {{< ref "#recently-used-workspaces" >}}
 [Breadcrumb Trail]: {{< ref "#breadcrumb-trail" >}}
@@ -137,10 +138,12 @@ None
 [Sequential Navigation Between Open Flows tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.NavigationBar.SequentialNavigation" >}}
 [Close Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.NavigationBar.CloseFlow" >}}
 
+[Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [Main Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.MainDoc" >}}
 [Navigation Bar tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.NavigationBar.MainDoc" >}}
 [Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
+[What is a Block?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [What is a Block Property?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 [What is a Flow?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
 [What is a Workspace?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}

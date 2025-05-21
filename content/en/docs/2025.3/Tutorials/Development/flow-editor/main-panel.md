@@ -15,7 +15,7 @@ weight: 30
 
 {{< scribe title="Execution_Options_and_Start_an_Execution" id="eIlJucHPRPOZ_s37BAu0Jg" >}}
 
-## Edit Flow
+## Edit Flow and Continue Debugging
 
 {{< scribe title="Edit_Flow_and_Continue_Debugging" id="cAkx-vH6RpWhjWpkEyePRg" >}}
 

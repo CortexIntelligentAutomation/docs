@@ -7,7 +7,7 @@ weight: 20
 
 # {{% param title %}}
 
-## View Functional Blocks in the Palette
+## View Blocks in the Palette
 
 {{< scribe title="View_Function_Blocks_in_the_Palette" id="XgE3OMd_T86hTPSJJPdQtQ" >}}
 

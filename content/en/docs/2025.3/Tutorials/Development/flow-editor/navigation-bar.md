@@ -7,17 +7,17 @@ weight: 10
 
 # {{% param title %}}
 
-## Sequential Navigation Between Open Flows
+## Accessing Help
 
-{{< scribe title="Navigate_Between_Open_Flows" id="E-mrlk-2T2-X6HXIwtaAdw" >}}
+{{< scribe title="Accessing_Help" id="v1d_xFr4QfaM926GSZ86cw" >}}
 
 ## Quick Navigation Between Open Flows
 
 {{< scribe title="Quick_Navigation_Between_Open_Flows" id="Xls4Yx7iTNePDrqsxd9_yA" >}}
 
-## Accessing Help
+## Sequential Navigation Between Open Flows
 
-{{< scribe title="Accessing_Help" id="v1d_xFr4QfaM926GSZ86cw" >}}
+{{< scribe title="Navigate_Between_Open_Flows" id="E-mrlk-2T2-X6HXIwtaAdw" >}}
 
 ## Close Flow
 
