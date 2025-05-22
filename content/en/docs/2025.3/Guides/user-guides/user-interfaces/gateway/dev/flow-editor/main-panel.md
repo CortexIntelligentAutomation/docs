@@ -30,7 +30,7 @@ To the right of the Main Toolbar the current editor mode is displayed, and can h
 
 ### Workspaces
 
-A [workspace][What is a Workspace?] is an object that contains a canvas, onto which blocks, drawn from the Palettes may be placed and connected to define the logic of a flow. Every flow has a top-level workspace, from where the flow execution will start; additional workspace blocks may be added from the Palettes to direct the flow execution to execute the logic contained in that workspace.
+A [workspace][What is a Workspace?] is an object that contains a canvas, onto which blocks, drawn from the Palettes may be placed and connected to define the logic of a flow. Every flow has a top-level workspace, from where the flow [execution][What is an Execution?] will start; additional workspace blocks may be added from the Palettes to direct the flow execution to execute the logic contained in that workspace.
 
 The canvas of the flow’s top-level workspace is always present in the Main Panel, along with any of the flow’s additional workspaces that have been opened. The canvas will automatically increase in size as blocks are added or moved as necessary. If the workspace becomes too large to be viewed in its entirety in the Main Panel, scroll bars will be automatically added.
 
@@ -53,7 +53,7 @@ When a new workspace is created, it is initially given the default name of `Unti
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Undo.png" >}} icon allows the developer to undo any changes made to the flow.
+The {{< image src="/images/Flow Editor - Undo.png" >}} icon allows the developer to undo changes made to the flow.
 
 See the [Undo and Redo Changes][Undo and Redo Changes tutorial] tutorial for a step-by-step guide.
 
@@ -61,7 +61,7 @@ See the [Undo and Redo Changes][Undo and Redo Changes tutorial] tutorial for a s
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Redo.png" >}} icon allows the developer to redo any changes undone by the Undo command.
+The {{< image src="/images/Flow Editor - Redo.png" >}} icon allows the developer to redo changes undone by the Undo command.
 
 See the [Undo and Redo Changes][Undo and Redo Changes tutorial] tutorial for a step-by-step guide.
 
@@ -77,9 +77,9 @@ See the [Start an Execution][Start an Execution tutorial] tutorial for a step-by
 
 Available in Editor Modes: `View`, `Edit`, `Debug`
 
-The {{< image src="/images/Flow Editor - Execution Options.png" >}} dropdown enables the developer to change the settings that are used when debugging the flow in the Flow Editor. One, multiple or no options can be selected:
+The {{< image src="/images/Flow Editor - Execution Options.png" >}} dropdown enables the developer to change the options that are used when debugging the flow in the Flow Editor. One, multiple or no options can be selected:
 
-* `Show execution on workspace` - Forces an icon to be displayed, identifying the position of the flow being debugged, on the workspace, enabling the flow developer to track the execution progress.
+* `Show execution on workspace` - Displays an icon on the workspace, identifying the position of the flow being debugged, enabling the flow developer to track the execution progress.
 * `Break on exception` - causes the flow execution to be paused if an [exception][What is an Exception?] occurs.
 
 See the [Start an Execution][Start an Execution tutorial] tutorial for a step-by-step guide.
@@ -88,7 +88,7 @@ See the [Start an Execution][Start an Execution tutorial] tutorial for a step-by
 
 Available in Editor Modes: `Debug` (if user has [`Edit`][Edit] permissions)
 
-The {{< image src="/images/Flow Editor - Edit Flow.png" >}} icon causes an flow that is being debugged to pause and then change the editor mode to `Debug Edit`.
+The {{< image src="/images/Flow Editor - Edit Flow.png" >}} icon causes a flow that is being debugged to pause and then changes the editor mode to `Debug Edit`.
 
 See the [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial] tutorial for a step-by-step guide.
 
@@ -112,25 +112,23 @@ See the [Remove All Breakpoints][Remove All Breakpoints tutorial] tutorial for a
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Save.png" >}} icon performs a manual save of any changes made to the flow to the developer’s local repository.
+The {{< image src="/images/Flow Editor - Save.png" >}} icon saves any changes made to the flow to the developer’s local repository.
 
 See the [Save and Commit Flow][Save and Commit Flow tutorial] tutorial for a step-by-step guide.
 
-### Commit
+### Commit Flow
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Commit.png" >}} icon performs a save of any changes and then sends a copy of the flow, without any breakpoints, to the Master Repository. This makes this version of the flow the Master Version, which can be accessed by others with relevant permissions. An asterisk (*) indicates that the locally saved version of the flow has not been committed.
+The {{< image src="/images/Flow Editor - Commit.png" >}} icon saves any changes to the developer's local repository and commits a copy of the flow, without any breakpoints, to the Master Repository. This makes this version of the flow the Master Version, which can be accessed by others with relevant permissions. An asterisk (*) next to the icon indicates that the locally saved version of the flow has not been committed.
 
 See the [Save and Commit Flow][Save and Commit Flow tutorial] tutorial for a step-by-step guide.
 
-### Get Master Version
+### Get the Master Version of this Flow
 
 Available in Editor Modes: `View`, `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Get Master.png" >}} icon retrieves the Master Version of the flow from the Master Repository and saves it to the developer's local repository, overwriting the version currently being edited. An asterisk (*) indicates that someone else has made changes to the Master version, which differs from your local version of the flow.
-
-If Get Master is used when in `View` editor mode, the Master Version of the flow will overwrite the saved version in the user’s local repository.
+The {{< image src="/images/Flow Editor - Get Master.png" >}} icon retrieves the Master Version of the flow from the Master Repository and saves it to the developer's local repository, overwriting the version currently being viewed or edited. An asterisk (*) next to the icon indicates that someone else has made changes to the Master version, which differs from the local version of the flow.
 
 See the [Get Master Version of Flow][Get Master Version of Flow tutorial] tutorial for a step-by-step guide.
 
@@ -138,11 +136,11 @@ See the [Get Master Version of Flow][Get Master Version of Flow tutorial] tutori
 
 Available in Editor Modes: `View`, `Edit`, `Debug`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Compare with Master.png" >}} icon saves the flow to the developer’s local repository and then opens a new browser window that displays the local version of the flow alongside the Master Version of the flow in the Master Repository, highlighting any differences.
+The {{< image src="/images/Flow Editor - Compare with Master.png" >}} icon saves the flow to the developer’s local repository and opens a new browser window that displays the local version of the flow alongside the Master Version of the flow in the Master Repository, highlighting any differences.
 
 See the [Compare Flow with Master Version][Compare Flow with Master Version tutorial] tutorial for a step-by-step guide.
 
-### Delete Flow
+### Delete
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
@@ -162,6 +160,7 @@ None
 
 * [Blocks][]
 * [Exceptions][]
+* [Executions][]
 * [Flows][]
 * [Variables][]
 * [Workspaces][Workspace Fundamentals]
@@ -193,6 +192,7 @@ None
 [breadcrumb trail]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar.BreadcrumbTrail" >}}
 [Edit]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.Edit" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [Executions in Development]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
@@ -204,4 +204,5 @@ None
 [What is a Variable?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 [What is a Workspace?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.WhatIsAWorkspace.MainDoc" >}}
 [What is an Exception?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.WhatIsAnException.MainDoc" >}}
+[What is an Execution?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.MainDoc" >}}
 [Workspace Fundamentals]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Workspaces.MainDoc" >}}
