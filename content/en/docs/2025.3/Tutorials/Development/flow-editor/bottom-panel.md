@@ -9,11 +9,11 @@ weight: 50
 
 ## Executions Grid
 
-### Continue and Stop an Execution
+### Continue and Stop the Execution
 
 {{< scribe title="Continue_the_Execution_and_Stop_the_Execution" id="Y1VaqZLTQlaLm6bS5c_jGQ" >}}
 
-### Step an Execution
+### Step the Execution
 
 {{< scribe title="Step_the_Execution" id="FYz8savqQr-w8ZGWqxnhnQ" >}}
 

@@ -96,7 +96,7 @@ See the [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tuto
 
 Available in Editor Modes: `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Start Execution.png" >}} icon saves any changes made to the flow to the developer’s local repository and changes the editor mode to `Debug`.
+The {{< image src="/images/Flow Editor - Continue Debugging.png" >}} icon saves any changes made to the flow to the developer’s local repository and changes the editor mode to `Debug`.
 
 See the [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial] tutorial for a step-by-step guide.
 

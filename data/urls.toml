@@ -2846,6 +2846,13 @@
             MainDoc = "/docs/tutorials/development"
             [Cortex.Tutorials.Development.FlowEditor]
                 MainDoc = "/docs/tutorials/development/flow-editor"
+                [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/bottom-panel"
+                    ContinueStopExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#continue-and-stop-the-execution"
+                    ShowFirstLast = "/docs/tutorials/development/flow-editor/bottom-panel/#show-initial-flow-first-or-last"
+                    StartTracking = "/docs/tutorials/development/flow-editor/bottom-panel/#start-tracking"
+                    StepExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#step-the-execution"
+                    StopTrackingGoTo = "/docs/tutorials/development/flow-editor/bottom-panel/#stop-tracking-and-go-to"
                 [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
                     PlaceBlocks = "/docs/tutorials/development/flow-editor/left-panel/#placing-a-block-from-the-palette-onto-a-workspace"
@@ -2872,7 +2879,8 @@
                     ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
                     ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
-        [Cortex.Tutorials.Operations]
+                    SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
+       [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/Operations/overview"

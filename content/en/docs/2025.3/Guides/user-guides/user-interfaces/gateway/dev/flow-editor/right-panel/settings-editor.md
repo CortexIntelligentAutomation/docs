@@ -27,9 +27,13 @@ When the `Is Input Variable?` property is changed for a variable in the [Variabl
 
 To make a variable an Input Variable, open the Variables Grid (Bottom Panel) by selecting on the Variables tab. Double-click on the Is Input Variable? field of the variable that is to be made an Input Variable, and tick the checkbox that appears in the field.
 
+See the [Settings Editor][Settings Editor tutorial] tutorial for a step-by-step guide.
+
 ### Update Input Variables in Settings Editor
 
 When a new Input Variable is defined, or an existing Input Variable removed, it is necessary to update the Input Variables in the Settings Editor. To do this, click on the Update Inputs button on the Settings Editor.
+
+See the [Settings Editor][Settings Editor tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
@@ -46,15 +50,17 @@ When a new Input Variable is defined, or an existing Input Variable removed, it 
 
 ### Related Tutorials
 
-* [Execution Viewer][Execution Viewer tutorial]
+* [Settings Editor][Settings Editor tutorial]
 
 [Variables Viewer]: {{< ref "#variables-viewer" >}}
 [Variables Details Viewer]: {{< ref "#variables-details-viewer" >}}
 
-[Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
+[Flow Input Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
-[Execution Viewer tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.ExecutionViewer" >}}
+[Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
+[Settings Editor tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.SettingsEditor" >}}
 [Variable Scopes]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid" >}}
 [What is a Flow?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
 [What is a Variable?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
