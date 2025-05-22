@@ -45,7 +45,7 @@ To the bottom left of each workspace are a set of 4 overlaid zoom controls:
 
 At the top of each workspace, a workspace Toolbar displays the workspace name and a {{< image src="/images/Flow Editor - Close Flow.png" >}} icon to close that workspace.
 
-When a new workspace is created, it is initially given the default name of `Untitled Workspace`. This should be changed for a meaningful name, which will be displayed in the [breadcrumb trail][] in the [Navigation Bar][].
+When a new workspace is created, it is initially given the default name of `Untitled Workspace`. This should be changed to a meaningful name, which will be displayed in the [breadcrumb trail][] in the [Navigation Bar][].
 
 ## Actions
 
