@@ -118,6 +118,7 @@ See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step 
 ### Known Limitations
 
 * The Expression Editor does not support the creation of undeclared variables using the Add Variables feature.
+* Although it is possible to attempt to change the input data type for the Expression and Variable Editors, the data type of the C# expression entered into the Expression Editor or the Variable specified in the Variable Editor will define the actual data type.
 
 ## See Also
 
