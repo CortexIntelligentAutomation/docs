@@ -1,7 +1,7 @@
 ---
 title: "Navigation Bar"
 linkTitle: "Navigation Bar"
-description: "Navigate between open flows in the Flow Editor."
+description: "Navigate between open flows and workspaces."
 weight: 10
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "Exceptions Viewer"
 linkTitle: "Exceptions Viewer"
-description: "View details of any exceptions during flow debugging."
-weight: 50
+description: "View details of any exceptions that occur when debugging a flow."
+weight: 40
 ---
 
 # {{% param title %}}

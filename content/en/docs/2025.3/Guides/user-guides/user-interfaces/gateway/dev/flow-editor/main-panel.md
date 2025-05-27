@@ -1,7 +1,7 @@
 ---
 title: "Main Panel"
 linkTitle: "Main Panel"
-description: "Develop, test and debug flows in the Flow Editor."
+description: "View, edit and debug flows."
 weight: 30
 ---
 

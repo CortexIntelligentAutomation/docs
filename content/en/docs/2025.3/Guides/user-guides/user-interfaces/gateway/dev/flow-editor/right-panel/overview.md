@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "Summary and Anatomy of the Right Panel."
+description: "Summary and anatomy of the Right Panel."
 weight: 10
 ---
 
@@ -9,7 +9,7 @@ weight: 10
 
 ## Summary
 
-The Right Panel consists of multiple tabs to allow the setting of values of [input variables][Flow Input Variable], viewing [block properties][What is a Block Property?] and the values of [variables][What is a Variable?] used when debugging.
+The Right Panel consists of multiple tabs to allow viewing and editing of [block properties][What is a Block Property?], as well as viewing [variable][What is a Variable?] values, details of any [exceptions][What is an Exception?], and setting [input variables][Flow Input Variable] used when debugging a [flow][What is a Flow?].
 
 ## Anatomy
 
@@ -17,14 +17,14 @@ The Right Panel consists of multiple tabs to allow the setting of values of [inp
 
 * In `View`, `Edit` or `Debug Edit` mode, the following tabs are available:
 
-  * Properties (default) - displays the [Property Editor][] showing the [properties][What is a Block Property?] of the currently selected [block][What is a Block?].
-  * Settings - displays the [Settings Editor][] to set the values of the [input variables][Flow Input Variable] used when debugging the [flow][What is a Flow?].
+  * Properties (default) - displays the [Property Editor][] showing the properties of the currently selected [block][What is a Block?].
+  * Settings - displays the [Settings Editor][] to set the values of the input variables used when debugging the flow.
 
 * In `Debug` mode, the following tabs are available:
 
-  * Variables (default) - displays the [Execution Viewer][] showing the values of the [variables][What is a Variable?] when debugging the [flow][What is a Flow?].
-  * Exceptions - displays the [Exceptions Viewer][] showing details of any [exceptions][What is an Exception?] when debugging the [flow][What is a Flow?].
-  * Settings - displays the [Settings Editor][] to set the values of the [input variables][Flow Input Variable] used when debugging the [flow][What is a Flow?].
+  * Variables (default) - displays the [Execution Viewer][] showing the values of the [variables][What is a Variable?] when debugging the flow.
+  * Exceptions - displays the [Exceptions Viewer][] showing details of any exceptions when debugging the flow.
+  * Settings - displays the [Settings Editor][] to set the values of the input variables used when debugging the flow.
 
 ## See Also
 

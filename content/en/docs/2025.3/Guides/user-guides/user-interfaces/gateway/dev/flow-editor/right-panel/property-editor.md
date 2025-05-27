@@ -1,7 +1,7 @@
 ---
 title: "Property Editor"
 linkTitle: "Property Editor"
-description: "View the properties of a block selected in the Main Panel."
+description: "View and edit the properties of a selected block."
 weight: 20
 ---
 
@@ -9,13 +9,13 @@ weight: 20
 
 ## Summary
 
-The Property Editor displays the [properties][What is a Block Property?] of the currently selected [block][What is a Block?].
+The Property Editor allows viewing and editing of the [properties][What is a Block Property?] for the currently selected [block][What is a Block?].
 
 ## Anatomy
 
 {{< figure src="/images/Flow Editor - Property Editor.png" title="Property Editor" >}}
 
-The Property Editor is automatically opened when a [block][What is a Block?] on the [Workspace][What is a Workspace?] is selected; however, it may be manually opened, or closed, any time by clicking the Open/Close handle or resized by dragging the handle left or right.
+The Property Editor is automatically opened when a [block][What is a Block?] on the [workspace][What is a Workspace?] is selected; however, it may be manually opened, or closed, any time by clicking the Open/Close handle or resized by dragging the handle left or right.
 
 Every block has one or more properties, which can be one of the following types:
 

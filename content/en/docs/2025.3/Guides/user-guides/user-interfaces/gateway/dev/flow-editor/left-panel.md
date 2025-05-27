@@ -1,7 +1,7 @@
 ---
 title: "Left Panel"
 linkTitle: "Left Panel"
-description: "Develop flows using the Palettes."
+description: "Browse, search and use available blocks."
 weight: 20
 ---
 
@@ -9,13 +9,11 @@ weight: 20
 
 ## Summary
 
-The Left Panel shows the Palettes, which is automatically opened when working in Edit or Debug Edit modes.
+The Left Panel shows the Palettes containing [blocks][What is a Block?] that can be used to construct a [flow][What is a Flow?] and is automatically opened when working in Edit or Debug Edit modes.
 
 ## Anatomy
 
 {{< figure src="/images/Flow Editor - Left Panel.png" title="Left Panel" >}}
-
-The Left Panel shows the Palettes containing [blocks][What is a Block?] that can be used to construct a [flow][What is a Flow?].
 
 The Palettes group blocks with similar themes, and many of the blocks in a palette look similar but perform slightly different functions; the actual function that a block performs is shown in text, next to the block icon.
 

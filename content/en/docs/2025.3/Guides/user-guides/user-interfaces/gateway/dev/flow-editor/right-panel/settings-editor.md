@@ -1,8 +1,8 @@
 ---
 title: "Settings Editor"
 linkTitle: "Settings Editor"
-description: "View the values of input variables."
-weight: 40
+description: "Set the values of input variables used when debugging a flow."
+weight: 50
 ---
 
 # {{% param title %}}
