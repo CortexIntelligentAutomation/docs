@@ -26,6 +26,8 @@ Every block has one or more properties, which can be one of the following types:
 
 Each property type, apart from the free format literal text, uses one or more property editors. If a property can be configured by using more than one editor type, clicking on the editor symbol will cycle though the alternative editor types; if only one editor type is available the editor symbol will be greyed out.
 
+To the right of the property name, the ellipsis enables the developer to change the data type that this input property accepts.
+
 ### Property Types
 
 #### Free Format Literal Text
@@ -82,6 +84,12 @@ Click on the icon to the left of the Property name to cycle through the availabl
 {{% alert title="Note" %}}Not all properties allow use of all three Property Editors.{{% /alert %}}
 
 See the [Property Editor][Property Editor tutorial] tutorial for a step-by-step guide.
+
+### Change Property Data Type
+
+Click  the {{< image src="/images/Flow Editor - Change Data Type.png" >}} icon to the right of the property name to change the input property data type; the property name will change to display an editable field containing the current data type set for this property. Edit or delete the existing data type to reveal a drop-down menu of all possible data types allowable for this property; select the desired data type.
+
+{{% alert title="Note" %}}Not all input properties allow their data types to be changed.{{% /alert %}}
 
 ### Show/Hide Advanced Properties
 
