@@ -15,11 +15,11 @@ The Executions Grid displays information about all the [flows][What is a Flow?] 
 
 {{< figure src="/images/Flow Editor - Executions Grid.png" title="Executions Grid" >}}
 
-The Executions Grid is automatically displayed when in Debug Mode and a flow is executing or paused from executing; however, it may be manually opened, or closed any time by clicking the Open/Close handle or resized by dragging the handle left or right..
+The Executions Grid is automatically displayed when in Debug Mode and a flow is executing or paused from executing; however, it may be manually opened, or closed any time by clicking the Open/Close handle or resized by dragging the handle up or down.
 
 Flows that are Running or Paused are shown with a green background; flows that have raised an [exception][What is an Exception?] are shown with a red background.
 
-An execution may be selected by clicking on its entry in the Executions Grid and can be controlled by a set of icons on the top right of the Executions Grid. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected execution; greyed-out action icons not applicable to the selected executions’ state.
+An execution may be selected by clicking on its row in the Executions Grid and can be controlled by a set of icons on the top right of the Executions Grid. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected execution; greyed-out action icons not applicable to the selected executions’ state.
 
 ## Actions
 

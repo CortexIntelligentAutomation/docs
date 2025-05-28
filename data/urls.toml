@@ -2848,7 +2848,12 @@
                 MainDoc = "/docs/tutorials/development/flow-editor"
                 [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/bottom-panel"
+                    AssignDefaultVariableValue = "/docs/tutorials/development/flow-editor/bottom-panel/#assign-a-default-value-to-a-variable"
                     ContinueStopExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#continue-and-stop-the-execution"
+                    CreateRenameDeleteVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#create-rename-and-delete-a-variable"
+                    DefineInputOutputVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#define-an-input-or-output-variable"
+                    MessagesGrid = "/docs/tutorials/development/flow-editor/bottom-panel/#messages-grid"
+                    ModifyVariableScope = "/docs/tutorials/development/flow-editor/bottom-panel/#modify-the-scope-of-a-variable"
                     ShowFirstLast = "/docs/tutorials/development/flow-editor/bottom-panel/#show-initial-flow-first-or-last"
                     StartTracking = "/docs/tutorials/development/flow-editor/bottom-panel/#start-tracking"
                     StepExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#step-the-execution"
