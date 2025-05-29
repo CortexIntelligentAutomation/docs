@@ -73,7 +73,7 @@ See the [Modify the Scope of a Variable][Modify the Scope of a Variable tutorial
 
 ### Sort Variables
 
-The variables displayed may be ordered by any of the columns and they may also be filtered, based on the values contained in any column. To sort by a column's values, click the column header, each click will cycle through the sort options in the following order:
+The variables displayed may be ordered by any of the columns. To sort by a column's values, click the column header, each click will cycle through the sort options in the following order:
 
 * Ascending
 * Descending

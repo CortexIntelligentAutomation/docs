@@ -984,7 +984,7 @@
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
                                 ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/exceptions-viewer"
-                                ExecutionViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
+                                VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/variables-viewer"
                                 PropertyEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/property-editor"
                                 SettingsEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/settings-editor"
 
@@ -2882,7 +2882,7 @@
                 [Cortex.Tutorials.Development.FlowEditor.RightPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
                     ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
-                    ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
+                    VariablesViewer = "/docs/tutorials/development/flow-editor/right-panel/#variables-viewer"
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
                     SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
        [Cortex.Tutorials.Operations]
