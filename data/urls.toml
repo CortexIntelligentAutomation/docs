@@ -983,10 +983,12 @@
                                 BreadcrumbTrail = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar/#breadcrumb-trail"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
-                                ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/exceptions-viewer"
-                                VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/variables-viewer"
                                 PropertyEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/property-editor"
                                 SettingsEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/settings-editor"
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
+                                    ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/exceptions-viewer"
+                                    VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer"
 
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -2882,6 +2884,7 @@
                 [Cortex.Tutorials.Development.FlowEditor.RightPanel]
                     MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
                     ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
+                    ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
                     VariablesViewer = "/docs/tutorials/development/flow-editor/right-panel/#variables-viewer"
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
                     SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"

@@ -10,11 +10,13 @@ weight: 40
 ## Property Editor
 {{< scribe title="Property_Editor" id="OT-FhbkGRLqjew0CPeDKXA" >}}
 
-## Variables Viewer
+## Execution Viewer
+
+### Variables Viewer
 
 {{< scribe title="Execution_Viewer" id="sK8g3XG0Q5qG1JOpw1MBJA" >}}
 
-## Exceptions Viewer
+### Exceptions Viewer
 
 {{< scribe title="Exceptions_Viewer" id="t0YyBLq3S-6vHawaGQ0ChQ" >}}
 
