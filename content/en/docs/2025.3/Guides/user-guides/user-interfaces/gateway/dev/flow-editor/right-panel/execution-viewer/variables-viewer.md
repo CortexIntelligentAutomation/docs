@@ -36,15 +36,15 @@ It is important to note that the Variables Viewer can only display a [JSON][] re
 
 ### View Variables in Variables List
 
-To view the variables that have been assigned a value, including a NULL value, that are currently in scope, simply select the execution of interest and click on the Variables tab on the [Right Panel][].
+To view the variables that have been assigned a value, including a NULL value, that are currently in scope, select the execution in the [Executions Grid][] and click on the Variables tab.
 
 Variables that have not been assigned a value or are out of [scope][Variable Scopes] will not be displayed.
 
 See the [Variables Viewer][Variables Viewer tutorial] tutorial for a step-by-step guide.
 
-### View the Detail of the Value in a Variable
+### View the Detail of a Variable
 
-Click on a variable in the Variables List to view the detail of a value, displayed in JSON format, contained in a variable. The detail of collection and complex data types will only the expanded in JSON form in the Variables Details Viewer if the execution is paused.
+Click on a variable in the Variables List to view the variable's name, it's data type, and value displayed in JSON format. The detail of collection and complex data types will only be expanded in JSON format in the Variable Details Viewer if the execution is paused.
 
 See the [Variables Viewer][Variables Viewer tutorial] tutorial for a step-by-step guide.
 
@@ -52,10 +52,7 @@ See the [Variables Viewer][Variables Viewer tutorial] tutorial for a step-by-ste
 
 ### Known Limitations
 
-* The Variables Details Viewer only display the JSON representation of the selected value.
-  * Dictionaries with keys of data types other than String will be displayed as a String value.
-  * The methods of objects will not be displayed.
-* The Variables Details Viewer will only show the expanded contents of collection and complex data types when the execution is paused.
+* Variables with a [Dictionary<TKey, TValue>][Dictionary Tkey] data type where TKey is not the [String][] data type will have their keys displayed as the [ToString()][ToString] value for the data type.
 
 ## See Also
 
@@ -72,11 +69,14 @@ See the [Variables Viewer][Variables Viewer tutorial] tutorial for a step-by-ste
 [Variables List]: {{< ref "#variables-list" >}}
 [Variable Details Viewer]: {{< ref "#variable-details-viewer" >}}
 
-[Right Panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.MainDoc" >}}
+[Dictionary TKey]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Execution Context]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.ExecutionContext" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[Executions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [JSON]: {{< url path="Cortex.Reference.Glossary.F-J.Json" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[ToString]: {{< url path="MSDocs.DotNet.Api.System.Object.ToString" >}}
 [Variable Scopes]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes.MainDoc" >}}
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Variables Viewer tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.RightPanel.VariablesViewer" >}}
