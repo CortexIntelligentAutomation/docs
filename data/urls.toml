@@ -959,8 +959,38 @@
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
                             Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
+                            View = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#view"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
+                                ExecutionsGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
+                                MessagesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
+                                VariablesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                ExecutionOptions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#execution-options"
+                                MainToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#main-toolbar"
+                                Workspaces = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspaces"
+                                WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar"
+                                BreadcrumbTrail = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar/#breadcrumb-trail"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
+                                PropertyEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/property-editor"
+                                SettingsEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/settings-editor"
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
+                                    ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/exceptions-viewer"
+                                    VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer"
+
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
@@ -1789,6 +1819,7 @@
                         VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
+                        Accessible = "/docs/reference/concepts/fundamentals/variables/variable-scopes/#accessing-variables-from-other-scopes"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
                         FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"
@@ -2815,7 +2846,51 @@
             [Cortex.Tutorials.Administration.VersionControl]
                 MainDoc = "/docs/tutorials/administration/version-control"
                 UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
-        [Cortex.Tutorials.Operations]
+        [Cortex.Tutorials.Development]
+            MainDoc = "/docs/tutorials/development"
+            [Cortex.Tutorials.Development.FlowEditor]
+                MainDoc = "/docs/tutorials/development/flow-editor"
+                [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/bottom-panel"
+                    AssignDefaultVariableValue = "/docs/tutorials/development/flow-editor/bottom-panel/#assign-a-default-value-to-a-variable"
+                    ContinueStopExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#continue-and-stop-the-execution"
+                    CreateRenameDeleteVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#create-rename-and-delete-a-variable"
+                    DefineInputOutputVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#define-an-input-or-output-variable"
+                    MessagesGrid = "/docs/tutorials/development/flow-editor/bottom-panel/#messages-grid"
+                    ModifyVariableScope = "/docs/tutorials/development/flow-editor/bottom-panel/#modify-the-scope-of-a-variable"
+                    ShowFirstLast = "/docs/tutorials/development/flow-editor/bottom-panel/#show-initial-flow-first-or-last"
+                    StartTracking = "/docs/tutorials/development/flow-editor/bottom-panel/#start-tracking"
+                    StepExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#step-the-execution"
+                    StopTrackingGoTo = "/docs/tutorials/development/flow-editor/bottom-panel/#stop-tracking-and-go-to"
+                [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
+                    PlaceBlocks = "/docs/tutorials/development/flow-editor/left-panel/#placing-a-block-from-the-palette-onto-a-workspace"
+                    SearchBlocks = "/docs/tutorials/development/flow-editor/left-panel/#searching-the-palette-for-a-block"
+                    ViewBlocks = "/docs/tutorials/development/flow-editor/left-panel/#view-blocks-in-the-palette"
+                [Cortex.Tutorials.Development.FlowEditor.MainPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/main-panel"
+                    CompareMaster = "/docs/tutorials/development/flow-editor/main-panel/#compare-flow-with-master-version"
+                    DeleteFlow = "/docs/tutorials/development/flow-editor/main-panel/#delete-flow"
+                    EditFlow = "/docs/tutorials/development/flow-editor/main-panel/#edit-flow-and-continue-debugging"
+                    GetMaster = "/docs/tutorials/development/flow-editor/main-panel/#get-master-version-of-flow"
+                    RemoveBreakpoints = "/docs/tutorials/development/flow-editor/main-panel/#remove-all-breakpoints"
+                    SaveCommit = "/docs/tutorials/development/flow-editor/main-panel/#save-and-commit-flow"
+                    StartExecution = "/docs/tutorials/development/flow-editor/main-panel/#start-an-execution"
+                    UndoRedo = "/docs/tutorials/development/flow-editor/main-panel/#undo-and-redo-changes"
+                [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
+                    MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
+                    SequentialNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#sequential-navigation-between-open-flows"
+                    QuickNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#quick-navigation-between-open-flows"
+                    AccessHelp = "/docs/tutorials/development/flow-editor/navigation-bar/#accessing-help"
+                    CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
+                [Cortex.Tutorials.Development.FlowEditor.RightPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
+                    ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
+                    ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
+                    VariablesViewer = "/docs/tutorials/development/flow-editor/right-panel/#variables-viewer"
+                    PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
+                    SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
+       [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/Operations"
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/Operations/overview"
