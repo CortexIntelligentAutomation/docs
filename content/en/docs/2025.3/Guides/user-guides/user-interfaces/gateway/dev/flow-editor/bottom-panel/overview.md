@@ -1,7 +1,7 @@
 ---
 title: "Overview"
 linkTitle: "Overview"
-description: "Summary and Anatomy of the Bottom Panel"
+description: "Summary and anatomy of the Bottom Panel."
 weight: 10
 ---
 
@@ -9,7 +9,7 @@ weight: 10
 
 ## Summary
 
-The Bottom Panel allows the management of [variables][What is a Variable?], displays the current [executions][What is an Execution?] being debugged and any [issues][What is a Message?] preventing the [flow][What is a Flow?] from being debugged.
+The Bottom Panel displays the current [executions][What is an Execution?] being debugged, any [issues][What is a Message?] preventing the [flow][What is a Flow?] from being debugged and also allows the management of [variables][What is a Variable?].
 
 ## Anatomy
 
@@ -17,9 +17,9 @@ The Bottom Panel allows the management of [variables][What is a Variable?], disp
 
 The 3 tabs that form the Bottom Panel are:
 
-* Executions (default) - displays the [Executions Grid][] listing current [executions][What is an Execution?] being debugged by the user.
-* Messages - displays the [Messages Grid][] listing [issues][What is a Message?] preventing the flow from being debugged.
-* Variables - displays the [Variables Grid][] enabling the management of [variables][What is a Variable?].
+* Executions (default) - displays the [Executions Grid][] listing current executions being debugged by the developer.
+* Messages - displays the [Messages Grid][] listing issues preventing the flow from being debugged.
+* Variables - displays the [Variables Grid][] enabling the management of variables.
 
 ## See Also
 

@@ -975,6 +975,7 @@
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                ExecutionOptions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#execution-options"
                                 MainToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#main-toolbar"
                                 Workspaces = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspaces"
                                 WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
@@ -1818,6 +1819,7 @@
                         VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
+                        Accessible = "/docs/reference/concepts/fundamentals/variables/variable-scopes/#accessing-variables-from-other-scopes"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
                         FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"

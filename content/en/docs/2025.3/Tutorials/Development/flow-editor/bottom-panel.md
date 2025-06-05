@@ -29,6 +29,10 @@ weight: 50
 
 {{< scribe title="Show_Initial_Flow_FirstLast" id="__iaRBIgSjePGD0-0Cl1ow" >}}
 
+## Messages Grid
+
+{{< scribe title="How_to_Navigate_to_Property_with_Error" id="7zwoOTsUTZW8-QTmucb8cA" >}}
+
 ## Variables Grid
 
 ### Create, Rename and Delete a Variable
@@ -45,7 +49,3 @@ weight: 50
 ### Modify the Scope of a Variable
 
 {{< scribe title="How_to_Modify_the_Scope_of_a_Variable" id="uzt2aqj0SOSCjIqwWWAdAA" >}}
-
-## Messages Grid
-
-{{< scribe title="How_to_Navigate_to_Property_with_Error" id="7zwoOTsUTZW8-QTmucb8cA" >}}

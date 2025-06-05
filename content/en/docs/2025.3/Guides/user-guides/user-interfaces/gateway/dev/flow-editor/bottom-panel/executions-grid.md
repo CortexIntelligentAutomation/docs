@@ -1,7 +1,7 @@
 ---
 title: "Executions Grid"
 linkTitle: "Executions Grid"
-description: "View the executions that are being debugged"
+description: "View executions being debugged."
 weight: 20
 ---
 
@@ -9,39 +9,39 @@ weight: 20
 
 ## Summary
 
-The Executions Grid displays information about all the [flows][What is a Flow?] that are currently [executing][What is an Execution?], paused, or errored in the Flow Editor.
+The Executions Grid displays information about all the [flows][What is a Flow?] that are currently being debugged by the developer.
 
 ## Anatomy
 
 {{< figure src="/images/Flow Editor - Executions Grid.png" title="Executions Grid" >}}
 
-The Executions Grid is automatically displayed when in Debug Mode and a flow is executing or paused from executing; however, it may be manually opened, or closed any time by clicking the Open/Close handle or resized by dragging the handle up or down.
+The Executions Grid is automatically displayed when in `Debug` mode and a flow is `Running` or `Paused`; however, it may be manually opened, or closed any time by clicking the Open/Close handle or resized by dragging the handle up or down.
 
-Flows that are Running or Paused are shown with a green background; flows that have raised an [exception][What is an Exception?] are shown with a red background.
+Flows that are `Running` or `Paused` are shown with a green background; flows that have raised an [exception][What is an Exception?] are shown with a red background.
 
-An execution may be selected by clicking on its row in the Executions Grid and can be controlled by a set of icons on the top right of the Executions Grid. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected execution; greyed-out action icons not applicable to the selected executions’ state.
+An [execution][What is an Execution?] may be selected by clicking on its row and can be controlled by action icons at the top right of the Executions Grid. Multiple executions can be selected using `Ctrl + Click` or `Shift + Click`. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected executions; greyed-out action icons are not applicable to the selected executions’ state.
 
 ## Actions
 
 ### Continue the Execution
 
-Clicking the {{< image src="/images/Flow Editor - Continue Execution.png" >}} icon causes the selected execution to continue until the flow ends, a breakpoint is reached, or an exception has occurred causing the flow to pause. This action is only available for paused executions.
+Clicking the {{< image src="/images/Flow Editor - Continue Execution.png" >}} icon causes the selected executions to continue until the flow ends, a breakpoint is reached, or [`Break on exception`][Execution Options] is enabled and an exception has occurred causing the flow to pause. This action is only available for paused executions.
 
 See the [Continue and Stop the Execution][Continue and Stop the Execution tutorial] tutorial for a step-by-step guide.
 
 ### Pause the Execution
 
-Clicking the {{< image src="/images/Flow Editor - Pause Execution.png" >}} icon pauses the selected execution. This action is only available for running executions.
+Clicking the {{< image src="/images/Flow Editor - Pause Execution.png" >}} icon pauses the selected executions. This action is only available for running executions.
 
 ### Step the Execution
 
-Clicking the {{< image src="/images/Flow Editor - Step Execution.png" >}} icon causes the selected execution to execute the next [block][What is a Block?] and pause again. This action is only available for paused executions.
+Clicking the {{< image src="/images/Flow Editor - Step Execution.png" >}} icon causes the selected executions to execute the next [block][What is a Block?] and pause again. This action is only available for paused executions.
 
 See the [Step the Execution][Step the Execution tutorial] tutorial for a step-by-step guide.
 
 ### Stop the Execution
 
-Clicking the {{< image src="/images/Flow Editor - Stop Execution.png" >}} icon terminates the execution of the selected execution, and after a few seconds, removes them from Executions Grid. This action is available for all executions, regardless of their state.
+Clicking the {{< image src="/images/Flow Editor - Stop Execution.png" >}} icon stops the the selected executions, and after a few seconds, removes them from Executions Grid. This action is available for all executions, regardless of their state.
 
 See the [Continue and Stop the Execution][Continue and Stop the Execution tutorial] tutorial for a step-by-step guide.
 
@@ -51,15 +51,17 @@ Clicking the {{< image src="/images/Flow Editor - Go To.png" >}} icon causes the
 
 See the [Stop Tracking and Go To][Stop Tracking and Go To tutorial] tutorial for a step-by-step guide.
 
-### Start tracking
+### Start Tracking
 
-Clicking the {{< image src="/images/Flow Editor - Start Tracking.png" >}} icon causes the Flow Editor to follow the flow execution, opening any necessary workspaces. The execution is not dynamically tracked if the Show execution on workspace Execution option is not selected, or a second execution is started concurrently in the Flow Editor. This action is available for any execution not being tracked.
+Clicking the {{< image src="/images/Flow Editor - Start Tracking.png" >}} icon causes the Flow Editor to follow the selected execution, opening any necessary workspaces. This action is available for any execution not being tracked.
+
+Note: When an execution is started, if no other executions are being tracked, it will be automatically tracked if [`Show execution on workspace`][Execution Options] is enabled.
 
 See the [Start Tracking][Start Tracking tutorial] tutorial for a step-by-step guide.
 
-### Stop tracking
+### Stop Tracking
 
-Clicking the {{< image src="/images/Flow Editor - Stop Tracking.png" >}} icon causes the tracking of the execution to stop, and the Flow Editor will not maintain focus on the execution. This action is available for any execution being tracked.
+Clicking the {{< image src="/images/Flow Editor - Stop Tracking.png" >}} icon causes the tracking of the execution to stop, and the Flow Editor will not follow the selected execution. This action is available for any execution being tracked.
 
 See the [Stop Tracking and Go To][Stop Tracking and Go To tutorial] tutorial for a step-by-step guide.
 
@@ -101,6 +103,7 @@ None
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
+[Execution Options]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.ExecutionOptions" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [What is a Block?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
