@@ -16,9 +16,9 @@ When the [flow execution][execution] exits a workspace, any local-scope variable
 
 ## Accessing Variables from Other Scopes
 
-For example, the table below shows a hierarchy of workspaces and which variables are available to each workspace due to their scope:
+For example, the table below shows a hierarchy of workspaces and which variables are accessible to each workspace due to their scope:
 
-| Workspace Name | Parent Workspace | Defined Variables | Available Variables |
+| Workspace Name | Parent Workspace | Defined Variables | Accessible Variables |
 |----------------|------------------|-------------------|---------------------|
 | Top-Level Workspace | N/A | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li></ul> |
 | ChildWorkspace1 | Top-Level Workspace | <ul><li>ChildVarA</li><li>ChildVarB</li></ul> | <ul><li>GlobalVarA</li><li>GlobalVarB</li><li>ChildVarA</li><li>ChildVarB</li></ul> |

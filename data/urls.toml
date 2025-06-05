@@ -243,6 +243,11 @@
                     ProductPortal =  "/blog/2022/10/27/2022.9/#product-portal"
     [Cortex.Faqs]
         MainDoc = "/docs/faqs/"
+        CheckClusterHealth = "/docs/faqs/check-cluster-health/"
+        [Cortex.Faqs.ImportClientCertificate]
+            MainDoc = "/docs/faqs/import-client-certificate/"
+            MultiServer = "/docs/faqs/import-client-certificate/multi-server-with-ha"
+            SingleServer = "/docs/faqs/import-client-certificate/single-server-without-ha"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -276,6 +281,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
@@ -380,6 +386,7 @@
                     ConfigureCortexGatewayInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
                     ConfigureCortexGatewayInstallationScriptNew2 = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-gateway-installation/#configure-cortex-gateway-installation-script"
+                    ConfigureDebuggerInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-web-application-server/perform-debugger-installation/#configure-installation-script"
                     ConfigureInstallationScript = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-application-and-loadbalancer-servers#configure-installation-script"
                     ConfigureInstallationScriptNew = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/installation/install-application-and-loadbalancer-servers#configure-installation-script"
                     DebuggerInstallation = "/docs/getting-started/on-premise/add-innovation-to-72/multiple-server-with-ha/install-web-application-server/perform-debugger-installation"
@@ -488,7 +495,6 @@
                                 MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/try-it-out/"
-
     [Cortex.Guides]
         MainDoc = "/docs/guides/"
         [Cortex.Guides.Studio]
@@ -662,8 +668,6 @@
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
             [Cortex.Guides.UpgradeCortex.2024.7to2024.9]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/"
-                [Cortex.Guides.UpgradeCortex.2024.7to2024.9.Advanced]
-                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
                 [Cortex.Guides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
                     TryItOut = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
@@ -679,8 +683,6 @@
                     UpgradeWebApplicationServer = "/docs/guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
             [Cortex.Guides.UpgradeCortex.2024.9to2024.11]
                 MainDoc = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/"
-                [Cortex.Guides.UpgradeCortex.2024.9to2024.11.Advanced]
-                    UpgradeFlows = "/docs/guides/upgrade-cortex/advanced/upgrade-flows"
                 [Cortex.Guides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA]
                     MainDoc = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
                     Prerequisites = "/docs/guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
@@ -722,6 +724,38 @@
                     Download = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                     UpgradeDashboards = "/docs/guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                     TryItOut = "/docs/guides/upgrade-observability/dashboards/grafana/try-it-out"
+        [Cortex.Guides.DisasterRecoveryGuides]
+            MainDoc = "/docs/guides/disaster-recovery/"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA]
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Backup]
+                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/add-backup-of-encryption-key"
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/add-backup-to-application"
+                AddBackupsToWebApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server"
+                AddBackupToFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server/add-backup-to-flow-debugger"
+                AddBackupToGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/backup/web-application-server/add-backup-to-gateway"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Recovery]
+                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/recover-encryption-key-from-backup"
+                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/recover-application-from-backup"
+                RecoverWebApplicationServerFromBackups = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server"
+                RecoverFlowDebuggerFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server/recover-flow-debugger-from-backup"
+                RecoverGatewayFromBackup = "/docs/guides/disaster-recovery/multiple-server-with-ha/recovery/web-application-server/recover-gateway-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.MultipleServerWithHA.Remove]
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/remove-backup-from-application"
+                RemoveBackupsFromWebApplicationServer = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server"
+                RemoveBackupFromFlowDebugger = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-flow-debugger"
+                RemoveBackupFromGateway = "/docs/guides/disaster-recovery/multiple-server-with-ha/remove/web-application-server/remove-backup-from-gateway"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA]
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Backup]
+                AddBackupOfEncryptionKey = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-of-encryption-key"
+                AddBackupToApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-to-application"
+                AddBackupToWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/backup/add-backup-to-web-application"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Recovery]
+                RecoveryEncryptionKeyFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-encryption-key-from-backup"
+                RecoverApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-application-from-backup"
+                RecoverWebApplicationServerFromBackup = "/docs/guides/disaster-recovery/single-server-without-ha/recovery/recover-web-application-from-backup"
+            [Cortex.Guides.DisasterRecoveryGuides.SingleServerWithoutHA.Remove]
+                RemoveBackupFromApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/remove/remove-backup-from-application"
+                RemoveBackupFromWebApplicationServer = "/docs/guides/disaster-recovery/single-server-without-ha/remove/remove-backup-from-web-application"
         [Cortex.Guides.UpgradeGuides]
             MainDoc = "/docs/guides/upgrade-guides/"
             [Cortex.Guides.UpgradeGuides.UpgradeCortex]
@@ -761,8 +795,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.3-to-2024.5/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/multiple-server-with-ha/try-it-out"
@@ -777,8 +809,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.5-to-2024.7/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/multiple-server-with-ha/try-it-out"
@@ -794,8 +824,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.7-to-2024.9/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/"
                         Prerequisites = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/multiple-server-with-ha/prerequisites"
@@ -814,8 +842,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9-to-2024.11/single-server-without-ha/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/multiple-server-with-ha/pre-upgrade"
@@ -834,8 +860,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2024.11-to-2025.1/single-server-without-ha/upgrade/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/multiple-server-with-ha/pre-upgrade"
@@ -857,8 +881,6 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/single-server-without-ha/upgrade/upgrade-web-application-server"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3]
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.Advanced]
-                        UpgradeFlows = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/upgrade-flows"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/multiple-server-with-ha/"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2024.9.25161-to-2025.3/multiple-server-with-ha/pre-upgrade"
@@ -934,8 +956,42 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
+                            Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
+                            View = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#view"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
+                                ExecutionsGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
+                                MessagesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
+                                VariablesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                ExecutionOptions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#execution-options"
+                                MainToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#main-toolbar"
+                                Workspaces = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspaces"
+                                WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar"
+                                BreadcrumbTrail = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/navigation-bar/#breadcrumb-trail"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel"
+                                PropertyEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/property-editor"
+                                SettingsEditor = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/settings-editor"
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
+                                    ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/exceptions-viewer"
+                                    VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer"
 
-[Cortex.Reference]
+    [Cortex.Reference]
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
@@ -1763,6 +1819,7 @@
                         VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
+                        Accessible = "/docs/reference/concepts/fundamentals/variables/variable-scopes/#accessing-variables-from-other-scopes"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/"
                         FlowInputVariable = "/docs/reference/concepts/fundamentals/variables/what-is-a-variable/#flow-input-variable"
@@ -2728,6 +2785,7 @@
                 Request = "/docs/reference/glossary/p-t/#request"
                 SDK = "/docs/reference/glossary/p-t/#sdk"
                 ServiceFabric = "/docs/reference/glossary/p-t/#service-fabric"
+                ServiceFabricExplorer = "/docs/reference/glossary/p-t/#service-fabric-explorer"
                 Single = "/docs/reference/glossary/p-t/#single"
                 SASL = "/docs/reference/glossary/p-t/#sasl"
                 SMTP = "/docs/reference/glossary/p-t/#smtp"
@@ -2756,20 +2814,87 @@
         MainDoc = "/docs/tutorials/"
         [Cortex.Tutorials.Administration]
             MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.LicenseConsumption]
+                MainDoc = "/docs/tutorials/administration/license-consumption"
+                CheckLicenseConsumption = "/docs/tutorials/administration/license-consumption/#check-license-consumption"
             [Cortex.Tutorials.Administration.PackageManagement]
                 MainDoc = "/docs/tutorials/administration/package-management"
-                    Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
-                    CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
-                    CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
-                    ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
-                    ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
-                    PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
-                    RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
-                    Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
-                    SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
-                    SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
-                    Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
-                    UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+                Authorisation = "/docs/tutorials/administration/package-management/#set-authorisation-on-a-package-version"
+                CreateNewPackageVersion = "/docs/tutorials/administration/package-management/#create-a-new-package-version"
+                CreatePackage = "/docs/tutorials/administration/package-management/#create-a-package"
+                ExportPackage = "/docs/tutorials/administration/package-management/#export-a-package-version"
+                ImportPackage = "/docs/tutorials/administration/package-management/#import-a-package"
+                PublishPackage = "/docs/tutorials/administration/package-management/#publish-a-package-version"
+                RunningExecutions = "/docs/tutorials/administration/package-management/#view-and-abort-running-flow-executions"
+                Schedules = "/docs/tutorials/administration/package-management/#create-a-schedule-on-a-package-version"
+                SetDefaultPackage = "/docs/tutorials/administration/package-management/#set-the-default-package"
+                SetDefaultPackageVersion = "/docs/tutorials/administration/package-management/#set-the-default-package-version"
+                Triggers = "/docs/tutorials/administration/package-management/#create-a-trigger-on-a-package-version"
+                UnpublishPackage = "/docs/tutorials/administration/package-management/#unpublish-a-package-version"
+            [Cortex.Tutorials.Administration.StudioAuthorisation]
+                MainDoc = "/docs/tutorials/administration/studio-authorisation"
+                ManageFlowAccess = "/docs/tutorials/administration/studio-authorisation/#manage-flow-access"
+            [Cortex.Tutorials.Administration.StudioImport]
+                MainDoc = "/docs/tutorials/administration/studio-import"
+                ImportIndividualFlows = "/docs/tutorials/administration/studio-import/#import-individual-flows"
+            [Cortex.Tutorials.Administration.StudioExport]
+                MainDoc = "/docs/tutorials/administration/studio-export"
+                ExportIndividualFlows = "/docs/tutorials/administration/studio-export/#export-individual-flows"
+            [Cortex.Tutorials.Administration.StudioHierarchy]
+                MainDoc = "/docs/tutorials/administration/studio-hierarchy"
+                ManageFlowHierarchy = "/docs/tutorials/administration/studio-hierarchy/#manage-flow-hierarchy"
+            [Cortex.Tutorials.Administration.VersionControl]
+                MainDoc = "/docs/tutorials/administration/version-control"
+                UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
+        [Cortex.Tutorials.Development]
+            MainDoc = "/docs/tutorials/development"
+            [Cortex.Tutorials.Development.FlowEditor]
+                MainDoc = "/docs/tutorials/development/flow-editor"
+                [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/bottom-panel"
+                    AssignDefaultVariableValue = "/docs/tutorials/development/flow-editor/bottom-panel/#assign-a-default-value-to-a-variable"
+                    ContinueStopExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#continue-and-stop-the-execution"
+                    CreateRenameDeleteVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#create-rename-and-delete-a-variable"
+                    DefineInputOutputVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#define-an-input-or-output-variable"
+                    MessagesGrid = "/docs/tutorials/development/flow-editor/bottom-panel/#messages-grid"
+                    ModifyVariableScope = "/docs/tutorials/development/flow-editor/bottom-panel/#modify-the-scope-of-a-variable"
+                    ShowFirstLast = "/docs/tutorials/development/flow-editor/bottom-panel/#show-initial-flow-first-or-last"
+                    StartTracking = "/docs/tutorials/development/flow-editor/bottom-panel/#start-tracking"
+                    StepExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#step-the-execution"
+                    StopTrackingGoTo = "/docs/tutorials/development/flow-editor/bottom-panel/#stop-tracking-and-go-to"
+                [Cortex.Tutorials.Development.FlowEditor.LeftPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/left-panel"
+                    PlaceBlocks = "/docs/tutorials/development/flow-editor/left-panel/#placing-a-block-from-the-palette-onto-a-workspace"
+                    SearchBlocks = "/docs/tutorials/development/flow-editor/left-panel/#searching-the-palette-for-a-block"
+                    ViewBlocks = "/docs/tutorials/development/flow-editor/left-panel/#view-blocks-in-the-palette"
+                [Cortex.Tutorials.Development.FlowEditor.MainPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/main-panel"
+                    CompareMaster = "/docs/tutorials/development/flow-editor/main-panel/#compare-flow-with-master-version"
+                    DeleteFlow = "/docs/tutorials/development/flow-editor/main-panel/#delete-flow"
+                    EditFlow = "/docs/tutorials/development/flow-editor/main-panel/#edit-flow-and-continue-debugging"
+                    GetMaster = "/docs/tutorials/development/flow-editor/main-panel/#get-master-version-of-flow"
+                    RemoveBreakpoints = "/docs/tutorials/development/flow-editor/main-panel/#remove-all-breakpoints"
+                    SaveCommit = "/docs/tutorials/development/flow-editor/main-panel/#save-and-commit-flow"
+                    StartExecution = "/docs/tutorials/development/flow-editor/main-panel/#start-an-execution"
+                    UndoRedo = "/docs/tutorials/development/flow-editor/main-panel/#undo-and-redo-changes"
+                [Cortex.Tutorials.Development.FlowEditor.NavigationBar]
+                    MainDoc = "/docs/tutorials/development/flow-editor/navigation-bar"
+                    SequentialNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#sequential-navigation-between-open-flows"
+                    QuickNavigation = "/docs/tutorials/development/flow-editor/navigation-bar/#quick-navigation-between-open-flows"
+                    AccessHelp = "/docs/tutorials/development/flow-editor/navigation-bar/#accessing-help"
+                    CloseFlow = "/docs/tutorials/development/flow-editor/navigation-bar/#close-flow"
+                [Cortex.Tutorials.Development.FlowEditor.RightPanel]
+                    MainDoc = "/docs/tutorials/development/flow-editor/right-panel"
+                    ExceptionsViewer = "/docs/tutorials/development/flow-editor/right-panel/#exceptions-viewer"
+                    ExecutionViewer = "/docs/tutorials/development/flow-editor/right-panel/#execution-viewer"
+                    VariablesViewer = "/docs/tutorials/development/flow-editor/right-panel/#variables-viewer"
+                    PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
+                    SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
+       [Cortex.Tutorials.Operations]
+            MainDoc = "/docs/tutorials/Operations"
+            [Cortex.Tutorials.Operations.Overview]
+                MainDoc = "/docs/tutorials/Operations/overview"
+                UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
 
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
