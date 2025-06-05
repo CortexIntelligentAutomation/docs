@@ -2,7 +2,7 @@
 1. Choose the tab below that matches the configuration for this installation, then update the script to match, changing the parameters according to the details given below:
 
     {{< tabpane lang="powershell" >}}
-        {{< tab header="CA Certs" >}}
+        {{< tab header="CA Certificates" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
@@ -23,7 +23,7 @@
     -AcceptEULA:$AcceptEula `
     *>&1 | Tee-Object -FilePath "cortex-app-install-log.txt"
         {{< /tab >}}
-        {{< tab header="Self-Signed Certs" >}}
+        {{< tab header="Self-Signed Certificates" >}}
 .\Cortex.Install.ps1 -ConfigFileName Cortex.Innovation.Install.Config.json `
     -AppServicesPath "C:\Install\Cortex Innovation {{< version >}} - App Services.zip" `
     -BlockPackagesPath "C:\Install\Cortex Innovation {{< version >}} - Block Packages.zip" `
