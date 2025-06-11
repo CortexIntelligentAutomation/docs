@@ -43,6 +43,5 @@ On the Web Application Server:
 
 1. [Upgrade Gateway][]
 
-[Check Application Services]: {{< ref "#check-application-services">}}
 [Upgrade Application and Load Balancer Servers]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
 [Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeGateway" >}}

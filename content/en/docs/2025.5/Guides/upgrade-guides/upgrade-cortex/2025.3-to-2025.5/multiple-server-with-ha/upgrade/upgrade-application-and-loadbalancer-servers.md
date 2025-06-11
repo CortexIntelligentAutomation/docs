@@ -81,6 +81,5 @@ On each of the the Application Servers:
 
 1. [Upgrade Web Application Server][]
 
-[Check Application Services]: {{< ref "#check-application-services">}}
 [PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.PreUpgrade" >}}
 [Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
