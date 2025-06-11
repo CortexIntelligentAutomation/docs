@@ -11,7 +11,7 @@ This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensur
 
 ## Perform Upgrade
 
-No upgrade required
+{{< section "/upgrade/2025.5/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
 
 ## Next Steps?
 

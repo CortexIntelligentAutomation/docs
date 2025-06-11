@@ -17,32 +17,23 @@ This guide describes how to upgrade the Flow Debugger on the Web Application Ser
 
 {{< section "/upgrade/2025.5/upgrade-application-server/single-server/run-upgrade-script.md">}}
 
-## Check Application Services
+## Configure {{% ctx %}} Code Analyser
 
-{{< section "/upgrade/upgrade-application-server/single-server/check-application-services.md">}}
+{{< section "/upgrade/upgrade-application-server/configure-code-analyser.md" >}}
 
-## Disable Whitelist Analyser
+### Update Code Analyser Allowed List
 
-   {{< alert type="note" title="Note" >}} This release introduces a Whitelist Analyser to prevent unauthorised execution of namespaces. This step only needs to happen if the Whitelist Analyser should be disabled and has also been disabled on on the Application Servers.{{< /alert >}}
+{{< section "/upgrade/upgrade-application-server/update-code-analyser.md" >}}
+
+### Disable Code Analyser
 
 On the Web Application Server:
 
-1. Open a File Explorer.
-1. Navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\Applications\Cortex.Innovation.Execution_App1\ExecutionPkg.Code.*` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the Web Application Server configured during installation.
-    {{% alert title="Note" %}}
-To check the values to be used open the `Cortex.Upgrade.ApplicationConfig.json` file located in `%ProgramData%\Cortex\Upgrade`.
-    {{% /alert %}}
-1. Open the `appsettings.json` file in a text editor.
-1. Locate the `"FeatureFlags"` line located under `"ExecutionEngine"` and set the value to `["f4fd94c0-a921-4b34-b82c-378b05e91555"]`.
-1. Save and close the file.
-1. In the File Explorer, navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\ImageCache\Store\Cortex.Innovation.Execution\ExecutionPkg.Code.*` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the Web Application Server specified in step 2.
-1. Repeat steps 3 - 5.
-1. Open a web browser.
-1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the Web Application Server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration of the original installation.
-1. Expand `Cluster` then `Nodes`.
-1. Restart the node by clicking on the drop down menu next to the node name and select `Restart`. Confirm node restart by following the on-screen instructions.
+{{< section "/upgrade/2025.5/upgrade-application-server/single-server/disable-code-analyser-debugger.md" >}}
 
-Once the node has been updated and restarted, it will be necessary to [re-check the Application Services][Check Application Services] to ensure that the node has re-started correctly.
+## Check Application Services
+
+{{< section "/upgrade/upgrade-application-server/single-server/check-application-services.md">}}
 
 ## Preserve installation files
 

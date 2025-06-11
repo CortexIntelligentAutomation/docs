@@ -9,10 +9,6 @@ weight: 30
 
 This guide describes how to upgrade the Application Servers and Load Balancer Server from 2025.3 to 2025.5. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
-{{% alert title="Warning" color="warning" %}}
-Due to breaking changes required for upgrading RabbitMQ from version 3 to version 4 the Application Servers need to be reinstalled rather than upgraded. As a result packages will need to be republished and Configuration Portal data will need to be backed up and restored. Other data stored in Reliable Collections (e.g., data storage collections and semaphores) will be lost.
-{{% /alert %}}
-
 ## Configure Upgrade Script
 
 1. In the `Cortex Innovation 2025.5 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
@@ -59,32 +55,23 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 {{< section "/upgrade/2025.5/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
+## Configure {{% ctx %}} Code Analyser
+
+{{< section "/upgrade/upgrade-application-server/configure-code-analyser.md" >}}
+
+### Update Code Analyser Allowed List
+
+{{< section "/upgrade/upgrade-application-server/update-code-analyser.md" >}}
+
+### Disable Code Analyser
+
+On each of the the Application Servers:
+
+{{< section "/upgrade/2025.5/upgrade-application-server/multi-server/disable-code-analyser.md" >}}
+
 ## Check Application Services
 
 {{< section "/upgrade/upgrade-application-server/multi-server/check-application-services.md" >}}
-
-## Disable Whitelist Analyser
-
-   {{< alert type="note" title="Note" >}} This release introduces a Whitelist Analyser to prevent unauthorised execution of namespaces. This step only needs to happen if the Whitelist Analyser should be disabled.{{< /alert >}}
-
-On each of the Application Servers:
-
-1. Open a File Explorer.
-1. Navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\Applications\Cortex.Innovation.Execution_App1\ExecutionPkg.Code.*` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the Application Server configured during installation.
-    {{% alert title="Note" %}}
-To check the values to be used open the `Cortex.Upgrade.ApplicationConfig.json` file located in `%ProgramData%\Cortex\Upgrade`.
-    {{% /alert %}}
-1. Open the `appsettings.json` file in a text editor.
-1. Locate the `"FeatureFlags"` line located under `"ExecutionEngine"` and set the value to `["f4fd94c0-a921-4b34-b82c-378b05e91555"]`.
-1. Save and close the file.
-1. In the File Explorer, navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\ImageCache\Store\Cortex.Innovation.Execution\ExecutionPkg.Code.*` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the Application Server specified in step 2.
-1. Repeat steps 3 - 5.
-1. Open a web browser.
-1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of one of the application servers. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration of the original installation.
-1. Expand `Cluster` then `Nodes`.
-1. Restart the current node by clicking on the drop down menu next to the node name and select `Restart`. Confirm node restart by following the on-screen instructions.
-
-Once all nodes have been updated and restarted, it will be necessary to [re-check the Application Services][Check Application Services] to ensure that the nodes have re-started correctly.
 
 ## Preserve installation files
 
