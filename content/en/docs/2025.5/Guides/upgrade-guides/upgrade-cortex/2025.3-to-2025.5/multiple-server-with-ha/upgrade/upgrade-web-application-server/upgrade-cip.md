@@ -1,0 +1,21 @@
+---
+title: "Upgrade Interaction Portal"
+linkTitle: "Upgrade Interaction Portal"
+description: "Information about upgrading {{% ctx %}} Interaction Portal."
+weight: 60
+---
+
+# {{% param title %}}
+
+This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensure that the [{{% ctx %}} Gateway Upgrade][Upgrade Gateway] has been completed before starting this upgrade.
+
+## Perform Upgrade
+
+No upgrade required
+
+## Next Steps?
+
+1. [Try It Out][]
+
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeGateway" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.TryItOut" >}}
