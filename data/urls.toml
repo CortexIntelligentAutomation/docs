@@ -980,16 +980,25 @@
                                 SetDefaultVersion = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#set-as-default-version"
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.LicenseConsumption]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/license-consumption/"
+                        
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
                             Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
                             View = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#view"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioImport]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-import/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioExport]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-export/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioHierarchy]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-hierarchy/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.Overview]
+                                MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/overview"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
                                 ExecutionsGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
@@ -1014,6 +1023,10 @@
                                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
                                     ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/exceptions-viewer"
                                     VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer"
+                    [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Ops]
+                        MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/ops/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Ops.Overview]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/ops/overview/"
 
     [Cortex.Reference]
         MainDoc = "/docs/reference/"
@@ -2915,9 +2928,9 @@
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
                     SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
        [Cortex.Tutorials.Operations]
-            MainDoc = "/docs/tutorials/Operations"
+            MainDoc = "/docs/tutorials/operations"
             [Cortex.Tutorials.Operations.Overview]
-                MainDoc = "/docs/tutorials/Operations/overview"
+                MainDoc = "/docs/tutorials/operations/overview"
                 UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
 
     [Cortex.Website]
