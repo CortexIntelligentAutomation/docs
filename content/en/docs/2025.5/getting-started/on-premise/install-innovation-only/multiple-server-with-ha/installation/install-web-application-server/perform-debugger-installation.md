@@ -43,10 +43,24 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 {{< section "/install-application-server/single-server/add-permissions-to-crypto-folder.md">}}
 
+## Configure {{% ctx %}} Code Analyser
+
+{{< section "/install-application-server/configure-code-analyser.md" >}}
+
+### Update Code Analyser Allowed List
+
+{{< section "/install-application-server/update-code-analyser.md" >}}
+
+### Disable Code Analyser
+
+On the the Web Application Server:
+
+{{< section "/install-application-server/multi-server/add-innovation-only/disable-debugger-code-analyser.md" >}}
+
 ## Check Application Services
 
 1. Log on to the Web Application Server.
-1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. If not already done so, import the certificate used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
 1. Open a web browser.
 1. {{< section "/install-application-server/single-server/check-application-services.md">}}
 
@@ -59,7 +73,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 1. [Install Gateway][]
 
 [Antivirus Exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.AntivirusExclusionsNew" >}}
-[Configure Installation Script]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureDebuggerInstallationScript" >}}
+[Configure Installation Script]:  {{< ref "#configure-installation-script" >}}
 [Import Client Certificate]: {{< url path="Cortex.Faqs.ImportClientCertificate.MultiServer" >}}
 [Import Root Certificate]: {{< ref path="#import-root-certificate" >}}
 [Install Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallationNew" >}}
