@@ -35,6 +35,22 @@
                     RabbitMqAndErlangHaveBeenUpgraded = "/blog/2025/04/07/2025.3/#upgrade-of-rabbitmq-and-erlang"
                     PackageManagement = "/blog/2025/04/07/2025.3/#added-package-management-documentation"
                     RemovalOf7.2AndInnovationFromDocumentation = "/blog/2025/04/07/2025.3/#removed-72-and-innovation-from-documentation"
+                [Cortex.Blogs.Releases.2025.5]
+                    MainDoc = "/blog/2025/06/16/2025.5/"
+                    ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
+                    AddedSupportForTheCortexInteractionPortalToProvideSeparateCredentialsForQueryingAdGroups = "/blog/2025/06/16/2025.5/#added-support-for-the-cortex-interaction-portal-to-provide-separate-credentials-for-querying-ad-groups"
+                    ExecutionsDataIncludesChildExecutions = "/blog/2025/06/16/2025.5/#executions-data-includes-child-executions"
+                    NewColumnsToTheRunningExecutionsGridOnThePackagesPage = "/blog/2025/06/16/2025.5/#new-columns-added-to-the-running-executions-grid-on-the-packages-page"
+                    IntroducedCodeAnalyserToTheCortexExecutionService = "/blog/2025/06/16/2025.5/#introduced-code-analyser-to-the-cortex-execution-service"
+                    UpdatedErlangVersion = "/blog/2025/06/16/2025.5/#updated-erlang-version"
+                    GeneralSecurityEnhancementsOnCortexGateway = "/blog/2025/06/16/2025.5/#general-security-enhancements-on-cortex-gateway"
+                    UpdatedDecisionBlocksIcons = "/blog/2025/06/16/2025.5/#updated-decision-blocks-icons"
+                    ImprovedCertificateUpdateScriptForHighAvailabilityInstallations = "/blog/2025/06/16/2025.5/#improved-certificate-update-script-for-high-availability-ha-installations"
+                    ScopedRestartForTheCortexGatewayWebApplication = "/blog/2025/06/16/2025.5/#scoped-restart-for-the-cortex-gateway-web-application"
+                    AddedNewUserGuides = "/blog/2025/06/16/2025.5/#added-new-user-guides"
+                    AddedNewTutorials = "/blog/2025/06/16/2025.5/#added-new-tutorials"
+                    AddedInstallationChecklistsToTheInstallInstructions = "/blog/2025/06/16/2025.5/#added-installation-checklists-to-the-install-instructions"
+                    AddedDisasterRecoveryGuides = "/blog/2025/06/16/2025.5/#added-disaster-recovery-guides"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
