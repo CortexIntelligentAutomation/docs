@@ -53,7 +53,7 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ### Disable Code Analyser
 
-On the the Web Application Server:
+On the Web Application Server:
 
 {{< section "/install-application-server/multi-server/add-innovation-to-7.2/disable-debugger-code-analyser.md" >}}
 

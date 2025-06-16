@@ -16,7 +16,7 @@ There are a number of ways to use variables:
 
 ## Variable Editor
 
-The [Variable Editor][] allows the the developer to [create][] and [use][] variables whilst configuring a [block][].
+The [Variable Editor][] allows the developer to [create][] and [use][] variables whilst configuring a [block][].
 
 ### Creating a Variable
 

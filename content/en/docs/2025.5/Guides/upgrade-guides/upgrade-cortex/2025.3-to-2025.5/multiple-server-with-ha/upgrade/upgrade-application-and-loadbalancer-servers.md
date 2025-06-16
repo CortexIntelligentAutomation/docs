@@ -65,7 +65,7 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 ### Disable Code Analyser
 
-On each of the the Application Servers:
+On each of the Application Servers:
 
 {{< section "/upgrade/2025.5/upgrade-application-server/multi-server/disable-code-analyser.md" >}}
 

@@ -308,7 +308,7 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
 ### Disable Code Analyser
 
-On each of the the Application Servers:
+On each of the Application Servers:
 
 {{< section "/install-application-server/multi-server/add-innovation-only/disable-code-analyser.md" >}}
 
