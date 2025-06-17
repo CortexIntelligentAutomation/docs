@@ -45,7 +45,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.7 to 2024.9. P
                 * Click on the drop down menu for `Code` and select `Restart`. Confirm application restart by following the on-screen instructions.
             * Give this a few minutes. Once all nodes have been restarted the application should be deleted and disappear from the list of applications.
 
-Repeat the above instructions for the  `Flow Debugger`. In step 2 `server.domain.com` is the fully qualified domain name of the web application server.
+Repeat the above instructions for the `Flow Debugger`. In step 2 `server.domain.com` is the fully qualified domain name of the web application server.
 
 ## Preserve installation files
 

@@ -41,7 +41,7 @@ See the [Step the Execution][Step the Execution tutorial] tutorial for a step-by
 
 ### Stop the Execution
 
-Clicking the {{< image src="/images/Flow Editor - Stop Execution.png" >}} icon stops the the selected executions, and after a few seconds, removes them from Executions Grid. This action is available for all executions, regardless of their state.
+Clicking the {{< image src="/images/Flow Editor - Stop Execution.png" >}} icon stops the selected executions, and after a few seconds, removes them from Executions Grid. This action is available for all executions, regardless of their state.
 
 See the [Continue and Stop the Execution][Continue and Stop the Execution tutorial] tutorial for a step-by-step guide.
 

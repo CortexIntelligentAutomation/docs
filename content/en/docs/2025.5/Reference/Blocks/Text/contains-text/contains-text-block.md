@@ -216,7 +216,7 @@ For information about the [supported values][ComparisonTypes] for the [Compariso
 
 ### Null or empty Text
 
-If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the  [Contains Text][ContainsText Property] property is set to `false`.
+If [Text][Text Property] is `null` or empty (i.e. `""`), the variable specified in the [Contains Text][ContainsText Property] property is set to `false`.
 
 ### Null or empty Text To Find
 

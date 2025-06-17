@@ -18,7 +18,7 @@ TODO
 TODO:
 
 - The literal editor will have one or more available types, these types will be either Complex or Basic Types
-- The types available to the  literal editor are restricted by the block property.
+- The types available to the literal editor are restricted by the block property.
 - It is possible to switch the type of the literal editor to any available type.
 
 ### Basic Types

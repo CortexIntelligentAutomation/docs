@@ -450,7 +450,7 @@ If `null` is provided as a file path in the [Attachments][] within the [Email Me
 
 #### Empty file path
 
-If an empty string is provided as a file path in the the [Attachments][] within the [Email Message][Email Message Property], an [ArgumentException][] is thrown.
+If an empty string is provided as a file path in the [Attachments][] within the [Email Message][Email Message Property], an [ArgumentException][] is thrown.
 
 #### File path does not exist
 

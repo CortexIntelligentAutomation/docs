@@ -36,7 +36,7 @@ In this example `"users"` already exists and contains the following keys and dat
 
 #### Result
 
-Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution waiting until the the key `"user2"` contains the desired [Value][Value Property]; see [Write Data With Key][Write Data With Key].
+Waiting for `"user2"` to contain [Value][Value Property] `{"Domain": "domain", "Username": "admin", "Password": "encryptedPassword"}` in the [Data Storage Collection][] results in the execution waiting until the key `"user2"` contains the desired [Value][Value Property]; see [Write Data With Key][Write Data With Key].
 
 ***
 
