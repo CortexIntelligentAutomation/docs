@@ -7,7 +7,7 @@ weight: 1
 
 ## Summary
 
-2025.5 is the third [Fast Track][] of the next generation of {{% ctx %}} and improves on the [2025.3][] release in the following areas:
+2025.5 is the next [Fast Track][] release of {{% ctx %}} and improves on the [2025.3][] release in the following areas:
 
 * [Capability][]
 * [Observability][]
