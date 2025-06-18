@@ -1,0 +1,1 @@
+The port providing an entry into the API Gateway service. This is used by {{% ctx %}} Gateway to communicate with the {{% ctx %}} platform services. **If this is changed then it will be necessary to use the updated value in the** **"****Service Fabric Api Gateway Endpoint****" parameter of SetParameters.xml when configuring {{% ctx %}} Gateway later in this document.**

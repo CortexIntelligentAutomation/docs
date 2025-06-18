@@ -1,0 +1,1 @@
+Message broker used by the NServiceBus messaging platform to transport messages asynchronously between distributed {{% ctx %}} services using publish/subscribe mechanism.

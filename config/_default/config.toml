@@ -101,7 +101,7 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the 
 # current doc set.
-version = "2023.5"
+version = "2025.5"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
@@ -200,16 +200,22 @@ enable = true
 [[menu.main]]
 	identifier = 'documentation'
 	name = 'Documentation'
-	url = '/docs/2025.3'
+	url = '/docs/2025.5'
 	weight = 10
 
 # Releases menu
+[[params.versions]]
+	version = "2025.5"
+	url = "/docs/2025.5/"
+	dotNetVersion = "net-8.0"
+	inSupport = true
+	latest = true
+
 [[params.versions]]
 	version = "2025.3"
 	url = "/docs/2025.3/"
 	dotNetVersion = "net-8.0"
 	inSupport = true
-	latest = true
 
 [[params.versions]]
 	version = "2025.1"
