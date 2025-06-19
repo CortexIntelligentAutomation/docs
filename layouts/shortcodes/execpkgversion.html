@@ -1,0 +1,27 @@
+{{/*  
+    This shortcode provides a single point to version in docs.
+    This only works in files under /docs/.
+*/}}
+{{- /* Get the current version, setting to latest if not in a versioned page. */}}
+{{- $isNested := false }}
+{{- $currentVer := index (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
+{{- if (not $currentVer) }}
+	{{- $currentVer = index (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) 0 }}
+	{{- $currentVer = replaceRE `^\/docs` "" $currentVer 1 }}
+	{{- if (not $currentVer) }}
+        {{ range where .Site.Params.versions "latest" true }}
+            {{- $currentVer = .url }}
+        {{ end }}
+    {{- end }}
+{{- end }}
+{{- $filePath := printf "%s%s" $currentVer "_shared/executionPackageCurrentVersion.md" -}}
+{{- $page := .Site.GetPage $filePath -}}
+{{- with $page -}}
+    {{- with .Plain -}}
+        {{-  (trim . "\n") -}}
+    {{- else -}}
+        {{ errorf "version.html: Version file at path %q is empty" $filePath }}
+    {{- end -}}
+{{- else -}}
+    {{ errorf "version.html: Version file at path %q is missing" $filePath }}
+{{- end -}}
