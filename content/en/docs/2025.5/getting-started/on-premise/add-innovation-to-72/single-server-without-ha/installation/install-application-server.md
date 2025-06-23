@@ -43,24 +43,10 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 {{< section "/install-application-server/single-server/add-permissions-to-crypto-folder.md">}}
 
-## Configure {{% ctx %}} Code Analyser
-
-{{< section "/configure-code-analyser/configure-code-analyser.md" >}}
-
-### Update Code Analyser Allowed List
-
-{{< section "/configure-code-analyser/update-code-analyser.md" >}}
-
-### Disable Code Analyser
-
-On the Application Server:
-
-{{< section "/install-application-server/single-server/add-innovation-to-7.2/disable-code-analyser.md" >}}
-
 ## Check Application Services
 
 1. Log on to the Application Server.
-1. If not already done so, import the certificate used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. Import the certificate used in the `ServerCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
 1. Open a web browser.
 1. {{< section "/install-application-server/single-server/check-application-services.md">}}
 

@@ -19,4 +19,4 @@ Once the all the nodes have been restarted, it is necessary to re-check the clus
 
 [Check Application Server Cluster Health]: {{< url path="Cortex.Faqs.CheckClusterHealth.MultiServer.ViewClusterHealth" >}}
 [Check Flow Debugger Cluster Health]: {{< url path="Cortex.Faqs.CheckClusterHealth.SingleServer.ViewClusterHealth" >}}
-[Configure Installation Script]: {{< ref "#configure-installation-script" >}}
+[Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
