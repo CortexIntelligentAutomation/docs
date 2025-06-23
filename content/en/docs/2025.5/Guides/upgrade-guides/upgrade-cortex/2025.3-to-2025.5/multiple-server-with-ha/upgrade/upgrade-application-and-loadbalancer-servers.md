@@ -55,20 +55,6 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 {{< section "/upgrade/2025.5/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
-## Configure {{% ctx %}} Code Analyser
-
-{{< section "/upgrade/upgrade-application-server/configure-code-analyser.md" >}}
-
-### Update Code Analyser Allowed List
-
-{{< section "/upgrade/upgrade-application-server/update-code-analyser.md" >}}
-
-### Disable Code Analyser
-
-On each of the Application Servers:
-
-{{< section "/upgrade/2025.5/upgrade-application-server/multi-server/disable-code-analyser.md" >}}
-
 ## Check Application Services
 
 {{< section "/upgrade/upgrade-application-server/multi-server/check-application-services.md" >}}

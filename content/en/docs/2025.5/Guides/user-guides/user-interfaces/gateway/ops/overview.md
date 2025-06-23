@@ -133,7 +133,7 @@ None
 [Package Versions]: {{< ref "#package-versions" >}}
 [Time Period]: {{< ref "#time-period" >}}
 
-[Check Cluster Health]: {{< url path="Cortex.Faqs.CheckClusterHealth">}}
+[Check Cluster Health]: {{< url path="Cortex.Faqs.CheckClusterHealth.MainDoc">}}
 [Package Management]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview.MainDoc" >}}
 [Running Executions]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageVersionEditor.RunningExecutions" >}}
 [Service Fabric Explorer]: {{< url path="Cortex.Reference.Glossary.P-T.ServiceFabricExplorer" >}}

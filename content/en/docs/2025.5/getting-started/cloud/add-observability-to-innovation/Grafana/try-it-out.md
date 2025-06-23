@@ -10,7 +10,7 @@ weight: 60
 ## Check Dashboards are Displaying Data
 
 {{% alert title="Note" %}}
-This test uses the test flow published as part of testing the {{% ctx %}} installation. See {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOutPublishedFlow" title="Testing HA installation" >}} or {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOutPublishedFlow" title="Testing non-HA installation" >}}. An alternative flow can be used that exists on the system and can be executed.
+This test uses the test flow published as part of testing the {{% ctx %}} installation. See {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOutPublishedFlowNew" title="Testing HA installation" >}} or {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOutPublishedFlowNew" title="Testing non-HA installation" >}}. An alternative flow can be used that exists on the system and can be executed.
 {{% / alert %}}
 
 1. Open an HTTP client, such as [Postman][]. Make a request with the following format:

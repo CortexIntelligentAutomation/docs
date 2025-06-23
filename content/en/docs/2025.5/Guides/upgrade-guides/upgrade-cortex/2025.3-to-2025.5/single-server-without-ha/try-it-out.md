@@ -11,15 +11,15 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 ## Test Debugging Flows
 
-{{< section "/upgrade/try-it-out/test-debugging-flows.md" >}}
+{{< section "/try-it-out/test-debugging-flows.md" >}}
 
 ## Test Publishing Production Flows
 
-{{< section "/upgrade/try-it-out/test-publishing-flows.md" >}}
+{{< section "/try-it-out/test-publishing-flows.md" >}}
 
 ## Test Executing Production Flows
 
-{{< section "/upgrade/try-it-out/single-server/test-executing-production-flows.md" >}}
+{{< section "/try-it-out/single-server/test-executing-production-flows.md" >}}
 
 [Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.SingleServerWithoutHA.UpgradeApplicationServer" >}}
 [Web Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

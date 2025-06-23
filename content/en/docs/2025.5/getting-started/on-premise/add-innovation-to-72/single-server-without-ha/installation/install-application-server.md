@@ -45,11 +45,11 @@ If Windows Defender is not running on the server, ensure that the [Antivirus Exc
 
 ## Configure {{% ctx %}} Code Analyser
 
-{{< section "/install-application-server/configure-code-analyser.md" >}}
+{{< section "/configure-code-analyser/configure-code-analyser.md" >}}
 
 ### Update Code Analyser Allowed List
 
-{{< section "/install-application-server/update-code-analyser.md" >}}
+{{< section "/configure-code-analyser/update-code-analyser.md" >}}
 
 ### Disable Code Analyser
 
