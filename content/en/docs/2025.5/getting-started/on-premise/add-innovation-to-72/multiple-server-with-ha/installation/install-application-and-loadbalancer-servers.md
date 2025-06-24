@@ -298,24 +298,10 @@ More advanced configuration (such as changing ports) can be undertaken by modify
 
     If the errors do not give any instructions on how to rectify, see [Troubleshooting During Installation][] for further information; if this does not help then please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
-## Configure {{% ctx %}} Code Analyser
-
-{{< section "/install-application-server/configure-code-analyser.md" >}}
-
-### Update Code Analyser Allowed List
-
-{{< section "/install-application-server/update-code-analyser.md" >}}
-
-### Disable Code Analyser
-
-On each of the Application Servers:
-
-{{< section "/install-application-server/multi-server/add-innovation-to-7.2/disable-code-analyser.md" >}}
-
 ## Check Application Services
 
 1. Log on to the Application Server.
-1. If not already done so, import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
+1. Import the client certificate, used in the `ClientCertificatePath` parameter of the [Configure Installation Script][] section, to your Current User certificate store. Instructions on how to do this can be found [here][Import Client Certificate].
 1. Open a web browser.
 1. {{< section "/install-application-server/multi-server/check-application-services.md">}}
 

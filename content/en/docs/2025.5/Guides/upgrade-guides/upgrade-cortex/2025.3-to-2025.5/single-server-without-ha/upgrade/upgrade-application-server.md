@@ -21,20 +21,6 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 {{< section "/upgrade/2025.5/upgrade-application-server/single-server/run-upgrade-script.md" >}}
 
-## Configure {{% ctx %}} Code Analyser
-
-{{< section "/upgrade/upgrade-application-server/configure-code-analyser.md" >}}
-
-### Update Code Analyser Allowed List
-
-{{< section "/upgrade/upgrade-application-server/update-code-analyser.md" >}}
-
-### Disable Code Analyser
-
-On the Application Server:
-
-{{< section "/upgrade/2025.5/upgrade-application-server/single-server/disable-code-analyser.md" >}}
-
 ## Check Application Services
 
 {{< section "/upgrade/upgrade-application-server/single-server/check-application-services.md" >}}

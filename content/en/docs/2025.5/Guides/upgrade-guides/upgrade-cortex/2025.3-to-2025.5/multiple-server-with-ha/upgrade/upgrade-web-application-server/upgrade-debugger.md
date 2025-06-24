@@ -17,20 +17,6 @@ This guide describes how to upgrade the Flow Debugger on the Web Application Ser
 
 {{< section "/upgrade/2025.5/upgrade-application-server/single-server/run-upgrade-script.md">}}
 
-## Configure {{% ctx %}} Code Analyser
-
-{{< section "/upgrade/upgrade-application-server/configure-code-analyser.md" >}}
-
-### Update Code Analyser Allowed List
-
-{{< section "/upgrade/upgrade-application-server/update-code-analyser.md" >}}
-
-### Disable Code Analyser
-
-On the Web Application Server:
-
-{{< section "/upgrade/2025.5/upgrade-application-server/single-server/disable-code-analyser-debugger.md" >}}
-
 ## Check Application Services
 
 {{< section "/upgrade/upgrade-application-server/single-server/check-application-services.md">}}
