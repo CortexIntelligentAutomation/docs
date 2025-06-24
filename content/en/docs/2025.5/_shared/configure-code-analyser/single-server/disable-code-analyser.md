@@ -15,7 +15,7 @@ If a certificate error occurs, it will be necessary to import the certificate us
 1. Expand `Cluster` then `Nodes`.
 1. Restart the node by clicking on the drop down menu next to the node name and select `Restart`. Confirm node restart by following the on-screen instructions.
 
-Once the the node has been restarted, it is necessary to re-check the cluster health. Instructions on how to do this can be found [here][Check Application Server Cluster Health].
+Once the node has been restarted, it is necessary to re-check the cluster health. Instructions on how to do this can be found [here][Check Application Server Cluster Health].
 
 [Check Application Server Cluster Health]: {{< url path="Cortex.Faqs.CheckClusterHealth.SingleServer.ViewClusterHealth" >}}
 [Configure Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
