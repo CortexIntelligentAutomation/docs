@@ -1032,8 +1032,7 @@
                                 Triggers = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#triggers"
                                 Unpublish = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/package-version-editor/#unpublish-a-package-version"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.LicenseConsumption]
-                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/license-consumption/"
-                        
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/license-consumption/"                       
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/"
                             Edit = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-authorisation/#edit"
@@ -2978,6 +2977,16 @@
                     VariablesViewer = "/docs/tutorials/development/flow-editor/right-panel/#variables-viewer"
                     PropertyEditor = "/docs/tutorials/development/flow-editor/right-panel/#property-editor"
                     SettingsEditor = "/docs/tutorials/development/flow-editor/right-panel/#settings-editor"
+            [Cortex.Tutorials.Development.FlowsExplorer]
+                MainDoc = "/docs/tutorials/development/flows-explorer"
+                Browse = "/docs/tutorials/development/flows-explorer/#browsing-the-flows-explorer"
+                CreateActivity = "/docs/tutorials/development/flows-explorer/#create-an-activity-flow"
+                CreateGroup = "/docs/tutorials/development/flows-explorer/#create-a-group"
+                CreateProcessBlank = "/docs/tutorials/development/flows-explorer/#create-a-process-flow-from-a-blank-template"
+                CreateProcessBpmnXml = "/docs/tutorials/development/flows-explorer/#create-a-process-flow-using-a-bpmn-xml-template"
+                CreateProcessNatural ="/docs/tutorials/development/flows-explorer/#create-a-process-flow-using-a-natural-language-template"
+                Rename = "/docs/tutorials/development/flows-explorer/#rename-a-flow"
+                Search =  "/docs/tutorials/development/flows-explorer/#searching-the-flows-explorer"
        [Cortex.Tutorials.Operations]
             MainDoc = "/docs/tutorials/operations"
             [Cortex.Tutorials.Operations.Overview]
