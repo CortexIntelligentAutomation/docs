@@ -11,19 +11,19 @@ weight: 1
 
 {{< scribe title="Creating_a_New_Group_using_the_Flows_Explorer" id="oC6Ed7d4S1aJv4YBfglNYg" >}}
 
-## Create a Process Flow from a Blank Template
+## Create a Process from a Blank Template
 
 {{< scribe title="Creating_a_New_Process_Flow_in_CORTEX_from_a_Blank_Template" id="yWCd3KM0TC-b1cTzrq4_jQ" >}}
 
-## Create a Process Flow using a Natural Language Template
-
-{{< scribe title="Creating_a_Process_Flow_in_CORTEX_Using_a_Natural_Language_Template" id="loEGVCceR_C37XWgpTGO6A" >}}
-
-## Create a Process Flow using a BPMN XML Template
+## Create a Process using a BPMN XML Template
 
 {{< scribe title="Creating_a_Process_Flow_in_CORTEX_Using_a_BPMN_XML_Template" id="w5-0oG9yRPOB0kxjxtE4aA" >}}
 
-## Create an Activity Flow
+## Create a Process using a Natural Language Template
+
+{{< scribe title="Creating_a_Process_Flow_in_CORTEX_Using_a_Natural_Language_Template" id="loEGVCceR_C37XWgpTGO6A" >}}
+
+## Create an Activity
 
 {{< scribe title="Creating_an_Activity_Flow_In_CORTEX" id="YQsDeCHRT5-110qfF9etQA" >}}
 

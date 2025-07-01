@@ -35,7 +35,7 @@ See the [View Blocks in the Palette][View Blocks in the Palette tutorial] tutori
 
 ### Search for a Block
 
-To search for a block by name, start typing into the search box. All the blocks that start with the same search characters will be displayed; the more characters entered, the more refined the search will be, displaying fewer block options. The search is a fuzzy search, which means that even misspelt block names should identify the intended matching blocks.
+To search for a block by name, start typing into the search box. All the blocks that contain the search characters will be displayed; the more characters entered, the more refined the search will be, displaying fewer block options. The search is a fuzzy search, which means that even misspelt block names should identify the intended matching blocks.
 
 See the [Searching the Palette for a Block][Searching the Palette for a Block tutorial] tutorial for a step-by-step guide.
 

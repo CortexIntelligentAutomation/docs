@@ -2980,11 +2980,11 @@
             [Cortex.Tutorials.Development.FlowsExplorer]
                 MainDoc = "/docs/tutorials/development/flows-explorer"
                 Browse = "/docs/tutorials/development/flows-explorer/#browsing-the-flows-explorer"
-                CreateActivity = "/docs/tutorials/development/flows-explorer/#create-an-activity-flow"
+                CreateActivity = "/docs/tutorials/development/flows-explorer/#create-an-activity"
                 CreateGroup = "/docs/tutorials/development/flows-explorer/#create-a-group"
-                CreateProcessBlank = "/docs/tutorials/development/flows-explorer/#create-a-process-flow-from-a-blank-template"
-                CreateProcessBpmnXml = "/docs/tutorials/development/flows-explorer/#create-a-process-flow-using-a-bpmn-xml-template"
-                CreateProcessNatural ="/docs/tutorials/development/flows-explorer/#create-a-process-flow-using-a-natural-language-template"
+                CreateProcessBlank = "/docs/tutorials/development/flows-explorer/#create-a-process-from-a-blank-template"
+                CreateProcessBpmnXml = "/docs/tutorials/development/flows-explorer/#create-a-process-using-a-bpmn-xml-template"
+                CreateProcessNatural ="/docs/tutorials/development/flows-explorer/#create-a-process-using-a-natural-language-template"
                 Rename = "/docs/tutorials/development/flows-explorer/#rename-a-flow"
                 Search =  "/docs/tutorials/development/flows-explorer/#searching-the-flows-explorer"
        [Cortex.Tutorials.Operations]
