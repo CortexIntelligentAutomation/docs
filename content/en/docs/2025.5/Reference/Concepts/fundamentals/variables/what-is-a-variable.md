@@ -111,15 +111,15 @@ When [debugging a flow][debugging a flow] in [{{% ctx %}} Studio][CORTEX Studio]
 
 #### Viewing Basic Data Types
 
-When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables Viewer][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
+When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables List][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
 
 #### Viewing Complex Data Types
 
-When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables Viewer][].
+When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables List][].
 
-When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables Viewer][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
+When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables List][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
 
-To see the data in the variable, select the variable in the [Variables Viewer][] and the data will be presented in the [Variable Details Viewer][].
+To see the data in the variable, select the variable in the [Variables List][] and the data will be presented in the [Variable Details Viewer][].
 
 The following examples show the [Variable Details Viewer][] when showing a:
 
@@ -249,8 +249,9 @@ None
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 
 [CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Variables Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariablesViewer" >}}
-[Variable Details Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariableDetailsViewer" >}}
+[Variables Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesViewer" >}}
+[Variable Details Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariableDetailsViewer" >}}
+[Variables List]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesList" >}}
 [Messages Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
 [Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
 [create]: {{< url path="Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}

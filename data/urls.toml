@@ -1073,6 +1073,8 @@
                                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer"
                                     ExceptionsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/exceptions-viewer"
                                     VariablesViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer"
+                                    VariablesList = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer/#variables-list"
+                                    VariableDetailsViewer = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/right-panel/execution-viewer/variables-viewer/#variable-details-viewer"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Ops]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/ops/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Ops.Overview]

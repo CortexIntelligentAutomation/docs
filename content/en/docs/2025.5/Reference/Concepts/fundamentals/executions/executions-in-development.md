@@ -83,7 +83,7 @@ Currently when using Edit and Continue, it is not possible to [directly change t
 
 When debugging a [flow][] in [{{% ctx %}} Studio][CORTEX Studio], [selecting an execution][Selecting an Execution] will display all initialised [variables][variable] that are in [scope][] in the [Variables Viewer][].
 
-To see the data in a variable, select the variable in the [Variables Viewer][] and the data will be presented in the [Variable Details Viewer][]. If the data is large enough to negatively affect the performance of [{{% ctx %}} Studio][CORTEX Studio] it will not be displayed unless the [Load Value Button][] is clicked.
+To see the data in a variable, select the variable in the [Variables List][] and the data will be presented in the [Variable Details Viewer][]. If the data is large enough to negatively affect the performance of [{{% ctx %}} Studio][CORTEX Studio] it will not be displayed unless the `Load Value Button` is clicked.
 
 ## Viewing an Execution's Exceptions
 
@@ -215,12 +215,11 @@ None
 [token]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.Executions" >}}
 [Start an execution]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.StartAnExecution" >}}
 [Edit and Continue]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.EditAndContinueAnExecution" >}}
-[Exceptions Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.ExceptionsViewer" >}}
-[Variable Details Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariableDetailsViewer" >}}
-[Load Value Button]: {{< url path="Cortex.Guides.Studio.EastPanel.LoadValueButton" >}}
-[Variables Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariablesViewer" >}}
-[Settings Editor]: {{< url path="Cortex.Guides.Studio.EastPanel.SettingsEditor" >}}
-[Inputs Property]: {{< url path="Cortex.Guides.Studio.EastPanel.InputsProperty" >}}
+[Exceptions Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.ExceptionsViewer" >}}
+[Variable Details Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariableDetailsViewer" >}}
+[Variables List]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesList" >}}
+[Variables Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesViewer" >}}
+[Settings Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.SettingsEditor" >}}
 [Executions Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
 [Paused]: {{< url path="Cortex.Guides.Studio.SouthPanel.PausingAnExecution" >}}
 [Stepped]: {{< url path="Cortex.Guides.Studio.SouthPanel.SteppingAnExecution" >}}
