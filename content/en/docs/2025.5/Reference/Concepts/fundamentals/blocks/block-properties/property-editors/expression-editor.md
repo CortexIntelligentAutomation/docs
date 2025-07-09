@@ -885,7 +885,7 @@ This may change in future to allow developers to specifically select which of th
 
 [Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
 
 [Boolean Literals]: {{< url path="MSDocs.CSharp.BooleanLiterals" >}}
 [Char Literals]: {{< url path="MSDocs.CSharp.CharLiterals" >}}

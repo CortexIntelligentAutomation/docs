@@ -202,7 +202,7 @@ None
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
 [Variable Editor]: {{< url path="Cortex.Guides.Studio.VariableEditor.MainDoc" >}}
 
 [Properties]: {{< url path="Cortex.Reference.Glossary.P-T.PropertyCSharp" >}}

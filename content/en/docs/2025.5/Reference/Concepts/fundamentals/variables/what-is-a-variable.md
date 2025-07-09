@@ -68,7 +68,7 @@ In the following example `($)TotalUnreadEmails` and `($)FoldersWithUnreadEmails`
 
 ## Variables at Design Time
 
-The [Variables Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [{{% ctx %}} Studio][CORTEX Studio]. For more information see [Variables Grid][].
+The [Variables Grid][] is used to [create][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [{{% ctx %}} Studio][CORTEX Studio]. For more information see [Variables Grid][].
 
 Variables can also be created through the use of the [Variable Editor][]. For more information see [Creating Variables][].
 
@@ -252,9 +252,8 @@ None
 [Variables Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesViewer" >}}
 [Variable Details Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariableDetailsViewer" >}}
 [Variables List]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesList" >}}
-[Messages Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
-[create]: {{< url path="Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
-[view]: {{< url path="Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
-[modify]: {{< url path="Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}
-[delete]: {{< url path="Cortex.Guides.Studio.SouthPanel.DeletingVariables" >}}
+[Messages Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid.MainDoc" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
+[create]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.CreateVariable" >}}
+[delete]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.DeleteVariable" >}}
+[modify]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.Actions" >}}

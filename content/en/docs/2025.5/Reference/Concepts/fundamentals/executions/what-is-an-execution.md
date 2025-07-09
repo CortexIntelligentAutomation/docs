@@ -137,7 +137,7 @@ None
 [All Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
 
 [CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Executions Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
+[Executions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.MainDoc" >}}
 
 [Execution Service]: {{< url path="Cortex.Reference.Apis.CortexInnovation.ExecutionApplication.Services.ExecutionService.MainDoc" >}}
 

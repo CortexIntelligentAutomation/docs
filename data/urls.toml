@@ -577,13 +577,9 @@
                 Executions = "/docs/guides/cortex-studio/main-display-area/#executions"
                 StartAnExecution = "/docs/guides/cortex-studio/main-display-area/#start-an-execution"
                 EditAndContinueAnExecution = "/docs/guides/cortex-studio/main-display-area/#edit-and-continue-an-execution"
-            [Cortex.Guides.Studio.Navigation]
-                MainDoc = "/docs/guides/cortex-studio/navigation/" 
             [Cortex.Guides.Studio.PackageManagement]
                 MainDoc = "/docs/guides/cortex-studio/package-management/"
                 AutomaticSelectionOfDependentFlows = "/docs/guides/cortex-studio/package-management/#automatic-selection-of-dependent-flows"
-            [Cortex.Guides.Studio.Palettes]
-                MainDoc = "/docs/guides/cortex-studio/palettes/"
             [Cortex.Guides.Studio.SouthPanel]
                 MainDoc = "/docs/guides/cortex-studio/south-panel/"
                 ExecutionsGrid = "/docs/guides/cortex-studio/south-panel/#executions-grid"
@@ -1051,15 +1047,30 @@
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/overview"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
-                                ExecutionsGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
-                                MessagesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
-                                VariablesGrid = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
-                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
+                                    PauseExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#pause-the-execution"
+                                    StepExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#step-the-execution"
+                                    ContinueExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#continue-the-execution"
+                                    StopExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#stop-the-execution"
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
+                                [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid]
+                                    MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
+                                    Actions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#actions"
+                                    CreateVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#create-a-variable"
+                                    DeleteVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#delete-variables"
+                                    ModifyScope = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modifying-the-scope-of-a-variable"
+                           [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                ContinueExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#continue-debugging"
+                                Edit = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#edit-flow"
                                 ExecutionOptions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#execution-options"
                                 MainToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#main-toolbar"
+                                StartAnExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#start-an-execution"
+                                Undo = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#undo"
                                 Workspaces = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspaces"
                                 WorkspaceToolbar = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#workspace-toolbar"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar]

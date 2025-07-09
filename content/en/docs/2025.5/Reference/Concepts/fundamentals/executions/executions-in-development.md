@@ -9,20 +9,20 @@ weight: 100
 
 ## Summary
 
-Whilst debugging a flow, each execution is represented by a [token][] that moves through the [flow][], showing which [block][] is currently being executed.
+Whilst debugging a flow, each execution is represented by a token that moves through the [flow][], showing which [block][] is currently being executed.
 
 A [flow][] can be debugged in [{{% ctx %}} Studio][CORTEX Studio] by clicking the [Start an execution][] button or by making an [API call][API call: CORTEX Studio] to [{{% ctx %}} Studio][CORTEX Studio], [providing input variables][Providing Input Variables] to the flow, if required; this will [validate the flow][Validating a Flow] and then begin an execution.
 
 The following parameters can be specified:
 
-- Show execution on workspace - when this is `true`, the token will be shown at every step throughout the [flow][], otherwise the token will only be shown when the execution [pauses][Paused], hits a [breakpoint][], or an exception occurs when `Break on exception` is `true`
+- Show execution on workspace - when this is `true`, the token will be shown at every step throughout the [flow][], otherwise the token will only be shown when the execution [pauses][Paused], hits a breakpoint, or an exception occurs when `Break on exception` is `true`
 - Break on exception - when this is `true` the execution will [pause][Paused] when an exception occurs
 
 ## Providing Input Variables
 
 Any flow that has [Input Variables][] defined requires them to be provided when debugging, these may be provided to a flow in the following ways:
 
-- From [{{% ctx %}} Studio][CORTEX Studio] using the [Inputs Property][] in the [Settings Editor][]
+- From [{{% ctx %}} Studio][CORTEX Studio] using the Inputs Property in the [Settings Editor][]
 - From an [HTTP request][HTTP request: CORTEX Studio] using the inputVariables in the body of the request
 
 ## Retrieving Output Variables
@@ -39,7 +39,7 @@ For a complete list see [Validation][] messages.
 
 ## Selecting an Execution
 
-One or more executions can be selected within [{{% ctx %}} Studio][CORTEX Studio] by clicking on their [token][], or selecting them using the [Executions Grid][]. This allows:
+One or more executions can be selected within [{{% ctx %}} Studio][CORTEX Studio] by clicking on their token, or selecting them using the [Executions Grid][]. This allows:
 
 - [Interacting with an Execution][]
 - [Viewing an Execution's Variables][]
@@ -56,7 +56,7 @@ Once executions are [selected][Selecting an Execution] in [{{% ctx %}} Studio][C
 
 ### Set Next Block to Execute
 
-[Set Next Block to Execute][] allows a developer to choose which [block][] will be executed next for the selected execution, even if this block is not connected to the [flow][].
+Set Next Block to Execute allows a developer to choose which [block][] will be executed next for the selected execution, even if this block is not connected to the [flow][].
 
 Examples of what this can be used to do whilst debugging include:
 
@@ -70,7 +70,7 @@ Currently, Set Next Block to Execute is not available when [multiple executions 
 
 ### Edit and Continue an Execution
 
-[Edit and Continue][] allows a developer to pause all executions, and make changes to the [flow][] before continuing debugging.
+[Edit Flow][] and [Continue Debugging][] allows a developer to pause all executions, and make changes to the [flow][] before continuing debugging.
 
 Examples of what this can be used to do whilst debugging include:
 
@@ -124,13 +124,13 @@ In future this limitation may be removed.
 
 #### Set Next Block to Execute not available when multiple Executions are selected
 
-It is not possible to use [Set Next Block to Execute][] when there are multiple executions selected on the same [workspace][].
+It is not possible to use Set Next Block to Execute when there are multiple executions selected on the same [workspace][].
 
 In future this limitation may be removed.
 
 #### Set Next Block to Execute not available when the Block and Execution are on different Workspaces
 
-It is not possible to use [Set Next Block to Execute][] when the selected execution is not on the same [workspace][] as the [block][] being set next to execute.
+It is not possible to use Set Next Block to Execute when the selected execution is not on the same [workspace][] as the [block][] being set next to execute.
 
 In future this limitation may be removed.
 
@@ -210,19 +210,17 @@ None
 [Validation]: {{< url path="Cortex.Reference.Messages.Validation.MainDoc" >}}
 
 [CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Set Next Block to Execute]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.SetNextBlockToExecute" >}}
-[breakpoint]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.Breakpoints" >}}
-[token]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.Executions" >}}
-[Start an execution]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.StartAnExecution" >}}
-[Edit and Continue]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.EditAndContinueAnExecution" >}}
+[Start an execution]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.StartAnExecution" >}}
+[Continue Debugging]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.ContinueExecution" >}}
+[Edit Flow]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.Edit" >}}
 [Exceptions Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.ExceptionsViewer" >}}
 [Variable Details Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariableDetailsViewer" >}}
 [Variables List]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesList" >}}
 [Variables Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesViewer" >}}
 [Settings Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.SettingsEditor" >}}
-[Executions Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.ExecutionsGrid" >}}
-[Paused]: {{< url path="Cortex.Guides.Studio.SouthPanel.PausingAnExecution" >}}
-[Stepped]: {{< url path="Cortex.Guides.Studio.SouthPanel.SteppingAnExecution" >}}
-[Continued]: {{< url path="Cortex.Guides.Studio.SouthPanel.ContinuingAnExecution" >}}
-[Stopped]: {{< url path="Cortex.Guides.Studio.SouthPanel.StoppingAnExecution" >}}
-[Messages Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
+[Executions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.MainDoc" >}}
+[Paused]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.PauseExecution" >}}
+[Stepped]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.StepExecution" >}}
+[Continued]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.ContinueExecution" >}}
+[Stopped]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.StopExecution" >}}
+[Messages Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid.MainDoc" >}}
