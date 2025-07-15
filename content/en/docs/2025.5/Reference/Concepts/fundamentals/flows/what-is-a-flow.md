@@ -9,7 +9,7 @@ weight: 1
 
 ## Summary
 
-A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{% ctx %}} platform.
+A flow is an object in [{{% ctx %}} Gateway][CORTEX Gateway] that contains the logic and actions (in the form of [blocks][] and [workspaces][]) that is able to be executed on a {{% ctx %}} platform.
 
 ## Anatomy of a Flow
 
@@ -120,7 +120,7 @@ For further information about [workspaces][workspace], see [Workspaces][workspac
 
 A [flow execution][flow execution] may be started by:
 
-* [Debugging][] a flow in [{{% ctx %}} Studio][CORTEX Studio]
+* [Debugging][Executions in Development] a flow in [{{% ctx %}} Gateway][CORTEX Gateway]
 * Triggering it by making an HTTP request from an external source (e.g. a web application or web hooks)
 * Triggering it using the [Run Flow][] and [Run Flow Async][] block
 * Triggering it using predefined events (future) (e.g. on receipt of an email)
@@ -183,6 +183,7 @@ None
 [Handling Exceptions within a Block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
 [Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.MainDoc" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
+[Executions in Development]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
 [Handling Exceptions within a Flow]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.HandlingExceptionsWithinAFlow.MainDoc" >}}
 [flow level exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.FlowLevel" >}}
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
@@ -200,8 +201,7 @@ None
 [Start Flow]: {{< url path="Cortex.Reference.Blocks.Flows.StartFlow.StartFlow.MainDoc" >}}
 [End Flow]: {{< url path="Cortex.Reference.Blocks.Flows.EndFlow.EndFlow.MainDoc" >}}
 
-[CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
+[CORTEX Gateway]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.MainDoc" >}}
 
 [Run Flow]: {{< url path="Cortex.Reference.Blocks.Flows.RunFlow.RunFlow.MainDoc" >}}
 

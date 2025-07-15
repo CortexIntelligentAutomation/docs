@@ -19,9 +19,11 @@ The Executions Grid is automatically displayed when in `Debug` mode and a flow i
 
 Flows that are `Running` or `Paused` are shown with a green background; flows that have raised an [exception][What is an Exception?] are shown with a red background.
 
-An [execution][What is an Execution?] may be selected by clicking on its row and can be controlled by action icons at the top right of the Executions Grid. Multiple executions can be selected using `Ctrl + Click` or `Shift + Click`. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected executions; greyed-out action icons are not applicable to the selected executions’ state.
-
 ## Actions
+
+### Select an Execution
+
+An [execution][What is an Execution?] may be selected by clicking on its row and can be controlled by action icons at the top right of the Executions Grid. Multiple executions can be selected using `Ctrl + Click` or `Shift + Click`. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected executions; greyed-out action icons are not applicable to the selected executions’ state.
 
 ### Continue the Execution
 

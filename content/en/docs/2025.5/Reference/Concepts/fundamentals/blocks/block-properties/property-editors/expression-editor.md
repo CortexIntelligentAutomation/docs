@@ -9,7 +9,7 @@ weight: 200
 
 ## Summary
 
-The [Expression Editor][] is the most powerful [property editor][] and can accept [literal values][], [expressions][], and [variables][].
+The Expression Editor is the most powerful [property editor][] and can accept [literal values][], [expressions][], and [variables][].
 
 {{< figure src="/images/set-variable/set-variable-expression-empty.PNG" >}}
 
@@ -882,8 +882,6 @@ This may change in future to allow developers to specifically select which of th
 [implicitly cast]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.ImplicitCast" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
-
-[Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
 
 [Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
 

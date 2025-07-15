@@ -1049,18 +1049,19 @@
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel"
                                 [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid]
                                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid"
-                                    PauseExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#pause-the-execution"
-                                    StepExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#step-the-execution"
                                     ContinueExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#continue-the-execution"
+                                    PauseExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#pause-the-execution"
+                                    SelectExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#select-an-execution"
+                                    StepExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#step-the-execution"
                                     StopExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/executions-grid/#stop-the-execution"
                                 [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid]
                                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/messages-grid"
                                 [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid]
                                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid"
-                                    Actions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#actions"
                                     CreateVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#create-a-variable"
                                     DeleteVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#delete-variables"
                                     ModifyScope = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modifying-the-scope-of-a-variable"
+                                    ModifyVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modify-a-variable"
                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
@@ -1095,6 +1096,8 @@
         MainDoc = "/docs/reference/"
         [Cortex.Reference.Apis]
             MainDoc = "/docs/reference/Apis/"
+            [Cortex.Reference.Apis.Gateway]
+                MainDoc = "/docs/reference/apis/cortex-gateway/"
             [Cortex.Reference.Apis.Studio]
                 MainDoc = "/docs/reference/apis/cortex-studio/"
             [Cortex.Reference.Apis.ApiGatewayService]
@@ -2822,6 +2825,7 @@
                 CORS = "/docs/reference/glossary/a-e/#cors"
                 Cortex = "/docs/reference/glossary/a-e/#cortex"
                 CortexStudio = "/docs/reference/glossary/a-e/#cortex-studio"
+                CortexGateway = "/docs/reference/glossary/a-e/#cortex-gateway"
                 CRL = "/docs/reference/glossary/a-e/#crl"
                 DataType = "/docs/reference/glossary/a-e/#data-type"
                 Developer = "/docs/reference/glossary/a-e/#developer"

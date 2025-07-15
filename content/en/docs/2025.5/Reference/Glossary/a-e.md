@@ -183,13 +183,9 @@ The name of the new and current generation of the {{% ctx %}} [automation][] [pl
 
 ### {{% ctx %}} Gateway
 
-The centralised web-based [portal][] for accessing all user applications and tooling in the [{{% ctx %}}][CORTEX] [platform][].
+A Web portal for creating automation solutions and managing their full life-cycle, including design, development, testing, deployment, monitoring, maintenance and ultimately end-of-life.
 
-### {{% ctx %}} Studio
-
-The web-based integrated development environment ([IDE][]) for creating, editing, [debugging][], testing and managing [flows][Flow] that define the logic and actions required to capture and automate a [task][tasks] or [process][Processes].
-
-For more detailed information about {{% ctx %}} Studio, see [Guides > {{% ctx %}} Studio][Guides > CORTEX Studio].
+For more detailed information about {{% ctx %}} Gateway, see the [user guide][Gateway User Guide].
 
 ### Culture
 
@@ -233,9 +229,9 @@ For a complete list of available data types, see [Reference > Data Types][].
 
 ### Debug
 
-The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{% ctx %}} Studio][CORTEX Studio], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
+The ability for [flow developers][] to execute and interact with a [flow][] step-by-step from within [{{% ctx %}} Gateway][CORTEX Gateway], so that they are able to identify and remove [errors][] in the [flow's][flow] logic and actions.
 
-For more detailed information about debugging in {{% ctx %}} Studio, see [{{% ctx %}} Studio > Debugging][CORTEX Studio > Debugging].
+For more detailed information about debugging in {{% ctx %}} Gateway, see [Executions in Development][].
 
 ### Default Value
 
@@ -309,7 +305,7 @@ When a [request][] to start a [flow][] is received by the [{{% ctx %}}][CORTEX] 
 
 There can be multiple executions of a flow running [concurrently][concurrent].
 
-For more detailed information about executions, see [{{% ctx %}} Studio > Debugging][CORTEX Studio > Debugging].
+For more detailed information about executions, see [Fundamentals > Executions][Fundamentals > Executions].
 
 ### Explicit Cast
 
@@ -344,7 +340,7 @@ It is based on the [Monaco Editor][] used by [VS Code][], and includes a rich se
 * [Snippets][]
 * [Intellisense][]
 
-For more detailed information about the Expression Editor, see [{{% ctx %}} Studio > Expression Editor][CORTEX Studio > Expression Editor].
+For more detailed information about the Expression Editor, see [Fundamentals > Expression Editor][Fundamentals > Expression Editor].
 
 [Automate]: {{< ref "#automate" >}}
 [Automation]: {{< ref "#automation" >}}
@@ -360,7 +356,7 @@ For more detailed information about the Expression Editor, see [{{% ctx %}} Stud
 [Continuous Delivery]: {{< ref "#continuous-delivery" >}}
 [Continuous Deployment]: {{< ref "#continuous-deployment" >}}
 [CORTEX]: {{< ref "#cortex" >}}
-[CORTEX Studio]: {{< ref "#cortex-studio" >}}
+[CORTEX Gateway]: {{< ref "#cortex-gateway" >}}
 [Data Type]: {{< ref "#data-type" >}}
 [Debugging]: {{< ref "#debug" >}}
 [Errors]: {{< ref "#error" >}}
@@ -427,9 +423,11 @@ For more detailed information about the Expression Editor, see [{{% ctx %}} Stud
 [32-bit]: {{< url path="Cortex.Reference.Glossary.0-9.32Bit" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 
-[Guides > CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[CORTEX Studio > Debugging]: {{< url path="Cortex.Guides.Studio.Debugging.MainDoc" >}}
-[CORTEX Studio > Expression Editor]: {{< url path="Cortex.Guides.Studio.ExpressionEditor.MainDoc" >}}
+[Gateway User Guide]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.MainDoc" >}}
+[Fundamentals > Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+[Executions in Development]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.ExecutionsInDevelopment.MainDoc" >}}
+
+[Fundamentals > Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
 
 [Fundamentals > Expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.Expressions" >}}
 

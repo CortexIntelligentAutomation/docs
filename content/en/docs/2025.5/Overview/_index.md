@@ -9,7 +9,7 @@ weight: 2
 
 ### Low-code automation
 
-{{% ctx %}} is a **[low-code][Studio]**, **automation and orchestration platform**, that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
+{{% ctx %}} is a **[low-code][Gateway]**, **automation and orchestration platform**, that enables organisations to graphically **capture** and **automate** anything from simple **tasks**, to interactive **workflows**, to complex IT and business **processes** that span the entire organisation.
 
 ### Enterprise-grade
 
@@ -73,7 +73,7 @@ Wherever you are on your automation journey and whatever you are trying to achie
 [on-premise]: {{< url path="Cortex.GettingStarted.OnPremise.MainDoc" >}}
 
 [Guides]: {{< url path="Cortex.Guides.MainDoc" >}}
-[Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
+[Gateway]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.MainDoc" >}}
 
 [Tutorials]: {{< url path="Cortex.Tutorials.MainDoc" >}}
 
