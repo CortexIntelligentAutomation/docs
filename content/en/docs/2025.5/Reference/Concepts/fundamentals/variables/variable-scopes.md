@@ -90,9 +90,9 @@ None
 [Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
-[Grid: Creating Variables]: {{< url path="Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
-[Grid: Changing a Variable's Scope]: {{< url path="Cortex.Guides.Studio.SouthPanel.ChangingAVariablesScope" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
+[Grid: Creating Variables]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
+[Grid: Changing a Variable's Scope]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.ModifyScope" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 

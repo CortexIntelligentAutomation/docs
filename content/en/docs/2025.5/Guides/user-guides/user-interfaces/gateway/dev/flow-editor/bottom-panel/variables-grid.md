@@ -40,13 +40,38 @@ Clicking the {{< image src="/images/Flow Editor - Add Variables.png" >}} icon wi
 
 See the [Create, Rename and Delete a Variable][Create, Rename and Delete a Variable tutorial] tutorial for a step-by-step guide.
 
-### Rename a Variable
+### Modify a Variable
+
+#### Rename a Variable
 
 Double-click the variable’s `Name` field to enable its editing; rename the variable and click outside the field to complete the renaming process. It is entered as free-format text, however, when it is saved, it will automatically be prepended by `($)` to denote that this is a variable. If the `Name` is entered prepended by a `($)`, the system will not duplicate the prefix.
 
 Renaming a variable will update any use of that variable in the flow to use the new name. If a variable is renamed to a name that already exists the renamed variable and the existing variable will be highlighted in red text.
 
 See the [Create, Rename and Delete a Variable][Create, Rename and Delete a Variable tutorial] tutorial for a step-by-step guide.
+
+#### Assigning a Default Value to a Variable
+
+Double-click the `Set Default Value?` field of the required variable to reveal a checkbox; click on the checkbox to enable the default value.
+Then, double-click on the `Default Value` field to open an [Expression Editor][] in which to specify the default value.
+
+See the [Assign a Default Value to a Variable][Assign a Default Value to a Variable tutorial] tutorial for a step-by-step guide.
+
+#### Defining an Input or Output Variable
+
+The scope of an input or output variable must be set to the top-Level workspace, i.e. flow level, for it to accept an input value or return an output value. Double-click on the `Is Input Variable?` or `Is Output Variable?` fields, as appropriate, to reveal a checkbox. Click on the checkbox to tick it to make the selected variable an input or output variable.
+
+A single variable can be both an input variable and an output variable.
+
+See the [Define an Input or Output Variable][Define an Input or Output Variable tutorial] tutorial for a step-by-step guide.
+
+#### Modifying the Scope of a Variable
+
+Double-click on the `Scope` field of the variable to open a dropdown menu. Select the scope from the dropdown.
+
+To change the scope for multiple variables, they can be changed individually, or alternatively, select all variables to be changed, [cut][] them, open the workspace that they should be moved to and then [paste][] them.
+
+See the [Modify the Scope of a Variable][Modify the Scope of a Variable tutorial] tutorial for a step-by-step guide.
 
 ### Copy Variables
 
@@ -65,29 +90,6 @@ Right-click anywhere in the variable grid and select `Paste` from the context me
 Right-click anywhere on a variable and select `Delete` from the context menu to delete the variable. Alternatively, select the variable to be deleted and use the `delete` key to delete the variable. To delete multiple variables select all the variables to be deleted before right-clicking  or using the `delete` key.
 
 See the [Create, Rename and Delete a Variable][Create, Rename and Delete a Variable tutorial] tutorial for a step-by-step guide.
-
-### Assigning a Default Value to a Variable
-
-Double-click the `Set Default Value?` field of the required variable to reveal a checkbox; click on the checkbox to enable the default value.
-Then, double-click on the `Default Value` field to open an [Expression Editor][] in which to specify the default value.
-
-See the [Assign a Default Value to a Variable][Assign a Default Value to a Variable tutorial] tutorial for a step-by-step guide.
-
-### Defining an Input or Output Variable
-
-The scope of an input or output variable must be set to the top-Level workspace, i.e. flow level, for it to accept an input value or return an output value. Double-click on the `Is Input Variable?` or `Is Output Variable?` fields, as appropriate, to reveal a checkbox. Click on the checkbox to tick it to make the selected variable an input or output variable.
-
-A single variable can be both an input variable and an output variable.
-
-See the [Define an Input or Output Variable][Define an Input or Output Variable tutorial] tutorial for a step-by-step guide.
-
-### Modifying the Scope of a Variable
-
-Double-click on the `Scope` field of the variable to open a dropdown menu. Select the scope from the dropdown.
-
-To change the scope for multiple variables, they can be changed individually, or alternatively, select all variables to be changed, [cut][] them, open the workspace that they should be moved to and then [paste][] them.
-
-See the [Modify the Scope of a Variable][Modify the Scope of a Variable tutorial] tutorial for a step-by-step guide.
 
 ### Sort Variables
 

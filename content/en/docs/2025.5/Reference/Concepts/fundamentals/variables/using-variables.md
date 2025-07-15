@@ -16,7 +16,7 @@ There are a number of ways to use variables:
 
 ## Variable Editor
 
-The [Variable Editor][] allows the developer to [create][] and [use][] variables whilst configuring a [block][].
+The Variable Editor allows the developer to [create][] and [use][] variables whilst configuring a [block][].
 
 ### Creating a Variable
 
@@ -202,8 +202,7 @@ None
 [Exception]: {{< url path="Cortex.Reference.DataTypes.Exceptions.Exception.MainDoc" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
 
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
-[Variable Editor]: {{< url path="Cortex.Guides.Studio.VariableEditor.MainDoc" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
 
 [Properties]: {{< url path="Cortex.Reference.Glossary.P-T.PropertyCSharp" >}}
 [Methods]: {{< url path="Cortex.Reference.Glossary.K-O.Method" >}}

@@ -227,7 +227,7 @@ In future this limitation may be removed.
 [Handling Exceptions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Exceptions.HandlingExceptions.MainDoc" >}}
 [Validation Error]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Messages.MainDoc" >}}
 
-[Undoing]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.Undo" >}}
+[Undoing]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.Undo" >}}
 
 [FlowReference]: {{< url path="Cortex.Reference.DataTypes.Flows.FlowReference.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

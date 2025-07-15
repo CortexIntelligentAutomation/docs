@@ -1,7 +1,6 @@
 | Component                                                                            | Purpose                                                                                       | Required/Optional           | Server Role                                |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------|--------------------------------------------|
 | [{{% ctx %}} Gateway][Gateway Guide]                                                 | {{< section "/architecture/components/purpose/cortex-gateway.md">}}                           | Required                    | Web Application Server                     |
-| [{{% ctx %}} Studio][Studio Guide]                                                   | {{< section "/architecture/components/purpose/cortex-studio.md" >}}                           | Required                    | Web Application Server                     |
 | [{{% ctx %}} Core Application][Core Application]               | {{< section "/architecture/components/purpose/cortex-innovation-core-application.md" >}}      | Required                    | Application Server                         |
 | &nbsp; &nbsp; > [API Gateway Service][API Gateway Service]                           | {{< section "/architecture/components/purpose/api-gateway-service.md" >}}                     | -                           | -                                          |
 | &nbsp; &nbsp; > [Authorisation Service][Authorisation Service]                       | {{< section "/architecture/components/purpose/authorisation-service.md" >}}                   | -                           | -                                          |
@@ -43,7 +42,6 @@
 [Scheduling Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.SchedulingService.MainDoc" >}}
 [Triggers Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.TriggersService.MainDoc" >}}
 [Gateway Guide]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
-[Studio Guide]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
 [Microsoft Service Fabric]: {{< url path="MSDocs.ServiceFabric.MainDoc" >}}
 [Microsoft Service Fabric Explorer]: {{< url path="MSDocs.ServiceFabric.Explorer" >}}
 [Particular NServiceBus]: {{< url path="Particular.NServiceBus.MainDoc" >}}

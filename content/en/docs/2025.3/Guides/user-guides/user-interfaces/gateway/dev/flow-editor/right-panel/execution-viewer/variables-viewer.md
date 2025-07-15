@@ -72,7 +72,7 @@ See the [Variables Viewer][Variables Viewer tutorial] tutorial for a step-by-ste
 [Dictionary TKey]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
 [Execution Context]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.WhatIsAnExecution.ExecutionContext" >}}
 [Executions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Executions.MainDoc" >}}
-[Executions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid" >}}
+[Executions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.ExecutionsGrid.MainDoc" >}}
 [Flows]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.MainDoc" >}}
 [JSON]: {{< url path="Cortex.Reference.Glossary.F-J.Json" >}}
 [String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}

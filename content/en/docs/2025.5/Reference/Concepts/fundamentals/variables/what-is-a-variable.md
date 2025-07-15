@@ -68,7 +68,7 @@ In the following example `($)TotalUnreadEmails` and `($)FoldersWithUnreadEmails`
 
 ## Variables at Design Time
 
-The [Variables Grid][] is used to [create][], [view][], [modify][], and [delete][] variables. It is opened by clicking `Variables` tab at the bottom of [{{% ctx %}} Studio][CORTEX Studio]. For more information see [Variables Grid][].
+The [Variables Grid][] is used to [create][], [modify][], and [delete][] variables. It is opened by clicking the `Variables` tab on the [bottom panel][] of the [Flow Editor][]. For more information see [Variables Grid][].
 
 Variables can also be created through the use of the [Variable Editor][]. For more information see [Creating Variables][].
 
@@ -80,7 +80,7 @@ Variables must be initialised with data before they can be used in a block.
 
 If an [Input][] or [InputOutput][] property [uses a variable][] that has not been initialised, a [Message][Messages] will be returned stating `Variable is not initialised`, and the name of the variable will be included within the details of the message. The [Message][Messages] will be:
 
-- Displayed in the [Messages Grid][] when [debugging a flow][] in [{{% ctx %}} Studio][CORTEX Studio]
+- Displayed in the [Messages Grid][] when [debugging a flow][] in [{{% ctx %}} Gateway][CORTEX Gateway]
 - Returned as an exception to the caller when a flow is triggered via the [API Gateway Service][]
 
 Variables can be initialised in the following ways:
@@ -105,21 +105,21 @@ If a variable has its `Is Input Variable?` and `Set Default Value?` properties s
 
 ### Viewing Variables
 
-When [debugging a flow][debugging a flow] in [{{% ctx %}} Studio][CORTEX Studio], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Viewer][].
+When [debugging a flow][debugging a flow] in [{{% ctx %}} Gateway][CORTEX Gateway], selecting an execution will display all initialised variables that are in [scope][] in the [Variables Viewer][].
 
 {{< figure src="/images/reference/concepts/fundamentals/variables/what-is-a-variable-variable-panel-2.png" >}}
 
 #### Viewing Basic Data Types
 
-When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables Viewer][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
+When a variable contains a [basic data type][] (e.g. String, Integer, etc), the value will be displayed directly in the [Variables List][]. Strings will be surrounded by double quotes (e.g. `"MyString"`).
 
 #### Viewing Complex Data Types
 
-When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables Viewer][].
+When a variable contains a [complex data type][] that is not a collection data type (e.g. Command or FlowException), the value will be displayed as `Instance of Command` or `Instance of FlowException` respectively in the [Variables List][].
 
-When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables Viewer][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
+When a variable contains a [collection data type][Collections] (e.g. Dictionary, List, or Structure), the [Variables List][] will specify the data type and how many items the collection contains (e.g. `Dictionary<string, object> with 2 item(s)`).
 
-To see the data in the variable, select the variable in the [Variables Viewer][] and the data will be presented in the [Variable Details Viewer][].
+To see the data in the variable, select the variable in the [Variables List][] and the data will be presented in the [Variable Details Viewer][].
 
 The following examples show the [Variable Details Viewer][] when showing a:
 
@@ -210,6 +210,8 @@ None
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [Variable Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
 [Creating Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.CreatingVariables" >}}
+[bottom panel]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MainDoc" >}}
+[Flow Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainDoc" >}}
 
 [Data Types Concept]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.MainDoc" >}}
 [basic data type]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.BasicDataTypes" >}}
@@ -248,12 +250,12 @@ None
 
 [FlowException]: {{< url path="Cortex.Reference.Exceptions.Flows.FlowException.MainDoc" >}}
 
-[CORTEX Studio]: {{< url path="Cortex.Guides.Studio.MainDoc" >}}
-[Variables Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariablesViewer" >}}
-[Variable Details Viewer]: {{< url path="Cortex.Guides.Studio.EastPanel.VariableDetailsViewer" >}}
-[Messages Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
-[Variables Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.VariablesGrid" >}}
-[create]: {{< url path="Cortex.Guides.Studio.SouthPanel.CreatingVariables" >}}
-[view]: {{< url path="Cortex.Guides.Studio.SouthPanel.ViewingVariables" >}}
-[modify]: {{< url path="Cortex.Guides.Studio.SouthPanel.ModifyingVariables" >}}
-[delete]: {{< url path="Cortex.Guides.Studio.SouthPanel.DeletingVariables" >}}
+[CORTEX Gateway]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.MainDoc" >}}
+[Variables Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesViewer" >}}
+[Variable Details Viewer]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariableDetailsViewer" >}}
+[Variables List]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.ExecutionViewer.VariablesList" >}}
+[Messages Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid.MainDoc" >}}
+[Variables Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
+[create]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.CreateVariable" >}}
+[delete]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.DeleteVariable" >}}
+[modify]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.ModifyVariable" >}}

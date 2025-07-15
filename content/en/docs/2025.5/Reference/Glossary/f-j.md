@@ -23,13 +23,13 @@ Different files can store different types of data (i.e. a text file, `.txt`, sto
 
 ### Flow
 
-A flow is an object in [{{% ctx %}} Studio][CORTEX Studio] that contains the logic and actions (in the form of [blocks][]) that the [{{% ctx %}}][CORTEX] [platform][] is able to execute for the [flow developers][].
+A flow is an object in [{{% ctx %}} Gateway][CORTEX Gateway] that contains the logic and actions (in the form of [blocks][]) that the [{{% ctx %}}][CORTEX] [platform][] is able to execute for the [flow developers][].
 
 For more detailed information about flows, see [Fundamentals > Flows][].
 
 ### Flow Developer
 
-A flow developer is a user that has been granted permissions to develop [flows][] in [{{% ctx %}} Studio][CORTEX Studio].
+A flow developer is a user that has been granted permissions to develop [flows][] in [{{% ctx %}} Gateway][CORTEX Gateway].
 
 For more detailed information about granting permissions to develop [flows][], see [Studio Authorisation][Studio Authorisation].
 
@@ -106,9 +106,9 @@ Human-in-the-Loop or HITL allows people to interact with automated systems and p
 
 ### IDE
 
-IDE or Integrated Development Environment is a software application such as [{{% ctx %}} Studio][CORTEX Studio], that allows users to create a program or application.
+IDE or Integrated Development Environment is a software application such as [{{% ctx %}} Gateway][CORTEX Gateway], that allows users to create a program or application.
 
-In [{{% ctx %}} Studio][CORTEX Studio], the users are called [flow developers][], and the programs are called [flows][].
+In [{{% ctx %}} Gateway][CORTEX Gateway], the users are called [flow developers][], and the programs are called [flows][].
 
 Some common and popular examples of IDE's include:
 
@@ -222,7 +222,7 @@ See [What is JSON][What is Json (W3)] for more information.
 [blocks]: {{< url path="Cortex.Reference.Glossary.A-E.Block" >}}
 [code]: {{< url path="Cortex.Reference.Glossary.A-E.Code" >}}
 [CORTEX]: {{< url path="Cortex.Reference.Glossary.A-E.Cortex" >}}
-[CORTEX Studio]: {{< url path="Cortex.Reference.Glossary.A-E.CortexStudio" >}}
+[CORTEX Gateway]: {{< url path="Cortex.Reference.Glossary.A-E.CortexGateway" >}}
 [C#]: {{< url path="Cortex.Reference.Glossary.A-E.CSharp" >}}
 [data type]: {{< url path="Cortex.Reference.Glossary.A-E.DataType" >}}
 [Explicit Cast]: {{< url path="Cortex.Reference.Glossary.A-E.ExplicitCast" >}}

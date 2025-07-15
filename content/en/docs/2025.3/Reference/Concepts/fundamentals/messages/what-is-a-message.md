@@ -103,5 +103,5 @@ None
 [Validation]: {{< url path="Cortex.Reference.Messages.Validation.MainDoc" >}}
 
 [Start an execution]: {{< url path="Cortex.Guides.Studio.MainDisplayArea.StartAnExecution" >}}
-[Messages Grid]: {{< url path="Cortex.Guides.Studio.SouthPanel.MessagesGrid" >}}
+[Messages Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.MessagesGrid.MainDoc" >}}
 [Settings Editor]: {{< url path="Cortex.Guides.Studio.EastPanel.SettingsEditor" >}}

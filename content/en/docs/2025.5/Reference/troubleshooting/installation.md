@@ -165,7 +165,7 @@ To work around this error, either uninstall the platform and reinstall it using 
 
 Check that the `Feature Flags` Guid in the `CortexGateway.SetParameters.xml` file used for installing {{% ctx %}} Gateway is correct. If it is not, update it and reinstall {{% ctx %}} Gateway or update the value in the `web.config` file and restart the website. If the value is correct, please contact [{{% ctx %}} Service Portal][CORTEX Service Portal] for assistance.
 
-### {{% ctx %}} blocks not visible in {{% ctx %}} Studio {#ts-no-blocks}
+### {{% ctx %}} blocks not visible in {{% ctx %}} Gateway {#ts-no-blocks}
 
 #### Application Pool user does not have Modify rights to the Roaming folder
 

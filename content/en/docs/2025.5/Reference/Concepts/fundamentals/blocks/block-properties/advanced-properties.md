@@ -64,7 +64,7 @@ None
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
 [Block Properties]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.MainDoc" >}}
 
-[Property Editor]: {{< url path="Cortex.Guides.Studio.EastPanel.PropertyEditor" >}}
+[Property Editor]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.RightPanel.PropertyEditor" >}}
 
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
