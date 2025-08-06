@@ -37,7 +37,7 @@ To import the CA certificate:
    `https://<loki host address>:<loki reverse proxy port>/loki/api/v1/push`
 | Element | Description |
 |------|-------------|
-| loki host address | The host address of the machine where the Grafana Loki reverse proxy was configured during [Add a New Website][] steps . This must match the configured host name. |
+| loki host address | The host address of the machine where the Grafana Loki reverse proxy was configured during [Add a New Website][] steps. This must match the configured host name. |
 | loki reverse proxy port | The port of the Grafana Loki reverse proxy configured during [Add a New Website][] steps. Usually 2100. |
 
    A correct URL should be similar to `https://hostaddress:2100/loki/api/v1/push`.

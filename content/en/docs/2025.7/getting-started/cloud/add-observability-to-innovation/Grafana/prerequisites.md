@@ -50,7 +50,7 @@ A domain user which is a member of the Local Administrators group on all Applica
 
 #### Service User
 
-Grafana Alloy requires a domain user that is not a member of the Local Administrators group on any of the Application Servers.  This user must be given the `Log on as a service` right otherwise the service will not be able to run.  This permission will be granted as part of the install if it is not already granted.
+Grafana Alloy requires a domain user that is not a member of the Local Administrators group on any of the Application Servers. This user must be given the `Log on as a service` right otherwise the service will not be able to run. This permission will be granted as part of the install if it is not already granted.
 
 ## Next Steps?
 
