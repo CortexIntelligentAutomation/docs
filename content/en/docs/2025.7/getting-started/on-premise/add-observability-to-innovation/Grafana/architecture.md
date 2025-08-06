@@ -12,9 +12,9 @@ weight: 10
 | Component | Purpose | Required/Optional |Server Role |
 |-----------|---------|----------|------------|
 | [Grafana][] | Web application that provides querying and visualisation of data in the form of dashboards. | Required | Web&nbsp;Application&nbsp;Server |
+| [Grafana Alloy][] | An observability collector that can ingest logs and send them to a Grafana Loki instance. It should be deployed to every machine that has a Microsoft Service Fabric node used by {{% ctx %}}. | Required | Application&nbsp;Server |
 | [Grafana Loki][] | Log aggregation system designed to store and query logs from applications and infrastructure. | Required | Web&nbsp;Application&nbsp;Server |
 | [Microsoft&nbsp;Internet&nbsp;Information&nbsp;Services&nbsp;(IIS)][IIS] | Web server used as a reverse proxy for Grafana Loki. | Required | Web&nbsp;Application&nbsp;Server |
-| [Promtail][] | An agent which ships the contents of local logs to a Grafana Loki instance. It should be deployed to every machine that has a Microsoft Service Fabric node used by {{% ctx %}}. | Required | Application&nbsp;Server |
 
 ## Recommended Architecture
 
@@ -36,5 +36,5 @@ The following architecture requires 1 + 1..n servers:
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
 [Grafana]: {{< url path="Grafana.Products.Grafana.MainDoc" >}}
 [Grafana Loki]: {{< url path="Grafana.Products.Loki.MainDoc" >}}
-[Promtail]: {{< url path="Grafana.Products.Loki.Promtail.MainDoc" >}}
+[Grafana Alloy]: {{< url path="Grafana.Products.Loki.Alloy.MainDoc" >}}
 [IIS]: {{< url path="IIS.MainDoc" >}}
