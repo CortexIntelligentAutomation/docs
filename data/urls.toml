@@ -542,6 +542,10 @@
                             SetUpGrafanaLoki = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/#set-up-grafana-loki"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.ImportDashboards]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/import-dashboards"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallAlloy]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-alloy/"
+                            [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallAlloy.ConfigureAlloy]
+                                MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/"
                             [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail]

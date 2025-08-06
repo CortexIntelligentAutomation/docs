@@ -30,6 +30,7 @@ To import the CA certificate:
 ## Configure Grafana Alloy
 
 1. Open the `config.alloy` configuration file, which is located in the folder alongside the `alloy-installer-windows-amd64.exe` file.
+1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
 1. Set the Grafana Loki `url` in the `loki.write "default"` > `endpoint` section which can be found at the end of the file.
 
    The following template has been provided for convenience:
@@ -40,14 +41,13 @@ To import the CA certificate:
 | loki reverse proxy port | The port of the Grafana Loki reverse proxy configured during [Add a New Website][] steps. Usually 2100. |
 
    A correct URL should be similar to `https://hostaddress:2100/loki/api/v1/push`.
-1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
 1. Save the file.
 
 ### Re-Start the Grafana Alloy Service
 
 1. Open `services.msc`.
 1. Locate the `Alloy` service.
-1. Right click on the service name and select `Restart`.
+1. Right click on the service name and select `Restart`. If the service is not already running, select `Start`.
 
 ## Next Steps?
 

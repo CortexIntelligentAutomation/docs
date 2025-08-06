@@ -35,6 +35,6 @@ The following architecture requires 1 + 1..n servers:
 
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
 [Grafana]: {{< url path="Grafana.Products.Grafana.MainDoc" >}}
-[Grafana Loki]: {{< url path="Grafana.Products.Loki.MainDoc" >}}
 [Grafana Alloy]: {{< url path="Grafana.Products.Loki.Alloy.MainDoc" >}}
+[Grafana Loki]: {{< url path="Grafana.Products.Loki.MainDoc" >}}
 [IIS]: {{< url path="IIS.MainDoc" >}}

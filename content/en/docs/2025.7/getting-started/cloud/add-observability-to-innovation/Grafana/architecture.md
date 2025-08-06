@@ -12,8 +12,8 @@ weight: 10
 | Component | Purpose | Required/Optional |Server Role |
 |-----------|---------|----------|------------|
 | [Grafana][] | Web application that provides querying and visualisation of data in the form of dashboards. | Required | Grafana&nbsp;Cloud&nbsp;managed&nbsp;service |
+| [Grafana Alloy][] | An observability collector that can ingest logs and send them to a Grafana Loki instance. It should be deployed to every machine that has a Microsoft Service Fabric node used by {{% ctx %}}. | Required | Application&nbsp;Server |
 | [Grafana&nbsp;Loki][Grafana Loki] | Log aggregation system designed to store and query logs from applications and infrastructure. | Required | Grafana&nbsp;Cloud&nbsp;managed&nbsp;service |
-| [Promtail][] | An agent which ships the contents of local logs to a Grafana Loki instance. It should be deployed to every machine that has a Microsoft Service Fabric node used by {{% ctx %}}. | Required | Application&nbsp;Server |
 
 ## Recommended Architecture
 
@@ -27,6 +27,6 @@ The following architecture requires 1..n Application servers and 1 [Grafana Clou
 
 [Prerequisites]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Prerequisites.MainDoc" >}}
 [Grafana]: {{< url path="Grafana.Products.Grafana.MainDoc" >}}
+[Grafana Alloy]: {{< url path="Grafana.Products.Loki.Alloy.MainDoc" >}}
 [Grafana Cloud]: {{< url path="Grafana.MainDoc" >}}
 [Grafana Loki]: {{< url path="Grafana.Products.Loki.MainDoc" >}}
-[Promtail]: {{< url path="Grafana.Products.Loki.Promtail.MainDoc" >}}
