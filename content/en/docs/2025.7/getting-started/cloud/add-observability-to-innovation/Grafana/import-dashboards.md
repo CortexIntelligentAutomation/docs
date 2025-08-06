@@ -57,7 +57,7 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 1. Select your [configured Loki data source][] in the *Adhoc Options* > *Data source* drop-down menu, e.g. *grafanacloud-cortex-logs*.
 1. Click *Apply*.
 1. Click the dashboard name in the breadcrumb at the top left corner of the page to go back to the dashboard.
-1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Promtail there will be no options available for selection.
+1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Grafana Alloy there will be no options available for selection.
 1. Repeat steps 2 - 9 for all additional default dashboards.
 
 ## Next Steps?
@@ -66,6 +66,6 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 
 [configured Loki data source]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
-[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.3.0.0.GrafanaDashboardsZip" >}}
+[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaDashboardsZip" >}}
 [Loki]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Try it Out]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut.MainDoc" >}}

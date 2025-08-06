@@ -512,12 +512,18 @@
                         MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/"
                         AddANewWebsite = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#add-a-new-website"
                         CreateLokiUser = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#create-loki-user"
+                        ConfigureAuthentication = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#configure-authentication-for-the-reverse-proxy"
                         ConfigureLoki = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki"
                         InstallIISBasicAuthentication = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-iis-basic-authentication"
                         InstallCertificate = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-loki/configure-loki/#install-certificate"
                     [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallPromtail]
                         MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/"
                         ConfigurePromtail = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-promtail/configure-promtail"
+                    [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy]
+                        MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/"
+                        ConfigureAlloy = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
+                        [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
+                            MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
         [Cortex.GettingStarted.Cloud]
             MainDoc = "/docs/getting-started/cloud"
                 [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
@@ -536,6 +542,10 @@
                             SetUpGrafanaLoki = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/setup-loki/#set-up-grafana-loki"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.ImportDashboards]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/import-dashboards"
+                        [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallAlloy]
+                            MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-alloy/"
+                            [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallAlloy.ConfigureAlloy]
+                                MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
                         [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail]
                             MainDoc = "/docs/getting-started/cloud/add-observability-to-innovation/grafana/install-promtail/"
                             [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail]
@@ -3024,6 +3034,9 @@
 # External links
 [Anycast]
     MainDoc = "https://en.wikipedia.org/wiki/Anycast"
+[IT-Tools]
+    MainDoc = "https://it-tools.tech"
+    TokenGenerator = "https://it-tools.tech/token-generator"
 [CancelCommands]
     MainDoc = "https://www.physics.udel.edu/~watson/scen103/ascii.html"
 [ConnectionStrings]
@@ -3078,6 +3091,11 @@
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Loki.Install.zip"
             PromtailInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Promtail.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v3.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.4.0.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.0.0"
+            GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Alloy.Install.zip"
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Loki.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -3087,6 +3105,9 @@
         MainDoc = "https://grafana.com/oss/loki/"
         [Grafana.Products.Loki.Promtail]
             MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
+        [Grafana.Products.Loki.Alloy]
+            MainDoc = "https://grafana.com/docs/loki/latest/send-data/alloy/"
+            1.10.0 = "https://github.com/grafana/alloy/releases/download/v1.10.0/alloy-installer-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
