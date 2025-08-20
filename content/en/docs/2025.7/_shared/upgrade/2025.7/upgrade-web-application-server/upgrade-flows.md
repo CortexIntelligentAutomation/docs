@@ -1,12 +1,11 @@
+1. Copy the following artefact to a folder on the Web Application Server:
+   * Cortex Innovation 2025.7 - Flows Upgrader.zip
+1. Extract the `Cortex Innovation 2025.7 - Flows Upgrader.zip` file to a folder with the same name.
 1. Export the flows to be upgraded from {{% ctx %}} Gateway as a studio package:
     1. In a browser, navigate to {{% ctx %}} Gateway and log in as a user with administrative privileges.
     1. Click on the `Settings` charm and select `Studio Export`.
     1. Select all the flows to be upgraded and click `Export`.
     1. A message should be displayed confirming that the studio package was exported successfully.
-
-1. Copy the following artefact to a folder on the Web Application Server:
-   * Cortex Innovation 2025.7 - Flows Upgrader.zip
-1. Extract the `Cortex Innovation 2025.7 - Flows Upgrader.zip` file to a folder with the same name.
 1. Open a Windows PowerShell (x64) window as administrator.
 1. Navigate PowerShell to inside the `Cortex Innovation 2025.7 - Flows Upgrader` folder using the following command, modifying the path as necessary:
 
