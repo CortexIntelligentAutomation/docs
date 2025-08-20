@@ -9,7 +9,7 @@ Test the platform by creating a new flow and executing it using the following st
     {{< figure src="/images/CORTEX Flow View.PNG" title="New Flow - Number of palettes may differ" >}}
 1. Add a `Set Variable` block and connect it between the `Start Flow` and `End Flow` blocks.
 1. Click the `Set Variable` block to open the Property Editor.
-1. Set the `Value` property to the expression `new Guid.NewGuid()`.
+1. Set the `Value` property to the expression `Guid.NewGuid()`.
 1. Type `Result` into the `Variable` property and click `Create Result`.
 1. In the Variables Grid, set `Is Output Variable?` to `true` for the new `Result` variable.
 1. Add a breakpoint to the `End Flow` block and start the flow. An execution token should appear.

@@ -987,7 +987,6 @@
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/"
                         CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers/#check-application-services"
                         CheckDebuggerApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger/#check-application-services"
-                        ConfigureCodeAnalyser = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/post-upgrade/configure-code-analyser"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway/#republish-packages"
@@ -1000,7 +999,6 @@
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.SingleServerWithoutHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/"
                         CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/upgrade/upgrade-application-server/#check-application-services"
-                        ConfigureCodeAnalyser = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/post-upgrade/configure-code-analyser"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway/#republish-packages"
