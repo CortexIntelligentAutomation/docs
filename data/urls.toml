@@ -51,6 +51,20 @@
                     AddedNewTutorials = "/blog/2025/06/16/2025.5/#added-new-tutorials"
                     AddedInstallationChecklistsToTheInstallInstructions = "/blog/2025/06/16/2025.5/#added-installation-checklists-to-the-install-instructions"
                     AddedDisasterRecoveryGuides = "/blog/2025/06/16/2025.5/#added-disaster-recovery-guides"
+                [Cortex.Blogs.Releases.2025.7]
+                    MainDoc = "/blog/2025/08/26/2025.7/"
+                    SupportForSnmpMibLoadingAndOidTranslation = "/blog/2025/08/26/2025.7/#support-for-snmp-mib-loading-and-oid-translation"
+                    AddedReceivedAtPropertyToSnmpTrapDetails = "/blog/2025/08/26/2025.7/#added-receivedat-property-to-snmp-trap-details"
+                    AddedSupportForNonPrintableCharactersInExecuteSshCommandBlock = "/blog/2025/08/26/2025.7/#added-support-for-non-printable-characters-in-execute-ssh-command-block"
+                    AddedSupportForResponseGracePeriodInExecuteSshCommandBlock = "/blog/2025/08/26/2025.7/#added-support-for-response-grace-period-in-execute-ssh-command-block"
+                    AddedSupportForCustomLogPathOnLogEventBlocks = "/blog/2025/08/26/2025.7/#added-support-for-custom-log-path-on-log-event-blocks"
+                    AddedSupportForStoppingMultipleRunningExecutions = "/blog/2025/08/26/2025.7/#added-support-for-stopping-multiple-running-executions"
+                    ImprovedPerformanceOfStoppingMultipleRunningExecutions = "/blog/2025/08/26/2025.7/#improved-performance-of-stopping-multiple-running-executions"
+                    ImprovedPerformanceOfMonitoringExecutionUpdates = "/blog/2025/08/26/2025.7/#improved-performance-of-monitoring-execution-updates"
+                    MigratedFromPromtailToGrafanaAlloy = "/blog/2025/08/26/2025.7/#migrated-from-promtail-to-grafana-alloy"
+                    AddedNewUserGuide = "/blog/2025/08/26/2025.7/#added-new-user-guide"
+                    AddedNewTutorial = "/blog/2025/08/26/2025.7/#added-new-tutorial"
+                    UpdatedDocumentationToPointToFlowEditorUserGuide = "/blog/2025/08/26/2025.7/#updated-documentation-to-point-to-flow-editor-user-guide"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
