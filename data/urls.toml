@@ -1053,6 +1053,8 @@
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-hierarchy/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowExplorer]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flows-explorer"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.Overview]
@@ -2964,6 +2966,8 @@
                 UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
         [Cortex.Tutorials.Development]
             MainDoc = "/docs/tutorials/development"
+            [Cortex.Tutorials.Development.FlowExplorer]
+                MainDoc = "/docs/tutorials/development/flows-explorer/"
             [Cortex.Tutorials.Development.FlowEditor]
                 MainDoc = "/docs/tutorials/development/flow-editor"
                 [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
@@ -3110,6 +3114,8 @@
         [Grafana.Products.Loki.Alloy]
             MainDoc = "https://grafana.com/docs/loki/latest/send-data/alloy/"
             1.10.0 = "https://github.com/grafana/alloy/releases/download/v1.10.0/alloy-installer-windows-amd64.exe.zip"
+    [Grafana.Products.GrafanaAlloy]
+        MainDoc = "https://grafana.com/oss/alloy-opentelemetry-collector/"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
