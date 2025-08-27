@@ -18,7 +18,7 @@ weight: 1
 
 This release introduces multiple new features to the {{% ctx %}} Platform:
 
-* The [{{% ctx %}} Triggers Service now support SNMP MIB loading and OID translation][Capability - Support for SNMP MIB loading and OID translation].
+* The [{{% ctx %}} Triggers Service now supports SNMP MIB loading and OID translation][Capability - Support for SNMP MIB loading and OID translation].
 * The [SNMP Trap Details now includes the ReceivedAt field][Capability - Added ReceivedAt property to SNMP Trap Details].
 * The [Execute SSH Command Block][] now has support for:
   * [non-printable characters][Capability - Added support for non-printable characters in Execute SSH Command Block]
@@ -28,7 +28,7 @@ This release introduces multiple new features to the {{% ctx %}} Platform:
 
 ## Improved Performance
 
-The performance of the {{% ctx %}} has been improved by:
+The performance of the {{% ctx %}} Platform has been improved by:
 
 * [optimising stopping multiple running executions][Performance - Improved performance of stopping multiple running executions].
 * [optimising the monitoring execution updates][Performance - Improved performance of monitoring execution updates].
@@ -41,8 +41,8 @@ Observability has been updated to use [Grafana Alloy instead of Promtail for ing
 
 The Documentation includes updates related to:
 
-* [adding a new User Guide for the Flow Explorer][Documentation - Added new User Guide].
-* [adding a new Tutorial for the Flow Explorer][Documentation - Added new Tutorial].
+* [adding a new User Guide for the Flows Explorer][Documentation - Added new User Guide].
+* [adding a new Tutorial for the Flows Explorer][Documentation - Added new Tutorial].
 * [pointing documentation to the Flow Editor User Guide][Documentation - Updated documentation to point to Flow Editor User Guide].
 
 For a full list of what has been introduced in this release, please see the [2025.7 Release Notes][]

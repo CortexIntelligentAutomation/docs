@@ -1093,7 +1093,7 @@
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-hierarchy/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
-                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowExplorer]
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowsExplorer]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flows-explorer"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
@@ -3006,8 +3006,6 @@
                 UseVersionControl = "/docs/tutorials/administration/version-control/#use-version-control"
         [Cortex.Tutorials.Development]
             MainDoc = "/docs/tutorials/development"
-            [Cortex.Tutorials.Development.FlowExplorer]
-                MainDoc = "/docs/tutorials/development/flows-explorer/"
             [Cortex.Tutorials.Development.FlowEditor]
                 MainDoc = "/docs/tutorials/development/flow-editor"
                 [Cortex.Tutorials.Development.FlowEditor.BottomPanel]
