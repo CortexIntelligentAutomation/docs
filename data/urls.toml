@@ -51,6 +51,20 @@
                     AddedNewTutorials = "/blog/2025/06/16/2025.5/#added-new-tutorials"
                     AddedInstallationChecklistsToTheInstallInstructions = "/blog/2025/06/16/2025.5/#added-installation-checklists-to-the-install-instructions"
                     AddedDisasterRecoveryGuides = "/blog/2025/06/16/2025.5/#added-disaster-recovery-guides"
+                [Cortex.Blogs.Releases.2025.7]
+                    MainDoc = "/blog/2025/08/26/2025.7/"
+                    SupportForSnmpMibLoadingAndOidTranslation = "/blog/2025/08/26/2025.7/#support-for-snmp-mib-loading-and-oid-translation"
+                    AddedReceivedAtPropertyToSnmpTrapDetails = "/blog/2025/08/26/2025.7/#added-receivedat-property-to-snmp-trap-details"
+                    AddedSupportForNonPrintableCharactersInExecuteSshCommandBlock = "/blog/2025/08/26/2025.7/#added-support-for-non-printable-characters-in-execute-ssh-command-block"
+                    AddedSupportForResponseGracePeriodInExecuteSshCommandBlock = "/blog/2025/08/26/2025.7/#added-support-for-response-grace-period-in-execute-ssh-command-block"
+                    AddedSupportForCustomLogPathOnLogEventBlocks = "/blog/2025/08/26/2025.7/#added-support-for-custom-log-path-on-log-event-blocks"
+                    AddedSupportForStoppingMultipleRunningExecutions = "/blog/2025/08/26/2025.7/#added-support-for-stopping-multiple-running-executions"
+                    ImprovedPerformanceOfStoppingMultipleRunningExecutions = "/blog/2025/08/26/2025.7/#improved-performance-of-stopping-multiple-running-executions"
+                    ImprovedPerformanceOfMonitoringExecutionUpdates = "/blog/2025/08/26/2025.7/#improved-performance-of-monitoring-execution-updates"
+                    MigratedFromPromtailToGrafanaAlloy = "/blog/2025/08/26/2025.7/#migrated-from-promtail-to-grafana-alloy"
+                    AddedNewUserGuide = "/blog/2025/08/26/2025.7/#added-new-user-guide"
+                    AddedNewTutorial = "/blog/2025/08/26/2025.7/#added-new-tutorial"
+                    UpdatedDocumentationToPointToFlowEditorUserGuide = "/blog/2025/08/26/2025.7/#updated-documentation-to-point-to-flow-editor-user-guide"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
@@ -964,6 +978,7 @@
                         ConfigureCodeAnalyser = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/post-upgrade/configure-code-analyser"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/try-it-out"
                         Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/upgrade"
                         UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
                         UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
@@ -976,6 +991,7 @@
                         ConfigureCodeAnalyser = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/post-upgrade/configure-code-analyser"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/try-it-out"
                         Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/upgrade"
                         UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/upgrade/upgrade-application-server"
                         UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3-to-2025.5/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
@@ -1077,6 +1093,8 @@
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/studio-hierarchy/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowsExplorer]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flows-explorer"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.Overview]
@@ -3134,6 +3152,8 @@
         [Grafana.Products.Loki.Alloy]
             MainDoc = "https://grafana.com/docs/loki/latest/send-data/alloy/"
             1.10.0 = "https://github.com/grafana/alloy/releases/download/v1.10.0/alloy-installer-windows-amd64.exe.zip"
+    [Grafana.Products.GrafanaAlloy]
+        MainDoc = "https://grafana.com/oss/alloy-opentelemetry-collector/"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
