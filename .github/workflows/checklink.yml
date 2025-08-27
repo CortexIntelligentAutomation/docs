@@ -36,7 +36,7 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: hugo --environment GitHubPages -d $GITHUB_WORKSPACE/dist --buildFuture
+        run: hugo --minify --environment GitHubPages -d $GITHUB_WORKSPACE/dist --buildFuture
       - name: Generate Search index
         run: |
           node ./assets/js/generate-lunr-index.js $GITHUB_WORKSPACE/dist

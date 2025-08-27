@@ -62,7 +62,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --environment GitHubPages
+          hugo --minify --environment GitHubPages
       - name: Generate Search index
         run: |
           node ./assets/js/generate-lunr-index.js
