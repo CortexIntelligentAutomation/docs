@@ -87,7 +87,7 @@ This guide describes how to upgrade the Loki installation. Please ensure that th
 
 1. [Upgrade Promtail][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.BackupOldFiles" >}}
-[Grafana Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.UpgradeGrafana" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.UpgradePromtail" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.BackupOldFiles" >}}
+[Grafana Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.UpgradeGrafana" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.UpgradePromtail" >}}

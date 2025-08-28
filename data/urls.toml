@@ -1048,6 +1048,52 @@
                         Download = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                         UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/try-it-out"
+
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/try-it-out"
+                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-grafana"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-loki"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/try-it-out"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards.Grafana]
+                            Download = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
+                            UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/upgrade-dashboards"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/try-it-out"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/try-it-out"
+                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-grafana"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-loki"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/try-it-out"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#verify-old-version"
         [Cortex.Guides.UserGuides]
             MainDoc = "/docs/guides/user-guides/"
             [Cortex.Guides.UserGuides.UserInterfaces]

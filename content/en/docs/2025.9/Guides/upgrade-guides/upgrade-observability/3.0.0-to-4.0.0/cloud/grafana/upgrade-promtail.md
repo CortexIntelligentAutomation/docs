@@ -69,7 +69,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.BackupOldFiles" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.MakeArtefactsAvailable" >}}
-[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.Prerequisites" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.TryItOut" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.BackupOldFiles" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.Prerequisites" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.TryItOut" >}}

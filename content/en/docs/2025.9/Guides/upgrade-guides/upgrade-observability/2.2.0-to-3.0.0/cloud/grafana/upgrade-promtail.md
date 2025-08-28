@@ -2,12 +2,12 @@
 title: "Upgrade Promtail"
 linkTitle: "Upgrade Promtail"
 description: "The steps to upgrade Promtail."
-weight: 4
+weight: 2
 ---
 
 # {{% param title %}}
 
-This guide describes how to upgrade the Promtail installation. Please ensure that the [Loki Upgrade][] has been completed before starting this upgrade.
+This guide describes how to upgrade the Promtail installation. Please ensure that the [Prerequisites] for upgrading Observability have been completed before starting this upgrade.
 
 ## Perform Upgrade
 
@@ -41,7 +41,7 @@ These steps will need to be performed on all application servers that host a Pro
 1. Copy the `promtail-windows-amd64.exe` file into the folder that Promtail was previously running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`.
 1. In File Explorer, navigate to the extracted `Promtail.Install` folder created as part of [Make Artefacts Available][].
 1. Copy the contents of this location into the folder that Promtail was previously running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`.
-1. Open the new `promtail-local-config.yaml` in a text editor:
+1. Open `promtail-local-config.yaml` in a text editor:
 
     * Update the *filename* property under *positions* to be the value found in the [backed up][] version.
     * Update the *url* property under *clients* to be the value found in the [backed up][] version.
@@ -69,7 +69,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.BackupOldFiles" >}}
-[Loki Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.UpgradeLoki" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.TryItOut" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.BackupOldFiles" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.Prerequisites" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.TryItOut" >}}

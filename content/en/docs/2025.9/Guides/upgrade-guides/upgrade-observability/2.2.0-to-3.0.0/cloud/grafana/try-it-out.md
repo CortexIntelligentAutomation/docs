@@ -44,5 +44,5 @@ If other requests have been made then there may be more than one request visible
 If other requests have been made then there may be more than one request visible on the dashboard.
 {{% / alert %}}
 
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.UpgradePromtail" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.VerifyOldVersion" >}}
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.UpgradePromtail" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.VerifyOldVersion" >}}

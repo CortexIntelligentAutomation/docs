@@ -35,6 +35,6 @@ You will receive warnings that *A dashboard or folder with the same name already
 
 1. [Try it out][]
 
-[extracted]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Dashboards.Grafana.Download" >}}
+[extracted]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards.Grafana.Download" >}}
 [Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.3.0.0.GrafanaDashboardsZip" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Dashboards.Grafana.TryItOut" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards.Grafana.TryItOut" >}}
