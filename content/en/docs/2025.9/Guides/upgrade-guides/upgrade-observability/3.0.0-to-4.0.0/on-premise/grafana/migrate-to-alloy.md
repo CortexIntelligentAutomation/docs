@@ -11,6 +11,8 @@ This guide describes how to migrate from a Promtail Installation to Grafana Allo
 
 ## Prerequisites
 
+1. TODO - Url changes
+
 ## Perform Migration
 
 {{% alert title="Note" %}}
@@ -30,7 +32,7 @@ These steps will need to be performed on all application servers that host a Pro
 1. Click *OK* when the successful removal of the Promtail service is confirmed.
 1. Open a File Explorer and navigate to the folder where Promtail was running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`
 1. Delete the Promtail directory
-1. TODO
+1. TODO - Migration process
 
 ## Next Steps?
 
