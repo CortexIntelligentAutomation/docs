@@ -1084,7 +1084,7 @@
                             TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/try-it-out"
                             UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-grafana"
                             UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-loki"
-                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-promtail"
+                            MigrateToAlloy = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/migrate-to-alloy"
                             VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#verify-old-version"
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud]
                         [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana]
