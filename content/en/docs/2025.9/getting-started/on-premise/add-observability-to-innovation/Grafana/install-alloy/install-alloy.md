@@ -11,7 +11,7 @@ This guide describes how to install Grafana Alloy on the Application Server(s). 
 
 ## Install Grafana Alloy
 
-1. Download the [Grafana Alloy 1.10.0][] archive.
+1. Download the [Grafana Alloy 1.10.2][] archive.
 1. Extract content of the downloaded archive to a suitable location, e.g. `C:\Program Data\Cortex\Observability\Grafana Alloy`.
 1. Download the [Grafana Alloy.zip][] archive and extract its contents alongside the previously extracted Grafana Alloy `alloy-installer-windows-amd64.exe`.
 This archive contains the `config.alloy` configuration file and PowerShell scripts to install Grafana Alloy as a Windows service.
@@ -26,7 +26,7 @@ This archive contains the `config.alloy` configuration file and PowerShell scrip
 1. [Configure Grafana Alloy][]
 
 [Configure Grafana Alloy]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.ConfigureAlloy" >}}
-[Grafana Alloy 1.10.0]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.0" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
 [Grafana Alloy.zip]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaAlloyInstallZip" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
 [Reverse Proxy Authentication]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.ConfigureAuthentication" >}}
