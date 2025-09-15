@@ -35,7 +35,11 @@ The performance of the {{% ctx %}} Platform has been improved by:
 
 ## Improved Observability
 
-Observability has been updated to use [Grafana Alloy instead of Promtail for ingesting logs to Grafana Loki][Observability - Migrated from Promtail to Grafana Alloy].
+* Observability has been updated to use [Grafana Alloy instead of Promtail for ingesting logs to Grafana Loki][Observability - Migrated from Promtail to Grafana Alloy].
+
+* The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major versions:
+  * Grafana - 12.1.1
+  * Loki - 3.5.5
 
 ## Improved Documentation
 
@@ -66,6 +70,7 @@ For a full list of what has been introduced in this release, please see the [202
 [Performance - Improved performance of stopping multiple running executions]: {{< url path="Cortex.Blogs.Releases.2025.7.ImprovedPerformanceOfStoppingMultipleRunningExecutions" version="2025.7" >}}
 [Performance - Improved performance of monitoring execution updates]: {{< url path="Cortex.Blogs.Releases.2025.7.ImprovedPerformanceOfMonitoringExecutionUpdates" version="2025.7" >}}
 [Observability - Migrated from Promtail to Grafana Alloy]: {{< url path="Cortex.Blogs.Releases.2025.7.MigratedFromPromtailToGrafanaAlloy" version="2025.7" >}}
+[Observability Upgrades]: {{< url path="Cortex.Blogs.Releases.2025.7.ObservabilityUpgrades" version="2025.7" >}}
 [Documentation - Added new User Guide]: {{< url path="Cortex.Blogs.Releases.2025.7.AddedNewUserGuide" version="2025.7" >}}
 [Documentation - Added new Tutorial]: {{< url path="Cortex.Blogs.Releases.2025.7.AddedNewTutorial" version="2025.7" >}}
 [Documentation - Updated documentation to point to Flow Editor User Guide]: {{< url path="Cortex.Blogs.Releases.2025.7.UpdatedDocumentationToPointToFlowEditorUserGuide" version="2025.7" >}}

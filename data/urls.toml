@@ -62,6 +62,7 @@
                     ImprovedPerformanceOfStoppingMultipleRunningExecutions = "/blog/2025/08/26/2025.7/#improved-performance-of-stopping-multiple-running-executions"
                     ImprovedPerformanceOfMonitoringExecutionUpdates = "/blog/2025/08/26/2025.7/#improved-performance-of-monitoring-execution-updates"
                     MigratedFromPromtailToGrafanaAlloy = "/blog/2025/08/26/2025.7/#migrated-from-promtail-to-grafana-alloy"
+                    ObservabilityUpgrades = "/blog/2025/08/26/2025.7/#observability-upgrades"
                     AddedNewUserGuide = "/blog/2025/08/26/2025.7/#added-new-user-guide"
                     AddedNewTutorial = "/blog/2025/08/26/2025.7/#added-new-tutorial"
                     UpdatedDocumentationToPointToFlowEditorUserGuide = "/blog/2025/08/26/2025.7/#updated-documentation-to-point-to-flow-editor-user-guide"
@@ -3151,19 +3152,24 @@
             MainDoc = "https://grafana.com/docs/loki/latest/clients/promtail/"
         [Grafana.Products.Loki.Alloy]
             MainDoc = "https://grafana.com/docs/loki/latest/send-data/alloy/"
-            1.10.0 = "https://github.com/grafana/alloy/releases/download/v1.10.0/alloy-installer-windows-amd64.exe.zip"
+            1.10.2 = "https://github.com/grafana/alloy/releases/download/v1.10.2/alloy-installer-windows-amd64.exe.zip"
     [Grafana.Products.GrafanaAlloy]
         MainDoc = "https://grafana.com/oss/alloy-opentelemetry-collector/"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp]
         Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1]
         Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+    [Grafana.SelfManaged.Downloads.GrafanaWebApp.12.1.1]
+        Windows = "https://grafana.com/grafana/download/12.1.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
     [Grafana.SelfManaged.Downloads.GrafanaLoki]
         Release = "https://github.com/grafana/loki/releases/tag/v2.5.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0]
         Release = "https://github.com/grafana/loki/releases/tag/v3.0.0"
         GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/loki-windows-amd64.exe.zip"
+    [Grafana.SelfManaged.Downloads.GrafanaLoki.3.5.5]
+        Release = "https://github.com/grafana/loki/releases/tag/v3.5.5"
+        GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.5.5/loki-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail]
         PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v2.5.0/promtail-windows-amd64.exe.zip"
     [Grafana.SelfManaged.Downloads.Promtail.3.0.0]
