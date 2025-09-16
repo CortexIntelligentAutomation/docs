@@ -39,7 +39,7 @@ The performance of the {{% ctx %}} Platform has been improved by:
 
 * The following [components within the Observability platform have been updated][Observability Upgrades] to the latest major versions:
   * Grafana - 12.1.1
-  * Loki - 3.5.5
+  * Grafana Loki - 3.5.5
 
 ## Improved Documentation
 
