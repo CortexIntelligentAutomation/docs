@@ -51,12 +51,12 @@ weight: 1
 1. Open File Explorer and navigate to the location that Grafana was previously installed to, typically `%SystemDrive%\Program Files\GrafanaLabs\grafana\conf`.
 1. Copy the `custom.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. Copy the `defaults.ini` file and save it to the `Observability Backups` folder created at step 1.
-1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\Program Data\Cortex\Observability\Loki\`.
+1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\ProgramData\Cortex\Observability\Loki\`.
 1. Copy the `loki-local-config.yaml` file and save it to the `Observability Backups` folder created at step 1.
 1. On each Application Server that Promtail is installed on:
 
     1. Create a folder called `Observability Backups` in a known location.
-    1. Open File Explorer and navigate to the location that Promtail is running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`.
+    1. Open File Explorer and navigate to the location that Promtail is running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
     1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.1.
 
 ## Next Steps?
