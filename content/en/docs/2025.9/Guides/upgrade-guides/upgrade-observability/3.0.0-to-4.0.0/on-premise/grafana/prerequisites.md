@@ -22,7 +22,7 @@ weight: 1
 
 1. Download the required artefacts to a folder on your machine:
 
-    * [Grafana 12.1.1][] Standalone Windows Binaries archive.
+    * [Grafana 12.1.1][] Standalone Windows Binaries (64 Bit) archive.
     * [Grafana Alloy 1.10.2][] archive.
     * [Grafana Alloy Install][] archive.
     * [Grafana Loki 3.5.5][] archive.
