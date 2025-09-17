@@ -2,21 +2,12 @@
 title: "Migrate to Grafana Alloy"
 linkTitle: "Migrate to Grafana Alloy"
 description: "The steps to Migrate Promtail to Grafana Alloy."
-weight: 4
+weight: 2
 ---
 
 # {{% param title %}}
 
-This guide describes how to migrate from a Promtail Installation to Grafana Alloy. Please ensure that the [Loki Upgrade][] has been completed before starting this upgrade.
-
-## Modify Client URL for Grafana Loki
-
-1. Open the `promtail-local-config.yaml` configuration file, which is located in the folder alongside the `promtail-windows-amd64.exe` file e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
-1. Locate the Grafana Loki `URL` in the `clients` section.
-1. Remove the `username:password@` from the URL
-
-   A correct URL should be changed from `https://username:password@hostaddress:2100/loki/api/v1/push` to `https://hostaddress:2100/loki/api/v1/push`.
-1. Save the file.
+This guide describes how to migrate from a Promtail Installation to Grafana Alloy.
 
 ## Perform Migration
 
@@ -48,15 +39,21 @@ These steps will need to be performed on all application servers that host a Pro
     ```
 
 1. When prompted, enter the credentials that the Grafana Alloy Service should run as.
-1. When prompted, enter the bearer token that was specified when [configuring authentication for the Reverse Proxy][Reverse Proxy Authentication]
+1. When prompted to enter the bearer token, leave it blank and press Enter.
 1. Once the migration has completed, delete the now obsolete Promtail directory e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
+
+## Configure Grafana Alloy
+
+1. Open the `config.alloy` configuration file, which is located in the folder alongside the `alloy-installer-windows-amd64.exe` file.
+1. Delete the line containing `bearer_token_file` in the `loki.write "default"` > `endpoint` section, which can be found at the end of the file.
+1. Save the file.
+1. Open `services.msc`.
+1. Locate the `Alloy` service.
+1. Right click on the service name and select `Restart`. If the service is not already running, select `Start`.
 
 ## Next Steps?
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.BackupOldFiles" >}}
-[Loki Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.UpgradeLoki" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Reverse Proxy Authentication]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.SetupAuthentication" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.TryItOut" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.TryItOut" >}}

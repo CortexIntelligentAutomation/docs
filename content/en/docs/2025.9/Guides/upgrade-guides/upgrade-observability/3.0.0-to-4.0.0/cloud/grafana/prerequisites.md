@@ -21,11 +21,11 @@ weight: 1
 
 1. Download the required artefacts to a folder on your machine:
 
-    * [Promtail 3.0.0][] archive.
-    * [Promtail Install][] archive.
+    * [Grafana Alloy 1.10.2][] archive.
+    * [Grafana Alloy Install][] archive.
 
-1. Extract the downloaded `promtail-windows-amd64.exe` archive to a folder with the same name.
-1. Extract the downloaded `Promtail.Install` archive to a folder with the same name.
+1. Extract the downloaded `alloy-installer-windows-amd64.exe` archive to a folder with the same name.
+1. Extract the downloaded `Grafana.Alloy.Install` archive to a folder with the same name.
 
 ## Backup Old Files
 
@@ -37,8 +37,8 @@ On each Application Server that Promtail is installed on:
 
 ## Next Steps?
 
-1. [Upgrade Promtail][]
+1. [Migrate Promtail to Grafana Alloy][Migrate to Alloy]
 
-[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
-[Promtail Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.UpgradePromtail" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
+[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaAlloyInstallZip" >}}
+[Migrate to Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MigrateToAlloy" >}}

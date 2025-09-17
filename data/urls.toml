@@ -1092,6 +1092,7 @@
                         [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana]
                             BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#backup-old-files"
                             MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            MigrateToAlloy = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/migrate-to-alloy"
                             Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites"
                             TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/try-it-out"
                             UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/upgrade-promtail"
