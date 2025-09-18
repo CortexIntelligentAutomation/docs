@@ -2,22 +2,16 @@
 title: "Try it out"
 linkTitle: "Try it out"
 description: "Information about trying out the observability platform after upgrade."
-weight: 5
+weight: 3
 ---
 
 # {{% param title %}}
 
 This guide describes how to verify that the upgrade has been successful. Please ensure that [Upgrade Promtail][] has been completed before taking these steps.
 
-## Confirm Grafana Upgrade
-
-1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`.
-1. Identify the version number under the login prompt.
-1. Confirm the version has updated to be 10.4.1.
-
 ## Confirm Dashboards Load
 
-1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`
+1. Navigate to your Grafana website e.g. `https://{Team URL}.grafana.net`
 1. Login to Grafana.
 1. Open the *Dashboards* page via the menu on the left sidebar.
 1. Select the folder that hosts the Cortex Dashboards, e.g. *Cortex*
@@ -50,5 +44,5 @@ If other requests have been made then there may be more than one request visible
 If other requests have been made then there may be more than one request visible on the dashboard.
 {{% / alert %}}
 
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.UpgradePromtail" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.VerifyOldVersion" >}}
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.UpgradePromtail" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.VerifyOldVersion" >}}

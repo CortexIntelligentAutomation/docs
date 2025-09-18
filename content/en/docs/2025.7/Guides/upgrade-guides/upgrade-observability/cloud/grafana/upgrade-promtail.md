@@ -17,7 +17,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Log in to the application server.
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where Promtail is running from, e.g. `cd C:\Program Data\Cortex\Observability\Promtail`.
+1. Change the directory to the folder where Promtail is running from, e.g. `cd C:\ProgramData\Cortex\Observability\Promtail`.
 1. Remove the current Promtail installation by executing the following command:
 
     ``` powershell
@@ -26,7 +26,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Click *Yes* when prompted for confirmation that you wish to remove the service.
 1. Click *OK* when the successful removal of the Promtail service is confirmed.
-1. Open a File Explorer and navigate to the folder where Promtail was running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`
+1. Open a File Explorer and navigate to the folder where Promtail was running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`
 1. Delete the following files from the directory:
 
     * Install-Promtail.ps1
@@ -38,9 +38,9 @@ These steps will need to be performed on all application servers that host a Pro
     * Stop-Promtail.ps1
 
 1. In File Explorer, navigate to the extracted `promtail-windows-amd64.exe` folder created as part of [Make Artefacts Available][].
-1. Copy the `promtail-windows-amd64.exe` file into the folder that Promtail was previously running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`.
+1. Copy the `promtail-windows-amd64.exe` file into the folder that Promtail was previously running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
 1. In File Explorer, navigate to the extracted `Promtail.Install` folder created as part of [Make Artefacts Available][].
-1. Copy the contents of this location into the folder that Promtail was previously running from, e.g. `C:\Program Data\Cortex\Observability\Promtail`.
+1. Copy the contents of this location into the folder that Promtail was previously running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
 1. Open `promtail-local-config.yaml` in a text editor:
 
     * Update the *filename* property under *positions* to be the value found in the [backed up][] version.
@@ -48,7 +48,7 @@ These steps will need to be performed on all application servers that host a Pro
     * Save the new `promtail-local-config.yaml` file.
 
 1. Run Windows PowerShell as Administrator.
-1. Change the directory to the folder where the Promtail files have been copied to, e.g. `cd C:\Program Data\Cortex\Observability\Promtail`.
+1. Change the directory to the folder where the Promtail files have been copied to, e.g. `cd C:\ProgramData\Cortex\Observability\Promtail`.
 1. Install Promtail by executing the following command:
 
     ``` powershell

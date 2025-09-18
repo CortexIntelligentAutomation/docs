@@ -41,4 +41,4 @@ On each Application Server that Promtail is installed on:
 
 [Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
 [Promtail Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.UpgradePromtail" >}}
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.UpgradePromtail" >}}
