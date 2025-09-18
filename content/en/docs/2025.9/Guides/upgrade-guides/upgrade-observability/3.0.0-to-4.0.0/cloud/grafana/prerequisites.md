@@ -7,16 +7,6 @@ weight: 1
 
 # {{% param title %}}
 
-## Verify Old Version
-
-1. Navigate to your Grafana website e.g. `https://{Team URL}.grafana.net`
-1. Login to Grafana.
-1. Open the *Dashboards* page via the menu on the left sidebar.
-1. Select the folder that hosts the Cortex Dashboards, e.g. *Cortex*
-1. Click the *Flow Execution Requests* dashboard to open it.
-1. Change the time period to be *Last 90 days* and confirm data is present.
-1. Make a note of values returned in the Overview tiles, or alternatively take a screenshot of the dashboard, to use later to verify the upgrade.
-
 ## Make Artefacts Available
 
 1. Download the required artefacts to a folder on your machine:
