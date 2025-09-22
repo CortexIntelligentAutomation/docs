@@ -40,8 +40,8 @@ The application servers (as described in {{< ahref path="Cortex.GettingStarted.O
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | IIS[^2] | Other&nbsp;Software |
 |------------------|-------------------------|---------|----------|
-| Web Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | 10.0.20348[^3]<br>10.0.17763[^4]<br>[URL Rewrite module 2.1][] | [Grafana 10.4.1][] *Enterprise Edition*<br>[Grafana Loki 3.0.0][]|
-| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | | [Grafana Alloy 1.10.0][]|
+| Web Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | 10.0.20348[^3]<br>10.0.17763[^4]<br>[URL Rewrite module 2.1][] | [Grafana 12.1.1][] *Enterprise Edition*<br>[Grafana Loki 3.5.5][]|
+| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | | [Grafana Alloy 1.10.2][]|
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 [^2]: IIS is supported; other web servers, including IIS Express are not supported.
@@ -161,9 +161,9 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 [configuring Grafana to use HTTPS]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.ConfigureHTTPS" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" >}}
 [Make Installation Artefacts Available]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.MakeInstallationArtefactsAvailableNew" >}}
-[Grafana 10.4.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1.Windows" >}}
-[Grafana Alloy 1.10.0]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.0" >}}
-[Grafana Loki 3.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0.GrafanaLokiInstallZip" >}}
+[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12.1.1.Windows" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
+[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.5.5.GrafanaLokiInstallZip" >}}
 [Install Grafana]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.MainDoc" >}}
 [installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.InstallCertificate" >}}
 [Let’s Encrypt]: {{< url path="LetsEncrypt.MainDoc" >}}

@@ -1,25 +1,13 @@
 ---
 title: "Try it out"
 linkTitle: "Try it out"
-description: "Information about trying out the observability platform after upgrade."
+description: "Information about trying out the observability platform after upgrading the dashboards."
 weight: 3
 ---
 
 # {{% param title %}}
 
-This guide describes how to verify that the upgrade has been successful. Please ensure that [Upgrade Promtail][] has been completed before taking these steps.
-
-## Confirm Dashboards Load
-
-1. Navigate to your Grafana website e.g. `https://{Team URL}.grafana.net`
-1. Login to Grafana.
-1. Open the *Dashboards* page via the menu on the left sidebar.
-1. Select the folder that hosts the Cortex Dashboards, e.g. *Cortex*
-1. Click the *Flow Execution Requests* dashboard to open it.
-1. Change the time period to be *Last 90 days* and confirm data is present.
-1. Confirm the data from the previous step is similar to the data captured when [verifying the old version][].
-
-## Confirm New Data is Processed
+## Confirm New Dashboards Display Data
 
 {{% alert title="Note" %}}
 Any flow can be used that exists on the system and can be executed.
@@ -44,5 +32,5 @@ If other requests have been made then there may be more than one request visible
 If other requests have been made then there may be more than one request visible on the dashboard.
 {{% / alert %}}
 
-[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.UpgradePromtail" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana.VerifyOldVersion" >}}
+[Upgrade Promtail]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.UpgradePromtail" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.VerifyOldVersion" >}}
