@@ -45,6 +45,12 @@ weight: 1
 1. Extract the downloaded `Grafana.Alloy.Install` archive to a folder with the same name.
 1. Extract the downloaded `loki-windows-amd64.exe` archive to a folder with the same name.
 
+## Security Requirements
+
+### Service User
+
+Grafana Alloy requires a domain user that is not a member of the Local Administrators group on any of the Application Servers. This user must be given the `Log on as a service` right otherwise the service will not be able to run. This permission will be granted as part of the install if it is not already granted.
+
 ## Backup Old Files
 
 1. On the server that Grafana and Loki is installed on, create a folder called `Observability Backups` in a known location.
