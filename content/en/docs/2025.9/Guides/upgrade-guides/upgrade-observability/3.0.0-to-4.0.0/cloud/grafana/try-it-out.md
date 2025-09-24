@@ -1,13 +1,15 @@
 ---
-title: "Try it Out"
-linkTitle: "Try it Out"
-description: "Information about trying out Grafana Observability Dashboards for the first time."
-weight: 60
+title: "Try it out"
+linkTitle: "Try it out"
+description: "Information about trying out the observability platform after upgrade."
+weight: 3
 ---
 
 # {{% param title %}}
 
-## Check Dashboards are Displaying Data
+This guide describes how to verify that the upgrade has been successful. Please ensure that [Migration to Grafana Alloy][Migrate To Alloy] has been completed before taking these steps.
+
+## Confirm New Data is Processed
 
 {{% alert title="Note" %}}
 This test uses the test flow published as part of testing the {{% ctx %}} installation. See {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOutPublishedFlowNew" title="Testing HA installation" >}} or {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.TryItOutPublishedFlowNew" title="Testing non-HA installation" >}}. An alternative flow can be used that exists on the system and can be executed.
@@ -26,7 +28,7 @@ This test uses the test flow published as part of testing the {{% ctx %}} instal
 
     {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you may need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
-1. Once the request has completed, using a web browser, log in to your configured Grafana.
+1. Once the request has completed, in your web browser, navigate to and log in to your configured Grafana.
 1. Open the *Dashboards* page via the menu on the left sidebar.
 1. Click the folder name that the dashboards were imported to.
 1. Click the *Flow Execution Requests* dashboard to open it.
@@ -42,6 +44,8 @@ If other requests have been made then there may be more than one request visible
 If other requests have been made then there may be more than one request visible on the dashboard.
 {{% / alert %}}
 
-[HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
+[HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
+[Migrate To Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MigrateToAlloy" >}}
+[Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana.VerifyOldVersion" >}}

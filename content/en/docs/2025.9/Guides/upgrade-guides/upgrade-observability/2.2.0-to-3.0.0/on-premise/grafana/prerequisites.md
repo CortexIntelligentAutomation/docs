@@ -57,4 +57,4 @@ weight: 1
 [Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.GrafanaLokiInstallZip" >}}
 [Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
 [Promtail Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
-[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana.UpgradeGrafana" >}}
+[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.UpgradeGrafana" >}}
