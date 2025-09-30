@@ -18,18 +18,6 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.7 to 2025.9. P
 
 {{< section "/upgrade/2025.9/upgrade-web-application-server/run-gateway-script.md" >}}
 
-## Upgrade Flows
-
-{{< section "/upgrade/2025.9/upgrade-web-application-server/upgrade-flows.md" >}}
-
-{{% alert title="Note" %}}
-Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.RepublishPackages" title="republish all packages" >}} that have previously been published.
-{{% /alert %}}
-
-## Republish Packages
-
-{{< section "/upgrade/2025.9/upgrade-web-application-server/republish-packages.md" >}}
-
 ## Preserve installation files
 
 {{< section "/preserve-installation-files.md" >}}
