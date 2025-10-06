@@ -539,6 +539,10 @@
                         ConfigureAlloy = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
                         [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
                             MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
+            [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
+                PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
+                [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation]
+                    MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
         [Cortex.GettingStarted.Cloud]
             MainDoc = "/docs/getting-started/cloud"
                 [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
