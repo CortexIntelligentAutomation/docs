@@ -47,10 +47,6 @@ A domain user with the necessary administrative permissions to log on to the Con
 
 A service user with the necessary permissions to execute PowerShell scripts on the Configuration Portal host server, and has right to query Active Directory.
 
-### IIS Application Pool User
-
-For the Configuration Portal, a domain user must be available to run the IIS Application Pool. This user must be given `Log on as a service` and `Log on as a batch job` permissions otherwise the Application Pool will not be able to run. Information about how to do this will be given during installation.
-
 ### Domain Groups
 
 The Active Directory groups to which access to the Configuration Portal should be granted must be known prior to installation.
