@@ -9,4 +9,4 @@ weight: 60
 
 ## Export Individual Flows
 
-{{< scribe title="How_to_use_Studio_Export_to_Export_Individual_Flows" id="eHoR7gKNR_qsvU8Qoa73KA" >}}
+{{< scribe title="Using_Studio_Export_to_Export_Individual_Flows" id="Fv_o2GpSuSKeFJkYDH7kQ" >}}

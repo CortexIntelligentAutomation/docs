@@ -9,4 +9,4 @@ weight: 70
 
 ## Manage Flow Hierarchy
 
-{{< scribe title="How_to_use_Studio_Hierarchy" id="7DuT-9DETw6OzXRq37oMGQ" >}}
+{{< scribe title="How_to_use_Studio_Hierarchy_to_Move_Flows_to_a_Different_Group" id="-JNjJhgSR2mNZlsp3Zs29A" >}}

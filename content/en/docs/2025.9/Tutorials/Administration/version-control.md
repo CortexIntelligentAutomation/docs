@@ -9,4 +9,4 @@ weight: 150
 
 ## Use Version Control
 
-{{< scribe title="How_to_use_Version_Control_Management" id="DsyGmkx8QRynHP54ZRP0Ew" >}}
+{{< scribe title="How_to_use_Version_Control_to_Commit_and_Get_Master_Versions_of_Flows" id="slcKDT8jSaOXI_RBZyQ_cg" >}}
