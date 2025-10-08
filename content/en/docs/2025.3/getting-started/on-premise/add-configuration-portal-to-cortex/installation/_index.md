@@ -23,9 +23,10 @@ To import the flows, perform the following steps:
     1. `Configuration.Portal.Core.Flows.studiopkg`, which can be found in the folder named `Cortex Configuration Portal`.
     1. `Interaction.Portal.Core.Flows.studiopkg`, which can be found in the folder named `Cortex Interaction Portal`.
     1. `User Access Management.Flows.studiopkg`, which can be found in the folder named `User Access Management`.
-1. Once imported, Set up the access to these flows using Studio Authorisation.
+1. Once imported, set up the access to these flows using Studio Authorisation.
+
 {{< alert type="note" title="Note" >}}
-Once the flows are imported, they should be available from the ‘Dev’ charms menu. Note that you may need to refresh {{% ctx %}} Gateway after importing
+Once the flows are imported, they should be available from the ‘Dev’ charms menu. Note that you may need to refresh {{% ctx %}} Gateway after importing.
 {{< /alert >}}
 
 ### Configure the flows
@@ -33,6 +34,7 @@ Once the flows are imported, they should be available from the ‘Dev’ charms 
 #### User Access Management flow
 
 1. Within {{% ctx %}} Gateway, open the `Dev` charms then search for `UAM-Get-Config`
+1. Open the flow.
 1. Click on the first `Set Variable` block to show the properties.
 1. Within the value field, update the following parameters only:
     | Name                               | Description                                                                                                                                                                                                                                                                | Example                                                                                                    |
@@ -40,7 +42,7 @@ Once the flows are imported, they should be available from the ‘Dev’ charms 
     | PowerShellDetails.Username         | The username of an account that can run PowerShell commands on all {{% ctx %}} servers, e.g., Service Account. {{< alert type="note" title="Note" >}}This user should be an administrator across the {{% ctx %}} servers.{{< /alert >}}                                    | `"ctx_serviceuser"`                                                                                        |
     | PowerShellDetails.Password         | The password for the username specified for `PowerShellDetails.Username`. {{< alert type="note" title="Note" >}}This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} | `"#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"` |
     | PowerShellDetails.Domain           | The domain for the username specified for `PowerShellDetails.Username`.                                                                                                                                                                                                    | `"domain.com"`                                                                                             |
-    | PowerShellDetails.Host             | The FQDN of the host executing the PowerShell commands. {{< alert type="note" title="Note" >}}This can be `Environment.MachineName` to use the current node executing the flow.{{< /alert >}}                                                                              | `"cortexapp-machine.domain.com"` or `Environment.MachineName`                                              |
+    | PowerShellDetails.Host             | The host executing the PowerShell commands. {{< alert type="note" title="Note" >}}This can be `Environment.MachineName` to use the current node executing the flow.{{< /alert >}}                                                                                          | `"cortexapp-machine.domain.com"` or `"cortexapp-machine"` or `Environment.MachineName`                     |
     | PowerShellDetails.Port             | The PowerShell port.                                                                                                                                                                                                                                                       | `5985`                                                                                                     |
     | PowerShellDetails.SSL              | Whether to use SSL for the PowerShell command.                                                                                                                                                                                                                             | `false`                                                                                                    |
     | RecursiveAccessControl             | Whether child user groups should inherit access control granted to parents.                                                                                                                                                                                                | `false`                                                                                                    |
@@ -82,6 +84,7 @@ This should look similar to the following:
 #### Configuration Management flow
 
 1. Within {{% ctx %}} Gateway, open the `Dev` charms then search for `CM-Config-Settings`
+1. Open the flow.
 1. Click on the first `Set Variable` block to show the properties.
 1. Within the value field, update the following parameters only:
     | Name                        | Description                                                                                                                                                                                                                                                                | Example                                                                                                    |
@@ -89,9 +92,9 @@ This should look similar to the following:
     | PowerShellDetails.Username  | The username of an account that can run PowerShell commands on the host specified for `PowerShellDetails.Host`, e.g., Service Account. {{< alert type="note" title="Note" >}}This user should be an administrator on the targeted Host.{{< /alert >}}                      | `"ctx_serviceuser"`                                                                                        |
     | PowerShellDetails.Password  | The password for the username specified for `PowerShellDetails.Username`. {{< alert type="note" title="Note" >}}This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} | `"#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"` |
     | PowerShellDetails.Domain    | The domain for the username specified for `PowerShellDetails.Username`.                                                                                                                                                                                                    | `"domain.com"`                                                                                             |
-    | PowerShellDetails.Host      | The FQDN of the host executing the PowerShell commands. {{< alert type="note" title="Note" >}}This must target a specific {{% ctx %}} Server.{{< /alert >}}                                                                                                                | `"cortexapp-machine.domain.com"`                                                                           |
+    | PowerShellDetails.Host      | The host executing the PowerShell commands. {{< alert type="note" title="Note" >}}This must target a specific {{% ctx %}} Server.{{< /alert >}}                                                                                                                            | `"cortexapp-machine.domain.com"` or `"cortexapp-machine"`                                                  |
     | PowerShellDetails.Port      | The PowerShell port.                                                                                                                                                                                                                                                       | `5985`                                                                                                     |
-    | CortexInteractionPortalPath | The path to the Cortex Interaction Portal.                                                                                                                                                                                                                                 | `@"C:\inetpub\wwwroot\Cortex\ConfigurationPortal"`                                                         |
+    | CortexInteractionPortalPath | The path to the Cortex Configuration Portal.                                                                                                                                                                                                                               | `@"C:\inetpub\wwwroot\Cortex\ConfigurationPortal"`                                                         |
     | ConfigurationExportsFolder  | The folder containing the configuration being exported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Exports"`                                                                           |
     | ConfigurationImportsFolder  | The folder containing the configuration being imported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Imports"`                                                                           |
     | ConfigurationBackupsFolder  | The folder containing the configuration backups if scheduled.                                                                                                                                                                                                              | `@"ConfigurationModule\Backups"`                                                                           |                                                                                                                                                                                                                     | `false`                                                                                                    |
@@ -149,6 +152,8 @@ This should look similar to the following:
     1. Once published:
         1. Select the `Authorisation` tab
         1. Select the groups that should be able to execute this package
+        1. Click `Save`
+
 {{< alert type="note" title="Note" >}}
 Keep a note of the selected groups, as they will be required when setting the access control for the {{% ctx %}} Configuration Portal.
 {{< /alert >}}
@@ -161,12 +166,12 @@ On the Web Application Server:
 
 1. Open the folder where the `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted.
 1. From there, open the `Cortex Configuration Portal` folder.
-1. Open the `Cortex.Configuration.Portal.zip` file and extract the contents to where the website is to be installed.
+1. Extract the contents of the `Cortex.Configuration.Portal.zip` file to where the website is to be installed.
 {{< alert type="note" title="Note" >}}
 Typically this is `C:\inetpub\wwwroot\Cortex\ConfigurationPortal`
 {{< /alert >}}
-1. Copy the `web.config` and `appsettings.json` files from the `Cortex Configuration Portal` folder to the root of the extracted website folder.
-1. Once copied, open the `appsettings.json` file then update the following parameters only:
+1. Copy the `web.config` and `config.json` files from the `Cortex Configuration Portal` folder to the root of the extracted website folder.
+1. Once copied, open the `config.json` file then update the following parameters only:
     | Name                           | Description                                                                                       | Example                                     |
     |--------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|
     | ApplicationName                | The name of the application, this will be used for containerisation of user sessions.             | `"CortexConfigurationDev"`                  |
@@ -254,7 +259,7 @@ These steps will need to be repeated on all Application Servers.
 
 On the Application Server:
 
-1. Navigate to `C:\ProgramData\SF\<Customer>.<node>\Fabric\work\ImageCache\Store\Cortex.Innovation.Core\ApiGatewayPkg.Code.<version>`
+1. Navigate to `C:\ProgramData\SF\<Customer>.<node>\Fabric\work\Applications\Cortex.Innovation.Core_App0\ApiGatewayPkg.Code.<version>`
 {{< alert type="note" title="Note" >}}
 `<Customer>` and `<node>` will depend on how the node was configured during the installation of {{% ctx %}}.
 {{< /alert >}}
@@ -267,30 +272,31 @@ On the Application Server:
     | AllowCredentials        | Whether to allow credentials, this MUST be set to `true`.         | `true`                                                                  |
     | AllowWildCardSubDomains | Whether to allow wildcard subdomains, this MUST be set to `true`. | `true`                                                                  |
 
-The CORS section should look similar to the following:
+    The CORS section should look similar to the following:
 
-``` json
-"Cors": {
-    "Enabled":  true,
-    "AllowedOrigins":  [ 
-        "https://*.ad.cortex.uk",
-        "https://*.appgyver.com"
-    ],
-    "AllowedRequestHeaders":  [
-        "*"
-    ],
-    "AllowedResponseHeaders":  [
-    ],
-    "AllowedMethods":  [
-        "*"
-    ],
-    "AllowCredentials":  true,
-    "AllowWildcardSubdomains":  true,
-    "PreflightMaxAgeInMs":  5000
-},
-```
+    ``` json
+    "Cors": {
+        "Enabled":  true,
+        "AllowedOrigins":  [ 
+            "https://*.domain.com",
+            "https://*.appgyver.com"
+        ],
+        "AllowedRequestHeaders":  [
+            "*"
+        ],
+        "AllowedResponseHeaders":  [
+        ],
+        "AllowedMethods":  [
+            "*"
+        ],
+        "AllowCredentials":  true,
+        "AllowWildcardSubdomains":  true,
+        "PreflightMaxAgeInMs":  5000
+    },
+    ```
 
 1. Save the file.
+1. Repeat these steps for the appsettings.json file located in `C:\ProgramData\SF\<Customer>.<node>\Fabric\work\ImageCache\Store\Cortex.Innovation.Core\ApiGatewayPkg.Code.<version>`.
 
 #### Restart the code package
 
@@ -301,7 +307,7 @@ These steps will need to be repeated on all Application Servers.
 On the Application Server:
 
 1. Navigate to the Service Fabric Explorer, typically `http://localhost:9080/Explorer`.
-1. Restart the `ApiGatewayPkg`:
+1. Restart the `ApiGatewayPkg` by following these steps:
     1. Expand the `Nodes`
     1. Select the current node
     1. Expand `fabric:/Core/Services`
@@ -323,7 +329,7 @@ On the Web Application Server:
 1. In the script section, copy the following script:
 
     ``` powershell
-    \Deploy.Cortex.Configuration.Portal.ps1 `
+    .\Deploy.Cortex.Configuration.Portal.ps1 `
         -URL "https://cortexapp-machine.domain.com" `
         -Port "8722" `
         -Username "BasicAuthUser" `

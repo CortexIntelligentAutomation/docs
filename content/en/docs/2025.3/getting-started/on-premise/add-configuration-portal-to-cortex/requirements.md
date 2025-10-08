@@ -9,6 +9,10 @@ weight: 10
 
 The requirements for a server installation of the {{% ctx %}} Configuration Portal are laid out in this guide. These must be considered before undertaking installation.
 
+{{< alert color="warning" title="Important" >}}
+The Configuration Portal must be installed on the Web Application Server where {{% ctx %}} Gateway is installed.For any other installation scenario, please contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}}.
+{{< /alert >}}
+
 ## Domain Requirements
 
 The server must be on a domain and cannot be a domain controller.
