@@ -9,4 +9,4 @@ weight: 50
 
 ## Manage Flow Access
 
-{{< scribe title="How_to_Manage_Access_to_Flows_using_Studio_Authorisation" id="jtyNjnwZT862BQVl2KLskQ" >}}
+{{< scribe title="How_to_Control_Access_to_Flows_using_Studio_Authorisation" id="CSq1tcM9SbCSOFABggCYXQ" >}}
