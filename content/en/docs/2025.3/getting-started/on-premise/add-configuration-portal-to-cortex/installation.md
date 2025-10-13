@@ -312,7 +312,7 @@ It may take a few minutes for the `Code` package to restart.
 ### Set up User Access Control
 
 {{< alert color="warning" title="Important" >}}
-The {{% ctx %}} Configuration Portal should be viewed as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when granting access to the portal, it is advised that access is limited following the practice of least privilege.
+The {{% ctx %}} Configuration Portal should be treated as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when granting access to the portal, it is advised that access is limited following the practice of least privilege.
 {{< /alert >}}
 
 On the Web Application Server:
