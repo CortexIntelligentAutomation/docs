@@ -26,14 +26,14 @@ To import the flows, perform the following steps:
 1. Once imported, grant `Edit` permissions to these flows using [Studio Authorisation][].
 
 {{< alert type="note" title="Note" >}}
-Once the flows are imported, they should be available from the ‘Dev’ charms menu. Note that you may need to refresh {{% ctx %}} Gateway after importing.
+Once the flows are imported, they should be available from the `Dev` charms menu. Note that you may need to refresh {{% ctx %}} Gateway after importing.
 {{< /alert >}}
 
 ### Configure the flows
 
 #### User Access Management flow
 
-1. Within {{% ctx %}} Gateway, open the `Dev` charms then search for `UAM-Get-Config`
+1. Within {{% ctx %}} Gateway, open the `Dev` charm then search for `UAM-Get-Config`
 1. Open the flow.
 1. Click on the first `Set Variable` block to show the properties.
 1. Within the value field, update the following parameters only:
@@ -83,7 +83,7 @@ This should look similar to the following:
 
 #### Configuration Management flow
 
-1. Within {{% ctx %}} Gateway, open the `Dev` charms then search for `CM-Config-Settings`
+1. Within {{% ctx %}} Gateway, open the `Dev` charm then search for `CM-Config-Settings`
 1. Open the flow.
 1. Click on the first `Set Variable` block to show the properties.
 1. Within the value field, update the following parameters only:
@@ -92,7 +92,7 @@ This should look similar to the following:
     | PowerShellDetails.Username  | The username of an account that can run PowerShell commands on the host specified for `PowerShellDetails.Host`, e.g., Service Account. {{< alert type="note" title="Note" >}}This user should be an administrator on the targeted Host.{{< /alert >}}                      | `"ctx_serviceuser"`                                                                                        |
     | PowerShellDetails.Password  | The password for the username specified for `PowerShellDetails.Username`. {{< alert type="note" title="Note" >}}This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}} | `"#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"` |
     | PowerShellDetails.Domain    | The domain for the username specified for `PowerShellDetails.Username`.                                                                                                                                                                                                    | `"domain.com"`                                                                                             |
-    | PowerShellDetails.Host      | The host executing the PowerShell commands. {{< alert type="note" title="Note" >}}This must target a specific {{% ctx %}} Server.{{< /alert >}}                                                                                                                            | `"cortexapp-machine.domain.com"` or `"cortexapp-machine"`                                                  |
+    | PowerShellDetails.Host      | The host executing the PowerShell commands.                                                                                                                                                                                                                                | `"cortexapp-machine.domain.com"` or `"cortexapp-machine"` or `Environment.MachineName`                     |
     | PowerShellDetails.Port      | The PowerShell port.                                                                                                                                                                                                                                                       | `5985`                                                                                                     |
     | CortexInteractionPortalPath | The path to the Cortex Configuration Portal.                                                                                                                                                                                                                               | `@"C:\inetpub\wwwroot\Cortex\ConfigurationPortal"`                                                         |
     | ConfigurationExportsFolder  | The folder containing the configuration being exported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Exports"`                                                                           |
@@ -126,7 +126,7 @@ This should look similar to the following:
 
 ### Create the Configuration Management Package
 
-1. Within {{% ctx %}} Gateway, open the `Admin` charms then click on `Packages`
+1. Within {{% ctx %}} Gateway, open the `Admin` charm then click on `Packages`
 1. Click on `Add Package Definition` then:
     1. Set the `Package Name` to `CORTEXConfigurationManagement`
     1. Select the flows and groups as follows:  
@@ -147,6 +147,9 @@ This should look similar to the following:
         ------ [X] `UAM-Check-Access-Level`  
         ------ [X] `UAM-Get-Config`  
         ------ [X] `UAM-Validate-Token`  
+        [ ] `Generic Flow Library`  
+        --- [ ] `PowerShell`  
+        ------ [X] `Execute-PowerShell-Script`  
     1. Click `Save`
     1. Once saved, click `Publish`
     1. Once published:
