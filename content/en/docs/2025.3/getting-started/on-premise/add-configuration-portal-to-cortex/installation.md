@@ -1,7 +1,7 @@
 ---
 title: "Install the Configuration Portal"
 linkTitle: "Install Configuration Portal"
-description: "Information about installing the Configuration Portal."
+description: "Information about installing the {{% ctx %}} Configuration Portal."
 weight: 40
 ---
 

@@ -7,10 +7,10 @@ weight: 10
 
 # {{% param title %}}
 
-The requirements for a server installation of the {{% ctx %}} Configuration Portal are laid out in this guide. These must be considered before undertaking installation.
+The requirements for an installation of the {{% ctx %}} Configuration Portal are laid out in this guide. These must be considered before undertaking installation.
 
 {{< alert color="warning" title="Important" >}}
-The Configuration Portal must be installed on the Web Application Server where {{% ctx %}} Gateway is installed.For any other installation scenario, please contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}}.
+The Configuration Portal must be installed on the Web Application Server where {{% ctx %}} Gateway is installed. For any other installation scenario, please contact {{< ahref path="Cortex.ServicePortal.MainDoc" title="CORTEX Service Portal" >}}.
 {{< /alert >}}
 
 ## Domain Requirements
@@ -49,7 +49,7 @@ A domain user with the necessary administrative permissions to log on to the Con
 
 ### PowerShell User
 
-A service user with the necessary permissions to execute PowerShell scripts on the Configuration Portal host server, and has right to query Active Directory.
+A service user with the necessary permissions to execute PowerShell scripts on the {{% ctx %}} platform, and has right to query Active Directory.
 
 ### Domain Groups
 
