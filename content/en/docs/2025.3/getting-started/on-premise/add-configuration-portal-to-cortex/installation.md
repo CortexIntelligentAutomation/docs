@@ -186,7 +186,7 @@ Typically this is `C:\inetpub\wwwroot\Cortex\ConfigurationPortal`
     | ConfigManagementPackageName    | The name of the package containing the flows used by the {{% ctx %}} Configuration Portal.        | `CORTEXConfigurationManagement`             |
     | ConfigManagementPackageVersion | The version of the package to be used.                                                            | `""`                                        |
     | ConfigPortalPath               | The folder name containing the {{% ctx %}} Configuration Portal.                                  | `"ConfigurationPortal"`                     |
-    | ConfigPortalPort               | The port to communicate with the {{% ctx %}} Configuration Portal.                                | `"4443"`                                    |
+    | ConfigPortalPort               | The port to communicate with the {{% ctx %}} Configuration Portal.                                | `"443"`                                     |
     | ConfigPortalUrl                | The {{% ctx %}} Configuration Portal base URL.                                                    | `"https://cortexwebapp-machine.domain.com"` |
 
 This should look similar to the following:
@@ -204,7 +204,7 @@ This should look similar to the following:
     "ConfigManagementPackageName": "CORTEXConfigurationManagement",
     "ConfigManagementPackageVersion": "",
     "ConfigPortalPath": "ConfigurationPortal",
-    "ConfigPortalPort": "",
+    "ConfigPortalPort": "443",
     "ConfigPortalUrl": "https://cortexwebapp-machine.domain.com",
     
     "FlowAuthBase64": "",
