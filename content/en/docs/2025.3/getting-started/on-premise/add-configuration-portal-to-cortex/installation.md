@@ -167,17 +167,17 @@ Keep a note of the selected groups, as they will be required when setting the ac
 
 On the Web Application Server:
 
-1. Open the folder where the `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted.
-1. From there, open the `Cortex Configuration Portal` folder.
+1. Open the folder where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to.
+1. Open the `Cortex Configuration Portal` folder.
 1. Extract the contents of the `Cortex.Configuration.Portal.zip` file to where the website is to be installed.
 {{< alert type="note" title="Note" >}}
 Typically this is `C:\inetpub\wwwroot\Cortex\ConfigurationPortal`
 {{< /alert >}}
-1. Copy the `web.config` and `config.json` files from the `Cortex Configuration Portal` folder to the root of the extracted website folder.
-1. Once copied, open the `config.json` file then update the following parameters only:
+1. Copy the `web.config` and `config.json` files from the `Cortex Configuration Portal` folder opened in step 2 to the root of the extracted content in step 3, e.g. `C:\inetpub\wwwroot\Cortex\ConfigurationPortal`.
+1. Once copied, open the `config.json` file and update the following parameters only:
     | Name                           | Description                                                                                       | Example                                     |
     |--------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|
-    | ApplicationName                | The name of the application, this will be used for containerisation of user sessions.             | `"CortexConfigurationDev"`                  |
+    | ApplicationName                | The name of the application, this will be used for referencing the relevant configuration data.   | `"CortexConfigurationDev"`                  |
     | UseOAuth                       | Whether to use OAuth for authentication.                                                          | `true`                                      |
     | CortexUrl                      | The URL of the Application Server APIGateway endpoint, or loadbalancer.                           | `"https://cortexapp-machine.domain.com"`    |
     | CortexPort                     | The port of the Application Server APIGateway endpoint, or loadbalancer.                          | `"8722"`                                    |
