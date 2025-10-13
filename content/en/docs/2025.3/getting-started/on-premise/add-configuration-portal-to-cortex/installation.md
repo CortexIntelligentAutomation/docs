@@ -222,7 +222,7 @@ On the Web Application Server:
 
 1. Open IIS.
 1. Expand the current node, then `Sites`.
-1. Expand the website that contains the `Cortex` application, typically named `Cortex`.
+1. Expand the website that contains the {{% ctx %}} application, typically named `Cortex`.
 1. To convert the {{% ctx %}} Configuration Portal folder to an Application:
     1. Locate the `ConfigurationPortal` folder
     1. Right-click on `ConfigurationPortal`.
@@ -255,12 +255,9 @@ These steps are only needed if the {{% ctx %}} Interaction Portal is not already
 These steps will need to be repeated on all Application Servers.
 {{< /alert >}}
 
-On the Application Server:
+On each Application Server:
 
-1. Navigate to `C:\ProgramData\SF\<Customer>.<node>\Fabric\work\Applications\Cortex.Innovation.Core_App0\ApiGatewayPkg.Code.<version>`
-{{< alert type="note" title="Note" >}}
-`<Customer>` and `<node>` will depend on how the node was configured during the installation of {{% ctx %}}.
-{{< /alert >}}
+1. Navigate to the Execution service directory, e.g. `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\Applications\Cortex.Innovation.Core_App<n>\ApiGatewayPkg.Code.<Version>` replacing `<CustomerName>` with the CustomerName configured during installation, `<NodeName>` with the NETBIOS name of the server, `<n>` with the highest number in the directory and `<Version>` with the latest version in the directory.
 1. Open the `appsettings.json` file.
 1. Under the `Cors` section, update the following parameters:
     | Name                    | Description                                                       | Example                                                                 |
@@ -294,25 +291,19 @@ On the Application Server:
     ```
 
 1. Save the file.
-1. Repeat these steps for the appsettings.json file located in `C:\ProgramData\SF\<Customer>.<node>\Fabric\work\ImageCache\Store\Cortex.Innovation.Core\ApiGatewayPkg.Code.<version>`.
+1. Repeat these steps for the appsettings.json file located in `C:\ProgramData\SF\<CustomerName>.<NodeName>\Fabric\work\ImageCache\Store\Cortex.Innovation.Core\ApiGatewayPkg.Code.<Version>`.
 
 #### Restart the code package
 
-{{< alert color="warning" title="Important" >}}
-These steps will need to be repeated on all Application Servers.
-{{< /alert >}}
-
-On the Application Server:
-
 1. Navigate to the Service Fabric Explorer, typically `http://localhost:9080/Explorer`.
-1. Restart the `ApiGatewayPkg` by following these steps:
-    1. Expand the `Nodes`
-    1. Select the current node
+1. Expand the `Nodes`
+1. Restart the `ApiGatewayPkg` for each node by following these steps:
+    1. Expand the node name
     1. Expand `fabric:/Core/Services`
     1. Expand the `ApiGatewayPkg` service package
     1. Expand `Code Packages`
     1. Hover over `Code` and click on the `▼` button
-    1. Click `Restart`
+    1. Confirm the restart as prompted, then click `Restart`
 
 {{< alert type="note" title="Note" >}}
 It may take a few minutes for the `Code` package to restart.
