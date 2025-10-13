@@ -17,7 +17,7 @@ The {{% ctx %}} Configuration Portal calls a set of flows to validate login cred
   
 To import the flows, perform the following steps:
 
-1. Login to the {{% ctx %}} Gateway that is installed on the Web Application Server.
+1. Log in to the {{% ctx %}} Gateway that is installed on the Web Application Server.
 1. In {{% ctx %}} Gateway, click `Admin`, then `Studio Import`.
 1. Import the following Studio packages which can be found in the folder where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to:
     1. `Configuration.Portal.Core.Flows.studiopkg`, which can be found in the folder named `Cortex Configuration Portal`.
