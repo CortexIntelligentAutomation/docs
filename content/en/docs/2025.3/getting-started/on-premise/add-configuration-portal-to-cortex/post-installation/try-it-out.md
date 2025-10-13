@@ -34,6 +34,22 @@ This guide describes how to try out a new {{% ctx %}} Configuration Portal insta
     1. Select the `Type`.
     1. Click `CONFIRM` to add the parameter/value pair.
 
+{{< alert type="note" title="Note" >}}
+The CORTEX Configuration Portal should be viewed as a repository of sensitive information which will most likely contain usernames and passwords. We recommend that any sensitive data is {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}} before it is added to the portal.
+{{< /alert >}}
+
+## Test exporting an existing Container
+
+1. You should be able to export a container by doing as follows:
+    1. Tick the `Export` checkbox next to the container you created in the previous section.
+    1. Click on the `Export Containers` button.
+
+The file should be downloaded to your computer.
+
+{{< alert type="note" title="Note" >}}
+Once you have confirmed the exported file contains the expected data, it is recommended to delete it.
+{{< /alert >}}
+
 ## Test reading data from Configuration Portal
 
 1. Open a web browser and navigate to the URL of {{% ctx %}} Gateway. This is typically in the format `http://<server-name>/gateway`.

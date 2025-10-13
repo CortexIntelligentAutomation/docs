@@ -318,6 +318,10 @@ It may take a few minutes for the `Code` package to restart.
 
 ### Set up User Access Control
 
+{{< alert color="warning" title="Important" >}}
+The {{% ctx %}} Configuration Portal should be viewed as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when allocating access to the portal, it is advised that access is limited following the practice of least privilege.
+{{< /alert >}}
+
 On the Web Application Server:
 
 1. Open a `Windows PowerShell ISE` (x64) window as administrator.
@@ -349,7 +353,6 @@ On the Web Application Server:
     | adminAdGroups   | An array of Active Directory groups that should have admin access to the Configuration Portal. | `@("Domain Admins Group")`               |
     | userAdGroups    | An array of Active Directory groups that should have user access to the Configuration Portal.  | `@("Domain Users Group")`                |
     | ApplicationName | The name of the application, this will be used for containerisation of user sessions.          | `"CortexConfigurationDev"`               |
-
 1. Once updated, run the script and verify that it completes without errors.
 
 ## Next Steps?
