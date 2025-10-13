@@ -17,13 +17,13 @@ The {{% ctx %}} Configuration Portal calls a set of flows to validate log-in cre
   
 To import the flows, perform the following steps:
 
-1. Log into the {{% ctx %}} Gateway that was installed within the CORTEX Web Application Server.
+1. Login to the {{% ctx %}} Gateway that is installed on the Web Application Server.
 1. In {{% ctx %}} Gateway, click `Admin`, then `Studio Import`.
-1. Import the following Studio packages which can be found in the folder where the `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted:
+1. Import the following Studio packages which can be found in the folder where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to:
     1. `Configuration.Portal.Core.Flows.studiopkg`, which can be found in the folder named `Cortex Configuration Portal`.
     1. `Interaction.Portal.Core.Flows.studiopkg`, which can be found in the folder named `Cortex Interaction Portal`.
     1. `User Access Management.Flows.studiopkg`, which can be found in the folder named `User Access Management`.
-1. Once imported, set up the access to these flows using Studio Authorisation.
+1. Once imported, grant `Edit` permissions to these flows using [Studio Authorisation][].
 
 {{< alert type="note" title="Note" >}}
 Once the flows are imported, they should be available from the ‘Dev’ charms menu. Note that you may need to refresh {{% ctx %}} Gateway after importing.
@@ -354,3 +354,4 @@ On the Web Application Server:
 1. [Try it out][]
 
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation.TryItOut" >}}
+[Studio Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation" >}}
