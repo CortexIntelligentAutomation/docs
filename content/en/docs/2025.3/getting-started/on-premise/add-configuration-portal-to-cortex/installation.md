@@ -354,4 +354,4 @@ On the Web Application Server:
 1. [Try it out][]
 
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation.TryItOut" >}}
-[Studio Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation" >}}
+[Studio Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.MainDoc" >}}
