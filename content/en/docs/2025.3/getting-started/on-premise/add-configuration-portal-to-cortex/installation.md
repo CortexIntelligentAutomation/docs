@@ -312,13 +312,13 @@ It may take a few minutes for the `Code` package to restart.
 ### Set up User Access Control
 
 {{< alert color="warning" title="Important" >}}
-The {{% ctx %}} Configuration Portal should be viewed as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when allocating access to the portal, it is advised that access is limited following the practice of least privilege.
+The {{% ctx %}} Configuration Portal should be viewed as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when granting access to the portal, it is advised that access is limited following the practice of least privilege.
 {{< /alert >}}
 
 On the Web Application Server:
 
-1. Open a `Windows PowerShell ISE` (x64) window as administrator.
-1. Change the location to where the `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted, inside the `Cortex Configuration Portal` folder, e.g. `cd "C:\Install\Cortex Innovation {{< version >}} - Configuration Portal\Cortex Configuration Portal"`.
+1. Open a Windows PowerShell ISE (x64) window as administrator.
+1. Change the location to where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to, inside the `Cortex Configuration Portal` folder, e.g. `cd "C:\Install\Cortex Innovation {{< version >}} - Configuration Portal\Cortex Configuration Portal"`.
 1. In the script section, copy the following script:
 
     ``` powershell
@@ -335,17 +335,17 @@ On the Web Application Server:
     ```
 
 1. Update the following parameters:
-    | Name            | Description                                                                                    | Example                                  |
-    |-----------------|------------------------------------------------------------------------------------------------|------------------------------------------|
-    | URL             | The URL of the Application Server APIGateway endpoint, or loadbalancer.                        | `"https://cortexapp-machine.domain.com"` |
-    | Port            | The port of the Application Server APIGateway endpoint, or loadbalancer.                       | `"8722"`                                 |
-    | Username        | The username used to authenticate against the Application Server APIGateway.                   | `"BasicAuthUser"`                        |
-    | Password        | The password for the username specified for `Username`.                                        | `"<password>"`                           |
-    | Tenant          | The tenant defining the scope of the Configuration storage and user sessions.                  | `"default"`                              |
-    | Environment     | The system defining the scope of the Configuration storage and user sessions.                  | `"default"`                              |
-    | adminAdGroups   | An array of Active Directory groups that should have admin access to the Configuration Portal. | `@("Domain Admins Group")`               |
-    | userAdGroups    | An array of Active Directory groups that should have user access to the Configuration Portal.  | `@("Domain Users Group")`                |
-    | ApplicationName | The name of the application, this will be used for containerisation of user sessions.          | `"CortexConfigurationDev"`               |
+    | Name            | Description                                                                                           | Example                                  |
+    |-----------------|-------------------------------------------------------------------------------------------------------|------------------------------------------|
+    | URL             | The URL of the Application Server APIGateway endpoint, or loadbalancer.                               | `"https://cortexapp-machine.domain.com"` |
+    | Port            | The port of the Application Server APIGateway endpoint, or loadbalancer.                              | `"8722"`                                 |
+    | Username        | The username specified for `ApiGatewayBasicAuthUsername` when [installing the Application Servers][]. | `"<Username>"`                           |
+    | Password        | The password specified for `ApiGatewayBasicAuthPassword` when [installing the Application Servers][]. | `"<Password>"`                           |
+    | Tenant          | The tenant defining the scope of the Configuration storage and user sessions.                         | `"default"`                              |
+    | Environment     | The system defining the scope of the Configuration storage and user sessions.                         | `"default"`                              |
+    | adminAdGroups   | An array of Active Directory groups that should have admin access to the Configuration Portal.        | `@("Domain Admins Group")`               |
+    | userAdGroups    | An array of Active Directory groups that should have user access to the Configuration Portal.         | `@("Domain Users Group")`                |
+    | ApplicationName | The `ApplicationName` set in step 5 of [Copy and configure relevant files][].                         | `"CortexConfigurationDev"`               |
 1. Once updated, run the script and verify that it completes without errors.
 
 ## Next Steps?
@@ -355,3 +355,5 @@ On the Web Application Server:
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation.TryItOut" >}}
 [Studio Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.MainDoc" >}}
 [Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
+[installing the Application Servers]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
+[Copy and configure relevant files]: {{< ref path="#copy-and-configure-relevant-files" >}}
