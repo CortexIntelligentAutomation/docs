@@ -224,13 +224,6 @@ On the Web Application Server:
     1. Click `Convert to Application`.
     1. Change the Application pool to be the same as `Cortex Gateway`, typically named `Cortex Gateway`.
     1. Click `OK`.
-1. Enable directory browsing:
-    1. Select the newly created `ConfigurationPortal` application.
-    1. Double-click on `Directory Browsing` under the `IIS` section.
-    1. Ensure that it is Enabled in the `Actions` panel on the right-hand side.
-{{< alert type="note" title="Note" >}}
-If it is not, click on the `Enable` button.
-{{< /alert >}}
 
 ### Configure the {{% ctx %}} Configuration Portal Website
 

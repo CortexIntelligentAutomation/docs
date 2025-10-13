@@ -20,19 +20,19 @@ This guide describes how to try out a new {{% ctx %}} Configuration Portal insta
     1. Click on the `+ Add Container` button.
     1. Fill in the `Name` field with the value `TestContainer`.
     1. Click `Confirm` to create the container.
+1. Click the container you just created.
 1. Using the values of the table below, add a  some data to the created container as follows:
-| Name          | Value                  | Type    |
-|---------------|------------------------|---------|
-| `TestText`    | `This is a test value` | Text    |
-| `TestInteger` | `22`                   | Integer |
-| `TestBool`    | `true`                 | Bool    |
-| `TestObject`  | `{"test":22}`          | Object  |
-    1. Click the container you just created.
-    1. For each of row, do the following:
-        1. Click on the `+ Add Parameter/Value Pair` button.
-        1. Fill in the `Name`.
-        1. Select the `Type`.
-        1. Click `CONFIRM` to add the parameter/value pair.
+    | Name          | Value                  | Type    |
+    |---------------|------------------------|---------|
+    | `TestText`    | `This is a test value` | Text    |
+    | `TestInteger` | `22`                   | Integer |
+    | `TestBool`    | `true`                 | Bool    |
+    | `TestObject`  | `{"test":22}`          | Object  |
+
+    1. Click on the `+ Add Parameter/Value Pair` button.
+    1. Fill in the `Name` and the `Value`.
+    1. Select the `Type`.
+    1. Click `CONFIRM` to add the parameter/value pair.
 
 ## Test reading data from Configuration Portal
 
