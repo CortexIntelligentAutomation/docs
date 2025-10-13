@@ -13,7 +13,7 @@ This guide describes how to install the {{% ctx %}} Configuration Portal on the 
 
 ### Import {{% ctx %}} Flows
 
-The {{% ctx %}} Configuration Portal calls a set of flows to validate log-in credentials, and to manage interactions with the config reliable collections, where config data is stored. These flows are contained within the provided studio packages.  
+The {{% ctx %}} Configuration Portal calls a set of flows to validate login credentials, and to manage interactions with the config reliable collections, where config data is stored. These flows are contained within the provided studio packages.  
   
 To import the flows, perform the following steps:
 
