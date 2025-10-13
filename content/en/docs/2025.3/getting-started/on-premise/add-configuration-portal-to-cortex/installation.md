@@ -214,18 +214,20 @@ This should look similar to the following:
 }
 ```
 
+1. Save the file.
+
 #### Create the application
 
 On the Web Application Server:
 
 1. Open IIS.
 1. Expand the current node, then `Sites`.
-1. Locate the website that contains the `Cortex` application, typically named `Cortex`.
+1. Expand the website that contains the `Cortex` application, typically named `Cortex`.
 1. To convert the {{% ctx %}} Configuration Portal folder to an Application:
     1. Locate the `ConfigurationPortal` folder
-    1. Right-click on the `ConfigurationPortal`.
+    1. Right-click on `ConfigurationPortal`.
     1. Click `Convert to Application`.
-    1. Change the Application pool to be the same as `Cortex Gateway`, typically named `Cortex Gateway`.
+    1. Change the `Application pool` to be the same as [{{% ctx %}} Gateway][Gateway], typically named `Cortex Gateway`.
     1. Click `OK`.
 
 ### Configure the {{% ctx %}} Configuration Portal Website
@@ -361,3 +363,4 @@ On the Web Application Server:
 
 [Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation.TryItOut" >}}
 [Studio Authorisation]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.StudioAuthorisation.MainDoc" >}}
+[Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
