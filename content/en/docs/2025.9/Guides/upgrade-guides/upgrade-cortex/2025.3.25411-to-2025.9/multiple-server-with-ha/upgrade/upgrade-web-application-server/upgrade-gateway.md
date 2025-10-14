@@ -1,14 +1,13 @@
 ---
 title: "Upgrade Gateway"
 linkTitle: "Upgrade Gateway"
-description: "Information about upgrading {{% ctx %}} Gateway from 2025.7 to 2025.9."
+description: "Information about upgrading {{% ctx %}} Gateway from 2025.3.25411 to 2025.9."
 weight: 30
 ---
-<!-- Check if Flows need upgrading and Packages need re-publishing for this upgrade and remove sections if not -->
 
 # {{% param title %}}
 
-This guide describes how to upgrade {{% ctx %}} Gateway from 2025.7 to 2025.9. Please ensure that the [Flow Debugger upgrade][] has been completed before starting this upgrade.
+This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3.25411 to 2025.9. Please ensure that the [Flow Debugger upgrade][] has been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
@@ -27,5 +26,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.7 to 2025.9. P
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.UpgradeDebugger" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.UpgradeCIP" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.UpgradeDebugger" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.UpgradeCIP" >}}

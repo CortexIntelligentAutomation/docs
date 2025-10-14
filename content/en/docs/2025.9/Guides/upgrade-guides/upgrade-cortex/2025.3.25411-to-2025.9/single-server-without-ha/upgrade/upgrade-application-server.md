@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Server components on the server from 2025.7 to 2025.9. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
+This guide describes how to upgrade the Application Server components on the server from 2025.3.25411 to 2025.9. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
 {{% alert title="Warning" color="warning" %}}
 The Application Server will be reinstalled as part of the upgrade. As a result packages will need to be republished and Configuration Portal data will need to be backed up and restored. Other data stored in Reliable Collections (e.g., data storage collections and semaphores) will be lost.
@@ -33,5 +33,5 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.SingleServerWithoutHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

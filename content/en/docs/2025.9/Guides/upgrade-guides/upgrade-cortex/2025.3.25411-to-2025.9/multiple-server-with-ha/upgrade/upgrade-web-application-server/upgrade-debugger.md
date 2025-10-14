@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2025.7 to 2025.9. Please ensure that the [Upgrade Application and Load Balancer Servers][] has been completed before starting this upgrade.
+This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2025.3.25411 to 2025.9. Please ensure that the [Upgrade Application and Load Balancer Servers][] has been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
@@ -29,5 +29,5 @@ This guide describes how to upgrade the Flow Debugger on the Web Application Ser
 
 1. [Upgrade Gateway][]
 
-[Upgrade Application and Load Balancer Servers]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.UpgradeGateway" >}}
+[Upgrade Application and Load Balancer Servers]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.UpgradeGateway" >}}
