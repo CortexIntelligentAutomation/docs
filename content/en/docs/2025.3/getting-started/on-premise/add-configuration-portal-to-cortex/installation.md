@@ -1,5 +1,5 @@
 ---
-title: "Install the Configuration Portal"
+title: "Install Configuration Portal"
 linkTitle: "Install Configuration Portal"
 description: "Information about installing the {{% ctx %}} Configuration Portal."
 weight: 40
@@ -51,34 +51,32 @@ Once the flows are imported, they should be available from the `Dev` charms menu
     | OptionalAdConfig.Username          | The username of an account used to query Active Directory. {{< alert type="note" title="Note" >}}If left empty, the `PowerShellDetails.Username` will be used.{{< /alert >}}                                                                                               | `ctx_aduser`                                                                                               |
     | OptionalAdConfig.Password          | The password for the username specified for `OptionalAdConfig.Username`. {{< alert type="note" title="Note" >}}This field must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="CORTEX Encrypted" >}}.{{< /alert >}}  | `"#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"` |
 
-This should look similar to the following:
-
-``` json
-{
-    "PowerShellDetails": {
-        "Username": "ctx_serviceuser",
-        "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#",
-        "Domain": "domain.com",
-        "Host": "cortexapp-machine.domain.com",
-        "Port": 5985,
-        "SSL": false
-    },
-    "RecursiveAccessControl": false,
-    "OptionalAdConfig": {
-        "DomainController": "dc-machine.domain.com",
-        "BaseAdGroupSearch": "CN=Builtin,DC=CortexUsers,DC=com",
-        "Username": "ctx_aduser",
-        "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"
-    },
-    "DataStorage": {
-        "UamConfigCollection": "uamConfig",
-        "SessionsKeysCollection": "uamSessionsKeys",
-        "SessionsCollection": "uamSessions",
-        "ServiceRequestsCollection": "serviceRequests"
+    This should look similar to the following:
+    ``` json
+    {
+        "PowerShellDetails": {
+            "Username": "ctx_serviceuser",
+            "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#",
+            "Domain": "domain.com",
+            "Host": "cortexapp-machine.domain.com",
+            "Port": 5985,
+            "SSL": false
+        },
+        "RecursiveAccessControl": false,
+        "OptionalAdConfig": {
+            "DomainController": "dc-machine.domain.com",
+            "BaseAdGroupSearch": "CN=Builtin,DC=CortexUsers,DC=com",
+            "Username": "ctx_aduser",
+            "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#"
+        },
+        "DataStorage": {
+            "UamConfigCollection": "uamConfig",
+            "SessionsKeysCollection": "uamSessionsKeys",
+            "SessionsCollection": "uamSessions",
+            "ServiceRequestsCollection": "serviceRequests"
+        }
     }
-}
-```
-
+    ```
 1. Save and commit `UAM-Get-Config`.
 
 #### Configuration Management flow
@@ -99,29 +97,27 @@ This should look similar to the following:
     | ConfigurationImportsFolder  | The folder containing the configuration being imported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Imports"`                                                                           |
     | ConfigurationBackupsFolder  | The folder containing the configuration backups if scheduled.                                                                                                                                                                                                              | `@"ConfigurationModule\Backups"`                                                                           |                                                                                                                                                                                                                     | `false`                                                                                                    |
 
-This should look similar to the following:
-
-``` json
-{
-    "PowerShellDetails": {
-        "Username": "ctx_serviceuser",
-        "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#",
-        "Domain": "domain.com",
-        "Host": "cortexapp-machine.domain.com",
-        "Port": 5985,
-        "SSL": false
-    },
-    "configCollectionName": "_cfgCollection",
-    "containerKeys": "_cfgContainerKeys",
-    "paramKeys": "_cfgParamKeys",
-    "CortexInteractionPortalPath": @"C:\inetpub\wwwroot\Cortex\ConfigurationPortal",
-    "ConfigurationExportsFolder": @"ConfigurationModule\Exports",
-    "ConfigurationImportsFolder": @"ConfigurationModule\Imports",
-    "ConfigurationBackupsFolder": @"ConfigurationModule\Backups",
-    "BackupBypassToken": "f2e97889-acd8-4324-9ac0-e6cc776478ed"
-}
-```
-
+    This should look similar to the following:
+    ``` json
+    {
+        "PowerShellDetails": {
+            "Username": "ctx_serviceuser",
+            "Password": "#_124211015226168!130105247000243225146179242013178~146135159100034!214216128191025238010012072111212#",
+            "Domain": "domain.com",
+            "Host": "cortexapp-machine.domain.com",
+            "Port": 5985,
+            "SSL": false
+        },
+        "configCollectionName": "_cfgCollection",
+        "containerKeys": "_cfgContainerKeys",
+        "paramKeys": "_cfgParamKeys",
+        "CortexInteractionPortalPath": @"C:\inetpub\wwwroot\Cortex\ConfigurationPortal",
+        "ConfigurationExportsFolder": @"ConfigurationModule\Exports",
+        "ConfigurationImportsFolder": @"ConfigurationModule\Imports",
+        "ConfigurationBackupsFolder": @"ConfigurationModule\Backups",
+        "BackupBypassToken": "f2e97889-acd8-4324-9ac0-e6cc776478ed"
+    }
+    ```
 1. Save and commit `CM-Config-Settings`.
 
 ### Create the Configuration Management Package

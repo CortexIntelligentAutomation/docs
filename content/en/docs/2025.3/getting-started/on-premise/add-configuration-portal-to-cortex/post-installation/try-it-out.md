@@ -9,12 +9,12 @@ weight: 10
 
 This guide describes how to try out a new {{% ctx %}} Configuration Portal installation to make sure it is working.
 
-## Test Access to Configuration Portal
+## Test access to Configuration Portal
 
 1. Open a web browser and navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://sever.domain.com/configurationportal`.
 1. Log in using your Active Directory credentials. Ensure that the account you are using is a member of one of the Active Directory groups specified during installation.
 
-## Test adding a new Configuration Container and Data
+## Test adding a new Configuration Container and data
 
 1. Once logged in, you should be able to add a container by doing as follows:
     1. Click on the `+ Add Container` button.
