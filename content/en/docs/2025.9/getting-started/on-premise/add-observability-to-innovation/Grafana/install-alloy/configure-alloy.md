@@ -30,7 +30,8 @@ To import the CA certificate:
 ## Configure Grafana Alloy
 
 1. Open the `config.alloy` configuration file, which is located in the folder alongside the `alloy-installer-windows-amd64.exe` file.
-1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
+1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder for the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
+1. Set the `__path__` in the `local.file_match "ExecutionService"` > `path_targets` section to the path of the `Logs` folder for the Execution Service, e.g. `"C:/ProgramData/Cortex/Execution Service/Logs/**/*.json"`.
 1. Set the Grafana Loki `url` in the `loki.write "default"` > `endpoint` section which can be found at the end of the file.
 
    The following template has been provided for convenience:

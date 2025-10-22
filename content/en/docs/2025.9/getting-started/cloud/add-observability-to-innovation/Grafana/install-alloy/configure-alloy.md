@@ -14,7 +14,8 @@ This guide describes how to configure Grafana Alloy on the Application Server(s)
 ## Configure Grafana Alloy
 
 1. Open the `config.alloy` configuration file, which is located in the folder alongside the `alloy-installer-windows-amd64.exe` file.
-1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder specified in the `appSettings.json` file during installation of the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
+1. Set the `__path__` in the `local.file_match "ApiGateway"` > `path_targets` section to the path of the `Logs` folder for the API Gateway Service, e.g. `"C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{_[0-9][0-9][0-9],}.json"`.
+1. Set the `__path__` in the `local.file_match "ExecutionService"` > `path_targets` section to the path of the `Logs` folder for the Execution Service, e.g. `"C:/ProgramData/Cortex/Execution Service/Logs/**/*.json"`.
 1. Set the Grafana Loki `url` in the `loki.write "default"` > `endpoint` section, which can be found at the end of the file, with the url value noted down during the [Setup Grafana Loki][] steps.
 
    A correct URL should be similar to `https://239948:eyJrIjoiaWVjNzE4MmVjOThkNTgxMMQ5MzIyZjdlMjAyYWY4NWJjO1I1OTc4NSIsIm4iOiJUZXN0S2V5IiwiaWQiOjY4Nzk0MX0=@logs-prod-008.grafana.net/api/prom/push`.
