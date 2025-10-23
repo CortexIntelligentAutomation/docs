@@ -15,7 +15,7 @@ On each Application Server:
 1. Open a File Explorer and navigate to the folder that Grafana Alloy is running from, e.g. `C:\ProgramData\Cortex\Observability\Grafana Alloy`.
 1. Open the `config.alloy` configuration file in a text editor.
 1. Search the file for `local.file_match "ExecutionService"`.
-1. If the search returns no results, proceed with the upgrade process, if results are returned then Observability has already been updated to 4.1.0 automatically as part of the 3.0.0 to 4.0.0 upgrade and no further steps are required.
+1. If the search returns no results, proceed with the upgrade process, if results are returned then Observability has already been updated to 4.1.0 automatically as part of the [3.0.0 to 4.0.0][] upgrade and no further steps are required.
 
 ## Backup Old Files
 
@@ -29,4 +29,5 @@ On each Application Server:
 
 1. [Upgrade Grafana Alloy][]
 
+[3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MainDoc" >}}
 [Upgrade Grafana Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.Cloud.Grafana.UpgradeAlloy" >}}

@@ -1143,6 +1143,7 @@
                     MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/"
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise]
                         [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana"
                             BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#backup-old-files"
                             SetupAuthentication = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-loki/#set-up-authentication"
                             MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
@@ -1154,6 +1155,7 @@
                             VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#verify-old-version"
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud]
                         [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana"
                             BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#backup-old-files"
                             MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
                             MigrateToAlloy = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/migrate-to-alloy"
