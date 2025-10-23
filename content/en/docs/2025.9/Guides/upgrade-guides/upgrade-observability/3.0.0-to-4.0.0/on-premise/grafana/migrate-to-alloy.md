@@ -35,8 +35,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. Click *Yes* when prompted for confirmation that you wish to remove the service.
 1. Click *OK* when the successful removal of the Promtail service is confirmed.
-1. Open a File Explorer and navigate to the folder where Promtail was running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`
-1. In File Explorer, navigate to the extracted alloy-installer-windows-amd64.exe folder created as part of [Make Artefacts Available][].
+1. Open a File Explorer and navigate to the extracted alloy-installer-windows-amd64.exe folder created as part of [Make Artefacts Available][].
 1. Copy the alloy-installer-windows-amd64.exe into a suitable location, e.g. `C:\ProgramData\Cortex\Observability\Grafana Alloy`.
 1. In File Explorer, navigate to the extracted Grafana.Alloy.Install folder created as part of [Make Artefacts Available][].
 1. Copy the contents of the folder to the same location as the previously copied alloy-installer-windows-amd64.exe.
