@@ -3253,6 +3253,11 @@
             GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Alloy.Install.zip"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Loki.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.4.1.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.1.0"
+            GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Alloy.Install.zip"
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Loki.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
