@@ -540,6 +540,7 @@
                         [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
                             MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
             [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
+                MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
                 PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
                 [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation]
                     MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
@@ -1229,7 +1230,7 @@
                                     DeleteVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#delete-variables"
                                     ModifyScope = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modifying-the-scope-of-a-variable"
                                     ModifyVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modify-a-variable"
-                           [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
@@ -3635,3 +3636,5 @@
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
 [Mozilla]
     UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/URI#syntax_of_uniform_resource_identifiers_uris"
+    ContentSecurityPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+    PermissionsPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy"
