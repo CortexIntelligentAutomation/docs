@@ -27,6 +27,6 @@ This archive contains the `config.alloy` configuration file and PowerShell scrip
 
 [Configure Grafana Alloy]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.ConfigureAlloy" >}}
 [Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
-[Grafana Alloy.zip]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaAlloyInstallZip" >}}
+[Grafana Alloy.zip]: {{< url path="GitHub.Cortex.Observability.4.1.0.GrafanaAlloyInstallZip" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
 [Reverse Proxy Authentication]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.ConfigureAuthentication" >}}
