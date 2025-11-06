@@ -23,8 +23,8 @@ Log on to Gateway and run through the setup wizard:
     Password: `Adm1n1strat0r`
 1. On a newly installed system, you will be presented with a Setup Wizard at this point, which will guide you through some basic configuration steps:
     * [Account Details]
-    * [LDAP Connection]
-    * [LDAP Authorisation]
+    * [Authentication]
+    * [Authorisation]
 1. Follow the steps in the setup wizard to configure the relevant areas:
 
    ### Account Details
@@ -36,8 +36,9 @@ Log on to Gateway and run through the setup wizard:
     1. Change the Administrator password to a unique, secret password and click `Next Step`:
     {{< figure class="centre" src="/images/Gateway Setup3.png" title="Change Password Screen" >}}
 
-   ### LDAP Connection
+   ### Authentication
 
+    1. Select the LDAP tab.
     1. Enter the details of your Active Directory server and provide a Username and Password for a user with read access to it:
 
         A connection to an Active Directory server must be established in order to assign authorisation rights to users.
@@ -49,9 +50,9 @@ Log on to Gateway and run through the setup wizard:
         1. To reduce the scope of any Active Directory searches, add one or more base DNs (Distinguished Names). For each base DN click `Add` and enter the full LDAP path e.g `CN=group, OU=organisational unit, DC=domain, DC=com`. These will be used as the roots of any Active Directory searches performed. For more information about distinguished names see <https://msdn.microsoft.com/en-us/library/aa366101(v=vs.85).aspx>.
     1. Click `Test Connection` to validate the connection and the user credentials entered and click `Next Step`.
 
-    {{< figure class="centre" src="/images/Gateway Setup4.png" title="LDAP Connection Screen" >}}
+    {{< figure class="centre" src="/images/Gateway Setup4.png" title="Authentication Screen" >}}
 
-   ### LDAP Authorisation
+   ### Authorisation
 
     1. If the authorisation grid fails to load first time round, click `Retry`.
     1. Assign access permissions to Active Directory groups:
@@ -67,7 +68,7 @@ Log on to Gateway and run through the setup wizard:
         1. Expand the groups or OUs, or search for the group or OU, to be assigned one or more roles.
         1. Check the relevant roles for each group. Checking a parent group will cascade the setting to all child groups.
 
-        {{< figure class="centre" src="/images/Gateway Setup5.png" title="LDAP Authorisation Screen" >}}
+        {{< figure class="centre" src="/images/Gateway Setup5.png" title="Authorisation Screen" >}}
 
     1. Click `Complete Setup` to commit the changes.
     1. To test the permissions, log out as Administrator and then log in as a user with `Studio` permissions.
@@ -77,8 +78,8 @@ Log on to Gateway and run through the setup wizard:
 1. [Post-Installation][]
 
 [Account Details]: {{< ref "#account-details" >}}
-[LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
-[LDAP Connection]: {{< ref "#ldap-connection" >}}
+[Authorisation]: {{< ref "#authorisation" >}}
+[Authentication]: {{< ref "#authentication" >}}
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServerNew" >}}
 [supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirementsNew" >}}
 [Post-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.PostInstallation" >}}
