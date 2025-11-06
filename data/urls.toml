@@ -2710,6 +2710,7 @@
                         MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
+                    PatternMatching = "/docs/reference/data-types/text/searchoptions/#patternmatching"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
