@@ -44,7 +44,7 @@ The performance of the {{% ctx %}} Platform has been improved by:
 
 ## Improved Scalability
 
-Scalability has been enhanced by [enhancing Service Fabric resilience to RabbitMQ node outages][Scalability - Enhanced Service Fabric resilience to RabbitMQ node outages].
+Scalability has been improved by [enhancing Service Fabric resilience to RabbitMQ node outages][Scalability - Enhanced Service Fabric resilience to RabbitMQ node outages].
 
 ## Improved Observability
 
