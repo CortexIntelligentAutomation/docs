@@ -66,6 +66,26 @@
                     AddedNewUserGuide = "/blog/2025/08/26/2025.7/#added-new-user-guide"
                     AddedNewTutorial = "/blog/2025/08/26/2025.7/#added-new-tutorial"
                     UpdatedDocumentationToPointToFlowEditorUserGuide = "/blog/2025/08/26/2025.7/#updated-documentation-to-point-to-flow-editor-user-guide"
+                [Cortex.Blogs.Releases.2025.9]
+                    MainDoc = "/blog/2025/10/27/2025.9/"
+                    AddedMultiFactorAuthenticationViaOpenIdConnectOnGateway = "/blog/2025/10/27/2025.9/#added-multifactor-authentication-mfa-via-openid-connect-on-cortex-gateway"
+                    EnabledDebuggingOfProductionFlows = "/blog/2025/10/27/2025.9/#enabled-debugging-of-production-flows"
+                    AddedQuickAddBlocksToTheFlowEditor = "/blog/2025/10/27/2025.9/#added-quick-add-blocks-to-the-flow-editor"
+                    ExtendedLicenceFingerprintGenerator = "/blog/2025/10/27/2025.9/#extended-licence-fingerprint-generator"
+                    AddedAuthenticationManagementToApiGatewayService = "/blog/2025/10/27/2025.9/#added-authentication-management-to-cortex-api-gateway-service"
+                    EnabledSingleUseRefreshTokensConfigurable = "/blog/2025/10/27/2025.9/#enabled-singleuse-refresh-tokens-configurable"
+                    HardenedConfigurationPortalWithSecurityHeaders = "/blog/2025/10/27/2025.9/#hardened-configuration-portal-with-security-headers"
+                    OptimisedExecutionManagementServiceEventBatching = "/blog/2025/10/27/2025.9/#optimised-execution-management-service-event-batching"
+                    ImprovedExecutionServiceConcurrencyAndFlowTranslation = "/blog/2025/10/27/2025.9/#improved-execution-service-concurrency-and-flow-translation"
+                    EnhancedServiceFabricResilienceToRabbitMqNodeOutages = "/blog/2025/10/27/2025.9/#enhanced-service-fabric-resilience-to-rabbitmq-node-outages"
+                    ExpandedBlockLogging = "/blog/2025/10/27/2025.9/#expanded-block-logging"
+                    MadeBlockLogsQueryableInGrafana = "/blog/2025/10/27/2025.9/#made-block-logs-queryable-in-grafana"
+                    ImprovedOpenSslCertificateGeneration = "/blog/2025/10/27/2025.9/#improved-openssl-certificate-generation"
+                    ChangedLocationOfCertificateSettingsForServiceFabricServices = "/blog/2025/10/27/2025.9/#changed-location-of-certificatesettings-for-service-fabric-services"
+                    AddedConfigurationPortalInstallationGuide = "/blog/2025/10/27/2025.9/#added-configuration-portal-installation-guide"
+                    UpdatedInstallationGuideForNewFingerprintOutput = "/blog/2025/10/27/2025.9/#updated-cortex-installation-guide-for-new-fingerprint-output"
+                    AddedUpgradeObservabilityDocumentationToLatestVersion = "/blog/2025/10/27/2025.9/#added-upgrade-observability-documentation-to-latest-version"
+                    UpdatedTutorials = "/blog/2025/10/27/2025.9/#updated-tutorials"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
@@ -539,6 +559,13 @@
                         ConfigureAlloy = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
                         [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
                             MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
+            [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
+                MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
+                PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
+                [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation]
+                    MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
+                [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation]
+                    TryItOut = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/post-installation/try-it-out"
         [Cortex.GettingStarted.Cloud]
             MainDoc = "/docs/getting-started/cloud"
                 [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
@@ -1024,6 +1051,64 @@
                         UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
                         UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.5-to-2025.7/single-server-without-ha/upgrade/upgrade-web-application-server"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/"
+                        CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers/#check-application-services"
+                        CheckDebuggerApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger/#check-application-services"
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/"
+                        CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-application-server/#check-application-services"
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-application-server"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/"
+                        CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers/#check-application-services"
+                        CheckDebuggerApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger/#check-application-services"
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/pre-upgrade"
+                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/"
+                        CheckApplicationServices = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-application-server/#check-application-services"
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/pre-upgrade"
+                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-application-server"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
             [Cortex.Guides.UpgradeGuides.UpgradeObservability]
                 MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/"
                 [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise]
@@ -1049,6 +1134,70 @@
                         Download = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
                         UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/upgrade-dashboards"
                         TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/dashboards/grafana/try-it-out"
+
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/try-it-out"
+                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-grafana"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-loki"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/on-premise/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Cloud.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/try-it-out"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/cloud/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.Dashboards.Grafana]
+                            Download = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/upgrade-dashboards/#download-the-default-dashboards"
+                            UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/upgrade-dashboards"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/2.2.0-to-3.0.0/dashboards/grafana/try-it-out"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana"
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            SetupAuthentication = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-loki/#set-up-authentication"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/try-it-out"
+                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-grafana"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/upgrade-loki"
+                            MigrateToAlloy = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/migrate-to-alloy"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/on-premise/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana"
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#backup-old-files"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            MigrateToAlloy = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/migrate-to-alloy"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/try-it-out"
+                            UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/upgrade-promtail"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/3.0.0-to-4.0.0/cloud/grafana/prerequisites/#verify-old-version"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/try-it-out"
+                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/upgrade-alloy"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.Cloud.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/prerequisites/#backup-old-files"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/try-it-out"
+                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/upgrade-alloy"
         [Cortex.Guides.UserGuides]
             MainDoc = "/docs/guides/user-guides/"
             [Cortex.Guides.UserGuides.UserInterfaces]
@@ -1117,7 +1266,7 @@
                                     DeleteVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#delete-variables"
                                     ModifyScope = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modifying-the-scope-of-a-variable"
                                     ModifyVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modify-a-variable"
-                           [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
@@ -2581,6 +2730,7 @@
                         MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
+                    PatternMatching = "/docs/reference/data-types/text/searchoptions/#patternmatching"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
@@ -3141,6 +3291,11 @@
             GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Alloy.Install.zip"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Loki.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.4.1.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.1.0"
+            GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Alloy.Install.zip"
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Loki.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
@@ -3518,3 +3673,5 @@
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
 [Mozilla]
     UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/URI#syntax_of_uniform_resource_identifiers_uris"
+    ContentSecurityPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+    PermissionsPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy"
