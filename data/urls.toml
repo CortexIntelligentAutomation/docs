@@ -66,6 +66,26 @@
                     AddedNewUserGuide = "/blog/2025/08/26/2025.7/#added-new-user-guide"
                     AddedNewTutorial = "/blog/2025/08/26/2025.7/#added-new-tutorial"
                     UpdatedDocumentationToPointToFlowEditorUserGuide = "/blog/2025/08/26/2025.7/#updated-documentation-to-point-to-flow-editor-user-guide"
+                [Cortex.Blogs.Releases.2025.9]
+                    MainDoc = "/blog/2025/10/27/2025.9/"
+                    AddedMultiFactorAuthenticationViaOpenIdConnectOnGateway = "/blog/2025/10/27/2025.9/#added-multifactor-authentication-mfa-via-openid-connect-on-cortex-gateway"
+                    EnabledDebuggingOfProductionFlows = "/blog/2025/10/27/2025.9/#enabled-debugging-of-production-flows"
+                    AddedQuickAddBlocksToTheFlowEditor = "/blog/2025/10/27/2025.9/#added-quick-add-blocks-to-the-flow-editor"
+                    ExtendedLicenceFingerprintGenerator = "/blog/2025/10/27/2025.9/#extended-licence-fingerprint-generator"
+                    AddedAuthenticationManagementToApiGatewayService = "/blog/2025/10/27/2025.9/#added-authentication-management-to-cortex-api-gateway-service"
+                    EnabledSingleUseRefreshTokensConfigurable = "/blog/2025/10/27/2025.9/#enabled-singleuse-refresh-tokens-configurable"
+                    HardenedConfigurationPortalWithSecurityHeaders = "/blog/2025/10/27/2025.9/#hardened-configuration-portal-with-security-headers"
+                    OptimisedExecutionManagementServiceEventBatching = "/blog/2025/10/27/2025.9/#optimised-execution-management-service-event-batching"
+                    ImprovedExecutionServiceConcurrencyAndFlowTranslation = "/blog/2025/10/27/2025.9/#improved-execution-service-concurrency-and-flow-translation"
+                    EnhancedServiceFabricResilienceToRabbitMqNodeOutages = "/blog/2025/10/27/2025.9/#enhanced-service-fabric-resilience-to-rabbitmq-node-outages"
+                    ExpandedBlockLogging = "/blog/2025/10/27/2025.9/#expanded-block-logging"
+                    MadeBlockLogsQueryableInGrafana = "/blog/2025/10/27/2025.9/#made-block-logs-queryable-in-grafana"
+                    ImprovedOpenSslCertificateGeneration = "/blog/2025/10/27/2025.9/#improved-openssl-certificate-generation"
+                    ChangedLocationOfCertificateSettingsForServiceFabricServices = "/blog/2025/10/27/2025.9/#changed-location-of-certificatesettings-for-service-fabric-services"
+                    AddedConfigurationPortalInstallationGuide = "/blog/2025/10/27/2025.9/#added-configuration-portal-installation-guide"
+                    UpdatedInstallationGuideForNewFingerprintOutput = "/blog/2025/10/27/2025.9/#updated-cortex-installation-guide-for-new-fingerprint-output"
+                    AddedUpgradeObservabilityDocumentationToLatestVersion = "/blog/2025/10/27/2025.9/#added-upgrade-observability-documentation-to-latest-version"
+                    UpdatedTutorials = "/blog/2025/10/27/2025.9/#updated-tutorials"
             [Cortex.Blogs.Releases.2024.X]
                 MainDoc = "/blog/releases/2024.x"
                 [Cortex.Blogs.Releases.2024.11]
@@ -540,6 +560,7 @@
                         [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
                             MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
             [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
+                MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
                 PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
                 [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation]
                     MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
@@ -1245,7 +1266,7 @@
                                     DeleteVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#delete-variables"
                                     ModifyScope = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modifying-the-scope-of-a-variable"
                                     ModifyVariable = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/bottom-panel/variables-grid/#modify-a-variable"
-                           [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
+                            [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.LeftPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
@@ -2709,6 +2730,7 @@
                         MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
+                    PatternMatching = "/docs/reference/data-types/text/searchoptions/#patternmatching"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
                     CreateNew = "/docs/reference/data-types/text/string#create-a-string"
@@ -3651,3 +3673,5 @@
     SqlInjection = "https://www.w3schools.com/sql/sql_injection.asp"
 [Mozilla]
     UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/URI#syntax_of_uniform_resource_identifiers_uris"
+    ContentSecurityPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+    PermissionsPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy"
