@@ -200,16 +200,22 @@ enable = true
 [[menu.main]]
 	identifier = 'documentation'
 	name = 'Documentation'
-	url = '/docs/2025.9'
+	url = '/docs/2025.11'
 	weight = 10
 
 # Releases menu
+[[params.versions]]
+	version = "2025.11"
+	url = "/docs/2025.11/"
+	dotNetVersion = "net-8.0"
+	inSupport = true
+	latest = true
+
 [[params.versions]]
 	version = "2025.9"
 	url = "/docs/2025.9/"
 	dotNetVersion = "net-8.0"
 	inSupport = true
-	latest = true
 
 [[params.versions]]
 	version = "2025.7"
