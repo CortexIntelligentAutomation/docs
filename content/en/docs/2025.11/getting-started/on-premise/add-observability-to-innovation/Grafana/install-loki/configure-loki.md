@@ -134,6 +134,25 @@ If the order is incorrect:
 1. Select the newly created website.
 1. In the *Manage Website* pane, click *Restart*.
 
+## Configure Log Retention
+
+Grafana Loki is configured with a default retention period of 12 months for it's logs. This means that Grafana can query data up to 12 months old. Once the 12 months is reached, Loki will remove older logs.
+
+If a different retention period is required then this can be set, however, it should only be set to the period that is needed otherwise excessive disk space may be used unnecessarily.
+
+To change the retention period:
+
+1. Open the `loki-local-config.yaml` configuration file, which is located in the folder that Loki was installed to eg `C:\ProgramData\Cortex\Observability\Loki`.
+1. Locate the `retention_period:` configuration value at approximately line 55.
+1. Set the value of the retention required in hours, e.g. 6 months would be `4380h` or 9 months would be `6570h`.
+1. Save the file.
+
+### Re-Start the Grafana Loki Service
+
+1. Open `services.msc`.
+1. Locate the `Loki` service.
+1. Right click on the service name and select `Restart`. If the service is not already running, select `Start`.
+
 ## Next Steps?
 
 1. [Install Grafana Alloy][]

@@ -1198,6 +1198,14 @@
                             Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/prerequisites"
                             TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/try-it-out"
                             UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/upgrade-alloy"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/try-it-out"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/upgrade-loki"
         [Cortex.Guides.UserGuides]
             MainDoc = "/docs/guides/user-guides/"
             [Cortex.Guides.UserGuides.UserInterfaces]
@@ -3296,6 +3304,11 @@
             GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Alloy.Install.zip"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Loki.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.4.2.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.2.0"
+            GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Alloy.Install.zip"
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Loki.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
