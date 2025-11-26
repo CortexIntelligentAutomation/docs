@@ -3175,6 +3175,7 @@
                     DefineInputOutputVariable = "/docs/tutorials/development/flow-editor/bottom-panel/#define-an-input-or-output-variable"
                     MessagesGrid = "/docs/tutorials/development/flow-editor/bottom-panel/#messages-grid"
                     ModifyVariableScope = "/docs/tutorials/development/flow-editor/bottom-panel/#modify-the-scope-of-a-variable"
+                    SelectExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#select-an-execution"
                     ShowFirstLast = "/docs/tutorials/development/flow-editor/bottom-panel/#show-initial-flow-first-or-last"
                     StartTracking = "/docs/tutorials/development/flow-editor/bottom-panel/#start-tracking"
                     StepExecution = "/docs/tutorials/development/flow-editor/bottom-panel/#step-the-execution"

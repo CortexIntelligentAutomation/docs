@@ -25,6 +25,8 @@ Flows that are `Running` or `Paused` are shown with a green background; flows th
 
 An [execution][What is an Execution?] may be selected by clicking on its row and can be controlled by action icons at the top right of the Executions Grid. Multiple executions can be selected using `Ctrl + Click` or `Shift + Click`. Selected executions are indicated with a darker background and the actions available are dependent on the state of the selected executions; greyed-out action icons are not applicable to the selected executions’ state.
 
+See the [Selecting an Execution][Selecting an Execution tutorial] tutorial for a step-by-step guide.
+
 ### Continue the Execution
 
 Clicking the {{< image src="/images/Flow Editor - Continue Execution.png" >}} icon causes the selected executions to continue until the flow ends, a breakpoint is reached, or [`Break on exception`][Execution Options] is enabled and an exception has occurred causing the flow to pause. This action is only available for paused executions.
@@ -98,6 +100,7 @@ None
 * [Show Initial Flow First or Last][Show Initial Flow First or Last tutorial]
 
 [Continue and Stop the Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.BottomPanel.ContinueStopExecution" >}}
+[Selecting an Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.BottomPanel.SelectExecution" >}}
 [Show Initial Flow First or Last tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.BottomPanel.ShowFirstLast" >}}
 [Step the Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.BottomPanel.StepExecution" >}}
 [Stop Tracking and Go To tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.BottomPanel.StopTrackingGoTo" >}}
