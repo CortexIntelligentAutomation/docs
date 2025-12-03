@@ -15,7 +15,7 @@ A [flow][] can be debugged in [{{% ctx %}} Gateway][CORTEX Gateway] by clicking 
 
 The following parameters can be specified:
 
-- Show execution on workspace - when this is `true`, the token will be shown at every step throughout the [flow][], otherwise the token will only be shown when the execution [pauses][Paused], hits a breakpoint, or an exception occurs when `Break on exception` is `true`
+- Show execution on workspace - when this is `true`, the token will be shown at every step throughout the [flow][], otherwise the token will only be shown when the execution [pauses][Paused], hits a [breakpoint][breakpoint], or an exception occurs when `Break on exception` is `true`
 - Break on exception - when this is `true` the execution will [pause][Paused] when an exception occurs
 
 ## Providing Input Variables
@@ -171,6 +171,7 @@ None
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.MainDoc" >}}
+[breakpoint]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel.AddBreakpoint" >}}
 [connections]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.WhatIsABlock.BlockConnections" >}}
 [Handling Exceptions within a Block]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.HandlingExceptionsWithinABlock.MainDoc" >}}
 

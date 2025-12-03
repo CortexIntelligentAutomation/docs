@@ -1278,6 +1278,7 @@
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/left-panel"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.MainPanel]
                                 MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel"
+                                AddBreakpoint = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#add-breakpoint"
                                 ContinueExecution = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#continue-debugging"
                                 Edit = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#edit-flow"
                                 ExecutionOptions = "/docs/guides/user-guides/user-interfaces/gateway/dev/flow-editor/main-panel/#execution-options"
