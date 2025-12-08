@@ -176,7 +176,7 @@ See the [Add Notes to Workspaces][Add Notes to Workspaces tutorial] tutorial for
 
 Available in Editor Modes: `Edit`, `Debug Edit` (if an object has been copied or cut to the {{% ctx %}} clipboard)
 
-Selecting this option will paste a copy of the clipboard on to the workspace at the cursor’s location.
+Selecting this option, or pressing `Ctrl+V` on the keyboard, will paste a copy of the clipboard on to the workspace at the cursor’s location.
 
 See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
 
@@ -194,7 +194,7 @@ See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Object
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-Selecting this option, or pressing `Ctrl+X` on the keyboard, will copy the selected blocks and their configurations, plus any connections between the selected blocks, to the {{% ctx %}} clipboard and remove them from the Workspace. This allows the selected blocks and connections to be moved to any workspace of any flow open in the Flow Editor.
+Selecting this option, or pressing `Ctrl+X` on the keyboard, will copy the selected blocks and their configurations, plus any connections between the selected blocks, to the {{% ctx %}} clipboard and remove them from the workspace. This allows the selected blocks and connections to be moved to any workspace of any flow open in the Flow Editor.
 
 See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
 
@@ -255,34 +255,38 @@ See the [Set Next Block to Execute][Set Next Block to Execute tutorial] tutorial
 
 ### Related Tutorials
 
-* [Undo and Redo Changes][Undo and Redo Changes tutorial]
-* [Start an Execution][Start an Execution tutorial]
-* [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial]
-* [Remove All Breakpoints][Remove All Breakpoints tutorial]
-* [Save and Commit Flow][Save and Commit Flow tutorial]
-* [Get Master Version of Flow][Get Master Version of Flow tutorial]
-* [Compare Flow with Master Version][Compare Flow with Master Version tutorial]
-* [Delete Flow][Delete Flow tutorial]
-* [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial]
-* [Add and Remove Breakpoints][Add and Remove Breakpoints tutorial]
-* [Set Next Block to Execute][Set Next Block to Execute tutorial]
-* [Add Notes to Workspaces][Add Notes to Workspaces tutorial]
+* [Main Toolbar][Main Toolbar Actions tutorials]
+  * [Undo and Redo Changes][Undo and Redo Changes tutorial]
+  * [Start an Execution][Start an Execution tutorial]
+  * [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial]
+  * [Remove All Breakpoints][Remove All Breakpoints tutorial]
+  * [Save and Commit Flow][Save and Commit Flow tutorial]
+  * [Get Master Version of Flow][Get Master Version of Flow tutorial]
+  * [Compare Flow with Master Version][Compare Flow with Master Version tutorial]
+  * [Delete Flow][Delete Flow tutorial]
+* [Context Menus][Context Menu tutorials]
+  * [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial]
+  * [Add and Remove Breakpoints][Add and Remove Breakpoints tutorial]
+  * [Set Next Block to Execute][Set Next Block to Execute tutorial]
+  * [Add Notes to Workspaces][Add Notes to Workspaces tutorial]
 
 [Main Toolbar]: {{< ref "#main-toolbar" >}}
 [workspaces]: {{< ref "#workspaces" >}}
 
+[Add Notes to Workspaces tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddNotes" >}}
+[Add and Remove Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddRemoveBreakpoints" >}}
 [Compare Flow with Master Version tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CompareMaster" >}}
+[Context Menu tutorials]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.ContextMenus" >}}
+[Cut, Copy, Paste and Delete Objects tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CutCopyPasteDelete" >}}
 [Delete Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.DeleteFlow" >}}
 [Edit Flow and Continue Debugging tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.EditFlow" >}}
 [Get Master Version of Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.GetMaster" >}}
+[Main Toolbar Actions tutorials]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.MainToolbar" >}}
 [Remove All Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.RemoveBreakpoints" >}}
 [Save and Commit Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SaveCommit" >}}
+[Set Next Block to Execute tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SetNextBlock" >}}
 [Start an Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.StartExecution" >}}
 [Undo and Redo Changes tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.UndoRedo" >}}
-[Add Notes to Workspaces tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddNotes" >}}
-[Cut, Copy, Paste and Delete Objects tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CutCopyPasteDelete" >}}
-[Add and Remove Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddRemoveBreakpoints" >}}
-[Set Next Block to Execute tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SetNextBlock" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [breadcrumb trail]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar.BreadcrumbTrail" >}}
