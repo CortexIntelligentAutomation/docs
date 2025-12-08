@@ -232,7 +232,7 @@ Available in Editor Modes: `Debug`, `Debug Edit` (if the execution is paused)
 
 Selecting this option will cause the execution token, or the selected execution if there are multiple simultaneous executions, to be moved above the current block.
 
-Note: If multiple blocks have been selected, the `Set Next Block to Execute` action will only apply to the current block.
+Note: If multiple blocks have been selected, the `Set Next Block to Execute` action will only apply to the current block. If multiple executions have been selected this option is not available.
 
 See the [Set Next Block to Execute][Set Next Block to Execute tutorial] tutorial for a step-by-step guide.
 
