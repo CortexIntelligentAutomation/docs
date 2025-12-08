@@ -47,25 +47,39 @@ At the top of each workspace, a workspace Toolbar displays the workspace name an
 
 When a new workspace is created, it is initially given the default name of `Untitled Workspace`. This should be changed to a meaningful name, which will be displayed in the [breadcrumb trail][] in the [Navigation Bar][].
 
+#### Context Menus
+
+Context menus exist for workspaces and blocks on workspaces.
+
+##### Workspaces
+
+The workspace context menu allows for the pasting of objects copied to the {{% ctx %}} clipboard and creation of notes on the workspace, dependent on the Editor mode selected.
+
+##### Blocks on Workspaces
+
+The block context menu allows for the copying, cutting, deletion, setting and removing of breakpoints and the setting of the next block to execute, dependent on the Editor mode selected.
+
 ## Actions
 
-### Undo
+### Main Toolbar
+
+#### Undo
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Undo.png" >}} icon allows the developer to undo changes made to the flow.
+The {{< image src="/images/Flow Editor - Undo.png" >}} icon allows the developer to undo changes made to the flow. The undo action can also be achieved by pressing `Ctrl+Z` on the keyboard.
 
 See the [Undo and Redo Changes][Undo and Redo Changes tutorial] tutorial for a step-by-step guide.
 
-### Redo
+#### Redo
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
-The {{< image src="/images/Flow Editor - Redo.png" >}} icon allows the developer to redo changes undone by the Undo command.
+The {{< image src="/images/Flow Editor - Redo.png" >}} icon allows the developer to redo changes undone by the Undo command. The redo action can also be achieved by pressing `Ctrl+Y` on the keyboard.
 
 See the [Undo and Redo Changes][Undo and Redo Changes tutorial] tutorial for a step-by-step guide.
 
-### Start an Execution
+#### Start an Execution
 
 Available in Editor Modes: `View`, `Edit`, `Debug`
 
@@ -73,7 +87,7 @@ The {{< image src="/images/Flow Editor - Start Execution.png" >}} icon saves any
 
 See the [Start an Execution][Start an Execution tutorial] tutorial for a step-by-step guide.
 
-### Execution Options
+#### Execution Options
 
 Available in Editor Modes: `View`, `Edit`, `Debug`
 
@@ -84,7 +98,7 @@ The {{< image src="/images/Flow Editor - Execution Options.png" >}} dropdown ena
 
 See the [Start an Execution][Start an Execution tutorial] tutorial for a step-by-step guide.
 
-### Edit Flow
+#### Edit Flow
 
 Available in Editor Modes: `Debug` (if user has [`Edit`][Edit] permissions)
 
@@ -92,7 +106,7 @@ The {{< image src="/images/Flow Editor - Edit Flow.png" >}} icon causes a flow t
 
 See the [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial] tutorial for a step-by-step guide.
 
-### Continue Debugging
+#### Continue Debugging
 
 Available in Editor Modes: `Debug Edit`
 
@@ -100,7 +114,7 @@ The {{< image src="/images/Flow Editor - Continue Debugging.png" >}} icon saves 
 
 See the [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial] tutorial for a step-by-step guide.
 
-### Remove all Breakpoints
+#### Remove all Breakpoints
 
 Available in Editor Modes: `View`, `Edit`, `Debug`, `Debug Edit`
 
@@ -108,7 +122,7 @@ The {{< image src="/images/Flow Editor - Remove Breakpoints.png" >}} icon remove
 
 See the [Remove All Breakpoints][Remove All Breakpoints tutorial] tutorial for a step-by-step guide.
 
-### Save
+#### Save
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
@@ -116,7 +130,7 @@ The {{< image src="/images/Flow Editor - Save.png" >}} icon saves any changes ma
 
 See the [Save and Commit Flow][Save and Commit Flow tutorial] tutorial for a step-by-step guide.
 
-### Commit Flow
+#### Commit Flow
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
@@ -124,7 +138,7 @@ The {{< image src="/images/Flow Editor - Commit.png" >}} icon saves any changes 
 
 See the [Save and Commit Flow][Save and Commit Flow tutorial] tutorial for a step-by-step guide.
 
-### Get the Master Version of this Flow
+#### Get the Master Version of this Flow
 
 Available in Editor Modes: `View`, `Edit`, `Debug Edit`
 
@@ -132,7 +146,7 @@ The {{< image src="/images/Flow Editor - Get Master.png" >}} icon retrieves the 
 
 See the [Get Master Version of Flow][Get Master Version of Flow tutorial] tutorial for a step-by-step guide.
 
-### Compare Flow with Master Version
+#### Compare Flow with Master Version
 
 Available in Editor Modes: `View`, `Edit`, `Debug`, `Debug Edit`
 
@@ -140,7 +154,7 @@ The {{< image src="/images/Flow Editor - Compare with Master.png" >}} icon saves
 
 See the [Compare Flow with Master Version][Compare Flow with Master Version tutorial] tutorial for a step-by-step guide.
 
-### Delete
+#### Delete
 
 Available in Editor Modes: `Edit`, `Debug Edit`
 
@@ -148,11 +162,85 @@ The {{< image src="/images/Flow Editor - Delete Flow.png" >}} icon deletes the c
 
 See the [Delete Flow][Delete Flow tutorial] tutorial for a step-by-step guide.
 
+### Workspace Context Menu
+
+#### Add Note
+
+Available in Editor Modes: `Edit`, `Debug Edit`
+
+Selecting this option will create a Note object on the workspace at the cursor’s location. This allows for the addition of text on the workspace to enhance the understanding of the flow.
+
+See the [Add Notes to Workspaces][Add Notes to Workspaces tutorial] tutorial for a step-by-step guide.
+
+#### Paste
+
+Available in Editor Modes: `Edit`, `Debug Edit` (if an object has been copied or cut to the {{% ctx %}} clipboard)
+
+Selecting this option, or pressing `Ctrl+V` on the keyboard, will paste a copy of the clipboard on to the workspace at the cursor’s location.
+
+See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
+
+### Block Context Menu
+
+#### Copy
+
+Available in Editor Modes: `Edit`, `Debug Edit`
+
+Selecting this option, or pressing `Ctrl+C` on the keyboard, will copy the selected blocks and their configurations, plus any connections between the selected blocks, to the {{% ctx %}} clipboard. This allows a copy of the selected blocks and connections to be pasted on any workspace of any flow open in the Flow Editor.
+
+See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
+
+#### Cut
+
+Available in Editor Modes: `Edit`, `Debug Edit`
+
+Selecting this option, or pressing `Ctrl+X` on the keyboard, will copy the selected blocks and their configurations, plus any connections between the selected blocks, to the {{% ctx %}} clipboard and remove them from the workspace. This allows the selected blocks and connections to be moved to any workspace of any flow open in the Flow Editor.
+
+See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
+
+#### Delete
+
+Available in Editor Modes: `Edit`, `Debug Edit`
+
+Selecting this option, or pressing `Delete` on the keyboard, will delete the selected blocks and any connections between the selected blocks.
+
+See the [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial] tutorial for a step-by-step guide.
+
+#### Add Breakpoint
+
+Available in Editor Modes: `Edit`, `Debug`, `Debug Edit` (if the block does not already have a breakpoint set)
+
+Selecting this option will set a breakpoint above the block.
+
+Note: If multiple blocks have been selected, the `Add Breakpoint` action will only apply to the current block.
+
+See the [Add and Remove Breakpoints][Add and Remove Breakpoints tutorial] tutorial for a step-by-step guide.
+
+#### Remove Breakpoint
+
+Available in Editor Modes: `Edit`, `Debug`, `Debug Edit` (if the block has a breakpoint set)
+
+Selecting this option will cause a breakpoint to be removed.
+
+Note: If multiple blocks have been selected, the `Remove Breakpoint` action will only apply to the current block.
+
+See the [Add and Remove Breakpoints][Add and Remove Breakpoints tutorial] tutorial for a step-by-step guide.
+
+#### Set Next Block to Execute
+
+Available in Editor Modes: `Debug`, `Debug Edit` (if the execution is paused)
+
+Selecting this option will cause the execution token, or the selected execution if there are multiple simultaneous executions, to be moved above the current block.
+
+Note: If multiple blocks have been selected, the `Set Next Block to Execute` action will only apply to the current block. If multiple executions have been selected this option is not available.
+
+See the [Set Next Block to Execute][Set Next Block to Execute tutorial] tutorial for a step-by-step guide.
+
 ## Remarks
 
 ### Known Limitations
 
-None
+* It is not possible to set breakpoints on multiple blocks simultaneously.
 
 ## See Also
 
@@ -167,24 +255,36 @@ None
 
 ### Related Tutorials
 
-* [Undo and Redo Changes][Undo and Redo Changes tutorial]
-* [Start an Execution][Start an Execution tutorial]
-* [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial]
-* [Remove All Breakpoints][Remove All Breakpoints tutorial]
-* [Save and Commit Flow][Save and Commit Flow tutorial]
-* [Get Master Version of Flow][Get Master Version of Flow tutorial]
-* [Compare Flow with Master Version][Compare Flow with Master Version tutorial]
-* [Delete Flow][Delete Flow tutorial]
+* [Main Toolbar][Main Toolbar Actions tutorials]
+  * [Undo and Redo Changes][Undo and Redo Changes tutorial]
+  * [Start an Execution][Start an Execution tutorial]
+  * [Edit Flow and Continue Debugging][Edit Flow and Continue Debugging tutorial]
+  * [Remove All Breakpoints][Remove All Breakpoints tutorial]
+  * [Save and Commit Flow][Save and Commit Flow tutorial]
+  * [Get Master Version of Flow][Get Master Version of Flow tutorial]
+  * [Compare Flow with Master Version][Compare Flow with Master Version tutorial]
+  * [Delete Flow][Delete Flow tutorial]
+* [Context Menus][Context Menu tutorials]
+  * [Cut, Copy, Paste and Delete Objects][Cut, Copy, Paste and Delete Objects tutorial]
+  * [Add and Remove Breakpoints][Add and Remove Breakpoints tutorial]
+  * [Set Next Block to Execute][Set Next Block to Execute tutorial]
+  * [Add Notes to Workspaces][Add Notes to Workspaces tutorial]
 
 [Main Toolbar]: {{< ref "#main-toolbar" >}}
 [workspaces]: {{< ref "#workspaces" >}}
 
+[Add Notes to Workspaces tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddNotes" >}}
+[Add and Remove Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddRemoveBreakpoints" >}}
 [Compare Flow with Master Version tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CompareMaster" >}}
+[Context Menu tutorials]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.ContextMenus" >}}
+[Cut, Copy, Paste and Delete Objects tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CutCopyPasteDelete" >}}
 [Delete Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.DeleteFlow" >}}
 [Edit Flow and Continue Debugging tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.EditFlow" >}}
 [Get Master Version of Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.GetMaster" >}}
+[Main Toolbar Actions tutorials]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.MainToolbar" >}}
 [Remove All Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.RemoveBreakpoints" >}}
 [Save and Commit Flow tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SaveCommit" >}}
+[Set Next Block to Execute tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SetNextBlock" >}}
 [Start an Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.StartExecution" >}}
 [Undo and Redo Changes tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.UndoRedo" >}}
 

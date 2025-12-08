@@ -9,6 +9,10 @@ weight: 50
 
 ## Executions Grid
 
+### Select an Execution
+
+{{< scribe title="Selecting_Executions_Displayed_in_the_Executions_Grid" id="aupnEzLhQ7yZcQaNScvLeg" >}}
+
 ### Continue and Stop the Execution
 
 {{< scribe title="Continue_the_Execution_and_Stop_the_Execution" id="Y1VaqZLTQlaLm6bS5c_jGQ" >}}

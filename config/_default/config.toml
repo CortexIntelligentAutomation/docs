@@ -74,6 +74,9 @@ weight = 1
       style = "tango"
       # Uncomment if you want your chosen highlight style used for code blocks without a specified language
       # guessSyntax = "true"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
 
 # Everything below this are Site Params
 
