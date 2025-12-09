@@ -159,7 +159,7 @@ The Running Executions tab displays a list of currently running flow executions 
 * `Root Execution Id` - the Execution ID of the initial flow to be executed. If this flow is the initially executed flow, its Execution Id will be also the Root Execution Id. If this flow execution was initiated by another flow, if will share the same Root Execution Id to that of the parent flow.
 * `Started At` - the date and time when this flow started executing.
 * `Duration` - the current duration of the flow in seconds; the Duration is updated at 10 second intervals.
-* `Executing On` - identifies the node executing this flow. It has the format of `<Installation>.<Host Name> (<IPv4 Address)`, `<Installation>` is a custom text string specified at the time of installation, `<Host Name>` is the name of the host server, and `<IPv4 Address>` is the IP address configured on the host’s network adaptor.
+* `Executing On` - identifies the node executing this flow. It has the format of `<Installation>.<Host Name> (<IPv4 Address>)`, `<Installation>` is a custom text string specified at the time of installation, `<Host Name>` is the name of the host server, and `<IPv4 Address>` is the IP address configured on the host’s network adaptor.
 * `Debugged By`– identifies the user that has attached to this flow to debug it in {{% ctx %}} Gateway. This will be blank if a user is not attached to the flow.
 
 #### Filter Running Executions
@@ -172,7 +172,7 @@ See the [View Running Executions][View Running Executions tutorial] tutorial for
 
 #### Group, Sort and Aggregate Running Executions
 
-The {{< image src="/images/Package Version Editor - Filter Options.png" >}} icon to the right of each column name reveals a menu enabling the executing flows to be grouped, sorted, or have an aggregation function applied the column’s data.
+The {{< image src="/images/Package Version Editor - Filter Options.png" >}} icon to the right of each column name reveals a menu enabling the executing flows to be grouped, sorted, or have an aggregation function applied to the column’s data.
 
 See the [View Running Executions][View Running Executions tutorial] tutorial for a step-by-step guide.
 
@@ -180,7 +180,7 @@ See the [View Running Executions][View Running Executions tutorial] tutorial for
 
 Any running flow execution may be aborted by selecting the flow and clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon. The flow execution will be stopped immediately.
 
-Multiple executions may be stopped simultaneously by selecting the executions by holding down the Ctrl or Shift key and clicking the executions to select, then clicking the `Stop the execution` icon.
+Multiple executions may be stopped simultaneously by selecting the executions by holding down the Ctrl or Shift key and clicking the executions to select, then clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon.
 
 See the [Stop Running Executions][Stop Running Executions tutorial] tutorial for a step-by-step guide.
 

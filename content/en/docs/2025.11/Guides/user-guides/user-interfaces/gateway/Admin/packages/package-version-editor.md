@@ -149,11 +149,48 @@ See the [Create a Trigger on a Package Version][Create a Trigger on a Package Ve
 
 ### Running Executions
 
-The Running Executions tab displays a list of currently running flow executions for the selected package version. Each row in the list is a distinct flow execution, and identifies the `Flow Name`, its `Execution Id`, the time the execution `Started At`, and the `Duration` of that execution; the `Duration` is updated at 10 second intervals.
+{{< figure src="/images/Package Version Editor - Running Executions.png" title="Running Executions Grid" >}}
 
-Any running flow execution may be aborted by selecting the flow and clicking the `Stop the execution` icon. The flow execution will be stopped immediately.
+The Running Executions tab displays a list of currently running flow executions for the selected package version. Each row in the list is a distinct flow execution, and identifies:
 
-See the [View and Abort Running Flow Executions][View and Abort Running Flow Executions tutorial] tutorial for a step-by-step guide.
+* `Flow Name` - the name of the flow being executed.
+* `Execution Id` - the unique execution ID for this flow.
+* `Parent Execution Id` - the Execution ID of the flow that initiated the execution of this flow. If this flow was not initiated by another flow the Parent Execution Id is blank.
+* `Root Execution Id` - the Execution ID of the initial flow to be executed. If this flow is the initially executed flow, its Execution Id will be also the Root Execution Id. If this flow execution was initiated by another flow, if will share the same Root Execution Id to that of the parent flow.
+* `Started At` - the date and time when this flow started executing.
+* `Duration` - the current duration of the flow in seconds; the Duration is updated at 10 second intervals.
+* `Executing On` - identifies the node executing this flow. It has the format of `<Installation>.<Host Name> (<IPv4 Address>)`, `<Installation>` is a custom text string specified at the time of installation, `<Host Name>` is the name of the host server, and `<IPv4 Address>` is the IP address configured on the host’s network adaptor.
+* `Debugged By`– identifies the user that has attached to this flow to debug it in {{% ctx %}} Gateway. This will be blank if a user is not attached to the flow.
+
+#### Filter Running Executions
+
+Flows may be filtered by entering text into the search field of any column to form a partial text match with the displayed data.
+
+Note: The `Started At` column must be filtered using the date-time format of `yyyy-MM-ddThh:mm:ss`. A partial match of digits used in the `Started At` filter may be used.
+
+See the [View Running Executions][View Running Executions tutorial] tutorial for a step-by-step guide.
+
+#### Group, Sort and Aggregate Running Executions
+
+The {{< image src="/images/Package Version Editor - Filter Options.png" >}} icon to the right of each column name reveals a menu enabling the executing flows to be grouped, sorted, or have an aggregation function applied to the column’s data.
+
+See the [View Running Executions][View Running Executions tutorial] tutorial for a step-by-step guide.
+
+#### Stop Running Executions
+
+Any running flow execution may be aborted by selecting the flow and clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon. The flow execution will be stopped immediately.
+
+Multiple executions may be stopped simultaneously by selecting the executions by holding down the Ctrl or Shift key and clicking the executions to select, then clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}}  icon.
+
+See the [Stop Running Executions][Stop Running Executions tutorial] tutorial for a step-by-step guide.
+
+#### Debug Running Executions
+
+A running execution may be debugged in {{% ctx %}} Gateway by selecting the execution in the Running Executions grid and clicking the {{< image src="/images/Package Version Editor - Attach to Execution.png" >}} icon; all dependent running executions will also be automatically attached to the same {{% ctx %}} Gateway session, which will open in a new window.
+
+To abort debugging in {{% ctx %}} Gateway, detach the execution by clicking the {{< image src="/images/Package Version Editor - Detach from Execution.png" >}} icon. Any paused executions in {{% ctx %}} Gateway will immediately continue running. If any changes have been made to the executing flow whilst debugging in {{% ctx %}} Gateway, these changes will persist for this execution only after the execution has been detached.
+
+See the [Debug Running Executions][Debug Running Executions tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
@@ -173,16 +210,23 @@ See the [View and Abort Running Flow Executions][View and Abort Running Flow Exe
 
 ### Related Tutorials
 
-* [Create a New Package Version][Create a New Package Version tutorial]
-* [Publish a Package Version][Publish a Package Version tutorial]
-* [Set the Default Package][Set the Default Package tutorial]
-* [Set the Default Package Version][Set the Default Package Version tutorial]
-* [Unpublish a Package Version][Unpublish a Package Version tutorial]
-* [Export a Package Version][Export a Package Version tutorial]
-* [Set Authorisation on a Package Version][Set Authorisation on a Package Version tutorial]
-* [Create a Schedule on a Package Version][Create a Schedule on a Package Version tutorial]
-* [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial]
-* [View and Abort Running Flow Executions][View and Abort Running Flow Executions tutorial]
+* [Definition][Definition tutorials]
+  * [Create a New Package Version][Create a New Package Version tutorial]
+  * [Publish a Package Version][Publish a Package Version tutorial]
+  * [Set the Default Package][Set the Default Package tutorial]
+  * [Set the Default Package Version][Set the Default Package Version tutorial]
+  * [Unpublish a Package Version][Unpublish a Package Version tutorial]
+  * [Export a Package Version][Export a Package Version tutorial]
+* [Authorisation][Authorisation tutorials]
+  * [Set Authorisation on a Package Version][Set Authorisation on a Package Version tutorial]
+* [Schedules][Schedules tutorials]
+  * [Create a Schedule on a Package Version][Create a Schedule on a Package Version tutorial]
+* [Triggers][Triggers tutorials]
+  * [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial]
+* [Running Executions][Running Executions tutorials]
+  * [View Running Executions][View Running Executions tutorial]
+  * [Stop Running Executions][Stop Running Executions tutorial]
+  * [Debug Running Executions][Debug Running Executions tutorial]
 
 [Authorisation]: {{< ref "#authorisation" >}}
 [Create New Version]: {{< ref "#create-a-new-package-version" >}}
@@ -196,18 +240,26 @@ See the [View and Abort Running Flow Executions][View and Abort Running Flow Exe
 [Triggers]: {{< ref "#triggers" >}}
 [Unpublish]: {{< ref "#unpublish-a-package-version" >}}
 
+[Authorisation tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
 [Create a New Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
-[Create a Schedule on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
-[Create a Trigger on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
+[Create a Schedule on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateSchedules" >}}
+[Create a Trigger on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateTriggers" >}}
+[Debug Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.DebugRunningExecutions" >}}
+[Definition tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Definition" >}}
 [Export a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
+[Publish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
+[Running Executions tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
+[Schedules tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
+[Set Authorisation on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetAuthorisation" >}}
+[Set the Default Package tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
+[Set the Default Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
+[Stop Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.StopRunningExecutions" >}}
+[Triggers tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
+[Unpublish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
+[View Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ViewRunningExecutions" >}}
+
 [Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Import]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid.Import" >}}
 [Input Variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.FlowInputVariable" >}}
-[Publish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
-[Set Authorisation on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
-[Set the Default Package tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
-[Set the Default Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
-[Unpublish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
-[View and Abort Running Flow Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
 [Package Definitions Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.PackageDefinitionsGrid.MainDoc" >}}
 [What is a Package?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Packages.WhatIsAPackage.MainDoc" >}}
