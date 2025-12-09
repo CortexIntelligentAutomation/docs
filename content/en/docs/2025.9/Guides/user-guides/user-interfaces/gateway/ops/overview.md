@@ -31,7 +31,7 @@ To view Service Fabric Explorer, the Service Fabric client certificate must be {
 
 #### Running Executions
 
-This tile displays the current number of [Running Executions][]. The {{< image src="/images/GoTo.png" >}} icon  navigates to the [Package Management][Package Management] feature, to provide a breakdown of running executions by package version and flow.
+This tile displays the current number of [Running Executions][], including any child executions. The {{< image src="/images/GoTo.png" >}} icon  navigates to the [Package Management][Package Management] feature, to provide a breakdown of running executions by package version and flow.
 
 ### Filters
 
