@@ -240,21 +240,21 @@ See the [Debug Running Executions][Debug Running Executions tutorial] tutorial f
 [Triggers]: {{< ref "#triggers" >}}
 [Unpublish]: {{< ref "#unpublish-a-package-version" >}}
 
-[Authorisation tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
+[Authorisation tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.AuthorisationTutorials" >}}
 [Create a New Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateNewPackageVersion" >}}
-[Create a Schedule on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateSchedules" >}}
-[Create a Trigger on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.CreateTriggers" >}}
+[Create a Schedule on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
+[Create a Trigger on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
 [Debug Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.DebugRunningExecutions" >}}
-[Definition tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Definition" >}}
+[Definition tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.DefinitionTutorials" >}}
 [Export a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ExportPackage" >}}
 [Publish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.PublishPackage" >}}
-[Running Executions tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutions" >}}
-[Schedules tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Schedules" >}}
-[Set Authorisation on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetAuthorisation" >}}
+[Running Executions tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.RunningExecutionsTutorials" >}}
+[Schedules tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SchedulesTutorials" >}}
+[Set Authorisation on a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Authorisation" >}}
 [Set the Default Package tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackage" >}}
 [Set the Default Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.SetDefaultPackageVersion" >}}
 [Stop Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.StopRunningExecutions" >}}
-[Triggers tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.Triggers" >}}
+[Triggers tutorials]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.TriggersTutorials" >}}
 [Unpublish a Package Version tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.UnpublishPackage" >}}
 [View Running Executions tutorial]: {{< url path="Cortex.Tutorials.Administration.PackageManagement.ViewRunningExecutions" >}}
 
