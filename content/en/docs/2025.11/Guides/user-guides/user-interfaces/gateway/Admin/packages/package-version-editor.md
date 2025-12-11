@@ -159,7 +159,7 @@ The Running Executions tab displays a list of currently running flow executions 
 * `Root Execution Id` - the Execution ID of the initial flow to be executed. If this flow is the initially executed flow, its Execution Id will be also the Root Execution Id. If this flow execution was initiated by another flow, if will share the same Root Execution Id to that of the parent flow.
 * `Started At` - the date and time when this flow started executing.
 * `Duration` - the current duration of the flow in seconds; the Duration is updated at 10 second intervals.
-* `Executing On` - identifies the node executing this flow. It has the format of `<Installation>.<Host Name> (<IPv4 Address>)`, `<Installation>` is a custom text string specified at the time of installation, `<Host Name>` is the name of the host server, and `<IPv4 Address>` is the IP address configured on the host’s network adaptor.
+* `Executing On` - identifies the node executing this flow. It has the format of `<CustomerName>.<Host Name> (<IPv4 Address>)`, `<CustomerName>` is the `CustomerName` specified at the time of installation to identify the platform, `<Host Name>` is the name of the host server, and `<IPv4 Address>` is the IP address of the host server.
 * `Debugged By`– identifies the user that has attached to this flow to debug it in {{% ctx %}} Gateway. This will be blank if a user is not attached to the flow.
 
 #### Filter Running Executions
@@ -176,21 +176,21 @@ The {{< image src="/images/Package Version Editor - Filter Options.png" >}} icon
 
 See the [View Running Executions][View Running Executions tutorial] tutorial for a step-by-step guide.
 
-#### Stop Running Executions
-
-Any running flow execution may be aborted by selecting the flow and clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon. The flow execution will be stopped immediately.
-
-Multiple executions may be stopped simultaneously by selecting the executions by holding down the Ctrl or Shift key and clicking the executions to select, then clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}}  icon.
-
-See the [Stop Running Executions][Stop Running Executions tutorial] tutorial for a step-by-step guide.
-
 #### Debug Running Executions
 
-A running execution may be debugged in {{% ctx %}} Gateway by selecting the execution in the Running Executions grid and clicking the {{< image src="/images/Package Version Editor - Attach to Execution.png" >}} icon; all dependent running executions will also be automatically attached to the same {{% ctx %}} Gateway session, which will open in a new window.
+A running execution may be debugged by selecting the execution and clicking the {{< image src="/images/Package Version Editor - Attach to Execution.png" >}} icon; all dependent executions will automatically be attached to the same session, which will open in a new window.
 
-To abort debugging in {{% ctx %}} Gateway, detach the execution by clicking the {{< image src="/images/Package Version Editor - Detach from Execution.png" >}} icon. Any paused executions in {{% ctx %}} Gateway will immediately continue running. If any changes have been made to the executing flow whilst debugging in {{% ctx %}} Gateway, these changes will persist for this execution only after the execution has been detached.
+To stop debugging, detach the execution by clicking the {{< image src="/images/Package Version Editor - Detach from Execution.png" >}} icon; all dependent executions will be automatically detached. Any paused executions will immediately continue running. If any changes have been made to the executing flows whilst debugging, these changes will persist for these executions only.
 
 See the [Debug Running Executions][Debug Running Executions tutorial] tutorial for a step-by-step guide.
+
+#### Stop Running Executions
+
+Any running flow execution may be aborted by selecting the execution and clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon. The flow execution will be stopped immediately.
+
+Multiple executions may be stopped simultaneously by selecting the executions by holding down the Ctrl or Shift key and clicking the executions to select, then clicking the {{< image src="/images/Package Version Editor - Stop Execution.png" >}} icon.
+
+See the [Stop Running Executions][Stop Running Executions tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
@@ -225,8 +225,8 @@ See the [Debug Running Executions][Debug Running Executions tutorial] tutorial f
   * [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial]
 * [Running Executions][Running Executions tutorials]
   * [View Running Executions][View Running Executions tutorial]
-  * [Stop Running Executions][Stop Running Executions tutorial]
   * [Debug Running Executions][Debug Running Executions tutorial]
+  * [Stop Running Executions][Stop Running Executions tutorial]
 
 [Authorisation]: {{< ref "#authorisation" >}}
 [Create New Version]: {{< ref "#create-a-new-package-version" >}}

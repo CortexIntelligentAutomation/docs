@@ -69,10 +69,10 @@ weight: 200
 
 {{< scribe title="View_Published_Running_Executions" id="OrKFGSI6TT6gfeG9-UjuVQ" >}}
 
-#### Stop Running Executions
-
-{{< scribe title="Stop_Published_Running_Executions" id="6iA_QdvgTwuddrtmszbXTw" >}}
-
 #### Debug Running Executions
 
 {{< scribe title="Debug_Published_Running_Executions_in_CORTEX_Gateway" id="znO622WqQj28lFD6mulotw" >}}
+
+#### Stop Running Executions
+
+{{< scribe title="Stop_Published_Running_Executions" id="6iA_QdvgTwuddrtmszbXTw" >}}
