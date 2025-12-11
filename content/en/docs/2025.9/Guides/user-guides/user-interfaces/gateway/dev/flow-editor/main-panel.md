@@ -287,6 +287,10 @@ See the [Set Next Block to Execute][Set Next Block to Execute tutorial] tutorial
 [Set Next Block to Execute tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SetNextBlock" >}}
 [Start an Execution tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.StartExecution" >}}
 [Undo and Redo Changes tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.UndoRedo" >}}
+[Add Notes to Workspaces tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddNotes" >}}
+[Cut, Copy, Paste and Delete Objects tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.CutCopyPasteDelete" >}}
+[Add and Remove Breakpoints tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.AddRemoveBreakpoints" >}}
+[Set Next Block to Execute tutorial]: {{< url path="Cortex.Tutorials.Development.FlowEditor.MainPanel.SetNextBlock" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.MainDoc" >}}
 [breadcrumb trail]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.NavigationBar.BreadcrumbTrail" >}}
