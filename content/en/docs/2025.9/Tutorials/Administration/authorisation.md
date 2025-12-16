@@ -1,7 +1,7 @@
 ---
-title: "Authentication"
-linkTitle: "Authentication"
-description: "This section includes tutorials about configuring authentication."
+title: "Authorisation"
+linkTitle: "Authorisation"
+description: "This section includes tutorials about configuring authorisation."
 weight: 20
 ---
 
