@@ -26,9 +26,9 @@ Groups set up in Microsoft Entra, provide for {{% ctx %}} Role assignment and {{
 The fields available in the OIDC form are:
 
 * `Provider Type` – the OIDC provider type. Currently, only Microsoft is the OIDC provider supported.
-* `Identifier` – Free-format, friendly unique name for this provider
-* `Display Name` – the text displayed in the {{% ctx %}} Gateway sign-in button
-* `Authority` – the URL for authentication to which to send authentication requests
+* `Identifier` – free-format, friendly unique name for this provider.
+* `Display Name` – the text displayed in the {{% ctx %}} Gateway sign-in button.
+* `Authority` – the URL for authentication to which to send authentication requests.
 * `Tenant Identifier` – the Microsoft Entra Tenant ID for the organisation managing authentication.
 * `Client Identifier` – the unique identifier to identify the {{% ctx %}} Gateway application to the authentication provider.
 * `Client Secret` – the client secret that validate the Client Identifier to the authentication provider.
@@ -50,7 +50,7 @@ The fields available in the LDAP form are:
 * `Use SSL` – a checkbox to select the LDAPS protocol rather than LDAP.
 * `Username` – the name of a user with read permissions in Active Directory. A Service Account is used.
 * `Password` – the password associated with the username entered in the Username field.
-* `Base DNs` – the Active Directory objects that can be accessed by {{% ctx %}} Gateway. The identity of the objects is expressed using their Distinguished Names. More than one Distinguished Name can be set to refer to multiple objects within Active Directory. If no Distinguished Names are set, the whole of the Active Directory is accessible.
+* `Base DNs` – the Active Directory objects that can be accessed by {{% ctx %}} Gateway. The identity of the objects is expressed using their Distinguished Names. More than one Distinguished Name can be set to refer to multiple objects within Active Directory. If no Distinguished Names are set, the whole of Active Directory is accessible.
 
 ## Actions
 

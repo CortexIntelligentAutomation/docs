@@ -25,9 +25,9 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Click `+ Add a platform`.
     1. Select Single-page application and set:
         * `Redirect URIs` to `https://<Gateway-Server>/gateway/redirect`.
-        * `Front-channel logout URL` to `https://localhost:44321/signout-calback-oidc`.
+        * `Front-channel logout URL` to `https://localhost:44321/signout-callback-oidc`.
         * `Implicit grant and hybrid flows` to `ID tokens`.
-    1. Click `Save`.
+    1. Click `Configure`.
 1. Configure application permissions for a web API from Microsoft Graph using API Permissions:
     1. Select the application registration created in Step 1.
     1. Select `API permissions` from the menu on the left.
@@ -61,7 +61,7 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
         The Application ID URI must contain a unique identifier; this is prepopulated by default.
 
         * Click `+ Add a scope`.
-        * Set the `Scope name` to `Flows.Read`.
+        * Enter the `Scope name` as `Flows.Read`.
         * Set `Who can consent?` to `Admins and users`.
         * Enter an `Admin consent display name`, e.g. `Read Flows`.
         * Enter an `Admin consent description`, e.g. `Allows {{% ctx %}} client to read flows`.
