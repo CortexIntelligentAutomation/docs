@@ -1,7 +1,7 @@
 ---
 title: "Authentication"
 linkTitle: "Authentication"
-description: "This section includes tutorials about configuring authentication."
+description: "This section includes tutorials about setting up authentication providers used to control access to {{% ctx %}} Gateway."
 weight: 20
 ---
 

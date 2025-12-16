@@ -19,7 +19,7 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Enter a meaningful Name for the {{% ctx %}} Gateway application.
     1. Select the appropriate Supported account type, e.g. `Accounts in this organizational directory only`.
     1. Click `Register`.
-1. Add a Redirect URL:
+1. Add a Redirect URI:
     1. Select the application registration created in Step 1.
     1. Click `Redirect URIs`.
     1. Click `+ Add a platform`.
@@ -35,16 +35,16 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Click `+ Add a permission`
         * Select `Microsoft Graph`
         * Select `Application permissions`.
-        * Locate and Expand `GroupMember` and select `GroupMember.Read.All` to allow the application to authenticate itself without user interaction or consent.
+        * Locate and expand `GroupMember` and select `GroupMember.Read.All` to allow the application to authenticate itself without user interaction or consent.
         * Click `Add permissions`.
     1. Click `+ Add a permission` again.
         * Select `Microsoft Graph`
         * Select `Delegated permissions`
-        * Locate and Expand `Openid permissions`, and select:
-            * `email` to allow access view the users’ email address.
+        * Locate and expand `Openid permissions`, and select:
+            * `email` to allow access to view the users’ email address.
             * `offline_access` to maintain access to data already accessed.
             * `openid` to allow users to sign in.
-            * `profile` to allow access to view user’s basic profile.
+            * `profile` to allow access to view the user’s basic profile.
         * Click `Add permissions`.
 1. Configure the token for group claim:
     1. Select the application registration created in Step 1.
@@ -65,8 +65,8 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
         * Set `Who can consent?` to `Admins and users`.
         * Enter an `Admin consent display name`, e.g. `Read Flows`.
         * Enter an `Admin consent description`, e.g. `Allows {{% ctx %}} client to read flows`.
-        * Enter an `User consent display name`, e.g. `Read Your Flows`.
-        * Enter an `User consent description`, e.g. `Allows {{% ctx %}} client to read Flows`.
+        * Enter an `User consent display name`, e.g. `Read Your flows`.
+        * Enter an `User consent description`, e.g. `Allows {{% ctx %}} client to read flows`.
         * Ensure `State` is set to `Enabled`.
     1. Click `Add scope`.
 1. Create Credentials for the Application:

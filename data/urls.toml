@@ -1216,8 +1216,8 @@
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authentication]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/"
-                            LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap-authentication"
-                            OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect-authentication"
+                            LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
+                            OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
@@ -3628,6 +3628,8 @@
             MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
+        [MSDocs.Windows.Ldap]
+            DNs = "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names"
         [MSDocs.Windows.WindowsServer]
             LogonTypes = "https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types"
             NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"

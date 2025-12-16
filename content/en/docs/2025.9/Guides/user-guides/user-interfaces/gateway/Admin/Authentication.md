@@ -1,7 +1,7 @@
 ---
 title: "Authentication"
 linkTitle: "Authentication"
-description: "Setup authentication for accessing {{% ctx %}} Gateway."
+description: "Setup authentication providers used to control access to {{% ctx %}} Gateway."
 weight: 20
 ---
 
@@ -9,48 +9,52 @@ weight: 20
 
 ## Summary
 
-The Authentication page is used to setup authentication for accessing {{% ctx %}} Gateway.
+The Authentication page is used to setup one or more authentication providers used to control access to {{% ctx %}} Gateway.
 
 ## Anatomy
 
-Authentication can be configured using [LDAP Authentication][] against a Microsoft Active Directory, and [OpenID Connect (OIDC) Authentication][OIDC Authentication] with one or more providers.
+Authentication can be configured using [LDAP][] against a Microsoft Active Directory, and [OpenID Connect (OIDC)][OIDC] with one or more providers.
 
-### LDAP Authentication
+### LDAP
 
 {{< figure src="/images/Authentication - LDAP.png" title="LDAP Authentication Configuration" >}}
 
 LDAP authentication defines the connection to a Microsoft Active Directory server to authorise Active Directory users with different roles and permissions within {{% ctx %}} Gateway.
 
-The LDAP form provides for the connection details to the LDAP server (URL or domain), port and protocol, plus the credentials of an AD User (typically a Service Account) that can read the Active Directory.
+It requires connection details to the Active Directory server (URL or domain), port and protocol, plus the credentials of an Active Directory account (typically a service account) that can read the Active Directory.
 
-For additional security, and to avoid the clutter of irrelevant information, it is possible to filter the Active Directory information available for use in {{% ctx %}} Gateway to that defined by a set of Base DNs.
+For additional security, and to avoid the clutter of irrelevant information, it is possible to filter the Active Directory information available for use in {{% ctx %}} Gateway to that defined by a set of [Base DNs (Distinguished Names)][DNs].
 
-The fields available in the LDAP form are:
+{{% ctx %}} Roles and Flow Editor permissions can be assigned to groups set up in Active Directory.
+
+The fields available are:
 
 * `Server` – specifies either URL or IPv4 address of the Active Directory server, or the domain name for the Active Directory domain.
-* `Port` – specifies the IPv4 port used to access Active Directory, typically either 389 or 636.
-* `Use SSL` – a checkbox to select the LDAPS protocol rather than LDAP.
-* `Username` – the name of a user with read permissions in Active Directory. A Service Account is used.
-* `Password` – the password associated with the username entered in the Username field.
-* `Base DNs` – the Active Directory objects that can be accessed by {{% ctx %}} Gateway. The identity of the objects is expressed using their Distinguished Names. More than one Distinguished Name can be set to refer to multiple objects within Active Directory. If no Distinguished Names are set, the whole of Active Directory is accessible.
+* `Port` – specifies the port used to access Active Directory, typically either 389 for LDAP or 636 for LDAPS.
+* `Use SSL` – a checkbox to connect via the LDAPS protocol rather than LDAP.
+* `Username` – the username of an account with read permissions in Active Directory; typically a service account is used.
+* `Password` – the password associated with the username entered in the `Username` field.
+* `Base DNs` – the Active Directory objects that can be accessed by {{% ctx %}} Gateway. The identity of the objects is expressed using their Distinguished Names. More than one Distinguished Name can be set to refer to multiple objects within the Active Directory. If no Distinguished Names are set, the whole of the Active Directory is accessible.
 
-### OpenID Connect Authentication
+### OpenID Connect
 
 {{< figure src="/images/Authentication - OIDC.png" title="Open ID Connect Provider Configuration" >}}
 
-OpenID Connect provides connections to third-party authentication services, e.g. Microsoft Entra. The OpenID Connect tab allows for one or more providers to be configured for users to authenticate with {{% ctx %}} Gateway, using Multi-Factor Authentication (MFA) if required.
+OpenID Connect provides connections to third-party authentication services to authenticate users in {{% ctx %}} Gateway, using Multi-Factor Authentication (MFA) if the provider supports it.
 
-Groups set up in Microsoft Entra, provide for {{% ctx %}} Role assignment and {{% ctx %}} Flow Editor permissions.
+The OpenID Connect tab currently only supports the Microsoft Entra provider but allows for one or more instances to be configured.
 
-The fields available in the OIDC form are:
+{{% ctx %}} Roles and Flow Editor permissions can be assigned to groups set up in Microsoft Entra.
+
+The fields available are:
 
 * `Provider Type` – the OIDC provider type. Currently, only Microsoft is the OIDC provider supported.
 * `Identifier` – free-format, friendly unique name for this provider.
 * `Display Name` – the text displayed in the {{% ctx %}} Gateway sign-in button.
-* `Authority` – the URL for authentication to which to send authentication requests.
+* `Authority` – the URL to send authentication requests to.
 * `Tenant Identifier` – the Microsoft Entra Tenant ID for the organisation managing authentication.
 * `Client Identifier` – the unique identifier to identify the {{% ctx %}} Gateway application to the authentication provider.
-* `Client Secret` – the client secret that validate the Client Identifier to the authentication provider.
+* `Client Secret` – the client secret that validates the {{% ctx %}} Gateway application with the authentication provider.
 
 ## Actions
 
@@ -87,10 +91,11 @@ None
 * [Configure LDAP Authentication][Configure LDAP Authentication tutorial]
 * [Add New OpenID Connect Authentication Provider][Add New OpenID Connect Authentication Provider tutorial]
 
-[OIDC Authentication]: {{< ref "#openid-connect-authentication" >}}
-[LDAP Authentication]: {{< ref "#ldap-authentication" >}}
+[OIDC]: {{< ref "#openid-connect" >}}
+[LDAP]: {{< ref "#ldap" >}}
 
 [Add New OpenID Connect Authentication Provider tutorial]: {{< url path="Cortex.Tutorials.Administration.Authentication.OpenID" >}}
 [Configure LDAP Authentication tutorial]: {{< url path="Cortex.Tutorials.Administration.Authentication.LDAP" >}}
 
 [configure OIDC provider]: {{< url path="Cortex.Faqs.ConfigureOidcAuthentication.MainDoc" >}}
+[DNs]: {{< url path="MSDocs.Windows.Ldap.DNs" >}}
