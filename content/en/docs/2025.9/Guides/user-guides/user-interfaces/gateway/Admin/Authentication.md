@@ -13,25 +13,7 @@ The Authentication page is used to setup authentication for accessing {{% ctx %}
 
 ## Anatomy
 
-Authentication can be configured using [OpenID Connect (OIDC) Authentication][OIDC Authentication] with one or more providers, and [LDAP Authentication][] against Microsoft Active Directory.
-
-### OpenID Connect Authentication
-
-{{< figure src="/images/Authentication - OIDC.png" title="Open ID Connect Provider Configuration" >}}
-
-OpenID Connect provides connections to third-party authentication services, e.g. Microsoft Entra. The OpenID Connect tab allows for one or more providers to be configured for users to authenticate with {{% ctx %}} Gateway, using Multi-Factor Authentication (MFA) if required.
-
-Groups set up in Microsoft Entra, provide for {{% ctx %}} Role assignment and {{% ctx %}} Flow Editor permissions.
-
-The fields available in the OIDC form are:
-
-* `Provider Type` – the OIDC provider type. Currently, only Microsoft is the OIDC provider supported.
-* `Identifier` – free-format, friendly unique name for this provider.
-* `Display Name` – the text displayed in the {{% ctx %}} Gateway sign-in button.
-* `Authority` – the URL for authentication to which to send authentication requests.
-* `Tenant Identifier` – the Microsoft Entra Tenant ID for the organisation managing authentication.
-* `Client Identifier` – the unique identifier to identify the {{% ctx %}} Gateway application to the authentication provider.
-* `Client Secret` – the client secret that validate the Client Identifier to the authentication provider.
+Authentication can be configured using [LDAP Authentication][] against a Microsoft Active Directory, and [OpenID Connect (OIDC) Authentication][OIDC Authentication] with one or more providers.
 
 ### LDAP Authentication
 
@@ -52,7 +34,31 @@ The fields available in the LDAP form are:
 * `Password` – the password associated with the username entered in the Username field.
 * `Base DNs` – the Active Directory objects that can be accessed by {{% ctx %}} Gateway. The identity of the objects is expressed using their Distinguished Names. More than one Distinguished Name can be set to refer to multiple objects within Active Directory. If no Distinguished Names are set, the whole of Active Directory is accessible.
 
+### OpenID Connect Authentication
+
+{{< figure src="/images/Authentication - OIDC.png" title="Open ID Connect Provider Configuration" >}}
+
+OpenID Connect provides connections to third-party authentication services, e.g. Microsoft Entra. The OpenID Connect tab allows for one or more providers to be configured for users to authenticate with {{% ctx %}} Gateway, using Multi-Factor Authentication (MFA) if required.
+
+Groups set up in Microsoft Entra, provide for {{% ctx %}} Role assignment and {{% ctx %}} Flow Editor permissions.
+
+The fields available in the OIDC form are:
+
+* `Provider Type` – the OIDC provider type. Currently, only Microsoft is the OIDC provider supported.
+* `Identifier` – free-format, friendly unique name for this provider.
+* `Display Name` – the text displayed in the {{% ctx %}} Gateway sign-in button.
+* `Authority` – the URL for authentication to which to send authentication requests.
+* `Tenant Identifier` – the Microsoft Entra Tenant ID for the organisation managing authentication.
+* `Client Identifier` – the unique identifier to identify the {{% ctx %}} Gateway application to the authentication provider.
+* `Client Secret` – the client secret that validate the Client Identifier to the authentication provider.
+
 ## Actions
+
+### Configure LDAP Authentication
+
+LDAP Authentication can be configured by selecting the `LDAP` tab and entering the connection information. Once the details have been entered it is necessary to test the connection before being able to save them.
+
+See the [Configure LDAP Authentication][Configure LDAP Authentication tutorial] tutorial for a step-by-step guide.
 
 ### Add New OpenID Connect Authentication Provider
 
@@ -61,12 +67,6 @@ To configure {{% ctx %}} Gateway to use OpenID Connect Authentication, the appli
 An Open ID Connect provider can be added to the authentication providers by selecting the `OpenID Connect` tab, then selecting the `+ New Provider` option and entering the connection information. Once the details have been entered it is necessary to validate the connection before being able to save them.
 
 See the [Add New OpenID Connect Authentication Provider][Add New OpenID Connect Authentication Provider tutorial] tutorial for a step-by-step guide.
-
-### Configure LDAP Authentication
-
-LDAP Authentication can be configured by selecting the `LDAP` tab and entering the connection information. Once the details have been entered it is necessary to test the connection before being able to save them.
-
-See the [Configure LDAP Authentication][Configure LDAP Authentication tutorial] tutorial for a step-by-step guide.
 
 ## Remarks
 
@@ -84,8 +84,8 @@ None
 
 ### Related Tutorials
 
-* [Add New OpenID Connect Authentication Provider][Add New OpenID Connect Authentication Provider tutorial]
 * [Configure LDAP Authentication][Configure LDAP Authentication tutorial]
+* [Add New OpenID Connect Authentication Provider][Add New OpenID Connect Authentication Provider tutorial]
 
 [OIDC Authentication]: {{< ref "#openid-connect-authentication" >}}
 [LDAP Authentication]: {{< ref "#ldap-authentication" >}}
