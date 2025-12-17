@@ -316,6 +316,12 @@
                 MainDoc = "/docs/faqs/configure-code-analyser/single-server-without-ha"
                 UpdateCodeAnalyser = "/docs/faqs/configure-code-analyser/single-server-without-ha/update-code-analyser"
                 DisableCodeAnalyser = "/docs/faqs/configure-code-analyser/single-server-without-ha/disable-code-analyser"
+        [Cortex.Faqs.ConfigureOidcAuthentication]
+            MainDoc = "/docs/faqs/configure-oidc-authentication/"
+            [Cortex.Faqs.ConfigureOidcAuthentication.MicrosoftEntra]
+                Maindoc = "/docs/faqs/configure-oidc-authentication/microsoft-entra"
+                Entra = "/docs/faqs/configure-oidc-authentication/microsoft-entra/#configure-microsoft-entra-oidc-provider"
+
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -1216,6 +1222,10 @@
                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]
                         MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authentication]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/"
+                            LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
+                            OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
@@ -3132,6 +3142,13 @@
         MainDoc = "/docs/tutorials/"
         [Cortex.Tutorials.Administration]
             MainDoc = "/docs/tutorials/administration"
+            [Cortex.Tutorials.Administration.Authentication]
+                MainDoc = "/docs/tutorials/administration/authentication"
+                OpenID = "/docs/tutorials/administration/authentication/#add-new-openid-connect-authentication-provider"
+                LDAP = "/docs/tutorials/administration/authentication/#configure-ldap-authentication"
+            [Cortex.Tutorials.Administration.Authorisation]
+                MainDoc = "/docs/tutorials/administration/authorisation"
+                AssignRoles = "/docs/tutorials/administration/authorisation/#assign-cortex-roles-to-security-groups"
             [Cortex.Tutorials.Administration.LicenseConsumption]
                 MainDoc = "/docs/tutorials/administration/license-consumption"
                 CheckLicenseConsumption = "/docs/tutorials/administration/license-consumption/#check-license-consumption"
@@ -3624,6 +3641,8 @@
             MainDoc = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file"
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
+        [MSDocs.Windows.Ldap]
+            DNs = "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names"
         [MSDocs.Windows.WindowsServer]
             LogonTypes = "https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types"
             NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
