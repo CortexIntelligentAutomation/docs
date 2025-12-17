@@ -38,7 +38,7 @@ The Authorisation grid allows roles to be assigned to groups:
 
 ### Assign {{% ctx %}} Roles to Security Groups
 
-If an individual Group object is checked (tick on a block background), then its parent objects will also be implicitly set (tick on a muted blue background). If a parent object is checked (tick on a saturated blue background), all its child objects will be implicitly set (tick on a muted grey background). Objects may be individually unset by clicking the checked checkbox.
+If an individual Group object is checked ({{< image src="/images/Authorisation - Individual Object Checked.png" >}}), then its parent objects will also be implicitly set ({{< image src="/images/Authorisation - Parent Object Implicit.png" >}}). If a parent object is checked ({{< image src="/images/Authorisation - Parent Object Explicit.png" >}}), all its child objects will be implicitly set ({{< image src="/images/Authorisation - Child Object Implicit.png" >}}). Objects may be individually unset by clicking the checked checkbox.
 
 When all the role assignments have been completed, click the Save Changes button to commit the current role assignments.
 
