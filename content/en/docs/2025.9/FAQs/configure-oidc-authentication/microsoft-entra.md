@@ -54,21 +54,6 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Locate and expand `ID`.
         * Select `sAMAccountName`.
     1. Click `Add`.
-1. Create an Application ID URI:
-    1. Select the application registration created in Step 1
-    1. Click Application ID URI.
-
-        The Application ID URI must contain a unique identifier; this is prepopulated by default.
-
-        * Click `+ Add a scope`.
-        * Enter the `Scope name` as `Flows.Read`.
-        * Set `Who can consent?` to `Admins and users`.
-        * Enter an `Admin consent display name`, e.g. `Read Flows`.
-        * Enter an `Admin consent description`, e.g. `Allows {{% ctx %}} client to read flows`.
-        * Enter an `User consent display name`, e.g. `Read Your flows`.
-        * Enter an `User consent description`, e.g. `Allows {{% ctx %}} client to read flows`.
-        * Ensure `State` is set to `Enabled`.
-    1. Click `Add scope`.
 1. Create Credentials for the Application:
     1. Select the application registration created in Step 1.
     1. Select `Client credentials`.
@@ -93,7 +78,7 @@ In order to configure {{% ctx %}} Gateway to use a Microsoft Entra OpenID Connec
     1. `Authority` - the URL to access the provider authentication. For Microsoft Entra authentication this should be `https://login.microsoftonline.com`.
     1. `Tenant Identifier` - the Tenant ID. This can be obtained from the Application registration details in Microsoft Entra by clicking on the registration to display its details. Copy the value for `Directory (tenant) ID`.
     1. `Client Identifier` - the Client ID. This can be obtained from the Application registration details in Microsoft Entra by clicking on the registration to display its details. Copy the value for `Application (client) ID`.
-    1. `Client Secret` - the client secret that was revealed when creating the client credentials for the Application in Microsoft Entra. If you do not have access to the client secret, it will be necessary to create a new client secret in Microsoft Entra - for guidance see step 6 in [Configure Microsoft Entra OIDC][].
+    1. `Client Secret` - the client secret that was revealed when creating the client credentials for the Application in Microsoft Entra. If you do not have access to the client secret, it will be necessary to create a new client secret in Microsoft Entra - for guidance see step 5 in [Configure Microsoft Entra OIDC][].
 1. Click `Validate` to validate the information entered and enable the Save button.
     {{% alert title="Note" %}}Validate does not validate the accuracy of the information entered, it only validates that it is of the correct format.{{% /alert %}}
 1. Click `Save` to save the provider’s configuration.
