@@ -1,7 +1,7 @@
 ---
 title: "Authorisation"
 linkTitle: "Authorisation"
-description: "Setup authorisation for accessing {{% ctx %}} Gateway."
+description: "Configure roles used to control access to functionality in {{% ctx %}} Gateway."
 weight: 30
 ---
 
@@ -22,13 +22,10 @@ The Authorisation grid allows roles to be assigned to groups:
   * For [OIDC Authentication][], the Provider's display name and groups in a hierarchical tree.
 
 * `Type` identifies the type of object for that row.
-* `Admin` and `Studio` are roles that can be assigned and contain checkboxes to indicated which object has access to which role.
+* `Admin` and `Studio` are roles that can be assigned and contain checkboxes to indicate which object has access to which role.
 
   * Admin – provides access to administrative functions within {{% ctx %}} Gateway, including the ability to set user roles and permissions, import and export flows, creation and management of packages, etc.
   * Studio – provides access to set the permissions to view and/or edit any flow in the Flow Editor.
-
-    * View permissions allow users to view and execute flows in the Flow Editor.
-    * Edit permissions allow users to view, execute, create, edit, delete and commit flows.
 
   Both the `Admin` and `Studio` roles may be assigned to a single group or groups of groups, to provide access to both the administrative functions in {{% ctx %}} Gateway and flows in the Flow Editor.
 
@@ -48,7 +45,7 @@ See the [Assign {{% ctx %}} Roles to Security Groups][Assign {{% ctx %}} Roles t
 
 ### Known Limitations
 
-* The Key shown at the bottom of the page to convey the role assignment state is incorrect.
+* The key shown at the bottom of the page to convey the role assignment state is incorrect.
 
 ## See Also
 

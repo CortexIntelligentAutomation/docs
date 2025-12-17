@@ -13,22 +13,22 @@ weight: 1
 In order to configure a Microsoft Entra Provider a Microsoft Azure account with at least the `Application Developer` role is needed. A `Workforce` or `External Tenant` is also required.
 {{% /alert %}}
 
-1. Register {{% ctx %}} Gateway as an application:
+1. Register {{% ctx %}} Gateway as an application to create a trust relationship between {{% ctx %}} Gateway and the Microsoft Identity Platform:
     1. Login to Microsoft Azure and navigate to `Microsoft Entra ID` > `Manage` > `App registrations`.
     1. Select `+ New registration`.
     1. Enter a meaningful Name for the {{% ctx %}} Gateway application.
     1. Select the appropriate Supported account type, e.g. `Accounts in this organizational directory only`.
     1. Click `Register`.
-1. Add a Redirect URI:
+1. Add a Redirect URI to allow {{% ctx %}} Gateway to send log in and log out requests to the Entra endpoint:
     1. Select the application registration created in Step 1.
     1. Click `Redirect URIs`.
     1. Click `+ Add a platform`.
     1. Select Single-page application and set:
-        * `Redirect URIs` to `https://<Gateway-Server>/gateway/redirect`.
+        * `Redirect URIs` to `<protocol>://<host>:<port>/<webapplicationname>/redirect`, e.g. `https://server.domain.com/gateway/redirect`.
         * `Front-channel logout URL` to `https://localhost:44321/signout-callback-oidc`.
         * `Implicit grant and hybrid flows` to `ID tokens`.
     1. Click `Configure`.
-1. Configure application permissions for a web API from Microsoft Graph using API Permissions:
+1. Configure permissions for {{% ctx %}} Gateway to access the user's data using Microsoft Graph:
     1. Select the application registration created in Step 1.
     1. Select `API permissions` from the menu on the left.
         {{% alert title="Note" %}}The Delegated permission `User.Read` was added automatically when the application was registered.{{% /alert %}}
@@ -46,7 +46,7 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
             * `openid` to allow users to sign in.
             * `profile` to allow access to view the user’s basic profile.
         * Click `Add permissions`.
-1. Configure the token for group claim:
+1. Configure the application registration to return the Entra groups to {{% ctx %}} Gateway:
     1. Select the application registration created in Step 1.
     1. Select `Token configuration` from the menu on the left.
     1. Click `+ Add groups claim`.
@@ -54,14 +54,14 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Locate and expand `ID`.
         * Select `sAMAccountName`.
     1. Click `Add`.
-1. Create Credentials for the Application:
+1. Create credentials for {{% ctx %}} Gateway to authenticate with Entra securely:
     1. Select the application registration created in Step 1.
     1. Select `Client credentials`.
     1. Click `+ New client secret`.
     1. Enter a `Description` for the client secret.
     1. In the `Expires` dropdown, select an expiration for the secret or specify a custom lifetime.
     1. Select `Add`.
-        {{% alert title="Warning" color="warning" %}}Make a note the client secret Value as this is never displayed again after you have left this page.{{% /alert %}}
+        {{% alert title="Warning" color="warning" %}}Make a note of the client secret Value as this is never displayed again after you have left this page.{{% /alert %}}
 
 ## Configure {{% ctx %}} Gateway to use Microsoft Entra Authentication
 
