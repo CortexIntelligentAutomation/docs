@@ -8,15 +8,15 @@ weight: 30
 
 # {{% param title %}}
 
-This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3.25411 to 2025.9. Please ensure that the [Upgrade Application Server][] has been completed before starting this upgrade.
+This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3.25411 to 2025.3.26111. Please ensure that the [Upgrade Application Server][] has been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/2025.9/upgrade-web-application-server/configure-gateway-script.md" >}}
+{{< section "/upgrade/2025.3/upgrade-web-application-server/configure-gateway-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.9/upgrade-web-application-server/run-gateway-script.md" >}}
+{{< section "/upgrade/2025.3/upgrade-web-application-server/run-gateway-script.md" >}}
 
 ## Restore Configuration Portal Data
 
@@ -33,5 +33,5 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.UpgradeCIP" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeCIP" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeApplicationServer" >}}

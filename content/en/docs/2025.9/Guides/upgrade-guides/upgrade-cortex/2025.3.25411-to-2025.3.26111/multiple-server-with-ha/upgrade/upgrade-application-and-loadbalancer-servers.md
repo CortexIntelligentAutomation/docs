@@ -7,11 +7,11 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Servers and Load Balancer Server from 2025.3.25411 to 2025.9. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
+This guide describes how to upgrade the Application Servers and Load Balancer Server from 2025.3.25411 to 2025.3.26111. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 
-1. In the `Cortex Innovation 2025.9 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2025.3 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this upgrade, then update the script to match, changing the parameters according to the details given below:
 
     {{% alert title="Note" %}}
@@ -21,16 +21,16 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
     {{< tabpane lang="powershell" >}}
         {{< tab header="Use Previous Configuration Values" >}}
 .\Cortex.Upgrade.ps1 `
-    -AppServicesPath "C:\Install\Cortex Innovation 2025.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2025.3 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.3 - Block Packages.zip" `
     -Credential $Credential `
     -AcceptEULA:$AcceptEULA `
     *>&1 | Tee-Object -FilePath "cortex-ha-upgrade-log.txt"
         {{< /tab >}}
         {{< tab header="Use New Configuration Values">}}
 .\Cortex.Upgrade.ps1 `
-    -AppServicesPath "C:\Install\Cortex Innovation 2025.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2025.3 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.3 - Block Packages.zip" `
     -ApplicationServerIPv4Addresses @("192.168.1.1, 192.168.1.2, 192.168.1.3") `
     -LoadBalancerServerIPv4Address "192.168.1.4" `
     -Credential $Credential `
@@ -53,7 +53,7 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.9/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 
@@ -67,5 +67,5 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.MultipleServerWithHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.MultipleServerWithHA.UpgradeWebApplicationServer" >}}

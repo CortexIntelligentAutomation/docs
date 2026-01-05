@@ -11,11 +11,11 @@ This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensur
 
 ## Perform Upgrade
 
-{{< section "/upgrade/2025.9/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
+{{< section "/upgrade/2025.3/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
 
 ## Next Steps?
 
 1. [Post-Upgrade][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.UpgradeGateway" >}}
-[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.PostUpgrade" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeGateway" >}}
+[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.PostUpgrade" >}}

@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Application Server components on the server from 2025.3.25411 to 2025.9. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
+This guide describes how to upgrade the Application Server components on the server from 2025.3.25411 to 2025.3.26111. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting this upgrade.
 
 {{% alert title="Warning" color="warning" %}}
 The Application Server will be reinstalled as part of the upgrade. As a result packages will need to be republished and Configuration Portal data will need to be backed up and restored. Other data stored in Reliable Collections (e.g., data storage collections and semaphores) will be lost.
@@ -15,11 +15,11 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/2025.9/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.9/upgrade-application-server/single-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3/upgrade-application-server/single-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 
@@ -33,5 +33,5 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

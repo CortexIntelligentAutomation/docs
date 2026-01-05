@@ -11,7 +11,7 @@ This guide describes how to perform the steps required before starting the upgra
 
 ## Make Installation Artefacts Available
 
-{{< section "/upgrade/2025.9/pre-upgrade/single-server/make-artefacts-available.md">}}
+{{< section "/upgrade/2025.3/pre-upgrade/single-server/make-artefacts-available.md">}}
 
 ## Backup Configuration Portal Data
 
@@ -24,4 +24,4 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade][]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.SingleServerWithoutHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.Upgrade" >}}
