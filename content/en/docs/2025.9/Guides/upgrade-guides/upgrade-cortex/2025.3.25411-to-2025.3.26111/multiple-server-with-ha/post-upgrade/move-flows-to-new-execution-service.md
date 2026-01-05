@@ -15,7 +15,7 @@ These steps are optional however it is recommended so that the new Execution Ser
 
 ## Upgrade Flows
 
-{{< section "/upgrade/2025.3/upgrade-web-application-server/upgrade-flows.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-web-application-server/upgrade-flows.md" >}}
 
 {{% alert title="Note" %}}
 Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.MultipleServerWithHA.RepublishPackages" title="republish all packages" >}} that have previously been published.
@@ -23,6 +23,6 @@ Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guid
 
 ## Republish Packages
 
-{{< section "/upgrade/2025.3/upgrade-web-application-server/republish-packages.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-web-application-server/republish-packages.md" >}}
 
 [Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.MultipleServerWithHA.TryItOut" >}}

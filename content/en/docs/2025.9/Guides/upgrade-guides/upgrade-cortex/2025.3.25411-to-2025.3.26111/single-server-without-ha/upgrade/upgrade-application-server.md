@@ -15,11 +15,11 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-application-server/single-server/configure-upgrade-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-application-server/single-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-application-server/single-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 

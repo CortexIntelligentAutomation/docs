@@ -53,7 +53,7 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-application-server/multi-server/run-upgrade-script.md" >}}
 
 ## Check Application Services
 

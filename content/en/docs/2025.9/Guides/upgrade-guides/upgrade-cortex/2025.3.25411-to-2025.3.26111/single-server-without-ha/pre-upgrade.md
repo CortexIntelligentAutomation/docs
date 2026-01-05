@@ -11,7 +11,7 @@ This guide describes how to perform the steps required before starting the upgra
 
 ## Make Installation Artefacts Available
 
-{{< section "/upgrade/2025.3/pre-upgrade/single-server/make-artefacts-available.md">}}
+{{< section "/upgrade/2025.3.26111/pre-upgrade/single-server/make-artefacts-available.md">}}
 
 ## Backup Configuration Portal Data
 

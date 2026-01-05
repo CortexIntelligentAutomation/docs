@@ -11,7 +11,7 @@ This guide describes how to perform the steps required before starting the upgra
 
 ## Make Installation Artefacts Available on all Servers
 
-{{< section "/upgrade/2025.3/pre-upgrade/multi-server/make-artefacts-available.md">}}
+{{< section "/upgrade/2025.3.26111/pre-upgrade/multi-server/make-artefacts-available.md">}}
 
 ## Next Steps?
 

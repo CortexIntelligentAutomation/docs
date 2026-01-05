@@ -11,11 +11,11 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3.25411 to 202
 
 ## Configure Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-web-application-server/configure-gateway-script.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-web-application-server/configure-gateway-script.md" >}}
 
 ## Run Upgrade Script
 
-{{< section "/upgrade/2025.3/upgrade-web-application-server/run-gateway-script.md" >}}
+{{< section "/upgrade/2025.3.26111/upgrade-web-application-server/run-gateway-script.md" >}}
 
 ## Preserve installation files
 
