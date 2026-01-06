@@ -9,10 +9,6 @@ weight: 20
 
 This guide describes how to move flow execution to the new Execution Service. Please ensure that the [Try it out][] steps have been completed before proceeding.
 
-{{% alert title="Warning" color="warning" %}}
-These steps must be carried out as the old Execution Service has been removed following upgrade.
-{{% /alert %}}
-
 ## Upgrade Flows
 
 {{< section "/upgrade/2025.3.26111/upgrade-web-application-server/upgrade-flows.md" >}}
