@@ -3153,6 +3153,7 @@
             [Cortex.Reference.Glossary.P-T]
                 MainDoc = "/docs/reference/glossary/p-t/"
                 PascalCase = "/docs/reference/glossary/p-t/#pascalcase"
+                Patch = "/docs/reference/glossary/p-t/#patch"
                 Platform = "/docs/reference/glossary/p-t/#platform"
                 Portal = "/docs/reference/glossary/p-t/#portal"
                 Process = "/docs/reference/glossary/p-t/#process"
