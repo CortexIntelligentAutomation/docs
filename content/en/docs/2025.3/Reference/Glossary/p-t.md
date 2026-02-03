@@ -19,6 +19,10 @@ PascalCase is often used as a naming convention in programming languages such as
 
 See also [camelCase][].
 
+### Patch
+
+A Patch delivers targeted fixes and minor improvements between major releases. It provides quick resolution to issues and small enhancements while maintaining full compatibility with the current Release.
+
 ### Platform
 
 The environment in which software is executed. This can include the hardware, operating system, web browsers or other programs.
