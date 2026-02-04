@@ -36,7 +36,8 @@
                     PackageManagement = "/blog/2025/04/07/2025.3/#added-package-management-documentation"
                     RemovalOf7.2AndInnovationFromDocumentation = "/blog/2025/04/07/2025.3/#removed-72-and-innovation-from-documentation"
                 [Cortex.Blogs.Releases.2025.3.26111]
-                    MainDoc = "/blog/2025/04/07/2025.3.26111/"
+                    MainDoc = "/blog/2025/02/09/2025.3.26111/"
+                    AddedEncryptionEndpointToCortexAPIGatewayService = "/blog/2025/02/09/2025.3.26111/#added-encryption-endpoint-to-cortex-api-gateway-service"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
