@@ -45,6 +45,7 @@
                     GeneralSecurityEnhancements = "/blog/2025/02/09/2025.3.26111/#general-security-enhancements"
                     AddedServiceDetailsToExecutionContext = "/blog/2025/02/09/2025.3.26111/#added-servicedetails-to-executioncontext"
                     AddedAbilityToConfigureBlockLoggingOnEachBlock = "/blog/2025/02/09/2025.3.26111/#added-ability-to-configure-block-logging-on-each-block"
+                    EnhancedServiceFabricResilienceToRabbitMQNodeOutages = "/blog/2025/02/09/2025.3.26111/#enhanced-service-fabric-resilience-to-rabbitmq-node-outages"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
