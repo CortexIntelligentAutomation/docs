@@ -52,6 +52,8 @@
                     ObservabilitySetRetentionPeriodForGrafanaLoki = "/blog/2025/02/09/2025.3.26111/#set-retention-period-for-grafana-loki"
                     ImprovedOpenSSLCertificateGeneration = "/blog/2025/02/09/2025.3.26111/#improved-openssl-certificate-generation"
                     RemovalOfDependencyOnActiveDirectoryCmdlets = "/blog/2025/02/09/2025.3.26111/#removal-of-dependency-on-active-directory-cmdlets"
+                    ChangedLocationOfCertificateSettingsForServiceFabricServices = "/blog/2025/02/09/2025.3.26111/#changed-location-of-certificatesettings-for-service-fabric-services"
+                    BackupRestoreSupportForReliableCollectionsDuringSingleServerUpgrades = "/blog/2025/02/09/2025.3.26111/#backup--restore-support-for-reliable-collections-during-singleserver-upgrades"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
