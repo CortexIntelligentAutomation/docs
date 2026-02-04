@@ -49,6 +49,7 @@
                     ImprovedExecutionServiceConcurrencyAndFlowTranslation = "/blog/2025/02/09/2025.3.26111/#improved-execution-service-concurrency-and-flow-translation"
                     OptimisedExecutionManagementServiceEventBatching = "/blog/2025/02/09/2025.3.26111/#optimised-execution-management-service-event-batching"
                     LimitTheBatchSizeOfExecutionCompletionDetailsSentToTheMonitoringService = "/blog/2025/02/09/2025.3.26111/#limit-the-batch-size-of-executioncompletiondetails-sent-to-the-monitoring-service"
+                    ObservabilitySetRetentionPeriodForGrafanaLoki = "/blog/2025/02/09/2025.3.26111/#set-retention-period-for-grafana-loki"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
