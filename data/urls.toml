@@ -39,6 +39,10 @@
                     MainDoc = "/blog/2025/02/09/2025.3.26111/"
                     AddedEncryptionEndpointToCortexAPIGatewayService = "/blog/2025/02/09/2025.3.26111/#added-encryption-endpoint-to-cortex-api-gateway-service"
                     AddedTheAbilityToEncryptValuesInTheCortexConfigurationPortal = "/blog/2025/02/09/2025.3.26111/#added-the-ability-to-encrypt-values-in-the-cortex-configuration-portal"
+                    IntroducedRoleBasedAccessControlForContainersInTheCortexConfigurationPortal = "/blog/2025/02/09/2025.3.26111/#introduced-rolebased-access-control-for-containers-in-the-cortex-configuration-portal"
+                    AddedSupportForMultipleEncryptionKeys = "/blog/2025/02/09/2025.3.26111/#added-support-for-multiple-encryption-keys"
+                    PatchedASPNETCoreBug = "/blog/2025/02/09/2025.3.26111/#patched-aspnet-core-bug"
+                    GeneralSecurityEnhancements = "/blog/2025/02/09/2025.3.26111/#general-security-enhancements"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
