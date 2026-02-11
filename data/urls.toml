@@ -35,6 +35,25 @@
                     RabbitMqAndErlangHaveBeenUpgraded = "/blog/2025/04/07/2025.3/#upgrade-of-rabbitmq-and-erlang"
                     PackageManagement = "/blog/2025/04/07/2025.3/#added-package-management-documentation"
                     RemovalOf7.2AndInnovationFromDocumentation = "/blog/2025/04/07/2025.3/#removed-72-and-innovation-from-documentation"
+                [Cortex.Blogs.Releases.2025.3.26111]
+                    MainDoc = "/blog/2026/02/09/2025.3.26111/"
+                    AddedEncryptionEndpointToCortexAPIGatewayService = "/blog/2026/02/09/2025.3.26111/#added-encryption-endpoint-to-cortex-api-gateway-service"
+                    AddedTheAbilityToEncryptValuesInTheCortexConfigurationPortal = "/blog/2026/02/09/2025.3.26111/#added-the-ability-to-encrypt-values-in-the-cortex-configuration-portal"
+                    IntroducedRoleBasedAccessControlForContainersInTheCortexConfigurationPortal = "/blog/2026/02/09/2025.3.26111/#introduced-rolebased-access-control-for-containers-in-the-cortex-configuration-portal"
+                    AddedSupportForMultipleEncryptionKeys = "/blog/2026/02/09/2025.3.26111/#added-support-for-multiple-encryption-keys"
+                    PatchedASPNETCoreBug = "/blog/2026/02/09/2025.3.26111/#patched-aspnet-core-bug"
+                    GeneralSecurityEnhancements = "/blog/2026/02/09/2025.3.26111/#general-security-enhancements"
+                    AddedServiceDetailsToExecutionContext = "/blog/2026/02/09/2025.3.26111/#added-servicedetails-to-executioncontext"
+                    AddedAbilityToConfigureBlockLoggingOnEachBlock = "/blog/2026/02/09/2025.3.26111/#added-ability-to-configure-block-logging-on-each-block"
+                    EnhancedServiceFabricResilienceToRabbitMQNodeOutages = "/blog/2026/02/09/2025.3.26111/#enhanced-service-fabric-resilience-to-rabbitmq-node-outages"
+                    ImprovedExecutionServiceConcurrencyAndFlowTranslation = "/blog/2026/02/09/2025.3.26111/#improved-execution-service-concurrency-and-flow-translation"
+                    OptimisedExecutionManagementServiceEventBatching = "/blog/2026/02/09/2025.3.26111/#optimised-execution-management-service-event-batching"
+                    LimitTheBatchSizeOfExecutionCompletionDetailsSentToTheMonitoringService = "/blog/2026/02/09/2025.3.26111/#limit-the-batch-size-of-executioncompletiondetails-sent-to-the-monitoring-service"
+                    ObservabilitySetRetentionPeriodForGrafanaLoki = "/blog/2026/02/09/2025.3.26111/#set-retention-period-for-grafana-loki"
+                    ImprovedOpenSSLCertificateGeneration = "/blog/2026/02/09/2025.3.26111/#improved-openssl-certificate-generation"
+                    RemovalOfDependencyOnActiveDirectoryCmdlets = "/blog/2026/02/09/2025.3.26111/#removal-of-dependency-on-active-directory-cmdlets"
+                    ChangedLocationOfCertificateSettingsForServiceFabricServices = "/blog/2026/02/09/2025.3.26111/#changed-location-of-certificatesettings-for-service-fabric-services"
+                    BackupRestoreSupportForReliableCollectionsDuringSingleServerUpgrades = "/blog/2026/02/09/2025.3.26111/#backup--restore-support-for-reliable-collections-during-singleserver-upgrades"
                 [Cortex.Blogs.Releases.2025.5]
                     MainDoc = "/blog/2025/06/16/2025.5/"
                     ExtendedTheExecutionContextWithAdditionalProperties = "/blog/2025/06/16/2025.5/#extended-the-_executioncontext-with-additional-properties"
@@ -3153,6 +3172,7 @@
             [Cortex.Reference.Glossary.P-T]
                 MainDoc = "/docs/reference/glossary/p-t/"
                 PascalCase = "/docs/reference/glossary/p-t/#pascalcase"
+                Patch = "/docs/reference/glossary/p-t/#patch"
                 Platform = "/docs/reference/glossary/p-t/#platform"
                 Portal = "/docs/reference/glossary/p-t/#portal"
                 Process = "/docs/reference/glossary/p-t/#process"
@@ -3387,6 +3407,11 @@
             GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Alloy.Install.zip"
             GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Loki.Install.zip"
             GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Dashboards.zip"
+        [GitHub.Cortex.Observability.4.2.0]
+            Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.2.0"
+            GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Alloy.Install.zip"
+            GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Loki.Install.zip"
+            GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Dashboards.zip"
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products.Grafana]
