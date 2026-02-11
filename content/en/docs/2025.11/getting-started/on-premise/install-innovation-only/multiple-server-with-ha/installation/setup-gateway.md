@@ -29,7 +29,25 @@ Log on to Gateway and run through the setup wizard:
 1. Click `Next` and follow the steps in the setup wizard to configure the relevant areas.
     {{< figure class="centre" src="/images/Gateway Setup1.png" title="Initial Setup Screen" >}}
 
-{{< section "/install-web-application-server/setup-gateway.md">}}
+### Account Details
+
+{{< section "/install-web-application-server/setup-gateway-account-details.md">}}
+
+### Authentication
+
+{{< section "/install-web-application-server/setup-gateway-authentication.md">}}
+
+#### LDAP
+
+{{< section "/install-web-application-server/setup-gateway-authentication-ldap.md">}}
+
+#### OpenID Connect
+
+{{< section "/install-web-application-server/setup-gateway-authentication-oidc.md">}}
+
+### Authorisation
+
+{{< section "/install-web-application-server/setup-gateway-authorisation.md">}}
 
 ## Next Steps?
 
