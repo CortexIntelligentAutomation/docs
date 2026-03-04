@@ -3255,6 +3255,11 @@
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/operations/overview"
                 UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
+       [Cortex.Tutorials.Setup]
+            MainDoc = "/docs/tutorials/setup"
+            [Cortex.Tutorials.Setup.SetupGateway]
+                MainDoc = "/docs/tutorials/setup/setup-gateway"
+                InitialSetup = "/docs/tutorials/setup/setup-gateway/#initial-setup"
 
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
