@@ -9,4 +9,4 @@ weight: 20
 
 ## Assign {{% ctx %}} Roles to Security Groups
 
-{{< scribe title="How_to_Assign_CORTEX_Gateway_Roles_to_Active_Directory_Security_Groups" id="Vs8h3Ie8Tqa9kflCoAj_yg" >}}
+{{< scribe title="How_to_Use_Authorisation_to_Assign_CORTEX_Gateway_Roles" id="TEgFR0SURiSHGyOmFG2MFw" >}}

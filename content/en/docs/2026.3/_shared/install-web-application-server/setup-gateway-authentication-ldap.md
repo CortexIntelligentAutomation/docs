@@ -1,3 +1,5 @@
+See the [Configure LDAP Authentication][Configure LDAP Authentication tutorial] tutorial for a step-by-step guide.
+
 1. Select the LDAP tab.
 1. Enter the details of your Active Directory server and provide a Username and Password for a user with read access to it.
 
@@ -11,5 +13,7 @@
 1. Click `Next` once the authentication setup has been completed.
 
 {{< figure class="centre" src="/images/Gateway Setup4 LDAP.png" title="LDAP Authentication Screen" >}}
+
+[Configure LDAP Authentication tutorial]: {{< url path="Cortex.Tutorials.Administration.Authentication.LDAP" >}}
 
 [Base DNs]: {{< url path="MSDocs.Windows.Ldap.DNs" >}}

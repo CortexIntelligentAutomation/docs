@@ -1,3 +1,5 @@
+See the [Add New OpenID Connect Authentication Provider][Add New OpenID Connect Authentication Provider tutorial] tutorial for a step-by-step guide.
+
 1. Select the `OpenID Connect` tab.
 1. Select `+ New Provider`.
 1. Enter the details of your OpenID Connect provider; currently only the Microsoft Entra provider is supported:
@@ -13,3 +15,5 @@
 1. Click `Next` once the authentication setup has been completed.
 
 {{< figure class="centre" src="/images/Gateway Setup4 OIDC.png" title="OpenID Connect Authentication Screen" >}}
+
+[Add New OpenID Connect Authentication Provider tutorial]: {{< url path="Cortex.Tutorials.Administration.Authentication.OpenID" >}}

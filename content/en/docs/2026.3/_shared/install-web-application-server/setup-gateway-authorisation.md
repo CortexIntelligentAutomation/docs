@@ -1,3 +1,5 @@
+See the [Assign {{% ctx %}} Roles to Security Groups][Assign {{% ctx %}} Roles to Security Groups tutorial] tutorial for a step-by-step guide.
+
 1. If the authorisation grid fails to load first time round, click `Retry`.
 1. Assign access permissions to authenticated groups:
 
@@ -16,3 +18,5 @@
 1. To test the permissions, log out as Administrator and then log in as a user assigned `Studio` permissions.
 
 {{< figure class="centre" src="/images/Gateway Setup5.png" title="LDAP Authorisation Screen" >}}
+
+[Assign {{% ctx %}} Roles to Security Groups tutorial]: {{< url path="Cortex.Tutorials.Administration.Authorisation.AssignRoles" >}}
