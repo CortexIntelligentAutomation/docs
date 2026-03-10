@@ -7,7 +7,6 @@ weight: 100
 
 # {{% param title %}}
 
-{{< workinprogress >}}
 
 ## Summary
 
