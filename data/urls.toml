@@ -3255,6 +3255,11 @@
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/operations/overview"
                 UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
+       [Cortex.Tutorials.Setup]
+            MainDoc = "/docs/tutorials/setup"
+            [Cortex.Tutorials.Setup.SetupGateway]
+                MainDoc = "/docs/tutorials/setup/setup-gateway"
+                InitialSetup = "/docs/tutorials/setup/setup-gateway/#initial-setup"
 
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
@@ -3642,7 +3647,7 @@
             NamingConventions = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions"
             Paths = "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file#paths"
         [MSDocs.Windows.Ldap]
-            DNs = "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names"
+            DNs = "https://msdn.microsoft.com/en-us/library/aa366101(v=vs.85).aspx"
         [MSDocs.Windows.WindowsServer]
             LogonTypes = "https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types"
             NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
