@@ -23,8 +23,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3.26111 to 202
 
 ## Next Steps?
 
-1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
+1. [Upgrade {{% ctx %}} Configuration Portal][Upgrade CCP]
 
-[{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.MultipleServerWithHA.UpgradeDebugger" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.MultipleServerWithHA.UpgradeCIP" >}}
+[Upgrade CCP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.MultipleServerWithHA.UpgradeCCP" >}}
