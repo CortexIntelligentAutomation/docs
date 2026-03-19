@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/**
+ * How to use:
+ * run the following command:
+ * node scan-and-clean-toml.js --toml data/urls.toml --dir content/en --out data/urls.toml --json paths.report.json
+ */
+
 const fs = require("fs-extra");
 const path = require("path");
 const { globby } = require("globby");
