@@ -1,1 +1,0 @@
-This guide describes how to create a backup of the Encryption Key.

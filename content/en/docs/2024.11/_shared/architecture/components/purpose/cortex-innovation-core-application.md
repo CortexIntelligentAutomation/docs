@@ -1,1 +1,0 @@
-The Service Fabric application that is hosting the core services required by {{% ctx %}} Innovation.

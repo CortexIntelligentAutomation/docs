@@ -15,7 +15,6 @@ All server roles (e.g. Load Balancer, Application Server, Web Application Server
 
 ## Hardware Requirements
 
-
 | Server&nbsp;Role | Servers&nbsp;Required | CPU&nbsp;Cores&nbsp;(>&nbsp;2GHz) | RAM&nbsp;(GB) | Disk&nbsp;(GB) |  
 |------------------|-----------------------|-----------------------------------|---------------|----------------------|
 | New Innovation Load&nbsp;Balancer | 1[^1] | 4+&nbsp;*Recommended*<br>2&nbsp;*Minimum* | 8+&nbsp;*Recommended*<br>4&nbsp;*Minimum* | 50+&nbsp;*Recommended*<br>30&nbsp;*Minimum*<br>5+&nbsp;free&nbsp;on&nbsp;installation&nbsp;drive |
@@ -335,8 +334,6 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 
 1. [Install Application Servers and Load Balancer][]
 
-[alternative load balancer]: {{< ref "#alternative-load-balancer-requirements" >}}
-[Anycast]: {{< url path="Anycast.MainDoc" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.Architecture" >}}
 [C++ Redistributable]: {{< url path="MSDownload.CPlusPlusRedistributable.2013" >}}
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
@@ -345,9 +342,9 @@ Innovation has a [gobetween][] load balancer included that isn't highly availabl
 [Install Application Servers and Load Balancer]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.InstallApplicationAndLoadBalancerServers" >}}
 [Microsoft Server 2016]: {{< url path="MSEval.WindowsServer.2016" >}}
 [Microsoft Server 2019]: {{< url path="MSEval.WindowsServer.2019" >}}
+[Create Full DB Backup]: {{< url path="MSDocs.SqlServer.CreateFullDbBackup" >}}
 [NET Framework 472]: {{< url path="MSDotNet.Framework472.MainDoc" >}}
 [Port Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.PortRequirements" >}}
-[Recommended Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.RecommendedArchitecture" >}}
 [SSL Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
 [Upgrading Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ConfigureCortexGatewayInstallationScriptNew" >}}
 [web application server]: {{< ref "#web-application-server" >}}
