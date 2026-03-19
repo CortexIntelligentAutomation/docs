@@ -19,6 +19,10 @@ PascalCase is often used as a naming convention in programming languages such as
 
 See also [camelCase][].
 
+### Patch
+
+A Patch delivers targeted fixes and minor improvements between major releases. It provides quick resolution to issues and small enhancements while maintaining full compatibility with the current [Release][Release].
+
 ### Platform
 
 The environment in which software is executed. This can include the hardware, operating system, web browsers or other programs.
@@ -202,6 +206,8 @@ Typeahead is a language prediction tool that is used to provide suggestions base
 [Data Types > Single]: {{< url path="Cortex.Reference.DataTypes.Numbers.Single.MainDoc" >}}
 
 [Exception]: {{< url path="Cortex.Reference.Exceptions.MainDoc" >}}
+
+[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2025.3" >}}
 
 [Block Properties > What is a Block Property]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.MainDoc" >}}
 
