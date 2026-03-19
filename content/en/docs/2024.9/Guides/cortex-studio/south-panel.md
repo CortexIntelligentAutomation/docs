@@ -66,3 +66,5 @@ TODO: Screenshots
 ## See Also
 
 ### Related Concepts
+
+[Variable Grid]: {{< url path="Cortex.Guides.UserGuides.UserInterfaces.Gateway.Dev.FlowEditor.BottomPanel.VariablesGrid.MainDoc" >}}
