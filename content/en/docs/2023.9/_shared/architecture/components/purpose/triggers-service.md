@@ -1,1 +1,0 @@
-Application Service that handles automatically triggering executions in response to external events (e.g. receipt of an SNMP trap). 

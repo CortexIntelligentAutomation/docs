@@ -1,1 +1,0 @@
-The Service Fabric application that is hosting the core services within the {{% ctx %}} platform.
