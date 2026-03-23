@@ -623,6 +623,33 @@
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025]
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3]
                         [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025]
+                            [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3]
+                                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111]
+                                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.MultipleServerWithHA]
+                                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/"
+                                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/post-upgrade"
+                                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/pre-upgrade"
+                                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/post-upgrade/try-it-out/"
+                                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade"
+                                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA]
+                                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/"
+                                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/post-upgrade"
+                                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/pre-upgrade"
+                                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/post-upgrade/try-it-out/"
+                                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/upgrade"
+                                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/upgrade/upgrade-application-server"
+                                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/upgrade/upgrade-web-application-server"
+                                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.3.26111/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                             [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9]
                                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.9.MultipleServerWithHA]
                                     MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/multiple-server-with-ha/"
@@ -649,6 +676,34 @@
                                     UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
                                     UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server"
                                     UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
+                        [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025]
+                            [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9]
+                                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161]
+                                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.MultipleServerWithHA]
+                                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade"
+                                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/pre-upgrade"
+                                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade/try-it-out/"
+                                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade"
+                                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                        UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA]
+                                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade"
+                                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/pre-upgrade"
+                                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade/try-it-out/"
+                                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade"
+                                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-application-server"
+                                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                        UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server"
+                                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025]
                         [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3]
                             [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA]
@@ -737,6 +792,33 @@
                                 UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
                                 UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/upgrade/upgrade-web-application-server"
                                 UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025]
+                        [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9]
+                            [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161]
+                                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.MultipleServerWithHA]
+                                    PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade"
+                                    PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/pre-upgrade"
+                                    RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                    TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade/try-it-out/"
+                                    Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade"
+                                    UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                                    UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                    UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                                    UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                                    UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                    UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                                    UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.SingleServerWithoutHA]
+                                    PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade"
+                                    PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/pre-upgrade"
+                                    RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                                    TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade/try-it-out/"
+                                    Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade"
+                                    UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-application-server"
+                                    UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                                    UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                                    UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server"
+                                    UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.Advanced]
                     SSLBestPractices = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/ssl-best-practices"
             [Cortex.Guides.UpgradeGuides.UpgradeObservability]
@@ -2382,6 +2464,7 @@
             [Cortex.Reference.Glossary.P-T]
                 PascalCase = "/docs/reference/glossary/p-t/#pascalcase"
                 Platform = "/docs/reference/glossary/p-t/#platform"
+                Patch = "/docs/reference/glossary/p-t/#patch"
                 Portal = "/docs/reference/glossary/p-t/#portal"
                 Process = "/docs/reference/glossary/p-t/#process"
                 ProgrammingLanguage = "/docs/reference/glossary/p-t/#programming-language"
@@ -2969,4 +3052,3 @@
     UriSyntax = "https://developer.mozilla.org/en-US/docs/Web/URI#syntax_of_uniform_resource_identifiers_uris"
     ContentSecurityPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
     PermissionsPolicyHeader = "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy"
-
