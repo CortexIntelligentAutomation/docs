@@ -15,7 +15,7 @@ The Variable Editor is used to reference any available [variable][What is a Vari
 
 ## Using Variables
 
-The variables available to the Variable Editor are restricted by the [scope][Variable Scopes] of the currently selected block, which in turn is determined by the [workspace][What is a Workspace?] containing the selected block.
+The variables available to the Variable Editor are restricted by the [scope][Variable Scopes] of the currently selected block, which in turn is determined by the [workspace][What is a Workspace?] containing it.
 
 The variable is referenced by either entering the variable name (without the prefix of `($)`) into the Variable Editor, or by selecting an available variable from the dropdown, which is revealed when the Variable Editor is selected.
 
@@ -43,13 +43,13 @@ However, if an index is used with a variable in an output property, the variable
 
 In addition, for input or output property types, if the data type contained in the variable is not dynamic and the property or index used does not exist, a translation error will be displayed when an attempt to execute the flow is made.
 
-Conversely, If the data type contained in the variable is dynamic and the property or index does not exist, translation error will not be displayed but a runtime exception will be raised when the flow is executed.
+Conversely, If the data type contained in the variable is dynamic and the property or index does not exist, a translation error will not be displayed but a runtime exception will be raised when the flow is executed.
 
 {{< figure src="/images/Variable Editor - Variable Properties.png">}}
 
 ## Missing Variables
 
-If the text entered in the Variable Editor does not match that of a created variable, i.e., the variable does not exist, then a red border with be shown around the Variable Editor. However, it is possible to create a new variable of that name using the Variable Editor.
+If the text entered in the Variable Editor does not match that of a created variable, i.e., the variable does not exist, then a red border with be shown around the Variable Editor. However, it is possible to [create][Creating Variables] a new variable of that name using the Variable Editor.
 
 {{< figure src="/images/Variable Editor - Missing Variable.png" >}}
 
@@ -65,7 +65,7 @@ If the text entered does not conform to the variable naming rules ([C# identifie
 
 ## Renaming Variables
 
-If the Variable Editor already contains a reference to an existing variable, entering the name for a variable that does not exist will not only offer the option to create a new variable in the dropdown, but it will also display the option to rename the existing variable to that of the name entered.
+If the Variable Editor already contains a reference to an existing variable, entering the name for a variable that does not exist will not only offer the option to [create][Creating Variables] a new variable in the dropdown, but it will also display the option to rename the existing variable to that of the name entered.
 
 If an existing variable is renamed in the Variable Editor, then all other references to the existing variable will also be changed to the new variable name throughout the flow.
 
@@ -81,7 +81,7 @@ Renaming a variable will keep intact any indexes or property references to the o
 
 * When two or more characters are entered into the Variable Editor, causing the dropdown to display a list of available variables, the variable name of the first closest match is sometimes displayed in the Variable Editor, e.g., entering My will cause MyVar to be displayed in the Variable Editor, however, pressing the Tab key will not automatically enter the full variable name. The variable name must either be entered in full, or an option on the dropdown must be selected.
 
-* Variable references used elsewhere in the flow as the index to other variables, e.g. the variable Var2 used in the reference Var1[($)Var2], will remain referencing Var2 even when the variable Var2 is renamed in the Variable Editor or Variables Grid.
+* Variable references used elsewhere in the flow as the index to other variables, e.g. the variable Var2 used in the reference `Var1[($)Var2]`, will remain referencing Var2 even when the variable Var2 is renamed in the Variable Editor or Variables Grid.
 
 ## See Also
 
@@ -104,6 +104,8 @@ Renaming a variable will keep intact any indexes or property references to the o
 ### External Documentation
 
 * [C# identifier naming rules][]
+
+[Creating Variables]: {{< ref "#creating-variables" >}}
 
 [Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 [Reference Data Types]: {{< url path="Cortex.Reference.DataTypes.MainDoc" >}}
