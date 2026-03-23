@@ -2283,6 +2283,8 @@
                     [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/using-variables/"
                         ExpressionEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#expression-editor"
+                        Indexes = "/docs/reference/concepts/fundamentals/variables/using-variables/#using-items-in-collections"
+                        Properties = "/docs/reference/concepts/fundamentals/variables/using-variables/#using-properties-of-data-types"
                         VariableEditor = "/docs/reference/concepts/fundamentals/variables/using-variables/#variable-editor"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
