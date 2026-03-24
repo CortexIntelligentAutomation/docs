@@ -11,11 +11,11 @@ This guide describes how to perform the steps required before starting the upgra
 
 ## Make Installation Artefacts Available on all Servers
 
-{{< section "/upgrade/2025.7/pre-upgrade/multi-server/make-artefacts-available.md">}}
+{{< section "/upgrade/2025.3.26111/pre-upgrade/multi-server/make-artefacts-available.md">}}
 
 ## Next Steps?
 
 1. [Upgrade][]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.MultipleServerWithHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_25411to2025_3_26111.MultipleServerWithHA.Upgrade" >}}

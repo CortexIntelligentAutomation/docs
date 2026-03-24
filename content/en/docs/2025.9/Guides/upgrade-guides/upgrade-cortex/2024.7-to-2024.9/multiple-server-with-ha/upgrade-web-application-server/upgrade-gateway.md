@@ -55,5 +55,5 @@ Repeat the above instructions for the `Flow Debugger`. In step 2 `server.domain.
 
 1. [Try It Out][]
 
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.MultipleServerWithHA.TryItOut" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_7to2024_9.MultipleServerWithHA.UpgradeDebugger" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_7to2024_9.MultipleServerWithHA.TryItOut" >}}

@@ -17,4 +17,4 @@ These steps are optional however it is recommended so that the new Execution Ser
 
 {{< section "/upgrade/2025.9/upgrade-web-application-server/republish-packages.md" >}}
 
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.7to2025.9.MultipleServerWithHA.TryItOut" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_7to2025_9.MultipleServerWithHA.TryItOut" >}}

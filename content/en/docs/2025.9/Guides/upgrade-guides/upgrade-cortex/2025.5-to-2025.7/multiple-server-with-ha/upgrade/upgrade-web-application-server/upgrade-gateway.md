@@ -23,7 +23,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.5 to 2025.7. P
 {{< section "/upgrade/2025.7/upgrade-web-application-server/upgrade-flows.md" >}}
 
 {{% alert title="Note" %}}
-Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.MultipleServerWithHA.RepublishPackages" title="republish all packages" >}} that have previously been published.
+Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.MultipleServerWithHA.RepublishPackages" title="republish all packages" >}} that have previously been published.
 {{% /alert %}}
 
 ## Republish Packages
@@ -39,5 +39,5 @@ Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guid
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.MultipleServerWithHA.UpgradeDebugger" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.MultipleServerWithHA.UpgradeCIP" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.MultipleServerWithHA.UpgradeDebugger" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.MultipleServerWithHA.UpgradeCIP" >}}

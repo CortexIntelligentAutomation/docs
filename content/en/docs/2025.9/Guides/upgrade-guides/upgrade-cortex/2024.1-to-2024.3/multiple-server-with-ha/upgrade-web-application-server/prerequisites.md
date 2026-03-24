@@ -26,5 +26,5 @@ Please ensure that [Upgrade Application Servers and Load Balancer][] has been co
 
 1. [Upgrade Flow Debugger][]
 
-[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
-[Upgrade Flow Debugger]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeDebugger" >}}
+[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_1to2024_3.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
+[Upgrade Flow Debugger]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_1to2024_3.MultipleServerWithHA.UpgradeDebugger" >}}

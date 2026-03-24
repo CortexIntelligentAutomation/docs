@@ -15,5 +15,5 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 {{< section "/upgrade/try-it-out/single-server/test-executing-production-flows.md" >}}
 
-[Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
-[Web Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_1to2024_3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Web Application Server Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_1to2024_3.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

@@ -17,4 +17,4 @@ This guide describes how to perform the steps required before starting the upgra
 
 1. [Upgrade][]
 
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.11to2025.1.SingleServerWithoutHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_11to2025_1.SingleServerWithoutHA.Upgrade" >}}

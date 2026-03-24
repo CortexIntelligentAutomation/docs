@@ -25,5 +25,5 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 1. [Configure Code Analyser][]
 
-[Configure Code Analyser]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.SingleServerWithoutHA.ConfigureCodeAnalyser" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Configure Code Analyser]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.SingleServerWithoutHA.ConfigureCodeAnalyser" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
