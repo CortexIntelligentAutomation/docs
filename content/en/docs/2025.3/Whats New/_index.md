@@ -52,7 +52,7 @@ The documentation includes updates related to:
 For a full list of what has been introduced in this release, please see the [2025.3 Release Notes][]
 
 [Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2025.3" >}}
-[2025.1]: {{< url path="Cortex.Blogs.Releases.2025.1.MainDoc" version="2025.3" >}}
+[2025.1]: {{< url path="Cortex.Blogs.Releases.2025_1.MainDoc" version="2025.3" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Scalability]: {{< ref "#improved-scalability" >}}
@@ -61,21 +61,21 @@ For a full list of what has been introduced in this release, please see the [202
 [Third-Party Support]: {{< ref "#improved-third-party-support" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[2025.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025.3.MainDoc" version="2025.3" >}}
+[2025.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025_3.MainDoc" version="2025.3" >}}
 
-[creating a new process from Natural Language]: {{< url path="Cortex.Blogs.Releases.2025.3.CreatingANewProcessFromNaturalLanguage" version="2025.3" >}}
+[creating a new process from Natural Language]: {{< url path="Cortex.Blogs.Releases.2025_3.CreatingANewProcessFromNaturalLanguage" version="2025.3" >}}
 
-[enabling automated backups for disaster recovery]: {{< url path="Cortex.Blogs.Releases.2025.3.EnablingAutomatedBackupsForDisasterRecovery" version="2025.3" >}}
-[removing old executions on Execution Service startup]: {{< url path="Cortex.Blogs.Releases.2025.3.RemovingOldExecutionsOnExecutionServiceStartup" version="2025.3" >}}
-[migrating RabbitMQ queues to Quorum Queues]: {{< url path="Cortex.Blogs.Releases.2025.3.MigratingRabbitMqQueuesToQuorumQueues" version="2025.3" >}}
+[enabling automated backups for disaster recovery]: {{< url path="Cortex.Blogs.Releases.2025_3.EnablingAutomatedBackupsForDisasterRecovery" version="2025.3" >}}
+[removing old executions on Execution Service startup]: {{< url path="Cortex.Blogs.Releases.2025_3.RemovingOldExecutionsOnExecutionServiceStartup" version="2025.3" >}}
+[migrating RabbitMQ queues to Quorum Queues]: {{< url path="Cortex.Blogs.Releases.2025_3.MigratingRabbitMqQueuesToQuorumQueues" version="2025.3" >}}
 
-[general security enhancements]: {{< url path="Cortex.Blogs.Releases.2025.3.GeneralSecurityEnhancements" version="2025.3" >}}
-[configurable Global RunAs User for flows]: {{< url path="Cortex.Blogs.Releases.2025.3.ConfigurableGlobalRunAsUserForFlows" version="2025.3" >}}
+[general security enhancements]: {{< url path="Cortex.Blogs.Releases.2025_3.GeneralSecurityEnhancements" version="2025.3" >}}
+[configurable Global RunAs User for flows]: {{< url path="Cortex.Blogs.Releases.2025_3.ConfigurableGlobalRunAsUserForFlows" version="2025.3" >}}
 
-[improving the page load speed]: {{< url path="Cortex.Blogs.Releases.2025.3.ImprovingThePageLoadSpeed" version="2025.3" >}}
-[hiding unsupported versions of the documentation]: {{< url path="Cortex.Blogs.Releases.2025.3.HidingUnsupportedVersionsOfTheDocumentation" version="2025.3" >}}
+[improving the page load speed]: {{< url path="Cortex.Blogs.Releases.2025_3.ImprovingThePageLoadSpeed" version="2025.3" >}}
+[hiding unsupported versions of the documentation]: {{< url path="Cortex.Blogs.Releases.2025_3.HidingUnsupportedVersionsOfTheDocumentation" version="2025.3" >}}
 
-[RabbitMQ and Erlang have been upgraded]: {{< url path="Cortex.Blogs.Releases.2025.3.RabbitMqAndErlangHaveBeenUpgraded" version="2025.3" >}}
+[RabbitMQ and Erlang have been upgraded]: {{< url path="Cortex.Blogs.Releases.2025_3.RabbitMqAndErlangHaveBeenUpgraded" version="2025.3" >}}
 
-[Package Management]: {{< url path="Cortex.Blogs.Releases.2025.3.PackageManagement" version="2025.3" >}}
-[removal of "7.2" and "Innovation" from documentation]: {{< url path="Cortex.Blogs.Releases.2025.3.RemovalOf7.2AndInnovationFromDocumentation" version="2025.3" >}}
+[Package Management]: {{< url path="Cortex.Blogs.Releases.2025_3.PackageManagement" version="2025.3" >}}
+[removal of "7.2" and "Innovation" from documentation]: {{< url path="Cortex.Blogs.Releases.2025_3.RemovalOf7.2AndInnovationFromDocumentation" version="2025.3" >}}

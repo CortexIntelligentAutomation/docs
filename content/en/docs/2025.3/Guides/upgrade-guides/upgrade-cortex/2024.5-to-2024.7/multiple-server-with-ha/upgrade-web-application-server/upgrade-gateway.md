@@ -33,5 +33,5 @@ If the {{% ctx %}} Interaction Portal is used in your environment, you must also
 
 1. [Try It Out][]
 
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA.TryItOut" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_5to2024_7.MultipleServerWithHA.UpgradeDebugger" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_5to2024_7.MultipleServerWithHA.TryItOut" >}}

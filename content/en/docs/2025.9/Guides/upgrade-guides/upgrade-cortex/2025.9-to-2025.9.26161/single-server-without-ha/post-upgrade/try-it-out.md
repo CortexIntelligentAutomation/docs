@@ -25,5 +25,5 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 1. [Move flows to new Execution Service][]
 
-[Move flows to new Execution Service]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.SingleServerWithoutHA.UseNewExecutionService" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Move flows to new Execution Service]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.SingleServerWithoutHA.UseNewExecutionService" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

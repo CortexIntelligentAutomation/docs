@@ -17,5 +17,5 @@ No upgrade required
 
 1. [Try It Out][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA.UpgradeGateway" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.1to2025.3.MultipleServerWithHA.TryItOut" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_1to2025_3.MultipleServerWithHA.UpgradeGateway" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_1to2025_3.MultipleServerWithHA.TryItOut" >}}

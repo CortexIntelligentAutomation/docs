@@ -29,5 +29,5 @@ This guide describes how to upgrade the Application Server components on the ser
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

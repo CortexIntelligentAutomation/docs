@@ -33,5 +33,5 @@ The Application Server will be reinstalled as part of the upgrade. As a result p
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.SingleServerWithoutHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

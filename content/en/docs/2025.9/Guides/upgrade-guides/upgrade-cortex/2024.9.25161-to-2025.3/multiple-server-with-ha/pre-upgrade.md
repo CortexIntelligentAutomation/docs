@@ -17,4 +17,4 @@ This guide describes how to perform the steps required before starting the upgra
 
 1. [Upgrade][]
 
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.MultipleServerWithHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.MultipleServerWithHA.Upgrade" >}}

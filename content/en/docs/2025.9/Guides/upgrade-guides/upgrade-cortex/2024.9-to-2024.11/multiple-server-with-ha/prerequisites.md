@@ -56,5 +56,5 @@ On the Load Balancer Server:
 
 1. [Upgrade Application Servers and Load Balancer][]
 
-[Retrieve Existing Encryption Key]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.RetrieveAppServerEncryptionKey" >}}
-[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}
+[Retrieve Existing Encryption Key]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.MultipleServerWithHA.RetrieveAppServerEncryptionKey" >}}
+[Upgrade Application Servers and Load Balancer]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.MultipleServerWithHA.UpgradeApplicationAndLoadBalancerServers" >}}

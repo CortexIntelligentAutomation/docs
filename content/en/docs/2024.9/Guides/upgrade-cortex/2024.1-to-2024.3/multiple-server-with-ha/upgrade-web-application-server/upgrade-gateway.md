@@ -25,5 +25,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.1 to 2024.3. P
 
 1. [Try It Out][]
 
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.UpgradeDebugger" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.MultipleServerWithHA.TryItOut" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeCortex.2024_1to2024_3.MultipleServerWithHA.UpgradeDebugger" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024_1to2024_3.MultipleServerWithHA.TryItOut" >}}

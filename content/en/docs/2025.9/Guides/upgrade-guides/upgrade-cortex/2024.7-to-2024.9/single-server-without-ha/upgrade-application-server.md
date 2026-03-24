@@ -33,5 +33,5 @@ This guide describes how to upgrade the Application Server components on the ser
 
 1. [Upgrade Web Application Server][]
 
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.7to2024.9.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_7to2024_9.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
 

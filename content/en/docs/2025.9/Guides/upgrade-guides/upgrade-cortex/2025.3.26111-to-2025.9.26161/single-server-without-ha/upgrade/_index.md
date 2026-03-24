@@ -7,4 +7,4 @@ weight: 40
 
 This guide describes how to upgrade {{% ctx %}}. Please ensure that the [Pre-Upgrade][PreUpgrade] steps have been completed before starting the upgrade.
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.PreUpgrade" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.PreUpgrade" >}}

@@ -7,4 +7,4 @@ weight: 50
 
 This guide describes how to perform the steps to verify the upgrade of {{% ctx %}} and perform final configuration. Please ensure that the [Upgrade][] has been completed before starting this section.
 
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.Upgrade" >}}

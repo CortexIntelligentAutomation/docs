@@ -59,5 +59,5 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 [2019 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2019" >}}
 [2022 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2022" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture.MainDoc" >}}
-[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1_10.2" >}}
 [Set up Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}

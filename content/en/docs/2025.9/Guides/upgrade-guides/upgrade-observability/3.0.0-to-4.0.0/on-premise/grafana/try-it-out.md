@@ -61,7 +61,7 @@ If other requests have been made then there may be more than one request visible
 {{% / alert %}}
 
 [HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Migrate To Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.MigrateToAlloy" >}}
+[Migrate To Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.MigrateToAlloy" >}}
 [Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.VerifyOldVersion" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.VerifyOldVersion" >}}

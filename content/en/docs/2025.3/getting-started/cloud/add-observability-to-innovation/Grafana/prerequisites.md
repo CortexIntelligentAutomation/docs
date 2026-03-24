@@ -55,5 +55,5 @@ A domain user which is a member of the Local Administrators group on all Applica
 [2019 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2019" >}}
 [2022 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2022" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture.MainDoc" >}}
-[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
+[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3_0_0.PromtailInstallZip" >}}
 [Set up Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
