@@ -67,5 +67,5 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 1. [Upgrade Web Application Server][]
 
-[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.MultipleServerWithHA.PreUpgrade" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
+[PreUpgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.PreUpgrade" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.UpgradeWebApplicationServer" >}}

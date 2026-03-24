@@ -35,6 +35,6 @@ On each Application Server that Promtail is installed on:
 
 1. [Migrate Promtail to Grafana Alloy][Migrate to Alloy]
 
-[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
-[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaAlloyInstallZip" >}}
-[Migrate to Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MigrateToAlloy" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1_10.2" >}}
+[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4_0_0.GrafanaAlloyInstallZip" >}}
+[Migrate to Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.Cloud.Grafana.MigrateToAlloy" >}}

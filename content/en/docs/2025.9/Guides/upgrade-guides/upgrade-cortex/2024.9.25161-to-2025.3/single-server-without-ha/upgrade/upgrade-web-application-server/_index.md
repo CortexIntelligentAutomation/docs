@@ -7,4 +7,4 @@ weight: 40
 
 This guide describes how to upgrade the web application server from 2024.9.25161 to 2025.3. Please ensure that the [Upgrade Application Server][] has been completed before starting this upgrade.
 
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.SingleServerWithoutHA.UpgradeApplicationServer" >}}

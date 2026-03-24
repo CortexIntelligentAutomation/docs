@@ -69,9 +69,9 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 
 1. [Upgrade Grafana][]
 
-[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12.1.1.Windows" >}}
-[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.5.5.GrafanaLokiInstallZip" >}}
-[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaLokiInstallZip" >}}
-[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
-[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4.0.0.GrafanaAlloyInstallZip" >}}
-[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.UpgradeGrafana" >}}
+[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1.Windows" >}}
+[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_5_5.GrafanaLokiInstallZip" >}}
+[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.4_0_0.GrafanaLokiInstallZip" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1_10.2" >}}
+[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4_0_0.GrafanaAlloyInstallZip" >}}
+[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.UpgradeGrafana" >}}

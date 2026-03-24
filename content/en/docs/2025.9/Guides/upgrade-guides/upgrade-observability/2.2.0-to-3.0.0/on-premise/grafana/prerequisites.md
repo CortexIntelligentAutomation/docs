@@ -52,9 +52,9 @@ weight: 1
 
 1. [Upgrade Grafana][]
 
-[Grafana 10.4.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.10.4.1.Windows" >}}
-[Grafana Loki 3.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.0.0.GrafanaLokiInstallZip" >}}
-[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.GrafanaLokiInstallZip" >}}
-[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
-[Promtail Install]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
-[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.UpgradeGrafana" >}}
+[Grafana 10.4.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.10_4_1.Windows" >}}
+[Grafana Loki 3.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_0_0.GrafanaLokiInstallZip" >}}
+[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.3_0_0.GrafanaLokiInstallZip" >}}
+[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3_0_0.PromtailInstallZip" >}}
+[Promtail Install]: {{< url path="GitHub.Cortex.Observability.3_0_0.PromtailInstallZip" >}}
+[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2_2_0to3_0_0.OnPremise.Grafana.UpgradeGrafana" >}}

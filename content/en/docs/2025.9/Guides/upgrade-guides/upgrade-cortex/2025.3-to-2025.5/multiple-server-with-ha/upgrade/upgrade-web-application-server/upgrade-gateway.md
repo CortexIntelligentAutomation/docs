@@ -26,5 +26,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2025.3 to 2025.5. P
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeDebugger" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3to2025.5.MultipleServerWithHA.UpgradeCIP" >}}
+[Flow Debugger upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.MultipleServerWithHA.UpgradeDebugger" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.MultipleServerWithHA.UpgradeCIP" >}}

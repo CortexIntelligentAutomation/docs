@@ -38,5 +38,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.9 to 2024.11. 
 
 1. [Try It Out][]
 
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.SingleServerWithoutHA.TryItOut" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.SingleServerWithoutHA.TryItOut" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.SingleServerWithoutHA.UpgradeApplicationServer" >}}

@@ -33,5 +33,5 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeCIP" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_25411to2025_3_26111.SingleServerWithoutHA.UpgradeCIP" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_25411to2025_3_26111.SingleServerWithoutHA.UpgradeApplicationServer" >}}
