@@ -1,1 +1,0 @@
-Application Service that can be used to schedule executions within the Innovation platform.

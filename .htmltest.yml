@@ -1,4 +1,5 @@
 DirectoryPath: "dist"
+TestFilesConcurrently: true
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreEmptyHref: true

@@ -1,1 +1,0 @@
-Distributed systems platform that hosts the {{% ctx %}} services where automation solutions are deployed to; provides scalable, reliable and manageable enterprise-grade High Availability (HA) using clustering.
