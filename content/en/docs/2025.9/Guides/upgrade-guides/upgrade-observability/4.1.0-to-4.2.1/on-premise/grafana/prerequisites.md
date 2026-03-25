@@ -27,5 +27,5 @@ On the server that Grafana Loki is installed on:
 
 1. [Upgrade Grafana Loki][]
 
-[3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.MainDoc" >}}
-[Upgrade Grafana Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise.Grafana.UpgradeLoki" >}}
+[3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.MainDoc" >}}
+[Upgrade Grafana Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.UpgradeLoki" >}}

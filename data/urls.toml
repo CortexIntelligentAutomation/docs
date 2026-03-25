@@ -850,6 +850,13 @@
                             Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/prerequisites"
                             TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/try-it-out"
                             UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/cloud/grafana/upgrade-alloy"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1]
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana]
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/prerequisites/#backup-old-files"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/try-it-out"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/upgrade-loki"
                 [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise]
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana]
                         BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites/#backup-old-files"

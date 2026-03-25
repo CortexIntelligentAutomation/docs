@@ -43,6 +43,5 @@ On the server that Grafana Loki is installed on:
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise.Grafana.BackupOldFiles" >}}
-[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise.Grafana.Prerequisites" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.1.0to4.2.0.OnPremise.Grafana.TryItOut" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.Prerequisites" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.TryItOut" >}}
