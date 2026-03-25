@@ -21,9 +21,4 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 {{< section "/try-it-out/multi-server/test-executing-production-flows.md" >}}
 
-## Next Steps?
-
-1. [Move flows to new Execution Service][]
-
-[Move flows to new Execution Service]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.MultipleServerWithHA.UseNewExecutionService" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.MultipleServerWithHA.UpgradeWebApplicationServer" >}}

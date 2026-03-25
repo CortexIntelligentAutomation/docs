@@ -23,7 +23,7 @@ This guide describes how to try out an upgraded {{% ctx %}} to make sure it is w
 
 ## Next Steps?
 
-1. [Move flows to new Execution Service][]
+1. [Configure Code Analyser][]
 
-[Move flows to new Execution Service]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.SingleServerWithoutHA.UseNewExecutionService" >}}
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}
+[Configure Code Analyser]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.SingleServerWithoutHA.ConfigureCodeAnalyser" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.SingleServerWithoutHA.UpgradeWebApplicationServer" >}}

@@ -5,6 +5,6 @@ description: "Information about upgrading the Web Application Server."
 weight: 40
 ---
 
-This guide describes how to upgrade the web application server from 2025.3.26111 to 2025.9.26161. Please ensure that the [Upgrade Application Server][] has been completed before starting this upgrade.
+This guide describes how to upgrade the web application server from 2025.3 to 2025.5. Please ensure that the [Upgrade Application Server][] has been completed before starting this upgrade.
 
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3to2025_5.SingleServerWithoutHA.UpgradeApplicationServer" >}}

@@ -7,7 +7,7 @@ weight: 30
 
 # {{< param title >}}
 
-This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2025.3.26111 to 2025.9.26161. Please ensure that the [Upgrade Application and Load Balancer Servers][] has been completed before starting this upgrade.
+This guide describes how to upgrade the Flow Debugger on the Web Application Server from 2025.9 to 2025.9.26161. Please ensure that the [Upgrade Application and Load Balancer Servers][] has been completed before starting this upgrade.
 
 ## Configure Upgrade Script
 

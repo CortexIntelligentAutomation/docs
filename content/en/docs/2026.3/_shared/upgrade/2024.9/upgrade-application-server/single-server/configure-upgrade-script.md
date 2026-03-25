@@ -1,4 +1,4 @@
-1. In the `Cortex Innovation 2025.9 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
+1. In the `Cortex Innovation 2024.9 - App Server Install Scripts\Upgrade Application Server` folder, locate the `Cortex.Innovation.Upgrade.ps1` script and open it with a text editor.
 1. Choose the tab below that matches the configuration for this upgrade, then update the script to match, changing the parameters according to the details given below:
 
     {{% alert title="Note" %}}
@@ -8,16 +8,16 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
     {{< tabpane lang="powershell" >}}
         {{< tab header="Use Previous Configuration Values" >}}
 .\Cortex.Upgrade.ps1 `
-    -AppServicesPath "C:\Install\Cortex Innovation 2025.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2024.9 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2024.9 - Block Packages.zip" `
     -Credential $Credential `
     -AcceptEULA:$AcceptEULA `
     *>&1 | Tee-Object -FilePath "cortex-ha-upgrade-log.txt"
         {{< /tab >}}
         {{< tab header="Use New Configuration Values">}}
 .\Cortex.Upgrade.ps1 `
-    -AppServicesPath "C:\Install\Cortex Innovation 2025.9 - App Services.zip" `
-    -BlockPackagesPath "C:\Install\Cortex Innovation 2025.9 - Block Packages.zip" `
+    -AppServicesPath "C:\Install\Cortex Innovation 2024.9 - App Services.zip" `
+    -BlockPackagesPath "C:\Install\Cortex Innovation 2024.9 - Block Packages.zip" `
     -ApplicationServerIPv4Addresses @("192.168.1.1") `
     -Credential $Credential `
     -AcceptEULA:$AcceptEULA `
