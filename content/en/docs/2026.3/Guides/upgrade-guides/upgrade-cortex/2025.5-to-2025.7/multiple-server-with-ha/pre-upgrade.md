@@ -18,4 +18,4 @@ This guide describes how to perform the steps required before starting the upgra
 1. [Upgrade][]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.MultipleServerWithHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.MultipleServerWithHA.Upgrade" >}}

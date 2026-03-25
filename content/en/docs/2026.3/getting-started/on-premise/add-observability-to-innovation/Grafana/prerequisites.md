@@ -161,9 +161,9 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 [configuring Grafana to use HTTPS]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.ConfigureHTTPS" >}}
 [Create Self-Signed Certificates]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Advanced.CreateSelfSignedCertificates" >}}
 [Make Installation Artefacts Available]:  {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.MakeInstallationArtefactsAvailableNew" >}}
-[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12.1.1.Windows" >}}
-[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1.10.2" >}}
-[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3.5.5.GrafanaLokiInstallZip" >}}
+[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1.Windows" >}}
+[Grafana Alloy 1.10.2]:  {{< url path="Grafana.Products.Loki.Alloy.1_10.2" >}}
+[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_5_5.GrafanaLokiInstallZip" >}}
 [Install Grafana]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.MainDoc" >}}
 [installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.InstallCertificate" >}}
 [Let’s Encrypt]: {{< url path="LetsEncrypt.MainDoc" >}}

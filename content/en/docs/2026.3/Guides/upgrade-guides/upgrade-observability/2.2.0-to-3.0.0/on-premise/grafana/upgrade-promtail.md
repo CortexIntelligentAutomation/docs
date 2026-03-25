@@ -69,7 +69,7 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.BackupOldFiles" >}}
-[Loki Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.UpgradeLoki" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2.2.0to3.0.0.OnPremise.Grafana.TryItOut" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2_2_0to3_0_0.OnPremise.Grafana.BackupOldFiles" >}}
+[Loki Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2_2_0to3_0_0.OnPremise.Grafana.UpgradeLoki" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2_2_0to3_0_0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.2_2_0to3_0_0.OnPremise.Grafana.TryItOut" >}}

@@ -29,5 +29,5 @@ On each Application Server:
 
 1. [Upgrade Grafana Alloy][]
 
-[3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MainDoc" >}}
-[Upgrade Grafana Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.Cloud.Grafana.UpgradeAlloy" >}}
+[3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.Cloud.Grafana.MainDoc" >}}
+[Upgrade Grafana Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_0_0to4_1_0.Cloud.Grafana.UpgradeAlloy" >}}

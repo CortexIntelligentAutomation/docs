@@ -54,5 +54,5 @@ These steps will need to be performed on all application servers that host a Pro
 
 1. [Try it out][]
 
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.MakeArtefactsAvailable" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.Cloud.Grafana.TryItOut" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.Cloud.Grafana.TryItOut" >}}

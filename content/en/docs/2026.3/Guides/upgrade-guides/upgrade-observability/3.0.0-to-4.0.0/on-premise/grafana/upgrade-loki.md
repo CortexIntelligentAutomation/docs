@@ -119,8 +119,8 @@ If the order is incorrect:
 
 1. [Migrate Promtail to Grafana Alloy][Migrate to Alloy]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.BackupOldFiles" >}}
-[Grafana Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.UpgradeGrafana" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Migrate to Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3.0.0to4.0.0.OnPremise.Grafana.MigrateToAlloy" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.BackupOldFiles" >}}
+[Grafana Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.UpgradeGrafana" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
+[Migrate to Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.MigrateToAlloy" >}}
 [Token Generator]:  {{< url path="IT-Tools.TokenGenerator" >}}

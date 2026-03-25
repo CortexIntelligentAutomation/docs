@@ -17,5 +17,5 @@ This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensur
 
 1. [Post-Upgrade][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.SingleServerWithoutHA.UpgradeGateway" >}}
-[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.5to2025.7.SingleServerWithoutHA.PostUpgrade" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.SingleServerWithoutHA.UpgradeGateway" >}}
+[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_5to2025_7.SingleServerWithoutHA.PostUpgrade" >}}

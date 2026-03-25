@@ -44,5 +44,5 @@ If the {{% ctx %}} Interaction Portal is used in your environment, you must also
 
 1. [Try It Out][]
 
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.SingleServerWithoutHA.TryItOut" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.5to2024.7.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_5to2024_7.SingleServerWithoutHA.TryItOut" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_5to2024_7.SingleServerWithoutHA.UpgradeApplicationServer" >}}

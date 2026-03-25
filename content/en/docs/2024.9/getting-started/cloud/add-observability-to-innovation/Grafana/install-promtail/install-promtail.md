@@ -26,5 +26,5 @@ This archive contains the `promtail-local-config.yaml` configuration file, [NSSM
 [Configure Promtail]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.ConfigurePromtail.MainDoc" >}}
 [NSSM]: {{< url path="NSSM.MainDoc" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Prerequisites.MainDoc" >}}
-[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3.0.0.PromtailInstallZip" >}}
-[Promtail Install.zip]: {{< url path="GitHub.Cortex.Observability.3.0.0.PromtailInstallZip" >}}
+[Promtail 3.0.0]:  {{< url path="Grafana.SelfManaged.Downloads.Promtail.3_0_0.PromtailInstallZip" >}}
+[Promtail Install.zip]: {{< url path="GitHub.Cortex.Observability.3_0_0.PromtailInstallZip" >}}

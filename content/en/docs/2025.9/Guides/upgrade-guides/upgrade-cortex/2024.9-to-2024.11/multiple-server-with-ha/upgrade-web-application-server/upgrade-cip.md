@@ -17,5 +17,5 @@ This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensur
 
 1. [Try It Out][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.UpgradeGateway" >}}
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9to2024.11.MultipleServerWithHA.TryItOut" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.MultipleServerWithHA.UpgradeGateway" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9to2024_11.MultipleServerWithHA.TryItOut" >}}
