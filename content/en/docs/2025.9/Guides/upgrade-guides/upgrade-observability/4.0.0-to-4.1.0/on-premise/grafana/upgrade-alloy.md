@@ -98,6 +98,6 @@ These steps will need to be performed on all application servers that host a Gra
 
 1. [Try it out][]
 
-[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.OnPremise.Grafana.BackupOldFiles" >}}
-[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.OnPremise.Grafana.Prerequisites" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4.0.0to4.1.0.OnPremise.Grafana.TryItOut" >}}
+[backed up]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_0_0to4_1_0.OnPremise.Grafana.BackupOldFiles" >}}
+[Prerequisites]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_0_0to4_1_0.OnPremise.Grafana.Prerequisites" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_0_0to4_1_0.OnPremise.Grafana.TryItOut" >}}

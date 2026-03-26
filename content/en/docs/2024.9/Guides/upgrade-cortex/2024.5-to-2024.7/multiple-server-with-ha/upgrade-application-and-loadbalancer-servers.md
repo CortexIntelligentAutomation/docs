@@ -76,4 +76,4 @@ To check the previous configuration values open the `Cortex.Upgrade.ApplicationC
 
 1. [Upgrade Web Application Server][]
 
-[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA.UpgradeWebApplicationServer" >}}
+[Upgrade Web Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024_5to2024_7.MultipleServerWithHA.UpgradeWebApplicationServer" >}}

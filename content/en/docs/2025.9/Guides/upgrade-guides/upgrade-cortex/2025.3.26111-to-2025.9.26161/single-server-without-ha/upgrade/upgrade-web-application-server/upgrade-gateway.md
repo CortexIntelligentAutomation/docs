@@ -33,5 +33,5 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade {{% ctx %}} Configuration Portal][Upgrade CCP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade CCP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.UpgradeCCP" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.26111to2025.9.26161.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade CCP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeCCP" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeApplicationServer" >}}

@@ -34,5 +34,5 @@ This guide describes how to upgrade {{% ctx %}} Gateway from 2024.1 to 2024.3. P
 
 1. [Try It Out][]
 
-[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA.TryItOut" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024.1to2024.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Try It Out]: {{< url path="Cortex.Guides.UpgradeCortex.2024_1to2024_3.SingleServerWithoutHA.TryItOut" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeCortex.2024_1to2024_3.SingleServerWithoutHA.UpgradeApplicationServer" >}}

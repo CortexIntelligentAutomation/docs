@@ -17,5 +17,5 @@ This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensur
 
 1. [Upgrade {{% ctx %}} Configuration Portal][Upgrade CCP]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.MultipleServerWithHA.UpgradeGateway" >}}
-[Upgrade CCP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.9to2025.9.26161.MultipleServerWithHA.UpgradeCCP" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.UpgradeGateway" >}}
+[Upgrade CCP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.UpgradeCCP" >}}

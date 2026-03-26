@@ -24,4 +24,4 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade][]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025.3.25411to2025.3.26111.SingleServerWithoutHA.Upgrade" >}}
+[Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_25411to2025_3_26111.SingleServerWithoutHA.Upgrade" >}}

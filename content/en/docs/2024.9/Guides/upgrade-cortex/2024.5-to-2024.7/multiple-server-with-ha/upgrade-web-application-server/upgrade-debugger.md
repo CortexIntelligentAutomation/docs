@@ -29,4 +29,4 @@ This guide describes how to upgrade the Flow Debugger on the Web Application Ser
 
 1. [Upgrade Gateway][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeCortex.2024.5to2024.7.MultipleServerWithHA.UpgradeGateway" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeCortex.2024_5to2024_7.MultipleServerWithHA.UpgradeGateway" >}}

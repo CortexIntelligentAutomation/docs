@@ -61,5 +61,5 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeCIP" >}}
-[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024.9.25161to2025.3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.SingleServerWithoutHA.UpgradeCIP" >}}
+[Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2024_9_25161to2025_3.SingleServerWithoutHA.UpgradeApplicationServer" >}}

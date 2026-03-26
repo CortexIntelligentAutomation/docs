@@ -1,1 +1,0 @@
-Application Service that stores and distributes configuration data to services within the Innovation platform.

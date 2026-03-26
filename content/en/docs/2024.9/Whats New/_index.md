@@ -82,7 +82,7 @@ The documentation includes updates related to:
 For a full list of what has been introduced in this release, please see the [2024.9 Release Notes][]
 
 [Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2024.9" >}}
-[2024.7]: {{< url path="Cortex.Blogs.Releases.2024.7.MainDoc" version="2024.9" >}}
+[2024.7]: {{< url path="Cortex.Blogs.Releases.2024_7.MainDoc" version="2024.9" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Observability]: {{< ref "#improved-observability" >}}
@@ -94,32 +94,32 @@ For a full list of what has been introduced in this release, please see the [202
 [Upgrade]: {{< ref "#improved-upgrade" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[Process and Activity]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivity" version="2024.9" >}}
-[Saving Output Properties to multiple variables]: {{< url path="Cortex.Blogs.Releases.2024.9.SaveOutputPropertiesToMultipleVariables" version="2024.9" >}}
-[execution context variable]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionContextVariable" version="2024.9" >}}
-[Proxy for the {{% ctx %}} 7 Flow API]: {{< url path="Cortex.Blogs.Releases.2024.9.ProxyForTheCortex7FlowApi" version="2024.9" >}}
-[Logging added to blocks that communicate with external systems]: {{< url path="Cortex.Blogs.Releases.2024.9.LoggingAddedToBlocksThatCommunicateWithExternalSystems" version="2024.9" >}}
-[Reduction of total number of NServiceBus endpoints and RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.ReductionOfTotalNumberOfNServiceBusEndpointsAndRabbitMQQueues" version="2024.9" >}}
-[Upgrade OpenSSL]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeOpenSSL" version="2024.9" >}}
-[Multi-domain certificates support]: {{< url path="Cortex.Blogs.Releases.2024.9.MultiDomainCertificatesSupport" version="2024.9" >}}
-[New CortexManagementUser added to manage RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024.9.NewCortexManagementUserAddedToManageRabbitMQQueues" version="2024.9" >}}
-[Server-side validation added to {{% ctx %}} Gateway API]: {{< url path="Cortex.Blogs.Releases.2024.9.ServerSideValidationAddedToCortexGatewayAPI" version="2024.9" >}}
-[Remove refresh token cookie on sign out]: {{< url path="Cortex.Blogs.Releases.2024.9.RemoveRefreshTokenCookieOnSign" version="2024.9" >}}
-[Rename Flows Charm to Dev and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameFlowsCharmToDevAndChangeIcon" version="2024.9" >}}
-[Rename Settings Charm to Admin and change icon]: {{< url path="Cortex.Blogs.Releases.2024.9.RenameSettingsCharmToAdminAndChangeIcon" version="2024.9" >}}
-[Upgrade to .NET 8]: {{< url path="Cortex.Blogs.Releases.2024.9.UpgradeToNet8" version="2024.9" >}}
-[Support installation when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportInstallationWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
-[Support upgrade when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024.9.SupportUpgradeWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
-[Execution Service is upgraded when the engine version is unchanged]: {{< url path="Cortex.Blogs.Releases.2024.9.ExecutionServiceIsUpgradedWhenTheEngineVersionIsUnchanged" version="2024.9" >}}
-[Handling of the Execution Services lifecycle events]: {{< url path="Cortex.Blogs.Releases.2024.9.HandlingOfTheExecutionServicesLifecycleEvents" version="2024.9" >}}
-[Process and Activity Documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.ProcessAndActivityDocumentation" version="2024.9" >}}
-[Decomposition of Output properties]: {{< url path="Cortex.Blogs.Releases.2024.9.DecompositionOfOutputProperties" version="2024.9" >}}
-[Prevent deadlocks when using semaphores]: {{< url path="Cortex.Blogs.Releases.2024.9.PreventDeadlocksWhenUsingSemaphores" version="2024.9" >}}
-[Screenshots updated]: {{< url path="Cortex.Blogs.Releases.2024.9.ScreenshotsUpdated" >}}
-[Flow compatibility version introduced]: {{< url path="Cortex.Blogs.Releases.2024.9.FlowCompatibilityVersionIntroduced" version="2024.9" >}}
-[General improvements to the documentation]: {{< url path="Cortex.Blogs.Releases.2024.9.GeneralImprovementsToTheDocumentation" version="2024.9" >}}
+[Process and Activity]: {{< url path="Cortex.Blogs.Releases.2024_9.ProcessAndActivity" version="2024.9" >}}
+[Saving Output Properties to multiple variables]: {{< url path="Cortex.Blogs.Releases.2024_9.SaveOutputPropertiesToMultipleVariables" version="2024.9" >}}
+[execution context variable]: {{< url path="Cortex.Blogs.Releases.2024_9.ExecutionContextVariable" version="2024.9" >}}
+[Proxy for the {{% ctx %}} 7 Flow API]: {{< url path="Cortex.Blogs.Releases.2024_9.ProxyForTheCortex7FlowApi" version="2024.9" >}}
+[Logging added to blocks that communicate with external systems]: {{< url path="Cortex.Blogs.Releases.2024_9.LoggingAddedToBlocksThatCommunicateWithExternalSystems" version="2024.9" >}}
+[Reduction of total number of NServiceBus endpoints and RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024_9.ReductionOfTotalNumberOfNServiceBusEndpointsAndRabbitMQQueues" version="2024.9" >}}
+[Upgrade OpenSSL]: {{< url path="Cortex.Blogs.Releases.2024_9.UpgradeOpenSSL" version="2024.9" >}}
+[Multi-domain certificates support]: {{< url path="Cortex.Blogs.Releases.2024_9.MultiDomainCertificatesSupport" version="2024.9" >}}
+[New CortexManagementUser added to manage RabbitMQ queues]: {{< url path="Cortex.Blogs.Releases.2024_9.NewCortexManagementUserAddedToManageRabbitMQQueues" version="2024.9" >}}
+[Server-side validation added to {{% ctx %}} Gateway API]: {{< url path="Cortex.Blogs.Releases.2024_9.ServerSideValidationAddedToCortexGatewayAPI" version="2024.9" >}}
+[Remove refresh token cookie on sign out]: {{< url path="Cortex.Blogs.Releases.2024_9.RemoveRefreshTokenCookieOnSign" version="2024.9" >}}
+[Rename Flows Charm to Dev and change icon]: {{< url path="Cortex.Blogs.Releases.2024_9.RenameFlowsCharmToDevAndChangeIcon" version="2024.9" >}}
+[Rename Settings Charm to Admin and change icon]: {{< url path="Cortex.Blogs.Releases.2024_9.RenameSettingsCharmToAdminAndChangeIcon" version="2024.9" >}}
+[Upgrade to .NET 8]: {{< url path="Cortex.Blogs.Releases.2024_9.UpgradeToNet8" version="2024.9" >}}
+[Support installation when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024_9.SupportInstallationWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
+[Support upgrade when files are blocked by the operating system]: {{< url path="Cortex.Blogs.Releases.2024_9.SupportUpgradeWhenFilesAreBlockedByTheOperatingSystem" version="2024.9" >}}
+[Execution Service is upgraded when the engine version is unchanged]: {{< url path="Cortex.Blogs.Releases.2024_9.ExecutionServiceIsUpgradedWhenTheEngineVersionIsUnchanged" version="2024.9" >}}
+[Handling of the Execution Services lifecycle events]: {{< url path="Cortex.Blogs.Releases.2024_9.HandlingOfTheExecutionServicesLifecycleEvents" version="2024.9" >}}
+[Process and Activity Documentation]: {{< url path="Cortex.Blogs.Releases.2024_9.ProcessAndActivityDocumentation" version="2024.9" >}}
+[Decomposition of Output properties]: {{< url path="Cortex.Blogs.Releases.2024_9.DecompositionOfOutputProperties" version="2024.9" >}}
+[Prevent deadlocks when using semaphores]: {{< url path="Cortex.Blogs.Releases.2024_9.PreventDeadlocksWhenUsingSemaphores" version="2024.9" >}}
+[Screenshots updated]: {{< url path="Cortex.Blogs.Releases.2024_9.ScreenshotsUpdated" >}}
+[Flow compatibility version introduced]: {{< url path="Cortex.Blogs.Releases.2024_9.FlowCompatibilityVersionIntroduced" version="2024.9" >}}
+[General improvements to the documentation]: {{< url path="Cortex.Blogs.Releases.2024_9.GeneralImprovementsToTheDocumentation" version="2024.9" >}}
 
-[2024.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024.9.MainDoc" version="2024.9" >}}
+[2024.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2024_9.MainDoc" version="2024.9" >}}
 
 [Flow]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" version="2024.9" >}}
 [Path Traversal]: {{< url path="Owasp.PathTraversal.MainDoc" version="2024.9" >}}

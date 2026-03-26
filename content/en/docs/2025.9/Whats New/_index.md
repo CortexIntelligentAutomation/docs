@@ -73,7 +73,7 @@ The documentation includes the following updates:
 For a full list of what has been introduced in this release, please see the [2025.9 Release Notes][]
 
 [Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2025.9" >}}
-[2025.7]: {{< url path="Cortex.Blogs.Releases.2025.9.MainDoc" version="2025.9" >}}
+[2025.7]: {{< url path="Cortex.Blogs.Releases.2025_9.MainDoc" version="2025.9" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Security]: {{< ref "#improved-security" >}}
@@ -84,29 +84,29 @@ For a full list of what has been introduced in this release, please see the [202
 [Upgrade]: {{< ref "#improved-upgrade" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[2025.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025.9.MainDoc" version="2025.9" >}}
+[2025.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2025_9.MainDoc" version="2025.9" >}}
 
-[Capability - Added multi‑factor authentication (MFA) via OpenID Connect on {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2025.9.AddedMultiFactorAuthenticationViaOpenIdConnectOnGateway" version="2025.9" >}}
-[Capability - Enabled debugging of production flows]: {{< url path="Cortex.Blogs.Releases.2025.9.EnabledDebuggingOfProductionFlows" version="2025.9" >}}
-[Capability - Added 'quick add' blocks to the Flow Editor]: {{< url path="Cortex.Blogs.Releases.2025.9.AddedQuickAddBlocksToTheFlowEditor" version="2025.9" >}}
-[Capability - Extended Licence Fingerprint Generator]: {{< url path="Cortex.Blogs.Releases.2025.9.ExtendedLicenceFingerprintGenerator" version="2025.9" >}}
+[Capability - Added multi‑factor authentication (MFA) via OpenID Connect on {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2025_9.AddedMultiFactorAuthenticationViaOpenIdConnectOnGateway" version="2025.9" >}}
+[Capability - Enabled debugging of production flows]: {{< url path="Cortex.Blogs.Releases.2025_9.EnabledDebuggingOfProductionFlows" version="2025.9" >}}
+[Capability - Added 'quick add' blocks to the Flow Editor]: {{< url path="Cortex.Blogs.Releases.2025_9.AddedQuickAddBlocksToTheFlowEditor" version="2025.9" >}}
+[Capability - Extended Licence Fingerprint Generator]: {{< url path="Cortex.Blogs.Releases.2025_9.ExtendedLicenceFingerprintGenerator" version="2025.9" >}}
 
-[Security - Added Authentication Management to {{% ctx %}} API Gateway Service]: {{< url path="Cortex.Blogs.Releases.2025.9.AddedAuthenticationManagementToApiGatewayService" version="2025.9" >}}
-[Security - Enabled single‑use refresh tokens (configurable)]: {{< url path="Cortex.Blogs.Releases.2025.9.EnabledSingleUseRefreshTokensConfigurable" version="2025.9" >}}
-[Security - Hardened Configuration Portal with security headers]: {{< url path="Cortex.Blogs.Releases.2025.9.HardenedConfigurationPortalWithSecurityHeaders" version="2025.9" >}}
+[Security - Added Authentication Management to {{% ctx %}} API Gateway Service]: {{< url path="Cortex.Blogs.Releases.2025_9.AddedAuthenticationManagementToApiGatewayService" version="2025.9" >}}
+[Security - Enabled single‑use refresh tokens (configurable)]: {{< url path="Cortex.Blogs.Releases.2025_9.EnabledSingleUseRefreshTokensConfigurable" version="2025.9" >}}
+[Security - Hardened Configuration Portal with security headers]: {{< url path="Cortex.Blogs.Releases.2025_9.HardenedConfigurationPortalWithSecurityHeaders" version="2025.9" >}}
 
-[Performance - Optimised Execution Management Service event batching]: {{< url path="Cortex.Blogs.Releases.2025.9.OptimisedExecutionManagementServiceEventBatching" version="2025.9" >}}
-[Performance - Improved Execution Service concurrency and flow translation]: {{< url path="Cortex.Blogs.Releases.2025.9.ImprovedExecutionServiceConcurrencyAndFlowTranslation" version="2025.9" >}}
-[Scalability - Enhanced Service Fabric resilience to RabbitMQ node outages]: {{< url path="Cortex.Blogs.Releases.2025.9.EnhancedServiceFabricResilienceToRabbitMqNodeOutages" version="2025.9" >}}
+[Performance - Optimised Execution Management Service event batching]: {{< url path="Cortex.Blogs.Releases.2025_9.OptimisedExecutionManagementServiceEventBatching" version="2025.9" >}}
+[Performance - Improved Execution Service concurrency and flow translation]: {{< url path="Cortex.Blogs.Releases.2025_9.ImprovedExecutionServiceConcurrencyAndFlowTranslation" version="2025.9" >}}
+[Scalability - Enhanced Service Fabric resilience to RabbitMQ node outages]: {{< url path="Cortex.Blogs.Releases.2025_9.EnhancedServiceFabricResilienceToRabbitMqNodeOutages" version="2025.9" >}}
 
-[Observability - Expanded block logging]: {{< url path="Cortex.Blogs.Releases.2025.9.ExpandedBlockLogging" version="2025.9" >}}
-[Observability - Made Block logs queryable in Grafana]: {{< url path="Cortex.Blogs.Releases.2025.9.MadeBlockLogsQueryableInGrafana" version="2025.9" >}}
+[Observability - Expanded block logging]: {{< url path="Cortex.Blogs.Releases.2025_9.ExpandedBlockLogging" version="2025.9" >}}
+[Observability - Made Block logs queryable in Grafana]: {{< url path="Cortex.Blogs.Releases.2025_9.MadeBlockLogsQueryableInGrafana" version="2025.9" >}}
 
-[Installation - Improved OpenSSL certificate generation]: {{< url path="Cortex.Blogs.Releases.2025.9.ImprovedOpenSslCertificateGeneration" version="2025.9" >}}
+[Installation - Improved OpenSSL certificate generation]: {{< url path="Cortex.Blogs.Releases.2025_9.ImprovedOpenSslCertificateGeneration" version="2025.9" >}}
 
-[Upgrade - Changed location of CertificateSettings for Service Fabric services]: {{< url path="Cortex.Blogs.Releases.2025.9.ChangedLocationOfCertificateSettingsForServiceFabricServices" version="2025.9" >}}
+[Upgrade - Changed location of CertificateSettings for Service Fabric services]: {{< url path="Cortex.Blogs.Releases.2025_9.ChangedLocationOfCertificateSettingsForServiceFabricServices" version="2025.9" >}}
 
-[Documentation - Added Configuration Portal installation guide]: {{< url path="Cortex.Blogs.Releases.2025.9.AddedConfigurationPortalInstallationGuide" version="2025.9" >}}
-[Documentation - Updated {{% ctx %}} Installation Guide for new Fingerprint output]: {{< url path="Cortex.Blogs.Releases.2025.9.UpdatedInstallationGuideForNewFingerprintOutput" version="2025.9" >}}
-[Documentation - Added Upgrade Observability documentation to latest version]: {{< url path="Cortex.Blogs.Releases.2025.9.AddedUpgradeObservabilityDocumentationToLatestVersion" version="2025.9" >}}
-[Documentation - Updated tutorials]: {{< url path="Cortex.Blogs.Releases.2025.9.UpdatedTutorials" version="2025.9" >}}
+[Documentation - Added Configuration Portal installation guide]: {{< url path="Cortex.Blogs.Releases.2025_9.AddedConfigurationPortalInstallationGuide" version="2025.9" >}}
+[Documentation - Updated {{% ctx %}} Installation Guide for new Fingerprint output]: {{< url path="Cortex.Blogs.Releases.2025_9.UpdatedInstallationGuideForNewFingerprintOutput" version="2025.9" >}}
+[Documentation - Added Upgrade Observability documentation to latest version]: {{< url path="Cortex.Blogs.Releases.2025_9.AddedUpgradeObservabilityDocumentationToLatestVersion" version="2025.9" >}}
+[Documentation - Updated tutorials]: {{< url path="Cortex.Blogs.Releases.2025_9.UpdatedTutorials" version="2025.9" >}}

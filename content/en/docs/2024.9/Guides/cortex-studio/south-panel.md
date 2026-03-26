@@ -43,11 +43,11 @@ TODO: Screenshots, How to modify
 
 TODO: Screenshots, how to modify scope
 
-1. Find the variable in the [Variable Grid][]
+1. Find the variable in the Variable Grid
 2. Double-click the **Scope** to load a dropdown menu
 3. Select the desired workspace
 
-If the variable does not appear in the grid, the most likely reason is the variable is not in scope of the workspace currently in focus. To resolve this, either select the appropriate workspace, or change the **Scope** filter on the [Variable Grid][] to **All**.
+If the variable does not appear in the grid, the most likely reason is the variable is not in scope of the workspace currently in focus. To resolve this, either select the appropriate workspace, or change the **Scope** filter on the Variable Grid to **All**.
 
 ### Deleting Variables
 
