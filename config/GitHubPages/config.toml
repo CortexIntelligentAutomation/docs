@@ -1,1 +1,29 @@
 baseURL = "/"
+ignoreFiles = ["/docs/2026.3/"]
+
+[[params.versions]]
+	version = "2026.3"
+	url = "/docs/2026.3/"
+	dotNetVersion = "net-8.0"
+	inSupport = false
+	latest = false
+	draft = true
+
+[[params.versions]]
+	version = "2025.9"
+	url = "/docs/2025.9/"
+	dotNetVersion = "net-8.0"
+	inSupport = true
+    latest = true
+
+[[params.versions]]
+	version = "2025.3"
+	url = "/docs/2025.3/"
+	dotNetVersion = "net-8.0"
+	inSupport = true
+
+[[params.versions]]
+	version = "2024.9"
+	url = "/docs/2024.9/"
+	dotNetVersion = "net-8.0"
+	inSupport = true

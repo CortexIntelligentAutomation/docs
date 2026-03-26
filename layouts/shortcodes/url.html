@@ -53,7 +53,23 @@
 {{- /*  Check if it is an internal docs URL  */}}
 {{- else if hasPrefix $mdFilePath "/docs/" }}
     {{- if (not (or ($page) ($pageIndex))) }}
-        {{- errorf "url.html: Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+        {{- $env := .Site.Hugo.Environment }}
+        {{- if eq $env "GitHubPages" }}
+            {{- $draftVersions := where .Site.Params.versions "draft" true }}
+            {{- $isDraftCurrent := false }}
+            {{- range $draftVersions }}
+                {{- if eq .url $currentVer }}
+                    {{- $isDraftCurrent = true }}
+                {{- end }}
+            {{- end }}
+            {{- if not $isDraftCurrent }}
+                {{- errorf "url.html: NOT DRAFT Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+            {{- else }}
+                {{- warnf "url.html: Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+            {{- end }}
+        {{ else }}
+            {{- errorf "url.html: ELSE Missing md file for url %q found in urls.toml. One of the following file must exist for the link to work: %q or %q." $mdFilePath $mdFilePath $indexFilePath }}
+        {{ end }}
     {{- end }}
     {{- if $isNested }}
         {{- $urlPath = printf "%s%s" "/docs" $urlPath }}
