@@ -37,10 +37,5 @@ This guide describes how to setup Gateway. Please ensure that the [Install Web A
 
 1. [Post-Installation][]
 
-[Account Details]: {{< ref "#account-details" >}}
-[Authorisation]: {{< ref "#authorisation" >}}
-[Authentication]: {{< ref "#authentication" >}}
-
 [Install Web Application Server]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.InstallWebApplicationServerNew" >}}
-[supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.WebBrowserRequirementsNew" >}}
 [Post-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.PostInstallation" >}}
