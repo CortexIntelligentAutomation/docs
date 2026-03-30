@@ -893,6 +893,7 @@
                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authentication]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/"
                             LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
                             OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
