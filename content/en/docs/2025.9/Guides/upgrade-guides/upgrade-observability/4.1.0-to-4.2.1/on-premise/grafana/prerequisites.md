@@ -15,7 +15,7 @@ On the server that Grafana Loki is installed on:
 1. Open a File Explorer and navigate to the folder that Grafana Loki is running from, e.g. `C:\ProgramData\Cortex\Observability\Loki`.
 1. Open the `loki-local-config.yaml` configuration file in a text editor.
 1. Search the file for `compactor:`.
-1. If the search returns no results, proceed with the upgrade process, if results are returned then Observability has already been updated to 4.2.0 automatically as part of the [3.0.0 to 4.0.0][] upgrade and no further steps are required.
+1. If the search returns no results, proceed with the upgrade process, if results are returned then Observability has already been updated to 4.2.1 automatically as part of the [3.0.0 to 4.0.0][] upgrade and no further steps are required.
 
 ## Backup Old Files
 
@@ -28,4 +28,4 @@ On the server that Grafana Loki is installed on:
 1. [Upgrade Grafana Loki][]
 
 [3.0.0 to 4.0.0]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.MainDoc" >}}
-[Upgrade Grafana Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_0.OnPremise.Grafana.UpgradeLoki" >}}
+[Upgrade Grafana Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.UpgradeLoki" >}}
