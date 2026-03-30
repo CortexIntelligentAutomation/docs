@@ -7,11 +7,7 @@ weight: 5
 
 # {{% param title %}}
 
-<<<<<<<< HEAD:content/en/docs/2026.3/Guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/try-it-out.md
-This guide describes how to verify that the upgrade has been successful. Please ensure that [Upgrade Grafana Alloy][Upgrade Alloy] has been completed before taking these steps.
-========
 This guide describes how to verify that the upgrade has been successful. Please ensure that [Upgrade Grafana Loki][Upgrade Loki] has been completed before taking these steps.
->>>>>>>> main:content/en/docs/2025.9/Guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/try-it-out.md
 
 ## Confirm New Data is Processed
 
@@ -60,10 +56,6 @@ Loki may take some time to remove logs older than the retention period, therefor
     {{% / alert %}}
 
 [HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-<<<<<<<< HEAD:content/en/docs/2026.3/Guides/upgrade-guides/upgrade-observability/4.0.0-to-4.1.0/on-premise/grafana/try-it-out.md
-[Upgrade Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_0_0to4_1_0.OnPremise.Grafana.UpgradeAlloy" >}}
-========
 [Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.UpgradeLoki" >}}
->>>>>>>> main:content/en/docs/2025.9/Guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/try-it-out.md
 [Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}

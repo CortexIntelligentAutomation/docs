@@ -893,10 +893,6 @@
                     MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/"
                     [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin]
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authentication]
-<<<<<<< HEAD
-                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/"
-=======
->>>>>>> main
                             LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
                             OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
@@ -1628,11 +1624,8 @@
                     MainDoc = "/docs/reference/concepts/fundamentals/variables/"
                     [Cortex.Reference.Concepts.Fundamentals.Variables.UsingVariables]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/using-variables/"
-<<<<<<< HEAD
                         Indexes = "/docs/reference/concepts/fundamentals/variables/using-variables/#using-items-in-collections"
                         Properties = "/docs/reference/concepts/fundamentals/variables/using-variables/#using-properties-of-data-types"
-=======
->>>>>>> main
                     [Cortex.Reference.Concepts.Fundamentals.Variables.VariableScopes]
                         MainDoc = "/docs/reference/concepts/fundamentals/variables/variable-scopes/"
                         Accessible = "/docs/reference/concepts/fundamentals/variables/variable-scopes/#accessing-variables-from-other-scopes"
@@ -2575,12 +2568,9 @@
             [Cortex.Tutorials.Operations.Overview]
                 MainDoc = "/docs/tutorials/operations/overview"
                 UseOperationsOverview = "/docs/tutorials/operations/overview/#using-the-operations-overview"
-<<<<<<< HEAD
         [Cortex.Tutorials.Setup]
             [Cortex.Tutorials.Setup.SetupGateway]
                 InitialSetup = "/docs/tutorials/setup/setup-gateway/#initial-setup"
-=======
->>>>>>> main
     [Cortex.Website]
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
@@ -2628,23 +2618,12 @@
                 GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.0.0/Grafana.Loki.Install.zip"
             [GitHub.Cortex.Observability.4_1_0]
                 Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.1.0"
-<<<<<<< HEAD
-                GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Alloy.Install.zip"
-                GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Loki.Install.zip"
-                GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.1.0/Grafana.Dashboards.zip"
-            [GitHub.Cortex.Observability.4_2_0]
-                Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.2.0"
-                GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Alloy.Install.zip"
-                GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Loki.Install.zip"
-                GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.0/Grafana.Dashboards.zip"
-=======
             [GitHub.Cortex.Observability.4_2_0]
                 Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.2.0"
             [GitHub.Cortex.Observability.4_2_1]
                 GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.1/Grafana.Alloy.Install.zip"
                 GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.1/Grafana.Loki.Install.zip"
                 GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v4.2.1/Grafana.Dashboards.zip"
->>>>>>> main
 [Grafana]
     MainDoc = "https://grafana.com/"
     [Grafana.Products]
