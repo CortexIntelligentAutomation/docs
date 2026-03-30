@@ -143,6 +143,16 @@ The conditions that must be set are:
 
 Any data to be passed to the flow’s [input variables][Input Variables] is entered using [expression editors][Expression Editor], except for the SNMP Trap PDU which, if required, is dynamically passed to a selected input variable, overwriting any static or default values configured for that variable.
 
+Data from the SNMP Trap PDU is stored in the {{% ctx %}} Trap Variable, specified in the Trap Variable dropdown; the data stored has a similar structure for all three SNMP versions.
+
+The SNMP Trap PDU contains data expressed as OIDs. These OIDs can be translated into a human readable text strings by adding MIB files to the relevant directory.
+
+The MIB files used are specified in the MibFilePaths list, and the MIB Modules that they contain will be shown in the MibModuleName parameter list.
+
+All OIDs in the Trap data that can be decoded by these MIBs will be translated into their human readable format, and any OIDs that are not found in the MIB Modules will remain as OIDs.
+
+{{< figure src="/images/SNMP Trap PDU.png" title="SNMP Trap PDU" >}}
+
 Creating a [new package version][Create New Version] will not inherit the trigger configuration from the source version. Similarly, exporting a package version will not include the trigger configuration in the {{% ctx %}} Package file. These are known limitations and should be addressed in a future release.
 
 See the [Create a Trigger on a Package Version][Create a Trigger on a Package Version tutorial] tutorial for a step-by-step guide.
