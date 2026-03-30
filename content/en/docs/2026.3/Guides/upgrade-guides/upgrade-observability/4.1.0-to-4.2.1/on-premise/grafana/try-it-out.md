@@ -56,6 +56,6 @@ Loki may take some time to remove logs older than the retention period, therefor
     {{% / alert %}}
 
 [HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_0.OnPremise.Grafana.UpgradeLoki" >}}
+[Upgrade Loki]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_1.OnPremise.Grafana.UpgradeLoki" >}}
 [Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
