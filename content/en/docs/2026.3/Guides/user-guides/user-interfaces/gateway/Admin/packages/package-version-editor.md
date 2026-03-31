@@ -121,7 +121,7 @@ A trigger allows flow executions to occur on receipt of an SNMP Trap, passing va
 
 Each trigger definition consists of a `Name`, which is used to easily identify the trigger, and an optional `Description` to provide additional information. The definition also specifies the `Flow` to be executed as well as a set of conditions that, on receipt of a matching SNMP Trap, will execute the flow.
 
-The conditions that must be set are:
+The conditions   must be set are:
 
 * The `Device Address` of the device sending the SNMP Trap.
 
@@ -143,7 +143,7 @@ The conditions that must be set are:
 
 Any data to be passed to the flow’s [input variables][Input Variables] is entered using [expression editors][Expression Editor], except for the SNMP Trap PDU which, if required, is dynamically passed to a selected input variable, overwriting any static or default values configured for that variable.
 
-Data from the SNMP Trap PDU is stored in the {{% ctx %}} Trap Variable, specified in the Trap Variable dropdown; the data stored has a similar structure for all three SNMP versions.
+Data from the SNMP Trap PDU is stored in the {{% ctx %}} Trap Variable, specified in the `Trap Variable` dropdown; the data stored has a similar structure for all three SNMP versions.
 
 The SNMP Trap PDU contains data expressed as OIDs. These OIDs can be translated into a human readable text strings by adding MIB files to the relevant directory.
 
