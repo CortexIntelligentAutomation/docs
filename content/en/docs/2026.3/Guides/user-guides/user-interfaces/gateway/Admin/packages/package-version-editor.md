@@ -121,7 +121,7 @@ A trigger allows flow executions to occur on receipt of an SNMP Trap, passing va
 
 Each trigger definition consists of a `Name`, which is used to easily identify the trigger, and an optional `Description` to provide additional information. The definition also specifies the `Flow` to be executed as well as a set of conditions that, on receipt of a matching SNMP Trap, will execute the flow.
 
-The conditions that must be set are:
+The conditions   must be set are:
 
 * The `Device Address` of the device sending the SNMP Trap.
 
@@ -142,6 +142,16 @@ The conditions that must be set are:
   * If *SNMPv3* is selected, it is necessary to setup one or more authentication users from the `Configure SNMPv3 Users` hyperlink, above the list of existing SNMP Triggers.
 
 Any data to be passed to the flow’s [input variables][Input Variables] is entered using [expression editors][Expression Editor], except for the SNMP Trap PDU which, if required, is dynamically passed to a selected input variable, overwriting any static or default values configured for that variable.
+
+Data from the SNMP Trap PDU is stored in the {{% ctx %}} Trap Variable, specified in the `Trap Variable` dropdown; the data stored has a similar structure for all three SNMP versions.
+
+The SNMP Trap PDU contains data expressed as OIDs. These OIDs can be translated into a human readable text strings by adding MIB files to the relevant directory.
+
+The MIB files used are specified in the MibFilePaths list, and the MIB Modules that they contain will be shown in the MibModuleName parameter list.
+
+All OIDs in the Trap data that can be decoded by these MIBs will be translated into their human readable format, and any OIDs that are not found in the MIB Modules will remain as OIDs.
+
+{{< figure src="/images/SNMP Trap PDU.png" title="SNMP Trap PDU" >}}
 
 Creating a [new package version][Create New Version] will not inherit the trigger configuration from the source version. Similarly, exporting a package version will not include the trigger configuration in the {{% ctx %}} Package file. These are known limitations and should be addressed in a future release.
 

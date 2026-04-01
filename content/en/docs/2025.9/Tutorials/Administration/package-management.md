@@ -61,7 +61,7 @@ weight: 200
 
 #### Create a Trigger on a Package Version
 
-{{< scribe title="How_to_Create_a_Trigger_on_a_CORTEX_Package" id="z6CwThFVTHSRdL1mAMFPsQ" >}}
+{{< scribe title="How_to_Create_a_Trigger_on_a_CORTEX_Package" id="XXso2_3PQfOyVnii2sSWxA" >}}
 
 ### Running Executions
 
