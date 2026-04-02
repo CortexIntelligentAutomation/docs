@@ -658,6 +658,7 @@
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.25411-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161]
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
@@ -671,6 +672,7 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server"
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
@@ -768,6 +770,7 @@
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.7-to-2025.9/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161]
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
@@ -781,6 +784,7 @@
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/upgrade/upgrade-web-application-server"
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.SingleServerWithoutHA]
+                        MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/"
                         PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade"
                         PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/pre-upgrade"
                         RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
