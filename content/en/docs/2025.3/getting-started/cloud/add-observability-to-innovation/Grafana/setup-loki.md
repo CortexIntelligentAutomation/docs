@@ -26,8 +26,8 @@ The token name is used in the Grafana Cloud website to easily identify the key a
 
 ## Next Steps?
 
-1. [Install Promtail][]
+1. [Install Grafana Alloy][]
 
-[Install Promtail]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallPromtail.MainDoc" >}}
+[Install Grafana Alloy]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.InstallAlloy.MainDoc" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Prerequisites.MainDoc" >}}
 [Sign Up For Grafana Cloud]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.SignUpForGrafanaCloud" >}}

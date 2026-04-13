@@ -2635,6 +2635,8 @@
                 MainDoc = "https://grafana.com/docs/loki/latest/send-data/alloy/"
                 [Grafana.Products.Loki.Alloy.1_10]
                     2 = "https://github.com/grafana/alloy/releases/download/v1.10.2/alloy-installer-windows-amd64.exe.zip"
+                [Grafana.Products.Loki.Alloy.1_15_0]
+                    MainDoc = "https://github.com/grafana/alloy/releases/download/v1.15.0/alloy-installer-windows-amd64.exe.zip"
         [Grafana.Products.GrafanaAlloy]
             MainDoc = "https://grafana.com/oss/alloy-opentelemetry-collector/"
     [Grafana.SelfManaged]
@@ -2645,6 +2647,8 @@
                     Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
                 [Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1]
                     Windows = "https://grafana.com/grafana/download/12.1.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
+                [Grafana.SelfManaged.Downloads.GrafanaWebApp.12_4_2]
+                    Windows = "https://grafana.com/grafana/download/12.4.2?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
             [Grafana.SelfManaged.Downloads.GrafanaLoki]
                 Release = "https://github.com/grafana/loki/releases/tag/v2.5.0"
                 [Grafana.SelfManaged.Downloads.GrafanaLoki.3_0_0]
@@ -2653,6 +2657,9 @@
                 [Grafana.SelfManaged.Downloads.GrafanaLoki.3_5_5]
                     Release = "https://github.com/grafana/loki/releases/tag/v3.5.5"
                     GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.5.5/loki-windows-amd64.exe.zip"
+                [Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1]
+                    Release = "https://github.com/grafana/loki/releases/tag/v3.7.1"
+                    GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.7.1/loki-windows-amd64.exe.zip"
             [Grafana.SelfManaged.Downloads.Promtail]
                 [Grafana.SelfManaged.Downloads.Promtail.3_0_0]
                     PromtailInstallZip = "https://github.com/grafana/loki/releases/download/v3.0.0/promtail-windows-amd64.exe.zip"
