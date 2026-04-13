@@ -243,13 +243,13 @@ To provide guidance for search engine crawlers and common AI bots not to index C
 On the Web Application Server:
 
 1. Navigate to the `Cortex` website directory, typically `C:\inetpub\wwwroot\Cortex`.
-1. If a `web.config` file is present, and a `Redirect Cortex to gateway` rule present, add conditions as follows:
+1. If a `web.config` file is present, and a `Redirect Cortex to gateway` rule present, add a condition as follows:
 
     ``` xml
     <add input="{REQUEST_URI}" pattern=".*\/ConfigurationPortal.*" negate="true" />
     ```
 
-1. Add the following condition if it does not exist in the `Redirect Cortex to gateway` rule:
+1. If not present in the `Redirect Cortex to gateway` rule, add a condition as follows:
 
     ``` xml
     <add input="{REQUEST_URI}" pattern="^/robots\.txt$" negate="true" />
