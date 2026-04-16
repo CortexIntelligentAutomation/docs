@@ -2,7 +2,7 @@
 title: "Try it out"
 linkTitle: "Try it out"
 description: "Information about trying out the observability platform after upgrade."
-weight: 5
+weight: 6
 ---
 
 # {{% param title %}}
@@ -13,7 +13,7 @@ This guide describes how to verify that the upgrade has been successful. Please 
 
 1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`.
 1. Identify the version number under the login prompt.
-1. Confirm the version has updated to be 12.4.2.
+1. Confirm the version has updated to be 13.0.0.
 
 ## Confirm Dashboards Load
 
@@ -61,7 +61,7 @@ If other requests have been made then there may be more than one request visible
 {{% / alert %}}
 
 [HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Upgrade Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.UpgradeAlloy" >}}
+[Upgrade Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.OnPremise.Grafana.UpgradeAlloy" >}}
 [Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
-[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.VerifyOldVersion" >}}
+[verifying the old version]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.OnPremise.Grafana.VerifyOldVersion" >}}

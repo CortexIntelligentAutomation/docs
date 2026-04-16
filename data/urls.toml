@@ -856,26 +856,28 @@
                             Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/prerequisites"
                             TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/try-it-out"
                             UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.1/on-premise/grafana/upgrade-loki"
-                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0]
-                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/"
-                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise]
-                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana]
-                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana"
-                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/prerequisites/#backup-old-files"
-                            SetupAuthentication = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/upgrade-loki/#set-up-authentication"
-                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
-                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/prerequisites"
-                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/try-it-out"
-                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/upgrade-grafana"
-                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/upgrade-loki"
-                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/upgrade-alloy"
-                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/on-premise/grafana/prerequisites/#verify-old-version"
-                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.Cloud]
-                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.Cloud.Grafana]
-                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/cloud/grafana"
-                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
-                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/cloud/grafana/upgrade-alloy"
-                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.2.0-to-5.0.0/cloud/grafana/try-it-out"
+                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0]
+                    MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.OnPremise]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.OnPremise.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana"
+                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/prerequisites/#backup-old-files"
+                            SetupAuthentication = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/upgrade-loki/#set-up-authentication"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/prerequisites/#make-artefacts-available"
+                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/prerequisites"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/try-it-out"
+                            UpgradeGrafana = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/upgrade-grafana"
+                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/upgrade-loki"
+                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/upgrade-alloy"
+                            UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/upgrade-dashboards"
+                            VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/on-premise/grafana/prerequisites/#verify-old-version"
+                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.Cloud]
+                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.Cloud.Grafana]
+                            MainDoc = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/cloud/grafana"
+                            MakeArtefactsAvailable = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/cloud/grafana/prerequisites/#make-artefacts-available"
+                            UpgradeAlloy = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/cloud/grafana/upgrade-alloy"
+                            UpgradeDashboards = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/cloud/grafana/upgrade-dashboards"
+                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.2.1-to-5.0.0/cloud/grafana/try-it-out"
 
                 [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise]
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.OnPremise.Grafana]

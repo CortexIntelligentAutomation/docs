@@ -2,7 +2,7 @@
 title: "Try it out"
 linkTitle: "Try it out"
 description: "Information about trying out the observability platform after upgrade."
-weight: 3
+weight: 4
 ---
 
 # {{% param title %}}

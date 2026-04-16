@@ -1,13 +1,17 @@
 ---
 title: "Upgrade Grafana Alloy"
 linkTitle: "Upgrade Grafana Alloy"
-description: "The steps to upgrade Grafana Alloy."
-weight: 4
+description: "The steps to Upgrade Grafana Alloy."
+weight: 2
 ---
 
 # {{% param title %}}
 
-This guide describes how to upgrade Grafana Alloy. Please ensure that the [Loki Upgrade][] has been completed before starting this upgrade.
+This guide describes how to upgrade Grafana Alloy.
+
+{{% alert title="Note" %}}
+These steps will need to be performed on all application servers that host a Grafana Alloy service.
+{{% / alert %}}
 
 ## Perform Upgrade
 
@@ -32,8 +36,7 @@ This guide describes how to upgrade Grafana Alloy. Please ensure that the [Loki 
 
 ## Next Steps?
 
-1. [Try it out][]
+1. [Upgrade Dashboards][]
 
-[Loki Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.UpgradeLoki" >}}
-[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.MakeArtefactsAvailable" >}}
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.TryItOut" >}}
+[Make Artefacts Available]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.Cloud.Grafana.MakeArtefactsAvailable" >}}
+[Upgrade Dashboards]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.Cloud.Grafana.UpgradeDashboards" >}}
