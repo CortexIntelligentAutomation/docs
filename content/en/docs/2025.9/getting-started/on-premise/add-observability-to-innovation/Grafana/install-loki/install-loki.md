@@ -26,6 +26,6 @@ This archive contains the `loki-local-config.yaml` configuration file, [NSSM][] 
 
 [Configure Loki]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.ConfigureLoki" >}}
 [Grafana Loki 3.7.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1.GrafanaLokiInstallZip" >}}
-[Grafana Loki Install.zip]: {{< url path="GitHub.Cortex.Observability.4_1_0.GrafanaLokiInstallZip" >}}
+[Grafana Loki Install.zip]: {{< url path="GitHub.Cortex.Observability.4_2_1.GrafanaLokiInstallZip" >}}
 [NSSM]: {{< url path="NSSM.MainDoc" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
