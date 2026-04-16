@@ -230,7 +230,7 @@ On the Web Application Server:
 
 #### Copy robots.txt file
 
-To provide guidance for search engine crawlers and common AI bots not to index CORTEX Configuration Portal, it is necessary for the robots.txt file to reside in the site’s root directory of the CORTEX Configuration Portal. This is only necessary if CORTEX Configuration Portal is being installed on a different machine than CORTEX Gateway has been installed.
+To provide guidance for search engine crawlers and common AI bots not to index {{% ctx %}} Configuration Portal, it is necessary for the robots.txt file to reside in the site’s root directory of the {{% ctx %}} Configuration Portal. This is only necessary if {{% ctx %}} Configuration Portal is being installed on a different machine than either {{% ctx %}} Gateway or {{% ctx %}} Interaction Portal has been installed.
 
 1. Open the folder where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to.
 1. Open the `Cortex Configuration Portal` folder.
