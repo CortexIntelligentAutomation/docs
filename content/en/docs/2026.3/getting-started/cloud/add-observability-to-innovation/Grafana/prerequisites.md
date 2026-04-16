@@ -21,7 +21,7 @@ The application servers must have internet access in order to communicate with t
 
 | Server Role        | Windows Server[^1]                             | Other Software     |
 |--------------------|------------------------------------------------|--------------------|
-| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | [Grafana Alloy 1.15.0][] |
+| Application Server | [2022 (x64)][] *Recommended*<br>[2019 (x64)][] | [Grafana Alloy 1.15.1][] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
 
@@ -59,5 +59,5 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 [2019 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2019" >}}
 [2022 (x64)]: {{< url path="Microsoft.Downloads.Windows.Server2022" >}}
 [Architecture]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.Architecture.MainDoc" >}}
-[Grafana Alloy 1.15.0]:  {{< url path="Grafana.Products.Loki.Alloy.1_15_0.MainDoc" >}}
+[Grafana Alloy 1.15.1]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1.Windows" >}}
 [Set up Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}

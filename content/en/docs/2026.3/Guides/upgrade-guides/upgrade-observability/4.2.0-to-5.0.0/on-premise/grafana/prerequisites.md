@@ -22,14 +22,13 @@ weight: 1
 
 1. Download the required artefacts to a folder on your machine:
 
-    * [Grafana 12.1.1][] Standalone Windows Binaries (64 Bit) archive.
-    * [Grafana Alloy 1.10.2][] archive.
-    * [Grafana Alloy Install][] archive.
-    * [Grafana Loki 3.5.5][] archive.
+    * [Grafana 13.0.0][] Standalone Windows Binaries (64 Bit) archive.
+    * [Grafana Alloy 1.15.1][] archive.
+    * [Grafana Loki 3.7.1][] archive.
 
-1. Extract the downloaded `grafana-enterprise_12.1.1_16903967602_windows_amd64` archive:
+1. Extract the downloaded `grafana-enterprise_12.4.2_23531306697_windows_amd64` archive:
     1. Open a Windows Powershell (x64) window as administrator.
-    1. Navigate Powershell to inside the folder containing the `grafana-enterprise_12.1.1_16903967602_windows_amd64.tar.gz` archive using the following command modifying the path as necessary:
+    1. Navigate Powershell to inside the folder containing the `grafana-enterprise_12.4.2_23531306697_windows_amd64.tar.gz` archive using the following command modifying the path as necessary:
 
         ``` Powershell
         cd "C:\Install"
@@ -38,18 +37,11 @@ weight: 1
     1. Execute the following command and wait for it to complete:
 
         ``` Powershell
-        tar -xvzf grafana-enterprise_12.1.1_16903967602_windows_amd64.tar.gz
+        tar -xvzf grafana-enterprise_12.4.2_23531306697_windows_amd64.tar.gz
         ```
 
 1. Extract the downloaded `alloy-installer-windows-amd64.exe` archive to a folder with the same name.
-1. Extract the downloaded `Grafana.Alloy.Install` archive to a folder with the same name.
 1. Extract the downloaded `loki-windows-amd64.exe` archive to a folder with the same name.
-
-## Security Requirements
-
-### Service User
-
-Grafana Alloy requires a domain user that is not a member of the Local Administrators group on any of the Application Servers. This user must be given the `Log on as a service` right otherwise the service will not be able to run. This permission will be granted as part of the install if it is not already granted.
 
 ## Backup Old Files
 
@@ -59,19 +51,17 @@ Grafana Alloy requires a domain user that is not a member of the Local Administr
 1. Copy the `defaults.ini` file and save it to the `Observability Backups` folder created at step 1.
 1. In File Explorer, navigate to the location that Loki is running from, e.g. `C:\ProgramData\Cortex\Observability\Loki\`.
 1. Copy the `loki-local-config.yaml` file and save it to the `Observability Backups` folder created at step 1.
-1. On each Application Server that Promtail is installed on:
+1. On each Application Server that Grafana Alloy is installed on:
 
     1. Create a folder called `Observability Backups` in a known location.
-    1. Open File Explorer and navigate to the location that Promtail is running from, e.g. `C:\ProgramData\Cortex\Observability\Promtail`.
-    1. Copy the `promtail-local-config.yaml` file and save it to the `Observability Backups` folder created at step 7.1.
+    1. Open File Explorer and navigate to the location where Grafana Alloy is running from, e.g. `C:\ProgramData\Cortex\Observability\Grafana Alloy`.
+    1. Copy the `config.alloy` file and save it to the `Observability Backups` folder created at step 1.
 
 ## Next Steps?
 
 1. [Upgrade Grafana][]
 
-[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1.Windows" >}}
-[Grafana Loki 3.5.5]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_5_5.GrafanaLokiInstallZip" >}}
-[Grafana Loki Install]: {{< url path="GitHub.Cortex.Observability.4_0_0.GrafanaLokiInstallZip" >}}
-[Grafana Alloy 1.10.2]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_10_2.Windows" >}}
-[Grafana Alloy Install]: {{< url path="GitHub.Cortex.Observability.4_0_0.GrafanaAlloyInstallZip" >}}
-[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.OnPremise.Grafana.UpgradeGrafana" >}}
+[Grafana 13.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.0.WindowsBinaries" >}}
+[Grafana Loki 3.7.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1.GrafanaLokiInstallZip" >}}
+[Grafana Alloy 1.15.1]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1.Windows" >}}
+[Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_0to5_0_0.OnPremise.Grafana.UpgradeGrafana" >}}
