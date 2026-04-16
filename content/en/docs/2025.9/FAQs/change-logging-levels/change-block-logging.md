@@ -1,6 +1,6 @@
 ---
-title: "Change Block Logging Levels"
-linkTitle: "Change Block Logging Levels"
+title: "Change Block Logging Level"
+linkTitle: "Change Block Logging Level"
 description: "Instructions on how to change the Logging Level for Block Logging."
 weight: 5
 ---

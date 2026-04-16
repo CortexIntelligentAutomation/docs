@@ -40,6 +40,10 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 1. Repeat steps 2 - 10 for the `Flow Execution Requests.json` file.
 1. Repeat steps 2 - 10 for the `Platform Health.json` file.
 
+{{% alert title="Warning" color="warning" %}}
+The *Flow Execution Details* dashboard will only work if `Flow Logging` is enabled on your platform. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.
+{{% / alert %}}
+
 ## Configure Data Sources
 
 It is necessary to update the Custom Filter inside the dashboards to use the correct data source.

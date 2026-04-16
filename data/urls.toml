@@ -90,9 +90,12 @@
                 Entra = "/docs/faqs/configure-oidc-authentication/microsoft-entra/#configure-microsoft-entra-oidc-provider"
         [Cortex.Faqs.ChangeLoggingLevels]
             MainDoc = "/docs/faqs/change-logging-levels/"
-            AllLogging = "/docs/faqs/change-logging-levels/change-all-logging/"
-            BlockLogging = "/docs/faqs/change-logging-levels/change-block-logging/"
-            FlowLogging = "/docs/faqs/change-logging-levels/change-flow-logging/"
+            [Cortex.Faqs.ChangeLoggingLevels.AllLogging]
+                MainDoc = "/docs/faqs/change-logging-levels/change-all-logging/"
+            [Cortex.Faqs.ChangeLoggingLevels.BlockLogging]
+                MainDoc = "/docs/faqs/change-logging-levels/change-block-logging/"
+            [Cortex.Faqs.ChangeLoggingLevels.FlowLogging]
+                MainDoc = "/docs/faqs/change-logging-levels/change-flow-logging/"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]

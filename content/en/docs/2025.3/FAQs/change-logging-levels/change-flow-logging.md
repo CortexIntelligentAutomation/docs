@@ -1,6 +1,6 @@
 ---
-title: "Change Flow Logging Levels"
-linkTitle: "Change Flow Logging Levels"
+title: "Change Flow Logging Level"
+linkTitle: "Change Flow Logging Level"
 description: "Instructions on how to change the Logging Level for Flow Logging."
 weight: 1
 ---

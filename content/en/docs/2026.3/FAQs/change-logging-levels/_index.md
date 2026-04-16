@@ -15,6 +15,6 @@ If increasing the logging level, particularly if increasing for everything or fo
 
 Whilst increased logging levels are in place, we would recommend closely monitoring system performance and disk space usage.
 
-All REST calls to update logging levels use Basic Auth and can be made using REST clients such as [Postman][] or using scripts such as PowerShell. For each of the below solutions, an example PowerShell script will be provided with instructions on how to use.
+All REST calls to update logging levels use Basic Auth and can be made using REST clients such as [Postman][] or using scripts such as PowerShell.
 
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
