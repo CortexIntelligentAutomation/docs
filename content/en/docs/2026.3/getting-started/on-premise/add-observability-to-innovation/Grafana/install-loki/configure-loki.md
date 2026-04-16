@@ -162,5 +162,4 @@ To change the retention period:
 [Install Grafana Alloy]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.MainDoc" >}}
 [Installing Grafana Alloy]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy.MainDoc" >}}
 [prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.WebAppCertificateRequirements" >}}
-[Software Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.SoftwareRequirements" >}}
 [URL Rewrite module 2.1]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
