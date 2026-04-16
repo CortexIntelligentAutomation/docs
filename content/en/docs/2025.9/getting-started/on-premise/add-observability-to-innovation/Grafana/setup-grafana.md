@@ -47,11 +47,12 @@ Please ensure that the Installations for [Grafana][] and [Loki][] have been comp
 1. Go to *Dashboards* via the menu on the left sidebar.
 1. Click the *New* button and select *Import* from the drop-down menu.
 1. Click the *Upload JSON file* button.
-1. Locate the `Flow Execution Requests.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
+1. Locate the `Flow Execution Details.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
 1. Select the file and click *Open*.
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
 1. Select your configured Loki data source from the dropdown menu.
 1. Click *Import*.
+1. Repeat steps 2 - 8 for the `Flow Execution Requests.json` file.
 1. Repeat steps 2 - 8 for the `Platform Health.json` file.
 
 ## Configure Data Sources
@@ -64,7 +65,7 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 1. To open a dashboard:
     1. Go to *Dashboards* via the menu on the left sidebar.
     1. Click the folder name that the dashboards were imported to.
-    1. Click the *Flow Execution Requests* dashboard to open it.
+    1. Click the *Flow Execution Details* dashboard to open it.
 1. Open the *Dashboard settings* menu via the cog icon in the top right-hand side of the dashboard.
 1. Click *Variables* from the top menu of the *Settings* page.
 1. Click *CustomFilter* at the bottom of the *Variables* list.
@@ -72,6 +73,7 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 1. Click *Apply*.
 1. Click the dashboard name in the breadcrumb at the top left corner of the page to go back to the dashboard.
 1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible.
+1. Repeat steps 2 - 9 for the *Flow Execution Requests* dashboard.
 1. Repeat steps 2 - 9 for the *Platform Health* dashboard.
 
 ## Next Steps?

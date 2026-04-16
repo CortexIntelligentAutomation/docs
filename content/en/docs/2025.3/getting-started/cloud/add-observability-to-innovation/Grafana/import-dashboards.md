@@ -32,11 +32,12 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 1. Click the Dashboards menu item.
 1. Click the *New* dropdown and select *Import*.
 1. Click on *Upload dashboard JSON file*.
-1. Locate the `Flow Execution Requests.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
+1. Locate the `Flow Execution Details.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
 1. Select the file and click *Open*.
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
 1. Select your [configured Loki data source][] from the dropdown menu, e.g. *grafanacloud-cortex-logs*.
 1. Click *Import*.
+1. Repeat steps 2 - 10 for the `Flow Execution Requests.json` file.
 1. Repeat steps 2 - 10 for the `Platform Health.json` file.
 
 ## Configure Data Sources
