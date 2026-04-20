@@ -22,14 +22,14 @@ weight: 1
 
 1. Download the required artefacts to a folder on your machine:
 
-    * [Grafana 13.0.0][] Standalone Windows Binaries (64 Bit) archive.
+    * [Grafana 13.0.1][] Standalone Windows Binaries (64 Bit) archive.
     * [Grafana Alloy 1.15.1][] archive.
     * [Grafana Loki 3.7.1][] archive.
     * [Grafana Dashboards][] archive.
 
-1. Extract the downloaded `grafana-enterprise_13.0.0_24445073807_windows_amd64` archive:
+1. Extract the downloaded `grafana-enterprise_13.0.1_24542347077_windows_amd64` archive:
     1. Open a Windows Powershell (x64) window as administrator.
-    1. Navigate Powershell to inside the folder containing the `grafana-enterprise_13.0.0.2_23531306697_windows_amd64.tar.gz` archive using the following command modifying the path as necessary:
+    1. Navigate Powershell to inside the folder containing the `grafana-enterprise_13.0.1_24542347077_windows_amd64.tar.gz` archive using the following command modifying the path as necessary:
 
         ``` Powershell
         cd "C:\Install"
@@ -38,7 +38,7 @@ weight: 1
     1. Execute the following command and wait for it to complete:
 
         ``` Powershell
-        tar -xvzf grafana-enterprise_13.0.0_24445073807_windows_amd64.tar.gz
+        tar -xvzf grafana-enterprise_13.0.1_24542347077_windows_amd64.tar.gz
         ```
 
 1. Extract the downloaded `alloy-installer-windows-amd64.exe` archive to a folder with the same name.
@@ -63,7 +63,7 @@ weight: 1
 
 1. [Upgrade Grafana][]
 
-[Grafana 13.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.0.WindowsBinaries" >}}
+[Grafana 13.0.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.1.WindowsBinaries" >}}
 [Grafana Dashboards]: {{< url path="GitHub.Cortex.Observability.5_0_0.GrafanaDashboardsZip" >}}
 [Grafana Loki 3.7.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1.GrafanaLokiInstallZip" >}}
 [Grafana Alloy 1.15.1]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1.Windows" >}}

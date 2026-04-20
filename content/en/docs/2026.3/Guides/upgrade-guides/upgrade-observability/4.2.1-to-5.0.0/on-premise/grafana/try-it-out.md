@@ -13,7 +13,7 @@ This guide describes how to verify that the upgrade has been successful. Please 
 
 1. Navigate to your Grafana website e.g. `https://machinename.domain.com:3000`.
 1. Identify the version number under the login prompt.
-1. Confirm the version has updated to be 13.0.0.
+1. Confirm the version has updated to be 13.0.1.
 
 ## Confirm Dashboards Load
 

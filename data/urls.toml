@@ -2694,10 +2694,10 @@
                     Windows = "https://grafana.com/grafana/download/10.4.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
                 [Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1]
                     Windows = "https://grafana.com/grafana/download/12.1.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
-                [Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.0]
-                    Windows = "https://grafana.com/grafana/download/13.0.0?platform=windows"
-                    WindowsInstaller = "https://dl.grafana.com/grafana-enterprise/release/13.0.0/grafana-enterprise_13.0.0_24445073807_windows_amd64.msi"
-                    WindowsBinaries = "https://dl.grafana.com/grafana-enterprise/release/13.0.0/grafana-enterprise_13.0.0_24445073807_windows_amd64.tar.gz"
+                [Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.1]
+                    Windows = "https://grafana.com/grafana/download/13.0.1?platform=windows"
+                    WindowsInstaller = "https://dl.grafana.com/grafana-enterprise/release/13.0.1/grafana-enterprise_13.0.1_24542347077_windows_amd64.msi"
+                    WindowsBinaries = "https://dl.grafana.com/grafana-enterprise/release/13.0.1/grafana-enterprise_13.0.1_24542347077_windows_amd64.tar.gz"
 
             [Grafana.SelfManaged.Downloads.Promtail]
                 [Grafana.SelfManaged.Downloads.Promtail.3_0_0]

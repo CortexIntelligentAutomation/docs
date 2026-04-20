@@ -14,7 +14,7 @@ This guide describes how to upgrade the Grafana installation. Please ensure that
 1. Log in to the server hosting your Grafana website.
 1. Open Services.msc from the Start menu.
 1. Locate the *Grafana* service and stop it by right-clicking on the service and selecting *Stop*.
-1. In File Explorer, navigate to the `grafana-13.0.0` folder created as part of [Make Artefacts Available][].
+1. In File Explorer, navigate to the `grafana-13.0.1` folder created as part of [Make Artefacts Available][].
 1. Copy the contents of this folder into the Grafana install location, typically `%SystemDrive%\Program Files\GrafanaLabs\grafana`, and click `Replace the files in the destination` when prompted.
 1. Open Services.msc from the Start menu.
 1. Locate the *Grafana* service and start it by right-clicking on the service and selecting *Start*.
