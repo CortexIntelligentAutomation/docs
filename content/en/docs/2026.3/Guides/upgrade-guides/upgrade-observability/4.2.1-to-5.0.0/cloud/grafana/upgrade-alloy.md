@@ -72,7 +72,6 @@ These steps will need to be performed on all application servers that host a Gra
 1. Locate the `Alloy` service.
 1. Right click on the service name and select `Restart`. If the service is not already running, select `Start`.
 
-
 ## Next Steps?
 
 1. [Upgrade Dashboards][]
