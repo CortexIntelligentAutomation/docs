@@ -13,25 +13,38 @@ To change logging levels for Flow Logging, the below PowerShell script can be us
 1. Copy the following script into the PowerShell window:
 
     ``` powershell
-    $serverFQDN = "server.domain.com"
+    $serverFQDN     = "server.domain.com"
     $APIGatewayPort = 8722
-    $loglevel = 4
-
-    $user = "UserName"
-    $pass = Read-Host -Prompt "Enter Password for Basic Auth User"
-    $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $user,$pass)))
+    $loglevel       = 4
+    $user           = "BasicAuthUser"
     
+    $securePass = Read-Host -Prompt "Enter password for $user" -AsSecureString
+
+    $ptr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePass)
+    try {
+        $plainPass = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($ptr)
+
+        $authBytes = [System.Text.Encoding]::ASCII.GetBytes("$user`:$plainPass")
+        $base64AuthInfo = [Convert]::ToBase64String($authBytes)
+    }
+    finally {
+        [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($ptr)
+
+        $plainPass = $null
+        Remove-Variable -Name plainPass -Force
+    }
+
     $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
     $headers.Add("Content-Type", "application/json")
     $headers.Add("Accept", "application/json")
     $headers.Add("Authorization", "Basic $base64AuthInfo")
-    $path = "applications/ execution/services/engine/blocks/packages/versions/executions/flows/logging" 
+    $path = "applications/execution/services/engine/blocks/packages/versions/executions/flows/logging" 
     $body = @"
     $loglevel
     "@
     
-    $response = Invoke-RestMethod "https://${serverFQDN}:$APIGatewayPort/api/v1/default/default/$path" -Method 'PUT' -Headers $headers -Body $body
-    $response | ConvertTo-Json
+    $response = Invoke-RestMethod "https://${serverFQDN}:$APIGatewayPort/api/v1/default/default/$path" -Method PUT -Headers $headers -Body $body
+    $response
     ```
 
 1. Configure the following variables:
@@ -43,7 +56,7 @@ To change logging levels for Flow Logging, the below PowerShell script can be us
 1. Execute the script, entering the Basic Auth User's password when prompted.
 1. Confirm success response:
 
-    If the call was successful, the following response should be received
+    If the call was successful, there should be no errors and the following response should be received
 
     ``` powershell
     LogLevel was successfully configured.
