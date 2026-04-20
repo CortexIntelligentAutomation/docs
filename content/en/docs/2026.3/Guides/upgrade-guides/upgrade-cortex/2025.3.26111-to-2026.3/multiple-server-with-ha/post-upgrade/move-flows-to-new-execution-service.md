@@ -25,4 +25,4 @@ Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guid
 
 {{< section "/upgrade/2025.9.26161/upgrade-web-application-server/republish-packages.md" >}}
 
-[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.MultipleServerWithHA.TryItOut" >}}
+[Try it out]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3.MultipleServerWithHA.TryItOut" >}}

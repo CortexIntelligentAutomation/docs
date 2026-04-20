@@ -17,5 +17,5 @@ This guide describes how to upgrade {{% ctx %}} Configuration Portal. Please ens
 
 1. [Post-Upgrade][]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.UpgradeGateway" >}}
-[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2025_9_26161.MultipleServerWithHA.PostUpgrade" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.MultipleServerWithHA.UpgradeGateway" >}}
+[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.MultipleServerWithHA.PostUpgrade" >}}

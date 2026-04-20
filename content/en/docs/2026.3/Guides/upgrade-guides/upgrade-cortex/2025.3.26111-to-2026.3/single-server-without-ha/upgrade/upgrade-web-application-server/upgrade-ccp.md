@@ -11,11 +11,11 @@ This guide describes how to upgrade {{% ctx %}} Configuration Portal. Please ens
 
 ## Perform Upgrade
 
-{{< section "/upgrade/2025.9.26161/upgrade-web-application-server/upgrade-cortex-configuration-portal.md" >}}
+{{< section "/upgrade/2026.3/upgrade-web-application-server/upgrade-cortex-configuration-portal.md" >}}
 
 ## Next Steps?
 
 1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
-[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeGateway" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2025_9_26161.SingleServerWithoutHA.UpgradeCIP" >}}
+[Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3.SingleServerWithoutHA.UpgradeGateway" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3.SingleServerWithoutHA.UpgradeCIP" >}}

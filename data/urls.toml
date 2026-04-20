@@ -682,6 +682,31 @@
                         UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server"
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3]
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3.MultipleServerWithHA]
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/pre-upgrade"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_3_26111to2026_3.SingleServerWithoutHA]
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/pre-upgrade"
+                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade/upgrade-application-server"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.3.26111-to-2026.3/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_1to2025_3]
                     [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_1to2025_3.MultipleServerWithHA]
                         MainDoc = "/docs/guides/upgrade-guides/upgrade-cortex/2025.1-to-2025.3/multiple-server-with-ha/"
@@ -791,6 +816,31 @@
                         UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
                         UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/upgrade/upgrade-web-application-server"
                         UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9-to-2025.9.26161/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
+                [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3]
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.MultipleServerWithHA]
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/pre-upgrade"
+                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade"
+                        UpgradeApplicationAndLoadBalancerServers = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-application-and-loadbalancer-servers"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeCCP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-ccp"
+                        UpgradeDebugger = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-debugger"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/multiple-server-with-ha/post-upgrade/move-flows-to-new-execution-service"
+                    [Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.SingleServerWithoutHA]
+                        PostUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/post-upgrade"
+                        PreUpgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/pre-upgrade"
+                        RepublishPackages = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service#republish-packages"
+                        TryItOut = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/post-upgrade/try-it-out/"
+                        Upgrade = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/upgrade"
+                        UpgradeApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/upgrade/upgrade-application-server"
+                        UpgradeCIP = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-cip"
+                        UpgradeGateway = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server/upgrade-gateway"
+                        UpgradeWebApplicationServer = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/upgrade/upgrade-web-application-server"
+                        UseNewExecutionService = "/docs/guides/upgrade-guides/upgrade-cortex/2025.9.26161-to-2026.3/single-server-without-ha/post-upgrade/move-flows-to-new-execution-service"
                 [Cortex.Guides.UpgradeGuides.UpgradeCortex.Advanced]
                     SSLBestPractices = "/docs/guides/upgrade-guides/upgrade-cortex/advanced/ssl-best-practices"
             [Cortex.Guides.UpgradeGuides.UpgradeObservability]
@@ -866,13 +916,6 @@
                         UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/upgrade-loki"
                         UpgradePromtail = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/upgrade-promtail"
                         VerifyOldVersion = "/docs/guides/upgrade-guides/upgrade-observability/on-premise/grafana/prerequisites/#verify-old-version"
-                [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_0]
-                    [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_0.OnPremise]
-                        [Cortex.Guides.UpgradeGuides.UpgradeObservability.4_1_0to4_2_0.OnPremise.Grafana]
-                            BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/prerequisites/#backup-old-files"
-                            Prerequisites = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/prerequisites"
-                            TryItOut = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/try-it-out"
-                            UpgradeLoki = "/docs/guides/upgrade-guides/upgrade-observability/4.1.0-to-4.2.0/on-premise/grafana/upgrade-loki"
                 [Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud]
                     [Cortex.Guides.UpgradeGuides.UpgradeObservability.Cloud.Grafana]
                         BackupOldFiles = "/docs/guides/upgrade-guides/upgrade-observability/cloud/grafana/prerequisites/#backup-old-files"
