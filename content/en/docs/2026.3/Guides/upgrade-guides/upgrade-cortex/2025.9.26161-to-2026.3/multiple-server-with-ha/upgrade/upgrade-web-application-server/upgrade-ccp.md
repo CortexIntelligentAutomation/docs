@@ -11,7 +11,7 @@ This guide describes how to upgrade {{% ctx %}} Configuration Portal. Please ens
 
 ## Perform Upgrade
 
-{{< section "/upgrade/2025.9.26161/upgrade-web-application-server/upgrade-cortex-configuration-portal.md" >}}
+{{< section "/upgrade/2026.3/upgrade-web-application-server/upgrade-cortex-configuration-portal.md" >}}
 
 ## Next Steps?
 
