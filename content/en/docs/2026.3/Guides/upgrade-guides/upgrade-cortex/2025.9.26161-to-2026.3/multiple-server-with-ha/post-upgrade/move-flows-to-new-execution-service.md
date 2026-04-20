@@ -13,14 +13,6 @@ This guide describes how to move flow execution to the new Execution Service. Pl
 These steps are optional however it is recommended so that the new Execution Service is used after upgrade.
 {{% /alert %}}
 
-## Upgrade Flows
-
-{{< section "/upgrade/2026.3/upgrade-web-application-server/upgrade-flows.md" >}}
-
-{{% alert title="Note" %}}
-Once the flows have been upgraded it is necessary to {{< ahref path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.MultipleServerWithHA.RepublishPackages" title="republish all packages" >}} that have previously been published.
-{{% /alert %}}
-
 ## Republish Packages
 
 {{< section "/upgrade/2026.3/upgrade-web-application-server/republish-packages.md" >}}
