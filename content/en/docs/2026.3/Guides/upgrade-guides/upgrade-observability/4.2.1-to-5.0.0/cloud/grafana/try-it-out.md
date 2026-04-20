@@ -7,7 +7,7 @@ weight: 4
 
 # {{% param title %}}
 
-This guide describes how to verify that the upgrade has been successful. Please ensure that [Migration to Grafana Alloy][Migrate To Alloy] has been completed before taking these steps.
+This guide describes how to verify that the upgrade has been successful. Please ensure that [Upgrade Grafana Alloy][Upgrade Alloy] has been completed before taking these steps.
 
 ## Confirm New Data is Processed
 
@@ -58,5 +58,5 @@ If other requests have been made then there may be more than one request visible
 
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
 [HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
-[Migrate To Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.3_0_0to4_0_0.Cloud.Grafana.MigrateToAlloy" >}}
+[Upgrade Alloy]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.Cloud.Grafana.UpgradeAlloy" >}}
 [Non-HA Installation script configuration]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureInstallationScriptNew" >}}

@@ -9,7 +9,7 @@ weight: 60
 
 This guide describes where to get the default {{% ctx %}} Dashboards from and how to import them for use in Grafana.
 
-Please ensure that the Installations for [Grafana][] and [Loki][] have been completed before starting this section.
+Please ensure that the Installations for [Grafana][], [Loki][] and [Alloy] have been completed before starting this section.
 
 ## Configure Loki Data Source in Grafana
 
@@ -84,6 +84,7 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 
 1. [Try it Out][]
 
+[Alloy]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.MainDoc" >}}
 [Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.4_2_1.GrafanaDashboardsZip" >}}
 [Grafana]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.MainDoc" >}}
 [Loki]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallLoki.MainDoc" >}}

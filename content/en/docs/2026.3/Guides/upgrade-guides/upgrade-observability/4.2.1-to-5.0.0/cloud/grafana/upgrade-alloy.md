@@ -29,10 +29,49 @@ These steps will need to be performed on all application servers that host a Gra
 1. Change the `__path__` value so that the part containing the file name changes to `ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{,_[0-9][0-9][0-9]}.json`. Note there is a change to the `,` location.
 
     The line should now look similar to `__path__    = "C:/ProgramData/Cortex/API Gateway Service/Logs/**/ServiceFabricHttpEventLog-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]{,_[0-9][0-9][0-9]}.json",`
+1. Copy the following code and paste it in to the `config.alloy` file. It should be added to the end of the `expressions` section but before the `}` typically found on line 139.
+
+    ``` text
+                    FlowResult         = "Event.Tags.Cortex.\"Execution.Result.Status\" || 'N/A'",
+                    Method             = "'Unknown'",
+    ```
+
+1. Copy the following code and paste it in to the `config.alloy` file. It should be added to the end of the `values` section but before the `}` typically found on line 157 after the above change.
+
+    ``` text
+                    FlowResult         = null,
+                    Method             = null,
+    ```
+
+1. Copy the following code and paste it in to the `config.alloy` file. It should be added to the end of the `loki.process "ExecutionService" {` section but before the `}` typically found on line 162 after the above change.
+
+    ``` text
+
+        stage.match {
+            selector = "{job=\"ExecutionService\"}|~ \"\\\"Method\\\":.?\\\"Cortex.FlowEngine.Execution.Engine.Run\\\"\""
+
+            stage.json {
+                expressions = {
+                    Method             = "'FlowExecution'",
+                }
+            }
+
+            stage.labels {
+                values = {
+                    Method             = null,
+                }
+            }
+        }
+    ```
+
 1. Save the file.
+
+### Restart the Service
+
 1. Open `services.msc`.
 1. Locate the `Alloy` service.
 1. Right click on the service name and select `Restart`. If the service is not already running, select `Start`.
+
 
 ## Next Steps?
 
