@@ -25,6 +25,7 @@ weight: 1
     * [Grafana 13.0.0][] Standalone Windows Binaries (64 Bit) archive.
     * [Grafana Alloy 1.15.1][] archive.
     * [Grafana Loki 3.7.1][] archive.
+    * [Grafana Dashboards][] archive.
 
 1. Extract the downloaded `grafana-enterprise_13.0.0_24445073807_windows_amd64` archive:
     1. Open a Windows Powershell (x64) window as administrator.
@@ -42,6 +43,7 @@ weight: 1
 
 1. Extract the downloaded `alloy-installer-windows-amd64.exe` archive to a folder with the same name.
 1. Extract the downloaded `loki-windows-amd64.exe` archive to a folder with the same name.
+1. Extract the downloaded `Grafana.Dashboards` archive to a folder with the same name.
 
 ## Backup Old Files
 
@@ -62,6 +64,7 @@ weight: 1
 1. [Upgrade Grafana][]
 
 [Grafana 13.0.0]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.0.WindowsBinaries" >}}
+[Grafana Dashboards]: {{< url path="GitHub.Cortex.Observability.5_0_0.GrafanaDashboardsZip" >}}
 [Grafana Loki 3.7.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1.GrafanaLokiInstallZip" >}}
 [Grafana Alloy 1.15.1]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1.Windows" >}}
 [Upgrade Grafana]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeObservability.4_2_1to5_0_0.OnPremise.Grafana.UpgradeGrafana" >}}
