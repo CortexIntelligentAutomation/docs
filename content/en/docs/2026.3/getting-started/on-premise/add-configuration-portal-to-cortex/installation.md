@@ -228,6 +228,16 @@ On the Web Application Server:
 
 ### Configure the {{% ctx %}} Configuration Portal Website
 
+#### Copy robots.txt file
+
+To provide guidance for search engine crawlers and common AI bots not to index {{% ctx %}} Configuration Portal, it is necessary for the robots.txt file to reside in the site’s root directory of the {{% ctx %}} Configuration Portal. This is only necessary if {{% ctx %}} Configuration Portal is being installed on a different machine than either {{% ctx %}} Gateway or {{% ctx %}} Interaction Portal has been installed.
+
+1. Open the folder where `Cortex Innovation {{< version >}} - Configuration Portal.zip` was extracted to.
+1. Open the `Cortex Configuration Portal` folder.
+1. Copy the `robots.txt` file
+1. Navigate to the `Cortex` website directory, typically `C:\inetpub\wwwroot\Cortex`.
+1. Paste the `robots.txt` file
+
 #### Configure the Redirect rule
 
 On the Web Application Server:
@@ -237,6 +247,12 @@ On the Web Application Server:
 
     ``` xml
     <add input="{REQUEST_URI}" pattern=".*\/ConfigurationPortal.*" negate="true" />
+    ```
+
+1. If not present in the `Redirect Cortex to gateway` rule, add a condition as follows:
+
+    ``` xml
+    <add input="{REQUEST_URI}" pattern="^/robots\.txt$" negate="true" />
     ```
 
 1. Save the file.
