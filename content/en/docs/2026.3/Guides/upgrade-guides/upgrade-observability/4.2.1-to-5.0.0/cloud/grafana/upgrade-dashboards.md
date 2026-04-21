@@ -10,7 +10,7 @@ weight: 3
 This guide describes how to upgrade the default dashboards that are provided for your observability platform.
 
 {{% alert title="Warning" color="warning" %}}
-This new dashboard will only work if `Flow Logging` is enabled on your platform. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.
+A new *Flow Execution Details* Dashboard has been added to the default dashboards. This new dashboard will only work if `Flow Logging` is enabled on your platform. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.
 {{% / alert %}}
 
 ## Import New Dashboard

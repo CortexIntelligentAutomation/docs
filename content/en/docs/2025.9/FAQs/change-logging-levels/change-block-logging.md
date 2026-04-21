@@ -7,21 +7,26 @@ weight: 5
 
 # {{% param title %}}
 
-Block logging in {{% ctx %}} logs the following by default:
+Block logging in {{% ctx %}} logs the following Block Properties by default regardless of the log level configured:
 
-* Command.CommandText
-* Command.Parameters
-* HTTPRequest
-* HTTPResponse
-* SOAPRequest
-* SOAPResponse
-* Script
-* Parameters
-* Outputs
-* Records
-* Command
-* Response
-* SSH Logs
+* Execute Data Command
+  * Command > commandText
+  * Command > parameters
+* Execute Http Request
+  * Http Request
+  * Http Response
+* Execute Soap Request
+  * Soap Request
+  * Soap Response
+* Execute PowerShell Script
+  * Script
+  * Parameters
+  * Outputs
+  * Records
+* Execute Ssh Command
+  * Command
+  * Response
+  * Ssh Logs
 
 To change logging levels for block logging so that every block is logged when executed, the below PowerShell script can be used to make a REST call against your {{% ctx %}} platform.
 
