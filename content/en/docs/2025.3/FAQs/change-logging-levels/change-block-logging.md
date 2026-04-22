@@ -7,7 +7,7 @@ weight: 5
 
 # {{% param title %}}
 
-Block logging in {{% ctx %}} logs the following Block Properties by default regardless of the log level configured:
+Block Logging in {{% ctx %}} logs the following Block Properties by default regardless of the log level configured:
 
 * Execute Data Command
   * Command > commandText
@@ -28,7 +28,7 @@ Block logging in {{% ctx %}} logs the following Block Properties by default rega
   * Response
   * Ssh Logs
 
-To change logging levels for block logging so that every block is logged when executed, the below PowerShell script can be used to make a REST call against your {{% ctx %}} platform.
+To change the Logging Level for Block Logging so that every block is logged when executed, the below PowerShell script can be used to make a REST call against your {{% ctx %}} platform.
 
 1. Run Windows PowerShell ISE as Administrator.
 1. Copy the following script into the PowerShell window:

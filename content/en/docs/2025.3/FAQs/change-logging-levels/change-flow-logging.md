@@ -7,7 +7,7 @@ weight: 1
 
 # {{% param title %}}
 
-To change logging levels for Flow Logging, the below PowerShell script can be used to make a REST call against your {{% ctx %}} platform.
+To change the Logging Level for Flow Logging, the below PowerShell script can be used to make a REST call against your {{% ctx %}} platform.
 
 1. Run Windows PowerShell ISE as Administrator.
 1. Copy the following script into the PowerShell window:
