@@ -11,7 +11,7 @@ This guide describes how to install Grafana on the Web Application Server. Pleas
 
 ## Install Grafana
 
-1. Download the [Grafana 12.1.1][] Windows installer.
+1. Download the [Grafana 13.0.1][] Windows installer.
 1. Run the installer and install Grafana to a suitable location.
 
 ## Next Steps?
@@ -19,6 +19,5 @@ This guide describes how to install Grafana on the Web Application Server. Pleas
 1. [Configure Grafana][]
 
 [Configure Grafana]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallGrafana.ConfigureGrafana" >}}
-[Grafana 12.1.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1.Windows" >}}
+[Grafana 13.0.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.1.WindowsInstaller" >}}
 [Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.Prerequisites" >}}
-[Software Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.SoftwareRequirements" >}}
