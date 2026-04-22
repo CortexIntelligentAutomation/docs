@@ -48,7 +48,7 @@ To change the Logging Level for all services, the below PowerShell script can be
     ```
 
 1. Configure the following variables:
-    * `$serverFQDN` – The fully qualified domain name for the Application Server Or Load Balancer
+    * `$serverFQDN` – The fully qualified domain name for the Application Server or Load Balancer
     * `$APIGatewayPort` – {{% ctx %}} API Gateway Service port (8722) or Load Balancer port (typically 443 or 8722)
     * `$loglevel` – Desired log level as an integer, `1` is enabled and `4` is the default error level
     * `$user` – {{% ctx %}} API Gateway Basic Auth Username
