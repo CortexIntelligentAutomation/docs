@@ -30,8 +30,8 @@ For further assistance, please raise a case in the [{{% ctx %}} Service Portal][
 
 ## Next Steps?
 
-1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
+1. [Post-Upgrade][]
 
 [{{% ctx %}} Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
-[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.SingleServerWithoutHA.UpgradeCIP" >}}
+[Post-Upgrade]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.SingleServerWithoutHA.PostUpgrade" >}}
 [Upgrade Application Server]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9_26161to2026_3.SingleServerWithoutHA.UpgradeApplicationServer" >}}
