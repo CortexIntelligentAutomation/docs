@@ -32,12 +32,17 @@ Please ensure that the set up for [Grafana][] and [Loki][] have been completed b
 1. Click the Dashboards menu item.
 1. Click the *New* dropdown and select *Import*.
 1. Click on *Upload dashboard JSON file*.
-1. Locate the `Flow Execution Requests.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
+1. Locate the `Flow Execution Details.json` file extracted from the downloaded `Grafana.Dashboards.zip`.
 1. Select the file and click *Open*.
 1. Select the folder in Grafana you wish the dashboard to be saved in, e.g. *Cortex*.
 1. Select your [configured Loki data source][] from the dropdown menu, e.g. *grafanacloud-cortex-logs*.
 1. Click *Import*.
+1. Repeat steps 2 - 10 for the `Flow Execution Requests.json` file.
 1. Repeat steps 2 - 10 for the `Platform Health.json` file.
+
+{{% alert title="Warning" color="warning" %}}
+The *Flow Execution Details* dashboard will only work if `Flow Logging` is enabled on your platform. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.
+{{% / alert %}}
 
 ## Configure Data Sources
 
@@ -57,7 +62,7 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 1. Select your [configured Loki data source][] in the *Adhoc Options* > *Data source* drop-down menu, e.g. *grafanacloud-cortex-logs*.
 1. Click *Apply*.
 1. Click the dashboard name in the breadcrumb at the top left corner of the page to go back to the dashboard.
-1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Promtail there will be no options available for selection.
+1. Click the + icon next to the Custom Filter to confirm that a list of available filter options is visible. If Grafana Loki has not received any logs from Grafana Alloy there will be no options available for selection.
 1. Repeat steps 2 - 9 for all additional default dashboards.
 
 ## Next Steps?
@@ -66,6 +71,6 @@ To do this, follow these steps for all default {{% ctx %}} dashboards imported:
 
 [configured Loki data source]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Grafana]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupGrafana.MainDoc" >}}
-[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.3_0_0.GrafanaDashboardsZip" >}}
+[Grafana.Dashboards.zip]: {{< url path="GitHub.Cortex.Observability.5_0_0.GrafanaDashboardsZip" >}}
 [Loki]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.SetupLoki.MainDoc" >}}
 [Try it Out]: {{< url path="Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana.TryItOut.MainDoc" >}}

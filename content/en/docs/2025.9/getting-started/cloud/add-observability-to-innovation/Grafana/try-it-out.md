@@ -30,6 +30,16 @@ This test uses the test flow published as part of testing the {{% ctx %}} instal
 1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
 1. Click the Dashboards menu item.
 1. Click the folder name that the dashboards were imported to, if not already expanded.
+1. Click the *Flow Execution Details* dashboard to open it.
+1. The request made at step 1 should be visible on the dashboard.
+
+    {{% alert title="Note" %}}If Flow Logging has not been enabled then this dashboard will not display any data. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.<br>
+    If other requests have been made then there may be more than one request visible on the dashboard.
+    {{% / alert %}}
+
+1. Click the Menu icon {{< image src="/images/GrafanaMenuIcon.png" title="Menu icon" >}} to view the available options.
+1. Click the Dashboards menu item.
+1. Click the folder name that the dashboards were imported to, if not already expanded.
 1. Click the *Flow Execution Requests* dashboard to open it.
 1. The request made at step 1 should be visible on the dashboard.
 {{% alert title="Note" %}}

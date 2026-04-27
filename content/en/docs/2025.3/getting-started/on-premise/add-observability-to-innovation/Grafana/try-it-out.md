@@ -17,7 +17,7 @@ This test uses the test flow published as part of testing the {{% ctx %}} instal
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
     | Action        | POST                                                                                |
-    | URL           | For HA installation use: <br />`https://{FQDN of Load Balancer Server}/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}`<br />e.g. `https://load-balancer&#46;domain&#46;com/api/default/default/flows/NewFlow/executions?packageName=NewPackage` <br /><br /> For non-HA installation use: <br />`https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}`<br />e.g. `https://server&#46;domain&#46;com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage`|
+    | URL           | For HA installation use: <br />`https://{FQDN of Load Balancer Server}/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}`<br />e.g. `https://load-balancer.domain.com/api/default/default/flows/NewFlow/executions?packageName=NewPackage` <br /><br /> For non-HA installation use: <br />`https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}`<br />e.g. `https://server.domain.com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage`|
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
@@ -27,6 +27,15 @@ This test uses the test flow published as part of testing the {{% ctx %}} instal
     {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you may need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. Once the request has completed, using a web browser, log in to your configured Grafana.
+1. Open the *Dashboards* page via the menu on the left sidebar.
+1. Click the folder name that the dashboards were imported to.
+1. Click the *Flow Execution Details* dashboard to open it.
+1. The request made at step 1 should be visible on the dashboard.
+
+    {{% alert title="Note" %}}If Flow Logging has not been enabled then this dashboard will not display any data. See {{< ahref path="Cortex.Faqs.ChangeLoggingLevels.FlowLogging.MainDoc" title="Change Flow Logging Level" >}} for instructions on how to do this.<br>
+    If other requests have been made then there may be more than one request visible on the dashboard.
+    {{% / alert %}}
+
 1. Open the *Dashboards* page via the menu on the left sidebar.
 1. Click the folder name that the dashboards were imported to.
 1. Click the *Flow Execution Requests* dashboard to open it.
