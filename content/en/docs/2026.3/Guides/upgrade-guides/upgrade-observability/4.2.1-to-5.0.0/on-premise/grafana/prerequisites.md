@@ -63,7 +63,7 @@ weight: 1
 
 1. [Upgrade Grafana][]
 
-[Grafana 13.0.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13.0.1.WindowsBinaries" >}}
+[Grafana 13.0.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaWebApp.13_0_1.WindowsBinaries" >}}
 [Grafana Dashboards]: {{< url path="GitHub.Cortex.Observability.5_0_0.GrafanaDashboardsZip" >}}
 [Grafana Loki 3.7.1]: {{< url path="Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1.GrafanaLokiInstallZip" >}}
 [Grafana Alloy 1.15.1]:  {{< url path="Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1.Windows" >}}
