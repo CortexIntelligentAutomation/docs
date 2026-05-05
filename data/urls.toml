@@ -2681,6 +2681,7 @@
             [GitHub.Cortex.Observability.4_2_1]
                 Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v4.2.1"
             [GitHub.Cortex.Observability.5_0_0]
+                Release = "https://github.com/CortexIntelligentAutomation/observability/releases/tag/v5.0.0"
                 GrafanaAlloyInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v5.0.0/Grafana.Alloy.Install.zip"
                 GrafanaLokiInstallZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v5.0.0/Grafana.Loki.Install.zip"
                 GrafanaDashboardsZip = "https://github.com/CortexIntelligentAutomation/observability/releases/download/v5.0.0/Grafana.Dashboards.zip"
@@ -2702,8 +2703,10 @@
         [Grafana.SelfManaged.Downloads]
             [Grafana.SelfManaged.Downloads.GrafanaAlloy]
                 [Grafana.SelfManaged.Downloads.GrafanaAlloy.1_10_2]
+                    Release = "https://github.com/grafana/alloy/releases/tag/v1.10.2"
                     Windows = "https://github.com/grafana/alloy/releases/download/v1.10.2/alloy-installer-windows-amd64.exe.zip"
                 [Grafana.SelfManaged.Downloads.GrafanaAlloy.1_15_1]
+                    Release = "https://github.com/grafana/alloy/releases/tag/v1.15.1"
                     Windows = "https://github.com/grafana/alloy/releases/download/v1.15.1/alloy-installer-windows-amd64.exe.zip"
             [Grafana.SelfManaged.Downloads.GrafanaLoki]
                 Release = "https://github.com/grafana/loki/releases/tag/v2.5.0"
@@ -2714,6 +2717,7 @@
                     Release = "https://github.com/grafana/loki/releases/tag/v3.5.5"
                     GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.5.5/loki-windows-amd64.exe.zip"
                 [Grafana.SelfManaged.Downloads.GrafanaLoki.3_7_1]
+                    Release = "https://github.com/grafana/loki/releases/tag/v3.7.1"
                     GrafanaLokiInstallZip = "https://github.com/grafana/loki/releases/download/v3.7.1/loki-windows-amd64.exe.zip"
             [Grafana.SelfManaged.Downloads.GrafanaWebApp]
                 Windows = "https://grafana.com/grafana/download/8.5.4?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
@@ -2722,6 +2726,7 @@
                 [Grafana.SelfManaged.Downloads.GrafanaWebApp.12_1_1]
                     Windows = "https://grafana.com/grafana/download/12.1.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
                 [Grafana.SelfManaged.Downloads.GrafanaWebApp.13_0_1]
+                    Windows = "https://grafana.com/grafana/download/13.0.1?pg=get&plcmt=selfmanaged-box1-cta1&platform=windows"
                     WindowsInstaller = "https://dl.grafana.com/grafana-enterprise/release/13.0.1/grafana-enterprise_13.0.1_24542347077_windows_amd64.msi"
                     WindowsBinaries = "https://dl.grafana.com/grafana-enterprise/release/13.0.1/grafana-enterprise_13.0.1_24542347077_windows_amd64.tar.gz"
             [Grafana.SelfManaged.Downloads.Promtail]
