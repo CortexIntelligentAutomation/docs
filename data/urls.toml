@@ -1001,6 +1001,8 @@
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/"
                             LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
                             OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
+                        [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authorisation]
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authorisation/"                        
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
