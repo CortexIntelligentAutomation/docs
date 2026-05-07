@@ -34,6 +34,7 @@ IgnoreURLs:
 - "https://scribehow.com/.*"
 - "https://www.rabbitmq.com/.*"
 - "https://letsencrypt.org/.*"
+- "https://support.microsoft.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
