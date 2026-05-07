@@ -7,6 +7,4 @@ weight: 20
 
 # Disable Code Analyser
 
-On the Application Server:
-
 {{< section "/configure-code-analyser/single-server/disable-code-analyser.md" >}}

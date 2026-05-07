@@ -11,14 +11,19 @@ weight: 20
 
 The Code Analyser can either be [updated][Update Code Analyser] to allow required C# data types and namespaces, or it can be [disabled][Disable Code Analyser].
 
-### Update Code Analyser Allowed List
+## Update Code Analyser Allowed List
 
-{{< section "/configure-code-analyser/update-code-analyser.md" >}}
+{{< section "/configure-code-analyser/single-server/update-code-analyser.md" >}}
 
-### Disable Code Analyser
+## Disable Code Analyser
 
 Instructions on how to disable the Code Analyser can be found [here][Disable Code Analyser FAQ].
 
+## Next Steps?
+
+1. [Configure Global RunAs User][]
+
+[Configure Global RunAs User]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureGlobalRunAs" >}}
 [Update Code Analyser]: {{< ref "#update-code-analyser-allowed-list" >}}
 [Disable Code Analyser]: {{< ref "#disable-code-analyser" >}}
 [Disable Code Analyser FAQ]: {{< url path="Cortex.Faqs.ConfigureCodeAnalyser.SingleServerWithoutHA.DisableCodeAnalyser" >}}

@@ -13,7 +13,7 @@ The Code Analyser can either be [updated][Update Code Analyser] to allow require
 
 ### Update Code Analyser Allowed List
 
-{{< section "/configure-code-analyser/update-code-analyser.md" >}}
+{{< section "/configure-code-analyser/single-server/update-code-analyser.md" >}}
 
 ### Disable Code Analyser
 

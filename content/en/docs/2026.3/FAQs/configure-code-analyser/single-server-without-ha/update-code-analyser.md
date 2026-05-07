@@ -7,4 +7,4 @@ weight: 10
 
 # Update Code Analyser Allowed List
 
-{{< section "/configure-code-analyser/update-code-analyser.md" >}}
+{{< section "/configure-code-analyser/single-server/update-code-analyser.md" >}}

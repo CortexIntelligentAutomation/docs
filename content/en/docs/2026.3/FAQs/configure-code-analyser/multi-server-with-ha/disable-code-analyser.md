@@ -7,6 +7,4 @@ weight: 20
 
 # Disable Code Analyser
 
-On each Application Server and the Web Application Server:
-
 {{< section "/configure-code-analyser/multi-server/disable-code-analyser.md" >}}
