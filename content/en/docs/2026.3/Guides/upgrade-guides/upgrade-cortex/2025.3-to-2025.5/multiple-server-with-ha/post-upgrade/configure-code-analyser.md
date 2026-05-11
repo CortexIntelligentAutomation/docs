@@ -11,11 +11,11 @@ weight: 20
 
 The Code Analyser can either be [updated][Update Code Analyser] to allow required C# data types and namespaces, or it can be [disabled][Disable Code Analyser].
 
-### Update Code Analyser Allowed List
+## Update Code Analyser Allowed List
 
 {{< section "/configure-code-analyser/multi-server/update-code-analyser.md" >}}
 
-### Disable Code Analyser
+## Disable Code Analyser
 
 Instructions on how to disable the Code Analyser can be found [here][Disable Code Analyser FAQ].
 
