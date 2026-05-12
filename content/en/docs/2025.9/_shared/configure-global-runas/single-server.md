@@ -3,11 +3,21 @@ On the Application Server:
 1. Open a File Explorer.
 1. Navigate to the Execution service directory, e.g. `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\Applications\Cortex.Innovation.Execution_App<n>\ExecutionPkg.Code.{{% execpkgversion %}}` replacing `<CustomerName>` with the `CustomerName` configured during [installation][Configure Installation Script], `<NodeName>` with the NETBIOS name of the server and `<n>` with the highest number in the directory.
 1. Open the `appsettings.json` file in a text editor.
-1. Locate the `"CSharpExpressions"` line located under `"ExecutionEngine"`, which will contain two list items `"Allow"` and `"Required"`. Only make changes to the "Allow" list.
-1. Remove any items under the `"Allow"` list that you wish to prevent users from accessing. Add any items, including their full namespace, to the `"Allow"` list that you wish to all users to access.
+1. Create a new key called `"RunAsCredentials"` at the top level of the json object with the value set as an object containing the keys `"Domain"`, `"Username"`, and `"Password"`. The object should look similar to:
+
+    ``` json
+    "RunAsCredentials": {
+        "Domain":   "Domain",
+        "Username": "Username",
+        "Password": #_171641096221!17028071064172013227186106126~017754255251!160252130221745128017#"
+    },
+    ```
+
+    {{< alert color="warning" title="Warning" >}} The password must be {{< ahref path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.EncryptText" title="{{% ctx %}} Encrypted" >}}.{{< /alert >}}
+
 1. Save and close the file.
 1. In the File Explorer, navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\ImageCache\Store\Cortex.Innovation.Execution\ExecutionPkg.Code.{{% execpkgversion %}}` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the server specified in step 2.
-1. Repeat steps 3 - 6.
+1. Repeat steps 3 - 5.
 1. Open a web browser.
 1. Navigate to `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the server. Replace `9080` with new `httpGatewayEndpointPort` value if it was changed during configuration of the original installation.
 
