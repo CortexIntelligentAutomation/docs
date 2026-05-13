@@ -51,7 +51,6 @@ On the Application Server:
           "Newtonsoft.Json.DateFormatHandling",
           "System.DateTime",
           "System.Text.Encoding"
-          ...
         ],
         // List of types that are required for translating a flow.
         "Required": [
