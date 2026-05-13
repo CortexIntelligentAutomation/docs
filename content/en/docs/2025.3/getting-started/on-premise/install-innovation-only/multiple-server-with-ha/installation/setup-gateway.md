@@ -74,11 +74,11 @@ Log on to Gateway and run through the setup wizard:
 
 ## Next Steps?
 
-1. [Try it out][]
+1. [Post-Installation][]
 
 [Account Details]: {{< ref "#account-details" >}}
 [Gateway Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.GatewayInstallationNew" >}}
 [LDAP Authorisation]: {{< ref "#ldap-authorisation" >}}
 [LDAP Connection]: {{< ref "#ldap-connection" >}}
 [supported web browser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.WebBrowserRequirementsNew" >}}
-[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.TryItOut" >}}
+[Post-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.PostInstallation" >}}

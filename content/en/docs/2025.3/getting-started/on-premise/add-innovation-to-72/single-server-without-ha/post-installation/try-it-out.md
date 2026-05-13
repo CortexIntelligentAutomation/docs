@@ -2,12 +2,12 @@
 title: "Try it out"
 linkTitle: "Try it out"
 description: "Information about trying out {{% ctx %}} for the first time."
-weight: 60
+weight: 10
 ---
 
-# {{% param title %}}
+# {{< param title >}}
 
-This guide describes how to try out a new {{% ctx %}} installation to make sure it is working.
+This guide describes how to try out a new {{% ctx %}} installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
 
 ## Test Debugging Flows
 
@@ -37,7 +37,7 @@ Test the platform by creating a new flow and executing it using the following st
 1. Log in to Gateway with a user that has the `Admin` role.
 1. Click on the `Admin` charm, then `Packages`.
 1. Click `Add Package Definition`. Enter a package name and select the new flow to add to the package. Click `Save` to save the new package.
-1. Click `Publish`. A success message should appear. If it doesn't it means that either one or more of the parameters prefixed with `Service Fabric` in the `CortexGateway.SetParameters.xml` file was not set properly when updating Gateway, or the Application Services aren't healthy. See [Troubleshooting][Troubleshooting No Publish] for more information.
+1. Click `Publish`. A success message should appear. If it doesn't it means that either one or more of the parameters prefixed with `Service Fabric` in the `CortexGateway.SetParameters.xml` file was not set properly when installing Gateway, or the Application Services aren't healthy. See [Troubleshooting][Troubleshooting No Publish] for more information.
 
 ## Test Executing Production Flows
 
@@ -45,22 +45,27 @@ Test the platform by creating a new flow and executing it using the following st
     | Property      | Value                                                                               |
     |---------------|-------------------------------------------------------------------------------------|
     | Action        | POST                                                                                |
-    | URL           | https://{FQDN of Load Balancer Server}/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://load-balancer&#46;domain&#46;com/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
+    | URL           | https://{FQDN of server}:8722/api/default/default/flows/{Flow Name}/executions?packageName={Package Name}<br />e.g. https://server&#46;domain&#46;com:8722/api/default/default/flows/NewFlow/executions?packageName=NewPackage|
     | Content Type  | application/json                                                                    |
     | Body          | {}                                                                                  |
     | Authentication| Basic                                                                               |
     | Username      | The value used for `ApiGatewayBasicAuthUsername` when installing Application Services              |
     | Password      | The value used for `ApiGatewayBasicAuthPassword` when installing Application Services (Unencrypted) |
 
-    {{% alert title="Note" %}} If you used self-signed certificates when installing the Application Servers you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
+    {{% alert title="Note" %}} If you used self-signed certificates when installing the server you will need to disable SSL certificate validation in your HTTP client. {{% /alert %}}
 
 1. The request should return a JSON object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
 1. {{% ctx %}} has now been verified and is ready to use.
 
+## Next Steps?
+
+1. [Configure Code Analyser][]
+
+[Configure Code Analyser]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureCodeAnalyser" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Troubleshooting Flow No Blocks]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNoBlocks" >}}
 [Troubleshooting Flow Not Starting]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNotStarting" >}}
+[Troubleshooting Flow No Blocks]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNoBlocks" >}}
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}
 [Troubleshooting No Publish]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
-[Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.SetupGatewayNew" >}}
+[Gateway Upgrade]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}

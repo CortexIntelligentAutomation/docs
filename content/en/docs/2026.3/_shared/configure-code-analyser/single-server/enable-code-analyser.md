@@ -3,9 +3,77 @@ On the Application Server:
 1. Open a File Explorer.
 1. Navigate to the Execution service directory, e.g. `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\Applications\Cortex.Innovation.Execution_App<n>\ExecutionPkg.Code.{{% execpkgversion %}}` replacing `<CustomerName>` with the `CustomerName` configured during [installation][Configure Installation Script], `<NodeName>` with the NETBIOS name of the server and `<n>` with the highest number in the directory.
 1. Open the `appsettings.json` file in a text editor.
-1. Locate the `"FeatureFlags"` line located under `"ExecutionEngine"` and ensure the value is set to `[]`.
-1. Locate the `"CSharpExpressions"` line located under `"ExecutionEngine"`, which will contain two list items `"Allow"` and `"Required"`. Only make changes to the `"Allow"` list.
-1. Remove any items under the `"Allow"` list that you wish to prevent users from accessing. Add any items, including their full namespace, to the `"Allow"` list that you wish to all users to access.
+1. Locate the `"ExecutionEngine"` section which should look similar to the following:
+
+    ```json
+    "ExecutionEngine": {
+      "FeatureFlags": [],
+      // Configuration for csharp expressions used in flows.
+      "CSharpExpressions": {
+          // List of types and namespaces that are allowed to be used in expressions.
+        "Allow": [],
+        // List of types that are required for translating a flow.
+        "Required": [
+          "Cortex.DataTypes.Impersonation.RunAsCredentials",
+          "Cortex.DataTypes.DateAndTime.TimePeriod",
+          "Cortex.DataTypes.Concurrency.Semaphores.SemaphoreSettings",
+          "Cortex.Flows.ContractValidation.InputVariableError",
+          "Cortex.Flows.ContractValidation.InputVariableErrorType",
+          "Cortex.FlowEngine.CompilationApi.IVariableValueProvider",
+          "Cortex.FlowEngine.CompilationApi.ExpressionFunctions",
+          "Cortex.FlowEngine.Core.Logging.LoggingSettings",
+          "System.Collections.Generic.Dictionary`2",
+          "System.Collections.Generic.List`1",
+          "System.Exception",
+          "System.Guid",
+          "System.StringComparer",
+          "System.Threading.Tasks.Task"
+        ]
+      }
+    },
+    ```
+
+1. Ensure that the value for `"FeatureFlags"` is set to `[]`.
+1. Add (including the full namespace) or remove items from the `"Allow"` list under  `"CSharpExpressions"`. Only make changes to the `"Allow"` list, the `"Required"` list must not be changed.
+<br><br>
+    A full list of all namespaces required for all blocks on the palettes can be downloaded {{< filelink src="/examples/namespaces for all blocks.json" name="here" >}}.
+<br><br>
+    An example of this section once configured:
+
+    ```json
+    "ExecutionEngine": {
+      "FeatureFlags": [],
+      // Configuration for csharp expressions used in flows.
+      "CSharpExpressions": {
+        // List of types and namespaces that are allowed to be used in expressions.
+        "Allow": [
+          "Cortex.DataTypes.Data.DataCommand",
+          "Newtonsoft.Json.DateFormatHandling",
+          "System.DateTime",
+          "System.Text.Encoding"
+          ...
+        ],
+        // List of types that are required for translating a flow.
+        "Required": [
+          "Cortex.DataTypes.Impersonation.RunAsCredentials",
+          "Cortex.DataTypes.DateAndTime.TimePeriod",
+          "Cortex.DataTypes.Concurrency.Semaphores.SemaphoreSettings",
+          "Cortex.Flows.ContractValidation.InputVariableError",
+          "Cortex.Flows.ContractValidation.InputVariableErrorType",
+          "Cortex.FlowEngine.CompilationApi.IVariableValueProvider",
+          "Cortex.FlowEngine.CompilationApi.ExpressionFunctions",
+          "Cortex.FlowEngine.Core.Logging.LoggingSettings",
+          "System.Collections.Generic.Dictionary`2",
+          "System.Collections.Generic.List`1",
+          "System.Exception",
+          "System.Guid",
+          "System.StringComparer",
+          "System.Threading.Tasks.Task"
+        ]
+      }
+    },
+    ```
+
 1. Save and close the file.
 1. In the File Explorer, navigate to `%ProgramData%\SF\<CustomerName>.<NodeName>\Fabric\work\ImageCache\Store\Cortex.Innovation.Execution\ExecutionPkg.Code.{{% execpkgversion %}}` replacing `<CustomerName>` with the Customer Name and `<NodeName>` with the NETBIOS name of the server specified in step 2.
 1. Repeat steps 3 - 7.

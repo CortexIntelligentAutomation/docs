@@ -13,12 +13,17 @@ The Code Analyser can either be [updated][Update Code Analyser] to allow require
 
 ## Update Code Analyser
 
-{{< section "/configure-code-analyser/single-server/enable-code-analyser.md" >}}
+{{< section "/configure-code-analyser/multi-server/enable-code-analyser.md" >}}
 
-### Disable Code Analyser
+## Disable Code Analyser
 
 Instructions on how to disable the Code Analyser can be found [here][Disable Code Analyser FAQ].
 
+## Next Steps?
+
+1. [Configure Global RunAs User][]
+
+[Configure Global RunAs User]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ConfigureGlobalRunAs" >}}
 [Disable Code Analyser]: {{< ref "#disable-code-analyser" >}}
-[Disable Code Analyser FAQ]: {{< url path="Cortex.Faqs.ConfigureCodeAnalyser.SingleServerWithoutHA.DisableCodeAnalyser" >}}
+[Disable Code Analyser FAQ]: {{< url path="Cortex.Faqs.ConfigureCodeAnalyser.MultipleServerWithHA.DisableCodeAnalyser" >}}
 [Update Code Analyser]: {{< ref "#update-code-analyser" >}}
