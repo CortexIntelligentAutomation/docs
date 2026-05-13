@@ -2,12 +2,12 @@
 title: "Try it out"
 linkTitle: "Try it out"
 description: "Information about trying out {{% ctx %}} for the first time."
-weight: 60
+weight: 10
 ---
 
-# {{< param title >}}
+# {{% param title %}}
 
-This guide describes how to try out a new {{% ctx %}} installation to make sure it is working. Please ensure that the [Gateway Upgrade][] has been completed before taking these steps.
+This guide describes how to try out a new {{% ctx %}} installation to make sure it is working. Please ensure that [Setup Gateway][] has been completed before taking these steps.
 
 ## Test Debugging Flows
 
@@ -57,10 +57,15 @@ Test the platform by creating a new flow and executing it using the following st
 1. The request should return a JSON object with the output variables of the flow e.g. `{ "Output": "2022-03-09T07:35:16+0000" }`.
 1. {{% ctx %}} has now been verified and is ready to use.
 
+## Next Steps?
+
+1. [Configure Code Analyser][]
+
+[Configure Code Analyser]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.ConfigureCodeAnalyser" >}}
+[Setup Gateway]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.SetupGatewayNew" >}}
 [Troubleshooting During Installation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingDuringInstallation" >}}
-[Troubleshooting Flow Not Starting]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNotStarting" >}}
 [Troubleshooting Flow No Blocks]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNoBlocks" >}}
+[Troubleshooting Flow Not Starting]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingFlowNotStarting" >}}
 [Troubleshooting No Innovation]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoInnovation" >}}
 [Troubleshooting No Publish]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoPublish" >}}
 [Troubleshooting Root Certificate Error]: {{< url path="Cortex.Reference.Troubleshooting.Installation.TroubleshootingNoRootCertificate" >}}
-[Gateway Upgrade]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.AddInnovationTo72WebApplicationServerNew" >}}

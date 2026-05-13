@@ -188,7 +188,7 @@ Ensure that the installation files are backed up or kept on the server, especial
 
 ## Next Steps?
 
-1. [Try it out][]
+1. [Post-Installation][]
 
 [Assign Certificate Friendly Name]: {{< ref "#assign-certificate-friendly-name" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
@@ -200,4 +200,4 @@ Ensure that the installation files are backed up or kept on the server, especial
 [Obtain a {{% ctx %}} licence file]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.ObtainLicence" >}}
 [Encryption Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.EncryptionRequirementsNew" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.TryItOut" >}}
+[Post-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.SingleServerWithoutHA.PostInstallation" >}}

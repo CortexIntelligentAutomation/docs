@@ -112,7 +112,7 @@ This guide describes how to upgrade {{% ctx %}} Gateway on {{% ctx %}} 7 to incl
 
 ## Next Steps?
 
-1. [Try it out][]
+1. [Post-Installation][]
 
 [Assign Certificate Friendly Name]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.AssignCertificateFriendlyNameNew2" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
@@ -123,4 +123,4 @@ This guide describes how to upgrade {{% ctx %}} Gateway on {{% ctx %}} 7 to incl
 [Flow Debugger installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.DebuggerInstallationNew" >}}
 [Obtain a {{% ctx %}} licence file]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.ObtainLicence" >}}
 [Security Best Practices]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.Advanced.SSLBestPractices" >}}
-[Try it out]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.TryItOut" >}}
+[Post-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddInnovationTo72.MultipleServerWithHA.PostInstallation" >}}
