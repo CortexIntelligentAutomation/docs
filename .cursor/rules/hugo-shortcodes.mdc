@@ -1,0 +1,20 @@
+---
+description: Custom Hugo shortcode usage and constraints
+globs: content/**/*.md, layouts/shortcodes/**
+alwaysApply: false
+---
+
+# Shortcodes
+
+Read `layouts/shortcodes/*.html` before changing usage.
+
+| Shortcode | Notes |
+| --- | --- |
+| `ctx` | Renders CORTEX; not in `title`/`linkTitle` |
+| `version` | Uses `{version}/_shared/currentVersion.md` |
+| `section` | Path under `{version}/_shared/`; must exist |
+| `url` | Keys from `urls.toml` (ignored — ask user for keys) |
+| `figure` | `src` under `/images/...`; file in `content/static/{version}/images/` |
+| `image` | `src` under `/images/...`; file in `content/static/{version}/images/` |
+
+Template edits affect all versions — scope testing accordingly.

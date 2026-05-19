@@ -1,0 +1,15 @@
+---
+description: CORTEX Product Portal repo purpose, structure, and agent workflow
+alwaysApply: true
+---
+
+# CORTEX docs repository
+
+- Source for https://docs.wearecortex.com/ (Hugo + Docsy).
+- Versioned docs: `content/en/docs/{version}/` with `{version}/_shared/`.
+- Shortcodes: `layouts/shortcodes/` (`ctx`, `version`, `section`, `url`, `figure`, …).
+- Images: `content/static/{version}/images/`.
+
+Read [AGENTS.md](../../AGENTS.md) before large edits. Contributions: [CORTEX Support](https://support.wearecortex.com/) per README.
+
+Canonical page: `content/en/docs/2026.3/getting-started/on-premise/install-innovation-only/single-server-without-ha/architecture.md`

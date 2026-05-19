@@ -1,0 +1,12 @@
+---
+description: Respect .cursorignore — no secrets, config, or data file access
+alwaysApply: true
+---
+
+# Security
+
+Follow [.cursorignore](../../.cursorignore).
+
+Do not read/commit: `config.*`, `data/**`, `urls.toml`, CI configs, `.env*`, certs/keys, `public/**`, `node_modules/**`, internal/draft content paths.
+
+If link keys are needed, copy from an existing page in the same section or ask the user.

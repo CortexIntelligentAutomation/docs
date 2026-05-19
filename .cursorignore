@@ -1,0 +1,103 @@
+# ============================================
+# Hugo / Docsy Sensitive Data Protection
+# ============================================
+
+# Core secrets (keep from previous list)
+.env
+.env.*
+*.env
+*.secret
+*.secrets
+
+# Hugo config files (frequently contain URLs, tokens, etc.)
+config.toml
+config.yaml
+config.yml
+config.json
+
+# If you split config:
+config/**/production*
+config/**/prod*
+config/**/secrets*
+config/**/private*
+
+# Hugo module cache (can include fetched private modules)
+resources/_gen/**
+.hugo_build.lock
+
+# Content drafts / unpublished content
+content/**/drafts/**
+content/**/_drafts/**
+content/**/private/**
+content/**/internal/**
+
+# Frontmatter-heavy markdown (may contain PII / metadata leaks)
+# (Optional depending on your workflow)
+# content/**/*.md
+
+# Data files (VERY important in Hugo)
+data/**
+*.yaml
+*.yml
+*.json
+*.toml
+*.csv
+
+# Docsy-specific
+# Includes navigation and structure that may leak internal structure
+content/en/docs/internal/**
+content/en/docs/private/**
+content/en/docs/drafts/**
+
+# Static assets (can accidentally contain secrets)
+static/uploads/**
+static/private/**
+static/internal/**
+static/files/**
+static/data/**
+
+# Built output (can contain rendered secrets if misconfigured)
+public/**
+
+# Scripts / build tooling
+scripts/**
+tools/**
+
+# Node dependencies (Docsy commonly uses npm tooling)
+node_modules/**
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# CI/CD configs (often contain refs to secrets)
+.github/workflows/**
+.gitlab-ci.yml
+.azure-pipelines.yml
+
+# Logs / temporary files
+*.log
+tmp/**
+.cache/**
+
+# ============================================
+# Global sensitive patterns
+# ============================================
+**/*password*
+**/*secret*
+**/*credential*
+**/*token*
+**/*apikey*
+**/*private*
+
+# Certificates & keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Cloud credentials
+.aws/**
+.azure/**
+.gcp/**
+*service-account*.json
