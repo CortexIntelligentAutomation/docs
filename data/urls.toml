@@ -1006,7 +1006,7 @@
                             LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
                             OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authorisation]
-                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authorisation/"                        
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authorisation/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
@@ -1159,6 +1159,8 @@
             [Cortex.Reference.Blocks.Dictionaries]
                 [Cortex.Reference.Blocks.Dictionaries.AddItem]
                     [Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKey]
+                        MainDoc = "/docs/reference/blocks/dictionaries/add-item/add-item-with-key-block-3"
+                    [Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKeyBlock]
                         MainDoc = "/docs/reference/blocks/dictionaries/add-item/add-item-with-key-block-3"
                 [Cortex.Reference.Blocks.Dictionaries.ContainsItem]
                     [Cortex.Reference.Blocks.Dictionaries.ContainsItem.ContainsItemWithKeyAndValue]
@@ -1372,6 +1374,8 @@
                         MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-beginning-block-2"
                     [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtEnd]
                         MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-end-block-2"
+                    [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtEndBlock]
+                        MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-end-block-2"
                     [Cortex.Reference.Blocks.Lists.AddItem.AddItemAtIndex]
                         MainDoc = "/docs/reference/blocks/lists/add-item/add-item-at-index-block-2"
                     [Cortex.Reference.Blocks.Lists.AddItem.AddItemsAtBeginning]
@@ -1489,6 +1493,9 @@
                         MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-item-block-2"
                     [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock]
                         MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-items-block-2"
+                [Cortex.Reference.Blocks.Queues.GetCount]
+                    [Cortex.Reference.Blocks.Queues.GetCount.GetCountOfAllItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/get-count/get-count-of-all-items-block-2"
                 [Cortex.Reference.Blocks.Queues.EnqueueItem]
                     [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]
                         MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-item-block-2"
@@ -1757,6 +1764,7 @@
                 [Cortex.Reference.Concepts.WorkingWith.Collections]
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection"
                         DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         ArraysVersusLists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#arrays-vs-lists"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Items]
@@ -1820,6 +1828,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/"
                 [Cortex.Reference.Concepts.WorkingWith.Scopes]
                     MainDoc = "/docs/reference/concepts/working-with/scopes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Scopes.WhatIsAScope]
+                        MainDoc = "/docs/reference/concepts/working-with/scopes/"
                 [Cortex.Reference.Concepts.WorkingWith.Tasks]
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
