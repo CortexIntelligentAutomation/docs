@@ -1,0 +1,54 @@
+# Project-local Codex command policy for this docs repository.
+# Keep this file focused on commands we actually run here.
+
+# Always prompt before publishing changes.
+prefix_rule(
+    pattern = ["git", "push"],
+    decision = "prompt",
+    justification = "Pushes affect remote branches and CI; confirm intent first.",
+    match = [
+        "git push",
+        "git push origin main",
+    ],
+)
+
+# Always prompt before creating commits.
+prefix_rule(
+    pattern = ["git", "commit"],
+    decision = "prompt",
+    justification = "Committing should remain an explicit user-approved action.",
+    match = [
+        "git commit -m docs",
+    ],
+)
+
+# Block hard resets in this repository by default.
+prefix_rule(
+    pattern = ["git", "reset", "--hard"],
+    decision = "forbidden",
+    justification = "Do not discard local work with hard reset. Use non-destructive alternatives.",
+    match = [
+        "git reset --hard",
+        "git reset --hard HEAD~1",
+    ],
+)
+
+# Block destructive cleans by default.
+prefix_rule(
+    pattern = ["git", "clean", "-fd"],
+    decision = "forbidden",
+    justification = "This may remove untracked docs/assets. Prefer targeted cleanup commands.",
+    match = [
+        "git clean -fd",
+    ],
+)
+
+# Prompt before recursive delete commands.
+prefix_rule(
+    pattern = ["rm", "-rf"],
+    decision = "prompt",
+    justification = "Recursive delete is high risk in a large content repository.",
+    match = [
+        "rm -rf tmp-build",
+    ],
+)
