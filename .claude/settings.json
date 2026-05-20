@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npm run *)",
+      "Bash(hugo*)",
+      "Bash(node mdlint.js*)",
+      "Bash(node scan-and-clean-toml.js*)",
+      "Bash(npx markdownlint-cli2*)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add *)",
+      "Bash(git commit*)",
+      "Bash(git branch*)",
+      "Bash(git checkout*)",
+      "Bash(powershell ./createLatest.ps1*)",
+      "Bash(pwsh ./createLatest.ps1*)"
+    ],
+    "deny": [
+      "Edit(docs/**)",
+      "Write(docs/**)",
+      "Edit(themes/**)",
+      "Write(themes/**)",
+      "Edit(content/en/docs/latest/**)",
+      "Write(content/en/docs/latest/**)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node mdlint.js"
+          }
+        ]
+      }
+    ]
+  }
+}
