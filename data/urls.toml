@@ -3057,6 +3057,10 @@
                 [MSDocs.DotNet.Api.System.Net]
                     NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
                     HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
+        [MSDocs.DotNet.Fundamentals]
+            [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
+                CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
+
     [MSDocs.PowerShell]
         WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
