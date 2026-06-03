@@ -1565,6 +1565,17 @@
                 [Cortex.Reference.Blocks.Text.DecodeText]
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllText]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block"
+                    [Cortex.Reference.Blocks.Text.FindText.FindText]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveText]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceText]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-value-block-1/"
@@ -2896,6 +2907,7 @@
                         Dictionary = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"
                         IEnumerable_TItem = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
                         IList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
+                        IndexOfList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.indexof#system-collections-generic-list-1.indexof"
                         List = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
                         IReadOnlyList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1"
                         IReadOnlyCollection = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1"
@@ -3019,8 +3031,10 @@
                     ConcatOperator = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
                     StringInterpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#string-interpolation"
                     Format = "https://learn.microsoft.com/en-us/dotnet/api/system.string.format"
+                    IndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.indexof"
                     Insert = "https://learn.microsoft.com/en-us/dotnet/api/system.string.insert"
                     Join = "https://learn.microsoft.com/en-us/dotnet/api/system.string.join"
+                    LastIndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.lastindexof"
                 [MSDocs.DotNet.Api.System.TimeSpan]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan"
                 [MSDocs.DotNet.Api.System.Globalization]
