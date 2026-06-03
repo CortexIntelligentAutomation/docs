@@ -192,7 +192,7 @@ In the future this limitation may be removed.
 [Data Storage Collection]: {{< ref "what-is-a-collection.md#data-storage-collection" >}}
 [Data Storage]: {{< url path="Cortex.Reference.Blocks.DataStorage.MainDoc" >}}
 
-[Add Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKeyBlock.MainDoc" >}}
+[Add Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKey.MainDoc" >}}
 [Get Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.GetItem.GetItemWithKey.MainDoc" >}}
 [Set Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.SetItem.SetItemWithKey.MainDoc" >}}
 [Remove Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.RemoveItem.RemoveItemWithKey.MainDoc" >}}
