@@ -2544,6 +2544,7 @@
                 Item = "/docs/reference/glossary/f-j/#item"
                 Index = "/docs/reference/glossary/f-j/#index"
                 Intellisense = "/docs/reference/glossary/f-j/#intellisense"
+                InvariantCulture = "/docs/reference/glossary/f-j/#invariant-culture"
                 Json = "/docs/reference/glossary/f-j/#json"
             [Cortex.Reference.Glossary.K-O]
                 List = "/docs/reference/glossary/k-o/#list"
