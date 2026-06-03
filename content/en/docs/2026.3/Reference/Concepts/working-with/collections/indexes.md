@@ -162,6 +162,3 @@ None
 [MS List]: {{< url path="MSDocs.DotNet.Api.System.Collections.Generic.List" >}}
 [MS Array]: {{< url path="MSDocs.DotNet.Api.System.Array" >}}
 [MS String]: {{< url path="MSDocs.DotNet.Api.System.String.MainDoc" >}}
-[System.Collections.Generic.List&lt;TItem&gt;]: {{< url path="MSDocs.DotNet.Api.System.Collections.Generic.List" >}}
-[System.Array]: {{< url path="MSDocs.DotNet.Api.System.Array" >}}
-[System.String]: {{< url path="MSDocs.DotNet.Api.System.String.MainDoc" >}}

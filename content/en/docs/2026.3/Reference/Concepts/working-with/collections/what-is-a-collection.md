@@ -31,7 +31,7 @@ For more detail on [keys][], [indexes][], and [items][], see the related concept
 A [Dictionary&lt;TKey, TItem&gt;][] is a collection of key/item pairs based on [System.Collections.Generic.Dictionary&lt;TKey, TItem&gt;][].
 
 * `TKey` is the data type of each [key][] used to access an item.
-* `TItem` is the data type of each [item][] stored in the collection.
+* `TItem` is the data type of each [item][items] stored in the collection.
 
 Each item is accessed by its key. In the [Expression Editor][], dictionary items are accessed using [index expressions][] (for example `dictionary["StringKey1"]`).
 
@@ -51,7 +51,7 @@ Keys whose data type is not a simple scalar (complex keys) are supported for som
 
 ##### Keys
 
-Use a [key][] in an [index expression][] or pass the key to a [Dictionary][] block property. Dictionary blocks that add, set, or remove items document key equality in their remarks; see [Object Equality][].
+Use a [key][] in an [index expression][index expressions] or pass the key to a [Dictionary][] block property. Dictionary blocks that add, set, or remove items document key equality in their remarks; see [Object Equality][].
 
 ### Structures
 
@@ -76,7 +76,7 @@ Any string key can be used with index syntax (for example `structure["any-key"]`
 
 ### Lists
 
-A [List&lt;TItem&gt;][] is an ordered collection based on [System.Collections.Generic.List&lt;TItem&gt;][]. `TItem` is the data type of each [item][].
+A [List&lt;TItem&gt;][] is an ordered collection based on [System.Collections.Generic.List&lt;TItem&gt;][]. `TItem` is the data type of each [item][items].
 
 Lists can be created with `[]` literal syntax or `new List<TItem>()` expressions. Using `[]` without other context creates a `List<dynamic>`. See [Create a List&lt;TItem&gt;][] on the [List&lt;TItem&gt;][] data type page.
 
@@ -200,7 +200,6 @@ In the future this limitation may be removed.
 [Key]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [index]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
-[Index]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Collections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
 [Occurrences]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 [Generics]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
@@ -227,7 +226,6 @@ In the future this limitation may be removed.
 [Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [index expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.IndexExpressions" >}}
 [property expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
-[Property expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
 
 [Data Storage Collection]: {{< ref "#data-storage-collection" >}}
 [Data Storage Service]: {{< url path="Cortex.Guides.CortexInnovation.CoreApplication.Services.DataStorageService.MainDoc" >}}

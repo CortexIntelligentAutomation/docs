@@ -160,7 +160,6 @@ None
 [Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 [Index expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.IndexExpressions" >}}
 [property expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
-[Property expressions]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.PropertyExpressions" >}}
 [Indices and Ranges]: {{< url path="MSDocs.CSharp.IndicesAndRanges" >}}
 
 [Data Storage Collection]: {{< ref "what-is-a-collection.md#data-storage-collection" >}}
@@ -186,5 +185,3 @@ None
 [MS List]: {{< url path="MSDocs.DotNet.Api.System.Collections.Generic.List" >}}
 [MS Array]: {{< url path="MSDocs.DotNet.Api.System.Array" >}}
 [MS Equality]: {{< url path="MSDocs.CSharp.EqualityOperators" >}}
-[System.Collections.Generic.Dictionary&lt;TKey, TItem&gt;]: {{< url path="MSDocs.DotNet.Api.System.Collections.Generic.Dictionary" >}}
-[System.Collections.Generic.List&lt;TItem&gt;]: {{< url path="MSDocs.DotNet.Api.System.Collections.Generic.List" >}}
