@@ -124,7 +124,7 @@ When the requested occurrence does not exist (or there are no matches), block be
 * **Duplicate values** — several entries whose items match the same value ([Set Dictionary Item With Value][], [Remove Dictionary Item With Value][])
 * **Duplicate keys** — several entries that share the same key instance (for example multiple `List` keys that compare equal under [Object Equality][]); [Get Item With Key][], [Set Item With Key][], [Remove Item With Key][]
 
-Unlike [List][] and [Array][], dictionaries do not have a guaranteed user-visible order. For duplicate keys or values, **which entry is the 1st or 2nd occurrence** follows the underlying .NET implementation and is not documented as stable. Prefer lists when order must be predictable; see remarks on [Get Item With Key][].
+Unlike [List][] and [Array][], dictionaries do not have a guaranteed user-visible order. For duplicate keys or values, **which entry is the 1st or 2nd occurrence** follows the underlying .NET implementation and is not documented as stable. Prefer lists when order must be predictable.
 
 ### Matching items and text
 

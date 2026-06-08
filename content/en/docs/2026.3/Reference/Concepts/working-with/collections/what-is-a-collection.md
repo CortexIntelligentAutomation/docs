@@ -43,7 +43,7 @@ For more examples of creating dictionaries with literal and expression syntax, s
 
 #### Keys
 
-Each key in a dictionary must be unique. Keys cannot be `null`. How equality is determined depends on whether you use C# syntax or dictionary blocks; see [Keys][] and [Object Equality][].
+Each key in a dictionary must be unique. Keys cannot be `null`. How equality is determined depends on whether you use C# syntax or dictionary blocks; see [Keys][].
 
 Keys whose data type is not a simple scalar (complex keys) are supported for some `TKey` types; see the Known Limitations section on [Dictionary&lt;TKey, TItem&gt;][] for supported key types and display limitations in Gateway.
 
@@ -51,7 +51,7 @@ Keys whose data type is not a simple scalar (complex keys) are supported for som
 
 ##### Keys
 
-Use a [key][] in an [index expression][index expressions] or pass the key to a [Dictionary][] block property. Dictionary blocks that add, set, or remove items document key equality in their remarks; see [Object Equality][].
+Use a [key][] in an [index expression][index expressions] or pass the key to a [Dictionary][] block property. Dictionary blocks that add, set, or remove items document key equality in their remarks.
 
 ### Structures
 
@@ -84,7 +84,7 @@ Lists can be created with `[]` literal syntax or `new List<TItem>()` expressions
 
 A list is [homogenous][] when every item has the same data type (for example `List<Int32>` or `List<String>`). It is [heterogenous][] when items may have different data types (for example `List<dynamic>` or `List<Object>`).
 
-List blocks refer to these as lists containing items of a single data type versus multiple data types; see [Homogenous and heterogenous lists](#homogenous-and-heterogenous-lists) above.
+List blocks refer to these as lists containing items of a single data type versus multiple data types.
 
 #### Accessing items
 
@@ -122,7 +122,7 @@ Unlike in-memory [Dictionary][] or [Structure][] variables:
 
 Keys must be unique within a collection, cannot be `null`, and are case sensitive. Collection names are case insensitive within a scope. See [Keys][] and the [Write Data With Key][] block for key and naming behaviour.
 
-Operations may throw [ServiceDoesNotExistException][] or [ServiceUnavailableException][] when the Data Storage Service is not deployed or not healthy. For platform architecture context, see [Data Storage Service][].
+Operations may throw [ServiceDoesNotExistException][] or [ServiceUnavailableException][] when the Data Storage Service is not deployed or not healthy.
 
 ## Arrays vs Lists
 
@@ -167,7 +167,6 @@ In the future this limitation may be removed.
 * [Items][]
 * [Occurrences][]
 * [Generics][]
-* [Object Equality][]
 
 ### Related Data Types
 
@@ -203,7 +202,6 @@ In the future this limitation may be removed.
 [Collections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
 [Occurrences]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences.MainDoc" >}}
 [Generics]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
-[Object Equality]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.MainDoc" >}}
 [homogenous]: {{< url path="Cortex.Reference.Glossary.F-J.Homogenous" >}}
 [heterogenous]: {{< url path="Cortex.Reference.Glossary.F-J.Heterogenous" >}}
 [Dictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.MainDoc" >}}
