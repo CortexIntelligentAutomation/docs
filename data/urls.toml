@@ -1006,7 +1006,7 @@
                             LdapAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#ldap"
                             OidcAuth = "/docs/guides/user-guides/user-interfaces/gateway/admin/authentication/#openid-connect"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Authorisation]
-                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authorisation/"                        
+                            MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/authorisation/"
                         [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages]
                             MainDoc = "/docs/guides/user-guides/user-interfaces/gateway/admin/packages/"
                             [Cortex.Guides.UserGuides.UserInterfaces.Gateway.Admin.Packages.Overview]
@@ -1489,6 +1489,9 @@
                         MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-item-block-2"
                     [Cortex.Reference.Blocks.Queues.DequeueItem.DequeueItemsBlock]
                         MainDoc = "/docs/reference/blocks/queues/dequeue-item/dequeue-items-block-2"
+                [Cortex.Reference.Blocks.Queues.GetCount]
+                    [Cortex.Reference.Blocks.Queues.GetCount.GetCountOfAllItemsBlock]
+                        MainDoc = "/docs/reference/blocks/queues/get-count/get-count-of-all-items-block-2"
                 [Cortex.Reference.Blocks.Queues.EnqueueItem]
                     [Cortex.Reference.Blocks.Queues.EnqueueItem.EnqueueItemBlock]
                         MainDoc = "/docs/reference/blocks/queues/enqueue-item/enqueue-item-block-2"
@@ -1562,6 +1565,17 @@
                 [Cortex.Reference.Blocks.Text.DecodeText]
                     [Cortex.Reference.Blocks.Text.DecodeText.DecodeText]
                         MainDoc = "/docs/reference/blocks/text/decode-text/decode-text-block"
+                [Cortex.Reference.Blocks.Text.FindText]
+                    [Cortex.Reference.Blocks.Text.FindText.FindAllText]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-all-text-block"
+                    [Cortex.Reference.Blocks.Text.FindText.FindText]
+                        MainDoc = "/docs/reference/blocks/text/find-text/find-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndRemoveText]
+                    [Cortex.Reference.Blocks.Text.FindAndRemoveText.FindAndRemoveText]
+                        MainDoc = "/docs/reference/blocks/text/find-and-remove-text/find-and-remove-text-block"
+                [Cortex.Reference.Blocks.Text.FindAndReplaceText]
+                    [Cortex.Reference.Blocks.Text.FindAndReplaceText.FindAndReplaceText]
+                        MainDoc = "/docs/reference/blocks/text/find-and-replace-text/find-and-replace-text-block"
                 [Cortex.Reference.Blocks.Text.FormatText]
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-value-block-1/"
@@ -1569,6 +1583,9 @@
                     [Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues]
                         MainDoc = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/"
                         FormatTemplate = "/docs/reference/blocks/text/format-text/format-text-with-values-block-1/#format-template"
+                [Cortex.Reference.Blocks.Text.GetIndex]
+                    [Cortex.Reference.Blocks.Text.GetIndex.GetIndexOfText]
+                        MainDoc = "/docs/reference/blocks/text/get-index/get-index-of-text-block/"
                 [Cortex.Reference.Blocks.Text.GetText]
                     [Cortex.Reference.Blocks.Text.GetText.GetTextAtBeginning]
                         MainDoc = "/docs/reference/blocks/text/get-text/get-text-at-beginning-block/"
@@ -1757,6 +1774,7 @@
                 [Cortex.Reference.Concepts.WorkingWith.Collections]
                     MainDoc = "/docs/reference/concepts/working-with/collections/"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection]
+                        MainDoc = "/docs/reference/concepts/working-with/collections/what-is-a-collection"
                         DataStorage = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#data-storage-collection"
                         ArraysVersusLists = "/docs/reference/concepts/working-with/collections/what-is-a-collection/#arrays-vs-lists"
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Items]
@@ -1820,6 +1838,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/objects/object-equality/"
                 [Cortex.Reference.Concepts.WorkingWith.Scopes]
                     MainDoc = "/docs/reference/concepts/working-with/scopes/"
+                    [Cortex.Reference.Concepts.WorkingWith.Scopes.WhatIsAScope]
+                        MainDoc = "/docs/reference/concepts/working-with/scopes/"
                 [Cortex.Reference.Concepts.WorkingWith.Tasks]
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
@@ -2887,6 +2907,7 @@
                         Dictionary = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2"
                         IEnumerable_TItem = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1"
                         IList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1"
+                        IndexOfList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.indexof#system-collections-generic-list-1.indexof"
                         List = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1"
                         IReadOnlyList = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlylist-1"
                         IReadOnlyCollection = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.ireadonlycollection-1"
@@ -3010,8 +3031,10 @@
                     ConcatOperator = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
                     StringInterpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#string-interpolation"
                     Format = "https://learn.microsoft.com/en-us/dotnet/api/system.string.format"
+                    IndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.indexof"
                     Insert = "https://learn.microsoft.com/en-us/dotnet/api/system.string.insert"
                     Join = "https://learn.microsoft.com/en-us/dotnet/api/system.string.join"
+                    LastIndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.lastindexof"
                 [MSDocs.DotNet.Api.System.TimeSpan]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan"
                 [MSDocs.DotNet.Api.System.Globalization]

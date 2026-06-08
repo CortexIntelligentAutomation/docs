@@ -1,0 +1,13 @@
+---
+description: Hugo/Docsy markdown and frontmatter for CORTEX documentation
+globs: content/**/*.md
+alwaysApply: false
+---
+
+# Hugo content
+
+- Frontmatter: `title`, `linkTitle`, `description`, `weight`.
+- Literal CORTEX in `title`/`linkTitle`; `{{% ctx %}}` in body where siblings do.
+- Reuse `_shared` + `{{< section "/path.md" >}}` instead of copy-paste.
+- Internal links: `{{< url path="Cortex...." >}}` like neighboring pages.
+- Procedural tone; no drive-by edits across doc versions.
