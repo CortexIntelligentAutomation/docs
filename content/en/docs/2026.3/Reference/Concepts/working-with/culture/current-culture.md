@@ -107,7 +107,7 @@ When output must match a **known user or business locale**, create and pass an e
 
 ## Clusters and operating system settings
 
-Flows that depend on `CultureInfo.CurrentCulture` inherit whatever culture .NET assigns to the executing thread. On Windows that is typically the system default locale; on Linux it follows ICU / `LC_MESSAGES` behaviour as described in .NET documentation.
+Flows that depend on `CultureInfo.CurrentCulture` inherit whatever culture .NET assigns to the executing thread; on Windows that is typically the system default locale.
 
 For predictable results in a **cluster**:
 

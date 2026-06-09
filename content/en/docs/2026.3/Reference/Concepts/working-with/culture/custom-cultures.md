@@ -123,7 +123,6 @@ Avoid custom cultures when:
 
 * A **standard specific culture** is enough — prefer `new CultureInfo("en-GB")` and documented OS regional settings instead of maintaining `.nlp` files.
 * **Culture-independent storage or APIs** — use [Invariant Culture][].
-* **Linux or mixed OS clusters** — custom `.nlp` cultures may be unavailable; use [Specific Cultures][] or [Invariant Culture][] instead.
 * **Flows cannot assume registration** — `new CultureInfo("x-my-culture")` throws [CultureInfoNotFoundException][] on servers where the culture was never registered.
 * **You need to register at runtime** — registration belongs in admin tooling, not in flow logic.
 
@@ -176,7 +175,6 @@ Replacement cultures change behaviour for **all** applications on the server tha
 
 ### Known Limitations
 
-* **Windows and NLS** — `CultureAndRegionInfoBuilder` and `.nlp` registration apply to Windows with supported globalization modes; do not assume custom cultures exist on Linux servers.
 * **Administrative registration** — Flows cannot register or unregister cultures; missing registration causes [CultureInfoNotFoundException][].
 * **Replacement cultures** — Using the same name as a built-in culture (for example `en-GB`) affects every app on that server; behaviour differs from servers without the replacement.
 * **Cluster consistency** — Each node must have the same custom culture definition; drift causes intermittent formatting or runtime errors.

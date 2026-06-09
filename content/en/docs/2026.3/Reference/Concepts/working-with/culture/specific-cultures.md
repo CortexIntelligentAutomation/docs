@@ -116,7 +116,7 @@ The specific culture is **opt-in** in most blocks:
 | Compare or search text using a fixed sort order | Set **Comparison Type** or culture-related properties per the block's remarks |
 | Default when property omitted or `null` | Usually [Invariant Culture][] — check each block |
 
-Store the culture in a variable when the same locale is used in many blocks—for example `var uk = new CultureInfo("en-GB");` in the [Expression Editor][].
+Store the culture in a variable when the same locale is used in many blocks.
 
 ## User overrides (Windows)
 
@@ -221,8 +221,6 @@ Microsoft guidance for .NET applies to {{% ctx %}} flows:
 [StringComparison]: {{< url path="Cortex.Reference.DataTypes.Text.StringComparison.MainDoc" >}}
 [StringComparer]: {{< url path="Cortex.Reference.DataTypes.Text.StringComparer.MainDoc" >}}
 [CultureInfoNotFoundException]: {{< url path="MSDocs.DotNet.Api.System.Globalization.CultureInfoNotFoundException" >}}
-
-[Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
 
 [Format Text With Values]: {{< url path="Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValues.MainDoc" >}}
 [Format Text With Value]: {{< url path="Cortex.Reference.Blocks.Text.FormatText.FormatTextWithValue.MainDoc" >}}
