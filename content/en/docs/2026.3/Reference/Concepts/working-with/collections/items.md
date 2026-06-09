@@ -53,11 +53,11 @@ How you read or assign an item depends on the collection type:
 | [Dictionary&lt;TKey, TItem&gt;][] | `dictionary["Key1"]` | [Index expressions][], [Keys][] |
 | [Structure][] | `structure.Name` or `structure["any-key"]` | [Property expressions][], [Index expressions][] |
 
-[List][] and [Array][] items use zero-based indexes. [Dictionary][] and [Structure][] items use keys. Range and index-from-end syntax (`^1`, `..`) follow C# rules; see [Indices and Ranges][] in the [Expression Editor][] documentation.
+[List][] and [Array][] items use zero-based indexes. [Dictionary][] and [Structure][] items use keys. Range and index-from-end syntax (`^1`, `..`) follow C# rules; see [Indices and Ranges][] and the [Expression Editor][] documentation.
 
 ### With blocks
 
-[Dictionary][], [List][], [Queue][], and [Data Storage][] blocks expose properties such as `Item`, `Value`, or `Data` for the item being added, read, updated, or removed. Access patterns include:
+[Dictionary][], [List][], [Queue][], and [Data Storage][] blocks expose properties such as `Item` and `Data` for the item being added, read, updated, or removed. Access patterns include:
 
 * **By key** — [Get Item With Key][], [Set Item With Key][], [Read Data With Key][]
 * **By index** — [Get Item At Index][], [Set Item At Index][]

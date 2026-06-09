@@ -106,7 +106,6 @@ None
 ### Related Blocks
 
 * [List][] blocks (for example [Get Item At Index][], [Set Item At Index][], [Add Item At Index][], [Remove Item At Index][])
-* [Get Index Of Item With Value][], [Get Indexes Of Items With Value][]
 * Text blocks (for example [Get Text At Index][], [Get Text Between Indexes][], [Get Index Of Text][])
 
 ### External Documentation
@@ -148,7 +147,6 @@ None
 [Add Item At Index]: {{< url path="Cortex.Reference.Blocks.Lists.AddItem.AddItemAtIndex.MainDoc" >}}
 [Remove Item At Index]: {{< url path="Cortex.Reference.Blocks.Lists.RemoveItem.RemoveItemAtIndex.MainDoc" >}}
 [Get Index Of Item With Value]: {{< url path="Cortex.Reference.Blocks.Lists.GetIndex.GetIndexOfItemWithValue.MainDoc" >}}
-[Get Indexes Of Items With Value]: {{< url path="Cortex.Reference.Blocks.Lists.GetIndex.GetIndexesOfItemsWithValue.MainDoc" >}}
 
 [Get Text At Index]: {{< url path="Cortex.Reference.Blocks.Text.GetText.GetTextAtIndex.MainDoc" >}}
 [Get Text Between Indexes]: {{< url path="Cortex.Reference.Blocks.Text.GetText.GetTextBetweenIndexes.MainDoc" >}}
