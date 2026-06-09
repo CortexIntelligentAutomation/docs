@@ -2544,6 +2544,7 @@
                 Item = "/docs/reference/glossary/f-j/#item"
                 Index = "/docs/reference/glossary/f-j/#index"
                 Intellisense = "/docs/reference/glossary/f-j/#intellisense"
+                InvariantCulture = "/docs/reference/glossary/f-j/#invariant-culture"
                 Json = "/docs/reference/glossary/f-j/#json"
             [Cortex.Reference.Glossary.K-O]
                 List = "/docs/reference/glossary/k-o/#list"
@@ -2949,6 +2950,7 @@
                     UtcDateTime = "https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.utcdatetime"
                     MinValue = "https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.minvalue"
                     ToString = "https://learn.microsoft.com/en-us/dotnet/api/system.datetimeoffset.ToString"
+                    FormatStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings"
                     ShortDateFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortDate"
                     ShortTimeFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#ShortTime"
                     LongDateFormat = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#LongDate"
@@ -3039,7 +3041,10 @@
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan"
                 [MSDocs.DotNet.Api.System.Globalization]
                     CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
+                    CultureInfoCtor = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.-ctor"
                     CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception"
+                    CultureInfoParent = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.parent"
+                    CurrentCulture = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture"
                 [MSDocs.DotNet.Api.System.Text]
                     Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
                     UnicodeEncoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.unicodeencoding"
@@ -3052,6 +3057,10 @@
                 [MSDocs.DotNet.Api.System.Net]
                     NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
                     HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
+        [MSDocs.DotNet.Fundamentals]
+            [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
+                CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
+
     [MSDocs.PowerShell]
         WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
