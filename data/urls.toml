@@ -1476,6 +1476,9 @@
                         [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365]
                             MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email/send-email-using-microsoft365-block"
             [Cortex.Reference.Blocks.Objects]
+                [Cortex.Reference.Blocks.Objects.CopyObject]
+                    [Cortex.Reference.Blocks.Objects.CopyObject.CopyObject]
+                        MainDoc = "/docs/reference/blocks/objects/copy-object/copy-object-block-1"
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
                     [Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText]
                         MainDoc = "/docs/reference/blocks/objects/convert-object/convert-object-to-text-block-1"
