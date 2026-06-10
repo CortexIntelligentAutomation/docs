@@ -20,7 +20,7 @@ A **generic** data type is a type definition that includes one or more **type pa
 | Type argument | Concrete type you supply | `Int32`, `String`, `dynamic` |
 | Constructed type | Generic type with type arguments filled in | `List<Int32>`, `Dictionary<String, String>` |
 
-For how data types are classified more broadly, see [What is a Data Type?][]. For how generic collections use type parameters for [items][] and [keys][], see [What is a Collection?][].
+For how data types are classified more broadly, see [What is a Data Type?][]. For how generic collections use type parameters for [items][Items] and [keys][Keys], see [What is a Collection?][].
 
 ## Generic types in {{% ctx %}}
 
@@ -92,8 +92,8 @@ Whether a generic collection holds one item type or many depends on the type arg
 
 | Type argument | Collection behaviour | Term |
 | --- | --- | --- |
-| A single specific type (for example `Int32`, `String`) | Every item must be that type | [Homogenous][] |
-| [Object][] or [dynamic][] | Items may have different data types | [Heterogenous][] |
+| A single specific type (for example `Int32`, `String`) | Every item must be that type | [Homogenous][homogenous] |
+| [Object][] or [dynamic][] | Items may have different data types | [Heterogenous][heterogenous] |
 
 Examples:
 
@@ -172,20 +172,15 @@ An **open generic type** is a generic definition that still has unfilled type pa
 * [System.Collections.Generic.Dictionary&lt;TKey, TItem&gt;][MS Dictionary]
 * [System.Collections.Generic.IEnumerable&lt;TItem&gt;][MS IEnumerable]
 
-[generic type parameter]: {{< ref "#type-parameters-in-documentation" >}}
-
 [data type]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.MainDoc" >}}
 [What is a Data Type?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.WhatIsADataType.MainDoc" >}}
 [Null and Nullable Types]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc" >}}
 [What is a Collection?]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.MainDoc" >}}
 [Items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
-[items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 [Keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
-[keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [Object Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 
 [value type]: {{< ref "what-is-a-data-type.md#value-types" >}}
-[value types]: {{< ref "what-is-a-data-type.md#value-types" >}}
 
 [homogenous]: {{< url path="Cortex.Reference.Glossary.F-J.Homogenous" >}}
 [heterogenous]: {{< url path="Cortex.Reference.Glossary.F-J.Heterogenous" >}}
@@ -225,7 +220,6 @@ An **open generic type** is a generic definition that still has unfilled type pa
 [Copy Object]: {{< url path="Cortex.Reference.Blocks.Objects.CopyObject.CopyObject.MainDoc" >}}
 
 [TValue]: {{< ref "#type-parameters-in-documentation" >}}
-[TPriority]: {{< ref "#type-parameters-in-documentation" >}}
 
 [Add Item At End]: {{< url path="Cortex.Reference.Blocks.Lists.AddItem.AddItemAtEnd.MainDoc" >}}
 [Add Item With Key]: {{< url path="Cortex.Reference.Blocks.Dictionaries.AddItem.AddItemWithKey.MainDoc" >}}

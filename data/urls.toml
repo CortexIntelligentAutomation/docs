@@ -1686,16 +1686,16 @@
                             MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
-                                CastingExpressions = "docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#casting-expressions"
+                                CastingExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#casting-expressions"
                                 DecompositionExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#decomposition-expressions"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
-                                EnumExpressions = "docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#enum-expressions"
+                                EnumExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#enum-expressions"
                                 Expressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#expressions"
                                 IndexExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#index-expressions"
                                 InterpolatedStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#interpolated-strings"
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
                                 PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
-                                StringExpressions = "docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-expressions"
+                                StringExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-expressions"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]

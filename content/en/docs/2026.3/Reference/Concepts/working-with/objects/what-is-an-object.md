@@ -24,8 +24,8 @@ For how data types are classified (basic, complex, value, and reference), see [W
 
 A data type tells the platform what shape data has. An object is the live data that exists while a [flow][] runs.
 
-* `Int32` is a data type; the number `42` stored in a variable is an `Int32` object (or more precisely, a boxed or typed value of that type).
-* `List<String>` is a data type; the list instance returned from a block is an object of that type.
+* `Int32` is a data type; the number `42` stored in a variable is an `Int32` object.
+* `List<Int32>` is a data type; `[1,2,3]` is a `List` object.
 * [Structure][] is a data type; `{ "Name": "Ada", "Count": 3 }` is a `Structure` object.
 
 [Variables][] do not have their own data type—they are named containers that hold objects of any supported [data type][]. When a variable is used in a [block property][], {{% ctx %}} checks that the object it currently holds is compatible with the property's expected type. See [Variable Typing][] in [What is a Variable?][].
@@ -75,7 +75,7 @@ Objects are either [value types][] or [reference types][], depending on their da
 | --- | --- | --- |
 | Examples | [Int32][], [Boolean][], [DateTime][] | [String][], [List&lt;TItem&gt;][], [Structure][], [Command][] |
 | Default | Non-null default (for example `0` for `Int32`) | `null` |
-| Assignment via [Set Variable][] | Variables refer to **separate** instances | Variables can refer to the **same** instance |
+| Assignment via [Set Variable][] | Variables refer to **separate** instances | Variables refer to the **same** instance |
 | Equality | Compared by value | Compared by reference (with nuances in blocks; see [Object Equality][]) |
 
 When you assign one variable to another with [Set Variable][], a reference type object is shared: changes through either variable affect the same instance. To work with an independent copy, use [Copy Object][], which performs a deep copy (nested objects are copied too).

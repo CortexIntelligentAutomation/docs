@@ -15,8 +15,8 @@ Data types in {{% ctx %}} are commonly described in two ways:
 
 | Classification | Question answered | Examples |
 | --- | --- | --- |
-| [Value type][] or [reference type][] | How is the value stored and copied? | [Int32][] (value), [String][] (reference) |
-| [Basic data type][] or [complex data type][] | How is the value shown in the UI and how complex is its structure? | [Boolean][] (basic), [List&lt;TItem&gt;][] (complex) |
+| [Value type][value type] or [reference type][] | How is the value stored and copied? | [Int32][] (value), [String][] (reference) |
+| [Basic data type][basic data type] or [complex data type][] | How is the value shown in the UI and how complex is its structure? | [Boolean][] (basic), [List&lt;TItem&gt;][] (complex) |
 
 These classifications are independent. For example, [String][] is a [basic data type][] but also a [reference type][].
 
@@ -43,7 +43,7 @@ When a [Set Variable][] block sets one variable to the value of another variable
 
 If `($)CountB` is later set to `20`, `($)CountA` remains `10`.
 
-[Copy Object][] can also be used to copy a value type. For value types, assignment already produces a separate instance; [Copy Object][] is more useful when the value is held in an [Object][]- or [dynamic][]-typed variable or inside a [collection][].
+[Copy Object][] can also be used to copy a value type. For value types, assignment already produces a separate instance; [Copy Object][] is more useful when the value is held in an [Object][object]- or [dynamic][]-typed variable or inside a [collection][].
 
 For general C# guidance, see [Value types (C#)][MS Value Types] and [Default values of C# types][MS Default Values].
 
@@ -100,7 +100,7 @@ Other built-in C# value types (such as enums and structs) follow the same value-
 
 ## Complex Data Types
 
-A **complex data type** is a type whose structure is not a single scalar value. In {{% ctx %}}, complex data types include [collections][], platform and domain types, and the general-purpose [Object][] and [dynamic][] types.
+A **complex data type** is a type whose structure is not a single scalar value. In {{% ctx %}}, complex data types include [collections][Collections], platform and domain types, and the general-purpose [Object][object] and [dynamic][] types.
 
 When a variable holds a complex data type that is not a [collection][], the [Variables List][] may show a summary such as `Instance of Command` until you open the [Variable Details Viewer][]. [Collections][Collections] show their type and item count (for example `Dictionary<string, object> with 2 item(s)`).
 
@@ -129,28 +129,27 @@ These types are [reference types][] and usually display as `Instance of <TypeNam
 
 ### Object and dynamic
 
-[Object][] (`System.Object`) is the root type in .NET; every other data type derives from it. [dynamic][] behaves like [Object][] but does not require an explicit [cast][] when you use the stored value as its original type.
+[Object][object] (`System.Object`) is the root type in .NET; every other data type derives from it. [dynamic][] behaves like [Object][object] but does not require an explicit [cast][] when you use the stored value as its original type.
 
-| | [Object][] | [dynamic][] |
+| | [Object][object] | [dynamic][] |
 | --- | --- | --- |
 | Default value | `null` | `null` |
 | Category | Complex (general-purpose) | Complex (general-purpose) |
-| Typical use | Block properties that accept any type | Heterogeneous [collections][] (for example `[1, "Text", true]`) |
+| Typical use | Block properties that accept any type | Heterogeneous [collections][Collections] (for example `[1, "Text", true]`) |
 | Casting required | Yes, to use as a specific type | No |
 
-`dynamic` is more commonly encountered than bare `Object` in flows. See [Object vs dynamic][] in [What is an Object?][] and the [Object][] and [dynamic][] data type pages.
+`dynamic` is more commonly encountered than bare `Object` in flows. See [Object vs dynamic][] in [What is an Object?][] and the [Object][object] and [dynamic][] data type pages.
 
 ## Remarks
 
 ### Value types, reference types, and null
 
-[Value types][] cannot be `null` unless wrapped in [Nullable&lt;T&gt;][]. [Reference types][] can be `null`. A [Set Variable][] block with no [Value][] sets the target variable to `null`.
+[Value types][value types] cannot be `null` unless wrapped in [Nullable&lt;T&gt;][]. [Reference types][reference types] can be `null`. A [Set Variable][] block with no [Value][] sets the target variable to `null`.
 
 For more detail, see [Null and Nullable Types][].
 
 ### Known Limitations
 
-* The [Nullable&lt;T&gt;][] data type page is not yet complete; behaviour follows standard C# nullable value type rules.
 * [Variables][] do not have their own data type. Compatibility is checked when a variable is used in a [block property][]; [dynamic][] values are checked at runtime instead of design time. See [Variable Typing][].
 * Whether two complex objects are equal depends on context (expressions versus [collection blocks][]). See [Object Equality][].
 
@@ -169,7 +168,7 @@ For more detail, see [Null and Nullable Types][].
 ### Related Data Types
 
 * [All Data Types][Data Types]
-* [Object][]
+* [Object][object]
 * [dynamic][]
 * [String][]
 * [Int32][]

@@ -155,8 +155,6 @@ Object equality rules apply wherever a block compares items or keys by value, in
 
 [Data Storage][] blocks that read or write by key (for example [Read Data With Key][] and [Write Data With Key][]) use the same key-matching rule as [Dictionary][] blocks. Keys in a [Data Storage Collection][] are [String][] and are case sensitive.
 
-Individual block pages link here for full matching behaviour. See also [Comparing and matching items][] and [Comparing keys][].
-
 ## Remarks
 
 ### Equality vs assignment
@@ -220,8 +218,6 @@ Comparing to `null` follows C# rules: for reference types, `== null` tests wheth
 [reference equality]: {{< ref "#reference-type-equality" >}}
 [value equal]: {{< ref "#value-type-equality" >}}
 [collection blocks]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.MainDoc" >}}
-[Comparing and matching items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
-[Comparing keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
 [text equality]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
 
 [objects]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.WhatIsAnObject.MainDoc" >}}

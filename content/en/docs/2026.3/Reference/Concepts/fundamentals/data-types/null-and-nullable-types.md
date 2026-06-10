@@ -110,10 +110,10 @@ When a nullable value type holds a value, it behaves like the underlying type fo
 
 ```csharp
 ($)Count = (Int32?)null     // no value
-($)Count = (Int32?)42        // has value 42
-($)Count == null             // true when no value is set
-($)Count.HasValue            // false when null, true when 42
-($)Count.Value               // 42 when HasValue is true
+($)Count = (Int32?)42       // has value 42
+($)Count == null            // true when no value is set
+($)Count.HasValue           // false when null, true when 42
+($)Count.Value              // 42 when HasValue is true
 ```
 
 [Nullable&lt;T&gt;][] only wraps [value types][]. You cannot create `Nullable<String>` — [String][] is already a [reference type][] and can be `null` without a wrapper.
@@ -155,7 +155,6 @@ See [Default values of C# types][MS Default Values] for the full C# rules.
 
 ### Known Limitations
 
-* The [Nullable&lt;T&gt;][] data type page is not yet complete; behaviour follows standard C# nullable value type rules.
 * {{% ctx %}} documentation uses **nullable** to mean "can hold `null`" ([reference types][] and [Nullable&lt;T&gt;][]). This is separate from C# **nullable reference types** (`string?` annotations), which are not described separately in {{% ctx %}} flows.
 * [Variables][] do not have a fixed data type. Whether `null` is valid is checked when the variable is used in a [block property][]; [dynamic][] values are checked at run time. See [Variable Typing][].
 
