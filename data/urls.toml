@@ -3023,6 +3023,7 @@
                     PathTooLongException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.pathtoolongexception"
                 [MSDocs.DotNet.Api.System.Object]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.object"
+                    ReferenceEquals = "https://learn.microsoft.com/en-us/dotnet/api/system.object.referenceequals"
                     ToString = "https://learn.microsoft.com/en-us/dotnet/api/system.object.tostring"
                 [MSDocs.DotNet.Api.System.PriorityQueue]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2"
