@@ -19,8 +19,8 @@ There are two main kinds of equality:
 
 | Kind | Also called | Question answered |
 | --- | --- | --- |
-| [Value equality][] | Equivalence | Do the objects contain the same value or values? |
-| [Reference equality][] | Identity | Do both variables refer to the same instance in memory? |
+| [Value equality][value equality] | Equivalence | Do the objects contain the same value or values? |
+| [Reference equality][reference equality] | Identity | Do both variables refer to the same instance in memory? |
 
 For how value and reference types affect assignment and copying, see [What is an Object?][]. For text-specific comparison rules (culture, case, and ordinal), see [Equality][] under Working with Text — that is separate from object equality on this page.
 
@@ -50,7 +50,7 @@ In the [Expression Editor][], you usually test value equality with `==` or `!=`:
 
 When you assign a value type to another [variable][] with [Set Variable][], each variable holds its own copy. Changing one does not change the other. Equality is still based on the values they contain, not on sharing memory.
 
-[Collection blocks][] use [value equality][] for value-type items and keys — the same rules as C# expressions in practice.
+[Collection blocks][collection blocks] use [value equality][] for value-type items and keys — the same rules as C# expressions in practice.
 
 For general C# guidance, see [Equality comparisons (C#)][MS Equality] and [Value types][MS Value Types].
 
@@ -103,9 +103,9 @@ The [Expression Editor][] supports the standard C# equality and comparison opera
 
 | Mechanism | Typical use | Reference types (default) | Value types |
 | --- | --- | --- | --- |
-| `==` / `!=` | Most comparisons in flows | [Reference equality][] (unless type overrides) | [Value equality][] |
-| `.Equals(other)` | When type defines custom equivalence | Depends on type implementation | [Value equality][] |
-| `Object.ReferenceEquals(a, b)` | Test same instance | [Reference equality][] | Always `false` for two boxed value-type variables |
+| `==` / `!=` | Most comparisons in flows | [Reference equality][reference equality] (unless type overrides) | [Value equality][value equality] |
+| `.Equals(other)` | When type defines custom equivalence | Depends on type implementation | [Value equality][value equality] |
+| `Object.ReferenceEquals(a, b)` | Test same instance | [Reference equality][reference equality] | Always `false` for two boxed value-type variables |
 
 Comparison expressions such as `($)Int1 == ($)Int2` are documented in [Comparison expressions][] in the Expression Editor reference. For operator details, see [Equality Operators][MS Equality Operators].
 
@@ -117,7 +117,7 @@ Block matching uses a different rule from bare C# `==` for reference types:
 
 | Context | How equality is determined |
 | --- | --- |
-| C# syntax in the [Expression Editor][] | [Reference equality][] for reference types and [value equality][] for value types, following standard C# rules (including `==` and `Equals` where applicable). |
+| C# syntax in the [Expression Editor][] | [Reference equality][reference equality] for reference types and [value equality][] for value types, following standard C# rules (including `==` and `Equals` where applicable). |
 | [List][], [Dictionary][], and [Data Storage][] blocks | For reference types, [reference equality][] is tried first; if no matching reference is found, comparison falls back to [value equality][]. For value types, [value equality][] is used. |
 
 ### Why the fallback exists
@@ -192,7 +192,7 @@ Comparing to `null` follows C# rules: for reference types, `== null` tests wheth
 
 ### Related Data Types
 
-* [Object][]
+* [Object][object]
 * [Structure][]
 * [String][]
 * [List&lt;TItem&gt;][]
