@@ -2353,6 +2353,7 @@
             [Cortex.Reference.Exceptions.Concurrency]
                 [Cortex.Reference.Exceptions.Concurrency.Semaphores]
                     [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception"
                         ConcurrencyLimitReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#concurrency-limit-reached"
                         QueueTimeoutReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queue-timeout-reached"
                         Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queued"
