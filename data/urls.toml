@@ -1103,7 +1103,9 @@
                 [Cortex.Reference.Blocks.Data.ExecuteDataCommand]
                     [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
                         MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        CloseConnectionProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#close-connection-property"
                         CommandProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#command"
+                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-command"
                         ConnectionDetailsProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#connection-details"
                         ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
@@ -1807,6 +1809,14 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
+                    [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources]
+                        MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.SqlServer]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/sql-server"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.Oracle]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/oracle"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.Odbc]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/odbc"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
