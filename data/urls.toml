@@ -1224,6 +1224,7 @@
                 [Cortex.Reference.Blocks.Email.SendEmail]
                     [Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer]
                         MainDoc = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block"
+                        CloseSessionProperty = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#close-session-property"
                         SupportedServerAddressFormats = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#supported-formats-for-serverdetailshost"
                         SettingUseSsl = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-usessl"
                         SettingCredentials = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-credentials"
@@ -1833,6 +1834,7 @@
                 [Cortex.Reference.Concepts.WorkingWith.Email]
                     MainDoc = "/docs/reference/concepts/working-with/email/"
                     [Cortex.Reference.Concepts.WorkingWith.Email.Authentication]
+                        MainDoc = "/docs/reference/concepts/working-with/email/authentication/"
                         SettingUpAppPassword = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account"
                         SettingUpOAuthGmail = "/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication"
                         SettingUpClientCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials"
@@ -2035,6 +2037,7 @@
                 [Cortex.Reference.DataTypes.Email.EmailAddress]
                     MainDoc = "/docs/reference/data-types/email/emailaddress"
                     Address = "/docs/reference/data-types/email/emailaddress/#address"
+                    Name = "/docs/reference/data-types/email/emailaddress/#name"
                 [Cortex.Reference.DataTypes.Email.EmailMessage]
                     MainDoc = "/docs/reference/data-types/email/emailmessage"
                     To = "/docs/reference/data-types/email/emailmessage/#to"
