@@ -1817,6 +1817,8 @@
                             MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/oracle"
                         [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.Odbc]
                             MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/odbc"
+                    [Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource]
+                        MainDoc = "/docs/reference/concepts/working-with/data-sources/what-is-a-data-source/"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
@@ -1986,8 +1988,10 @@
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/odbcconnectiondetails/#connection-string"
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/oracleconnectiondetails/#connection-string"
                 [Cortex.Reference.DataTypes.Data.OracleMappingType]
                     MainDoc = "/docs/reference/data-types/data/oraclemappingtype"
                 [Cortex.Reference.DataTypes.Data.OracleParameter]
