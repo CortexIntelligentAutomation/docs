@@ -181,7 +181,6 @@ For incompatible parameter types, [CommandException][] error code [2003][Incompa
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}
 [variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 [connection string]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.ConnectionString" >}}
-[Connection String]: {{< url path="Cortex.Reference.DataTypes.Data.OracleConnectionDetails.ConnectionString" >}}
 
 [Integrated Security]: {{< url path="ConnectionStrings.OracleConnectionIntegratedSecurity" >}}
 [ConnectionStrings.com]: {{< url path="ConnectionStrings.OracleConnection" >}}

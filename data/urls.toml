@@ -2004,6 +2004,7 @@
                     Convert = "/docs/reference/data-types/data/oracleparameters/#convert-oracleparameters-to-text"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/sqlserverconnectiondetails/#connection-string"
             [Cortex.Reference.DataTypes.DateAndTime]
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetime"
