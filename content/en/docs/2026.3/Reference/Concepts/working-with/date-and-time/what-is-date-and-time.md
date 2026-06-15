@@ -11,7 +11,7 @@ weight: 1
 
 Date and time values in {{% ctx %}} are represented by several related data types. Most date and time blocks work with [DateTimeOffset][] values that include a UTC offset. Intervals and durations use [TimeSpan][] or the {{% ctx %}}-specific [TimePeriod][] type. Supporting [enum][] types such as [DayOfWeek][] and [DateTimeComponentType][] are used when extracting or comparing parts of a date and time.
 
-How dates and times are formatted, parsed, and compared depends on [culture][] settings. For format patterns and providers, see [Date and Time Formatting][].
+How dates and times are formatted, parsed, and compared depends on [culture][Culture] settings. For format patterns and providers, see [Date and Time Formatting][].
 
 | Data type | Full name | Purpose | More information |
 | --- | --- | --- | --- |
@@ -19,7 +19,7 @@ How dates and times are formatted, parsed, and compared depends on [culture][] s
 | [DateTime][] | `System.DateTime` | A calendar date and time without a stored UTC offset | [Implicitly cast][Implicit Casting] to `DateTimeOffset` where required |
 | [TimePeriod][] | `Cortex.DataTypes.DateAndTime.TimePeriod` | A calendar-aware interval (years through milliseconds) | Used by add/subtract time period blocks |
 | [TimeSpan][] | `System.TimeSpan` | A fixed elapsed interval (days through milliseconds) | Automatically converted to `TimePeriod` where required |
-| [DayOfWeek][] | `System.DayOfWeek` | A day of the week (`Sunday` through `Saturday`) | [Enum][] used with date components |
+| [DayOfWeek][] | `System.DayOfWeek` | A day of the week (`Sunday` through `Saturday`) | [Enum][enum] used with date components |
 | [DateTimeComponentType][] | `Cortex.DataTypes.DateAndTime.DateTimeComponentType` | Identifies a component of a date and time (for example `Year`, `Month`, `Day`) | Used by [Get Date Time Component][] |
 
 ## DateTime and DateTimeOffset
@@ -55,7 +55,7 @@ Both [TimeSpan][] and [TimePeriod][] represent a length of time, but they model 
 
 A [TimeSpan][] can be supplied wherever a [TimePeriod][] is expected and will be converted automatically. The conversion maps the `TimeSpan` day, hour, minute, second, and millisecond components into the corresponding `TimePeriod` fields; year and month components remain at their default of `0`.
 
-**When to use each type**
+### When to use each type
 
 * Use [TimePeriod][] when adding or subtracting **years** or **months** from a date and time, or when you need the structured year/month/day/hour/minute/second/millisecond components used by date and time blocks.
 * Use [TimeSpan][] for a **fixed elapsed duration** (for example the UTC offset on a [DateTimeOffset][] literal, or a duration expressed only in days and smaller units). For elapsed time between two instants without calendar months or years, [Get Time Period Between Date Times][] returns a `TimePeriod` measured in days and smaller units only (year and month components are not used because their length varies).
@@ -74,7 +74,7 @@ If flows must reflect a specific regional time zone (including DST), convert to 
 
 ## Formatting and parsing
 
-Text representation of date and time values depends on [culture][] and format templates. Common cases include:
+Text representation of date and time values depends on [culture][Culture] and format templates. Common cases include:
 
 * Date and time blocks default to [ISO 8601 Standard][] text for `DateTimeOffset` output.
 * [Convert Text To DateTime][] and [Convert Date Time To Text][] accept optional format template and format provider properties.
