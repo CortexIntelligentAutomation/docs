@@ -1839,6 +1839,8 @@
                         SettingUpOAuthGmail = "/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication"
                         SettingUpClientCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials"
                         SettingUpCertificateCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials"
+                    [Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail]
+                        MainDoc = "/docs/reference/concepts/working-with/email/what-is-email/"
                 [Cortex.Reference.Concepts.WorkingWith.Enums]
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
                     [Cortex.Reference.Concepts.WorkingWith.Enums.WhatIsAnEnum]
