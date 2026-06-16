@@ -265,7 +265,7 @@ Store passwords, client secrets, and certificate passwords as [EncryptedText][] 
 * [Google Cloud Console][]
 * [Microsoft Entra admin center][]
 
-[client credentials setup]: {{< ref "#setting-up-client-credentials-outlook" >}}
+[client credentials setup]: {{< ref "#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials" >}}
 [What is Email?]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}
 
 [Send Email Using SMTP Server]: {{< url path="Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.MainDoc" >}}
