@@ -10,7 +10,7 @@ description: "Information regarding Oracle as a data source, including connectio
 
 In {{% ctx %}}, **Oracle** is a native data source type for connecting directly to Oracle Database. Flows use [OracleConnectionDetails][] with [Execute Data Command][] to open a connection and run [DataCommand][] statements against the database.
 
-{{% ctx %}} connects to Oracle through ADO.NET using the [OracleConnection][] class (`Oracle.ManagedDataAccess.Client`). The connection is configured with a single [connection string][] on [OracleConnectionDetails][]. Parameter binding for advanced scenarios uses [Dapper.Oracle][] types such as [OracleMappingType][]. [CommandException][] messages for Oracle connections use the category `Oracle`.
+{{% ctx %}} connects to Oracle through ADO.NET using the [OracleConnection][] class (`Oracle.ManagedDataAccess.Client`). The connection is configured with a single [connection string][] on [OracleConnectionDetails][]. Parameter binding for advanced scenarios uses Dapper.Oracle types such as [OracleMappingType][]. [CommandException][] messages for Oracle connections use the category `Oracle`.
 
 Prefer [OracleConnectionDetails][] over [OdbcConnectionDetails][] when connecting to Oracle directly. Use [ODBC][] only when a native Oracle connection is not suitable for your environment.
 
@@ -190,4 +190,3 @@ For incompatible parameter types, [CommandException][] error code [2003][Incompa
 
 [OracleConnection]: https://learn.microsoft.com/en-us/dotnet/api/oracle.manageddataaccess.client.oracleconnection
 [DbConnection]: https://learn.microsoft.com/en-us/dotnet/api/system.data.common.dbconnection
-[Dapper.Oracle]: https://github.com/DapperLib/Dapper.Oracle

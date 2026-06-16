@@ -90,7 +90,7 @@ Before OAuth works in a flow:
 1. Create a **service account** ( **IAM & Admin** > **Service Accounts** > **Create service account**).
 1. On the service account, open **Keys** > **Add key** > **Create new key**, choose **P12**, and download the key file. Note the key password Google provides.
 1. Copy the service account **Client ID** (numeric); domain-wide delegation uses this value.
-1. In [Google Workspace Admin console][], open **Security** > **Access and data control** > **API controls** > **Domain-wide delegation** > **Manage Domain Wide Delegation**.
+1. In Google Workspace Admin console, open **Security** > **Access and data control** > **API controls** > **Domain-wide delegation** > **Manage Domain Wide Delegation**.
 1. Add a new API client with:
    * **Client ID** — the service account client ID from step 5.
    * **OAuth scopes** — `https://mail.google.com/`
@@ -123,7 +123,7 @@ new GmailSessionDetails(
 
 For property details and validation errors, see [GmailOAuthCertificateCredentials][] and [EmailSessionException][].
 
-### Setting up an Outlook account for OAuth authentication using client credentials {#setting-up-client-credentials-outlook}
+### Setting up an Outlook account for OAuth authentication using client credentials
 
 Use client credentials when [Send Email Using Microsoft 365][] receives [Microsoft365OAuthCredentials][] as its [Credentials][] property. The block retrieves OAuth access tokens automatically and connects to the [Outlook][] [SMTP][] server.
 
@@ -177,7 +177,7 @@ Use a [variable][] for [Credentials][] when the same token should be reused acro
 
 To send using basic username and password against a non-Microsoft host, use [Send Email Using SMTP Server][] instead.
 
-### Setting up an Outlook account for OAuth authentication using certificate credentials {#setting-up-certificate-credentials-outlook}
+### Setting up an Outlook account for OAuth authentication using certificate credentials
 
 Use certificate credentials when [Send Email Using Microsoft 365][] receives [Microsoft365OAuthCertificateCredentials][] as its [Credentials][] property. This replaces the client secret with an X.509 certificate uploaded to the app registration.
 
@@ -263,7 +263,6 @@ Store passwords, client secrets, and certificate passwords as [EncryptedText][] 
 * [Less Secure Apps][]
 * [Sign in with app passwords][]
 * [Google Cloud Console][]
-* [Google Workspace Admin console][]
 * [Microsoft Entra admin center][]
 
 [client credentials setup]: {{< ref "#setting-up-client-credentials-outlook" >}}
@@ -327,5 +326,4 @@ Store passwords, client secrets, and certificate passwords as [EncryptedText][] 
 [Less Secure Apps]: {{< url path="Google.Authentication.LessSecureApps.MainDoc" >}}
 [Sign in with app passwords]: https://support.google.com/accounts/answer/185833
 [Google Cloud Console]: https://console.cloud.google.com/
-[Google Workspace Admin console]: https://admin.google.com/
 [Microsoft Entra admin center]: https://entra.microsoft.com/
