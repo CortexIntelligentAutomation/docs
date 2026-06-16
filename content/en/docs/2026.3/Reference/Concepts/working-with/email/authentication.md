@@ -25,12 +25,12 @@ Unauthenticated [SMTP][] servers are not supported. For an overview of sessions,
 
 The sections below describe how to prepare provider accounts and map registration details to {{% ctx %}} credential properties. After setup, pass the credentials to the appropriate send-email block as shown in the block reference pages.
 
-### Setting up an app password for a Gmail account {#setting-up-app-password}
+### Setting up an app password for a Gmail account
 
 Use an app password when [Send Email Using Gmail][] authenticates with [UserCredentials][] inside [GmailSessionDetails][].
 
 {{% alert title="Note" %}}
-Gmail does not allow most accounts to send mail with a normal account password. Sending with a username and password currently works only for Google Workspace accounts that still have access enabled for {{< ahref path="Google.Authentication.LessSecureApps.MainDoc" title="less secure apps" >}}. For other accounts, use an **app password** or [OAuth](#setting-up-oauth-gmail).
+Gmail does not allow most accounts to send mail with a normal account password. Sending with a username and password currently works only for Google Workspace accounts that still have access enabled for {{< ahref path="Google.Authentication.LessSecureApps.MainDoc" title="less secure apps" >}}. For other accounts, use an **app password** or [OAuth](#setting-up-an-app-password-for-a-gmail-account).
 {{% /alert %}}
 
 #### Prerequisites
@@ -66,7 +66,7 @@ new GmailSessionDetails(
 
 The [Domain][] property on [UserCredentials][] is ignored by [Send Email Using Gmail][].
 
-### Setting up a Gmail account for OAuth authentication {#setting-up-oauth-gmail}
+### Setting up a Gmail account for OAuth authentication
 
 Use OAuth when [Send Email Using Gmail][] authenticates with [GmailOAuthCertificateCredentials][] inside [GmailSessionDetails][]. The flow is often called **two-legged OAuth**: a service account obtains access without an interactive user sign-in.
 

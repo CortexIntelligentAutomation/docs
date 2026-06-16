@@ -1105,7 +1105,7 @@
                         MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
                         CloseConnectionProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#close-connection-property"
                         CommandProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#command"
-                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-command"
+                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-commands"
                         ConnectionDetailsProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#connection-details"
                         ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
@@ -1224,7 +1224,7 @@
                 [Cortex.Reference.Blocks.Email.SendEmail]
                     [Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer]
                         MainDoc = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block"
-                        CloseSessionProperty = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#close-session-property"
+                        CloseSessionProperty = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#close-session"
                         SupportedServerAddressFormats = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#supported-formats-for-serverdetailshost"
                         SettingUseSsl = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-usessl"
                         SettingCredentials = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-credentials"
