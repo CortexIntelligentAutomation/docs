@@ -19,12 +19,12 @@ weight: 2
 
 For an overview of date and time types and when to use them, see [What is Date and Time?][]. For culture types in general, see [Culture][].
 
-| Topic | Typical choice | More information |
-| --- | --- | --- |
-| Cross-server persistence and block defaults | [Invariant Culture][] | [Invariant Culture](#invariant-culture) |
-| Server-local presentation in expressions | [Current Culture][] | [Current Culture](#current-culture) |
-| Fixed regional format for users | [Specific Culture][] (for example `new CultureInfo("en-GB")`) | [Specific Cultures][] |
-| Round-trip and sortable text | [ISO 8601 Standard][] (`"O"` / `"o"`, `"s"`) | [ISO 8601 Standard](#iso-8601-standard) |
+| Topic | Typical choice |
+| --- | --- |
+| Cross-server persistence and block defaults | [Invariant Culture][] |
+| Server-local presentation in expressions | [Current Culture][] |
+| Fixed regional format for users | [Specific Culture][] (for example `new CultureInfo("en-GB")`) |
+| Round-trip and sortable text | [ISO 8601 Standard][] (`"O"` / `"o"`, `"s"`) |
 
 ## Format providers
 
