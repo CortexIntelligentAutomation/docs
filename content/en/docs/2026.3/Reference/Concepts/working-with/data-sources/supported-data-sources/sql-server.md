@@ -77,7 +77,7 @@ How SQL Server authenticates the connection depends on the [connection string][]
 
 | Goal | Configuration |
 | --- | --- |
-| Connect as the service account | Use a [trusted connection][Trusted Connection] string (`Trusted_Connection=True`) without [Run As][] |
+| Connect as the service account | Use a [trusted connection][Trusted Connection] string (`Trusted_Connection=True`) without [Run As][]. If the [Global RunAs User][] is configured it will run as this rather than the service account.  |
 | Connect as a specific Windows user | Use a [trusted connection][Trusted Connection] string and set [Run As][] on [Execute Data Command][] to [UserCredentials][] for that user |
 | Connect with a SQL login | Use `User Id=` and `Password=` in the [connection string][] |
 
@@ -159,6 +159,7 @@ See [Execute Data Command][] for full [Run As][] requirements.
 [Opening Connections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}#opening-connections
 [Closing Connections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}#closing-connections
 [Run As]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.CommonProperties.RunAsProperty" >}}
+[Global RunAs User]: {{< url path="Cortex.Faqs.ConfigureGlobalRunAs.MainDoc" >}}
 
 [ConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.ConnectionDetails.MainDoc" >}}
 [SqlServerConnectionDetails]: {{< url path="Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails.MainDoc" >}}

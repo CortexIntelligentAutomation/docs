@@ -35,7 +35,7 @@ Both [DateTime][] and [DateTimeOffset][] represent a date and time in the Gregor
 
 A [DateTime][] value can be used wherever a [DateTimeOffset][] is expected and will be [implicitly cast][Implicit Casting]. When a `DateTime` is converted to a `DateTimeOffset`, the offset applied depends on how the `DateTime` was created (for example `DateTime.UtcNow` uses a zero offset, while `DateTime.Now` uses the local offset of the server).
 
-**When to use each type**
+### When to use each type
 
 * Prefer [DateTimeOffset][] when working with date and time blocks, comparing values across offsets, or when the offset must be preserved in persisted or exchanged data.
 * Use [DateTime][] when calling .NET APIs that expect `DateTime`, or when only the calendar date and clock time matter and the offset is handled separately. Be aware that comparisons and arithmetic without an explicit offset can be ambiguous.
