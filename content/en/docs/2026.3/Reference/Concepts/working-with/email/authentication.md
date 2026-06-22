@@ -136,16 +136,16 @@ Register and configure the application in Microsoft Entra ID (Azure AD) before u
 1. Sign in to [Microsoft Entra admin center][] and open **Identity** > **Applications** > **App registrations** > **New registration**.
 1. Enter a name for the application and select the supported account type for your tenant.
 1. Click **Register** and note:
-   * **Application (client) ID** — maps to [ClientId M365][].
-   * **Directory (tenant) ID** — maps to [TenantId M365][].
-1. Open **Certificates & secrets** > **Client secrets** > **New client secret**. Copy the secret **Value** when shown; it maps to [ClientSecret M365][] ([EncryptedText][]).
+   * **Application (client) ID** — maps to [ClientId][ClientId M365].
+   * **Directory (tenant) ID** — maps to [TenantId][TenantId M365].
+1. Open **Certificates & secrets** > **Client secrets** > **New client secret**. Copy the secret **Value** when shown; it maps to [ClientSecret][ClientSecret M365] ([EncryptedText][]).
 1. Open **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**.
 1. Add the permissions required for your tenant to send mail as the application (commonly **Mail.Send**). Grant **admin consent** for the tenant.
 1. Open **Enterprise applications**, locate the registered app, open **Properties**, and set **Assignment required?** according to your organization's policy if users must be assigned to the app.
 
 #### Identify the sending user Object ID
 
-[ObjectId M365][] is the Microsoft Entra **Object ID** of the user whose mailbox sends mail. To find it:
+[ObjectId][ObjectId M365] is the Microsoft Entra **Object ID** of the user whose mailbox sends mail. To find it:
 
 1. In Microsoft Entra admin center, open **Identity** > **Users** > **All users**.
 1. Select the sending user and copy **Object ID**.
@@ -158,10 +158,10 @@ Create [Microsoft365OAuthCredentials][] with the values collected above:
 
 | Property | Source |
 | --- | --- |
-| [ClientId M365][] | Application (client) ID |
-| [ClientSecret M365][] | Client secret value ([EncryptedText][]) |
-| [TenantId M365][] | Directory (tenant) ID |
-| [ObjectId M365][] | Object ID of the sending user |
+| [ClientId][ClientId M365] | Application (client) ID |
+| [ClientSecret][ClientSecret M365] | Client secret value ([EncryptedText][]) |
+| [TenantId][TenantId M365] | Directory (tenant) ID |
+| [ObjectId][ObjectId M365] | Object ID of the sending user |
 
 Example expression:
 
@@ -192,11 +192,11 @@ Use certificate credentials when [Send Email Using Microsoft 365][] receives [Mi
 
 | Property | Source |
 | --- | --- |
-| [CertificatePath M365][] | Path to the `.pfx` (or appropriate) certificate file on the execution server |
-| [CertificatePassword M365][] | Password for the certificate file ([EncryptedText][]) |
-| [ClientId M365 cert][] | Application (client) ID |
-| [TenantId M365 cert][] | Directory (tenant) ID |
-| [ObjectId M365 cert][] | Object ID of the sending user |
+| [CertificatePath][CertificatePath M365] | Path to the `.pfx` (or appropriate) certificate file on the execution server |
+| [CertificatePassword][CertificatePassword M365] | Password for the certificate file ([EncryptedText][]) |
+| [ClientId][ClientId M365 cert] | Application (client) ID |
+| [TenantId][TenantId M365 cert] | Directory (tenant) ID |
+| [ObjectId][ObjectId M365 cert] | Object ID of the sending user |
 
 Example expression:
 
@@ -215,7 +215,7 @@ The certificate file must be readable from the server executing the flow. Invali
 
 ### Encrypting secrets
 
-Store passwords, client secrets, and certificate passwords as [EncryptedText][] before using them in credential constructors or literals. See [EncryptedText][] for how to encrypt values in {{% ctx %}}.
+Store passwords, client secrets, and certificate passwords as [EncryptedText][] before using them in credential constructors or literals.
 
 ### Reusing credentials across blocks
 

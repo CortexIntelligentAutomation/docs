@@ -150,11 +150,11 @@ For full property defaults, exceptions, and examples, see [Send Email Using SMTP
 
 #### Sending only
 
-{{% ctx %}} supports **sending** email over [SMTP][] in this release. There are no blocks or data types for retrieving email over [IMAP][] (mailboxes, folders, read/unread status, or downloaded attachments).
+{{% ctx %}} supports **sending** email over [SMTP][] in this release. There are no blocks or data types for retrieving email over [IMAP][] (mailboxes, folders, read/unread status, or downloaded attachments). This limitation may be removed in a future release.
 
 #### Unauthenticated mail servers
 
-Unauthenticated [SMTP][] servers are not supported. [BasicEmailSessionDetails][] and [Send Email Using SMTP Server][] require credentials. This limitation may be removed in a future release.
+Unauthenticated [SMTP][] servers are not supported. [BasicEmailSessionDetails][] and [Send Email Using SMTP Server][] require credentials.
 
 #### Provider and certificate errors
 
@@ -170,7 +170,6 @@ Send blocks validate attachment paths and [EmailAddress][] values at runtime. In
 
 * [Authentication][]
 * [What is a Variable?][]
-* [What is a Scope?][]
 * [File & Folder Paths][]
 
 ### Related data types

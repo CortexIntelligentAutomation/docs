@@ -46,8 +46,6 @@ Enums are [value types][value type]: assigning an enum from one [variable][] to 
 | Files & Folders | [ContentOptions][] | Options for folder content blocks |
 | Logs | [EventSeverity][] | Severity levels for events |
 
-For a complete list, browse [All Data Types][] or search for pages that reference [Working with Enums][].
-
 ## Working with Enums in Flows
 
 ### Literal Editor
@@ -75,7 +73,7 @@ See [Enum expressions][] in the Expression Editor documentation and the **Create
 
 When [debugging a flow][], enum values are shown in the [Variables Viewer][]:
 
-* In the [Variables List][], a variable holding an enum at its native type is displayed as a [basic data type][] — typically the member name (for example `Sunday` for [DayOfWeek][]).
+* In the [Variables List][], a variable holding an enum is displayed as a [basic data type][] — typically the member name (for example `Sunday` for [DayOfWeek][]).
 * In the [Variable Details Viewer][], the selected variable's name, type, and value are shown in JSON format.
 
 How the value appears in the Variable Details Viewer depends on the stored type:
@@ -158,14 +156,21 @@ Enum member names are fixed C# identifiers (for example `DayOfWeek.Sunday`). The
 
 ### Related Data Types
 
-* [All Data Types][]
-* [DayOfWeek][]
+* [ContentOptions][]
 * [DateTimeComponentType][]
-* [SearchOptions][]
-* [StringSplitOptions][]
+* [DataCommandErrorCode][]
+* [DayOfWeek][]
+* [EmailMessageBodyFormat][]
+* [EmailMessagePriority][]
+* [EventSeverity][]
 * [HttpStatusCode][]
 * [Int32][]
+* [OracleMappingType][]
+* [RequestVerb][]
+* [SearchOptions][]
 * [String][]
+* [StringComparison][]
+* [StringSplitOptions][]
 
 ### Related Blocks
 
@@ -193,7 +198,6 @@ Enum member names are fixed C# identifiers (for example `DayOfWeek.Sunday`). The
 [variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.WhatIsAVariable.MainDoc" >}}
 [variables]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Variables.MainDoc" >}}
 [Object]: {{< url path="Cortex.Reference.DataTypes.All.Object.MainDoc" >}}
-[Working with Enums]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Enums.MainDoc" >}}
 
 [Literal Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
 [Expression Editor]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
