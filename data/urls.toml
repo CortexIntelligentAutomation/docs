@@ -128,6 +128,8 @@
                 DisableCodeAnalyser = "/docs/faqs/configure-code-analyser/multi-server-with-ha/disable-code-analyser"
             [Cortex.Faqs.ConfigureCodeAnalyser.SingleServerWithoutHA]
                 DisableCodeAnalyser = "/docs/faqs/configure-code-analyser/single-server-without-ha/disable-code-analyser"
+        [Cortex.Faqs.ConfigureGlobalRunAs]
+            MainDoc = "/docs/faqs/configure-global-runas/"
         [Cortex.Faqs.ConfigureOidcAuthentication]
             MainDoc = "/docs/faqs/configure-oidc-authentication/"
             [Cortex.Faqs.ConfigureOidcAuthentication.MicrosoftEntra]
@@ -1103,7 +1105,9 @@
                 [Cortex.Reference.Blocks.Data.ExecuteDataCommand]
                     [Cortex.Reference.Blocks.Data.ExecuteDataCommand.ExecuteDataCommand]
                         MainDoc = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1"
+                        CloseConnectionProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#close-connection"
                         CommandProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#command"
+                        ComplexCommands = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#complex-commands"
                         ConnectionDetailsProperty = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#connection-details"
                         ExecutingMultipleCommandsSafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-safe"
                         ExecutingMultipleCommandsUnsafe = "/docs/reference/blocks/data/execute-data-command/execute-data-command-block-1/#executing-multiple-commands-unsafe"
@@ -1222,6 +1226,7 @@
                 [Cortex.Reference.Blocks.Email.SendEmail]
                     [Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer]
                         MainDoc = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block"
+                        CloseSessionProperty = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#close-session"
                         SupportedServerAddressFormats = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#supported-formats-for-serverdetailshost"
                         SettingUseSsl = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-usessl"
                         SettingCredentials = "/docs/reference/blocks/email/send-email/send-email-using-smtp-server-block/#setting-credentials"
@@ -1805,8 +1810,20 @@
                         MainDoc = "/docs/reference/concepts/working-with/culture/current-culture"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.SpecificCultures]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/specific-cultures"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
+                    [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources]
+                        MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.SqlServer]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/sql-server"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.Oracle]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/oracle"
+                        [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources.Odbc]
+                            MainDoc = "/docs/reference/concepts/working-with/data-sources/supported-data-sources/odbc"
+                    [Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource]
+                        MainDoc = "/docs/reference/concepts/working-with/data-sources/what-is-a-data-source/"
                 [Cortex.Reference.Concepts.WorkingWith.DateAndTime]
                     MainDoc = "/docs/reference/concepts/working-with/date-and-time/"
                     [Cortex.Reference.Concepts.WorkingWith.DateAndTime.DateAndTimeFormatting]
@@ -1819,10 +1836,13 @@
                 [Cortex.Reference.Concepts.WorkingWith.Email]
                     MainDoc = "/docs/reference/concepts/working-with/email/"
                     [Cortex.Reference.Concepts.WorkingWith.Email.Authentication]
+                        MainDoc = "/docs/reference/concepts/working-with/email/authentication/"
                         SettingUpAppPassword = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-app-password-for-a-gmail-account"
                         SettingUpOAuthGmail = "/docs/reference/concepts/working-with/email/authentication/#setting-up-a-gmail-account-for-oauth-authentication"
                         SettingUpClientCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-client-credentials"
                         SettingUpCertificateCredentialsOutlook = "/docs/reference/concepts/working-with/email/authentication/#setting-up-an-outlook-account-for-oauth-authentication-using-certificate-credentials"
+                    [Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail]
+                        MainDoc = "/docs/reference/concepts/working-with/email/what-is-email/"
                 [Cortex.Reference.Concepts.WorkingWith.Enums]
                     MainDoc = "/docs/reference/concepts/working-with/enums/"
                     [Cortex.Reference.Concepts.WorkingWith.Enums.WhatIsAnEnum]
@@ -1976,8 +1996,10 @@
                     MainDoc = "/docs/reference/data-types/data/connectiondetails"
                 [Cortex.Reference.DataTypes.Data.OdbcConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/odbcconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/odbcconnectiondetails/#connection-string"
                 [Cortex.Reference.DataTypes.Data.OracleConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/oracleconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/oracleconnectiondetails/#connection-string"
                 [Cortex.Reference.DataTypes.Data.OracleMappingType]
                     MainDoc = "/docs/reference/data-types/data/oraclemappingtype"
                 [Cortex.Reference.DataTypes.Data.OracleParameter]
@@ -1990,6 +2012,7 @@
                     Convert = "/docs/reference/data-types/data/oracleparameters/#convert-oracleparameters-to-text"
                 [Cortex.Reference.DataTypes.Data.SqlServerConnectionDetails]
                     MainDoc = "/docs/reference/data-types/data/sqlserverconnectiondetails"
+                    ConnectionString = "/docs/reference/data-types/data/sqlserverconnectiondetails/#connection-string"
             [Cortex.Reference.DataTypes.DateAndTime]
                 [Cortex.Reference.DataTypes.DateAndTime.DateTime]
                     MainDoc = "/docs/reference/data-types/date-and-time/datetime"
@@ -2018,6 +2041,7 @@
                 [Cortex.Reference.DataTypes.Email.EmailAddress]
                     MainDoc = "/docs/reference/data-types/email/emailaddress"
                     Address = "/docs/reference/data-types/email/emailaddress/#address"
+                    Name = "/docs/reference/data-types/email/emailaddress/#name"
                 [Cortex.Reference.DataTypes.Email.EmailMessage]
                     MainDoc = "/docs/reference/data-types/email/emailmessage"
                     To = "/docs/reference/data-types/email/emailmessage/#to"
@@ -2353,6 +2377,7 @@
             [Cortex.Reference.Exceptions.Concurrency]
                 [Cortex.Reference.Exceptions.Concurrency.Semaphores]
                     [Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException]
+                        MainDoc = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception"
                         ConcurrencyLimitReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#concurrency-limit-reached"
                         QueueTimeoutReached = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queue-timeout-reached"
                         Queued = "/docs/reference/exceptions/concurrency/semaphores/semaphore-could-not-be-acquired-exception/#queued"
@@ -3071,7 +3096,6 @@
         [MSDocs.DotNet.Fundamentals]
             [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
                 CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
-
     [MSDocs.PowerShell]
         WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
