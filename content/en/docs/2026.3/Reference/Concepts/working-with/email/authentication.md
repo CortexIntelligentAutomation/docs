@@ -94,7 +94,7 @@ Before OAuth works in a flow:
 1. Add a new API client with:
    * **Client ID** — the service account client ID from step 5.
    * **OAuth scopes** — `https://mail.google.com/`
-1. Save the delegation entry.
+1. Save the delegation entry by clicking **Authorise**.
 
 Place the `.p12` file on the **server that executes the flow** (or on a UNC path that server can read). See [File & Folder Paths][] and [Certificate Files][] on [Send Email Using Gmail][].
 
@@ -133,7 +133,7 @@ Register and configure the application in Microsoft Entra ID (Azure AD) before u
 
 #### Register an application in Microsoft Entra ID
 
-1. Sign in to [Microsoft Entra admin center][] and open **Identity** > **Applications** > **App registrations** > **New registration**.
+1. Sign in to [Microsoft Entra admin center][] and open **Entra ID** > **App registrations** > **New registration**.
 1. Enter a name for the application and select the supported account type for your tenant.
 1. Click **Register** and note:
    * **Application (client) ID** — maps to [ClientId][ClientId M365].
@@ -141,13 +141,15 @@ Register and configure the application in Microsoft Entra ID (Azure AD) before u
 1. Open **Certificates & secrets** > **Client secrets** > **New client secret**. Copy the secret **Value** when shown; it maps to [ClientSecret][ClientSecret M365] ([EncryptedText][]).
 1. Open **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**.
 1. Add the permissions required for your tenant to send mail as the application (commonly **Mail.Send**). Grant **admin consent** for the tenant.
-1. Open **Enterprise applications**, locate the registered app, open **Properties**, and set **Assignment required?** according to your organization's policy if users must be assigned to the app.
+  {{% alert title="Warning" color="warning" %}}
+  Granting the permission **Mail.Send** allows the application to send an email from any user within the domain. To restrict this apply role based access control. For Microsoft Exchange, follow the instructions provided {{< ahref path="MSDocs.Exchange.RoleBasedAccessControl" title="here" >}}.
+  {{% /alert %}}
 
 #### Identify the sending user Object ID
 
 [ObjectId][ObjectId M365] is the Microsoft Entra **Object ID** of the user whose mailbox sends mail. To find it:
 
-1. In Microsoft Entra admin center, open **Identity** > **Users** > **All users**.
+1. In Microsoft Entra admin center, open **Entra ID** > **Users** > **All users**.
 1. Select the sending user and copy **Object ID**.
 
 The [From][] address on the [EmailMessage][] must be an address the application is permitted to send as. If the application lacks permission, [Send Email Using Microsoft 365][] throws a [ServiceException][].
@@ -183,7 +185,7 @@ Use certificate credentials when [Send Email Using Microsoft 365][] receives [Mi
 
 #### Register an application and upload a certificate
 
-1. Complete app registration in Microsoft Entra ID as in [client credentials setup][], through API permissions and admin consent.
+1. Complete app registration in Microsoft Entra ID as in [client credentials setup][].
 1. Instead of (or in addition to) a client secret, open **Certificates & secrets** > **Certificates** > **Upload certificate**.
 1. Upload a `.cer` or `.pfx` certificate and note any password used when exporting the private key.
 1. Record **Application (client) ID**, **Directory (tenant) ID**, and the sending user's **Object ID** as for client credentials.
