@@ -3096,6 +3096,8 @@
         [MSDocs.DotNet.Fundamentals]
             [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
                 CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
+    [MSDocs.Exchange]
+        RoleBasedAccessControl = "https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac"
     [MSDocs.PowerShell]
         WhatIsPowerShell = "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1"
         InstallModule = "https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.2"
