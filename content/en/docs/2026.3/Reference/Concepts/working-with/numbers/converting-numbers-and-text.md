@@ -114,7 +114,7 @@ Floating-point round-trip: for [Double][], Microsoft recommends `"G17"` (and `"G
 ### External Documentation
 
 * [Parsing numeric strings in .NET][]
-* [Standard numeric format strings][]
+* [Standard numeric format strings][standard numeric format strings]
 * [Convert.ToString][]
 * [Int32.ToString][]
 * [Int32.Parse][]

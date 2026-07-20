@@ -21,7 +21,7 @@ That model matches .NET file and stream I/O in the [System.IO][] namespaces: you
 | [FileInformation][] / [FolderInformation][] | Metadata returned by Get Information blocks (attributes, size, timestamps, and path parts) |
 | [Attributes][] | Flags such as read-only, hidden, or archive on a file or folder |
 
-For path formats, naming rules, and how {{% ctx %}} distinguishes file paths from folder paths, see [Paths][]. For attribute flags, see [Attributes][].
+For path formats, naming rules, and how {{% ctx %}} distinguishes file paths from folder paths, see [Paths][paths]. For attribute flags, see [Attributes][].
 
 ## Working with files and folders in a flow
 
@@ -53,7 +53,7 @@ Failed operations often surface as [OperationFailedException][], with per-path d
 
 ## Paths and where files are resolved
 
-Path strings are interpreted on the **execution server** (or on a UNC share that server can reach), not necessarily on the machine where the flow was designed. Absolute, relative, and UNC forms are supported; see [Paths][] for formats and examples.
+Path strings are interpreted on the **execution server** (or on a UNC share that server can reach), not necessarily on the machine where the flow was designed. Absolute, relative, and UNC forms are supported; see [Paths][paths] for formats and examples.
 
 This is the same rule used for email attachments and other features that take file paths: store inputs and outputs where the Execution Service account can read and write them. See [What is Email?][] for attachment path guidance.
 
@@ -134,7 +134,7 @@ There are currently no dedicated blocks for setting file or folder attributes. R
 ### Related Concepts
 
 * [Files and Folders][]
-* [Paths][]
+* [Paths][paths]
 * [Attributes][]
 * [Encoding][Working with Text - Encoding]
 * [What is a Flow?][]
@@ -188,7 +188,6 @@ There are currently no dedicated blocks for setting file or folder attributes. R
 * [UnauthorizedAccessException][]
 
 [paths]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}
-[Paths]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths.MainDoc" >}}
 [Attributes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Attributes.MainDoc" >}}
 [Files and Folders]: {{< url path="Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.MainDoc" >}}
 [What is a Flow?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}

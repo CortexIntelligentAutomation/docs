@@ -42,17 +42,17 @@ If [Increment][] is `0`, or its sign cannot reach [End Index][] from [Start Inde
 
 ### For Each Loop
 
-The [For Each Loop][] block enumerates every item in a [Collection][] ([List][], [Dictionary][], [Structure][], or any [IEnumerable][]). On each iteration, [Current Iteration][] is a [Structure][] with `"Index"` (zero-based) and `"Value"` (the item; for dictionaries and structures, `"Value"` is itself a key/value pair). The flow exits via the right port while items remain, then via the bottom port when finished; [Current Iteration][] is then cleared.
+The [For Each Loop][] block enumerates every item in a [Collection][collection] ([List][], [Dictionary][], [Structure][], or any [IEnumerable][]). On each iteration, [Current Iteration][] is a [Structure][] with `"Index"` (zero-based) and `"Value"` (the item; for dictionaries and structures, `"Value"` is itself a key/value pair). The flow exits via the right port while items remain, then via the bottom port when finished; [Current Iteration][] is then cleared.
 
 Compared with the other loop types:
 
 * **No manual bounds** — You do not set start, end, or increment; the number of iterations matches the number of items.
-* **Empty collections** — If [Collection][] is empty, the body does not run.
+* **Empty collections** — If [Collection][collection] is empty, the body does not run.
 * **Index is restored** — If you change `"Index"` on [Current Iteration][] during an iteration, it is set back before the next iteration, so you cannot end the loop early by editing the index.
 * **Do not modify the collection** — Do not add, remove, or replace items in the [collection][] while a for each loop is running over it. If the collection must change during iteration, use a [For Loop][] over indexes instead (the same guidance applies to C# `foreach`).
 * **Early exit** — Use a [Decision][Decision Blocks] block in the loop body to leave the loop path when needed.
 
-If [Collection][] is `null`, the block throws [PropertyNullException][].
+If [Collection][collection] is `null`, the block throws [PropertyNullException][].
 
 ### While and do while
 
@@ -104,7 +104,7 @@ An **infinite loop** repeats without ever satisfying its stop condition. That ca
 ### Related Concepts
 
 * [What is a Collection?][]
-* [Indexes][]
+* [Indexes][indexes]
 * [Items][]
 * [What is a Flow?][]
 * [What is an Exception?][]
@@ -148,7 +148,7 @@ An **infinite loop** repeats without ever satisfying its stop condition. That ca
 [End Index]: {{< ref "../../../Blocks/loops/for/for-loop-block.md#end-index" >}}
 [Increment]: {{< ref "../../../Blocks/loops/for/for-loop-block.md#increment" >}}
 [Current Index]: {{< ref "../../../Blocks/loops/for/for-loop-block.md#current-index" >}}
-[Collection]: {{< ref "../../../Blocks/loops/for-each/for-each-loop-block.md#collection" >}}
+[collection]: {{< ref "../../../Blocks/loops/for-each/for-each-loop-block.md#collection" >}}
 [Current Iteration]: {{< ref "../../../Blocks/loops/for-each/for-each-loop-block.md#current-iteration" >}}
 
 [InfiniteLoopException]: {{< url path="Cortex.Reference.Exceptions.Loops.InfiniteLoopException.MainDoc" >}}
@@ -157,8 +157,6 @@ An **infinite loop** repeats without ever satisfying its stop condition. That ca
 [InfiniteLoopErrorCode]: {{< url path="Cortex.Reference.DataTypes.Loops.InfiniteLoopErrorCode.MainDoc" >}}
 
 [What is a Collection?]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.MainDoc" >}}
-[collection]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.WhatIsACollection.MainDoc" >}}
-[Indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [indexes]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Indexes.MainDoc" >}}
 [Items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 [What is a Flow?]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Flows.WhatIsAFlow.MainDoc" >}}
