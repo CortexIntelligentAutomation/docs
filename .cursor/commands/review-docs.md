@@ -14,5 +14,6 @@ Review current doc changes (branch diff or open files).
 7. Heading links: when link text/context names a section, expect a `urls.toml` key whose value includes `#slug` — flag page-level keys used for section topics, and flag `{{< url path="…" >}}#…` footers (fragment belongs in `urls.toml`, not after the shortcode).
 8. Same-page links: flag inline `[…](#…)` anchors; expect footer `[Label]: {{< ref "#slug" >}}` plus reference-style body links with the same exact-case rules as `url`. Flag `{{< ref "…" >}}` that is not `#slug`-only (relative `.md` / `.md#fragment`) — expect `url` + `urls.toml`.
 9. External links: flag plain markdown `[…](https://…)` / `[…](http://…)` and bare URLs; expect `{{< url path="…" >}}` with a key looked up (or added) in `data/urls.toml`.
+10. Alerts: links inside must use `{{< ahref path="…" title="…" >}}` — flag reference-style `url`/`ref`, inline `[…](#…)`, or plain URLs inside alerts. Flag alerts whose first body token is a link (`ahref`); expect plain-text lead-in or reword/omit.
 
 Output: brief bullet list of issues and suggested fixes.

@@ -15,6 +15,8 @@ Read `layouts/shortcodes/*.html` before changing usage.
 | `section` | Path under `{version}/_shared/`; must exist |
 | `url` | Keys from `data/urls.toml` (internal `Cortex.*` and external namespaces). Prefer heading keys (URL includes `#slug`) when linking to a section. Look up existing keys first; never add a second key for the same full target URL (path ± `#fragment`). Never append `#…` after the shortcode. Never plain `[text](https://…)` or bare URLs |
 | `ref` | Hugo built-in (not under `layouts/shortcodes/`). **Same-page `#slug` only**: footer `[Label]: {{< ref "#slug" >}}` — never inline `[text](#slug)`. One def per `#slug`; exact-case labels / `[variant][canonical]` as for `url`. **Never** relative paths (`page.md`, `../foo.md#bar`) — use `url` + a `urls.toml` key that includes any fragment |
+| `ahref` | Inline link for use **inside `alert` only**. Same `urls.toml` keys as `url`; display text via `title`. See [Alerts and `ahref`](#alerts-and-ahref) |
+| `alert` | Callout. Prefer `{{% alert title="…" %}}` … `{{% /alert %}}` (match siblings; `color`/`type` as needed). Links inside: `ahref` only; first word of body cannot be a link |
 | `figure` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 | `image` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 
@@ -25,5 +27,28 @@ Read `layouts/shortcodes/*.html` before changing usage.
 3. Do not invent a “normalized” key from the folder tree (or a new external namespace) when an atypical key already maps there.
 4. Add a new entry only when none exists: brand-new docs pages get a page-level `Cortex.*` key (sibling style); heading destinations get additional sibling-style fragment keys (fragment in the `urls.toml` value); external URLs use matching sibling namespace style (`MSDocs.…`, `GitHub.…`, `Postman.…`, etc.).
 5. Footer is always `[Label]: {{< url path="…" >}}` — never `}}#slug`.
+
+### Alerts and `ahref`
+
+Prefer `{{% alert title="…" %}}` … `{{% /alert %}}` (match siblings; add `color`/`type` when siblings do).
+
+Links **inside** an alert use `{{< ahref path="…" title="…" >}}` only — same `urls.toml` key lookup as `url` (reuse / look up / no duplicate destination). Do **not** use reference-style `[text][]`, footer `url`/`ref`, inline `[text](#…)`, or plain `https://…` inside alerts.
+
+**First word cannot be a link.** The alert body must start with plain text (or omit the link / reword). Do not open the body with `{{< ahref … >}}`.
+
+```markdown
+{{% alert title="Note" %}}
+Some files might fail to be processed with `Access is denied`. This can be ignored.
+{{% /alert %}}
+
+{{% alert title="Note" %}}
+For details, see {{< ahref path="Cortex.Example.MainDoc" title="Prerequisites" >}}.
+{{% /alert %}}
+
+<!-- Bad: first content is a link; reference-style link inside alert -->
+{{% alert title="Note" %}}
+{{< ahref path="Cortex.Example.MainDoc" title="Prerequisites" >}} covers antivirus exclusions.
+{{% /alert %}}
+```
 
 Template edits affect all versions — scope testing accordingly.

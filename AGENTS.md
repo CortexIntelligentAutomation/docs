@@ -49,7 +49,7 @@ Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other
 ## Quality bar
 
 - Procedural, customer-facing tone; preserve frontmatter (`title`, `linkTitle`, `description`, `weight`).
-- Prefer shortcodes over raw HTML; match `{{< url path="…" >}}` for internal **and** external links (never plain `[text](https://…)` or bare URLs).
+- Prefer shortcodes over raw HTML; match `{{< url path="…" >}}` for internal **and** external links (never plain `[text](https://…)` or bare URLs). Exception: inside `alert`, use `{{< ahref path="…" title="…" >}}` — the first word of the alert body cannot be a link.
 - Prefer linking to the relevant heading: same-page via `{{< ref "#slug" >}}`; cross-page via a `urls.toml` key whose URL includes `#slug` — never append `#…` after the `url` shortcode. Use a page-level key only for whole-page references.
 - Scope changes to the version(s) the user requested.
 
