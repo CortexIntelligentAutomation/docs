@@ -35,7 +35,7 @@ For multi-page or cross-version changes, outline affected paths first (which ver
 
 ### Security and ignored paths
 
-Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other `data/**`, CI workflows, secrets, or internal/draft paths. **Exception:** read and update [`data/urls.toml`](data/urls.toml) for link keys — look up existing keys first; do not add a second key that maps to the same page.
+Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other `data/**`, CI workflows, secrets, or internal/draft paths. **Exception:** read and update [`data/urls.toml`](data/urls.toml) for link keys — look up existing keys first; do not add a second key that maps to the same destination (docs page or external URL).
 
 ## Project agent assets
 
@@ -49,7 +49,7 @@ Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other
 ## Quality bar
 
 - Procedural, customer-facing tone; preserve frontmatter (`title`, `linkTitle`, `description`, `weight`).
-- Prefer shortcodes over raw HTML; match `{{< url path="Cortex...." >}}` patterns in the same section.
+- Prefer shortcodes over raw HTML; match `{{< url path="…" >}}` for internal **and** external links (never plain `[text](https://…)` or bare URLs).
 - Scope changes to the version(s) the user requested.
 
 ## What not to do
