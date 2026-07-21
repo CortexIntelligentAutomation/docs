@@ -35,7 +35,7 @@ For multi-page or cross-version changes, outline affected paths first (which ver
 
 ### Security and ignored paths
 
-Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, `data/**`, CI workflows, secrets, or internal/draft paths. If `urls.toml` is needed, ask the user for the relevant key or snippet.
+Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other `data/**`, CI workflows, secrets, or internal/draft paths. **Exception:** read and update [`data/urls.toml`](data/urls.toml) for link keys — look up existing keys first; do not add a second key that maps to the same page.
 
 ## Project agent assets
 
@@ -54,6 +54,6 @@ Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, `data
 
 ## What not to do
 
-- Do not modify `public/`, `node_modules/`, or ignored config/data files.
+- Do not modify `public/`, `node_modules/`, or ignored config/data files (except allowed updates to `data/urls.toml`).
 - Do not invent install commands or CI steps not documented in-repo.
 - Do not remove or weaken `.cursorignore` without explicit user approval.

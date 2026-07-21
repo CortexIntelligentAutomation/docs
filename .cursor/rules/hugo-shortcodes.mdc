@@ -13,8 +13,15 @@ Read `layouts/shortcodes/*.html` before changing usage.
 | `ctx` | Renders CORTEX; not in `title`/`linkTitle` |
 | `version` | Uses `{version}/_shared/currentVersion.md` |
 | `section` | Path under `{version}/_shared/`; must exist |
-| `url` | Keys from `urls.toml` (ignored — ask user for keys) |
+| `url` | Keys from `data/urls.toml` — look up existing keys first; never add a second key for the same page URL |
 | `figure` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 | `image` | `src` under `/images/...`; file in `content/static/{version}/images/` |
+
+### `url` key workflow
+
+1. Grep content for an existing `{{< url path="Cortex...." >}}` to the target; copy that key exactly.
+2. Search `data/urls.toml` for any key whose URL already targets that page (same path ± trailing slash / `_index`).
+3. Do not invent a “normalized” key from the folder tree when an atypical key already maps there.
+4. For brand-new pages only: add at most one new entry, matching sibling key style in that section.
 
 Template edits affect all versions — scope testing accordingly.

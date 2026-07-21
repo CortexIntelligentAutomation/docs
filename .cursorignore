@@ -43,6 +43,9 @@ data/**
 *.toml
 *.csv
 
+# Allow link-key lookup / updates (keep other data/*.toml ignored)
+!data/urls.toml
+
 # Docsy-specific
 # Includes navigation and structure that may leak internal structure
 content/en/docs/internal/**
