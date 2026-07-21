@@ -13,16 +13,17 @@ Read `layouts/shortcodes/*.html` before changing usage.
 | `ctx` | Renders CORTEX; not in `title`/`linkTitle` |
 | `version` | Uses `{version}/_shared/currentVersion.md` |
 | `section` | Path under `{version}/_shared/`; must exist |
-| `url` | Keys from `data/urls.toml` (internal `Cortex.*` and external namespaces). Look up existing keys first; never add a second key for the same target URL. Never plain `[text](https://…)` or bare URLs |
-| `ref` | Hugo built-in (not under `layouts/shortcodes/`). **Same-page `#slug` only**: footer `[Label]: {{< ref "#slug" >}}` — never inline `[text](#slug)`. One def per `#slug`; exact-case labels / `[variant][canonical]` as for `url`. **Never** relative paths (`page.md`, `../foo.md#bar`) — use `url` + `urls.toml` instead |
+| `url` | Keys from `data/urls.toml` (internal `Cortex.*` and external namespaces). Prefer heading keys (URL includes `#slug`) when linking to a section. Look up existing keys first; never add a second key for the same full target URL (path ± `#fragment`). Never append `#…` after the shortcode. Never plain `[text](https://…)` or bare URLs |
+| `ref` | Hugo built-in (not under `layouts/shortcodes/`). **Same-page `#slug` only**: footer `[Label]: {{< ref "#slug" >}}` — never inline `[text](#slug)`. One def per `#slug`; exact-case labels / `[variant][canonical]` as for `url`. **Never** relative paths (`page.md`, `../foo.md#bar`) — use `url` + a `urls.toml` key that includes any fragment |
 | `figure` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 | `image` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 
 ### `url` key workflow
 
 1. Grep content for an existing `{{< url path="…" >}}` to the target; copy that key exactly.
-2. Search `data/urls.toml` for any key whose URL already targets that destination (same path ± trailing slash / `_index` for docs pages; exact `https://` / `http://` for external sites).
+2. Search `data/urls.toml` for any key whose URL already targets that destination (same path ± trailing slash / `_index` for docs pages, **including exact `#fragment` when linking to a heading**; exact `https://` / `http://` for external sites). Page-without-fragment and `page#slug` are different destinations.
 3. Do not invent a “normalized” key from the folder tree (or a new external namespace) when an atypical key already maps there.
-4. Add a new entry only when none exists: brand-new docs pages get at most one `Cortex.*` key (sibling style); external URLs use matching sibling namespace style (`MSDocs.…`, `GitHub.…`, `Postman.…`, etc.).
+4. Add a new entry only when none exists: brand-new docs pages get a page-level `Cortex.*` key (sibling style); heading destinations get additional sibling-style fragment keys (fragment in the `urls.toml` value); external URLs use matching sibling namespace style (`MSDocs.…`, `GitHub.…`, `Postman.…`, etc.).
+5. Footer is always `[Label]: {{< url path="…" >}}` — never `}}#slug`.
 
 Template edits affect all versions — scope testing accordingly.

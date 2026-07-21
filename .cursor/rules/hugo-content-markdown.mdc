@@ -17,40 +17,60 @@ Every navigable link—docs pages **and** third-party / external sites—uses a 
 
 Keys live in [`data/urls.toml`](../../data/urls.toml): internal docs under `Cortex.*`, external destinations under other top-level namespaces (e.g. `MSDocs.…`, `GitHub.…`, `Postman.…`, `Wikipedia.…`, `W3.…`).
 
+### Prefer heading keys
+
+When link text or context targets a **specific section/topic** on another page, link to that heading—not the page top:
+
+1. Confirm the target heading and its Hugo anchor slug on the destination page.
+2. Look up [`data/urls.toml`](../../data/urls.toml) for a key whose URL is that page path **including** `#slug`.
+3. If none exists, add a sibling-style key under that page’s namespace with the fragment in the value (e.g. `ViewClusterHealth`, `AntivirusExclusions`). Page-without-fragment and `page#slug` are **different** destinations — a new fragment key is allowed and expected.
+4. Footer: `[Label]: {{< url path="Cortex.…HeadingKey" >}}` only. **Never** append `#…` after the shortcode (`}}#slug` is forbidden).
+5. Use a page-level key (`MainDoc` or equivalent, no fragment) only when the reference is to the page as a whole.
+
 ### Choosing a `urls.toml` key
 
 1. **Reuse before invent** — Grep content for an existing `{{< url path="…" >}}` to the target; copy that key **exactly**.
-2. **Look up before add** — Search [`data/urls.toml`](../../data/urls.toml) for any key whose URL already targets that destination (same path ± trailing slash / `_index` for internal pages; exact `https://` / `http://` URL for external sites).
+2. **Look up before add** — Search [`data/urls.toml`](../../data/urls.toml) for any key whose URL already targets that destination (same path ± trailing slash / `_index` for internal pages, **including exact `#fragment` when present**; exact `https://` / `http://` URL for external sites).
 3. **Never “normalize”** — Do not invent a parallel key that mirrors the folder tree (or a new external namespace) when an atypical key already points at the same URL (e.g. historical suffixes like `New`).
-4. **New destinations only** — Add a new `urls.toml` entry only when none maps there: at most one per new docs page (`Cortex.*`, sibling key style); for external URLs, match sibling namespace style in that section (`MSDocs.…`, `Postman.…`, etc.). Confirm no existing value already maps to that URL.
+4. **New destinations only** — Add a new `urls.toml` entry only when none maps there: new docs pages get a page-level `Cortex.*` key (sibling style); heading destinations get additional fragment keys as needed; for external URLs, match sibling namespace style in that section (`MSDocs.…`, `Postman.…`, etc.). Confirm no existing value already maps to that full URL (path ± fragment).
 
 ### Page footers
 
 - **One definition per `urls.toml` path** on the page. Do not add a second `[OtherText]: {{< url path="same…" >}}` for the same path.
-- Prefer a stable canonical label (usually the See Also / page title form, e.g. `items`, `Keys`).
+- **Never** write `[Label]: {{< url path="…" >}}#slug` — put the fragment in `urls.toml` and use a normal `url` shortcode.
+- Prefer a stable canonical label (usually the See Also / page title / heading form, e.g. `items`, `Keys`, `Antivirus exclusions`).
 - Implicit `[Label][]` only when `Label` matches the definition label **exactly** (including case). Case mismatches warn in markdown tooling — do not rely on case-insensitive resolution.
 - When display text differs in wording **or** case, use `[variant text][canonical]` so the second bracket matches the definition label’s case exactly.
 
 ```markdown
-<!-- Good: one definition; shared label when wording/case differs -->
-… called [items][] … each [item][items] … see [Items][items] …
+<!-- Good: heading key when the topic is a section; page key for whole-page refs -->
+… see [Antivirus exclusions][] …
+… see [Prerequisites][] …
 … download [Postman][] …
 
-[items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
+[Antivirus exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.AntivirusExclusions" >}}
+[Prerequisites]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
 [Postman]: {{< url path="Postman.Downloads.MainDoc" >}}
 
-<!-- Bad: plain markdown / bare external URLs; duplicate defs; case-mismatched implicit refs -->
+<!-- Bad: section topic → page key only; fragment after shortcode; plain/bare URLs; duplicate defs; case-mismatched implicit refs -->
 … [Postman](https://www.postman.com/downloads/) …
 … https://learn.microsoft.com/en-us/dotnet/ …
+[Antivirus exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}
+[Antivirus exclusions]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.SingleServerWithoutHA.Prerequisites" >}}#antivirus-exclusions
 [Items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
 [item]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
+```
+
+```toml
+# urls.toml — fragment is part of the value (never appended in the markdown footer)
+AntivirusExclusions = "/docs/getting-started/on-premise/install-innovation-only/single-server-without-ha/prerequisites#antivirus-exclusions"
 ```
 
 ## Same-page `ref` links
 
 Links to headings or fragments **on the current page** use reference definitions with Hugo’s built-in `{{< ref "#slug" >}}`, then the same in-body pattern as `url` links. Pattern: `content/en/docs/2026.3/Reference/Concepts/working-with/concurrency/semaphores/what-is-a-semaphore.md`.
 
-- **`ref` is `#slug` only.** Do not use `ref` with relative paths (`other-page.md`, `../foo.md#bar`, or `page.md#fragment`). Cross-page targets (including fragments on other pages) and external sites use `{{< url path="…" >}}` — look up or add a key in `data/urls.toml` per the `url` workflow above.
+- **`ref` is `#slug` only.** Do not use `ref` with relative paths (`other-page.md`, `../foo.md#bar`, or `page.md#fragment`). Cross-page targets (including headings on other pages) and external sites use `{{< url path="…" >}}` with a `urls.toml` key that includes any `#fragment` — never append `#` after the shortcode.
 - **Never** write inline `[text](#slug)`. Always add a footer definition and reference it.
 - **One definition per anchor** on the page. Do not add a second `[OtherText]: {{< ref "#same-slug" >}}` for the same fragment.
 - Prefer a stable canonical label (usually the heading text form, e.g. `Queuing Semaphore`).
