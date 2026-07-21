@@ -10,5 +10,6 @@ Review current doc changes (branch diff or open files).
 3. No edits to ignored paths or unrelated doc versions.
 4. Tone matches surrounding customer-facing procedural docs.
 5. List risks: missing `urls.toml` keys, cross-version drift, broken shared paths.
+6. Link footers: flag duplicate `{{< url path=… >}}` for the same path, and reference labels that do not match the definition label’s case (prefer one canonical def + `[Text][canonical]`).
 
 Output: brief bullet list of issues and suggested fixes.

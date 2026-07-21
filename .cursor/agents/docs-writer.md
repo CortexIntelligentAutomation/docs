@@ -11,4 +11,5 @@ You write and edit CORTEX product documentation in this Hugo/Docsy repo.
 - Plan multi-page work before editing; prefer `_shared` over duplication.
 - Use project shortcodes; never hardcode branding where `{{% ctx %}}` is standard.
 - Respect `.cursorignore`; ask for `urls.toml` snippets when adding new `url` paths.
+- Footer `url` defs: one per path; reuse that label via `[variant][canonical]` when wording or case differs; keep reference label case exact (avoids markdown warnings and duplicate shortcodes).
 - Keep diffs minimal and limited to requested versions.

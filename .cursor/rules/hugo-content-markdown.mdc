@@ -9,5 +9,24 @@ alwaysApply: false
 - Frontmatter: `title`, `linkTitle`, `description`, `weight`.
 - Literal CORTEX in `title`/`linkTitle`; `{{% ctx %}}` in body where siblings do.
 - Reuse `_shared` + `{{< section "/path.md" >}}` instead of copy-paste.
-- Internal links: `{{< url path="Cortex...." >}}` like neighboring pages.
 - Procedural tone; no drive-by edits across doc versions.
+
+## Reference-style `url` links
+
+Internal links use reference definitions with `{{< url path="Cortex...." >}}`, matching neighboring pages.
+
+- **One definition per `urls.toml` path** on the page. Do not add a second `[OtherText]: {{< url path="same…" >}}` for the same path.
+- Prefer a stable canonical label (usually the See Also / page title form, e.g. `items`, `Keys`).
+- Implicit `[Label][]` only when `Label` matches the definition label **exactly** (including case). Case mismatches warn in markdown tooling — do not rely on case-insensitive resolution.
+- When display text differs in wording **or** case, use `[variant text][canonical]` so the second bracket matches the definition label’s case exactly.
+
+```markdown
+<!-- Good: one definition; shared label when wording/case differs -->
+… called [items][] … each [item][items] … see [Items][items] …
+
+[items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
+
+<!-- Bad: duplicate defs for the same path; case-mismatched implicit refs -->
+[Items]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
+[item]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Items.MainDoc" >}}
+```

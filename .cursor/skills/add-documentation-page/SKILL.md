@@ -16,7 +16,7 @@ description: Add a new Hugo documentation page under a versioned CORTEX docs sec
 2. Set `weight` relative to neighbors (lower = earlier in sidebar).
 3. Use literal CORTEX in `title`/`linkTitle`; `{{% ctx %}}` in body.
 4. For install/guide style, use `# {{% param title %}}` and match callouts (`pageinfo`, `alert`).
-5. Add next-step links with `{{< url path="Cortex...." >}}` — reuse keys from sibling pages.
+5. Add next-step links with `{{< url path="Cortex...." >}}` — reuse keys from sibling pages. One footer definition per path; use `[variant][canonical]` when wording or case differs (exact case match on the shared label).
 6. If content repeats across pages, add `{version}/_shared/...` and `{{< section "/path.md" >}}` instead.
 7. Do not edit other version trees unless requested.
 
@@ -24,5 +24,5 @@ description: Add a new Hugo documentation page under a versioned CORTEX docs sec
 
 - [ ] Frontmatter complete
 - [ ] Branding matches `ctx` convention
-- [ ] Links follow section `url` patterns
+- [ ] Links follow section `url` patterns; footers dedupe by path with shared labels (exact case)
 - [ ] Scope limited to requested version
