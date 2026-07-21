@@ -44,6 +44,7 @@ Internal links use reference definitions with `{{< url path="Cortex...." >}}`, m
 
 Links to headings or fragments **on the current page** use reference definitions with Hugo’s built-in `{{< ref "#slug" >}}`, then the same in-body pattern as `url` links. Pattern: `content/en/docs/2026.3/Reference/Concepts/working-with/concurrency/semaphores/what-is-a-semaphore.md`.
 
+- **`ref` is `#slug` only.** Do not use `ref` with relative paths (`other-page.md`, `../foo.md#bar`, or `page.md#fragment`). Cross-page targets (including fragments on other pages) use `{{< url path="Cortex...." >}}` — look up or add a key in `data/urls.toml` per the `url` workflow above.
 - **Never** write inline `[text](#slug)`. Always add a footer definition and reference it.
 - **One definition per anchor** on the page. Do not add a second `[OtherText]: {{< ref "#same-slug" >}}` for the same fragment.
 - Prefer a stable canonical label (usually the heading text form, e.g. `Queuing Semaphore`).
@@ -58,8 +59,9 @@ Links to headings or fragments **on the current page** use reference definitions
 [Queuing Semaphore]: {{< ref "#queuing-semaphore" >}}
 [Non-Queuing Semaphore]: {{< ref "#non-queuing-semaphore" >}}
 
-<!-- Bad: inline same-page anchors; duplicate defs; case-mismatched implicit refs -->
+<!-- Bad: inline same-page anchors; duplicate defs; case-mismatched implicit refs; relative ref paths -->
 … [Queuing Semaphore](#queuing-semaphore) …
 [queuing semaphore]: {{< ref "#queuing-semaphore" >}}
 [Queuing Semaphore]: {{< ref "#queuing-semaphore" >}}
+[value type]: {{< ref "what-is-a-data-type.md#value-types" >}}
 ```
