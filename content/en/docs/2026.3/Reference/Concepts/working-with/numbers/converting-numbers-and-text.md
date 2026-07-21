@@ -76,11 +76,21 @@ Floating-point round-trip: for [Double][], Microsoft recommends `"G17"` (and `"G
 
 ## Remarks
 
+### ToString() Without a Provider
+
+Expression `ToString()` without a provider follows [Current Culture][]; many formatting blocks default to [Invariant Culture][]. Mixing them can produce different decimal separators for the same value.
+
+### Parsing
+
+Parsing must use a culture consistent with how the text was produced.
+
+### Casting Text
+
+Casting text is not valid—`"(Int32)"abc""` does not parse; use `Parse` / `Convert` / blocks.
+
 ### Known Limitations
 
-* Expression `ToString()` without a provider follows [Current Culture][]; many formatting blocks default to [Invariant Culture][]. Mixing them can produce different decimal separators for the same value.
-* Parsing must use a culture consistent with how the text was produced.
-* Casting text is not valid—`"(Int32)"abc""` does not parse; use `Parse` / `Convert` / blocks.
+None
 
 ## See Also
 

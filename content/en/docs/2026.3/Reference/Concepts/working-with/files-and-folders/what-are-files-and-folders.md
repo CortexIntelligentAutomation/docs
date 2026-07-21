@@ -1,7 +1,7 @@
 ---
 title: "What are Files and Folders?"
 linkTitle: "What are Files and Folders?"
-description: "How flows work with files and folders on the execution server, including paths, common operations, encodings, environment variables, and best practices."
+description: "How flows work with files and folders, including paths, common operations, encodings, environment variables, and best practices."
 weight: 1
 ---
 
@@ -9,9 +9,9 @@ weight: 1
 
 ## Summary
 
-In {{% ctx %}}, a **file** is a named collection of bytes stored on disk (or a network share), and a **folder** (also called a directory) is a container that holds files and other folders. Flows do not browse the designer's local disks by default; Files & Folders blocks resolve [paths][] and perform I/O on the **server that executes the flow**.
+In {{% ctx %}}, a **file** is a named collection of bytes stored on disk (or a network share), and a **folder** (also called a directory) is a container that holds files and other folders. Files & Folders blocks resolve [paths][] and perform I/O on the **server that executes the flow**.
 
-That model matches .NET file and stream I/O in the [System.IO][] namespaces: you work with paths, file and directory names, and disk (or share) storage. {{% ctx %}} wraps common tasks in blocks and data types so flows can check, create, copy, move, delete, read, write, and search files and folders consistently.
+{{% ctx %}} wraps common tasks in blocks and data types so flows can check, create, copy, move, delete, read, write, and search files and folders consistently.
 
 | Term | Meaning |
 | --- | --- |

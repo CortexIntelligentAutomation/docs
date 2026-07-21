@@ -14,17 +14,7 @@ In {{% ctx %}}, **scope** means more than one thing. The same word appears when 
 | Kind of scope | What it controls | Typical use |
 | --- | --- | --- |
 | [Resource scopes][Resource Scopes] | Which tenant, system, package, and flow share a named platform resource | [Collection Scope][] on data storage blocks; [Scope][Semaphore Scope] on [SemaphoreSettings][] |
-| [Variable scopes][] | Which [workspace][] a [variable][] belongs to, where it can be used, and when it is deleted | Variables Grid, [Variable Editor][]; connections and sessions that close when a variable goes out of scope |
-
-If another topic links here for **collection scope**, it means a [resource scope][Resource Scopes] defined with [ScopeDefinition][]. If it links here because a **variable goes out of scope**, it means a [variable scope][Variable scopes]: execution has left the workspace where that variable was declared.
-
-| Term | Meaning |
-| --- | --- |
-| [ScopeDefinition][] | Declares how each resource-scope level (Tenant, System, Package, Flow) should resolve — using [ScopeOption][] (`Current` or `All`) |
-| [ScopeOption][] | Enum value for one level of a [ScopeDefinition][]: `All` (`0`) or `Current` (`1`) |
-| [Scope][] | The resolved resource scope (concrete tenant, system, package, and flow strings) produced from a [ScopeDefinition][] |
-
-Resource scopes are a {{% ctx %}} platform concept represented by those data types. They do not map one-to-one to a single .NET type. Variable scopes are closer to [local variable / block scope][MS C# Scopes] in C#: visibility follows the workspace hierarchy, and leaving a workspace ends the lifetime of variables declared there (similar in spirit to disposing resources at the end of a [`using`][MS using] block when those resources are held in variables).
+| [Variable scopes][Variable Scopes] | Which [workspace][] a [variable][] belongs to, where it can be used, and when it is deleted | Variables Grid, [Variable Editor][]; connections and sessions that close when a variable goes out of scope |
 
 ## Types of Scopes
 
@@ -95,8 +85,6 @@ Resources held in variables — for example [email][] sessions or [data source][
 ### External Documentation
 
 * [Basic concepts — Scopes (C# language specification)][MS C# Scopes]
-* [Exercise — Variable scope (C#)][MS Variable Scope Training]
-* [using statement (C#)][MS using]
 
 [Resource Scopes]: {{< ref "resource-scopes.md" >}}
 [Variable Scopes]: {{< ref "variable-scopes.md" >}}
@@ -132,6 +120,4 @@ Resources held in variables — for example [email][] sessions or [data source][
 [SemaphoreCouldNotBeAcquiredException]: {{< url path="Cortex.Reference.Exceptions.Concurrency.Semaphores.SemaphoreCouldNotBeAcquiredException.MainDoc" >}}
 [DataStorageCollectionNotFoundException]: {{< url path="Cortex.Reference.Exceptions.DataStorage.DataStorageCollectionNotFoundException.MainDoc" >}}
 
-[MS C# Scopes]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/basic-concepts
-[MS Variable Scope Training]: https://learn.microsoft.com/en-us/training/modules/csharp-code-blocks/2-exercise-variable-scope
-[MS using]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using
+[MS C# Scopes]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/basic-concepts#77-scopes

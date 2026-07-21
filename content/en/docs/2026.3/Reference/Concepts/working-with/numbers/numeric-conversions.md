@@ -61,7 +61,7 @@ Do not rely on floating-point-to-integer casts for financial rounding; use `Math
 
 ### Converting with Convert
 
-`System.Convert` methods (`Convert.ToInt32`, `Convert.ToDouble`, and so on) convert between many types, including from [String][]. They apply their own rounding and overflow rules (for example `Convert.ToInt32(1.5)` rounds to even in some cases). Prefer documenting the specific overload you use; see [Convert Class][].
+`System.Convert` methods (`Convert.ToInt32`, `Convert.ToDouble`, and so on) convert between many types, including from [String][]. They apply their own rounding and overflow rules. Prefer documenting the specific overload you use; see [Convert Class][].
 
 Casting and `Convert` are not identical—for fractional doubles, `(Int32)value` truncates, while `Convert.ToInt32(value)` rounds.
 
@@ -78,7 +78,6 @@ Casting and `Convert` are not identical—for fractional doubles, `(Int32)value`
 
 ### Known Limitations
 
-* Each type's **Can be cast to** table states the supported targets and value-range constraints; unsupported conversions fail at design time or run time.
 * Floating-point widening ([Single][] → [Double][]) preserves the value but does not create more precision than the original [Single][] had.
 * Recovering a number stored as [Object][] requires an explicit cast to the concrete numeric type. Values typed as [dynamic][] usually do not need a cast for member access. See [Object Casting][].
 

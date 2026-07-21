@@ -76,9 +76,7 @@ Numbers appear throughout flows:
 
 ### Known Limitations
 
-* {{% ctx %}} Numbers documentation focuses on [Int16][], [Int32][], [Int64][], [Single][], and [Double][]. Other C# numeric types (unsigned integrals, `decimal`, native-sized integers) may appear in .NET APIs but lack dedicated data type pages here.
-* Floating-point arithmetic can introduce rounding error; equality comparisons between [Single][] or [Double][] values calculated differently may fail unexpectedly. See [Operators and Comparisons][].
-* Formatting and parsing of numeric text depend on [culture][Culture]; block defaults often use [Invariant Culture][], while expression `ToString()` / `Parse` without a provider often use [Current Culture][]. See [Number Formatting][].
+None
 
 ## See Also
 
@@ -128,8 +126,6 @@ Numbers appear throughout flows:
 
 [Object Casting]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectCasting.MainDoc" >}}
 [Culture]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Culture.MainDoc" >}}
-[Invariant Culture]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture.MainDoc" >}}
-[Current Culture]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture.MainDoc" >}}
 
 [Int16]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int16.MainDoc" >}}
 [Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}

@@ -99,8 +99,6 @@ Special values:
 ### Known Limitations
 
 * Default overflow behaviour in expressions is **unchecked** wrapping for integers unless you use `checked`.
-* Integer division truncates; needing a fractional result requires a floating-point operand or cast.
-* Exact equality of floating-point results is often unreliable after arithmetic.
 
 ## See Also
 
