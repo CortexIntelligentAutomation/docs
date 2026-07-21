@@ -14,6 +14,7 @@ Read `layouts/shortcodes/*.html` before changing usage.
 | `version` | Uses `{version}/_shared/currentVersion.md` |
 | `section` | Path under `{version}/_shared/`; must exist |
 | `url` | Keys from `data/urls.toml` — look up existing keys first; never add a second key for the same page URL |
+| `ref` | Hugo built-in (not under `layouts/shortcodes/`). Same-page headings: footer `[Label]: {{< ref "#slug" >}}` — never inline `[text](#slug)`. One def per `#slug`; exact-case labels / `[variant][canonical]` as for `url`. Also relative `.md` / `.md#fragment` when neighboring pages already use that pattern |
 | `figure` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 | `image` | `src` under `/images/...`; file in `content/static/{version}/images/` |
 
