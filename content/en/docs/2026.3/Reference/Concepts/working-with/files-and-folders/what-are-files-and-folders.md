@@ -95,16 +95,10 @@ Windows exposes well-known directories through environment variables. Use them s
 | `%SystemRoot%` / `%WINDIR%` | Windows installation directory |
 | `%ProgramFiles%` / `%ProgramFiles(x86)%` | Installed programs |
 
-Some platform settings (for example the [Log Event][] block default log `path`) accept `%ProgramData%` inline and expand it. Files & Folders block path properties expect a resolved path string. In the [Expression Editor][], expand variables with .NET before passing the path to a block—for example:
+Some platform settings (for example the [Log Event][] block default log `path`) accept `%ProgramData%` inline and expand it. Files & Folders block path properties expect a resolved path string. In the [Expression Editor][], expand variables with .NET before passing the path to a block — for example:
 
 ```csharp
-Environment.ExpandEnvironmentVariables(@"%ProgramData%\MyOrg\FlowData\output.txt")
-```
-
-or:
-
-```csharp
-System.IO.Path.Combine(Environment.GetEnvironmentVariable("TEMP"), "flow-work", "scratch.txt")
+Environment.ExpandEnvironmentVariables(@"%ProgramData%\\MyOrg\\output.txt")
 ```
 
 For expansion behaviour, see [Environment.ExpandEnvironmentVariables][].

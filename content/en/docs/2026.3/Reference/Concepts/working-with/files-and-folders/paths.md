@@ -115,19 +115,13 @@ For the full Microsoft wording and namespace notes (`\\?\`, Win32 device namespa
 
 ## Building and expanding paths in expressions
 
-Files & Folders path properties expect a **resolved** path string. They do not expand `%ProgramData%`-style tokens inline the way some platform settings do. In the [Expression Editor][], build or expand paths with .NET—for example:
+Files & Folders path properties expect a **resolved** path string. They do not expand `%ProgramData%`-style tokens inline the way some platform settings do. In the [Expression Editor][], expand paths with .NET — for example:
 
 ```csharp
 Environment.ExpandEnvironmentVariables(@"%ProgramData%\MyOrg\FlowData\output.txt")
 ```
 
-or:
-
-```csharp
-System.IO.Path.Combine(Environment.GetEnvironmentVariable("TEMP"), "flow-work", "scratch.txt")
-```
-
-`Path.Combine` joins segments using the platform directory separator. Prefer it over concatenating `"\\"` manually so relative segments compose correctly. See [What are Files and Folders?][] for common environment variables and [Environment.ExpandEnvironmentVariables][] for expansion behaviour.
+See [What are Files and Folders?][] for common environment variables and [Environment.ExpandEnvironmentVariables][] for expansion behaviour.
 
 ## Remarks
 
