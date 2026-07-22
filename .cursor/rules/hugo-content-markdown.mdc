@@ -93,3 +93,54 @@ Links to headings or fragments **on the current page** use reference definitions
 [Queuing Semaphore]: {{< ref "#queuing-semaphore" >}}
 [value type]: {{< ref "what-is-a-data-type.md#value-types" >}}
 ```
+
+## Remarks and Known Limitations
+
+When a page has a Remarks section, use this structure (match siblings such as `content/en/docs/2026.3/Reference/Blocks/Text/contains-text/contains-text-block.md`):
+
+```markdown
+## Remarks
+
+### <Topic heading for a general remark>
+…
+
+### <Another remark topic>
+…
+
+### Known Limitations
+
+- …
+- …
+```
+
+Classify each item before placing it:
+
+| Kind | Placement |
+| --- | --- |
+| **Limitation** — a real constraint, gap, or unsupported/edge-case behavior (often “cannot”, “only supports”, “not evaluated as equal”, “may be removed in future”) | Under `### Known Limitations` as a **bullet list**. Do **not** use `####` or other nested headings under Known Limitations |
+| **Remark** — general functional behavior, null/empty handling, inclusive indexes, scope notes, or other expected “how it works” clarifications | Own `###` heading under `## Remarks` — **not** under Known Limitations |
+| **Unclear** | **Ask the user** whether the item is a remark or a limitation before writing or moving it |
+
+Do not put general remarks under Known Limitations. Do not invent a top-level `## Known Limitations` when siblings use `### Known Limitations` under Remarks. Do not nest headings under Known Limitations.
+
+```markdown
+<!-- Good: remarks as own headings; limitations as a bullet list -->
+## Remarks
+
+### Null or empty Text
+
+If [Text][Text Property] is `null` or empty (i.e. `""`), … is set to `false`.
+
+### Known Limitations
+
+- If [Search Options]… is `SearchOptions.Regex` … some characters … may not evaluate as equal.
+
+<!-- Bad: expected behavior dumped under Known Limitations; nested headings for limitations -->
+## Remarks
+
+### Known Limitations
+
+#### Null or empty Text
+
+If [Text][Text Property] is `null` or empty, … is set to `false`.
+```

@@ -27,4 +27,5 @@ description: Add a new Hugo documentation page under a versioned CORTEX docs sec
 - [ ] Cross-page and external links: keys reused or looked up in `data/urls.toml`; section topics use heading keys (`#slug` in the value); no `}}#…` footers; no plain `[…](https://…)`; no duplicate target URLs; footers dedupe by path with shared labels (exact case)
 - [ ] Same-page links: `ref` footers (`#slug`), not inline `[…](#…)`; one def per anchor; exact-case labels / `[variant][canonical]`
 - [ ] New page gets a page-level `urls.toml` key; heading destinations get fragment keys as needed; external keys only when the URL is new
+- [ ] If the page has Remarks / Known Limitations: remarks are own `###` headings under `## Remarks`; only real constraints under `### Known Limitations` as a bullet list (no nested headings); ask the user when classification is unclear
 - [ ] Scope limited to requested version

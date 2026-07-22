@@ -29,3 +29,12 @@ weight: 10
 - Match siblings: `# {{% param title %}}`, `pageinfo`, `alert`, `figure`, `url`, `section`, `tab`/`tabpane`.
 - Search `{version}/_shared/` before duplicating paragraphs.
 - Do not edit other version folders unless explicitly asked.
+
+### Remarks and Known Limitations
+
+When a page uses these sections (match siblings such as `content/en/docs/2026.3/Reference/Blocks/Text/contains-text/contains-text-block.md`):
+
+- Structure: `## Remarks` → each general remark as its own `###` heading → `### Known Limitations` for real constraints only (bullet list; no nested headings).
+- **Remark** — expected functional behavior (null/empty handling, scope, inclusive indexes, “how it works”). Own `###` under Remarks — never under Known Limitations.
+- **Limitation** — real constraint, gap, or unsupported/edge-case behavior. Under `### Known Limitations` as a bullet list (no `####` or other subheadings).
+- **Unclear** — ask whether the item is a remark or a limitation before writing or moving it.

@@ -15,5 +15,6 @@ Review current doc changes (branch diff or open files).
 8. Same-page links: flag inline `[…](#…)` anchors; expect footer `[Label]: {{< ref "#slug" >}}` plus reference-style body links with the same exact-case rules as `url`. Flag `{{< ref "…" >}}` that is not `#slug`-only (relative `.md` / `.md#fragment`) — expect `url` + `urls.toml`.
 9. External links: flag plain markdown `[…](https://…)` / `[…](http://…)` and bare URLs; expect `{{< url path="…" >}}` with a key looked up (or added) in `data/urls.toml`.
 10. Alerts: links inside must use `{{< ahref path="…" title="…" >}}` — flag reference-style `url`/`ref`, inline `[…](#…)`, or plain URLs inside alerts. Flag alerts whose first body token is a link (`ahref`); expect plain-text lead-in or reword/omit.
+11. Remarks / Known Limitations: flag general remarks (expected behavior, null/empty handling, scope notes) under `### Known Limitations` — expect their own `###` headings under `## Remarks`. Flag clear constraints dumped as plain remarks when siblings use Known Limitations. Flag Known Limitations that use nested headings (`####`) instead of a bullet list. Flag top-level `## Known Limitations` when siblings nest it under Remarks.
 
 Output: brief bullet list of issues and suggested fixes.
