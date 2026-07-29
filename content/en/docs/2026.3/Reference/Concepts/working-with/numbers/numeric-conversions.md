@@ -47,7 +47,7 @@ An [explicit cast][] uses `(TargetType)expression` when the conversion may lose 
 | --- | --- | --- |
 | `(Int16)($)Int` where `($)Int` is `6` | `6` | Valid when the value is in the [Int16][] range |
 | `(Int32)1.9` | `1` | Fractional part truncated toward zero |
-| `(Int32)2147483648.0` | Undefined / overflow behaviour depends on checked context | Value outside [Int32][] range |
+| `(Int32)2147483648.0` | `0` if unchecked / overflow if unchecked | Value outside [Int32][] range |
 | `(Single)($)DoubleVariable` | May lose precision | [Double][] to [Single][] narrows precision |
 
 ### Data loss when converting floating point to integer

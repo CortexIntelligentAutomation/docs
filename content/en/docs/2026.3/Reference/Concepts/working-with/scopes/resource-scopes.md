@@ -77,6 +77,8 @@ Those same per-level defaults appear on the [ScopeDefinition][] data type proper
 
 ## Creating a ScopeDefinition
 
+See [ScopeDefinition][] and [Scope][] for property-editor support and conversion examples.
+
 ### In the Expression Editor
 
 ```csharp
@@ -107,14 +109,6 @@ new ScopeDefinition(
 
 Set each of Tenant, System, Package, and Flow to `ScopeOption.Current` or `ScopeOption.All`.
 
-You can also construct a resolved [Scope][] directly when a property expects [Scope][]:
-
-```csharp
-new Scope("tenant", "system", "package", "flow")
-```
-
-See [ScopeDefinition][] and [Scope][] for property-editor support and conversion examples.
-
 ## How scopes identify shared instances
 
 | Resource | Identity | Notes |
@@ -130,7 +124,7 @@ When a semaphore cannot be acquired, [SemaphoreCouldNotBeAcquiredException][] me
 "/<tenant>/<system>/*/<package>/*/<flow>/<semaphore-name>"
 ```
 
-where `<tenant>`, `<system>`, `<package>`, and `<flow>` come from the [Scope][], and `<semaphore-name>` is the semaphore [Name][Semaphore Name].
+where `<tenant>`, `<system>`, `<package>`, and `<flow>` come from the [Scope][], and `<semaphore-name>` is the semaphore [Name][Semaphore Name]. `*` represents future placeholders for `<environment>` and `<package-version>`.
 
 If a data storage collection is missing for the resolved scope, [DataStorageCollectionNotFoundException][] reports the collection name and includes the [Scope][] on the exception.
 

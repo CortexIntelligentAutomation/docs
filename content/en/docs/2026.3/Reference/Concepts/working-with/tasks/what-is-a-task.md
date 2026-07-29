@@ -88,9 +88,12 @@ You can inspect status with expressions (for example `($)ExecutionTask.IsComplet
 
 ## Remarks
 
+### Manage Asynchronous Flow Executions
+
+Tasks are not created with C# `Task.Run` or `async`/`await` in the Expression Editor. Use [Run Flow Async][] (and the wait/cancel blocks) to manage asynchronous flow executions.
+
 ### Known Limitations
 
-* Tasks are not created with C# `Task.Run` or `async`/`await` in the Expression Editor. Use [Run Flow Async][] (and the wait/cancel blocks) to manage asynchronous flow executions.
 * [ITask&lt;TResult&gt;][ITask] and [IExecutionTask][] inputs support the [Expression Editor][] and [Variable Editor][]; the [Literal Editor][] is not available for these types.
 
 ## See Also

@@ -63,8 +63,8 @@ Integral arithmetic can produce a result that does not fit in the destination ty
 
 | Context | On overflow |
 | --- | --- |
-| Unchecked (default for non-constant expressions) | High-order bits discarded; the value wraps (for example past `MaxValue` toward `MinValue`) |
-| Checked | [OverflowException][] is thrown at run time (or a compile-time error for overflowing constant expressions) |
+| Unchecked | High-order bits discarded; the value wraps (for example past `MaxValue` toward `MinValue`) |
+| Checked (default for non-constant expressions) | [OverflowException][] is thrown at run time (or a compile-time error for overflowing constant expressions) |
 
 You can force a context with the `checked(...)` and `unchecked(...)` operators or statements. See [checked and unchecked][].
 
@@ -98,7 +98,7 @@ Special values:
 
 ### Known Limitations
 
-* Default overflow behaviour in expressions is **unchecked** wrapping for integers unless you use `checked`.
+* Default overflow behaviour in expressions is **checked** and an [OverflowException][] is thrown unless you use `unchecked`.
 
 ## See Also
 

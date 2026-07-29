@@ -135,12 +135,25 @@ Standard specifiers such as `N` and `C` resolve against the format provider's `N
 
 ## Remarks
 
+### Culture Dependency
+
+Formatting and parsing depend on cultures installed on the server. An invalid culture name throws [CultureInfoNotFoundException][].
+
+### Invalid Specifiers Cause Exceptions
+
+Specifiers valid only for integrals (`D`, `X`, `B`) throw if used with [Single][] or [Double][].
+
+### Floating-Point Rounding
+
+Floating-point display can show rounding relative to the infinite-precision value; precision specifiers control the **string**, not a separate stored rounded value.
+
+### Block Defaults for Format Provider
+
+Block defaults for **Format Provider** may differ from expression `ToString()` defaults; align them deliberately. See [Converting Numbers and Text][].
+
 ### Known Limitations
 
-* Formatting and parsing depend on cultures installed on the server. An invalid culture name throws [CultureInfoNotFoundException][].
-* Specifiers valid only for integrals (`D`, `X`, `B`) throw if used with [Single][] or [Double][].
-* Floating-point display can show rounding relative to the infinite-precision value; precision specifiers control the **string**, not a separate stored rounded value.
-* Block defaults for **Format Provider** may differ from expression `ToString()` defaults; align them deliberately. See [Converting Numbers and Text][].
+None
 
 ## See Also
 

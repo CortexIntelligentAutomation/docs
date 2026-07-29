@@ -81,8 +81,7 @@ Only a task that is still `"Running"` (or otherwise not yet completed) can trans
 
 ### Known Limitations
 
-* There is no Expression Editor API equivalent to constructing a `CancellationTokenSource` and passing tokens into arbitrary blocks. Cancel asynchronous flow executions with [Cancel Task][] / [Cancel All Tasks][].
-* Cancellation stops the targeted execution; it does not automatically cancel unrelated tasks. Cancel each task (or list) you need to stop.
+None
 
 ## See Also
 

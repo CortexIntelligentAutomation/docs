@@ -101,6 +101,12 @@ Some platform settings (for example the [Log Event][] block default log `path`) 
 Environment.ExpandEnvironmentVariables(@"%ProgramData%\\MyOrg\\output.txt")
 ```
 
+or:
+
+```csharp
+System.IO.Path.Combine(Environment.GetEnvironmentVariable("TEMP"), "flow-work", "scratch.txt")
+```
+
 For expansion behaviour, see [Environment.ExpandEnvironmentVariables][].
 
 ## Best practices

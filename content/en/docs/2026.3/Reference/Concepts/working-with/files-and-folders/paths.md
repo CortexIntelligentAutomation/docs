@@ -120,8 +120,13 @@ Files & Folders path properties expect a **resolved** path string. They do not e
 ```csharp
 Environment.ExpandEnvironmentVariables(@"%ProgramData%\MyOrg\FlowData\output.txt")
 ```
+or:
 
-See [What are Files and Folders?][] for common environment variables and [Environment.ExpandEnvironmentVariables][] for expansion behaviour.
+```csharp
+System.IO.Path.Combine(Environment.GetEnvironmentVariable("TEMP"), "flow-work", "scratch.txt")
+```
+
+`Path.Combine` joins segments using the platform directory separator. Prefer it over concatenating `"\\"` manually so relative segments compose correctly. See [What are Files and Folders?][] for common environment variables and [Environment.ExpandEnvironmentVariables][] for expansion behaviour.
 
 ## Remarks
 

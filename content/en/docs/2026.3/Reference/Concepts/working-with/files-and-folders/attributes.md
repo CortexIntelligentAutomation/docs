@@ -78,32 +78,71 @@ Read attributes with [File.GetAttributes][], then write them with [File.SetAttri
 Check whether a file is read-only:
 
 ```csharp
-var attributes = System.IO.File.GetAttributes(@"C:\Source\File.txt");
-(attributes & System.IO.FileAttributes.ReadOnly) == System.IO.FileAttributes.ReadOnly
+(System.IO.File.GetAttributes(@"C:\Source\File.txt") & System.IO.FileAttributes.ReadOnly) == System.IO.FileAttributes.ReadOnly;
 ```
 
 Add the read-only flag (preserve other flags):
 
 ```csharp
-var path = @"C:\Source\File.txt";
-var attributes = System.IO.File.GetAttributes(path);
-System.IO.File.SetAttributes(path, attributes | System.IO.FileAttributes.ReadOnly);
+new System.Func<Exception>(() => {
+    try {
+        var path = @"C:\Source\File.txt";
+        var attributes = System.IO.File.GetAttributes(path);
+        System.IO.File.SetAttributes(path, attributes | System.IO.FileAttributes.ReadOnly);
+        return null;
+    }
+    catch (Exception ex) {
+        return ex;
+    }
+}).Invoke()
 ```
 
 Clear the read-only flag:
 
 ```csharp
-var path = @"C:\Source\File.txt";
-var attributes = System.IO.File.GetAttributes(path);
-System.IO.File.SetAttributes(path, attributes & ~System.IO.FileAttributes.ReadOnly);
+new System.Func<Exception>(() => {
+    try {
+        var path = @"C:\Source\File.txt";
+        var attributes = System.IO.File.GetAttributes(path);
+        System.IO.File.SetAttributes(path, attributes & ~System.IO.FileAttributes.ReadOnly);
+        return null;
+    }
+    catch (Exception ex) {
+        return ex;
+    }
+}).Invoke()
 ```
 
 Hide a file (add the hidden flag):
 
 ```csharp
-var path = @"C:\Source\File.txt";
-var attributes = System.IO.File.GetAttributes(path);
-System.IO.File.SetAttributes(path, attributes | System.IO.FileAttributes.Hidden);
+new System.Func<Exception>(() => {
+    try {
+        var path = @"C:\Source\File.txt";
+        var attributes = System.IO.File.GetAttributes(path);
+        System.IO.File.SetAttributes(path, attributes | System.IO.FileAttributes.Hidden);
+        return null;
+    }
+    catch (Exception ex) {
+        return ex;
+    }
+}).Invoke()
+```
+
+Clear the hidden flag:
+
+```csharp
+new System.Func<Exception>(() => {
+    try {
+        var path = @"C:\Source\File.txt";
+        var attributes = System.IO.File.GetAttributes(path);
+        System.IO.File.SetAttributes(path, attributes & ~System.IO.FileAttributes.Hidden);
+        return null;
+    }
+    catch (Exception ex) {
+        return ex;
+    }
+}).Invoke()
 ```
 
 The same [File.GetAttributes][] / [File.SetAttributes][] APIs apply to folders when you pass a folder path.

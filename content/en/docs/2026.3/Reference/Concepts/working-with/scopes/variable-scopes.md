@@ -13,7 +13,7 @@ A **variable scope** is the [workspace][] where a [variable][] is defined. It co
 
 Variables can only be used in the workspace of the scope they are defined in and any descendant workspaces. Only variables in scope appear in the [Variable Editor][] or as [snippets][] in the [Expression Editor][]. When execution exits a workspace, local-scope variables declared in that workspace are deleted and their values are lost.
 
-This is conceptually similar to [local variable / block scope][MS C# Scopes] in C#: a name is visible inside a region of code, and leaving that region ends the variable's lifetime. When a variable held a connection or session that stayed open, leaving scope closes that resource — similar in spirit to disposing at the end of a [`using`][MS using] statement. See also the [variable scope training exercise][MS Variable Scope Training].
+This is conceptually similar to [local variable / block scope][MS C# Scopes] in C#: a name is visible inside a region of code, and leaving that region ends the variable's lifetime. When a variable held a connection or session that stayed open, leaving scope closes that resource — similar in spirit to disposing at the end of a [`using`][MS using] statement.
 
 Variable scopes are separate from [resource scopes][Resource Scopes] ([ScopeDefinition][] / [Scope][] used by collections and semaphores). For both meanings, see [What is a Scope?][].
 
@@ -69,9 +69,12 @@ Some resources stay open only while a variable remains in scope:
 | Resource | Behaviour when Close is `false` and details are in a variable |
 | --- | --- |
 | [Email][] session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
+| PowerShell session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
+| Ssh session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
+| Telnet session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
 | [Data source][] connection | Connection stays open until the variable goes out of scope or the flow ends, whichever comes first |
 
-If session or connection details are supplied as a literal or expression instead of a variable, the connection is closed after the block finishes and cannot be shared with later blocks the way a variable-backed resource can. See [Closing sessions][] and [Closing connections][].
+If session or connection details are supplied as a literal or expression instead of a variable, the connection is closed after the block finishes and cannot be shared with later blocks the way a variable-backed resource can. See [Closing Email sessions][] and [Closing Data source connections][].
 
 In C# terms, treat that lifetime like a resource that is disposed when execution leaves the declaring scope ([`using`][MS using] / [IDisposable][MS IDisposable]), not like a resource-scope identity for platform collections or semaphores.
 
@@ -89,9 +92,7 @@ In C# terms, treat that lifetime like a resource that is disposed when execution
 
 ### Known Limitations
 
-#### Closest same-name variable wins
-
-When multiple variables share a name across workspaces, only the closest scope is used and shown in the [Variable Editor][]. Explicit selection of a farther same-name variable is not supported today and may be added in future. See [Fundamentals: Variable Scopes][Fundamentals Variable Scopes].
+* When multiple variables share a name across workspaces, only the closest scope is used and shown in the [Variable Editor][]. Explicit selection of a farther same-name variable is not supported today and may be added in future. See [Fundamentals: Variable Scopes][Fundamentals Variable Scopes].
 
 ## See Also
 
@@ -117,7 +118,6 @@ None specific to variable scopes — variable scope is a workspace concept, not 
 ### External Documentation
 
 * [Basic concepts — Scopes (C# language specification)][MS C# Scopes]
-* [Exercise — Variable scope (C#)][MS Variable Scope Training]
 * [using statement (C#)][MS using]
 * [IDisposable interface][MS IDisposable]
 
@@ -140,14 +140,13 @@ None specific to variable scopes — variable scope is a workspace concept, not 
 
 [Email]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}
 [Data source]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}
-[Closing sessions]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}#closing-sessions
-[Closing connections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}#closing-connections
+[Closing Email sessions]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}#closing-sessions
+[Closing Data source connections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}#closing-connections
 
 [ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc" >}}
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}
 [All Blocks]: {{< url path="Cortex.Reference.Blocks.MainDoc" >}}
 
-[MS C# Scopes]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/basic-concepts
-[MS Variable Scope Training]: https://learn.microsoft.com/en-us/training/modules/csharp-code-blocks/2-exercise-variable-scope
+[MS C# Scopes]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/basic-concepts#77-scopes
 [MS using]: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using
 [MS IDisposable]: https://learn.microsoft.com/en-us/dotnet/api/system.idisposable

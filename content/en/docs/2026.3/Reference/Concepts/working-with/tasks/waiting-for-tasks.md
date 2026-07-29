@@ -87,8 +87,6 @@ See [Waiting for a Task that has thrown an exception][] on the [Wait For All Tas
 ### Known Limitations
 
 * There is no dedicated "wait for any" block equivalent to `Task.WaitAny`. To proceed when the first of several tasks finishes, use separate wait paths, polling of task status properties, or redesign so a single task represents the work you care about first.
-* [Wait For Task][] throws [PropertyNullException][] when [Task][] is `null`.
-* [Wait For All Tasks][] requires a non-null, non-empty list with no `null` items; otherwise it throws [PropertyNullException][], [PropertyEmptyException][], or [PropertyContainsNullItemException][].
 
 ## See Also
 
