@@ -68,13 +68,13 @@ Some resources stay open only while a variable remains in scope:
 
 | Resource | Behaviour when Close is `false` and details are in a variable |
 | --- | --- |
-| [Email][] session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
+| Email session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
 | PowerShell session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
 | Ssh session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
 | Telnet session | Session stays open until the variable goes out of scope or the flow ends, whichever comes first |
-| [Data source][] connection | Connection stays open until the variable goes out of scope or the flow ends, whichever comes first |
+| Data source connection | Connection stays open until the variable goes out of scope or the flow ends, whichever comes first |
 
-If session or connection details are supplied as a literal or expression instead of a variable, the connection is closed after the block finishes and cannot be shared with later blocks the way a variable-backed resource can. See [Closing Email sessions][] and [Closing Data source connections][].
+If session or connection details are supplied as a literal or expression instead of a variable, the connection is closed after the block finishes and cannot be shared with later blocks the way a variable-backed resource can.
 
 In C# terms, treat that lifetime like a resource that is disposed when execution leaves the declaring scope ([`using`][MS using] / [IDisposable][MS IDisposable]), not like a resource-scope identity for platform collections or semaphores.
 
@@ -103,8 +103,6 @@ In C# terms, treat that lifetime like a resource that is disposed when execution
 * [Variable Scopes (fundamentals)][Fundamentals Variable Scopes]
 * [What is a Variable?][]
 * [What is a Workspace?][workspace]
-* [What is Email?][Email]
-* [What is a Data Source?][Data source]
 * [Variable Editor][]
 
 ### Related Data Types
@@ -140,8 +138,6 @@ None specific to variable scopes — variable scope is a workspace concept, not 
 
 [Email]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}
 [Data source]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}
-[Closing Email sessions]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.WhatIsEmail.MainDoc" >}}#closing-sessions
-[Closing Data source connections]: {{< url path="Cortex.Reference.Concepts.WorkingWith.DataSources.WhatIsADataSource.MainDoc" >}}#closing-connections
 
 [ScopeDefinition]: {{< url path="Cortex.Reference.DataTypes.Scopes.ScopeDefinition.MainDoc" >}}
 [Scope]: {{< url path="Cortex.Reference.DataTypes.Scopes.Scope.MainDoc" >}}

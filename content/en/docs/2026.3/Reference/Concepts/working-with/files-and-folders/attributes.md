@@ -78,7 +78,7 @@ Read attributes with [File.GetAttributes][], then write them with [File.SetAttri
 Check whether a file is read-only:
 
 ```csharp
-(System.IO.File.GetAttributes(@"C:\Source\File.txt") & System.IO.FileAttributes.ReadOnly) == System.IO.FileAttributes.ReadOnly;
+(System.IO.File.GetAttributes(@"C:\Source\File.txt") & System.IO.FileAttributes.ReadOnly) == System.IO.FileAttributes.ReadOnly
 ```
 
 Add the read-only flag (preserve other flags):
