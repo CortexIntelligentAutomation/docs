@@ -35,6 +35,7 @@ IgnoreURLs:
 - "https://www.rabbitmq.com/.*"
 - "https://letsencrypt.org/.*"
 - "https://support.microsoft.com/.*"
+- "https://www.iso.org/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"

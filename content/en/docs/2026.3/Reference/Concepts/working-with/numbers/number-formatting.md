@@ -64,7 +64,7 @@ Use invariant formatting when numeric text must parse the same on every server.
 
 **Format templates** define how numeric values become text. There are two kinds:
 
-* [Standard format templates](#standard-format-templates) — a **single** alphabetic [format specifier](#format-specifiers), optionally followed by a precision digit string (for example `"N"`, `"N2"`, `"C"`)
+* [Standard format templates](#standard-format-templates) — a **single** alphabetic format specifier, optionally followed by a precision digit string (for example `"N"`, `"N2"`, `"C"`)
 * [Custom format templates](#custom-format-templates) — patterns with placeholders such as `0`, `#`, `.`, `,` (for example `"0.00"`, `"#,##0.00"`)
 
 A format template is always interpreted together with a format provider. The provider determines which separators and symbols appear.
