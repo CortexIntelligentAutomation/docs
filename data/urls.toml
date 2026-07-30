@@ -1853,6 +1853,8 @@
                         MainDoc = "/docs/reference/concepts/working-with/files-and-folders/attributes/"
                     [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.Paths]
                         MainDoc = "/docs/reference/concepts/working-with/files-and-folders/paths/"
+                    [Cortex.Reference.Concepts.WorkingWith.FilesAndFolders.WhatAreFilesAndFolders]
+                        MainDoc = "/docs/reference/concepts/working-with/files-and-folders/what-are-files-and-folders/"
                 [Cortex.Reference.Concepts.WorkingWith.Loops]
                     MainDoc = "/docs/reference/concepts/working-with/loops/"
                 [Cortex.Reference.Concepts.WorkingWith.Numbers]
@@ -2076,6 +2078,8 @@
                     MainDoc = "/docs/reference/data-types/files-and-folders/fileinformation"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FileMatch]
                     MainDoc = "/docs/reference/data-types/files-and-folders/filematch"
+                [Cortex.Reference.DataTypes.FilesAndFolders.FileSystemInformation]
+                    MainDoc = "/docs/reference/data-types/files-and-folders/filesysteminformation"
                 [Cortex.Reference.DataTypes.FilesAndFolders.FolderInformation]
                     MainDoc = "/docs/reference/data-types/files-and-folders/folderinformation"
             [Cortex.Reference.DataTypes.Flows]
@@ -3043,6 +3047,8 @@
                     InstantiatingAnInt64 = "https://learn.microsoft.com/en-us/dotnet/api/system.int64?#instantiating-an-int64-value"
                     RepresentingAnInt64AsAString = "https://learn.microsoft.com/en-us/dotnet/api/system.int64?#representing-an-int64-as-a-string"
                 [MSDocs.DotNet.Api.System.IO]
+                    FileAttributes = "https://learn.microsoft.com/en-us/dotnet/api/system.io.fileattributes"
+                    FilePathFormat = "https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats"
                     FileNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception"
                     IOException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception"
                     PathTooLongException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.pathtoolongexception"
