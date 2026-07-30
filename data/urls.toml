@@ -1859,6 +1859,12 @@
                     MainDoc = "/docs/reference/concepts/working-with/loops/"
                 [Cortex.Reference.Concepts.WorkingWith.Numbers]
                     MainDoc = "/docs/reference/concepts/working-with/numbers/"
+                    [Cortex.Reference.Concepts.WorkingWith.Numbers.WhatIsANumber]
+                        MainDoc = "/docs/reference/concepts/working-with/numbers/what-is-a-number/"
+                    [Cortex.Reference.Concepts.WorkingWith.Numbers.ConvertingNumbersAndText]
+                        MainDoc = "/docs/reference/concepts/working-with/numbers/converting-numbers-and-text/"
+                    [Cortex.Reference.Concepts.WorkingWith.Numbers.NumberFormatting]
+                        MainDoc = "/docs/reference/concepts/working-with/numbers/number-formatting/"
                 [Cortex.Reference.Concepts.WorkingWith.Objects]
                     [Cortex.Reference.Concepts.WorkingWith.Objects.WhatIsAnObject]
                         MainDoc = "/docs/reference/concepts/working-with/objects/what-is-an-object/"
@@ -1876,6 +1882,8 @@
                     MainDoc = "/docs/reference/concepts/working-with/tasks/"
                 [Cortex.Reference.Concepts.WorkingWith.Text]
                     MainDoc = "/docs/reference/concepts/working-with/text/"
+                    [Cortex.Reference.Concepts.WorkingWith.Text.WhatIsText]
+                        MainDoc = "/docs/reference/concepts/working-with/text/what-is-text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
                         MainDoc = "/docs/reference/concepts/working-with/text/converting-objects-to-text"
                         StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
@@ -2326,6 +2334,8 @@
                         MainDoc = "/docs/reference/data-types/text/regex/capturedetails"
                 [Cortex.Reference.DataTypes.Text.SearchOptions]
                     MainDoc = "/docs/reference/data-types/text/searchoptions"
+                    LiteralText = "/docs/reference/data-types/text/searchoptions/#literaltext"
+                    Regex = "/docs/reference/data-types/text/searchoptions/#regex"
                     PatternMatching = "/docs/reference/data-types/text/searchoptions/#patternmatching"
                 [Cortex.Reference.DataTypes.Text.String]
                     MainDoc = "/docs/reference/data-types/text/string"
@@ -2907,6 +2917,9 @@
         BooleanLogicalOperators = "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators"
         ComparisonOperators = "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators"
         EqualityOperators = "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators"
+        Strings = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/"
+        ImmutabilityOfStrings = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#immutability-of-strings"
+        EscapeSequences = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences"
         Interpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-interpolation"
         Verbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
         InterpolatedVerbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
@@ -3099,6 +3112,11 @@
                 [MSDocs.DotNet.Api.System.Net]
                     NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
                     HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
+        [MSDocs.DotNet.BaseTypes]
+            BasicStringOperations = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations"
+            BestPracticesStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings"
+            CharacterEncodingIntroduction = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction"
+            ParsingNumeric = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric"
         [MSDocs.DotNet.Fundamentals]
             [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
                 CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
