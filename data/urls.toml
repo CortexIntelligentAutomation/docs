@@ -1806,12 +1806,16 @@
                             MultipleConcurrencyLimits = "/docs/reference/concepts/working-with/concurrency/semaphores/what-is-a-semaphore/#multiple-concurrency-limits"
                 [Cortex.Reference.Concepts.WorkingWith.Culture]
                     MainDoc = "/docs/reference/concepts/working-with/culture/"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.WhatIsACulture]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/what-is-a-culture/"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.CurrentCulture]
                         MainDoc = "/docs/reference/concepts/working-with/culture/current-culture"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.InvariantCulture]
                         MainDoc = "/docs/reference/concepts/working-with/culture/invariant-culture"
                     [Cortex.Reference.Concepts.WorkingWith.Culture.SpecificCultures]
                         MainDoc = "/docs/reference/concepts/working-with/culture/specific-cultures"
+                    [Cortex.Reference.Concepts.WorkingWith.Culture.CustomCultures]
+                        MainDoc = "/docs/reference/concepts/working-with/culture/custom-cultures"
                 [Cortex.Reference.Concepts.WorkingWith.DataSources]
                     MainDoc = "/docs/reference/concepts/working-with/data-sources/"
                     [Cortex.Reference.Concepts.WorkingWith.DataSources.SupportedDataSources]
@@ -1884,6 +1888,7 @@
                     MainDoc = "/docs/reference/concepts/working-with/text/"
                     [Cortex.Reference.Concepts.WorkingWith.Text.WhatIsText]
                         MainDoc = "/docs/reference/concepts/working-with/text/what-is-text/"
+                        ImmutabilityOfStrings = "/docs/reference/concepts/working-with/text/what-is-text/#immutability-of-strings"
                     [Cortex.Reference.Concepts.WorkingWith.Text.ConvertingObjectsToText]
                         MainDoc = "/docs/reference/concepts/working-with/text/converting-objects-to-text"
                         StringInterpolation = "/docs/reference/concepts/working-with/text/converting-objects-to-text/#string-interpolation"
@@ -3100,6 +3105,10 @@
                     CultureInfoNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.culturenotfoundexception"
                     CultureInfoParent = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.parent"
                     CurrentCulture = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.currentculture"
+                    [MSDocs.DotNet.Api.System.Globalization.TextInfo]
+                        MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo"
+                        ToUpper = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.toupper"
+                        ToTitleCase = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.totitlecase"
                 [MSDocs.DotNet.Api.System.Text]
                     Encoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding"
                     UnicodeEncoding = "https://learn.microsoft.com/en-us/dotnet/api/system.text.unicodeencoding"
@@ -3117,6 +3126,13 @@
             BestPracticesStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings"
             CharacterEncodingIntroduction = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction"
             ParsingNumeric = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric"
+            [MSDocs.DotNet.BaseTypes.ChangingCase]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case"
+                CompareStringsOfMixedCase = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case"
+        [MSDocs.DotNet.Core]
+            [MSDocs.DotNet.Core.Extensions]
+                CultureInsensitiveCaseChanges = "https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-case-changes"
+                CultureInsensitiveStringOperations = "https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-string-operations"
         [MSDocs.DotNet.Fundamentals]
             [MSDocs.DotNet.Fundamentals.RuntimeLibraries]
                 CultureAndRegionInfoBuilder = "https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-globalization-cultureandregioninfobuilder"
