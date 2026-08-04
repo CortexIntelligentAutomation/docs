@@ -1487,6 +1487,7 @@
                 [Cortex.Reference.Blocks.Objects.ConvertObject]
                     [Cortex.Reference.Blocks.Objects.ConvertObject.ConvertObjectToText]
                         MainDoc = "/docs/reference/blocks/objects/convert-object/convert-object-to-text-block-1"
+                        KnownLimitations = "/docs/reference/blocks/objects/convert-object/convert-object-to-text-block-1/#known-limitations"
             [Cortex.Reference.Blocks.PowerShell]
                 [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript]
                     [Cortex.Reference.Blocks.PowerShell.ExecutePowerShellScript.ExecutePowerShellScript]
@@ -1552,6 +1553,8 @@
                     [Cortex.Reference.Blocks.Text.AddText.AddTextBeforeIndex]
                         MainDoc = "/docs/reference/blocks/text/add-text/add-text-before-index-block/"
                 [Cortex.Reference.Blocks.Text.ContainsText]
+                    [Cortex.Reference.Blocks.Text.ContainsText.ContainsText]
+                        MainDoc = "/docs/reference/blocks/text/contains-text/contains-text-block/"
                     [Cortex.Reference.Blocks.Text.ContainsText.ContainsAllText]
                         MainDoc = "/docs/reference/blocks/text/contains-text/contains-all-text-block/"
                     [Cortex.Reference.Blocks.Text.ContainsText.ContainsAnyText]
@@ -1622,6 +1625,17 @@
                 [Cortex.Reference.Blocks.Text.SplitText]
                     [Cortex.Reference.Blocks.Text.SplitText.SplitText]
                         MainDoc = "/docs/reference/blocks/text/split-text/split-text-block/"
+                [Cortex.Reference.Blocks.Text.IsText]
+                    [Cortex.Reference.Blocks.Text.IsText.IsTextEmpty]
+                        MainDoc = "/docs/reference/blocks/text/is-text/is-text-empty-block/"
+                    [Cortex.Reference.Blocks.Text.IsText.IsTextEmptyOrWhitespace]
+                        MainDoc = "/docs/reference/blocks/text/is-text/is-text-empty-or-whitespace-block/"
+                    [Cortex.Reference.Blocks.Text.IsText.IsTextNull]
+                        MainDoc = "/docs/reference/blocks/text/is-text/is-text-null-block/"
+                    [Cortex.Reference.Blocks.Text.IsText.IsTextNullOrEmpty]
+                        MainDoc = "/docs/reference/blocks/text/is-text/is-text-null-or-empty-block/"
+                    [Cortex.Reference.Blocks.Text.IsText.IsTextNullEmptyOrWhitespace]
+                        MainDoc = "/docs/reference/blocks/text/is-text/is-text-null-empty-or-whitespace-block/"
             [Cortex.Reference.Blocks.Schedules]
                 [Cortex.Reference.Blocks.Schedules.WaitFor]
                     [Cortex.Reference.Blocks.Schedules.WaitFor.WaitForDuration]
@@ -1701,6 +1715,7 @@
                                 MethodExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#method-expressions"
                                 PropertyExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#property-expressions"
                                 StringExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#string-expressions"
+                                VerbatimStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#verbatim-strings"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
@@ -2322,6 +2337,7 @@
                         Base64 = "/docs/reference/data-types/text/textencodingformat/#base64"
                         Hex = "/docs/reference/data-types/text/textencodingformat/#hex"
                         Html = "/docs/reference/data-types/text/textencodingformat/#html"
+                        Utf8 = "/docs/reference/data-types/text/textencodingformat/#utf8"
                         Base64Url = "/docs/reference/data-types/text/textencodingformat/#base64url"
                         Url = "/docs/reference/data-types/text/textencodingformat/#url"
                 [Cortex.Reference.DataTypes.Text.EncryptableText]
@@ -2958,6 +2974,7 @@
                 UnauthorizedAccessException = "https://learn.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception"
                 [MSDocs.DotNet.Api.System.Char]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.char"
+                    IsWhiteSpace = "https://learn.microsoft.com/en-us/dotnet/api/system.char.iswhitespace"
                 [MSDocs.DotNet.Api.System.Collections]
                     IEnumerable = "https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable"
                     [MSDocs.DotNet.Api.System.Collections.Generic]
@@ -3070,6 +3087,8 @@
                     FileNotFoundException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception"
                     IOException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.ioexception"
                     PathTooLongException = "https://learn.microsoft.com/en-us/dotnet/api/system.io.pathtoolongexception"
+                    [MSDocs.DotNet.Api.System.IO.DirectoryInfo]
+                        GetFiles = "https://learn.microsoft.com/en-us/dotnet/api/system.io.directoryinfo.getfiles"
                 [MSDocs.DotNet.Api.System.Object]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.object"
                     ReferenceEquals = "https://learn.microsoft.com/en-us/dotnet/api/system.object.referenceequals"
@@ -3092,9 +3111,12 @@
                     ConcatGuide = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings"
                     ConcatOperator = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators"
                     StringInterpolation = "https://learn.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#string-interpolation"
+                    Empty = "https://learn.microsoft.com/en-us/dotnet/api/system.string.empty"
                     Format = "https://learn.microsoft.com/en-us/dotnet/api/system.string.format"
                     IndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.indexof"
                     Insert = "https://learn.microsoft.com/en-us/dotnet/api/system.string.insert"
+                    IsNullOrEmpty = "https://learn.microsoft.com/en-us/dotnet/api/system.string.isnullorempty"
+                    IsNullOrWhiteSpace = "https://learn.microsoft.com/en-us/dotnet/api/system.string.isnullorwhitespace"
                     Join = "https://learn.microsoft.com/en-us/dotnet/api/system.string.join"
                     LastIndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.lastindexof"
                 [MSDocs.DotNet.Api.System.TimeSpan]
@@ -3125,10 +3147,25 @@
             BasicStringOperations = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations"
             BestPracticesStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings"
             CharacterEncodingIntroduction = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction"
+            CustomNumericFormatStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings"
             ParsingNumeric = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/parsing-numeric"
+            StandardNumericFormatStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings"
+            RegularExpressions = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions"
+            RegularExpressionLanguageQuickReference = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference"
+            RegularExpressionOptions = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options"
+            RegularExpressionBestPractices = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices"
+            MiscellaneousConstructsInRegularExpressions = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/miscellaneous-constructs-in-regular-expressions"
+            RegularExpressionExampleScanningForHrefs = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-example-scanning-for-hrefs"
+            [MSDocs.DotNet.BaseTypes.CharacterClassesInRegularExpressions]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions"
+                SupportedUnicodeGeneralCategories = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#SupportedUnicodeGeneralCategories"
+                SupportedNamedBlocks = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions#supported-named-blocks"
             [MSDocs.DotNet.BaseTypes.ChangingCase]
                 MainDoc = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case"
                 CompareStringsOfMixedCase = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/changing-case#compare-strings-of-mixed-case"
+            [MSDocs.DotNet.BaseTypes.CompositeFormatting]
+                MainDoc = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting"
+                EscapingBraces = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting#escaping-braces"
         [MSDocs.DotNet.Core]
             [MSDocs.DotNet.Core.Extensions]
                 CultureInsensitiveCaseChanges = "https://learn.microsoft.com/en-us/dotnet/core/extensions/performing-culture-insensitive-case-changes"
