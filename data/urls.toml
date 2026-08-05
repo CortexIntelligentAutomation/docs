@@ -1597,6 +1597,9 @@
                 [Cortex.Reference.Blocks.Text.GetIndex]
                     [Cortex.Reference.Blocks.Text.GetIndex.GetIndexOfText]
                         MainDoc = "/docs/reference/blocks/text/get-index/get-index-of-text-block/"
+                [Cortex.Reference.Blocks.Text.GetLength]
+                    [Cortex.Reference.Blocks.Text.GetLength.GetLength]
+                        MainDoc = "/docs/reference/blocks/text/get-length/get-length-block/"
                 [Cortex.Reference.Blocks.Text.GetText]
                     [Cortex.Reference.Blocks.Text.GetText.GetTextAtBeginning]
                         MainDoc = "/docs/reference/blocks/text/get-text/get-text-at-beginning-block/"

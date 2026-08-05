@@ -14,7 +14,7 @@ In {{% ctx %}}, a [String][] can be missing (`null`), empty (length `0`), or con
 | --- | --- | --- | --- |
 | `null` | Unassigned [String][], or explicitly `null` | — | No string instance. See [Null and Nullable Types][]. |
 | Empty text | `""` or [String.Empty][] | `0` | A valid string with no characters. |
-| Whitespace-only | `"   "`, `"\t"`, `"\r\n"` | Greater than `0` | Not empty; every character is space, tab, CR, or LF (Is Text blocks). |
+| Whitespace-only | `"   "`, `"\t"`, `"\r\n"` | Greater than `0` | Not empty; every character is whitespace ([Char.IsWhiteSpace][]). |
 | Non-empty text | `"Cortex"`, `" a "` | Greater than `0` | Contains at least one non-whitespace character (the last example also contains spaces). |
 
 | Goal | Prefer |
@@ -23,8 +23,8 @@ In {{% ctx %}}, a [String][] can be missing (`null`), empty (length `0`), or con
 | Test for `null` only | [Is Text Null][] or `($)Text == null` |
 | Test for empty only (`""`) | [Is Text Empty][] or `($)Text == ""` / `($)Text.Length == 0` |
 | Test for `null` or empty | [Is Text Null Or Empty][] or [String.IsNullOrEmpty][] |
-| Test for empty or whitespace-only (space, tab, CR, LF) | [Is Text Empty Or Whitespace][] |
-| Test for `null`, empty, or whitespace-only (space, tab, CR, LF) | [Is Text Null, Empty Or Whitespace][]  or [String.IsNullOrWhiteSpace][]|
+| Test for empty or whitespace-only | [Is Text Empty Or Whitespace][] |
+| Test for `null`, empty, or whitespace-only | [Is Text Null, Empty Or Whitespace][] or [String.IsNullOrWhiteSpace][] |
 
 Treat `null`, empty, and whitespace as distinct cases when validating input. For an overview of text in {{% ctx %}}, see [What is Text?][].
 
@@ -63,7 +63,13 @@ In the [Literal Editor][], surrounding quotes are not required for [String][] pr
 
 ## Whitespace
 
-In {{% ctx %}} Text blocks that check for whitespace (for example [Is Text Empty Or Whitespace][] and [Is Text Null, Empty Or Whitespace][]), **whitespace** means any of these characters:
+**Whitespace** is any [Char][] that [Char.IsWhiteSpace][] categorizes as white space. {{% ctx %}} uses that same .NET definition in Text blocks that check for whitespace (for example [Is Text Empty Or Whitespace][] and [Is Text Null, Empty Or Whitespace][]) and in expressions such as [String.IsNullOrWhiteSpace][]. When rendered, these characters typically occupy space on the page but do not show a glyph.
+
+A string is **whitespace-only** when its length is greater than `0` and every character is whitespace. Whitespace-only text is **not** empty: `"   ".Length` is `3`, not `0`.
+
+### Common whitespace characters
+
+The table lists characters often used in flows. Escape sequences apply in regular (non-verbatim) string literals in the [Expression Editor][] — see [String escape sequences][]. Block documentation often cites these as examples; they are not the full set.
 
 | Character | Escape / literal | Unicode | Notes |
 | --- | --- | --- | --- |
@@ -71,31 +77,20 @@ In {{% ctx %}} Text blocks that check for whitespace (for example [Is Text Empty
 | Character tabulation (tab) | `"\t"` | U+0009 | Horizontal tab |
 | Line feed (newline) | `"\n"` | U+000A | Unix-style line ending component |
 | Carriage return | `"\r"` | U+000D | Often combined with `\n` as `"\r\n"` |
+| Vertical tab | `"\v"` | U+000B | Less common in business text |
+| Form feed | `"\f"` | U+000C | Less common in business text |
 
-Escape sequences apply in regular (non-verbatim) string literals in the [Expression Editor][] — see [String escape sequences][].
-
-A string is **whitespace-only** when its length is greater than `0` and every character is one of the whitespace characters above. Whitespace-only text is **not** empty: `"   ".Length` is `3`, not `0`.
-
-### .NET whitespace (expressions)
-
-In expressions, [Char.IsWhiteSpace][] and [String.IsNullOrWhiteSpace][] use a **broader** Unicode set than the Is Text whitespace blocks. That set includes the four characters above plus others such as no-break space (U+00A0), vertical tab (U+000B), form feed (U+000C), next line (U+0085), line separator (U+2028), paragraph separator (U+2029), and further space-separator code points. See [Char.IsWhiteSpace][].
-
-| Approach | Whitespace characters |
-| --- | --- |
-| [Is Text Empty Or Whitespace][], [Is Text Null, Empty Or Whitespace][] | Space, tab, carriage return, line feed only |
-| [String.IsNullOrWhiteSpace][], [Char.IsWhiteSpace][] | Full .NET whitespace set |
-
-Use the Is Text blocks when you want the product definition (the four characters). Use [String.IsNullOrWhiteSpace][] or [Char.IsWhiteSpace][] in the [Expression Editor][] only when you need the broader .NET behaviour.
+[Char.IsWhiteSpace][] also returns `true` for other Unicode whitespace characters (for example no-break space U+00A0, next line U+0085, line separator U+2028, paragraph separator U+2029, and further space-separator code points). For the full list, see [Char.IsWhiteSpace][].
 
 ### Examples
 
-| Text | Empty? | Whitespace-only? (blocks) | Notes |
+| Text | Empty? | Whitespace-only? | Notes |
 | --- | --- | --- | --- |
 | `""` | Yes | No | Length `0` |
 | `"   "` | No | Yes | Spaces only |
 | `"\t\r\n"` | No | Yes | Tab and line endings only |
+| `"\u00A0"` (no-break space) | No | Yes | Included by [Char.IsWhiteSpace][] |
 | `" a "` | No | No | Contains a non-whitespace character |
-| `"\u00A0"` (no-break space) | No | No | Not whitespace for Is Text blocks; is whitespace for [Char.IsWhiteSpace][] |
 | `null` | No | No | Not a string instance |
 
 ## Checking null, empty, and whitespace
@@ -109,8 +104,8 @@ Use the Is Text blocks when you want a clear yes/no result in a flow:
 | [Is Text Null][] | `null` |
 | [Is Text Empty][] | empty (`""`) |
 | [Is Text Null Or Empty][] | `null` or empty |
-| [Is Text Empty Or Whitespace][] | empty or whitespace-only (space, tab, CR, LF) |
-| [Is Text Null, Empty Or Whitespace][] | `null`, empty, or whitespace-only (space, tab, CR, LF) |
+| [Is Text Empty Or Whitespace][] | empty or whitespace-only |
+| [Is Text Null, Empty Or Whitespace][] | `null`, empty, or whitespace-only |
 
 Each block's remarks document how `null` and whitespace-only values are treated. For example, [Is Text Empty][] returns `false` for both `null` and `"   "`.
 
@@ -121,10 +116,10 @@ Each block's remarks document how `null` and whitespace-only values are treated.
 | Is `null`? | `($)Text == null` |
 | Is empty? | `($)Text == ""` or `($)Text == String.Empty` |
 | Is `null` or empty? | `string.IsNullOrEmpty(($)Text)` |
-| Is `null`, empty, or whitespace-only (.NET set)? | `string.IsNullOrWhiteSpace(($)Text)` |
-| Character is whitespace (.NET set)? | `char.IsWhiteSpace(($)Text[0])` |
+| Is `null`, empty, or whitespace-only? | `string.IsNullOrWhiteSpace(($)Text)` |
+| Character is whitespace? | `char.IsWhiteSpace(($)Text[0])` |
 
-[String.IsNullOrEmpty][] matches [Is Text Null Or Empty][]. [String.IsNullOrWhiteSpace][] is **not** an exact equivalent of [Is Text Null, Empty Or Whitespace][] because .NET recognizes additional whitespace characters — see [Whitespace characters in Is Text blocks][]. Prefer blocks when the decision should be visible on the flow canvas and you want the product whitespace definition; use expressions inside other property values or more complex conditions.
+[String.IsNullOrEmpty][] and [String.IsNullOrWhiteSpace][] are the usual expression equivalents of the combined Is Text checks. Prefer blocks when the decision should be visible on the flow canvas; use expressions inside other property values or more complex conditions.
 
 ## Remarks
 
@@ -134,7 +129,7 @@ Each block's remarks document how `null` and whitespace-only values are treated.
 
 ### Empty versus whitespace-only text
 
-Whitespace-only text has length greater than `0`, so it is not empty. Blocks and APIs that test only for empty (for example [Is Text Empty][] or [String.IsNullOrEmpty][]) return `false` for `"   "`. Use [Is Text Empty Or Whitespace][] or [Is Text Null, Empty Or Whitespace][] when whitespace-only input (space, tab, CR, or LF) should be treated like missing content.
+Whitespace-only text has length greater than `0`, so it is not empty. Blocks and APIs that test only for empty (for example [Is Text Empty][] or [String.IsNullOrEmpty][]) return `false` for `"   "`. Use [Is Text Empty Or Whitespace][], [Is Text Null, Empty Or Whitespace][], or [String.IsNullOrWhiteSpace][] when whitespace-only input should be treated like missing content.
 
 ### Empty versus no value
 
@@ -143,10 +138,6 @@ Leaving a property with **no value** is not the same as empty text. On [Set Vari
 ### Prefer defined empty values
 
 When a flow needs a defined empty string (for concatenation, default messages, or APIs that reject `null`), assign `""` or [String.Empty][] rather than leaving the value unset. Reserve `null` for “no value provided.”
-
-### Whitespace characters in Is Text blocks
-
-[Is Text Empty Or Whitespace][] and [Is Text Null, Empty Or Whitespace][] treat only space, tab, carriage return, and line feed as whitespace. Other Unicode whitespace characters (for example no-break space U+00A0) are **not** treated as whitespace by those blocks. [String.IsNullOrWhiteSpace][] and [Char.IsWhiteSpace][] in expressions use the broader .NET set — see [.NET whitespace (expressions)][].
 
 ## See Also
 
@@ -181,8 +172,6 @@ When a flow needs a defined empty string (for concatenation, default messages, o
 * [System.Char][]
 
 [Empty versus no value]: {{< ref "#empty-versus-no-value" >}}
-[Whitespace characters in Is Text blocks]: {{< ref "#whitespace" >}}
-[.NET whitespace (expressions)]: {{< ref "#net-whitespace-expressions" >}}
 
 [What is Text?]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.WhatIsText.MainDoc" >}}
 [Null and Nullable Types]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.NullAndNullableTypes.MainDoc" >}}

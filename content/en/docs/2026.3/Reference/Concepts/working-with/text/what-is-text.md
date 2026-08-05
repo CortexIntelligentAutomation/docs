@@ -142,9 +142,9 @@ Strings use **zero-based** indexes. Common operations:
 | Need | Expression examples | Blocks |
 | --- | --- | --- |
 | Character at index | `"Cortex"[0]` → `'C'` | — |
-| Find position | `"Cortex".IndexOf("tex")` | [Get Index of Text][] |
-| Slice by range | `Substring`, ranges/indexes where supported | [Get Text Between Indexes][], [Get Text at Beginning][], [Get Text at End][] |
-| Length | `"Cortex".Length` → `6` | Related Get Length blocks under [Text][Text Blocks] |
+| Find position | `"Cortex".IndexOf("tex")` → `3` | [Get Index of Text][] |
+| Slice by range | `"Cortex".Substring(2, 3)` → `"rte"`; `"Cortex"[2..5]` → `"rte"` | [Get Text Between Indexes][], [Get Text at Beginning][], [Get Text at End][] |
+| Length | `"Cortex".Length` → `6` | [Get Length][] |
 
 For ranges and index syntax in modern C#, see [Indices and ranges][]. For broader string APIs, see [Basic string operations][].
 
@@ -189,6 +189,7 @@ None
 * [Contains All Text][] / [Contains Any Text][]
 * [Find Text][] / [Find All Text][]
 * [Get Index of Text][]
+* [Get Length][]
 * [Get Text Between Indexes][] / [Get Text at Beginning][] / [Get Text at End][]
 * [Add Text at Beginning][]
 * [Join Text][]
@@ -266,6 +267,7 @@ None
 [Find Text]: {{< url path="Cortex.Reference.Blocks.Text.FindText.FindText.MainDoc" >}}
 [Find All Text]: {{< url path="Cortex.Reference.Blocks.Text.FindText.FindAllText.MainDoc" >}}
 [Get Index of Text]: {{< url path="Cortex.Reference.Blocks.Text.GetIndex.GetIndexOfText.MainDoc" >}}
+[Get Length]: {{< url path="Cortex.Reference.Blocks.Text.GetLength.GetLength.MainDoc" >}}
 [Get Text Between Indexes]: {{< url path="Cortex.Reference.Blocks.Text.GetText.GetTextBetweenIndexes.MainDoc" >}}
 [Get Text at Beginning]: {{< url path="Cortex.Reference.Blocks.Text.GetText.GetTextAtBeginning.MainDoc" >}}
 [Get Text at End]: {{< url path="Cortex.Reference.Blocks.Text.GetText.GetTextAtEnd.MainDoc" >}}

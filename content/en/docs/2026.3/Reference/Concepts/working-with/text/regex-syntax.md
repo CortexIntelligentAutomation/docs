@@ -211,15 +211,10 @@ When the limit is exceeded, the block throws [RegexMatchTimeoutException][]. Che
 
 [Search File][] and [Search Files][] search each line separately. As a result, the inline single-line option `s` (so that `.` matches `\n`) is not supported for those searches.
 
-### Substitutions and Find All outputs
-
-Use [substitution][Substitutions] patterns only in replacement text (for example on [Find And Replace Text][]). [Find All Text][] can return [Match][], [Group][], and [CaptureDetails][] values that expose numbered and named captures from grouping constructs.
-
 ### Known Limitations
 
 * Legacy CORTEX G2 regular expression syntax is not supported. Patterns must use .NET regular expression syntax as described on this page.
 * If [Search Options][SearchOptions] is [Regex][SearchOptions Regex] (or [PatternMatching][]) and [Comparison Type][Equality] is [Current Culture][], some character equivalences (for example `æ` and `ae`) may not evaluate as equal — see each text or folder block's remarks (for example [Contains Text][]).
-* On [Search File][] and [Search Files][], the inline `s` (single-line) regex option is not supported because matching is line-by-line.
 
 ## See Also
 
