@@ -64,7 +64,7 @@ Common extensions (`.txt`, `.log`, `.csv`, `.json`, `.xml`, `.pdf`, `.docx`, `.x
 | Language | Exact characters | `*` and `?` only | Full .NET regex |
 | Typical use | Fixed phrases | File-style or simple fuzzy text patterns | Complex structure, groups, alternation |
 | Invalid pattern errors | N/A | N/A (wildcards only) | Invalid patterns can throw [RegexParsingFailedException][] |
-| Search timeout | Not applied as for PatternMatching/Regex on many Contains blocks | Can throw [RegexMatchTimeoutException][] if the search exceeds the block's documented limit (often `30` seconds) | Same timeout behaviour on those blocks |
+| Search timeout | Not applied as for PatternMatching/Regex on many Contains blocks | Can throw [RegexMatchTimeoutException][] if the search exceeds the block's documented limit (often `30` seconds) | Same timeout behaviour as PatternMatching. |
 
 "Contains" is a **block operation** (does this text contain a match?). [LiteralText][], [PatternMatching][], and [Regex][SearchOptions Regex] are **how** the search text is interpreted via [SearchOptions][].
 

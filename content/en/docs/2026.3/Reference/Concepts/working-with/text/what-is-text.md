@@ -146,7 +146,7 @@ Strings use **zero-based** indexes. Common operations:
 | Slice by range | `Substring`, ranges/indexes where supported | [Get Text Between Indexes][], [Get Text at Beginning][], [Get Text at End][] |
 | Length | `"Cortex".Length` → `6` | Related Get Length blocks under [Text][Text Blocks] |
 
-Indexes refer to [Char][] units (UTF-16 code units), not always to user-perceived graphemes. For ranges and index syntax in modern C#, see [Indices and ranges][]. For broader string APIs, see [Basic string operations][].
+For ranges and index syntax in modern C#, see [Indices and ranges][]. For broader string APIs, see [Basic string operations][].
 
 ## Remarks
 

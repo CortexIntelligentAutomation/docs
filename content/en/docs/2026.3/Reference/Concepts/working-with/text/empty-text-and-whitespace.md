@@ -24,8 +24,7 @@ In {{% ctx %}}, a [String][] can be missing (`null`), empty (length `0`), or con
 | Test for empty only (`""`) | [Is Text Empty][] or `($)Text == ""` / `($)Text.Length == 0` |
 | Test for `null` or empty | [Is Text Null Or Empty][] or [String.IsNullOrEmpty][] |
 | Test for empty or whitespace-only (space, tab, CR, LF) | [Is Text Empty Or Whitespace][] |
-| Test for `null`, empty, or whitespace-only (space, tab, CR, LF) | [Is Text Null, Empty Or Whitespace][] |
-| Test for `null`, empty, or whitespace-only (.NET set) | [String.IsNullOrWhiteSpace][] |
+| Test for `null`, empty, or whitespace-only (space, tab, CR, LF) | [Is Text Null, Empty Or Whitespace][]  or [String.IsNullOrWhiteSpace][]|
 
 Treat `null`, empty, and whitespace as distinct cases when validating input. For an overview of text in {{% ctx %}}, see [What is Text?][].
 
