@@ -35,7 +35,7 @@ For multi-page or cross-version changes, outline affected paths first (which ver
 
 ### Security and ignored paths
 
-Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, `data/**`, CI workflows, secrets, or internal/draft paths. If `urls.toml` is needed, ask the user for the relevant key or snippet.
+Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, other `data/**`, CI workflows, secrets, or internal/draft paths. **Exception:** read and update [`data/urls.toml`](data/urls.toml) for link keys — look up existing keys first; do not add a second key that maps to the same destination (full URL including any `#fragment`; page and heading are distinct destinations).
 
 ## Project agent assets
 
@@ -49,11 +49,13 @@ Respect [.cursorignore](.cursorignore). Do not read or commit Hugo config, `data
 ## Quality bar
 
 - Procedural, customer-facing tone; preserve frontmatter (`title`, `linkTitle`, `description`, `weight`).
-- Prefer shortcodes over raw HTML; match `{{< url path="Cortex...." >}}` patterns in the same section.
+- Prefer shortcodes over raw HTML; match `{{< url path="…" >}}` for internal **and** external links (never plain `[text](https://…)` or bare URLs). Exception: inside `alert`, use `{{< ahref path="…" title="…" >}}` — the first word of the alert body cannot be a link.
+- Prefer linking to the relevant heading: same-page via `{{< ref "#slug" >}}`; cross-page via a `urls.toml` key whose URL includes `#slug` — never append `#…` after the `url` shortcode. Use a page-level key only for whole-page references.
+- Remarks vs Known Limitations: general functional notes get their own `###` under `## Remarks`; only real constraints go under `### Known Limitations` as a bullet list (no nested headings). If unclear, ask before placing the item.
 - Scope changes to the version(s) the user requested.
 
 ## What not to do
 
-- Do not modify `public/`, `node_modules/`, or ignored config/data files.
+- Do not modify `public/`, `node_modules/`, or ignored config/data files (except allowed updates to `data/urls.toml`).
 - Do not invent install commands or CI steps not documented in-repo.
 - Do not remove or weaken `.cursorignore` without explicit user approval.

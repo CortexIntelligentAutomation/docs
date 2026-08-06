@@ -36,6 +36,7 @@ IgnoreURLs:
 - "https://letsencrypt.org/.*"
 - "https://support.microsoft.com/.*"
 - "https://www.iso.org/.*"
+- "https://www.youtube.com/.*"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"

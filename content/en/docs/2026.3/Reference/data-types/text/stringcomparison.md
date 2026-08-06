@@ -52,18 +52,20 @@ None
 
 ### Related Concepts
 
+- [Equality][] — comparison rules, when to use each `StringComparison` value, and worked examples
 - [Working With Text][]
 - [Working With Enums][]
 
 ### External Documentation
 
-- [System.StringComparison][StringComparison]
+- [System.StringComparison][MS StringComparison]
 - [System.Enum][]
 
 [Working With Text]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.MainDoc" >}}
+[Equality]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Text.Equality.MainDoc" >}}
 
 [StringComparer]: {{< url path="Cortex.Reference.DataTypes.Text.StringComparer.MainDoc" >}}
-[StringComparison]: {{< url path="MSDocs.DotNet.Api.System.StringComparison" >}}
+[MS StringComparison]: {{< url path="MSDocs.DotNet.Api.System.StringComparison" >}}
 
 [Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
 [Output]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Output" >}}

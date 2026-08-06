@@ -7,6 +7,6 @@ alwaysApply: true
 
 Follow [.cursorignore](../../.cursorignore).
 
-Do not read/commit: `config.*`, `data/**`, `urls.toml`, CI configs, `.env*`, certs/keys, `public/**`, `node_modules/**`, internal/draft content paths.
+Do not read/commit: `config.*`, other `data/**` (except `data/urls.toml`), CI configs, `.env*`, certs/keys, `public/**`, `node_modules/**`, internal/draft content paths.
 
-If link keys are needed, copy from an existing page in the same section or ask the user.
+**Exception:** `data/urls.toml` may be read and updated for link keys. Do not read other ignored `data/**` or `*.toml` files. Look up existing keys in `data/urls.toml` before adding any new key (internal `Cortex.*` or external namespaces) — never invent a parallel key for a destination URL that already has one (full URL including any `#fragment`; page and heading are distinct destinations).
