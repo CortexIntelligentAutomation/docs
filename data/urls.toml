@@ -1709,6 +1709,7 @@
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/"
                                 CastingExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#casting-expressions"
+                                ConstructorExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#constructor-expressions"
                                 DecompositionExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#decomposition-expressions"
                                 DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#dictionary-literal"
                                 EnumExpressions = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#enum-expressions"
@@ -1721,6 +1722,19 @@
                                 VerbatimStrings = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/expression-editor/#verbatim-strings"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/"
+                                LiteralValues = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#literal-values"
+                                StringLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#string-literal"
+                                BooleanLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#boolean-literal"
+                                DateTimeLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#datetime-literal"
+                                DateTimeOffsetLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#datetimeoffset-literal"
+                                TimeSpanLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#timespan-literal"
+                                EnumLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#enum-literal"
+                                ObjectLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#object-literal"
+                                DictionaryLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#dictionary-literal"
+                                StructureLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#structure-literal"
+                                ListLiteral = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#list-literal"
+                                ComplexTypes = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#complex-types"
+                                SwitchingType = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/literal-editor/#switching-type"
                             [Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor]
                                 MainDoc = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/"
                                 CreatingVariables = "/docs/reference/concepts/fundamentals/blocks/block-properties/property-editors/variable-editor/#creating-variables"
@@ -3124,6 +3138,8 @@
                     LastIndexOf = "https://learn.microsoft.com/en-us/dotnet/api/system.string.lastindexof"
                 [MSDocs.DotNet.Api.System.TimeSpan]
                     MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan"
+                    MaxValue = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan.maxvalue"
+                    MinValue = "https://learn.microsoft.com/en-us/dotnet/api/system.timespan.minvalue"
                 [MSDocs.DotNet.Api.System.Globalization]
                     CultureInfo = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo"
                     CultureInfoCtor = "https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.-ctor"
