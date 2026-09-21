@@ -279,9 +279,9 @@ The Literal Editor is not available for every data type or every [block property
 
 ### Known Limitations
 
-* There is no support in the Literal Editor for [collection][Collections] types (including [List][], [Dictionary][], and [Structure][]) or for types that have constructors with no parameters.
-* Creating an [Object][] using literal syntax is not supported.
-* Combined flag [enum][What is an Enum?] values cannot be selected; use the [Expression Editor][] instead (for example [StringSplitOptions][]).
+- There is no support in the Literal Editor for [collection][Collections] types (including [List][], [Dictionary][], and [Structure][]) or for types that have constructors with no parameters.
+- Creating an [Object][] using literal syntax is not supported.
+- Combined flag [enum][What is an Enum?] values cannot be selected; use the [Expression Editor][] instead (for example [StringSplitOptions][]).
 
 ## See Also
 
