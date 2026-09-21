@@ -1,6 +1,6 @@
 ---
 ---
-{{% alert title="Note" %}}A key must be purchased from {{< ahref path="OpenAI.MainDoc" title="OpenAI" >}} in order to enable the Process Templates.{{% /alert %}}
+{{% alert title="Note" %}}A key must be purchased from {{< ahref path="OpenAI.ApiKey" title="OpenAI" >}} in order to enable the Process Templates.{{% /alert %}}
 
 On the Web Application Server:
 
@@ -11,7 +11,7 @@ On the Web Application Server:
 
     ``` txt
         <setting name="OpenAI_Key" serializeAs="String">
-            <value>sk-svcDt-p5OiXFXcBtq-q5t9D95nfnfC8dd61i8_2XhIB9Dd—jbF5WoeapK1RszAB</value>
+            <value>tl-twdEu-q5PjYGYdCur-r5u9E95ogogD8ee61j8_2YiJC9Ee—kcG5XpfbqL1StaBC</value>
         </setting>
     ```
 
@@ -23,4 +23,8 @@ On the Web Application Server:
         </setting>
     ```
 
+    See [Open AI Models][] for a list of available models that can be used. Click on the model required and scroll down to `Snapshots` to find the Alias to use.
+
 1. Save and close the file.
+
+[Open AI Models]: {{< url path="OpenAI.Models" >}}

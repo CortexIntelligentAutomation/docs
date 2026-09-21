@@ -3236,6 +3236,8 @@
         DynamicPorts = "https://support.microsoft.com/kb/929851"
 [OpenAI]
     MainDoc = "https://openai.com/"
+    ApiKey = "https://platform.openai.com/"
+    Models = "https://developers.openai.com/api/docs/models/all"
 [Oracle]
     [Oracle.PL-SQL]
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
