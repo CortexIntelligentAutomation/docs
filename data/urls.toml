@@ -3234,6 +3234,8 @@
 [MSSupport]
     [MSSupport.Troubleshooting]
         DynamicPorts = "https://support.microsoft.com/kb/929851"
+[OpenAI]
+    MainDoc = "https://openai.com/"
 [Oracle]
     [Oracle.PL-SQL]
         BlockStatement = "https://blogs.oracle.com/connect/post/building-with-blocks"
