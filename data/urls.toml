@@ -2799,7 +2799,7 @@
         [Cortex.Website.UseCases]
             MainDoc = "https://www.wearecortex.com/use-cases/"
     [Cortex.ServicePortal]
-        MainDoc = "https://www.wearecortex.com/service-desk-support/"
+        MainDoc = "https://www.wearecortex.com/product/technical-support/"
     [Cortex.YouTube]
         MainDoc = "https://www.youtube.com/@WeAreCORTEX"
 [Anycast]
