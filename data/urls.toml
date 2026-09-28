@@ -2795,9 +2795,9 @@
         [Cortex.Website.EngageWithUs]
             MainDoc = "https://www.wearecortex.com/contact/"
         [Cortex.Website.Eula]
-            MainDoc = "https://www.wearecortex.com/eula-standard-terms/"
+            MainDoc = "https://www.wearecortex.com/terms/"
         [Cortex.Website.UseCases]
-            MainDoc = "https://www.wearecortex.com/use-cases/"
+            MainDoc = "https://www.wearecortex.com/case_studies/"
     [Cortex.ServicePortal]
         MainDoc = "https://support.wearecortex.com/support/"
     [Cortex.YouTube]
