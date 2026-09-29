@@ -1,5 +1,5 @@
 DirectoryPath: "dist"
-TestFilesConcurrently: true
+TestFilesConcurrently: false
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreEmptyHref: true
@@ -37,6 +37,7 @@ IgnoreURLs:
 - "https://support.microsoft.com/.*"
 - "https://www.iso.org/.*"
 - "https://www.youtube.com/.*"
+- "https://platform.openai.com/"
 IgnoreDirs:
 - "docs/?.*/_print/"
 - "docs/?.*/_shared/"
