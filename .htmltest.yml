@@ -1,5 +1,5 @@
 DirectoryPath: "dist"
-TestFilesConcurrently: true
+TestFilesConcurrently: false
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreInternalEmptyHash: true
 IgnoreEmptyHref: true
