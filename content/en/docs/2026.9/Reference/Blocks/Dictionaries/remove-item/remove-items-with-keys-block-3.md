@@ -1,0 +1,167 @@
+---
+title: "Remove Items With Keys"
+linkTitle: "Remove Items With Keys"
+description: "Removes all items with any of the given keys from a Dictionary."
+---
+
+{{< figure src="/blocks/Cortex_Blocks_Dictionaries_RemoveItem_RemoveItemsWithKeysBlock_3.png" alt="Icon" class="block-icon" >}}
+
+# {{% param title %}}
+
+<p class="namespace">(Cortex.Blocks.Dictionaries.RemoveItem.RemoveItemsWithKeysBlock`3)</p>
+
+## Description
+
+Removes all items with any of the given [Keys][Keys Property] from a [Dictionary][Dictionary Property].
+
+## Examples
+
+### Remove all items with any of the given Keys from an empty Dictionary
+
+This example will attempt to remove all items with any of the given keys in `["Key1", "Key2"]` from `{}`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[dynamic][], [dynamic][]&gt; |
+| [Keys][Keys Property] | `($)Keys`, with value `["Key1", "Key2"]` | `($)Keys` is a variable of type [IDictionary][]&lt;[String][]&gt; |
+
+#### Result
+
+Attempting to remove all items with any of the given keys in `["Key1", "Key2"]` from `{}` results in no operation, as there is nothing to remove. Therefore, the variable `($)Dictionary` remains:
+
+```json
+{}
+```
+
+***
+
+### Remove all items with any of the given Keys from a Dictionary
+
+This example will attempt to remove all items with any of the given keys in `["Key1", "Key2"]` from `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}`.
+
+#### Properties
+
+| Property           | Value                     | Notes                                    |
+|--------------------|---------------------------|------------------------------------------|
+| [Dictionary][Dictionary Property] | `($)Dictionary`, with value `{}` | `($)Dictionary` is a variable of type [IDictionary][]&lt;[String][], [Int32][]&gt; |
+| [Keys][Keys Property] | `($)Keys`, with value `["Key1", "Key2"]` | `($)Keys` is a variable of type [IDictionary][]&lt;[String][]&gt; |
+
+#### Result
+
+Attempting to remove all items with any of the given keys in `["Key1", "Key2"]` from `{"Key1" : 1, "Key2" : 2, "Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}` results in the variable `($)Dictionary` being updated to the following:
+
+```json
+{"Key3" : 3, "Key4" : 3, "Key5" : 2, "Key6" : 1}
+```
+
+***
+
+## Properties
+
+### Dictionary
+
+The [Dictionary][Dictionary Property] to remove all items with any of the given [Keys][Keys Property] from.
+
+[Dictionary][Dictionary Property] can be any [IDictionary][]&lt;[TKey][], [TItem][]&gt;, where [TKey][] represents the type of keys used to lookup items in the [Dictionary][Dictionary Property], and [TItem][] represents the type of items in the [Dictionary][Dictionary Property].
+  
+| | |
+|--------------------|---------------------------|
+| Data Type | [IDictionary][]&lt;[TKey][], [TItem][]&gt; |
+| Property Type | [InputOutput][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Variable][] |
+| Default Value | `($)Dictionary` with no value |
+
+### Keys
+
+The [Keys][Keys Property] the items to remove must have one of.
+
+For information and examples of how it is determined whether an item has a specified key, please see [Object Equality][].
+
+For information about what a key is, please see [Keys][].
+
+| | |
+|--------------------|---------------------------|
+| Data Type | [IEnumerable][]&lt;[TKey][]&gt; |
+| Property Type | [Input][] |
+| Is [Advanced][] | `false` |
+| Default Editor | [Expression][] |
+| Default Value | No value (defaults to `null`) |
+
+## Exceptions
+
+The exceptions thrown by the block can be found below:
+
+| Name     | Description |
+|----------|----------|
+| [ArgumentNullException][] | Thrown when any key in [Keys][Keys Property] is `null`|
+| [CannotModifyReadOnlyDictionaryException][] | Thrown when [Dictionary][Dictionary Property] is read-only. |
+| [PropertyNullException][] | Thrown when [Dictionary][Dictionary Property] or [Keys][Keys Property] are `null`. |
+
+## Remarks
+
+### Key Equality
+
+For information and examples of how it is determined whether a key is already present, please see [Object Equality][].
+
+### Empty Dictionary
+
+If [Dictionary][Dictionary Property] is empty (i.e. `{}`) there is nothing to remove, so no operation is performed.
+
+### Empty Keys
+
+If [Keys][Keys Property] is empty (i.e. `[]`) there are no keys to match, therefore nothing can be removed and no operation is performed.
+
+### No items with one of the given Keys
+
+If [Dictionary][Dictionary Property] does not contain items with one of the given [Keys][Keys Property], there is nothing to remove for that key.
+
+### No items with any of the given Keys
+
+If [Dictionary][Dictionary Property] does not contain items with any of the given [Keys][Keys Property] there is nothing to remove, so no operation is performed.
+
+### Defining dictionaries using literal syntax
+
+For information about how to define dictionaries using literal syntax, see [Dictionary Literals][].
+
+### Defining dictionaries using expression syntax
+
+For information about how to define dictionaries using expression syntax, see [Create a Dictionary&lt;TKey, TItem&gt;][].
+
+### Dictionaries containing items with same data types vs different data types
+
+For information about the different types of dictionaries, including those that can contain only the same type of item, and those that can contain different types of item, see [Dictionaries][].
+
+[Dictionary Property]: {{< ref "#dictionary" >}}
+[Keys Property]: {{< ref "#keys" >}}
+
+[InputOutput]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.InputOutput" >}}
+[Input]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.WhatIsABlockProperty.Input" >}}
+
+[Keys]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Collections.Keys.MainDoc" >}}
+[Object Equality]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Objects.ObjectEquality.MainDoc" >}}
+
+[Dictionary Literals]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.DictionaryLiteral" >}}
+[Create a Dictionary&lt;TKey, TItem&gt;]: {{< url path="Cortex.Reference.DataTypes.Collections.Dictionary.CreateNew" >}}
+[Dictionaries]: {{< url path="Cortex.Reference.DataTypes.MostCommon.Dictionaries" >}}
+
+[TKey]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+[TItem]: {{< url path="Cortex.Reference.Concepts.Fundamentals.DataTypes.Generics.MainDoc" >}}
+
+[ArgumentNullException]: {{< url path="MSDocs.DotNet.Api.System.ArgumentNullException" >}}
+[CannotModifyReadOnlyDictionaryException]: {{< url path="Cortex.Reference.Exceptions.Dictionaries.CannotModifyReadOnlyDictionaryException.MainDoc" >}}
+[PropertyNullException]: {{< url path="Cortex.Reference.Exceptions.Common.Property.PropertyNullException.MainDoc" >}}
+
+[IDictionary]: {{< url path="Cortex.Reference.DataTypes.Collections.IDictionary.MainDoc" >}}
+[IEnumerable]: {{< url path="Cortex.Reference.DataTypes.Collections.IEnumerable_TItem.MainDoc" >}}
+[dynamic]: {{< url path="Cortex.Reference.DataTypes.All.dynamic.MainDoc" >}}
+[String]: {{< url path="Cortex.Reference.DataTypes.Text.String.MainDoc" >}}
+[Int32]: {{< url path="Cortex.Reference.DataTypes.Numbers.Int32.MainDoc" >}}
+
+[Literal]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.LiteralEditor.MainDoc" >}}
+[Variable]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.VariableEditor.MainDoc" >}}
+[Expression]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.PropertyEditors.ExpressionEditor.MainDoc" >}}
+
+[Advanced]: {{< url path="Cortex.Reference.Concepts.Fundamentals.Blocks.BlockProperties.AdvancedProperties.MainDoc" >}}
