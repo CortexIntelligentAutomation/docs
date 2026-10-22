@@ -1,38 +1,13 @@
 ---
 title: "Install Portal"
 linkTitle: "Install Portal"
-description: "Install IIS, the .NET 10 Hosting Bundle, extract the Portal scripts, configure the install script, and run it."
+description: "Information about installing the {{% ctx %}} Portal."
 weight: 40
 ---
 
 # {{% param title %}}
 
-Complete these steps on the Web Application Server that already hosts {{% ctx %}} Gateway.
-
-## Install IIS
-
-1. Open **Server Manager**.
-1. Click **Manage**, then **Add Roles and Features**.
-1. Proceed through the wizard. On **Server Roles**, select **Web Server (IIS)**.
-1. Add the management tools the wizard offers, confirm the selection, and install.
-1. Restart the server if Windows asks you to.
-
-## Install the .NET 10 Hosting Bundle
-
-1. Download the **.NET 10 Hosting Bundle** from Microsoft and run the installer on this server.
-1. When the installer finishes, open an elevated PowerShell window and run:
-
-    ```powershell
-    iisreset
-    ```
-
-The hosting bundle registers the ASP.NET Core Module with IIS. `iisreset` loads that module.
-
-## Extract the scripts
-
-1. Copy **Portal Application Server Scripts.zip** to the server.
-1. Extract it to `C:\Install\Portal Application Server Scripts`.
-1. Confirm `Cortex.Innovation.Install.Portal.ps1` is in that folder.
+This guide describes how to install the {{% ctx %}} Portal on the Web Application Server.
 
 ## Configure {{% ctx %}} Portal Installation Script
 
@@ -58,14 +33,14 @@ The hosting bundle registers the ASP.NET Core Module with IIS. `iisreset` loads 
 
     | Name | Description |
     |------|-------------|
-    |`PackagePath` | Configure this value with the location of the portal package folder on the installation server. Copy the folder produced by `pnpm package` (`artifacts/cortex-portal/`) to this path. Typically this will be `C:\Install\cortex-portal`. |
+    |`PackagePath` | Configure this value with the folder where **Cortex Innovation 2026.9 - Portal.zip** was extracted. Typically this will be `C:\Install\cortex-portal`. That folder must directly contain `Cortex.Portal.Bff.dll`, `web.config`, and `wwwroot`. |
     |`ServiceFabricApiGatewayEndpoint` | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `Cortex:ApiGateway:BaseUrl` value in the portal `appsettings.json`. |
     |`PortalApplicationPoolUsername` | Replace `Domain\Username` with the user that should be used to run the {{% ctx %}} Portal application pool. The password for this user is prompted when the application pool is created. |
     |`WebRootFolder` | Replace this with the correct path for the Web Root Folder on the server. Typically this will be `C:\inetpub\wwwroot`. |
     |`SiteName` | The IIS site name. The default is `Cortex`. When {{% ctx %}} Portal is installed on the same server as {{% ctx %}} Gateway, use the Gateway site name so both applications share one site. |
     |`ApplicationName` | The IIS sub-application name. The default is `portal`. The portal is then available under `/portal` on that site. |
     |`WebsitePort` | Replace this with the port that you wish the website to use when this script creates the site. Typically this will be `443`. This value is ignored when the site already exists. |
-    |`ImportCertificate` | Change this from `$true` to `$false` if you do not require the certificate to be imported as part of the installation process.<br /><br />When this is `$false`, use the certificate already assigned for {{% ctx %}} Gateway. See [Install the Web Application Server][Install the Web Application Server].<br /><br />When this is `$true` and the file is a `.pfx`, the script prompts for the certificate password. That password is not a parameter on this script. |
+    |`ImportCertificate` | Leave this as `$false` when the portal should use the certificate already assigned for {{% ctx %}} Gateway. See [Install the Web Application Server][Install the Web Application Server]. Set this to `$true` only when this script should import a certificate.<br /><br />When this is `$true` and the file is a `.pfx`, the script prompts for the certificate password. That password is not a parameter on this script. |
     |`CertificateFilePath` | Replace this with the location and filename for the certificate to be imported. If `ImportCertificate` is `$false`, this value can remain unchanged. |
     |`CertificateFriendlyName` | Replace this with the friendly name of the certificate. The sample uses `CortexServerCertificate`. When sharing the site certificate with {{% ctx %}} Gateway, use the same friendly name. |
     |`UsingWindowsDefender` | Change this from `$false` to `$true` if you are using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alternative firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443). |
@@ -101,4 +76,4 @@ The hosting bundle registers the ASP.NET Core Module with IIS. `iisreset` loads 
 
 [CORTEX Service Portal]: {{< url path="Cortex.ServicePortal.MainDoc" >}}
 [Eula]: {{< url path="Cortex.Website.Eula.MainDoc" >}}
-[Install the Web Application Server]: ../install-innovation-only/single-server-without-ha/installation/install-web-application-server/
+[Install the Web Application Server]: ../../install-innovation-only/single-server-without-ha/installation/install-web-application-server/
