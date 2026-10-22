@@ -19,8 +19,10 @@
 {{ $tab = merge $tab (dict "highlight" ($.Get "highlight")) }}
 {{ end }}
 {{ with $.Inner }}
-{{/*  Trim any leading and trailing newlines from .Inner, this avoids spurious lines during syntax highlighting  */}}
-{{ $tab = merge $tab (dict "content" (trim $.Inner "\n")) }}
+{{/*  Trim leading newlines and trailing whitespace from .Inner, this avoids spurious lines during syntax highlighting.
+     \r is trimmed as well as \n, as a file with Windows line endings would otherwise leave a blank first line, and
+     trailing spaces are trimmed as the indentation of the closing tab shortcode would otherwise leave a blank last line  */}}
+{{ $tab = merge $tab (dict "content" (strings.TrimRight " \t\r\n" (strings.TrimLeft "\r\n" $.Inner))) }}
 {{ end }}
 
 {{/*  add dict tab to parent's scratchpad  */}}
