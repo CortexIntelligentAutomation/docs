@@ -7,14 +7,12 @@ weight: 1
 
 ## Summary
 
-2026.3 is the latest [Release][] of the next generation of {{% ctx %}} and improves on the [2025.9][] release in the following areas:
+2026.9 is the latest [Release][] of the next generation of {{% ctx %}} and improves on the [2026.3][] release in the following areas:
 
 * [Capability][]
 * [Security][]
 * [Performance][]
 * [Usability][]
-* [Scalability][]
-* [Observability][]
 * [Third-Party Support][]
 * [Installation][]
 * [Upgrade][]
@@ -24,153 +22,121 @@ weight: 1
 
 This release introduces multiple new features to the {{% ctx %}} Platform:
 
-* [Added ServiceDetails to ExecutionContext][Capability - Added ServiceDetails to ExecutionContext]
-* [Added ability to configure block logging on each block][Capability - Added ability to configure block logging on each block]
-* [Added new flow Settings dialog][Capability - Added new flow Settings dialog]
-* [Improved handling of blank or null expression][Capability - Improved handling of blank or null expression]
-* [Added LDAP Group Filtering for Role Claims][Capability - Added LDAP Group Filtering for Role Claims]
-* [Added support for filtering and opening task by process id][Capability - Added support for filtering and opening task by process id]
-* [Added support for assigning task to users and/or groups][Capability - Added support for assigning task to users and/or groups]
-* [Enhanced the handling of untranslated SNMP v1 Traps][Capability - Enhanced the handling of untranslated SNMP v1 Traps]
-* [Partial Translation for unrecognised SNMP varbinds][Capability - Partial Translation for unrecognised SNMP varbinds]
-* [Attempt Translation of SNMP varbinds that do not end with .0][Capability - Attempt Translation of SNMP varbinds that do not end with .0]
+* [Added AI-generated flow documentation][Capability - Added AI-generated flow documentation]
+* [Added running execution counts and details][Capability - Added running execution counts and details]
+* [Added Microsoft 365 email blocks][Capability - Added Microsoft 365 email blocks]
+* [Added proxy support to Send Email Using Microsoft 365][Capability - Added proxy support to Send Email Using Microsoft 365]
+* [Added SSH private key authentication][Capability - Added SSH private key authentication]
+* [Updated Create Process from BPMN XML][Capability - Updated Create Process from BPMN XML]
+* [Added SNMP enumeration translation][Capability - Added SNMP enumeration translation]
+* [Extended configuration settings management][Capability - Extended configuration settings management]
+* [Introduced the {{% ctx %}} Portal][Capability - Introduced the {{% ctx %}} Portal]
+* [Added the ability to run a flow from a portal application][Capability - Added the ability to run a flow from a portal application]
+* [Added directory groups for portal applications][Capability - Added directory groups for portal applications]
+* [Added RabbitMQ outage logging][Capability - Added RabbitMQ outage logging]
 
 ## Improved Security
 
 We tightened the security of the platform by:
 
-* [Adding an Encryption Endpoint to {{% ctx %}} API Gateway Service][Security - Added Encryption Endpoint to {{% ctx %}} API Gateway Service]
-* [Adding support for multiple encryption keys][Security - Added support for multiple encryption keys]
-* [Adding the ability to encrypt values in the {{% ctx %}} Configuration Portal][Security - Added the ability to encrypt values in the {{% ctx %}} Configuration Portal]
-* [Introducing Role‑Based Access Control for Containers in the {{% ctx %}} Configuration Portal][Security - Introduced Role‑Based Access Control for Containers in the {{% ctx %}} Configuration Portal]
-* [Delivering general security enhancements][Security - General Security enhancements]
-* [Adding robots.txt exclusions for {{% ctx %}} web applications][Security - Added robots.txt exclusions for {{% ctx %}} web applications]
+* [Adding certificate-based OAuth and mTLS][Security - Adding certificate-based OAuth and mTLS]
+* [Adding TCP passthrough for API Gateway mTLS][Security - Adding TCP passthrough for API Gateway mTLS]
+* [Requiring HTTPS for a remote AI model server][Security - Requiring HTTPS for a remote AI model server]
+* [Keeping portal sign-in tokens out of the browser][Security - Keeping portal sign-in tokens out of the browser]
+* [Adding an optional OpenID scope and UserInfo][Security - Adding an optional OpenID scope and UserInfo]
+* [Updating the SSL best practices scripts][Security - Updating the SSL best practices scripts]
 
 ## Improved Performance
 
-The performance of the {{% ctx %}} Platform has been improved by:
-
-* [Improving Execution Service concurrency and flow translation][Performance - Improved Execution Service concurrency and flow translation]
-* [Limiting the batch size of ExecutionCompletionDetails sent to the Monitoring Service][Performance - Limit The batch size of ExecutionCompletionDetails sent to the Monitoring Service]
-* [Improving handling of batch ExecutionCompletionDetails in the Monitoring Service][Performance - Improving handling of batch ExecutionCompletionDetails in the Monitoring Service]
-* [Improving execution handling performance in the Provisioning Service][Performance - Improving execution handling performance in the Provisioning Service]
+The performance of debug resume has been improved by [returning to debug mode without the previous timeout][Performance - Debug resume returns without timing out].
 
 ## Improved Usability
 
-Usability has been improved with [support for implicit data type conversion in Flow input variables][Usability - Support for implicit data type conversion in Flow input variables] and by [making first-time debug execution start immediately][Usability - Making first-time debug execution start immediately].
-
-## Improved Scalability
-
-Scalability has been increased by [enhancing service lifecycle handling and RabbitMQ outage recovery][Scalability - Enhancing service lifecycle handling and RabbitMQ outage recovery].
-
-## Improved Observability
-
-Observability has been extended by:
-
-* [Setting a retention period for Grafana Loki][Observability - Set Retention Period for Grafana Loki]
-* [Enabling logs for failed login attempts to {{% ctx %}} Gateway][Observability - Enabling logs for failed login attempts to {{% ctx %}} Gateway]
-* [Adding engine and blocks version display in the {{% ctx %}} Gateway package definitions grid][Observability - Adding engine and blocks version display in the {{% ctx %}} Gateway package definitions grid]
-* [Adding a new Flow Execution Detail dashboard in Grafana][Observability - Adding a new Flow Execution Detail dashboard in Grafana]
+Usability has been improved by [updating {{% ctx %}} Portal navigation][Usability - Updated {{% ctx %}} Portal navigation] and by [limiting log redaction to sensitive property names][Usability - Limiting log redaction to sensitive property names].
 
 ## Improved Third-Party Support
 
 Third-party support has been improved by:
 
-* [updating NuGet packages][Third-Party Support - Updating NuGet Packages]
-* [upgrading observability stack dependencies][Third-Party Support - Upgrading Observability Stack Dependencies]
-* [updating the SNMP library to support new authentication protocols][Third-Party Support - Updating SNMP Library to Support New Authentication Protocols]
+* [Upgrading to .NET 10][Third-Party Support - Upgrading to .NET 10]
+* [Upgrading RabbitMQ and Erlang][Third-Party Support - Upgrading RabbitMQ and Erlang]
+* [Updating third-party packages][Third-Party Support - Updating third-party packages]
+* [Adding Windows Server 2025 support][Third-Party Support - Adding Windows Server 2025 support]
 
 ## Improved Installation
 
 Installation has been improved by:
 
-* [Improving node recovery for cluster machines][Installation - Improved Node Recovery for Cluster Machines]
-* [Improving behaviour when disabling cluster nodes][Installation - Improved behaviour when disabling cluster nodes]
-* [Adding UTF‑8 encoding support for non‑ANSI characters in configuration files][Installation - UTF‑8 encoding support for Non‑ANSI characters in configuration files]
-* [Removing dependency on Active Directory cmdlets][Installation - Removal of dependency on Active Directory cmdlets]
-* [Adding required types to LoggingSettings during upgrade][Installation - Added required types to LoggingSettings during upgrade]
-* [Adding a new node maintenance script for pre-patching operations][Installation - Adding a new node maintenance script for pre-patching operations]
-* [Removing Active Directory cmdlets dependency from Grafana Alloy installation][Installation - Removal of Active Directory cmdlets dependency from Grafana Alloy installation]
+* [Adding AI model server installation scripts][Installation - Adding AI model server installation scripts]
+* [Leaving the AI application unprovisioned by default][Installation - Leaving the AI application unprovisioned by default]
+* [Adding {{% ctx %}} Portal installation on IIS][Installation - Adding {{% ctx %}} Portal installation on IIS]
+* [Adding a DLL patcher script][Installation - Adding a DLL patcher script]
+* [Adding a script to move RabbitMQ logs and data][Installation - Adding a script to move RabbitMQ logs and data]
+* [Reactivating the Service Fabric node after node maintenance][Installation - Reactivating the Service Fabric node after node maintenance]
+* [Letting Professional Services run the portal workspace without a .NET SDK][Installation - Letting Professional Services run the portal workspace without a .NET SDK]
 
 ## Improved Upgrade
 
-Upgrade has been improved by:
-
-* [Adding backup and restore support for reliable collections during single-server upgrades][Upgrade - Backup & Restore Support for Reliable Collections during Single‑Server Upgrades]
-* [Enhancing pre-upgrade health checks for Service Fabric and RabbitMQ][Upgrade - Enhanced pre‑upgrade health checks for Service Fabric and RabbitMQ]
-* [Improving service management during reliable collections backup and restore][Upgrade - Improving service management during reliable collections backup and restore]
-* [Improving Flow migration from CORTEX 7][Upgrade - Improving Flow migration from CORTEX 7]
+Upgrade has been improved by [skipping invalid RunSubTask blocks during flow migration][Upgrade - Skipping invalid RunSubTask blocks during flow migration].
 
 ## Improved Documentation
 
-The documentation has been [expanded with broader Product Portal][Documentation - Expanded with broader Product Portal] coverage across authentication and authorisation, Gateway setup, Variable Editor usage, running execution changes, and MIB/SNMP Trap guidance in the Package Version Editor.
+The documentation has been [expanded with broader Product Portal][Documentation - Expanded with broader Product Portal] coverage across the code analyser, the global RunAs user, BPMN and natural language process templates, and the literal editor. Working with topics now include concurrency, data sources, date and time, email authentication, enums, files and folders, loops, numbers, scopes, tasks, and text. Fundamentals now include data types, null and nullable types, and generics. Objects now include what an object is, casting, and equality.
 
-For a full list of what has been introduced in this release, please see the [2026.3 Release Notes][]
+For a full list of what has been introduced in this release, please see the [2026.9 Release Notes][]
 
-[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2026.3" >}}
-[2025.9]: {{< url path="Cortex.Blogs.Releases.2025_9.MainDoc" version="2026.3" >}}
+[Release]: {{< url path="Cortex.Reference.Glossary.P-T.Release" version="2026.9" >}}
+[2026.3]: {{< url path="Cortex.Blogs.Releases.2026_3.MainDoc" version="2026.9" >}}
 
 [Capability]: {{< ref "#improved-capability" >}}
 [Security]: {{< ref "#improved-security" >}}
 [Performance]: {{< ref "#improved-performance" >}}
 [Usability]: {{< ref "#improved-usability" >}}
-[Scalability]: {{< ref "#improved-scalability" >}}
-[Observability]: {{< ref "#improved-observability" >}}
 [Third-Party Support]: {{< ref "#improved-third-party-support" >}}
 [Installation]: {{< ref "#improved-installation" >}}
 [Upgrade]: {{< ref "#improved-upgrade" >}}
 [Documentation]: {{< ref "#improved-documentation" >}}
 
-[2026.3 Release Notes]: {{< url path="Cortex.Blogs.Releases.2026_3.MainDoc" version="2026.3" >}}
+[2026.9 Release Notes]: {{< url path="Cortex.Blogs.Releases.2026_9.MainDoc" version="2026.9" >}}
 
-[Capability - Added ServiceDetails to ExecutionContext]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedServiceDetailsToExecutionContext" version="2026.3" >}}
-[Capability - Added ability to configure block logging on each block]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedAbilityToConfigureBlockLoggingOnEachBlock" version="2026.3" >}}
-[Capability - Added new flow Settings dialog]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedNewFlowSettingsDialog" version="2026.3" >}}
-[Capability - Improved handling of blank or null expression]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovedHandlingOfBlankOrNullExpression" version="2026.3" >}}
-[Capability - Added LDAP Group Filtering for Role Claims]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedLdapGroupFilteringForRoleClaims" version="2026.3" >}}
-[Capability - Added support for filtering and opening task by process id]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedSupportForFilteringAndOpeningTaskByProcessId" version="2026.3" >}}
-[Capability - Added support for assigning task to users and/or groups]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedSupportForAssigningTaskToUsersAndOrGroups" version="2026.3" >}}
-[Capability - Enhanced the handling of untranslated SNMP v1 Traps]: {{< url path="Cortex.Blogs.Releases.2026_3.EnhancedTheHandlingOfUntranslatedSnmpV1Traps" version="2026.3" >}}
-[Capability - Partial Translation for unrecognised SNMP varbinds]: {{< url path="Cortex.Blogs.Releases.2026_3.PartialTranslationForUnrecognisedSnmpVarbinds" version="2026.3" >}}
-[Capability - Attempt Translation of SNMP varbinds that do not end with .0]: {{< url path="Cortex.Blogs.Releases.2026_3.AttemptTranslationOfSnmpVarbindsThatDoNotEndWith0" version="2026.3" >}}
+[Capability - Added AI-generated flow documentation]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAiGeneratedFlowDocumentation" version="2026.9" >}}
+[Capability - Added running execution counts and details]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedRunningExecutionCountsAndDetails" version="2026.9" >}}
+[Capability - Added Microsoft 365 email blocks]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedMicrosoft365EmailBlocks" version="2026.9" >}}
+[Capability - Added proxy support to Send Email Using Microsoft 365]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedProxySupportToSendEmailUsingMicrosoft365" version="2026.9" >}}
+[Capability - Added SSH private key authentication]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedSshPrivateKeyAuthentication" version="2026.9" >}}
+[Capability - Updated Create Process from BPMN XML]: {{< url path="Cortex.Blogs.Releases.2026_9.UpdatedCreateProcessFromBpmnXml" version="2026.9" >}}
+[Capability - Added SNMP enumeration translation]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedSnmpEnumerationTranslation" version="2026.9" >}}
+[Capability - Extended configuration settings management]: {{< url path="Cortex.Blogs.Releases.2026_9.ExtendedConfigurationSettingsManagement" version="2026.9" >}}
+[Capability - Introduced the {{% ctx %}} Portal]: {{< url path="Cortex.Blogs.Releases.2026_9.IntroducedTheCortexPortal" version="2026.9" >}}
+[Capability - Added the ability to run a flow from a portal application]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedTheAbilityToRunAFlowFromAPortalApplication" version="2026.9" >}}
+[Capability - Added directory groups for portal applications]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedDirectoryGroupsForPortalApplications" version="2026.9" >}}
+[Capability - Added RabbitMQ outage logging]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedRabbitMqOutageLogging" version="2026.9" >}}
 
-[Security - Added Encryption Endpoint to {{% ctx %}} API Gateway Service]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedEncryptionEndpointToApiGatewayService" version="2026.3" >}}
-[Security - Added support for multiple encryption keys]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedSupportForMultipleEncryptionKeys" version="2026.3" >}}
-[Security - Added the ability to encrypt values in the {{% ctx %}} Configuration Portal]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedTheAbilityToEncryptValuesInTheConfigurationPortal" version="2026.3" >}}
-[Security - Introduced Role‑Based Access Control for Containers in the {{% ctx %}} Configuration Portal]: {{< url path="Cortex.Blogs.Releases.2026_3.IntroducedRoleBasedAccessControlForContainersInTheConfigurationPortal" version="2026.3" >}}
-[Security - General Security enhancements]: {{< url path="Cortex.Blogs.Releases.2026_3.GeneralSecurityEnhancements" version="2026.3" >}}
-[Security - Added robots.txt exclusions for {{% ctx %}} web applications]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedRobotsTxtExclusionsForWebApplications" version="2026.3" >}}
+[Security - Adding certificate-based OAuth and mTLS]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedCertificateBasedOauthAndMtls" version="2026.9" >}}
+[Security - Adding TCP passthrough for API Gateway mTLS]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedTcpPassthroughForApiGatewayMtls" version="2026.9" >}}
+[Security - Requiring HTTPS for a remote AI model server]: {{< url path="Cortex.Blogs.Releases.2026_9.RequiredHttpsForARemoteAiModelServer" version="2026.9" >}}
+[Security - Keeping portal sign-in tokens out of the browser]: {{< url path="Cortex.Blogs.Releases.2026_9.KeepingPortalSignInTokensOutOfTheBrowser" version="2026.9" >}}
+[Security - Adding an optional OpenID scope and UserInfo]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAnOptionalOpenIdScopeAndUserInfo" version="2026.9" >}}
+[Security - Updating the SSL best practices scripts]: {{< url path="Cortex.Blogs.Releases.2026_9.UpdatedTheSslBestPracticesScripts" version="2026.9" >}}
 
-[Performance - Improved Execution Service concurrency and flow translation]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovedExecutionServiceConcurrencyAndFlowTranslation" version="2026.3" >}}
-[Performance - Limit The batch size of ExecutionCompletionDetails sent to the Monitoring Service]: {{< url path="Cortex.Blogs.Releases.2026_3.LimitTheBatchSizeOfExecutionCompletionDetailsSentToTheMonitoringService" version="2026.3" >}}
-[Performance - Improving handling of batch ExecutionCompletionDetails in the Monitoring Service]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovingHandlingOfBatchExecutionCompletionDetailsInTheMonitoringService" version="2026.3" >}}
-[Performance - Improving execution handling performance in the Provisioning Service]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovingExecutionHandlingPerformanceInTheProvisioningService" version="2026.3" >}}
+[Performance - Debug resume returns without timing out]: {{< url path="Cortex.Blogs.Releases.2026_9.DebugResumeReturnsWithoutTimingOut" version="2026.9" >}}
 
-[Usability - Support for implicit data type conversion in Flow input variables]: {{< url path="Cortex.Blogs.Releases.2026_3.SupportForImplicitDataTypeConversionInFlowInputVariables" version="2026.3" >}}
-[Usability - Making first-time debug execution start immediately]: {{< url path="Cortex.Blogs.Releases.2026_3.MakingFirstTimeDebugExecutionStartImmediately" version="2026.3" >}}
+[Usability - Updated {{% ctx %}} Portal navigation]: {{< url path="Cortex.Blogs.Releases.2026_9.UpdatedCortexPortalNavigation" version="2026.9" >}}
+[Usability - Limiting log redaction to sensitive property names]: {{< url path="Cortex.Blogs.Releases.2026_9.LimitedLogRedactionToSensitivePropertyNames" version="2026.9" >}}
 
-[Scalability - Enhancing service lifecycle handling and RabbitMQ outage recovery]: {{< url path="Cortex.Blogs.Releases.2026_3.EnhancingServiceLifecycleHandlingAndRabbitMqOutageRecovery" version="2026.3" >}}
+[Third-Party Support - Upgrading to .NET 10]: {{< url path="Cortex.Blogs.Releases.2026_9.UpgradedToNet10" version="2026.9" >}}
+[Third-Party Support - Upgrading RabbitMQ and Erlang]: {{< url path="Cortex.Blogs.Releases.2026_9.UpgradedRabbitMqAndErlang" version="2026.9" >}}
+[Third-Party Support - Updating third-party packages]: {{< url path="Cortex.Blogs.Releases.2026_9.UpdatedThirdPartyPackages" version="2026.9" >}}
+[Third-Party Support - Adding Windows Server 2025 support]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedWindowsServer2025Support" version="2026.9" >}}
 
-[Observability - Set Retention Period for Grafana Loki]: {{< url path="Cortex.Blogs.Releases.2026_3.SetRetentionPeriodForGrafanaLoki" version="2026.3" >}}
-[Observability - Enabling logs for failed login attempts to {{% ctx %}} Gateway]: {{< url path="Cortex.Blogs.Releases.2026_3.EnablingLogsForFailedLoginAttemptsToGateway" version="2026.3" >}}
-[Observability - Adding engine and blocks version display in the {{% ctx %}} Gateway package definitions grid]: {{< url path="Cortex.Blogs.Releases.2026_3.AddingEngineAndBlocksVersionDisplayInTheGatewayPackageDefinitionsGrid" version="2026.3" >}}
-[Observability - Adding a new Flow Execution Detail dashboard in Grafana]: {{< url path="Cortex.Blogs.Releases.2026_3.AddingANewFlowExecutionDetailDashboardInGrafana" version="2026.3" >}}
+[Installation - Adding AI model server installation scripts]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAiModelServerInstallationScripts" version="2026.9" >}}
+[Installation - Leaving the AI application unprovisioned by default]: {{< url path="Cortex.Blogs.Releases.2026_9.LeavingTheAiApplicationUnprovisionedByDefault" version="2026.9" >}}
+[Installation - Adding {{% ctx %}} Portal installation on IIS]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedCortexPortalInstallationOnIis" version="2026.9" >}}
+[Installation - Adding a DLL patcher script]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedADllPatcherScript" version="2026.9" >}}
+[Installation - Adding a script to move RabbitMQ logs and data]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAScriptToMoveRabbitMqLogsAndData" version="2026.9" >}}
+[Installation - Reactivating the Service Fabric node after node maintenance]: {{< url path="Cortex.Blogs.Releases.2026_9.ReactivatingTheServiceFabricNodeAfterNodeMaintenance" version="2026.9" >}}
+[Installation - Letting Professional Services run the portal workspace without a .NET SDK]: {{< url path="Cortex.Blogs.Releases.2026_9.LettingProfessionalServicesRunThePortalWorkspaceWithoutANetSdk" version="2026.9" >}}
 
-[Third-Party Support - Updating NuGet Packages]: {{< url path="Cortex.Blogs.Releases.2026_3.UpdatingNuGetPackages" version="2026.3" >}}
-[Third-Party Support - Upgrading Observability Stack Dependencies]: {{< url path="Cortex.Blogs.Releases.2026_3.UpgradingObservabilityStackDependencies" version="2026.3" >}}
-[Third-Party Support - Updating SNMP Library to Support New Authentication Protocols]: {{< url path="Cortex.Blogs.Releases.2026_3.UpdatingSnmpLibraryToSupportNewAuthenticationProtocols" version="2026.3" >}}
+[Upgrade - Skipping invalid RunSubTask blocks during flow migration]: {{< url path="Cortex.Blogs.Releases.2026_9.SkippingInvalidRunSubTaskBlocksDuringFlowMigration" version="2026.9" >}}
 
-[Installation - Improved Node Recovery for Cluster Machines]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovedNodeRecoveryForClusterMachines" version="2026.3" >}}
-[Installation - Improved behaviour when disabling cluster nodes]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovedBehaviourWhenDisablingClusterNodes" version="2026.3" >}}
-[Installation - UTF‑8 encoding support for Non‑ANSI characters in configuration files]: {{< url path="Cortex.Blogs.Releases.2026_3.Utf8EncodingSupportForNonAnsiCharactersInConfigurationFiles" version="2026.3" >}}
-[Installation - Removal of dependency on Active Directory cmdlets]: {{< url path="Cortex.Blogs.Releases.2026_3.RemovalOfDependencyOnActiveDirectoryCmdlets" version="2026.3" >}}
-[Installation - Added required types to LoggingSettings during upgrade]: {{< url path="Cortex.Blogs.Releases.2026_3.AddedRequiredTypesToLoggingSettingsDuringUpgrade" version="2026.3" >}}
-[Installation - Adding a new node maintenance script for pre-patching operations]: {{< url path="Cortex.Blogs.Releases.2026_3.AddingANewNodeMaintenanceScriptForPrePatchingOperations" version="2026.3" >}}
-[Installation - Removal of Active Directory cmdlets dependency from Grafana Alloy installation]: {{< url path="Cortex.Blogs.Releases.2026_3.RemovalOfActiveDirectoryCmdletsDependencyFromGrafanaAlloyInstallation" version="2026.3" >}}
-
-[Upgrade - Backup & Restore Support for Reliable Collections during Single‑Server Upgrades]: {{< url path="Cortex.Blogs.Releases.2026_3.BackupAndRestoreSupportForReliableCollectionsDuringSingleServerUpgrades" version="2026.3" >}}
-[Upgrade - Enhanced pre‑upgrade health checks for Service Fabric and RabbitMQ]: {{< url path="Cortex.Blogs.Releases.2026_3.EnhancedPreUpgradeHealthChecksForServiceFabricAndRabbitMq" version="2026.3" >}}
-[Upgrade - Improving service management during reliable collections backup and restore]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovingServiceManagementDuringReliableCollectionsBackupAndRestore" version="2026.3" >}}
-[Upgrade - Improving Flow migration from CORTEX 7]: {{< url path="Cortex.Blogs.Releases.2026_3.ImprovingFlowMigrationFromCortex7" version="2026.3" >}}
-
-[Documentation - Expanded with broader Product Portal]: {{< url path="Cortex.Blogs.Releases.2026_3.ExpandedWithBroaderProductPortal" version="2026.3" >}}
+[Documentation - Expanded with broader Product Portal]: {{< url path="Cortex.Blogs.Releases.2026_9.ExpandedProductPortalDocumentationCoverage" version="2026.9" >}}
