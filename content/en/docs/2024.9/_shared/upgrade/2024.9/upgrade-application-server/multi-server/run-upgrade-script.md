@@ -1,5 +1,14 @@
 1. Open a Windows PowerShell (x64) window as administrator.
     {{< alert title="Important" color="warning" >}}It is critical to make sure this is a new PowerShell window. If any Service Fabric cmdlets have been run previously to running the `Cortex.Innovation.Upgrade.ps1` script, the upgrade will close halfway through due to the PowerShell module being updated.{{< /alert >}}
+
+1. Type and run the following command to temporarily modify the PowerShell Execution Policy:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+    ```
+
+    {{< alert title="Note">}}This is a temporary change and will only affect the current PowerShell window.{{< /alert >}}
+
 1. Navigate PowerShell to inside the `Cortex Innovation 2024.9 - App Server Install Scripts\Upgrade Application Server` folder using the following command, modifying the path as necessary:
 
     ```powershell
