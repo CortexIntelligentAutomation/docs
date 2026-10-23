@@ -24,7 +24,7 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Click `Redirect URIs`.
     1. Click `+ Add a platform`.
     1. Select Single-page application and set:
-        * `Redirect URIs` to `<protocol>://<host>:<port>/<webapplicationname>/redirect`, e.g. `https://server.domain.com/gateway/redirect`.
+        * `Redirect URIs` to `<protocol>://<host>:<port>/<webapplicationname>/auth/login-callback.html`, e.g. `https://server.domain.com/gateway/auth/login-callback.html`.
         * `Front-channel logout URL` to `https://localhost:44321/signout-callback-oidc`.
         * `Implicit grant and hybrid flows` to `ID tokens`.
     1. Click `Configure`.
@@ -54,6 +54,17 @@ In order to configure a Microsoft Entra Provider a Microsoft Azure account with 
     1. Locate and expand `ID`.
         * Select `sAMAccountName`.
     1. Click `Add`.
+1. Configure the Scopes defined by this API:
+    1. Select the application registration created in Step 1.
+    1. Select `Expose an API`.
+    1. Click `Add a scope`.
+    1. Enter the Scope Name of `Cortex`.
+    1. Change the `Who can consent` to Admins and user.
+    1. Enter a `Admin consent display name`. 
+    1. Enter a `Admin consent description`. 
+    1. Enter a `User consent display name`. 
+    1. Enter a `User consent description`. 
+    1. Click `Add scope`.
 1. Create credentials for {{% ctx %}} Gateway to authenticate with Entra securely:
     1. Select the application registration created in Step 1.
     1. Select `Client credentials`.
