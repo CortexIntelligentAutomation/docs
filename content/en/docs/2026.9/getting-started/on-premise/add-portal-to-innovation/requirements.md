@@ -20,14 +20,11 @@ The Web Application Server must:
 * Have {{% ctx %}} Gateway installed and working.
 * Be able to connect to the {{% ctx %}} API Gateway endpoint configured during installation.
 
-## Installation User
+## Security Requirements
 
-The installation user must be able to:
+### Installation User
 
-* Log on to the Web Application Server.
-* Run Windows PowerShell as an administrator.
-* Install the .NET 10 Hosting Bundle.
-* Read the portal package and installation scripts.
+A domain user with the necessary administrative permissions to log on to the Web Application Server via Remote Desktop and execute PowerShell scripts.
 
 ## Installation Artefacts
 
