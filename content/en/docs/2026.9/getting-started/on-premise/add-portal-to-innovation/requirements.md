@@ -33,8 +33,8 @@ The installation user must be able to:
 
 The following artefacts must be available before installation:
 
-* Portal Application Server Scripts.zip
-* Cortex Innovation 2026.9 - Portal.zip
+* `Portal Application Server Scripts.zip`
+* `Cortex Innovation 2026.9 - Portal.zip`
 
 ## Next Steps?
 

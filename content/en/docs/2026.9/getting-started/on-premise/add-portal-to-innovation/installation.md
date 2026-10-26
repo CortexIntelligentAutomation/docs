@@ -31,21 +31,21 @@ This guide describes how to install the {{% ctx %}} Portal on the Web Applicatio
     *>&1 | Tee-Object -FilePath "cortex-portal-install-log.txt"
     ```
 
-    | Name | Description |
-    |------|-------------|
-    |`PackagePath` | Configure this value with the folder where **Cortex Innovation 2026.9 - Portal.zip** was extracted. Typically this will be `C:\Install\cortex-portal`. That folder must directly contain `Cortex.Portal.Bff.dll`, `web.config`, and `wwwroot`. |
-    |`ServiceFabricApiGatewayEndpoint` | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `Cortex:ApiGateway:BaseUrl` value in the portal `appsettings.json`. |
-    |`PortalApplicationPoolUsername` | Replace `Domain\Username` with the user that should be used to run the {{% ctx %}} Portal application pool. The password for this user is prompted when the application pool is created. |
-    |`WebRootFolder` | Replace this with the correct path for the Web Root Folder on the server. Typically this will be `C:\inetpub\wwwroot`. |
-    |`SiteName` | The IIS site name. The default is `Cortex`. When {{% ctx %}} Portal is installed on the same server as {{% ctx %}} Gateway, use the Gateway site name so both applications share one site. |
-    |`ApplicationName` | The IIS sub-application name. The default is `portal`. The portal is then available under `/portal` on that site. |
-    |`WebsitePort` | Replace this with the port that you wish the website to use when this script creates the site. Typically this will be `443`. This value is ignored when the site already exists. |
-    |`ImportCertificate` | Leave this as `$false` when the portal should use the certificate already assigned for {{% ctx %}} Gateway. See [Install the Web Application Server][Install the Web Application Server]. Set this to `$true` only when this script should import a certificate.<br /><br />When this is `$true` and the file is a `.pfx`, the script prompts for the certificate password. That password is not a parameter on this script. |
-    |`CertificateFilePath` | Replace this with the location and filename for the certificate to be imported. If `ImportCertificate` is `$false`, this value can remain unchanged. |
-    |`CertificateFriendlyName` | Replace this with the friendly name of the certificate. The sample uses `CortexServerCertificate`. When sharing the site certificate with {{% ctx %}} Gateway, use the same friendly name. |
-    |`UsingWindowsDefender` | Change this from `$false` to `$true` if you are using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alternative firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443). |
-    |`AcceptEULA` | This does not need to be changed. The EULA is accepted when you run the script. |
-    |`FilePath` | The filename that installation logs are written to. If this should be written to a different location than where the installation files are, specify a full path. The sample writes `cortex-portal-install-log.txt`. |
+    | Name                              | Description |
+    |-----------------------------------|-------------|
+    |`PackagePath`                      | Configure this value with the folder where `Cortex Innovation 2026.9 - Portal.zip` was extracted. Typically this will be `C:\Install\cortex-portal`. That folder must directly contain `Cortex.Portal.Bff.dll`, `web.config`, and `wwwroot`. |
+    |`ServiceFabricApiGatewayEndpoint`  | Replace `server.domain.com` with the fully qualified domain name of the server. The port should be specified as `8722` and there must be a trailing slash, e.g. `https://server.domain.com:8722/`.<br /><br />This will set the `Cortex:ApiGateway:BaseUrl` value in the portal `appsettings.json`. |
+    |`PortalApplicationPoolUsername`    | Replace `Domain\Username` with the user that should be used to run the {{% ctx %}} Portal application pool. The password for this user is prompted when the application pool is created. |
+    |`WebRootFolder`                    | Replace this with the correct path for the Web Root Folder on the server. Typically this will be `C:\inetpub\wwwroot`. |
+    |`SiteName`                         | The IIS site name. The default is `Cortex`. When {{% ctx %}} Portal is installed on the same server as {{% ctx %}} Gateway, use the Gateway site name so both applications share one site. |
+    |`ApplicationName`                  | The IIS sub-application name. The default is `portal`. The portal is then available under `/portal` on that site. |
+    |`WebsitePort`                      | Replace this with the port that you wish the website to use when this script creates the site. Typically this will be `443`. This value is ignored when the site already exists. |
+    |`ImportCertificate`                | Leave this as `$false` when the portal should use the certificate already assigned for {{% ctx %}} Gateway. See [Install the Web Application Server][Install the Web Application Server]. Set this to `$true` only when this script should import a certificate.<br /><br />When this is `$true` and the file is of type `.pfx`, the script prompts for the certificate password. That password is not a parameter on this script. |
+    |`CertificateFilePath`              | Replace this with the location and filename for the certificate to be imported. If `ImportCertificate` is `$false`, this value can remain unchanged. |
+    |`CertificateFriendlyName`          | Replace this with the friendly name of the certificate. The sample uses `CortexServerCertificate`. When sharing the site certificate with {{% ctx %}} Gateway, use the same friendly name. |
+    |`UsingWindowsDefender`             | Change this from `$false` to `$true` if you are using the Windows Defender firewall.<br /><br />If Windows Defender is not being used but an alternative firewall is, it must be configured to allow communication inbound via TCP on the port configured for HTTPS (usually 443). |
+    |`AcceptEULA`                       | This does not need to be changed. The EULA is accepted when you run the script. |
+    |`FilePath`                         | The filename that installation logs are written to. If this should be written to a different location than where the installation files are, specify a full path. The sample writes `cortex-portal-install-log.txt`. |
 
 1. Save and close `Cortex.Innovation.Install.Portal.ps1`.
 
@@ -64,9 +64,9 @@ This guide describes how to install the {{% ctx %}} Portal on the Web Applicatio
     .\Cortex.Innovation.Install.Portal.ps1 -AcceptEULA
     ```
 
-1. If `ImportCertificate` is set to `$true`, and the file is of type `.pfx`, a prompt will appear for the certificate password. Enter it, and then press `Enter`.
-1. A prompt will appear to enter the password for the user specified to run the {{% ctx %}} Portal application pool. Enter it, and then press `Enter`.
-1. Check that there have been no errors in the script. Errors appear in red in the console.
+1. If `ImportCertificate` is set to `$true`, and the file is of type `.pfx`, a prompt will appear for the certificate password. This should be entered, and then hit `Enter`.
+1. A prompt will appear to enter the password for the user specified to run the {{% ctx %}} Portal application pool. This should be entered, and then hit `Enter`.
+1. Check that there have been no errors in the script; these would appear in red in the console.
 
     If there are any errors, follow any instructions given within them and retry the installation.
 
