@@ -48,7 +48,7 @@ We tightened the security of the platform by:
 
 ## Improved Performance
 
-The performance of debug resume has been improved by [returning to debug mode without the previous timeout][Performance - Debug resume returns without timing out].
+The performance of the {{% ctx %}} Platform has been improved by [returning to debug mode without the previous timeout][Performance - Debug resume returns without timing out].
 
 ## Improved Usability
 
@@ -68,12 +68,9 @@ Third-party support has been improved by:
 Installation has been improved by:
 
 * [Adding AI model server installation scripts][Installation - Adding AI model server installation scripts]
-* [Leaving the AI application unprovisioned by default][Installation - Leaving the AI application unprovisioned by default]
 * [Adding {{% ctx %}} Portal installation on IIS][Installation - Adding {{% ctx %}} Portal installation on IIS]
-* [Adding a DLL patcher script][Installation - Adding a DLL patcher script]
 * [Adding a script to move RabbitMQ logs and data][Installation - Adding a script to move RabbitMQ logs and data]
 * [Reactivating the Service Fabric node after node maintenance][Installation - Reactivating the Service Fabric node after node maintenance]
-* [Letting Professional Services run the portal workspace without a .NET SDK][Installation - Letting Professional Services run the portal workspace without a .NET SDK]
 
 ## Improved Upgrade
 
@@ -130,12 +127,9 @@ For a full list of what has been introduced in this release, please see the [202
 [Third-Party Support - Adding Windows Server 2025 support]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedWindowsServer2025Support" version="2026.9" >}}
 
 [Installation - Adding AI model server installation scripts]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAiModelServerInstallationScripts" version="2026.9" >}}
-[Installation - Leaving the AI application unprovisioned by default]: {{< url path="Cortex.Blogs.Releases.2026_9.LeavingTheAiApplicationUnprovisionedByDefault" version="2026.9" >}}
 [Installation - Adding {{% ctx %}} Portal installation on IIS]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedCortexPortalInstallationOnIis" version="2026.9" >}}
-[Installation - Adding a DLL patcher script]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedADllPatcherScript" version="2026.9" >}}
 [Installation - Adding a script to move RabbitMQ logs and data]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAScriptToMoveRabbitMqLogsAndData" version="2026.9" >}}
 [Installation - Reactivating the Service Fabric node after node maintenance]: {{< url path="Cortex.Blogs.Releases.2026_9.ReactivatingTheServiceFabricNodeAfterNodeMaintenance" version="2026.9" >}}
-[Installation - Letting Professional Services run the portal workspace without a .NET SDK]: {{< url path="Cortex.Blogs.Releases.2026_9.LettingProfessionalServicesRunThePortalWorkspaceWithoutANetSdk" version="2026.9" >}}
 
 [Upgrade - Skipping invalid RunSubTask blocks during flow migration]: {{< url path="Cortex.Blogs.Releases.2026_9.SkippingInvalidRunSubTaskBlocksDuringFlowMigration" version="2026.9" >}}
 

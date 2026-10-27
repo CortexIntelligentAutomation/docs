@@ -139,12 +139,9 @@
                 UpdatedThirdPartyPackages = "/blog/2026/10/21/2026.9/#updated-third-party-packages"
                 AddedWindowsServer2025Support = "/blog/2026/10/21/2026.9/#added-windows-server-2025-support"
                 AddedAiModelServerInstallationScripts = "/blog/2026/10/21/2026.9/#added-ai-model-server-installation-scripts"
-                LeavingTheAiApplicationUnprovisionedByDefault = "/blog/2026/10/21/2026.9/#leaving-the-ai-application-unprovisioned-by-default"
                 AddedCortexPortalInstallationOnIis = "/blog/2026/10/21/2026.9/#added-cortex-portal-installation-on-iis"
-                AddedADllPatcherScript = "/blog/2026/10/21/2026.9/#added-a-dll-patcher-script"
                 AddedAScriptToMoveRabbitMqLogsAndData = "/blog/2026/10/21/2026.9/#added-a-script-to-move-rabbitmq-logs-and-data"
                 ReactivatingTheServiceFabricNodeAfterNodeMaintenance = "/blog/2026/10/21/2026.9/#reactivating-the-service-fabric-node-after-node-maintenance"
-                LettingProfessionalServicesRunThePortalWorkspaceWithoutANetSdk = "/blog/2026/10/21/2026.9/#letting-professional-services-run-the-portal-workspace-without-a-net-sdk"
                 SkippingInvalidRunSubTaskBlocksDuringFlowMigration = "/blog/2026/10/21/2026.9/#skipping-invalid-runsubtask-blocks-during-flow-migration"
                 ExpandedProductPortalDocumentationCoverage = "/blog/2026/10/21/2026.9/#expanded-product-portal-documentation-coverage"
     [Cortex.Faqs]
@@ -160,6 +157,7 @@
             MultiServer = "/docs/faqs/import-client-certificate/multi-server-with-ha"
             SingleServer = "/docs/faqs/import-client-certificate/single-server-without-ha"
         [Cortex.Faqs.ConfigureCodeAnalyser]
+            MainDoc = "/docs/faqs/configure-code-analyser/"
             [Cortex.Faqs.ConfigureCodeAnalyser.MultipleServerWithHA]
                 DisableCodeAnalyser = "/docs/faqs/configure-code-analyser/multi-server-with-ha/disable-code-analyser"
             [Cortex.Faqs.ConfigureCodeAnalyser.SingleServerWithoutHA]
@@ -170,6 +168,8 @@
             MainDoc = "/docs/faqs/configure-oidc-authentication/"
             [Cortex.Faqs.ConfigureOidcAuthentication.MicrosoftEntra]
                 Entra = "/docs/faqs/configure-oidc-authentication/microsoft-entra/#configure-microsoft-entra-oidc-provider"
+        [Cortex.Faqs.EnableBpmnNaturalLanguageTemplates]
+            MainDoc = "/docs/faqs/enable-bpmn-natural-language-templates/"
         [Cortex.Faqs.ChangeLoggingLevels]
             [Cortex.Faqs.ChangeLoggingLevels.FlowLogging]
                 MainDoc = "/docs/faqs/change-logging-levels/change-flow-logging/"
@@ -535,6 +535,12 @@
                     MainDoc = "/docs/guides/cortex-innovation/execution-application/services/"
                     [Cortex.Guides.CortexInnovation.ExecutionApplication.Services.ExecutionService]
                         MainDoc = "/docs/guides/cortex-innovation/execution-application/services/execution-service/"
+            [Cortex.Guides.CortexInnovation.AiApplication]
+                MainDoc = "/docs/guides/cortex-innovation/ai-application/"
+                [Cortex.Guides.CortexInnovation.AiApplication.Services]
+                    MainDoc = "/docs/guides/cortex-innovation/ai-application/services/"
+                    [Cortex.Guides.CortexInnovation.AiApplication.Services.DocumentationService]
+                        MainDoc = "/docs/guides/cortex-innovation/ai-application/services/documentation-service/"
         [Cortex.Guides.Gateway]
             MainDoc = "/docs/guides/cortex-gateway/"
             [Cortex.Guides.Gateway.Settings]
@@ -2019,6 +2025,7 @@
                     [Cortex.Reference.Concepts.WorkingWith.Collections.Occurrences]
                         MainDoc = "/docs/reference/concepts/working-with/collections/occurrences/"
                 [Cortex.Reference.Concepts.WorkingWith.Concurrency]
+                    MainDoc = "/docs/reference/concepts/working-with/concurrency/"
                     [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores]
                         MainDoc = "/docs/reference/concepts/working-with/concurrency/semaphores/"
                         [Cortex.Reference.Concepts.WorkingWith.Concurrency.Semaphores.WhatIsASemaphore]
