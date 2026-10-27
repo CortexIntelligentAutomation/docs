@@ -186,6 +186,8 @@
                     PortRequirements = "/docs/getting-started/on-premise/install-innovation-only/advanced/port-requirements"
                     RolloverCertificates = "/docs/getting-started/on-premise/install-innovation-only/advanced/rollover-certificates"
                     SSLBestPractices = "/docs/getting-started/on-premise/install-innovation-only/advanced/ssl-best-practices"
+                    ConfigureFirewalls = "/docs/getting-started/on-premise/install-innovation-only/advanced/configure-firewalls"
+                    GenerateTheRootCaCertificate = "/docs/getting-started/on-premise/install-innovation-only/advanced/self-signed-certificates/#generate-the-root-ca-certificate"
                 [Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA]
                     MainDoc = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/"
                     AltLoadBalancer = "/docs/getting-started/on-premise/install-innovation-only/multiple-server-with-ha/prerequisites#alternative-load-balancer-requirements"
@@ -385,6 +387,46 @@
                         ConfigureAlloy = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/configure-alloy"
                         [Cortex.GettingStarted.OnPremise.AddObservabilityToInnovation.Grafana.InstallAlloy.InstallAlloy]
                             MainDoc = "/docs/getting-started/on-premise/add-observability-to-innovation/grafana/install-alloy/install-alloy"
+            [Cortex.GettingStarted.OnPremise.AddFlowDocumentationToInnovation]
+                MainDoc = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/"
+                Architecture = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/architecture"
+                ChooseInstallation = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/"
+                [Cortex.GettingStarted.OnPremise.AddFlowDocumentationToInnovation.WebApplicationServer]
+                    MainDoc = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/"
+                    Prerequisites = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/prerequisites"
+                    ProcessorRequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/prerequisites/#if-the-ai-model-server-uses-the-processor"
+                    GPURequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/prerequisites/#if-the-ai-model-server-uses-a-gpu"
+                    InstallModelServer = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/install-model-server"
+                    MakeArtefactsAvailable = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/install-model-server/#make-artefacts-available"
+                    CheckPrerequisites = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/install-model-server/#check-the-prerequisites"
+                    CreateDocumentationService = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/create-documentation-service"
+                    ConfigureDocumentationService = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/configure-documentation-service"
+                    RestartTheCodePackage = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/configure-documentation-service/#restart-the-code-package"
+                    TryItOut = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/web-application-server/try-it-out"
+                [Cortex.GettingStarted.OnPremise.AddFlowDocumentationToInnovation.SeparateServer]
+                    MainDoc = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/"
+                    Prerequisites = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites"
+                    ProcessorRequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites/#if-the-ai-model-server-uses-the-processor"
+                    GPURequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites/#if-the-ai-model-server-uses-a-gpu"
+                    PortRequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites/#port-requirements"
+                    CertificateRequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites/#certificate-requirements"
+                    APIKeyRequirements = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/prerequisites/#api-key-requirements"
+                    InstallModelServer = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/install-model-server"
+                    MakeArtefactsAvailable = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/install-model-server/#make-artefacts-available"
+                    CheckPrerequisites = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/install-model-server/#check-the-prerequisites"
+                    CreateDocumentationService = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/create-documentation-service"
+                    ConfigureDocumentationService = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/configure-documentation-service"
+                    RestartTheCodePackage = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/configure-documentation-service/#restart-the-code-package"
+                    TryItOut = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/choose-installation/separate-server/try-it-out"
+                [Cortex.GettingStarted.OnPremise.AddFlowDocumentationToInnovation.Advanced]
+                    MainDoc = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/"
+                    Troubleshooting = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting"
+                    TroubleshootingSlowGPU = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#documentation-is-generated-very-slowly-on-a-server-with-a-gpu"
+                    TroubleshootingInstallation = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#problems-during-installation"
+                    TroubleshootingGeneration = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#problems-generating-documentation"
+                    TroubleshootingModelNotOnGPU = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#the-model-is-not-loaded-on-to-the-gpu"
+                    TroubleshootingInferenceUnavailable = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#a-job-fails-with-the-reason-inferenceunavailable"
+                    ScheduleDocumentationGeneration = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/schedule-documentation-generation"
             [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
                 MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
                 PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
@@ -3068,6 +3110,11 @@
     WhatIsALoop = "https://kodify.net/csharp/loop/overview-loops/"
 [LetsEncrypt]
     MainDoc = "https://letsencrypt.org/"
+[NVIDIA]
+    [NVIDIA.Downloads]
+        Drivers = "https://www.nvidia.com/en-us/drivers/"
+[LlamaCpp]
+    MainDoc = "https://github.com/ggml-org/llama.cpp"
 [Microsoft]
     [Microsoft.Downloads]
         [Microsoft.Downloads.Windows]
@@ -3372,6 +3419,7 @@
     WebDeploy = "https://www.microsoft.com/en-gb/download/details.aspx?id=43717"
     [MSDownload.CPlusPlusRedistributable]
         2013 = "http://www.microsoft.com/en-us/download/details.aspx?id=40784"
+        2015_2022 = "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
 [MSEval]
     [MSEval.WindowsServer]
         2016 = "https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2016?filetype=ISO"
