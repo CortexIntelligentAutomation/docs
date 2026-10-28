@@ -1,4 +1,6 @@
-1. Navigate to the {{< ahref path="Cortex.Reference.Glossary.P-T.ServiceFabricExplorer" title="Service Fabric Explorer" >}}, typically `http://localhost:9080/Explorer`.
+The Documentation Service only reads `appsettings.json` when it starts, so the code package must be restarted for changes to take effect. If `appsettings.json` was not changed, skip this section.
+
+1. Navigate to the {{< ahref path="Cortex.Reference.Glossary.P-T.ServiceFabricExplorer" title="Service Fabric Explorer" >}} at `https://server.domain.com:9080/Explorer`, where `server.domain.com` is the fully qualified domain name of the Web Application Server. Replace `9080` with the `httpGatewayEndpointPort` value if it was changed when {{% ctx %}} was installed.
 1. Expand the `Nodes`.
 1. Restart the `DocumentationPkg` for each node that runs the Documentation Service by following these steps:
     1. Expand the node name.
