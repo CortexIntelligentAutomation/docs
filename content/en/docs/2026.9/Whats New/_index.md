@@ -37,7 +37,6 @@ This release introduces multiple new features to the {{% ctx %}} Platform:
 We tightened the security of the platform by:
 
 * [Adding certificate-based OAuth and mTLS][Security - Adding certificate-based OAuth and mTLS]
-* [Adding an optional OpenID scope and UserInfo][Security - Adding an optional OpenID scope and UserInfo]
 * [Updating the SSL best practices scripts][Security - Updating the SSL best practices scripts]
 
 ## Improved Performance
@@ -103,7 +102,6 @@ For a full list of what has been introduced in this release, please see the [202
 [Capability - Added RabbitMQ outage logging]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedRabbitMqOutageLogging" version="2026.9" >}}
 
 [Security - Adding certificate-based OAuth and mTLS]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedCertificateBasedOauthAndMtls" version="2026.9" >}}
-[Security - Adding an optional OpenID scope and UserInfo]: {{< url path="Cortex.Blogs.Releases.2026_9.AddedAnOptionalOpenIdScopeAndUserInfo" version="2026.9" >}}
 [Security - Updating the SSL best practices scripts]: {{< url path="Cortex.Blogs.Releases.2026_9.UpdatedTheSslBestPracticesScripts" version="2026.9" >}}
 
 [Performance - Debug resume returns without timing out]: {{< url path="Cortex.Blogs.Releases.2026_9.DebugResumeReturnsWithoutTimingOut" version="2026.9" >}}

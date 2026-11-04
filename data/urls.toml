@@ -124,7 +124,6 @@
                 IntroducedTheCortexPortal = "/blog/2026/10/21/2026.9/#introduced-the-cortex-portal"
                 AddedRabbitMqOutageLogging = "/blog/2026/10/21/2026.9/#added-rabbitmq-outage-logging"
                 AddedCertificateBasedOauthAndMtls = "/blog/2026/10/21/2026.9/#added-certificate-based-oauth-and-mtls"
-                AddedAnOptionalOpenIdScopeAndUserInfo = "/blog/2026/10/21/2026.9/#added-an-optional-openid-scope-and-userinfo"
                 UpdatedTheSslBestPracticesScripts = "/blog/2026/10/21/2026.9/#updated-the-ssl-best-practices-scripts"
                 DebugResumeReturnsWithoutTimingOut = "/blog/2026/10/21/2026.9/#debug-resume-returns-without-timing-out"
                 LimitedLogRedactionToSensitivePropertyNames = "/blog/2026/10/21/2026.9/#limited-log-redaction-to-sensitive-property-names"
