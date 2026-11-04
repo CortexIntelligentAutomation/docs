@@ -398,6 +398,8 @@
                     MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
                 [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation]
                     TryItOut = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/post-installation/try-it-out"
+            [Cortex.GettingStarted.OnPremise.AddPortalToCortex]
+                MainDoc = "/docs/getting-started/on-premise/add-portal-to-innovation/"
         [Cortex.GettingStarted.Cloud]
             [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation]
                 [Cortex.GettingStarted.Cloud.AddObservabilityToInnovation.Grafana]
