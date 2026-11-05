@@ -8,5 +8,3 @@ weight: 60
 {{% alert title="Warning" color="warning" %}}
 The {{% ctx %}} Interaction Portal has been removed in this release and has been replaced by the {{% ctx %}} Portal. For how to install it, see {{< ahref path="Cortex.GettingStarted.OnPremise.AddPortalToCortex.MainDoc" title="Add Portal to CORTEX" >}}.
 {{% /alert %}}
-
-* {{< filelink src="/pdf/CORTEX Interaction Portal - Deployment Guide.pdf" name="CORTEX Interaction Portal Deployment Guide" >}}

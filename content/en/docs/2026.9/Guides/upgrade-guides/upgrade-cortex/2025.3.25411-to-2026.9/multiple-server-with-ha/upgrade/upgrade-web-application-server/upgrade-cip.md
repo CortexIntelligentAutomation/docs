@@ -1,17 +1,19 @@
 ---
-title: "Replace Interaction Portal"
-linkTitle: "Replace Interaction Portal"
-description: "Information about replacing {{% ctx %}} Interaction Portal."
+title: "Upgrade Interaction Portal"
+linkTitle: "Upgrade Interaction Portal"
+description: "Information about upgrading {{% ctx %}} Interaction Portal."
 weight: 70
 ---
 
 # {{% param title %}}
 
-This guide describes how to replace {{% ctx %}} Interaction Portal as it will no longer be operational. Please ensure that the [{{% ctx %}} Gateway Upgrade][Upgrade Gateway] has been completed before starting this replacement.
+{{< section "/upgrade/2026.9/upgrade-web-application-server/interaction-portal-removed-warning.md" >}}
 
-## Perform Replacement
+This guide describes how to upgrade {{% ctx %}} Interaction Portal. Please ensure that the [{{% ctx %}} Gateway Upgrade][Upgrade Gateway] has been completed before starting this upgrade.
 
-{{< section "/upgrade/2026.9/upgrade-web-application-server/replace-cortex-interaction-portal.md" >}}
+## Perform Upgrade
+
+{{< section "/upgrade/2026.9/upgrade-web-application-server/upgrade-cortex-interaction-portal.md" >}}
 
 ## Next Steps?
 

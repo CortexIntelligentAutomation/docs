@@ -8,3 +8,5 @@ weight: 500
 {{% alert title="Warning" color="warning" %}}
 This upgrade guide is only applicable if upgrading from 2025.3.26111.
 {{% /alert %}}
+
+{{< section "/upgrade/2026.9/running-executions-warning.md" >}}
