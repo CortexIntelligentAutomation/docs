@@ -2433,6 +2433,24 @@
                     MainDoc = "/docs/reference/data-types/powershell/powershellwinrmsessiondetails"
                 [Cortex.Reference.DataTypes.PowerShell.Records]
                     MainDoc = "/docs/reference/data-types/powershell/records"
+            [Cortex.Reference.DataTypes.Proxy]
+                [Cortex.Reference.DataTypes.Proxy.ProxySessionDetails]
+                    MainDoc = "/docs/reference/data-types/proxy/proxysessiondetails"
+                    ServerDetails = "/docs/reference/data-types/proxy/proxysessiondetails/#serverdetails"
+                    Credentials = "/docs/reference/data-types/proxy/proxysessiondetails/#credentials"
+                [Cortex.Reference.DataTypes.Proxy.ProxyServerDetails]
+                    MainDoc = "/docs/reference/data-types/proxy/proxysessiondetails/#serverdetails"
+                    Host = "/docs/reference/data-types/proxy/proxysessiondetails/#host"
+                    Port = "/docs/reference/data-types/proxy/proxysessiondetails/#port"
+                    Type = "/docs/reference/data-types/proxy/proxysessiondetails/#type"
+                [Cortex.Reference.DataTypes.Proxy.ProxyType]
+                    MainDoc = "/docs/reference/data-types/proxy/proxysessiondetails/#type"
+                    Http = "/docs/reference/data-types/proxy/proxysessiondetails/#http"
+                    Https = "/docs/reference/data-types/proxy/proxysessiondetails/#https"
+                [Cortex.Reference.DataTypes.Proxy.Authentication.ProxyUserCredentials]
+                    MainDoc = "/docs/reference/data-types/proxy/proxysessiondetails/#credentials"
+                    Username = "/docs/reference/data-types/proxy/proxysessiondetails/#username"
+                    Password = "/docs/reference/data-types/proxy/proxysessiondetails/#password"
             [Cortex.Reference.DataTypes.SessionDetails]
                 [Cortex.Reference.DataTypes.SessionDetails.ServerDetails]
                     MainDoc = "/docs/reference/data-types/session-details/serverdetails"
@@ -3131,9 +3149,12 @@
             [MSDocs.DotNet.Api.Microsoft]
                 [MSDocs.DotNet.Api.Microsoft.Identity]
                     [MSDocs.DotNet.Api.Microsoft.Identity.Client]
+                        MsalException = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalexception"
                         [MSDocs.DotNet.Api.Microsoft.Identity.Client.MsalServiceException]
                             MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.msalserviceexception"
                 [MSDocs.DotNet.Api.Microsoft.Graph]
+                    [MSDocs.DotNet.Api.Microsoft.Graph.Models.ODataErrors]
+                        ODataError = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.models.odataerrors.odataerror"
                     [MSDocs.DotNet.Api.Microsoft.Graph.ServiceException]
                         MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.serviceexception"
             [MSDocs.DotNet.Api.System]
@@ -3322,6 +3343,7 @@
                 [MSDocs.DotNet.Api.System.Net]
                     NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
                     HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
+                    HttpRequestException = "https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httprequestexception"
         [MSDocs.DotNet.BaseTypes]
             BasicStringOperations = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations"
             BestPracticesStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings"
