@@ -1,0 +1,1 @@
+The ports providing communication between other services and the Triggers service. These are dynamic ports managed by Service Fabric.
