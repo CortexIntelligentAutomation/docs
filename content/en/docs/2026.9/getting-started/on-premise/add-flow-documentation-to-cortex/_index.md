@@ -2,7 +2,7 @@
 title: "Add AI Flow Documentation to CORTEX"
 linkTitle: "Add AI Flow Documentation to CORTEX"
 description: "Information about adding AI-generated flow documentation to {{% ctx %}}, including details about components, supported architectures, prerequisites, installation and configuration instructions."
-weight: 35
+weight: 70
 ---
 
 {{% pageinfo %}}

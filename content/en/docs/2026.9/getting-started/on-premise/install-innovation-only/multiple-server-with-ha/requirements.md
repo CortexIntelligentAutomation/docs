@@ -28,13 +28,14 @@ The requirements for each server role (as described in [Architecture][]) are lai
 |------------------|-------------------------|------|------------|---------|----------|
 | Load&nbsp;Balancer | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
 | Application&nbsp;Server | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | |
-| Web&nbsp;Application&nbsp;Server | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^6]<br>10.0.17763[^7]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Web&nbsp;Application&nbsp;Server | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.26100[^6]<br>10.0.20348[^7]<br>10.0.17763[^8]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^3]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^4]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
+[^4]: PowerShell 5.1 ships with Windows Server 2019, 2022 and 2025.
 [^5]: IIS is supported; other web servers, including IIS Express are not supported.
-[^6]: Ships as a windows role within Windows Server 2022.
-[^7]: Ships as a windows role within Windows Server 2019.
+[^6]: Ships as a windows role within Windows Server 2025.
+[^7]: Ships as a windows role within Windows Server 2022.
+[^8]: Ships as a windows role within Windows Server 2019.
 
 ## Domain Requirements
 

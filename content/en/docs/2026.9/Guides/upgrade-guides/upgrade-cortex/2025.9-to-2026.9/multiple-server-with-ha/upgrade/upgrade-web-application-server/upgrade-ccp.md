@@ -7,6 +7,8 @@ weight: 60
 
 # {{% param title %}}
 
+{{< section "/upgrade/2026.9/upgrade-web-application-server/configuration-portal-deprecated-warning.md" >}}
+
 This guide describes how to upgrade {{% ctx %}} Configuration Portal. Please ensure that the [{{% ctx %}} Gateway Upgrade][Upgrade Gateway] has been completed before starting this upgrade.
 
 ## Perform Upgrade
@@ -15,7 +17,7 @@ This guide describes how to upgrade {{% ctx %}} Configuration Portal. Please ens
 
 ## Next Steps?
 
-1. [Replace {{% ctx %}} Interaction Portal][Replace CIP]
+1. [Upgrade {{% ctx %}} Interaction Portal][Upgrade CIP]
 
 [Upgrade Gateway]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2026_9.MultipleServerWithHA.UpgradeGateway" >}}
-[Replace CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2026_9.MultipleServerWithHA.ReplaceCIP" >}}
+[Upgrade CIP]: {{< url path="Cortex.Guides.UpgradeGuides.UpgradeCortex.2025_9to2026_9.MultipleServerWithHA.UpgradeCIP" >}}

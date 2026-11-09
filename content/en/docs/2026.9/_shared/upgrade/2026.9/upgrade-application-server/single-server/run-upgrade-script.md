@@ -19,7 +19,7 @@
     ```
 
 1. Run the PowerShell command to upgrade the application services and required infrastructure.
-1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK.
+1. A credentials prompt will appear. Enter credentials of a domain user that is a member of the local Administrators group on the server and press OK. The user name must be fully qualified, for example `lab\svcDBuild`, not `svcDBuild`.
 1. Wait for the script to finish running. This should take approximately 10 minutes.
 1. Check that there have been no errors in the script; these would appear in red in the console.
 

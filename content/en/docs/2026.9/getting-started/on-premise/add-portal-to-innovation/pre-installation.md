@@ -3,9 +3,14 @@ title: "Pre-Installation"
 linkTitle: "Pre-Installation"
 description: "Information about the steps required to be completed prior to starting the installation."
 weight: 20
+_build:
+  render: never
+  list: never
 ---
 
 # {{% param title %}}
+
+{{< workinprogress >}}
 
 This guide describes how to perform the steps required before starting the installation of the {{% ctx %}} Portal.
 

@@ -3,9 +3,14 @@ title: "Requirements"
 linkTitle: "Requirements"
 description: "Information about the requirements required."
 weight: 10
+_build:
+  render: never
+  list: never
 ---
 
 # {{% param title %}}
+
+{{< workinprogress >}}
 
 The requirements for an installation of the {{% ctx %}} Portal are laid out in this guide. These must be considered before undertaking installation.
 

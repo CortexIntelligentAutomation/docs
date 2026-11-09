@@ -21,13 +21,14 @@ The requirements for a single server (as described in [Architecture][]) are laid
 
 | Server&nbsp;Role | Windows&nbsp;Server[^1] | .Net | PowerShell[^2] | IIS[^3] | Other Software |
 |------------------|-------------------------|---------------------|------|------------|---------|
-| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.20348[^4]<br>10.0.17763[^5]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
+| Single&nbsp;Server<br>*Application Server +<br>Web Application Server*  | [2025&nbsp;(x64)][Microsoft Server 2025]<br>[2022&nbsp;(x64)][Microsoft Server 2022]&nbsp;*Recommended*<br>[2019&nbsp;(x64)][Microsoft Server 2019] | [Framework&nbsp;4.7.2][NET Framework 472] | 5.1 | 10.0.26100[^4]<br>10.0.20348[^5]<br>10.0.17763[^6]<br>[URL&nbsp;Rewrite&nbsp;Module&nbsp;2.1][IIS Url Rewrite] | [Microsoft Web Deploy 3.0 or later][Web Deploy]<br>[Visual C++ Redistributable 2013 (x64)][C++ Redistributable] |
 
 [^1]: Windows Server Standard and Datacenter editions are supported. Filesystem **must be NTFS** and networking **must use IPv4**. Linux is not supported, but may be in the future.
-[^2]: PowerShell 5.1 ships with Windows Server 2019 and 2022.
+[^2]: PowerShell 5.1 ships with Windows Server 2019, 2022 and 2025.
 [^3]: IIS is supported; other web servers, including IIS Express are not supported.
-[^4]: Ships as a windows role within Windows Server 2022.
-[^5]: Ships as a windows role within Windows Server 2019.
+[^4]: Ships as a windows role within Windows Server 2025.
+[^5]: Ships as a windows role within Windows Server 2022.
+[^6]: Ships as a windows role within Windows Server 2019.
 
 ## Domain Requirements
 

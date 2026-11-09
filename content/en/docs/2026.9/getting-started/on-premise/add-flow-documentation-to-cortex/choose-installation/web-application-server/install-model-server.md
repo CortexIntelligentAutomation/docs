@@ -68,7 +68,7 @@ Carry out these steps on the Web Application Server.
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\Cortex.Innovation.Install.AIModel.ps1 -WhatIf -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -WhatIf -AcceptEULA
     ```
 
 1. Run the PowerShell command to test the installation script.
@@ -90,7 +90,7 @@ Carry out these steps on the Web Application Server.
 1. Please read the End User Licence Agreement which can be found [here][Eula]. Once you agree to the terms, add the flag `-AcceptEULA` to the command entered above, e.g:
 
     ```powershell
-    .\Cortex.Innovation.Install.AIModel.ps1 -AcceptEULA
+    .\<CortexInstallScriptName>.ps1 -AcceptEULA
     ```
 
 1. Run the PowerShell command to install the AI model server.

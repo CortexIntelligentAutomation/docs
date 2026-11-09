@@ -5,6 +5,6 @@ description: "A web application that provides Human-in-the-Loop capabilities to 
 weight: 400
 ---
 
-* {{< filelink src="/pdf/CORTEX Interaction Portal - User Guide.pdf" name="CORTEX Interaction Portal User Guide" >}}
-* {{< filelink src="/pdf/CORTEX Interaction Portal - Developer Guide.pdf" name="CORTEX Interaction Portal Developer Guide" >}}
-* {{< filelink src="/pdf/CORTEX Interaction Portal - Merging Guide.pdf" name="CORTEX Interaction Portal Merging Guide" >}}
+{{% alert title="Warning" color="warning" %}}
+The {{% ctx %}} Interaction Portal has been removed in this release and has been replaced by the {{% ctx %}} Portal. For how to install it, see {{< ahref path="Cortex.GettingStarted.OnPremise.AddPortalToCortex.MainDoc" title="Add Portal to CORTEX" >}}.
+{{% /alert %}}
