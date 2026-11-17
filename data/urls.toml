@@ -423,6 +423,7 @@
                 PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
                 [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation]
                     MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation"
+                    BrowserChecks = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/installation#browser-checks"
                 [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.PostInstallation]
                     TryItOut = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/post-installation/try-it-out"
             [Cortex.GettingStarted.OnPremise.AddPortalToCortex]

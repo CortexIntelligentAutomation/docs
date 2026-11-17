@@ -11,8 +11,9 @@ This guide describes how to try out a new {{% ctx %}} Configuration Portal insta
 
 ## Test access to Configuration Portal
 
-1. Open a web browser and navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://sever.domain.com/configurationportal`.
+1. Open a web browser and navigate to `<protocol>://<host>:<port>/<webapplicationname>`, e.g. `https://server.domain.com/configurationportal`.
 1. Log in using your Active Directory credentials. Ensure that the account you are using is a member of one of the Active Directory groups specified during installation.
+1. Confirm that login completes without a certificate selection dialog. If one appears, use the checks in [Browser checks][].
 
 ## Test adding a new Configuration Container and data
 
@@ -63,7 +64,7 @@ The file should be downloaded to your computer.
     1. Select the previously exported container `zip` file.
     1. Click `Open` to load the container.
     1. On the confirmation page, click `IMPORT`.
-    1. Please confirm the import by clicking the`OK` button on the pop-up.
+    1. Please confirm the import by clicking the `OK` button on the pop-up.
 
 1. Verify that the container has been imported by doing as follows:
     1. Click on the `TestContainer` to open it.
@@ -114,3 +115,5 @@ Once you have successfully imported containers, it is recommended to always dele
   ]
 }
 ```
+
+[Browser checks]: {{< url path="Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex.Installation.BrowserChecks" >}}
