@@ -95,7 +95,7 @@ Once the flows are imported, they should be available from the `Dev` charms menu
     | CortexInteractionPortalPath | The path to the Cortex Configuration Portal.                                                                                                                                                                                                                               | `@"C:\inetpub\wwwroot\Cortex\ConfigurationPortal"`                                                         |
     | ConfigurationExportsFolder  | The folder containing the configuration being exported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Exports"`                                                                           |
     | ConfigurationImportsFolder  | The folder containing the configuration being imported.                                                                                                                                                                                                                    | `@"ConfigurationModule\Imports"`                                                                           |
-    | ConfigurationBackupsFolder  | The folder containing the configuration backups if scheduled.                                                                                                                                                                                                              | `@"ConfigurationModule\Backups"`                                                                           |                                                                                                                                                                                                                     | `false`                                                                                                    |
+    | ConfigurationBackupsFolder  | The folder containing the configuration backups if scheduled.                                                                                                                                                                                                              | `@"ConfigurationModule\Backups"`                                                                           |
 
     This should look similar to the following:
     ``` json
@@ -175,8 +175,8 @@ Typically this is `C:\inetpub\wwwroot\Cortex\ConfigurationPortal`
     |--------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|
     | ApplicationName                | The name of the application, this will be used for referencing the relevant configuration data.   | `"CortexConfigurationDev"`                  |
     | UseOAuth                       | Whether to use OAuth for authentication.                                                          | `true`                                      |
-    | CortexUrl                      | The URL of the Application Server APIGateway endpoint, or loadbalancer.                           | `"https://cortexapp-machine.domain.com"`    |
-    | CortexPort                     | The port of the Application Server APIGateway endpoint, or loadbalancer.                          | `"8722"`                                    |
+    | CortexUrl                      | The public URL of the IIS Cortex website. Use the scheme and host only, with no trailing slash and without `/ConfigurationPortal`. This is often the same host as `ConfigPortalUrl`. | `"https://cortexwebapp-machine.domain.com"` |
+    | CortexPort                     | The IIS HTTPS port for the Cortex website. Set this to `443`, or to the HTTPS binding port for that site. The browser uses this port for OAuth and API calls. | `"443"`                                     |
     | CortexTenant                   | The tenant defining the scope of the Configuration storage and user sessions at the tenant level. | `"default"`                                 |
     | CortexEnvironment              | The system defining the scope of the Configuration storage and user sessions at the system level. | `"default"`                                 |
     | ConfigManagementPackageName    | The name of the package containing the flows used by the {{% ctx %}} Configuration Portal.        | `CORTEXConfigurationManagement`             |
@@ -192,8 +192,8 @@ This should look similar to the following:
     "ApplicationName": "CortexConfigurationDev",
     "UseOAuth": true,
     
-    "CortexUrl": "https://cortexapp-machine.domain.com",
-    "CortexPort": "8722",
+    "CortexUrl": "https://cortexwebapp-machine.domain.com",
+    "CortexPort": "443",
     "CortexTenant": "default",
     "CortexEnvironment": "default",
     
@@ -238,18 +238,76 @@ To provide guidance for search engine crawlers and common AI bots not to index {
 1. Navigate to the `Cortex` website directory, typically `C:\inetpub\wwwroot\Cortex`.
 1. Paste the `robots.txt` file
 
-#### Configure the Redirect rule
+
+#### Install and configure Application Request Routing
+
+Application Request Routing depends on the IIS URL Rewrite module. On the Web Application Server, install both modules as an administrator. Install URL Rewrite before Application Request Routing.
+
+1. If **URL Rewrite** is not listed under the server node in IIS Manager, download the x64 MSI for [URL Rewrite Module 2.x][], run it, and accept the defaults.
+1. Download the x64 MSI for [Application Request Routing 3.0][], run it, and accept the defaults.
+
+Close and reopen IIS Manager (`inetmgr`). Select the server node (the server name). In the centre pane, confirm that these features are present:
+
+| Feature | Used in this installation |
+|---------|---------------------------|
+| URL Rewrite | Site rules in [Add URL Rewrite rules][] |
+| Application Request Routing Cache | **Server Proxy Settings** → **Enable proxy** |
+
+Optional check from an elevated PowerShell prompt:
+
+``` powershell
+Get-WebGlobalModule | Where-Object { $_.Name -match 'Rewrite|RequestRouting' } | Format-Table Name, Image -AutoSize
+```
+
+Expect modules such as `RewriteModule` and `ApplicationRequestRouting`. If either is missing, install the module above before you continue to [Add URL Rewrite rules][].
+
+#### Enable the ARR reverse proxy
+
+1. Open IIS Manager.
+1. Select the server node (the server name).
+1. Open **Application Request Routing Cache**, then **Server Proxy Settings**.
+1. Enable **Enable proxy**.
+1. Click **Apply**.
+
+
+#### Add URL Rewrite rules
+
+One Cortex site `web.config` at the site root covers the {{% ctx %}} Configuration Portal application under that site, once `config.json` uses port `443`. Add the rules to the Cortex site root `web.config`. The `ConfigurationPortal` application folder is the wrong place for these rules.
+
+Typical path: `C:\inetpub\wwwroot\Cortex\web.config`
 
 On the Web Application Server:
 
-1. Navigate to the `Cortex` website directory, typically `C:\inetpub\wwwroot\Cortex`.
-1. If a `web.config` file is present, and a `Redirect Cortex to gateway` rule present, add a condition as follows:
+1. Open `web.config` in a text editor.
+1. Inside `<rewrite><rules>`, add the rules below before other inbound rules, for example before `Redirect Cortex to gateway`.
+1. Replace `cortexapp-machine.domain.com` with the FQDN of the API Gateway, or the load balancer. Use the same host as the deployment script `-URL` in [Set up User Access Control][].
+
+    ``` xml
+    <rule name="Proxy OAuth Token" stopProcessing="true">
+      <match url="^oauth/token$" />
+      <action type="Rewrite"
+              url="https://cortexapp-machine.domain.com:8722/oauth/token"
+              appendQueryString="true" />
+    </rule>
+    <rule name="Proxy Cortex API" stopProcessing="true">
+      <match url="^api/(.*)$" />
+      <action type="Rewrite"
+              url="https://cortexapp-machine.domain.com:8722/api/{R:1}"
+              appendQueryString="true" />
+    </rule>
+    ```
+
+    * Set `type` to `Rewrite`. The browser remains on port `443`.
+    * If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite `url` to match `-Port` in [Set up User Access Control][] (for example `443` when the load balancer terminates HTTPS on the standard port).
+    * Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
+
+1. If a `Redirect Cortex to gateway` rule is present, add this condition to that rule:
 
     ``` xml
     <add input="{REQUEST_URI}" pattern=".*\/ConfigurationPortal.*" negate="true" />
     ```
 
-1. If not present in the `Redirect Cortex to gateway` rule, add a condition as follows:
+1. If the `Redirect Cortex to gateway` rule does not already exclude `robots.txt`, add this condition to that rule:
 
     ``` xml
     <add input="{REQUEST_URI}" pattern="^/robots\.txt$" negate="true" />
@@ -262,6 +320,8 @@ On the Web Application Server:
 {{< alert type="note" title="Note" >}}
 These steps are only needed if the {{% ctx %}} Interaction Portal is not already installed.
 {{< /alert >}}
+
+Include the IIS site origin that serves the {{% ctx %}} Configuration Portal, for example `https://cortexwebapp-machine.domain.com`. The CORS origin is the scheme and host on the IIS HTTPS port, without `/ConfigurationPortal`. Port `8722` is the API Gateway listener and is not the browser origin.
 
 {{< alert color="warning" title="Important" >}}
 These steps will need to be repeated on all Application Servers.
@@ -327,6 +387,8 @@ It may take a few minutes for the `Code` package to restart.
 The {{% ctx %}} Configuration Portal should be treated as a repository of sensitive information which will most likely contain usernames and passwords. Therefore consideration should be given to security when granting access to the portal, it is advised that access is limited following the practice of least privilege.
 {{< /alert >}}
 
+This script calls the API Gateway directly from the Web Application Server. Keep `-URL` and `-Port` on that gateway endpoint, typically port `8722`. Those parameters are separate from `CortexUrl` and `CortexPort` in `config.json`, which the browser uses through IIS.
+
 On the Web Application Server:
 
 1. Open a Windows PowerShell ISE (x64) window as administrator.
@@ -349,8 +411,8 @@ On the Web Application Server:
 1. Update the following parameters:
     | Name            | Description                                                                                           | Example                                  |
     |-----------------|-------------------------------------------------------------------------------------------------------|------------------------------------------|
-    | URL             | The URL of the Application Server APIGateway endpoint, or loadbalancer.                               | `"https://cortexapp-machine.domain.com"` |
-    | Port            | The port of the Application Server APIGateway endpoint, or loadbalancer.                              | `"8722"`                                 |
+    | URL             | The URL of the Application Server APIGateway endpoint, or load balancer.                              | `"https://cortexapp-machine.domain.com"` |
+    | Port            | The port of the Application Server APIGateway endpoint, or load balancer.                            | `"8722"`                                 |
     | Username        | The username specified for `ApiGatewayBasicAuthUsername` when [installing the Application Servers][]. | `"<Username>"`                           |
     | Password        | The password specified for `ApiGatewayBasicAuthPassword` when [installing the Application Servers][]. | `"<Password>"`                           |
     | Tenant          | The tenant defining the scope of the Configuration storage and user sessions.                         | `"default"`                              |
@@ -369,3 +431,7 @@ On the Web Application Server:
 [Gateway]: {{< url path="Cortex.Guides.Gateway.MainDoc" >}}
 [installing the Application Servers]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [Copy and configure relevant files]: {{< ref path="#copy-and-configure-relevant-files" >}}
+[Add URL Rewrite rules]: {{< ref path="#add-url-rewrite-rules" >}}
+[Set up User Access Control]: {{< ref path="#set-up-user-access-control" >}}
+[URL Rewrite Module 2.x]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
+[Application Request Routing 3.0]: {{< url path="IIS.Downloads.ApplicationRequestRouting-3_0" >}}
