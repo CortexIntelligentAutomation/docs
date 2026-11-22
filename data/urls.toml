@@ -1669,6 +1669,34 @@
                     [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail]
                         [Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365]
                             MainDoc = "/docs/reference/blocks/microsoft365/outlook/send-email/send-email-using-microsoft365-block"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.GetEmails]
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.GetEmails.GetEmailsUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/get-emails/get-emails-using-microsoft365-block"
+                            MailFolder = "/docs/reference/blocks/microsoft365/outlook/get-emails/get-emails-using-microsoft365-block/#mail-folder"
+                            PageBookmark = "/docs/reference/blocks/microsoft365/outlook/get-emails/get-emails-using-microsoft365-block/#page-bookmark"
+                            NextPageBookmark = "/docs/reference/blocks/microsoft365/outlook/get-emails/get-emails-using-microsoft365-block/#next-page-bookmark"
+                            IncludeAttachmentDetails = "/docs/reference/blocks/microsoft365/outlook/get-emails/get-emails-using-microsoft365-block/#include-attachment-details"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.DeleteEmail]
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.DeleteEmail.DeleteEmailUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/delete-email/delete-email-using-microsoft365-block"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.DeleteEmail.DeleteEmailsUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/delete-email/delete-emails-using-microsoft365-block"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.MoveEmail]
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.MoveEmail.MoveEmailUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/move-email/move-email-using-microsoft365-block"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.MoveEmail.MoveEmailsUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/move-email/move-emails-using-microsoft365-block"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.UpdateEmail]
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.UpdateEmail.UpdateEmailUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/update-email/update-email-using-microsoft365-block"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.UpdateEmail.UpdateEmailsUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/update-email/update-emails-using-microsoft365-block"
+                    [Cortex.Reference.Blocks.Microsoft365.Outlook.DownloadAttachment]
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.DownloadAttachment.DownloadAttachmentUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/download-attachment/download-attachment-using-microsoft365-block"
+                        [Cortex.Reference.Blocks.Microsoft365.Outlook.DownloadAttachment.DownloadAttachmentsUsingMicrosoft365]
+                            MainDoc = "/docs/reference/blocks/microsoft365/outlook/download-attachment/download-attachments-using-microsoft365-block"
+                            FilePaths = "/docs/reference/blocks/microsoft365/outlook/download-attachment/download-attachments-using-microsoft365-block/#file-paths"
             [Cortex.Reference.Blocks.Objects]
                 [Cortex.Reference.Blocks.Objects.CopyObject]
                     [Cortex.Reference.Blocks.Objects.CopyObject.CopyObject]
@@ -2443,6 +2471,49 @@
                             ClientId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#clientid"
                             TenantId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#tenantid"
                             ObjectId = "/docs/reference/data-types/microsoft365/authentication/oauth/microsoft365oauthcertificatecredentials/#objectid"
+                [Cortex.Reference.DataTypes.Microsoft365.Outlook]
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.AddOrUpdateEmailFlag]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/addorupdateemailflag"
+                        StartDateTime = "/docs/reference/data-types/microsoft365/outlook/addorupdateemailflag/#start-date-time"
+                        DueDateTime = "/docs/reference/data-types/microsoft365/outlook/addorupdateemailflag/#due-date-time"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.CompleteEmailFlag]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/completeemailflag"
+                        CompletedDateTime = "/docs/reference/data-types/microsoft365/outlook/completeemailflag/#completed-date-time"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailDeletionType]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emaildeletiontype"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailFlag]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emailflag"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailFocus]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emailfocus"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailReadState]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emailreadstate"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailSearchSettings]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emailsearchsettings"
+                        ComparisonType = "/docs/reference/data-types/microsoft365/outlook/emailsearchsettings/#comparison-type"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.EmailSortOrder]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/emailsortorder"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.OutlookAttachment]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/outlookattachment"
+                        Id = "/docs/reference/data-types/microsoft365/outlook/outlookattachment/#id"
+                        IsDownloadable = "/docs/reference/data-types/microsoft365/outlook/outlookattachment/#is-downloadable"
+                        AttachmentType = "/docs/reference/data-types/microsoft365/outlook/outlookattachment/#attachment-type"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.OutlookAttachmentType]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/outlookattachmenttype"
+                        File = "/docs/reference/data-types/microsoft365/outlook/outlookattachmenttype/#file"
+                        Item = "/docs/reference/data-types/microsoft365/outlook/outlookattachmenttype/#item"
+                        Reference = "/docs/reference/data-types/microsoft365/outlook/outlookattachmenttype/#reference"
+                        Unknown = "/docs/reference/data-types/microsoft365/outlook/outlookattachmenttype/#unknown"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.OutlookBodyFormat]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/outlookbodyformat"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.OutlookEmail]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/outlookemail"
+                        Id = "/docs/reference/data-types/microsoft365/outlook/outlookemail/#id"
+                        Body = "/docs/reference/data-types/microsoft365/outlook/outlookemail/#body"
+                        BodyFormat = "/docs/reference/data-types/microsoft365/outlook/outlookemail/#body-format"
+                        HasAttachments = "/docs/reference/data-types/microsoft365/outlook/outlookemail/#has-attachments"
+                        Attachments = "/docs/reference/data-types/microsoft365/outlook/outlookemail/#attachments"
+                    [Cortex.Reference.DataTypes.Microsoft365.Outlook.RemoveEmailFlag]
+                        MainDoc = "/docs/reference/data-types/microsoft365/outlook/removeemailflag"
             [Cortex.Reference.DataTypes.Numbers]
                 [Cortex.Reference.DataTypes.Numbers.Double]
                     MainDoc = "/docs/reference/data-types/numbers/double"
@@ -2469,6 +2540,21 @@
                     MainDoc = "/docs/reference/data-types/powershell/powershellwinrmsessiondetails"
                 [Cortex.Reference.DataTypes.PowerShell.Records]
                     MainDoc = "/docs/reference/data-types/powershell/records"
+            [Cortex.Reference.DataTypes.Proxy]
+                [Cortex.Reference.DataTypes.Proxy.ProxySessionDetails]
+                    MainDoc = "/docs/reference/data-types/proxy/proxysessiondetails"
+                    ServerDetails = "/docs/reference/data-types/proxy/proxysessiondetails/#serverdetails"
+                    Credentials = "/docs/reference/data-types/proxy/proxysessiondetails/#credentials"
+                [Cortex.Reference.DataTypes.Proxy.ProxyServerDetails]
+                    Host = "/docs/reference/data-types/proxy/proxysessiondetails/#host"
+                    Port = "/docs/reference/data-types/proxy/proxysessiondetails/#port"
+                    Type = "/docs/reference/data-types/proxy/proxysessiondetails/#type"
+                [Cortex.Reference.DataTypes.Proxy.ProxyType]
+                    Http = "/docs/reference/data-types/proxy/proxysessiondetails/#http"
+                    Https = "/docs/reference/data-types/proxy/proxysessiondetails/#https"
+                [Cortex.Reference.DataTypes.Proxy.Authentication.ProxyUserCredentials]
+                    Username = "/docs/reference/data-types/proxy/proxysessiondetails/#username"
+                    Password = "/docs/reference/data-types/proxy/proxysessiondetails/#password"
             [Cortex.Reference.DataTypes.SessionDetails]
                 [Cortex.Reference.DataTypes.SessionDetails.ServerDetails]
                     MainDoc = "/docs/reference/data-types/session-details/serverdetails"
@@ -2581,6 +2667,12 @@
                     StartsWith = "/docs/reference/data-types/text/texttofind/#starts-with"
                     Contains = "/docs/reference/data-types/text/texttofind/#contains"
                     EndsWith = "/docs/reference/data-types/text/texttofind/#ends-with"
+                [Cortex.Reference.DataTypes.Text.TextToFindAdvanced]
+                    MainDoc = "/docs/reference/data-types/text/texttofindadvanced"
+                    StartsWith = "/docs/reference/data-types/text/texttofindadvanced/#starts-with"
+                    Contains = "/docs/reference/data-types/text/texttofindadvanced/#contains"
+                    EndsWith = "/docs/reference/data-types/text/texttofindadvanced/#ends-with"
+                    SearchOptions = "/docs/reference/data-types/text/texttofindadvanced/#search-options"
                 [Cortex.Reference.DataTypes.Text.TextDecodingErrorCode]
                     MainDoc = "/docs/reference/data-types/text/textdecodingerrorcode"
                 [Cortex.Reference.DataTypes.Text.UnicodeEncoding]
@@ -2657,6 +2749,11 @@
                     InvalidUserCredentials = "/docs/reference/exceptions/email/email-session-exception/#300"
                     InvalidSslCertificate = "/docs/reference/exceptions/email/email-session-exception/#400"
                     InvalidClientCredentials = "/docs/reference/exceptions/email/email-session-exception/#401"
+                [Cortex.Reference.Exceptions.Email.OperationFailedException]
+                    MainDoc = "/docs/reference/exceptions/email/operation-failed-exception"
+                    IdExceptions = "/docs/reference/exceptions/email/operation-failed-exception/#id-exceptions"
+                    IndexesOfDuplicateIds = "/docs/reference/exceptions/email/operation-failed-exception/#indexes-of-duplicate-ids"
+                    IndexesOfNullOrEmptyIds = "/docs/reference/exceptions/email/operation-failed-exception/#indexes-of-null-or-empty-ids"
             [Cortex.Reference.Exceptions.FilesAndFolders]
                 [Cortex.Reference.Exceptions.FilesAndFolders.InvalidFolderNameException]
                     MainDoc = "/docs/reference/exceptions/files-and-folders/invalid-folder-name-exception"
@@ -3158,6 +3255,8 @@
         Verbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-literals"
         InterpolatedVerbatim = "https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#verbatim-string-interpolation"
         SupportedCultureCodes = "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c"
+    [MSDocs.Graph]
+        OutlookImmutableId = "https://learn.microsoft.com/en-us/graph/outlook-immutable-id"
     [MSDocs.SqlServer]
         ErrorCodes = "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-ver15"
         SqlException = "https://learn.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlexception?view=dotnet-plat-ext-6.0&viewFallbackFrom=netcore-3.1"
@@ -3172,6 +3271,10 @@
                 [MSDocs.DotNet.Api.Microsoft.Graph]
                     [MSDocs.DotNet.Api.Microsoft.Graph.ServiceException]
                         MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.serviceexception"
+                    [MSDocs.DotNet.Api.Microsoft.Graph.Models]
+                        [MSDocs.DotNet.Api.Microsoft.Graph.Models.ODataErrors]
+                            [MSDocs.DotNet.Api.Microsoft.Graph.Models.ODataErrors.ODataError]
+                                MainDoc = "https://learn.microsoft.com/en-us/dotnet/api/microsoft.graph.models.odataerrors.odataerror"
             [MSDocs.DotNet.Api.System]
                 ArgumentException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentexception"
                 ArgumentNullException = "https://learn.microsoft.com/en-us/dotnet/api/system.argumentnullexception"
@@ -3358,6 +3461,8 @@
                 [MSDocs.DotNet.Api.System.Net]
                     NetworkCredential = "https://learn.microsoft.com/en-us/dotnet/api/system.net.networkcredential"
                     HttpStatusCode = "https://learn.microsoft.com/en-us/dotnet/api/system.net.httpstatuscode"
+                    [MSDocs.DotNet.Api.System.Net.Http]
+                        HttpRequestException = "https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httprequestexception"
         [MSDocs.DotNet.BaseTypes]
             BasicStringOperations = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/basic-string-operations"
             BestPracticesStrings = "https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings"

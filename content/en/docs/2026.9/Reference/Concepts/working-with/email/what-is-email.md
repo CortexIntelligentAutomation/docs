@@ -26,7 +26,7 @@ This model is similar to using [MailKit][] in C#, where an [SmtpClient][] opens 
 | Session details | Configuration for opening and maintaining a connection to a mail server |
 | [Close Session][] | Whether the block closes the mail-server session after sending |
 
-{{% ctx %}} currently provides blocks for sending email. Retrieving email over [IMAP][] is not supported in this release.
+{{% ctx %}} provides blocks for sending email over [SMTP][], and blocks for reading and changing mail in a Microsoft 365 mailbox through Microsoft Graph. Retrieving email over [IMAP][] is not supported in this release.
 
 ## Sending email
 
@@ -103,6 +103,20 @@ Unauthenticated [SMTP][] servers are **not** supported. [BasicEmailSessionDetail
 
 For setup procedures and provider-specific guidance, see [Authentication][].
 
+## Microsoft 365 mailboxes
+
+The Microsoft 365 Outlook blocks read and change mail in a mailbox through Microsoft Graph. They authenticate with the same [Microsoft365OAuthCredentials][] or [Microsoft365OAuthCertificateCredentials][] as [Send Email Using Microsoft 365][]. They do not open an [IMAP][] session.
+
+| Block | What it does |
+| --- | --- |
+| [Get Emails Using Microsoft 365][] | Returns the emails in a mail folder that match a search and filters. Each email has an immutable id. |
+| [Delete Email Using Microsoft 365][] and [Delete Emails Using Microsoft 365][] | Move emails to Deleted Items, or delete them permanently. |
+| [Move Email Using Microsoft 365][] and [Move Emails Using Microsoft 365][] | Move emails into another mail folder. The immutable id stays the same. |
+| [Update Email Using Microsoft 365][] and [Update Emails Using Microsoft 365][] | Set read state, importance, follow-up flag, Focused Inbox tab and categories. |
+| [Download Attachment Using Microsoft 365][] and [Download Attachments Using Microsoft 365][] | Save attachment content into a folder on the server executing the flow. |
+
+[Get Emails Using Microsoft 365][] is the block that produces the ids the other blocks use. Pass [Next Page Bookmark][] back in as [Page Bookmark][] to read the next page of a large folder.
+
 ## Managing connections to a mail server
 
 Send-email blocks create, open, reuse, and close mail-server sessions based on session details, the [Close Session][] property, and how session details are supplied.
@@ -148,9 +162,9 @@ For full property defaults, exceptions, and examples, see [Send Email Using SMTP
 
 ### Known limitations
 
-#### Sending only
+#### IMAP
 
-{{% ctx %}} supports **sending** email over [SMTP][] in this release. There are no blocks or data types for retrieving email over [IMAP][] (mailboxes, folders, read/unread status, or downloaded attachments). This limitation may be removed in a future release.
+{{% ctx %}} supports sending email over [SMTP][] and reading or changing a Microsoft 365 mailbox through Microsoft Graph. There are no blocks for retrieving email over [IMAP][].
 
 #### Unauthenticated mail servers
 
@@ -193,6 +207,15 @@ Send blocks validate attachment paths and [EmailAddress][] values at runtime. In
 * [Send Email Using SMTP Server][]
 * [Send Email Using Gmail][]
 * [Send Email Using Microsoft 365][]
+* [Get Emails Using Microsoft 365][]
+* [Delete Email Using Microsoft 365][]
+* [Delete Emails Using Microsoft 365][]
+* [Move Email Using Microsoft 365][]
+* [Move Emails Using Microsoft 365][]
+* [Update Email Using Microsoft 365][]
+* [Update Emails Using Microsoft 365][]
+* [Download Attachment Using Microsoft 365][]
+* [Download Attachments Using Microsoft 365][]
 
 ### Related exceptions
 
@@ -211,6 +234,17 @@ Send blocks validate attachment paths and [EmailAddress][] values at runtime. In
 [Send Email Using SMTP Server]: {{< url path="Cortex.Reference.Blocks.Email.SendEmail.SendEmailUsingSmtpServer.MainDoc" >}}
 [Send Email Using Gmail]: {{< url path="Cortex.Reference.Blocks.GoogleWorkspace.Gmail.SendEmail.SendEmailUsingGmail.MainDoc" >}}
 [Send Email Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.SendEmail.SendEmailUsingMicrosoft365.MainDoc" >}}
+[Get Emails Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.GetEmails.GetEmailsUsingMicrosoft365.MainDoc" >}}
+[Delete Email Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.DeleteEmail.DeleteEmailUsingMicrosoft365.MainDoc" >}}
+[Delete Emails Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.DeleteEmail.DeleteEmailsUsingMicrosoft365.MainDoc" >}}
+[Move Email Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.MoveEmail.MoveEmailUsingMicrosoft365.MainDoc" >}}
+[Move Emails Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.MoveEmail.MoveEmailsUsingMicrosoft365.MainDoc" >}}
+[Update Email Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.UpdateEmail.UpdateEmailUsingMicrosoft365.MainDoc" >}}
+[Update Emails Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.UpdateEmail.UpdateEmailsUsingMicrosoft365.MainDoc" >}}
+[Download Attachment Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.DownloadAttachment.DownloadAttachmentUsingMicrosoft365.MainDoc" >}}
+[Download Attachments Using Microsoft 365]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.DownloadAttachment.DownloadAttachmentsUsingMicrosoft365.MainDoc" >}}
+[Next Page Bookmark]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.GetEmails.GetEmailsUsingMicrosoft365.NextPageBookmark" >}}
+[Page Bookmark]: {{< url path="Cortex.Reference.Blocks.Microsoft365.Outlook.GetEmails.GetEmailsUsingMicrosoft365.PageBookmark" >}}
 
 [Authentication]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.Authentication.MainDoc" >}}
 [Setting up an app password for a Gmail account]: {{< url path="Cortex.Reference.Concepts.WorkingWith.Email.Authentication.SettingUpAppPassword" >}}
