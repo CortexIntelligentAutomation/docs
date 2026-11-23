@@ -391,6 +391,16 @@
                     TroubleshootingModelNotOnGPU = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#the-model-is-not-loaded-on-to-the-gpu"
                     TroubleshootingInferenceUnavailable = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/troubleshooting/#a-job-fails-with-the-reason-inferenceunavailable"
                     ScheduleDocumentationGeneration = "/docs/getting-started/on-premise/add-flow-documentation-to-cortex/advanced/schedule-documentation-generation"
+            [Cortex.GettingStarted.OnPremise.AddPortalToInnovation]
+                MainDoc = "/docs/getting-started/on-premise/add-portal-to-innovation/"
+                Architecture = "/docs/getting-started/on-premise/add-portal-to-innovation/architecture"
+                ConfigurePortalInstallationScript = "/docs/getting-started/on-premise/add-portal-to-innovation/installation/install-portal#configure-cortex-portal-installation-script"
+                Installation = "/docs/getting-started/on-premise/add-portal-to-innovation/installation"
+                InstallPortal = "/docs/getting-started/on-premise/add-portal-to-innovation/installation/install-portal"
+                PostInstallation = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation"
+                PreInstallation = "/docs/getting-started/on-premise/add-portal-to-innovation/pre-installation"
+                Requirements = "/docs/getting-started/on-premise/add-portal-to-innovation/requirements"
+                TryItOut = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/try-it-out"
             [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
                 MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
                 PreInstallation = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/pre-installation"
@@ -3377,6 +3387,8 @@
             LogonTypes = "https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types"
             NamingConventions = "https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou"
 [MSDotNet]
+    [MSDotNet.DotNet10]
+        HostingBundle = "https://dotnet.microsoft.com/en-us/download/dotnet/10.0"
     [MSDotNet.Framework472]
         MainDoc = "https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472"
 [MSDownload]
