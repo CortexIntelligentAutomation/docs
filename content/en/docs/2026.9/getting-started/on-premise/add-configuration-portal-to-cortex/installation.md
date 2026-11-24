@@ -263,7 +263,7 @@ Expect modules such as `RewriteModule` and `ApplicationRequestRouting`. If eithe
 
 #### Enable the ARR reverse proxy
 
-1. Open IIS Manager.
+1. Open **IIS Manager** (`inetmgr`).
 1. Select the server node (the server name).
 1. Open **Application Request Routing Cache**, then **Server Proxy Settings**.
 1. Enable **Enable proxy**.
@@ -272,48 +272,56 @@ Expect modules such as `RewriteModule` and `ApplicationRequestRouting`. If eithe
 
 #### Add URL Rewrite rules
 
-One Cortex site `web.config` at the site root covers the {{% ctx %}} Configuration Portal application under that site, once `config.json` uses port `443`. Add the rules to the Cortex site root `web.config`. The `ConfigurationPortal` application folder is the wrong place for these rules.
-
-Typical path: `C:\inetpub\wwwroot\Cortex\web.config`
+One Cortex site `web.config` at the site root covers the {{% ctx %}} Configuration Portal application under that site, once `config.json` uses port `443`. Add the rules using the IIS Manager GUI at the **Cortex** site level (which modifies the site root `web.config` at `C:\inetpub\wwwroot\Cortex\web.config`). Do not configure these rules inside the `ConfigurationPortal` sub-application.
 
 On the Web Application Server:
 
-1. Open `web.config` in a text editor.
-1. Inside `<rewrite><rules>`, add the rules below before other inbound rules, for example before `Redirect Cortex to gateway`.
-1. Replace `cortexapp-machine.domain.com` with the FQDN of the API Gateway, or the load balancer. Use the same host as the deployment script `-URL` in [Set up User Access Control][].
+1. Open **IIS Manager** (`inetmgr`).
+1. In the **Connections** pane on the left, expand your server, expand **Sites**, and select the **Cortex** site.
+1. In the central workspace under the **IIS** section, double-click **URL Rewrite**.
+1. Add the **Proxy OAuth Token** rule:
+   1. In the **Actions** pane on the right, click **Add Rule(s)...**.
+   1. Select **Blank rule** under *Inbound rules* and click **OK**.
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and `-Port` of your API Gateway or load balancer from [Set up User Access Control][]):
+      * **Name:** `Proxy OAuth Token`
+      * **Match URL — Using:** `Regular Expressions`
+      * **Match URL — Pattern:** `^oauth/token$`
+      * **Action — Action type:** `Rewrite`
+      * **Action — Rewrite URL:** `https://cortexapp-machine.domain.com:8722/oauth/token`
+      * **Action — Append query string:** Checked
+      * **Stop processing of subsequent rules:** Checked
+   1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
+1. Add the **Proxy Cortex API** rule:
+   1. Click **Add Rule(s)...**, select **Blank rule**, and click **OK**.
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and `-Port` of your API Gateway or load balancer from [Set up User Access Control][]):
+      * **Name:** `Proxy Cortex API`
+      * **Match URL — Using:** `Regular Expressions`
+      * **Match URL — Pattern:** `^api/(.*)$`
+      * **Action — Action type:** `Rewrite`
+      * **Action — Rewrite URL:** `https://cortexapp-machine.domain.com:8722/api/{R:1}`
+      * **Action — Append query string:** Checked
+      * **Stop processing of subsequent rules:** Checked
+   1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
 
-    ``` xml
-    <rule name="Proxy OAuth Token" stopProcessing="true">
-      <match url="^oauth/token$" />
-      <action type="Rewrite"
-              url="https://cortexapp-machine.domain.com:8722/oauth/token"
-              appendQueryString="true" />
-    </rule>
-    <rule name="Proxy Cortex API" stopProcessing="true">
-      <match url="^api/(.*)$" />
-      <action type="Rewrite"
-              url="https://cortexapp-machine.domain.com:8722/api/{R:1}"
-              appendQueryString="true" />
-    </rule>
-    ```
+   - Ensure **Action type** is set to `Rewrite` so the browser remains on port `443`.
+   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to match `-Port` in [Set up User Access Control][] (for example `443` when the load balancer terminates HTTPS on the standard port).
+   - Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
 
-    * Set `type` to `Rewrite`. The browser remains on port `443`.
-    * If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite `url` to match `-Port` in [Set up User Access Control][] (for example `443` when the load balancer terminates HTTPS on the standard port).
-    * Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
-
-1. If a `Redirect Cortex to gateway` rule is present, add this condition to that rule:
-
-    ``` xml
-    <add input="{REQUEST_URI}" pattern=".*\/ConfigurationPortal.*" negate="true" />
-    ```
-
-1. If the `Redirect Cortex to gateway` rule does not already exclude `robots.txt`, add this condition to that rule:
-
-    ``` xml
-    <add input="{REQUEST_URI}" pattern="^/robots\.txt$" negate="true" />
-    ```
-
-1. Save the file.
+1. In the **Inbound Rules** list, select one proxy rule at a time and use **Move Up** in the **Actions** pane until both `Proxy OAuth Token` and `Proxy Cortex API` sit above any existing inbound rules, such as `Redirect Cortex to gateway`.
+1. If a `Redirect Cortex to gateway` rule is present, select it and click **Edit...** in the **Actions** pane, then expand the **Conditions** section:
+   1. Click **Add...** and enter the following to exclude the Configuration Portal:
+      * **Condition input:** `{REQUEST_URI}`
+      * **Check if input string:** `Matches the Pattern`
+      * **Pattern:** `.*\/ConfigurationPortal.*`
+      * **Negate:** Checked
+      * Click **OK**.
+   1. If the rule does not already exclude `robots.txt`, click **Add...** again and enter:
+      * **Condition input:** `{REQUEST_URI}`
+      * **Check if input string:** `Matches the Pattern`
+      * **Pattern:** `^/robots\.txt$`
+      * **Negate:** Checked
+      * Click **OK**.
+   1. In the **Actions** pane, click **Apply**.
 
 #### CORS Configuration
 
