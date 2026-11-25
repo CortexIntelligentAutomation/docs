@@ -282,7 +282,7 @@ On the Web Application Server:
 1. Add the **Proxy OAuth Token** rule:
    1. In the **Actions** pane on the right, click **Add Rule(s)...**.
    1. Select **Blank rule** under *Inbound rules* and click **OK**.
-   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and `-Port` of your API Gateway or load balancer from [Set up User Access Control][]):
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`. Use the same host and port later as `-URL` and `-Port` for `Deploy.Cortex.Configuration.Portal.ps1`):
       * **Name:** `Proxy OAuth Token`
       * **Match URL — Using:** `Regular Expressions`
       * **Match URL — Pattern:** `^oauth/token$`
@@ -293,7 +293,7 @@ On the Web Application Server:
    1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
 1. Add the **Proxy Cortex API** rule:
    1. Click **Add Rule(s)...**, select **Blank rule**, and click **OK**.
-   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and `-Port` of your API Gateway or load balancer from [Set up User Access Control][]):
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`. Use the same host and port later as `-URL` and `-Port` for `Deploy.Cortex.Configuration.Portal.ps1`):
       * **Name:** `Proxy Cortex API`
       * **Match URL — Using:** `Regular Expressions`
       * **Match URL — Pattern:** `^api/(.*)$`
@@ -304,7 +304,7 @@ On the Web Application Server:
    1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
 
    - Ensure **Action type** is set to `Rewrite` so the browser remains on port `443`.
-   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to match `-Port` in [Set up User Access Control][] (for example `443` when the load balancer terminates HTTPS on the standard port).
+   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to that port (for example `443` when the load balancer terminates HTTPS on the standard port), and use that same port later as `-Port` for the deploy script.
    - Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
 
 1. In the **Inbound Rules** list, select one proxy rule at a time and use **Move Up** in the **Actions** pane until both `Proxy OAuth Token` and `Proxy Cortex API` sit above any existing inbound rules, such as `Redirect Cortex to gateway`.
@@ -440,6 +440,5 @@ On the Web Application Server:
 [installing the Application Servers]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [Copy and configure relevant files]: {{< ref path="#copy-and-configure-relevant-files" >}}
 [Add URL Rewrite rules]: {{< ref path="#add-url-rewrite-rules" >}}
-[Set up User Access Control]: {{< ref path="#set-up-user-access-control" >}}
 [URL Rewrite Module 2.x]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
 [Application Request Routing 3.0]: {{< url path="IIS.Downloads.ApplicationRequestRouting-3_0" >}}
