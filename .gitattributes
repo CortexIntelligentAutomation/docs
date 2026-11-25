@@ -1,0 +1,2 @@
+# Release artefact hash files are signed byte for byte, so git must never change their line endings.
+content/static/release-artefact-hashes/** -text
