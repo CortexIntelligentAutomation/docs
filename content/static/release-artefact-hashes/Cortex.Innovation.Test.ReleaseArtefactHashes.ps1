@@ -55,7 +55,7 @@ param(
 )
 
 $HashBaseUrl = 'https://raw.githubusercontent.com/CortexIntelligentAutomation/docs/main/content/static/release-artefact-hashes'
-$PublicKeyModulus = ''
+$PublicKeyModulus = 'pHfDEINkYyxA9mAYaabr8sDhwpV1WzZKYZjv5r0e+Q1fwir6ijo2bL6JoHdA3nX1fFJ5qEH02TqaW+qxinFVqpgGhwKVSDmkVJ7d3K8ae7JYQ76LYT8IUjse+IaIiA8J1G10Fbwzr+v549MNXN2ZMTHsQfhxJdOs3ZJ25AOj5Hzy6s8cMv8cmSGOL8ifolOHXpWGkr66fdmDSHpFxvfQYOahwna9zQ3sYzKqnCR28reD+FIawJliMS4C5JqNCq59OaOYI0nDvbxAPIVOB6UP3kUOI3JZDr2gEpFhZ07aI0vLl5Xtp1RLhuj6z3B+wU2VURp3scyuFaLFycPC8BOZ+qSsm4xCFarj1gbd+YCui1jjN0ocDmeJxjR4mRMnGBhP9n/SLrEUqmSltT2ZzXe4QYZ19HrBsRHQlQWdiyN5p4rapgweIDfW2cuK5XgGgOIssE3B31/vuW9xHqZReUy7DqUWpftZAA/Fgvz+CG0pPcUuqPcFfSpC0Z5nrAVFt1+5'
 $PublicKeyExponent = 'AQAB'
 
 function Get-SignedHashList {
