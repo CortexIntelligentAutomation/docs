@@ -294,11 +294,6 @@ On the Web Application Server:
       * **Action — Append query string:** Checked
       * **Stop processing of subsequent rules:** Checked
    1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
-
-   - Ensure **Action type** is set to `Rewrite` so the browser remains on port `443`.
-   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to that port (for example `443` when the load balancer terminates HTTPS on the standard port).
-   - Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
-
 1. In the **Inbound Rules** list, select one proxy rule at a time and use **Move Up** in the **Actions** pane until both `Proxy OAuth Token` and `Proxy Cortex API` sit above any existing inbound rules, such as `Redirect Cortex to gateway`.
 1. If a `Redirect Cortex to gateway` rule is present, select it and click **Edit...** in the **Actions** pane, then expand the **Conditions** section:
    1. Click **Add...** and enter the following to exclude the Configuration Portal:
