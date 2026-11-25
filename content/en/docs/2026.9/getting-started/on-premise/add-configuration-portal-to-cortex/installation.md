@@ -250,16 +250,8 @@ Close and reopen IIS Manager (`inetmgr`). Select the server node (the server nam
 
 | Feature | Used in this installation |
 |---------|---------------------------|
+| Application Request Routing Cache | Server Proxy Settings → Enable proxy in [Enable the ARR reverse proxy][] |
 | URL Rewrite | Site rules in [Add URL Rewrite rules][] |
-| Application Request Routing Cache | **Server Proxy Settings** → **Enable proxy** |
-
-Optional check from an elevated PowerShell prompt:
-
-``` powershell
-Get-WebGlobalModule | Where-Object { $_.Name -match 'Rewrite|RequestRouting' } | Format-Table Name, Image -AutoSize
-```
-
-Expect modules such as `RewriteModule` and `ApplicationRequestRouting`. If either is missing, install the module above before you continue to [Add URL Rewrite rules][].
 
 #### Enable the ARR reverse proxy
 
@@ -282,7 +274,7 @@ On the Web Application Server:
 1. Add the **Proxy OAuth Token** rule:
    1. In the **Actions** pane on the right, click **Add Rule(s)...**.
    1. Select **Blank rule** under *Inbound rules* and click **OK**.
-   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`. Use the same host and port later as `-URL` and `-Port` for `Deploy.Cortex.Configuration.Portal.ps1`):
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`):
       * **Name:** `Proxy OAuth Token`
       * **Match URL — Using:** `Regular Expressions`
       * **Match URL — Pattern:** `^oauth/token$`
@@ -293,7 +285,7 @@ On the Web Application Server:
    1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
 1. Add the **Proxy Cortex API** rule:
    1. Click **Add Rule(s)...**, select **Blank rule**, and click **OK**.
-   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`. Use the same host and port later as `-URL` and `-Port` for `Deploy.Cortex.Configuration.Portal.ps1`):
+   1. Configure the following fields (replacing `cortexapp-machine.domain.com` and port `8722` with the FQDN and port of the API Gateway or load balancer, for example `https://cortexapp-machine.domain.com` and `8722`):
       * **Name:** `Proxy Cortex API`
       * **Match URL — Using:** `Regular Expressions`
       * **Match URL — Pattern:** `^api/(.*)$`
@@ -304,7 +296,7 @@ On the Web Application Server:
    1. In the **Actions** pane, click **Apply**, then click **Back to Rules**.
 
    - Ensure **Action type** is set to `Rewrite` so the browser remains on port `443`.
-   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to that port (for example `443` when the load balancer terminates HTTPS on the standard port), and use that same port later as `-Port` for the deploy script.
+   - If the gateway or load balancer uses a port other than `8722`, change `:8722` in each rewrite URL to that port (for example `443` when the load balancer terminates HTTPS on the standard port).
    - Configuration Portal API calls include `packageName=CORTEXConfigurationManagement`.
 
 1. In the **Inbound Rules** list, select one proxy rule at a time and use **Move Up** in the **Actions** pane until both `Proxy OAuth Token` and `Proxy Cortex API` sit above any existing inbound rules, such as `Redirect Cortex to gateway`.
@@ -440,5 +432,6 @@ On the Web Application Server:
 [installing the Application Servers]: {{< url path="Cortex.GettingStarted.OnPremise.InstallInnovationOnly.MultipleServerWithHA.ConfigureInstallationScriptNew" >}}
 [Copy and configure relevant files]: {{< ref path="#copy-and-configure-relevant-files" >}}
 [Add URL Rewrite rules]: {{< ref path="#add-url-rewrite-rules" >}}
+[Enable the ARR reverse proxy]: {{< ref path="#enable-the-arr-reverse-proxy" >}}
 [URL Rewrite Module 2.x]: {{< url path="IIS.Downloads.UrlRewrite-2_1" >}}
 [Application Request Routing 3.0]: {{< url path="IIS.Downloads.ApplicationRequestRouting-3_0" >}}
