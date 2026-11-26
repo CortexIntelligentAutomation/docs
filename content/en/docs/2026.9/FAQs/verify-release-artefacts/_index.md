@@ -11,7 +11,7 @@ For supply chain verification the artefacts received can be checked against thos
 
 ## Check the Artefacts
 
-1. Download the {{< filedownload src="/release-artefact-hashes/Cortex.Innovation.VerifyReleaseArtefactHashes.ps1" name="Release Artefact Hash Check script" >}} and copy it to the server containing the artefacts. Do not use a copy of the script supplied with the artefacts.
+1. Download the {{< filedownload src="/release-artefact-hashes/Cortex.Innovation.VerifyReleaseArtefactHashes.ps1" name="Release Artefact Hash Check script" >}} and copy it to the server containing the artefacts.
 1. Open a Windows PowerShell (x64) window.
 1. Navigate PowerShell to the folder containing the script, and check that the script is genuine by running the following command and ensuring that the hash shown matches the one below:
 
