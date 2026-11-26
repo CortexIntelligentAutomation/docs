@@ -2988,8 +2988,6 @@
             MainDoc = "https://www.wearecortex.com/terms/"
         [Cortex.Website.UseCases]
             MainDoc = "https://www.wearecortex.com/case_studies/"
-    [Cortex.ReleaseArtefactHashes]
-        CheckScript = "/release-artefact-hashes/Cortex.Innovation.Test.ReleaseArtefactHashes.ps1"
     [Cortex.ServicePortal]
         MainDoc = "https://support.wearecortex.com/support/"
     [Cortex.YouTube]
