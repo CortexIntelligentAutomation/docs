@@ -10,7 +10,13 @@
     are checked and the overall result is FAIL.
 
     Each file listed in SHA256.txt is then reported as PASS (hashes match), FAIL (hashes differ) or NOT PRESENT (the
-    file is not in the artefact folder). The overall result is PASS if at least one file was checked and none failed.
+    file is not in the artefact folder). Listed files that are not present, and files in the artefact folder that are not
+    listed, are reported as warnings.
+
+    The overall result is:
+    - PASS if every listed file is present and matches, and there are no warnings.
+    - Partial PASS if every file checked matches, but there are warnings.
+    - FAIL if any file checked does not match, or no files could be checked.
 
     Online, use -Release to download the SHA256.txt for a delivery from CORTEX's GitHub docs repository.
     Offline, use -HashFile with the SHA256.txt delivered with the files.
@@ -302,11 +308,6 @@ if ($extraFiles.Count -gt 0) {
 }
 
 $warningCount = $missing.Count + $extraFiles.Count
-$warningText = switch ($warningCount) {
-    0 { '' }
-    1 { ', 1 warning' }
-    default { ", $warningCount warnings" }
-}
 
 if ($checked.Count -eq 0) {
     Write-Host "None of the artefacts in the hash file were found in '$ArtefactFolder'. Use -ArtefactFolder to give the folder containing the delivered files."
@@ -315,10 +316,21 @@ if ($checked.Count -eq 0) {
     exit 1
 }
 
-if ($failed.Count -eq 0) {
-    Write-Host "OVERALL: PASS ($($checked.Count) of $($results.Count) artefacts checked, all match$warningText)" -ForegroundColor Green
+if ($failed.Count -gt 0) {
+    Write-Host ("OVERALL: FAIL ($($failed.Count) of $($checked.Count) checked artefacts do not match and are not verified " +
+        "CORTEX Release Artefacts published by WeAreCORTEX)") -ForegroundColor Red
+    exit 1
+}
+
+# A partial pass is still a pass: every file that was checked is genuine, but some listed files were missing or some
+# unlisted files were found.
+if ($warningCount -gt 0) {
+    $warningsRaised = if ($warningCount -eq 1) { '1 warning raised' } else { "$warningCount warnings raised" }
+    Write-Host ("OVERALL: Partial PASS ($($checked.Count) of $($results.Count) artefacts checked, $warningsRaised, all checked " +
+        "hashes match and are verified CORTEX Release Artefacts published by WeAreCORTEX)") -ForegroundColor Yellow
     exit 0
 }
 
-Write-Host "OVERALL: FAIL ($($failed.Count) of $($checked.Count) checked artefacts do not match$warningText)" -ForegroundColor Red
-exit 1
+Write-Host ("OVERALL: PASS ($($checked.Count) of $($results.Count) artefacts checked, all hashes match and are verified " +
+    "CORTEX Release Artefacts published by WeAreCORTEX)") -ForegroundColor Green
+exit 0
