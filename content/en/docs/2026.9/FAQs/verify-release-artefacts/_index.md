@@ -2,7 +2,7 @@
 title: "How do I verify the release artefacts?"
 linkTitle: "How do I verify the release artefacts?"
 description: "Instructions on how to check that the release, hotfix or patch artefacts received are the ones released by {{% ctx %}}."
-weight: 500
+weight: 50
 ---
 
 # Verify Release Artefacts
