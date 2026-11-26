@@ -7,7 +7,7 @@ weight: 50
 
 # Verify Release Artefacts
 
-The artefacts received can be checked against those released by {{% ctx %}} using the {{< filedownload src="/release-artefact-hashes/Cortex.Innovation.VerifyReleaseArtefactHashes.ps1" name="Release Artefact Hash Check script" >}}. The script compares the SHA256 hash of each artefact with the hashes published by WeAreCORTEX, which are signed so that any change to them is detected. It can be run on a server with or without internet access.
+For supply chain verification the artefacts received can be checked against those released by {{% ctx %}} using the {{< filedownload src="/release-artefact-hashes/Cortex.Innovation.VerifyReleaseArtefactHashes.ps1" name="Release Artefact Hash Check script" >}}. The script compares the SHA256 hash of each artefact with the hashes published by WeAreCORTEX, which are signed so that any change to them is detected. It can be run on a server with or without internet access.
 
 | Item                    | Value                                                              |
 |-------------------------|--------------------------------------------------------------------|
