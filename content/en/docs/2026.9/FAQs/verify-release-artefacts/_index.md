@@ -47,6 +47,6 @@ The artefacts received can be checked against those released by {{% ctx %}} usin
 
     `OVERALL: Partial PASS` means that every artefact checked is genuine, but there are warnings: some artefacts in the release were not found in the folder, or the folder contains files that are not in the release. The warnings list these files.
 
-## Hotfixes and Patches
+## Patches and Hotfixes
 
 Hotfixes and patches are checked in the same way, using the release name given in their release notes, for example `-Release 2025.3.26111-HotFix.26461`.
