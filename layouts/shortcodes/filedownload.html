@@ -1,0 +1,24 @@
+{{- /*
+    Creates a link that downloads a file from content/static under its own name, rather than opening it in the
+    browser, checking whether it is there first. Use it for files that browsers would otherwise show as text, such as
+    PowerShell scripts.
+*/}}
+{{- $src := .Get "src" }}
+{{- /* Get whether the website is currently nested (has /docs prepended). */}}
+{{- $isNested := false }}
+{{- if not (findRE `^\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) }}
+	{{- if (or (findRE `^\/docs\/docs\/([0-9\.]*|latest)\/` .Page.RelPermalink 1) (findRE `^\/docs\/[^\/]*\/` .Page.RelPermalink 1)) }}
+		{{- $isNested = true }}
+	{{- end }}
+{{- end }}
+{{- $file := printf "%s%s" "/content/static" $src -}}
+{{- /* Check if the file exists. */}}
+{{- if (os.FileExists $file) -}}
+    {{- $href := $src }}
+    {{- if $isNested }}
+        {{- $href = printf "%s%s" "/docs" $src }}
+    {{- end }}
+    <a href="{{ $href }}" download="{{ path.Base $src }}">{{ .Get "name" }}</a>
+{{- else -}}
+    {{ errorf "filedownload.html: File at path %q is missing, search for it within the solution then fix the path to point to an existing file, or create the new file at the provided path." $file }}
+{{- end -}}
