@@ -2,17 +2,17 @@
 
 <#
 .DESCRIPTION
-    Checks that Cortex release, hotfix or patch files match the ones released by Cortex, by comparing the SHA256 hash
-    of each file with the hash for it in the SHA256.txt published by Cortex for that delivery.
+    Checks that CORTEX release, hotfix or patch files match the ones released by CORTEX, by comparing the SHA256 hash
+    of each file with the hash for it in the SHA256.txt published by CORTEX for that delivery.
 
-    SHA256.txt ends with a signature made with Cortex's private key. The signature is checked first, with Cortex's
+    SHA256.txt ends with a signature made with CORTEX's private key. The signature is checked first, with CORTEX's
     public key built into this script, so any change to SHA256.txt is detected. If the signature is not valid, no files
     are checked and the overall result is FAIL.
 
     Each file listed in SHA256.txt is then reported as PASS (hashes match), FAIL (hashes differ) or NOT PRESENT (the
     file is not in the artefact folder). The overall result is PASS if at least one file was checked and none failed.
 
-    Online, use -Release to download the SHA256.txt for a delivery from Cortex's GitHub docs repository.
+    Online, use -Release to download the SHA256.txt for a delivery from CORTEX's GitHub docs repository.
     Offline, use -HashFile with the SHA256.txt delivered with the files.
 
     Download this script from docs.wearecortex.com, not from a delivery, and before using it compare its SHA256 hash
@@ -108,7 +108,7 @@ function Get-SignedHashList {
 }
 
 if (-not $PublicKeyModulus) {
-    Write-Error "This copy of the script has no Cortex public key, so it cannot check signatures. Download the script from docs.wearecortex.com."
+    Write-Error "This copy of the script has no CORTEX public key, so it cannot check signatures. Download the script from docs.wearecortex.com."
     exit 1
 }
 
@@ -179,7 +179,7 @@ $signatureText = switch ($signedHashList.Status) {
     default { 'NOT VALID' }
 }
 
-Write-Host "Cortex Release Artefact Hash Check"
+Write-Host "CORTEX Release Artefact Hash Check"
 Write-Host "Date            : $((Get-Date).ToString('yyyy-MM-dd HH:mm:ss zzz'))"
 Write-Host "Computer        : $env:COMPUTERNAME"
 Write-Host "Hash Source     : $hashSource"
@@ -189,14 +189,14 @@ Write-Host "Signature       : $signatureText"
 Write-Host ""
 
 if ($signedHashList.Status -eq 'NotSigned') {
-    Write-Host "The hash file is not signed, so it cannot be trusted. Use the SHA256.txt exactly as published by Cortex."
+    Write-Host "The hash file is not signed, so it cannot be trusted. Use the SHA256.txt exactly as published by CORTEX."
     Write-Host ""
     Write-Host "OVERALL: FAIL (hash file is not signed)" -ForegroundColor Red
     exit 1
 }
 
 if ($signedHashList.Status -eq 'NotValid') {
-    Write-Host "The hash file's signature is not valid, so the hash file has been changed since Cortex signed it, or was not signed by Cortex. No files were checked."
+    Write-Host "The hash file's signature is not valid, so the hash file has been changed since CORTEX signed it, or was not signed by CORTEX. No files were checked."
     if ([Array]::IndexOf($hashBytes, [byte]13) -ge 0) {
         Write-Host "The file's line endings may have been changed (for example by an editor or a file transfer). Use the file exactly as delivered."
     }
@@ -281,7 +281,7 @@ if ($missing.Count -gt 0) {
 
 if ($extraFiles.Count -gt 0) {
     $count = if ($extraFiles.Count -eq 1) { '1 file in the artefact folder is' } else { "$($extraFiles.Count) files in the artefact folder are" }
-    Write-Host "WARNING: $count not listed in the hash file, so not supplied by Cortex in this delivery:" -ForegroundColor Yellow
+    Write-Host "WARNING: $count not listed in the hash file, so not supplied by CORTEX in this delivery:" -ForegroundColor Yellow
     foreach ($extraFile in $extraFiles) {
         Write-Host "  $extraFile"
     }
