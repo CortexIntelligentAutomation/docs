@@ -29,13 +29,13 @@
     containing the hash file with -HashFile.
 
 .EXAMPLE
-    .\Cortex.Innovation.Test.ReleaseArtefactHashes.ps1 -Release 2026.9 -ArtefactFolder "D:\Cortex\2026.9"
+    .\Cortex.Innovation.VerifyReleaseArtefactHashes.ps1 -Release 2026.9 -ArtefactFolder "D:\Cortex\2026.9"
 
 .EXAMPLE
-    .\Cortex.Innovation.Test.ReleaseArtefactHashes.ps1 -Release 2025.3.26111-HotFix.26461 -ArtefactFolder "D:\Cortex\2025.3.26111-HotFix.26461"
+    .\Cortex.Innovation.VerifyReleaseArtefactHashes.ps1 -Release 2025.3.26111-HotFix.26461 -ArtefactFolder "D:\Cortex\2025.3.26111-HotFix.26461"
 
 .EXAMPLE
-    .\Cortex.Innovation.Test.ReleaseArtefactHashes.ps1 -HashFile "D:\Cortex\2026.9\SHA256.txt"
+    .\Cortex.Innovation.VerifyReleaseArtefactHashes.ps1 -HashFile "D:\Cortex\2026.9\SHA256.txt"
 
 .NOTES
     Version : 2.0.0.26460
