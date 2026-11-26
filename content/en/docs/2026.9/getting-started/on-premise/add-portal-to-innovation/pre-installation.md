@@ -17,6 +17,10 @@ This guide describes how to perform the steps required before starting the insta
 1. Extract the `Portal Application Server Scripts.zip` file to a folder with the same name.
 1. Extract the `Cortex Innovation 2026.9 - Portal.zip` file to a folder with the same name.
 
+{{% alert title="Note" %}}
+`Cortex Innovation {{< version >}} - Portal SDK.zip` is for micro-application development on a workstation. It is not copied to the Web Application Server. The workstation steps are in [Set up the developer workspace][].
+{{% /alert %}}
+
 ## Install the .NET 10 Hosting Bundle
 
 The {{% ctx %}} Portal requires the .NET 10 Hosting Bundle to be installed on the Web Application Server. The hosting bundle registers the ASP.NET Core Module with IIS.
@@ -48,3 +52,4 @@ To install the .NET 10 Hosting Bundle:
 [Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.Installation" >}}
 [NET 10 Hosting Bundle]: {{< url path="MSDotNet.DotNet10.HostingBundle" >}}
 [Requirements]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.Requirements" >}}
+[Set up the developer workspace]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.SetUpDeveloperWorkspace" >}}

@@ -1,7 +1,7 @@
 ---
 title: "Add Portal to CORTEX"
 linkTitle: "Add Portal to CORTEX"
-description: "Information about adding the {{% ctx %}} Portal to an existing Web Application Server with {{% ctx %}} Gateway, including: architecture, server requirements, pre-installation steps, installation instructions and post-installation steps."
+description: "Information about adding the {{% ctx %}} Portal to an existing Web Application Server with {{% ctx %}} Gateway, including: architecture, server requirements, pre-installation steps, installation instructions, and post-installation steps for API Gateway client setup and micro-application development."
 weight: 40
 ---
 

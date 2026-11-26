@@ -13,6 +13,12 @@ This guide describes how to try out a new {{% ctx %}} Portal installation to mak
 
 1. In a browser, open the {{% ctx %}} Portal website, for example `https://localhost/portal`, and wait for the page to load.
 1. Confirm `https://localhost/portal/api/v1/health` returns successfully. If `ApplicationName` is not `portal`, use the name configured in [Configure {{% ctx %}} Portal Installation Script][] in both URLs.
+1. Confirm the sign-in page is displayed. Users of the installed portal sign in with domain credentials. The username `dev` exists only in a Portal SDK workspace.
+
+## Next Steps?
+
+1. [Register the API Gateway client][]
 
 [Configure {{% ctx %}} Portal Installation Script]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.ConfigurePortalInstallationScript" >}}
 [Install Portal]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.InstallPortal" >}}
+[Register the API Gateway client]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.RegisterApiGatewayClient" >}}

@@ -2,6 +2,7 @@
 title: "Installation"
 linkTitle: "Installation"
 description: "Information on troubleshooting {{% ctx %}} installations."
+weight: 10
 ---
 
 # {{% param title %}}

@@ -26,9 +26,18 @@ The Web Application Server must:
 
 A domain user with the necessary administrative permissions to log on to the Web Application Server via Remote Desktop and execute PowerShell scripts.
 
+## Micro-application development
+
+The server requirements above apply to the Web Application Server. Developing micro-applications uses a separate workstation.
+
+{{< section "/portal/developer-workstation-requirements.md" >}}
+
+Follow [Set up the developer workspace][] after the installation has been tested and the installed portal's API Gateway client has been registered.
+
 ## Next Steps?
 
 1. [Pre-Installation][]
 
 [Architecture]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.Architecture" >}}
 [Pre-Installation]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.PreInstallation" >}}
+[Set up the developer workspace]: {{< url path="Cortex.GettingStarted.OnPremise.AddPortalToInnovation.SetUpDeveloperWorkspace" >}}

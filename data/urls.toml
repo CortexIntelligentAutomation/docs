@@ -137,6 +137,12 @@
         [Cortex.Faqs.ChangeLoggingLevels]
             [Cortex.Faqs.ChangeLoggingLevels.FlowLogging]
                 MainDoc = "/docs/faqs/change-logging-levels/change-flow-logging/"
+        [Cortex.Faqs.ConfigurePortal]
+            MainDoc = "/docs/faqs/configure-portal/"
+            CreateMicroApplication = "/docs/faqs/configure-portal/create-micro-application"
+            PublishMicroApplication = "/docs/faqs/configure-portal/publish-micro-application"
+            RegisterApiGatewayClient = "/docs/faqs/configure-portal/register-api-gateway-client"
+            SetUpPortalSdk = "/docs/faqs/configure-portal/set-up-portal-sdk"
     [Cortex.GettingStarted]
         MainDoc = "/docs/getting-started/"
         [Cortex.GettingStarted.OnPremise]
@@ -397,9 +403,16 @@
                 ConfigurePortalInstallationScript = "/docs/getting-started/on-premise/add-portal-to-innovation/installation/install-portal#configure-cortex-portal-installation-script"
                 Installation = "/docs/getting-started/on-premise/add-portal-to-innovation/installation"
                 InstallPortal = "/docs/getting-started/on-premise/add-portal-to-innovation/installation/install-portal"
+                DevelopMicroApplications = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/develop-micro-applications"
                 PostInstallation = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation"
                 PreInstallation = "/docs/getting-started/on-premise/add-portal-to-innovation/pre-installation"
+                PrepareReferenceFlows = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/set-up-developer-workspace#prepare-the-reference-flows"
+                PublishMicroApplication = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/publish-micro-application"
+                PublishMicroApplicationUpgrade = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/publish-micro-application#after-a-portal-upgrade"
+                RegisterApiGatewayClient = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/register-api-gateway-client"
+                RegisterApiGatewayClientSdk = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/register-api-gateway-client#portal-sdk-workspace"
                 Requirements = "/docs/getting-started/on-premise/add-portal-to-innovation/requirements"
+                SetUpDeveloperWorkspace = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/set-up-developer-workspace"
                 TryItOut = "/docs/getting-started/on-premise/add-portal-to-innovation/post-installation/try-it-out"
             [Cortex.GettingStarted.OnPremise.AddConfigurationPortalToCortex]
                 MainDoc = "/docs/getting-started/on-premise/add-configuration-portal-to-cortex/"
@@ -2738,6 +2751,8 @@
                 [Cortex.Reference.Messages.Validation.Errors]
                     MainDoc = "/docs/reference/messages/validation/errors/"
         [Cortex.Reference.Troubleshooting]
+            [Cortex.Reference.Troubleshooting.CortexPortal]
+                MainDoc = "/docs/reference/troubleshooting/cortex-portal/"
             [Cortex.Reference.Troubleshooting.Installation]
                 TroubleshootingDuringInstallation = "/docs/reference/troubleshooting/installation#ts-during-installation"
                 TroubleshootingNoInnovation = "/docs/reference/troubleshooting/installation#ts-no-innovation"
