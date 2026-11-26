@@ -206,14 +206,32 @@ if ($signedHashList.Status -eq 'NotValid') {
 }
 
 # Lines are '<hash>  <file name>'.
-$results = foreach ($line in $signedHashList.Text.Split("`n")) {
-    if ($line -notmatch '^(?<hash>[0-9A-Fa-f]{64})  (?<name>.+)$') {
-        continue
+$listed = @(foreach ($line in $signedHashList.Text.Split("`n")) {
+    if ($line -match '^(?<hash>[0-9A-Fa-f]{64})  (?<name>.+)$') {
+        [pscustomobject]@{ Name = $Matches['name']; Expected = $Matches['hash'].ToUpperInvariant() }
     }
+})
 
-    $expected = $Matches['hash'].ToUpperInvariant()
-    $name = $Matches['name']
+if ($listed.Count -eq 0) {
+    Write-Host "The hash file does not list any files."
+    Write-Host ""
+    Write-Host "OVERALL: FAIL (no artefacts listed)" -ForegroundColor Red
+    exit 1
+}
+
+# Each row is written as soon as its file is checked, as hashing large files, especially over a network, takes a while.
+$nameWidth = [Math]::Max('Artefact'.Length, ($listed | ForEach-Object { $_.Name.Length } | Measure-Object -Maximum).Maximum)
+Write-Host ("{0,-$nameWidth} Result" -f 'Artefact')
+Write-Host ("{0,-$nameWidth} ------" -f '--------')
+
+$resultColours = @{ 'PASS' = 'Green'; 'FAIL' = 'Red'; 'NOT PRESENT' = 'Yellow' }
+$results = for ($index = 0; $index -lt $listed.Count; $index++) {
+    $name = $listed[$index].Name
+    $expected = $listed[$index].Expected
     $path = Join-Path $ArtefactFolder $name
+
+    Write-Progress -Activity 'Checking the artefacts' -Status "$($index + 1) of $($listed.Count): $name" `
+        -PercentComplete ([int](100 * $index / $listed.Count))
 
     if (Test-Path -LiteralPath $path -PathType Leaf) {
         $actual = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash
@@ -224,6 +242,9 @@ $results = foreach ($line in $signedHashList.Text.Split("`n")) {
         $result = 'NOT PRESENT'
     }
 
+    Write-Host ("{0,-$nameWidth} " -f $name) -NoNewline
+    Write-Host $result -ForegroundColor $resultColours[$result]
+
     [pscustomobject]@{
         Artefact = $name
         Result   = $result
@@ -232,16 +253,8 @@ $results = foreach ($line in $signedHashList.Text.Split("`n")) {
     }
 }
 
+Write-Progress -Activity 'Checking the artefacts' -Completed
 $results = @($results)
-
-if ($results.Count -eq 0) {
-    Write-Host "The hash file does not list any files."
-    Write-Host ""
-    Write-Host "OVERALL: FAIL (no artefacts listed)" -ForegroundColor Red
-    exit 1
-}
-
-Write-Host ($results | Format-Table Artefact, Result -AutoSize | Out-String -Width 4096).Trim()
 Write-Host ""
 
 $failed = @($results | Where-Object Result -eq 'FAIL')
