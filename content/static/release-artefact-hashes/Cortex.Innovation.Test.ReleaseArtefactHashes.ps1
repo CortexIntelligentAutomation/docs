@@ -254,6 +254,47 @@ foreach ($failure in $failed) {
     Write-Host ""
 }
 
+# Missing and extra files are warned about, but do not change the overall result, which only depends on whether the
+# files that were checked match.
+$missing = @($results | Where-Object Result -eq 'NOT PRESENT')
+
+$listedNames = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+foreach ($result in $results) {
+    [void]$listedNames.Add($result.Artefact)
+}
+
+# The hash file and this script are not part of the delivery, so are not extra files.
+$notDelivered = @($PSCommandPath, $HashFile) | Where-Object { $_ }
+$extraFiles = @(Get-ChildItem -LiteralPath $ArtefactFolder -File |
+    Where-Object { -not $listedNames.Contains($_.Name) -and $_.Name -ne 'SHA256.txt' -and $notDelivered -notcontains $_.FullName } |
+    Sort-Object Name |
+    Select-Object -ExpandProperty Name)
+
+if ($missing.Count -gt 0) {
+    $count = if ($missing.Count -eq 1) { '1 listed artefact is' } else { "$($missing.Count) listed artefacts are" }
+    Write-Host "WARNING: $count not present in the artefact folder, so not checked:" -ForegroundColor Yellow
+    foreach ($artefact in $missing) {
+        Write-Host "  $($artefact.Artefact)"
+    }
+    Write-Host ""
+}
+
+if ($extraFiles.Count -gt 0) {
+    $count = if ($extraFiles.Count -eq 1) { '1 file in the artefact folder is' } else { "$($extraFiles.Count) files in the artefact folder are" }
+    Write-Host "WARNING: $count not listed in the hash file, so not supplied by Cortex in this delivery:" -ForegroundColor Yellow
+    foreach ($extraFile in $extraFiles) {
+        Write-Host "  $extraFile"
+    }
+    Write-Host ""
+}
+
+$warningCount = $missing.Count + $extraFiles.Count
+$warningText = switch ($warningCount) {
+    0 { '' }
+    1 { ', 1 warning' }
+    default { ", $warningCount warnings" }
+}
+
 if ($checked.Count -eq 0) {
     Write-Host "None of the artefacts in the hash file were found in '$ArtefactFolder'. Use -ArtefactFolder to give the folder containing the delivered files."
     Write-Host ""
@@ -262,9 +303,9 @@ if ($checked.Count -eq 0) {
 }
 
 if ($failed.Count -eq 0) {
-    Write-Host "OVERALL: PASS ($($checked.Count) of $($results.Count) artefacts checked, all match)" -ForegroundColor Green
+    Write-Host "OVERALL: PASS ($($checked.Count) of $($results.Count) artefacts checked, all match$warningText)" -ForegroundColor Green
     exit 0
 }
 
-Write-Host "OVERALL: FAIL ($($failed.Count) of $($checked.Count) checked artefacts do not match)" -ForegroundColor Red
+Write-Host "OVERALL: FAIL ($($failed.Count) of $($checked.Count) checked artefacts do not match$warningText)" -ForegroundColor Red
 exit 1
