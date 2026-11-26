@@ -161,6 +161,8 @@
                 Entra = "/docs/faqs/configure-oidc-authentication/microsoft-entra/#configure-microsoft-entra-oidc-provider"
         [Cortex.Faqs.EnableBpmnNaturalLanguageTemplates]
             MainDoc = "/docs/faqs/enable-bpmn-natural-language-templates/"
+        [Cortex.Faqs.VerifyReleaseArtefacts]
+            MainDoc = "/docs/faqs/verify-release-artefacts/"
         [Cortex.Faqs.ChangeLoggingLevels]
             [Cortex.Faqs.ChangeLoggingLevels.FlowLogging]
                 MainDoc = "/docs/faqs/change-logging-levels/change-flow-logging/"
